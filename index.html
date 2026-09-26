@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hệ Cơ Xương Khớp 3D — Châm Cứu & Vận Động</title>
+  <link rel="stylesheet" href="assets/css/theme.css">
+
+  <!-- Three.js via ES Module importmap -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/",
+      "fflate": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/libs/fflate.module.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- ===================== HEADER ===================== -->
+  <header class="app-header">
+    <div class="badge">CHUYÊN ĐỀ Y KHOA TƯƠNG TÁC • HỆ CƠ XƯƠNG KHỚP 3D</div>
+    <h1>Hệ Cơ Xương Khớp & Châm Cứu</h1>
+    <p class="subtitle">Khám phá mối liên hệ giữa chuyển động, nhóm cơ tham gia và huyệt vị châm cứu</p>
+  </header>
+
+  <!-- ===================== MAIN LAYOUT ===================== -->
+  <main class="app-layout">
+
+    <!-- LEFT: 3D Viewport -->
+    <section class="viewport-column">
+      <!-- 3D Canvas Container -->
+      <div class="viewport-card">
+        <div id="three-container" class="three-container">
+          <!-- Three.js canvas will be injected here -->
+          <div id="loading-overlay" class="loading-overlay">
+            <div class="spinner"></div>
+            <p>Đang tải mô hình 3D...</p>
+          </div>
+          <!-- Hover tooltip -->
+          <div id="hover-tooltip" class="hover-tooltip" style="display:none;"></div>
+        </div>
+      </div>
+
+      <!-- Control Bar -->
+      <div class="control-bar">
+        <div class="layers-control-grid">
+          <!-- 1. Hệ Cơ -->
+          <div class="layer-control-card" id="card-control-muscle">
+            <div class="layer-header">
+              <label class="toggle-label">
+                <input type="checkbox" id="toggle-muscles" checked>
+                <span class="layer-title">💪 Hệ Cơ</span>
+              </label>
+              <span id="val-muscle-opacity" class="slider-num">95%</span>
+            </div>
+            <div class="slider-wrapper">
+              <input type="range" id="slider-muscle-opacity" min="5" max="100" value="95" class="slider" title="Điều chỉnh độ đậm/nhạt của Hệ Cơ">
+            </div>
+          </div>
+
+          <!-- 2. Hệ Xương -->
+          <div class="layer-control-card" id="card-control-skeleton">
+            <div class="layer-header">
+              <label class="toggle-label">
+                <input type="checkbox" id="toggle-skeleton">
+                <span class="layer-title">🦴 Hệ Xương</span>
+              </label>
+              <span id="val-skeleton-opacity" class="slider-num">80%</span>
+            </div>
+            <div class="slider-wrapper">
+              <input type="range" id="slider-skeleton-opacity" min="5" max="100" value="80" class="slider" title="Điều chỉnh độ mờ của Hệ Xương">
+            </div>
+          </div>
+
+          <!-- 3. Hệ Thần Kinh -->
+          <div class="layer-control-card" id="card-control-nervous">
+            <div class="layer-header">
+              <label class="toggle-label">
+                <input type="checkbox" id="toggle-nervous">
+                <span class="layer-title">🧠 Hệ Thần Kinh</span>
+              </label>
+              <span id="val-nervous-opacity" class="slider-num">90%</span>
+            </div>
+            <div class="slider-wrapper">
+              <input type="range" id="slider-nervous-opacity" min="5" max="100" value="90" class="slider" title="Điều chỉnh độ mờ của Hệ Thần Kinh">
+            </div>
+          </div>
+
+          <!-- 4. Hệ Tuần Hoàn -->
+          <div class="layer-control-card" id="card-control-vascular">
+            <div class="layer-header">
+              <label class="toggle-label">
+                <input type="checkbox" id="toggle-vascular">
+                <span class="layer-title">🫀 Hệ Tuần Hoàn</span>
+              </label>
+              <span id="val-vascular-opacity" class="slider-num">90%</span>
+            </div>
+            <div class="slider-wrapper">
+              <input type="range" id="slider-vascular-opacity" min="5" max="100" value="90" class="slider" title="Điều chỉnh độ mờ của Hệ Tuần Hoàn">
+            </div>
+          </div>
+        </div>
+
+        <div class="control-actions">
+          <button id="btn-toggle-theme" class="btn btn-secondary" title="Chuyển chế độ Sáng / Tối">🌙 Giao diện Tối</button>
+          <button id="btn-reset-view" class="btn btn-secondary" title="Đặt lại góc nhìn và thông số">⟲ Đặt lại</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT: Info Panels -->
+    <aside class="info-column">
+
+      <!-- Movement Selector Card -->
+      <div class="card" id="movement-card">
+        <h2 class="card-title">🏃 Chọn Chuyển Động & Tư Thế</h2>
+        <div class="search-box">
+          <input type="text" id="search-input" placeholder="Tìm nhanh cử động (nâng tay, xoay, bước...) hoặc tên cơ..." class="search-input">
+        </div>
+        <select id="movement-select" class="select-input">
+          <option value="">— Chọn chuyển động mẫu —</option>
+        </select>
+        <!-- Movement description -->
+        <div id="movement-info" class="movement-info" style="display:none;">
+          <p id="movement-desc" class="movement-desc"></p>
+          <div class="movement-meta">
+            <span id="movement-plane" class="meta-tag"></span>
+            <span id="movement-rom" class="meta-tag"></span>
+          </div>
+          <!-- Phase breakdown -->
+          <div id="movement-phases" class="phases-container"></div>
+        </div>
+      </div>
+
+      <!-- Legend Card -->
+      <div class="card" id="legend-card">
+        <h2 class="card-title">📌 CHÚ GIẢI KÝ HIỆU</h2>
+        <div class="legend-grid">
+          <div class="legend-item">
+            <span class="legend-dot" style="background: var(--red);"></span>
+            <span>Cơ chủ vận <em>(Agonist)</em></span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background: var(--cyan);"></span>
+            <span>Cơ đối vận <em>(Antagonist)</em></span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background: var(--amber);"></span>
+            <span>Cơ hiệp đồng <em>(Synergist)</em></span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background: var(--green);"></span>
+            <span>Cơ ổn định <em>(Stabilizer)</em></span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background: #facc15; box-shadow: 0 0 6px #eab308;"></span>
+            <span>Hệ thần kinh <em>(Nervous)</em></span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background: #d97706; box-shadow: 0 0 6px #b45309;"></span>
+            <span>Hệ tuần hoàn <em>(Vascular)</em></span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background: var(--muted); border: 2px dashed var(--border);"></span>
+            <span>Hệ xương <em>(Skeleton)</em></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Muscles List -->
+      <div class="card" id="muscles-card">
+        <h2 class="card-title">💪 Các Cơ Tham Gia</h2>
+        <div class="role-filter">
+          <button class="filter-btn active" data-role="all">Tất cả</button>
+          <button class="filter-btn" data-role="agonist" style="--btn-color: var(--red);">Chủ vận</button>
+          <button class="filter-btn" data-role="antagonist" style="--btn-color: var(--cyan);">Đối vận</button>
+          <button class="filter-btn" data-role="synergist" style="--btn-color: var(--amber);">Hiệp đồng</button>
+          <button class="filter-btn" data-role="stabilizer" style="--btn-color: var(--green);">Ổn định</button>
+        </div>
+        <ul id="muscle-list" class="muscle-list">
+          <li class="muscle-placeholder">Chọn một chuyển động để xem các cơ tham gia</li>
+        </ul>
+      </div>
+
+      <!-- Muscle Detail Panel (shown when clicking a muscle) -->
+      <div class="card" id="muscle-detail-card" style="display:none;">
+        <div class="card-header">
+          <h2 class="card-title" id="detail-muscle-name">—</h2>
+          <button id="btn-close-detail" class="btn-icon" title="Đóng">✕</button>
+        </div>
+        <p id="detail-muscle-latin" class="detail-latin"></p>
+        <div class="detail-grid">
+          <div class="detail-row">
+            <strong>📍 Nguyên ủy:</strong>
+            <span id="detail-origin"></span>
+          </div>
+          <div class="detail-row">
+            <strong>📍 Bám tận:</strong>
+            <span id="detail-insertion"></span>
+          </div>
+          <div class="detail-row">
+            <strong>⚡ Tác dụng:</strong>
+            <span id="detail-action"></span>
+          </div>
+          <div class="detail-row">
+            <strong>🔌 Thần kinh:</strong>
+            <span id="detail-innervation"></span>
+          </div>
+          <div class="detail-row">
+            <strong>🩸 Mạch máu:</strong>
+            <span id="detail-blood"></span>
+          </div>
+        </div>
+        <!-- Related Acupoints -->
+        <div class="acupoint-section">
+          <h3 class="section-title">🔴 Huyệt Vị Liên Quan (WHO)</h3>
+          <ul id="detail-acupoints" class="acupoint-list"></ul>
+        </div>
+      </div>
+
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <p>Mô hình 3D: <a href="https://z-anatomy.com" target="_blank">Z-Anatomy</a> (CC BY-SA 4.0) + <a href="https://anatomytool.org" target="_blank">AnatomyTOOL</a> (CC BY-SA 4.0)</p>
+    <p>Dữ liệu y khoa dựa trên Terminologia Anatomica (TA2-2019) & WHO Standard Acupuncture Point Locations</p>
+  </footer>
+
+  <!-- App Entry Point -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>

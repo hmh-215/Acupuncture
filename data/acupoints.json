@@ -1,0 +1,142 @@
+{
+  "LI-15": {
+    "code": "LI-15",
+    "name_vi": "Kiên Ngung",
+    "name_han_viet": "肩髃",
+    "meridian_vi": "Kinh Thủ Dương Minh Đại Trường",
+    "location_vi": "Ở hõm trước - ngoài mỏm cùng vai khi cánh tay giạng 90°",
+    "depth_mm": "15 - 30 mm",
+    "related_muscles": ["deltoid_anterior", "deltoid_middle", "supraspinatus"],
+    "indications_vi": "Đau liệt khớp vai, viêm chu vai, teo cơ delta, bán trật khớp vai"
+  },
+  "TE-14": {
+    "code": "TE-14",
+    "name_vi": "Kiên Liêu",
+    "name_han_viet": "肩髎",
+    "meridian_vi": "Kinh Thủ Thiếu Dương Tam Tiêu",
+    "location_vi": "Ở chỗ lõm phía sau - ngoài mỏm cùng vai khi giạng cánh tay (sau huyệt Kiên Ngung khoảng 1 thốn)",
+    "depth_mm": "15 - 30 mm",
+    "related_muscles": ["deltoid_middle", "deltoid_posterior", "infraspinatus"],
+    "indications_vi": "Đau khớp vai, hội chứng chạm dưới mỏm cùng vai, hạn chế tầm vận động vai"
+  },
+  "SI-9": {
+    "code": "SI-9",
+    "name_vi": "Kiên Trinh",
+    "name_han_viet": "肩貞",
+    "meridian_vi": "Kinh Thủ Thái Dương Tiểu Trường",
+    "location_vi": "Khi khép cánh tay, huyệt nằm thẳng phía trên nếp gấp nách sau 1 thốn",
+    "depth_mm": "20 - 30 mm",
+    "related_muscles": ["deltoid_posterior", "teres_major", "triceps_brachii"],
+    "indications_vi": "Đau mặt sau khớp vai, viêm cơ tròn lớn, liệt dây thần kinh nách"
+  },
+  "SI-10": {
+    "code": "SI-10",
+    "name_vi": "Nhu Du",
+    "name_han_viet": "臑兪",
+    "meridian_vi": "Kinh Thủ Thái Dương Tiểu Trường",
+    "location_vi": "Khi khép tay, huyệt nằm thẳng phía trên huyệt Kiên Trinh, ngay bờ dưới gai xương bả vai",
+    "depth_mm": "15 - 25 mm",
+    "related_muscles": ["deltoid_posterior", "infraspinatus", "teres_minor"],
+    "indications_vi": "Đau bả vai, viêm gân chóp xoay sau, yếu cơ xoay ngoài"
+  },
+  "SI-11": {
+    "code": "SI-11",
+    "name_vi": "Thiên Tông",
+    "name_han_viet": "天宗",
+    "meridian_vi": "Kinh Thủ Thái Dương Tiểu Trường",
+    "location_vi": "Nằm ở điểm chính giữa hố dưới gai xương bả vai (tạo thành tam giác đều với góc trên trong và góc dưới xương bả vai)",
+    "depth_mm": "15 - 25 mm",
+    "related_muscles": ["infraspinatus", "trapezius_middle"],
+    "indications_vi": "Đau mỏi vùng xương bả vai, hội chứng đau cơ cân (Trigger Point) cơ dưới gai, đau lan mặt ngoài cánh tay"
+  },
+  "SI-12": {
+    "code": "SI-12",
+    "name_vi": "Bỉnh Phong",
+    "name_han_viet": "秉風",
+    "meridian_vi": "Kinh Thủ Thái Dương Tiểu Trường",
+    "location_vi": "Nằm ở chính giữa hố trên gai xương bả vai, thẳng trên huyệt Thiên Tông",
+    "depth_mm": "15 - 20 mm",
+    "related_muscles": ["supraspinatus", "trapezius_upper"],
+    "indications_vi": "Viêm rách gân cơ trên gai, đau khớp vai khi khởi động giạng tay"
+  },
+  "GB-21": {
+    "code": "GB-21",
+    "name_vi": "Kiên Tỉnh",
+    "name_han_viet": "肩井",
+    "meridian_vi": "Kinh Túc Thiếu Dương Đởm",
+    "location_vi": "Điểm giữa của đường nối mỏm gai đốt sống C7 (Đại Chùy) đến mỏm cùng vai",
+    "depth_mm": "10 - 20 mm (Thận trọng châm xiên ra ngoài, tránh chọc vào đỉnh màng phổi gây tràn khí)",
+    "related_muscles": ["trapezius_upper", "levator_scapulae", "supraspinatus"],
+    "indications_vi": "Đau cứng cổ gáy, co cứng cơ thang, đau đầu vùng chẩm, hạn chế xoay cổ. (Chống chỉ định phụ nữ có thai)"
+  },
+  "GB-20": {
+    "code": "GB-20",
+    "name_vi": "Phong Trì",
+    "name_han_viet": "風池",
+    "meridian_vi": "Kinh Túc Thiếu Dương Đởm",
+    "location_vi": "Ở chỗ lõm giữa bờ ngoài cơ thang và bờ trong cơ ức đòn chũm, dưới đáy xương chẩm",
+    "depth_mm": "15 - 25 mm (Hướng mũi kim về phía hốc mắt đối diện)",
+    "related_muscles": ["trapezius_upper"],
+    "indications_vi": "Đau đầu, đau cứng cổ gáy, tăng huyết áp, chóng mặt, co cứng cơ gáy"
+  },
+  "BL-11": {
+    "code": "BL-11",
+    "name_vi": "Đại Trữ",
+    "name_han_viet": "大杼",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang (Hội của Cốt)",
+    "location_vi": "Dưới mỏm gai đốt sống ngực T1 đo ngang ra 1.5 thốn",
+    "depth_mm": "15 - 20 mm (Châm xiên về phía cột sống)",
+    "related_muscles": ["trapezius_middle", "rhomboid_minor"],
+    "indications_vi": "Đau co cứng vùng lưng trên, thoái hóa khớp, đau khớp cột sống ngực"
+  },
+  "BL-13": {
+    "code": "BL-13",
+    "name_vi": "Phế Du",
+    "name_han_viet": "肺兪",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "location_vi": "Dưới mỏm gai đốt sống ngực T3 đo ngang ra 1.5 thốn",
+    "depth_mm": "15 - 20 mm (Châm xiên về phía cột sống, tránh châm thẳng vào phổi)",
+    "related_muscles": ["trapezius_lower", "rhomboid_major"],
+    "indications_vi": "Ho suyễn, đau lưng trên, hội chứng đau cơ trám và cơ thang dưới"
+  },
+  "BL-43": {
+    "code": "BL-43",
+    "name_vi": "Cao Hoang",
+    "name_han_viet": "膏肓",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "location_vi": "Dưới mỏm gai đốt sống ngực T4 đo ngang ra 3 thốn (ngang bờ trong xương bả vai)",
+    "depth_mm": "10 - 15 mm (Châm xiên chếch theo xương sườn)",
+    "related_muscles": ["trapezius_lower", "rhomboid_major"],
+    "indications_vi": "Đau mạn tính vùng giữa hai xương bả vai, mệt mỏi suy nhược, bệnh lý phổi mạn"
+  },
+  "LU-1": {
+    "code": "LU-1",
+    "name_vi": "Trung Phủ",
+    "name_han_viet": "中府",
+    "meridian_vi": "Kinh Thủ Thái Âm Phế (Mộ huyệt của Phế)",
+    "location_vi": "Dưới xương đòn 1 thốn, ngoài đường giữa ngực 6 thốn, ngay rãnh delta ngực",
+    "depth_mm": "15 - 20 mm (Châm xiên ra ngoài, tuyệt đối không châm thẳng sâu tránh thủng phổi)",
+    "related_muscles": ["pectoralis_major", "subscapularis"],
+    "indications_vi": "Ho, khó thở, đau tức ngực, đau mặt trước khớp vai"
+  },
+  "LU-5": {
+    "code": "LU-5",
+    "name_vi": "Xích Trạch",
+    "name_han_viet": "尺澤",
+    "meridian_vi": "Kinh Thủ Thái Âm Phế (Hợp huyệt hành Thủy)",
+    "location_vi": "Trên nếp gấp khuỷu tay, ở bờ ngoài gân cơ nhị đầu cánh tay",
+    "depth_mm": "15 - 25 mm",
+    "related_muscles": ["biceps_brachii", "brachialis"],
+    "indications_vi": "Viêm gân cơ nhị đầu, đau co rút khớp khuỷu, sốt cao, ho ra máu"
+  },
+  "TE-10": {
+    "code": "TE-10",
+    "name_vi": "Thiên Tỉnh",
+    "name_han_viet": "天井",
+    "meridian_vi": "Kinh Thủ Thiếu Dương Tam Tiêu (Hợp huyệt hành Thổ)",
+    "location_vi": "Trên đầu mỏm khuỷu xương trụ 1 thốn, trong chỗ lõm của gân cơ tam đầu khi gập khuỷu",
+    "depth_mm": "15 - 25 mm",
+    "related_muscles": ["triceps_brachii"],
+    "indications_vi": "Đau mặt sau khớp khuỷu, viêm túi thanh mạc mỏm khuỷu, đau vai lan xuống tay"
+  }
+}
