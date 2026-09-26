@@ -1,0 +1,618 @@
+{
+  "deltoid_anterior": {
+    "id": "deltoid_anterior",
+    "name_vi": "Cơ Delta phần trước",
+    "name_latin": "M. deltoideus (pars clavicularis)",
+    "origin_vi": "1/3 ngoài bờ trước xương đòn",
+    "insertion_vi": "Lồi củ Delta ở mặt ngoài thân xương cánh tay",
+    "action_vi": "Gập cánh tay, xoay trong cánh tay, hỗ trợ giạng cánh tay",
+    "innervation_vi": "Thần kinh nách (C5, C6)",
+    "blood_supply_vi": "Động mạch mũ cánh tay sau, nhánh ngực vai",
+    "depth": "superficial",
+    "acupoints": [
+      "LI-15",
+      "TE-14"
+    ],
+    "mesh_names": [
+      "deltoid_anterior",
+      "deltoid"
+    ]
+  },
+  "deltoid_middle": {
+    "id": "deltoid_middle",
+    "name_vi": "Cơ Delta phần giữa",
+    "name_latin": "M. deltoideus (pars acromialis)",
+    "origin_vi": "Mỏm cùng vai",
+    "insertion_vi": "Lồi củ Delta ở mặt ngoài thân xương cánh tay",
+    "action_vi": "Giạng cánh tay từ 15° đến 90° (chủ vận đắc lực)",
+    "innervation_vi": "Thần kinh nách (C5, C6)",
+    "blood_supply_vi": "Động mạch mũ cánh tay sau",
+    "depth": "superficial",
+    "acupoints": [
+      "LI-15",
+      "TE-14",
+      "SI-10"
+    ],
+    "mesh_names": [
+      "deltoid_middle",
+      "deltoid"
+    ]
+  },
+  "deltoid_posterior": {
+    "id": "deltoid_posterior",
+    "name_vi": "Cơ Delta phần sau",
+    "name_latin": "M. deltoideus (pars spinalis)",
+    "origin_vi": "Bờ dưới gai xương bả vai",
+    "insertion_vi": "Lồi củ Delta ở mặt ngoài thân xương cánh tay",
+    "action_vi": "Duỗi cánh tay, xoay ngoài cánh tay, khép ngang cánh tay",
+    "innervation_vi": "Thần kinh nách (C5, C6)",
+    "blood_supply_vi": "Động mạch mũ cánh tay sau",
+    "depth": "superficial",
+    "acupoints": [
+      "TE-14",
+      "SI-10"
+    ],
+    "mesh_names": [
+      "deltoid_posterior",
+      "deltoid"
+    ]
+  },
+  "supraspinatus": {
+    "id": "supraspinatus",
+    "name_vi": "Cơ Trên gai",
+    "name_latin": "M. supraspinatus",
+    "origin_vi": "Hố trên gai xương bả vai",
+    "insertion_vi": "Củ lớn xương cánh tay (diện trên cùng)",
+    "action_vi": "Khởi động giạng cánh tay 0° - 15°, giữ vững chỏm xương cánh tay trong ổ chảo",
+    "innervation_vi": "Thần kinh trên vai (C5, C6)",
+    "blood_supply_vi": "Động mạch trên vai",
+    "depth": "deep",
+    "acupoints": [
+      "SI-12",
+      "GB-21"
+    ],
+    "mesh_names": [
+      "supraspinatus"
+    ]
+  },
+  "infraspinatus": {
+    "id": "infraspinatus",
+    "name_vi": "Cơ Dưới gai",
+    "name_latin": "M. infraspinatus",
+    "origin_vi": "Hố dưới gai xương bả vai",
+    "insertion_vi": "Củ lớn xương cánh tay (diện giữa)",
+    "action_vi": "Xoay ngoài cánh tay, giữ vững khớp vai",
+    "innervation_vi": "Thần kinh trên vai (C5, C6)",
+    "blood_supply_vi": "Động mạch trên vai, động mạch mũ vai",
+    "depth": "deep",
+    "acupoints": [
+      "SI-11",
+      "SI-12"
+    ],
+    "mesh_names": [
+      "infraspinatus"
+    ]
+  },
+  "teres_minor": {
+    "id": "teres_minor",
+    "name_vi": "Cơ Tròn bé",
+    "name_latin": "M. teres minor",
+    "origin_vi": "2/3 trên bờ ngoài xương bả vai",
+    "insertion_vi": "Củ lớn xương cánh tay (diện dưới cùng)",
+    "action_vi": "Xoay ngoài cánh tay, khép nhẹ cánh tay, giữ vững chỏm xương cánh tay",
+    "innervation_vi": "Thần kinh nách (C5, C6)",
+    "blood_supply_vi": "Động mạch mũ cánh tay sau, động mạch mũ vai",
+    "depth": "deep",
+    "acupoints": [
+      "SI-10"
+    ],
+    "mesh_names": [
+      "teres_minor"
+    ]
+  },
+  "subscapularis": {
+    "id": "subscapularis",
+    "name_vi": "Cơ Dưới vai",
+    "name_latin": "M. subscapularis",
+    "origin_vi": "Hố dưới vai ở mặt trước xương bả vai",
+    "insertion_vi": "Củ nhỏ xương cánh tay",
+    "action_vi": "Xoay trong cánh tay, ép chỏm xương cánh tay vào ổ chảo",
+    "innervation_vi": "Thần kinh dưới vai trên và dưới (C5, C6, C7)",
+    "blood_supply_vi": "Động mạch dưới vai",
+    "depth": "deep",
+    "acupoints": [
+      "LU-1",
+      "HT-1"
+    ],
+    "mesh_names": [
+      "subscapularis"
+    ]
+  },
+  "trapezius_upper": {
+    "id": "trapezius_upper",
+    "name_vi": "Cơ Thang phần trên",
+    "name_latin": "M. trapezius (pars descendens)",
+    "origin_vi": "Đường cong gáy trên, ụ chẩm ngoài, dây chằng gáy",
+    "insertion_vi": "1/3 ngoài bờ sau xương đòn",
+    "action_vi": "Nâng xương bả vai, xoay góc ngoài xương bả vai lên trên khi giạng tay qua đầu",
+    "innervation_vi": "Thần kinh phụ (dây XI) và nhánh cảm giác C3, C4",
+    "blood_supply_vi": "Động mạch cổ ngang, động mạch gáy",
+    "depth": "superficial",
+    "acupoints": [
+      "GB-21",
+      "GB-20",
+      "BL-10"
+    ],
+    "mesh_names": [
+      "trapezius_upper",
+      "trapezius"
+    ]
+  },
+  "trapezius_middle": {
+    "id": "trapezius_middle",
+    "name_vi": "Cơ Thang phần giữa",
+    "name_latin": "M. trapezius (pars transversa)",
+    "origin_vi": "Mỏm gai đốt sống C7 - T3 và dây chằng gian gai tương ứng",
+    "insertion_vi": "Bờ trong mỏm cùng vai và mép trên gai xương bả vai",
+    "action_vi": "Kéo xương bả vai vào trong (khép xương bả vai, định vị cột sống)",
+    "innervation_vi": "Thần kinh phụ (dây XI) và nhánh thần kinh gai sống C3, C4",
+    "blood_supply_vi": "Động mạch cổ ngang (nhánh nông)",
+    "depth": "superficial",
+    "acupoints": [
+      "SI-15",
+      "BL-11",
+      "BL-12"
+    ],
+    "mesh_names": [
+      "trapezius_middle",
+      "trapezius"
+    ]
+  },
+  "trapezius_lower": {
+    "id": "trapezius_lower",
+    "name_vi": "Cơ Thang phần dưới",
+    "name_latin": "M. trapezius (pars ascendens)",
+    "origin_vi": "Mỏm gai đốt sống T4 - T12 và dây chằng gian gai",
+    "insertion_vi": "Củ gai xương bả vai ở đầu trong gai vai",
+    "action_vi": "Hạ xương bả vai, hỗ trợ xoay góc ngoài xương bả vai lên trên",
+    "innervation_vi": "Thần kinh phụ (dây XI) và nhánh gai sống C3, C4",
+    "blood_supply_vi": "Động mạch cổ ngang (nhánh sâu / lưng vai)",
+    "depth": "superficial",
+    "acupoints": [
+      "BL-13",
+      "BL-15",
+      "BL-43"
+    ],
+    "mesh_names": [
+      "trapezius_lower",
+      "trapezius"
+    ]
+  },
+  "pectoralis_major": {
+    "id": "pectoralis_major",
+    "name_vi": "Cơ Ngực lớn",
+    "name_latin": "M. pectoralis major",
+    "origin_vi": "Nửa trong xương đòn, xương ức, sụn sườn 1-6 và cân cơ chéo bụng ngoài",
+    "insertion_vi": "Mép ngoài rãnh gian củ xương cánh tay",
+    "action_vi": "Khép cánh tay, xoay trong cánh tay; phần đòn hỗ trợ gập cánh tay",
+    "innervation_vi": "Thần kinh ngực trong và ngoài (C5 - T1)",
+    "blood_supply_vi": "Nhánh ngực của động mạch ngực vai, động mạch ngực trong",
+    "depth": "superficial",
+    "acupoints": [
+      "LU-1",
+      "LU-2",
+      "ST-14",
+      "SP-20"
+    ],
+    "mesh_names": [
+      "pectoralis_major"
+    ]
+  },
+  "latissimus_dorsi": {
+    "id": "latissimus_dorsi",
+    "name_vi": "Cơ Lưng rộng",
+    "name_latin": "M. latissimus dorsi",
+    "origin_vi": "Mỏm gai T7-L5, mào cùng giữa, mào chậu và 3-4 xương sườn dưới",
+    "insertion_vi": "Đáy rãnh gian củ xương cánh tay",
+    "action_vi": "Duỗi cánh tay, khép cánh tay và xoay trong cánh tay rất mạnh",
+    "innervation_vi": "Thần kinh ngực lưng (C6, C7, C8)",
+    "blood_supply_vi": "Động mạch ngực lưng",
+    "depth": "superficial",
+    "acupoints": [
+      "BL-18",
+      "BL-23",
+      "BL-47",
+      "BL-52"
+    ],
+    "mesh_names": [
+      "latissimus_dorsi"
+    ]
+  },
+  "serratus_anterior": {
+    "id": "serratus_anterior",
+    "name_vi": "Cơ Răng trước",
+    "name_latin": "M. serratus anterior",
+    "origin_vi": "Mặt ngoài 8 - 9 xương sườn đầu tiên",
+    "insertion_vi": "Toàn bộ bờ trong mặt sườn của xương bả vai",
+    "action_vi": "Đẩy xương bả vai ra trước (protraction), xoay góc dưới bả vai ra ngoài/lên trên khi giơ tay",
+    "innervation_vi": "Thần kinh ngực dài (C5, C6, C7)",
+    "blood_supply_vi": "Động mạch ngực ngoài và động mạch ngực lưng",
+    "depth": "intermediate",
+    "acupoints": [
+      "SP-21",
+      "GB-22",
+      "GB-23"
+    ],
+    "mesh_names": [
+      "serratus_anterior"
+    ]
+  },
+  "levator_scapulae": {
+    "id": "levator_scapulae",
+    "name_vi": "Cơ Nâng vai",
+    "name_latin": "M. levator scapulae",
+    "origin_vi": "Mỏm ngang các đốt sống cổ C1 - C4",
+    "insertion_vi": "Bờ trong xương bả vai từ góc trên đến gai vai",
+    "action_vi": "Nâng xương bả vai, nghiêng cổ về cùng bên",
+    "innervation_vi": "Thần kinh lưng vai (C5) và các nhánh thần kinh cổ C3, C4",
+    "blood_supply_vi": "Động mạch cổ ngang, động mạch cổ sâu",
+    "depth": "deep",
+    "acupoints": [
+      "GB-21",
+      "SI-14",
+      "SI-15"
+    ],
+    "mesh_names": [
+      "levator_scapulae"
+    ]
+  },
+  "rhomboid_major": {
+    "id": "rhomboid_major",
+    "name_vi": "Cơ Trám lớn",
+    "name_latin": "M. rhomboideus major",
+    "origin_vi": "Mỏm gai đốt sống ngực T2 - T5 và dây chằng gian gai",
+    "insertion_vi": "Bờ trong xương bả vai phía dưới gai vai",
+    "action_vi": "Khép và nâng xương bả vai, xoay góc dưới xương bả vai vào trong",
+    "innervation_vi": "Thần kinh lưng vai (C5)",
+    "blood_supply_vi": "Nhánh sâu của động mạch cổ ngang (động mạch lưng vai)",
+    "depth": "intermediate",
+    "acupoints": [
+      "BL-42",
+      "BL-43",
+      "BL-14"
+    ],
+    "mesh_names": [
+      "rhomboid_major"
+    ]
+  },
+  "rhomboid_minor": {
+    "id": "rhomboid_minor",
+    "name_vi": "Cơ Trám bé",
+    "name_latin": "M. rhomboideus minor",
+    "origin_vi": "Phần dưới dây chằng gáy và mỏm gai C7 - T1",
+    "insertion_vi": "Bờ trong xương bả vai ngang mức gai vai",
+    "action_vi": "Hợp lực cùng cơ trám lớn khép và giữ ổn định xương bả vai",
+    "innervation_vi": "Thần kinh lưng vai (C5)",
+    "blood_supply_vi": "Động mạch lưng vai",
+    "depth": "intermediate",
+    "acupoints": [
+      "BL-41",
+      "BL-13"
+    ],
+    "mesh_names": [
+      "rhomboid_minor"
+    ]
+  },
+  "biceps_brachii": {
+    "id": "biceps_brachii",
+    "name_vi": "Cơ Nhị đầu cánh tay",
+    "name_latin": "M. biceps brachii",
+    "origin_vi": "Đầu dài: củ trên ổ chảo; Đầu ngắn: đỉnh mỏm quạ xương bả vai",
+    "insertion_vi": "Lồi củ xương quay và trẽ cân cơ nhị đầu vào mạc cẳng tay",
+    "action_vi": "Gập cẳng tay tại khớp khuỷu, ngửa cẳng tay mạnh, hỗ trợ gập khớp vai",
+    "innervation_vi": "Thần kinh cơ bì (C5, C6, C7)",
+    "blood_supply_vi": "Động mạch cánh tay",
+    "depth": "superficial",
+    "acupoints": [
+      "LU-3",
+      "LU-4",
+      "LU-5",
+      "PC-3"
+    ],
+    "mesh_names": [
+      "biceps_brachii"
+    ]
+  },
+  "triceps_brachii": {
+    "id": "triceps_brachii",
+    "name_vi": "Cơ Tam đầu cánh tay",
+    "name_latin": "M. triceps brachii",
+    "origin_vi": "Đầu dài: củ dưới ổ chảo; Đầu ngoài & đầu trong: mặt sau xương cánh tay",
+    "insertion_vi": "Mỏm khuỷu xương trụ",
+    "action_vi": "Duỗi cẳng tay tại khớp khuỷu; đầu dài hỗ trợ duỗi và khép khớp vai",
+    "innervation_vi": "Thần kinh quay (C6, C7, C8)",
+    "blood_supply_vi": "Động mạch cánh tay sâu",
+    "depth": "superficial",
+    "acupoints": [
+      "TE-10",
+      "TE-11",
+      "TE-12",
+      "TE-13"
+    ],
+    "mesh_names": [
+      "triceps_brachii"
+    ]
+  },
+  "brachialis": {
+    "id": "brachialis",
+    "name_vi": "Cơ Cánh tay",
+    "name_latin": "M. brachialis",
+    "origin_vi": "Nửa dưới mặt trước xương cánh tay",
+    "insertion_vi": "Mỏm vẹt và lồi củ xương trụ",
+    "action_vi": "Cơ gập cẳng tay thuần túy và mạnh mẽ nhất ở mọi tư thế sấp/ngửa",
+    "innervation_vi": "Thần kinh cơ bì (C5, C6) và nhánh nhỏ thần kinh quay (C7)",
+    "blood_supply_vi": "Động mạch cánh tay, động mạch quặt ngược quay",
+    "depth": "deep",
+    "acupoints": [
+      "LI-12",
+      "LI-13"
+    ],
+    "mesh_names": [
+      "brachialis"
+    ]
+  },
+  "coracobrachialis": {
+    "id": "coracobrachialis",
+    "name_vi": "Cơ Quạ - cánh tay",
+    "name_latin": "M. coracobrachialis",
+    "origin_vi": "Đỉnh mỏm quạ xương bả vai",
+    "insertion_vi": "1/3 giữa mặt trong xương cánh tay",
+    "action_vi": "Gập và khép cánh tay tại khớp vai",
+    "innervation_vi": "Thần kinh cơ bì chọc qua cơ (C5, C6, C7)",
+    "blood_supply_vi": "Động mạch nách, động mạch cánh tay",
+    "depth": "deep",
+    "acupoints": [
+      "HT-2",
+      "LU-3"
+    ],
+    "mesh_names": [
+      "coracobrachialis"
+    ]
+  },
+  "teres_major": {
+    "id": "teres_major",
+    "name_vi": "Cơ Tròn lớn",
+    "name_latin": "M. teres major",
+    "origin_vi": "Mặt sau góc dưới xương bả vai",
+    "insertion_vi": "Mép trong rãnh gian củ xương cánh tay",
+    "action_vi": "Khép cánh tay, xoay trong cánh tay và hỗ trợ duỗi cánh tay",
+    "innervation_vi": "Thần kinh dưới vai dưới (C5, C6, C7)",
+    "blood_supply_vi": "Động mạch dưới vai, động mạch mũ vai",
+    "depth": "superficial",
+    "acupoints": [
+      "SI-9",
+      "SI-10"
+    ],
+    "mesh_names": [
+      "teres_major"
+    ]
+  },
+  "oblique_externus": {
+    "id": "oblique_externus",
+    "name_vi": "Cơ Chéo bụng ngoài",
+    "name_latin": "M. obliquus externus abdominis",
+    "origin_vi": "Mặt ngoài 8 xương sườn dưới (sườn 5 - 12)",
+    "insertion_vi": "Mào chậu, dây chằng bẹn, đường trắng giữa",
+    "action_vi": "Xoay thân mình sang bên đối diện, gập thân mình, nén ổ bụng giữ áp lực khoang",
+    "innervation_vi": "Các dây thần kinh gian sườn dưới (T7 - T11) và thần kinh dưới sườn (T12)",
+    "blood_supply_vi": "Động mạch gian sườn dưới, động mạch thượng vị dưới",
+    "depth": "superficial",
+    "acupoints": [
+      "SP-14",
+      "SP-15",
+      "GB-26",
+      "LR-13"
+    ],
+    "mesh_names": [
+      "external oblique",
+      "oblique"
+    ]
+  },
+  "oblique_internus": {
+    "id": "oblique_internus",
+    "name_vi": "Cơ Chéo bụng trong",
+    "name_latin": "M. obliquus internus abdominis",
+    "origin_vi": "Mạc ngực thắt lưng, 2/3 trước mào chậu, nửa ngoài dây chằng bẹn",
+    "insertion_vi": "Bờ dưới 3-4 sụn sườn cuối, đường trắng giữa, mào lược xương mu",
+    "action_vi": "Xoay thân mình cùng bên, gập và nghiêng cột sống thắt lưng",
+    "innervation_vi": "Thần kinh gian sườn dưới (T7-T11), thần kinh dưới sườn, thần kinh chậu hạ vị (L1)",
+    "blood_supply_vi": "Động mạch thượng vị dưới, động mạch mũ chậu sâu",
+    "depth": "intermediate",
+    "acupoints": [
+      "GB-27",
+      "GB-28",
+      "LR-13"
+    ],
+    "mesh_names": [
+      "internal oblique",
+      "oblique"
+    ]
+  },
+  "rectus_abdominis": {
+    "id": "rectus_abdominis",
+    "name_vi": "Cơ Thẳng bụng",
+    "name_latin": "M. rectus abdominis",
+    "origin_vi": "Mào xương mu, khớp mu",
+    "insertion_vi": "Sụn sườn 5, 6, 7 và mỏm kiếm xương ức",
+    "action_vi": "Gập thân mình (cúi người), nén các tạng trong ổ bụng, ổn định khung chậu",
+    "innervation_vi": "Thần kinh gian sườn 7 - 12",
+    "blood_supply_vi": "Động mạch thượng vị trên và thượng vị dưới",
+    "depth": "superficial",
+    "acupoints": [
+      "ST-21",
+      "ST-24",
+      "ST-25",
+      "KI-16",
+      "CV-12"
+    ],
+    "mesh_names": [
+      "rectus abdominis"
+    ]
+  },
+  "erector_spinae": {
+    "id": "erector_spinae",
+    "name_vi": "Cơ Dựng sống (Nhóm cơ lưng sâu)",
+    "name_latin": "M. erector spinae",
+    "origin_vi": "Mặt sau xương cùng, mào chậu, mỏm gai đốt sống thắt lưng và ngực dưới",
+    "insertion_vi": "Các xương sườn, mỏm ngang và mỏm gai toàn bộ cột sống lên đến xương chẩm",
+    "action_vi": "Duỗi cột sống, giữ thẳng trục đứng thân mình (ĐẠO), kiểm soát tư thế cúi bằng co lệch tâm",
+    "innervation_vi": "Nhánh sau của các dây thần kinh gai sống cổ, ngực và thắt lưng",
+    "blood_supply_vi": "Các nhánh lưng của động mạch gian sườn và động mạch thắt lưng",
+    "depth": "deep",
+    "acupoints": [
+      "BL-20",
+      "BL-23",
+      "BL-25",
+      "GV-3",
+      "GV-4"
+    ],
+    "mesh_names": [
+      "erector spinae"
+    ]
+  },
+  "gluteus_maximus": {
+    "id": "gluteus_maximus",
+    "name_vi": "Cơ Mông lớn",
+    "name_latin": "M. gluteus maximus",
+    "origin_vi": "Diện ngoài xương cánh chậu sau đường mông sau, mặt sau xương cùng và xương cụt",
+    "insertion_vi": "Dải chậu chày và lồi củ mông xương đùi",
+    "action_vi": "Duỗi háng mạnh mẽ, xoay ngoài khớp háng, đẩy thân người ra trước khi bước đi và leo cầu thang",
+    "innervation_vi": "Thần kinh mông dưới (L5, S1, S2)",
+    "blood_supply_vi": "Động mạch mông trên và mông dưới",
+    "depth": "superficial",
+    "acupoints": [
+      "GB-30",
+      "BL-36",
+      "BL-54"
+    ],
+    "mesh_names": [
+      "gluteus maximus"
+    ]
+  },
+  "gluteus_medius": {
+    "id": "gluteus_medius",
+    "name_vi": "Cơ Mông nhỡ",
+    "name_latin": "M. gluteus medius",
+    "origin_vi": "Mặt ngoài cánh chậu giữa đường mông trước và đường mông sau",
+    "insertion_vi": "Mặt ngoài mấu chuyển lớn xương đùi",
+    "action_vi": "Giạng khớp háng; Cơ giá đỡ then chốt giữ thăng bằng phẳng khung chậu khi chân đối diện bước lăng",
+    "innervation_vi": "Thần kinh mông trên (L4, L5, S1)",
+    "blood_supply_vi": "Động mạch mông trên",
+    "depth": "intermediate",
+    "acupoints": [
+      "GB-29",
+      "GB-30"
+    ],
+    "mesh_names": [
+      "gluteus medius"
+    ]
+  },
+  "iliopsoas": {
+    "id": "iliopsoas",
+    "name_vi": "Cơ Thắt lưng chậu",
+    "name_latin": "M. iliopsoas",
+    "origin_vi": "Thân và mỏm ngang đốt sống T12 - L5 (cơ thắt lưng lớn) và hố chậu (cơ chậu)",
+    "insertion_vi": "Mấu chuyển nhỏ xương đùi",
+    "action_vi": "Gập khớp háng mạnh mẽ nhất, nhấc chân bước lăng về phía trước trong chu kỳ dáng đi",
+    "innervation_vi": "Thần kinh đùi (L2, L3, L4) và các nhánh trước rễ thắt lưng",
+    "blood_supply_vi": "Động mạch chậu thắt lưng, động mạch mũ chậu sâu",
+    "depth": "deep",
+    "acupoints": [
+      "ST-30",
+      "SP-12",
+      "SP-13"
+    ],
+    "mesh_names": [
+      "iliopsoas",
+      "psoas major"
+    ]
+  },
+  "rectus_femoris": {
+    "id": "rectus_femoris",
+    "name_vi": "Cơ Thẳng đùi (Tứ đầu đùi)",
+    "name_latin": "M. rectus femoris",
+    "origin_vi": "Gai chậu trước dưới và bờ trên ổ cối xương chậu",
+    "insertion_vi": "Xương bánh chè và qua dây chằng bánh chè tới lồi củ chày",
+    "action_vi": "Duỗi khớp gối, hỗ trợ gập khớp háng",
+    "innervation_vi": "Thần kinh đùi (L2, L3, L4)",
+    "blood_supply_vi": "Động mạch mũ đùi ngoài",
+    "depth": "superficial",
+    "acupoints": [
+      "ST-31",
+      "ST-32",
+      "ST-34"
+    ],
+    "mesh_names": [
+      "rectus femoris",
+      "vastus"
+    ]
+  },
+  "biceps_femoris": {
+    "id": "biceps_femoris",
+    "name_vi": "Cơ Nhị đầu đùi (Nhóm cơ ụ ngồi - cẳng chân)",
+    "name_latin": "M. biceps femoris",
+    "origin_vi": "Đầu dài: ụ ngồi xương chậu; Đầu ngắn: mép ngoài đường ráp xương đùi",
+    "insertion_vi": "Chỏm xương mác và lồi cầu ngoài xương chày",
+    "action_vi": "Gập cẳng chân tại khớp gối, duỗi đùi tại khớp háng",
+    "innervation_vi": "Thần kinh ngồi (nhánh chày cho đầu dài, nhánh mác chung cho đầu ngắn)",
+    "blood_supply_vi": "Các nhánh xuyên của động mạch đùi sâu",
+    "depth": "superficial",
+    "acupoints": [
+      "BL-37",
+      "BL-39",
+      "BL-40"
+    ],
+    "mesh_names": [
+      "biceps femoris"
+    ]
+  },
+  "tibialis_anterior": {
+    "id": "tibialis_anterior",
+    "name_vi": "Cơ Chày trước",
+    "name_latin": "M. tibialis anterior",
+    "origin_vi": "Lồi cầu ngoài và 2/3 trên mặt ngoài thân xương chày, màng gian cốt",
+    "insertion_vi": "Mặt trong xương chêm trong và nền xương đốt bàn chân I",
+    "action_vi": "Gập mu bàn chân (nhấc mũi chân tránh vấp khi bước đi) và nghiêng trong bàn chân",
+    "innervation_vi": "Thần kinh mác sâu (L4, L5)",
+    "blood_supply_vi": "Động mạch chày trước",
+    "depth": "superficial",
+    "acupoints": [
+      "ST-36",
+      "ST-37",
+      "ST-41"
+    ],
+    "mesh_names": [
+      "tibialis anterior"
+    ]
+  },
+  "gastrocnemius": {
+    "id": "gastrocnemius",
+    "name_vi": "Cơ Bụng chân (Cơ sinh đôi)",
+    "name_latin": "M. gastrocnemius",
+    "origin_vi": "Đầu ngoài: lồi cầu ngoài xương đùi; Đầu trong: lồi cầu trong xương đùi",
+    "insertion_vi": "Gân gót (Achilles) bám vào củ xương gót",
+    "action_vi": "Gập lòng bàn chân (kiễng gót phát lực đạp đất), hỗ trợ gập khớp gối",
+    "innervation_vi": "Thần kinh chày (S1, S2)",
+    "blood_supply_vi": "Động mạch khoeo, động mạch chày sau",
+    "depth": "superficial",
+    "acupoints": [
+      "BL-57",
+      "BL-56",
+      "BL-40"
+    ],
+    "mesh_names": [
+      "gastrocnemius",
+      "soleus"
+    ]
+  }
+}

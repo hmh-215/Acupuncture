@@ -1,0 +1,765 @@
+{
+  "overhead_reach": {
+    "id": "overhead_reach",
+    "name_vi": "Nâng tay lên cao qua đầu (Overhead Reach)",
+    "name_en": "Overhead Arm Reach & Elevation",
+    "plane_vi": "Mặt phẳng trán / đứng dọc",
+    "axis_vi": "Đa trục (Khớp ổ chảo - cánh tay & Khớp bả vai - lồng ngực)",
+    "range_of_motion": "0° - 180°",
+    "description_vi": "Chuỗi động học nâng toàn bộ cánh tay vượt qua đầu để với lên cao, kết hợp xoay ngoài xương cánh tay và xoay xương bả vai lên trên theo nhịp bả vai - cánh tay (Scapulohumeral Rhythm 2:1).",
+    "phases": [
+      {
+        "range": "0° - 60°",
+        "primary": "Cơ Delta (phần trước & giữa) và Cơ Trên gai phát động nâng cánh tay"
+      },
+      {
+        "range": "60° - 120°",
+        "primary": "Cơ Răng trước và Cơ Thang phần trên kéo xoay góc ngoài xương bả vai lên"
+      },
+      {
+        "range": "120° - 180°",
+        "primary": "Cơ Thang phần dưới ghì giữ góc trong, Cơ Dựng sống thắt lưng khóa trục thế (ĐẠO)"
+      }
+    ],
+    "muscles": [
+      {
+        "muscleId": "deltoid_middle",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "deltoid_anterior",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "supraspinatus",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "latissimus_dorsi",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "pectoralis_major",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "teres_major",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "serratus_anterior",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "trapezius_upper",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "trapezius_lower",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "infraspinatus",
+        "role": "stabilizer"
+      },
+      {
+        "muscleId": "subscapularis",
+        "role": "stabilizer"
+      },
+      {
+        "muscleId": "erector_spinae",
+        "role": "stabilizer"
+      }
+    ]
+  },
+  "trunk_rotation": {
+    "id": "trunk_rotation",
+    "name_vi": "Xoay người / Xoay thân mình (Trunk Rotation)",
+    "name_en": "Torso / Trunk Axial Rotation",
+    "plane_vi": "Mặt phẳng ngang (Transverse plane)",
+    "axis_vi": "Trục đứng dọc cột sống (Vertical axis)",
+    "range_of_motion": "0° - 45° mỗi bên",
+    "description_vi": "Chuỗi xoắn ốc vận động thân mình: xoay ngực và thắt lưng dựa trên sự phối hợp chéo giữa Cơ Chéo bụng ngoài bên đối diện và Cơ Chéo bụng trong cùng bên, với trục cột sống được khóa bởi Cơ Dựng sống và Khung chậu.",
+    "phases": [
+      {
+        "range": "Khởi động",
+        "primary": "Ánh mắt và đầu mặt dẫn hướng (DẪN), kích hoạt cơ cổ xoay"
+      },
+      {
+        "range": "Phát lực",
+        "primary": "Cơ Chéo bụng ngoài đối bên co hướng tâm kéo lồng ngực xoay quanh trục"
+      },
+      {
+        "range": "Hãm trục",
+        "primary": "Cơ Chéo bụng trong đối bên co ly tâm kiểm soát biên độ, Cơ Mông nhỡ giữ vững chậu"
+      }
+    ],
+    "muscles": [
+      {
+        "muscleId": "oblique_externus",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "oblique_internus",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "rectus_abdominis",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "latissimus_dorsi",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "rhomboid_major",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "erector_spinae",
+        "role": "stabilizer"
+      },
+      {
+        "muscleId": "gluteus_medius",
+        "role": "stabilizer"
+      }
+    ]
+  },
+  "walking_gait": {
+    "id": "walking_gait",
+    "name_vi": "Bước đi (Chu kỳ dáng đi - Gait Cycle)",
+    "name_en": "Walking Gait Cycle & Swing",
+    "plane_vi": "Mặt phẳng đứng dọc kết hợp chuỗi xoắn chéo",
+    "axis_vi": "Đa khớp toàn thân (Háng - Gối - Cổ chân - Khung chậu - Đai vai)",
+    "range_of_motion": "Chu kỳ bước chân đối xứng",
+    "description_vi": "Động tác vận động toàn thân kinh điển: Chân lăng phát lực gập háng đưa tới trước đồng bộ chéo với tay đối diện đánh ra trước, trong khi chân trụ giữ phẳng khung chậu và đẩy trọng tâm cơ thể tiến lên.",
+    "phases": [
+      {
+        "range": "Pha lăng (Swing phase)",
+        "primary": "Cơ Thắt lưng chậu gập háng, Cơ Chày trước nhấc mũi chân tránh vấp ngã"
+      },
+      {
+        "range": "Chạm gót & Chân trụ (Stance phase)",
+        "primary": "Cơ Mông nhỡ giữ thăng bằng phẳng chậu, Cơ Tứ đầu đùi và Cơ Mông lớn chịu tải đẩy tới"
+      },
+      {
+        "range": "Đạp đất (Push-off)",
+        "primary": "Cơ Bụng chân (Gastrocnemius) gập lòng bàn chân kiễng gót phát lực đẩy"
+      }
+    ],
+    "muscles": [
+      {
+        "muscleId": "iliopsoas",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "tibialis_anterior",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "gluteus_maximus",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "biceps_femoris",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "deltoid_anterior",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "gastrocnemius",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "gluteus_medius",
+        "role": "stabilizer"
+      },
+      {
+        "muscleId": "erector_spinae",
+        "role": "stabilizer"
+      },
+      {
+        "muscleId": "rectus_abdominis",
+        "role": "stabilizer"
+      }
+    ]
+  },
+  "forward_bending": {
+    "id": "forward_bending",
+    "name_vi": "Cúi người gập lưng (Forward Trunk Bending)",
+    "name_en": "Trunk Forward Flexion",
+    "plane_vi": "Mặt phẳng đứng dọc (Sagittal plane)",
+    "axis_vi": "Trục ngang qua khớp háng và cột sống thắt lưng",
+    "range_of_motion": "0° - 80°/90°",
+    "description_vi": "Cúi thân mình ra trước: Cơ Thẳng bụng khởi động gập thân, toàn bộ Cơ Dựng sống và nhóm Hamstrings co lệch tâm (Eccentric contraction) hãm giữ thân người chống lại trọng lực.",
+    "phases": [
+      {
+        "range": "0° - 45°",
+        "primary": "Cơ Thẳng bụng gập thân trên, Cơ Dựng sống co lệch tâm hãm tốc độ"
+      },
+      {
+        "range": "45° - 90°",
+        "primary": "Khung chậu xoay trước quanh chỏm đùi, nhóm cơ Hamstrings và Cơ Mông căng giữ"
+      }
+    ],
+    "muscles": [
+      {
+        "muscleId": "rectus_abdominis",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "oblique_externus",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "erector_spinae",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "gluteus_maximus",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "iliopsoas",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "biceps_femoris",
+        "role": "stabilizer"
+      }
+    ]
+  },
+  "archer_pull": {
+    "id": "archer_pull",
+    "name_vi": "Giương cung bắn tên (Đạo Dẫn Thức - Archer Draw)",
+    "name_en": "Archer Stance & Bilateral Scapular Pull",
+    "plane_vi": "Mặt phẳng trán kết hợp ngang",
+    "axis_vi": "Trục đối xứng hai vai và lồng ngực",
+    "range_of_motion": "Tầm vận động đối kháng tối đa",
+    "description_vi": "Thế vận động tinh hoa trong Hệ Đạo Dẫn: Tay trước đẩy duỗi khóa khớp vai mở ngực, tay sau kéo giương cung ép chặt xương bả vai về cột sống (mở phế khí, giải tỏa điểm cân kết vùng Cao Hoang).",
+    "phases": [
+      {
+        "range": "Mở thế",
+        "primary": "Tay trước: Cơ Delta trước và Cơ Tam đầu duỗi thẳng đẩy cung"
+      },
+      {
+        "range": "Giương cung",
+        "primary": "Tay sau: Cơ Trám, Cơ Thang giữa và Cơ Dưới gai kéo siết xương bả vai ra sau"
+      },
+      {
+        "range": "Định trục (ĐẠO)",
+        "primary": "Cơ Dựng sống và Cơ Chéo bụng khóa chặt trục thân mình thẳng đứng"
+      }
+    ],
+    "muscles": [
+      {
+        "muscleId": "rhomboid_major",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "trapezius_middle",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "infraspinatus",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "pectoralis_major",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "deltoid_anterior",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "biceps_brachii",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "triceps_brachii",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "erector_spinae",
+        "role": "stabilizer"
+      },
+      {
+        "muscleId": "serratus_anterior",
+        "role": "stabilizer"
+      }
+    ]
+  },
+  "shoulder_abduction": {
+    "id": "shoulder_abduction",
+    "name_vi": "Giạng vai",
+    "name_en": "Shoulder Abduction",
+    "plane_vi": "Mặt phẳng trán (Coronal plane)",
+    "axis_vi": "Trục trước - sau",
+    "range_of_motion": "0° - 180°",
+    "description_vi": "Đưa cánh tay ra xa đường giữa cơ thể theo mặt phẳng trán, kết hợp vận động giữa khớp ổ chảo - cánh tay và khớp bả vai - lồng ngực.",
+    "phases": [
+      {
+        "range": "0° - 15°",
+        "primary": "Cơ Trên gai khởi động giạng và ghì chỏm cánh tay"
+      },
+      {
+        "range": "15° - 90°",
+        "primary": "Cơ Delta phần giữa co mạnh mẽ dẫn dắt toàn bộ cánh tay"
+      },
+      {
+        "range": "90° - 180°",
+        "primary": "Cơ Thang phần trên + phần dưới và Cơ Răng trước xoay góc ngoài xương bả vai lên trên"
+      }
+    ],
+    "muscles": [
+      {
+        "muscleId": "deltoid_middle",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "supraspinatus",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "pectoralis_major",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "latissimus_dorsi",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "trapezius_upper",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "serratus_anterior",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "infraspinatus",
+        "role": "stabilizer"
+      },
+      {
+        "muscleId": "subscapularis",
+        "role": "stabilizer"
+      }
+    ]
+  },
+  "shoulder_adduction": {
+    "id": "shoulder_adduction",
+    "name_vi": "Khép vai",
+    "name_en": "Shoulder Adduction",
+    "plane_vi": "Mặt phẳng trán (Coronal plane)",
+    "axis_vi": "Trục trước - sau",
+    "range_of_motion": "Trở về 0° hoặc khép chéo 30° - 45°",
+    "description_vi": "Kéo cánh tay áp sát vào thân mình hoặc băng qua trước ngực chống lại lực cản.",
+    "phases": [
+      {
+        "range": "180° - 90°",
+        "primary": "Hãm lực ly tâm của cơ Delta và trọng lực"
+      },
+      {
+        "range": "90° - 0°",
+        "primary": "Cơ Ngực lớn, Cơ Lưng rộng và Cơ Tròn lớn co hướng tâm kéo tay về thân mình"
+      }
+    ],
+    "muscles": [
+      {
+        "muscleId": "pectoralis_major",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "latissimus_dorsi",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "teres_major",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "deltoid_middle",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "supraspinatus",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "coracobrachialis",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "triceps_brachii",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "rhomboid_major",
+        "role": "stabilizer"
+      }
+    ]
+  },
+  "shoulder_flexion": {
+    "id": "shoulder_flexion",
+    "name_vi": "Gập vai (Đưa tay ra trước)",
+    "name_en": "Shoulder Flexion",
+    "plane_vi": "Mặt phẳng đứng dọc (Sagittal plane)",
+    "axis_vi": "Trục ngang",
+    "range_of_motion": "0° - 180°",
+    "description_vi": "Nâng cánh tay về phía trước và lên trên đầu theo mặt phẳng đứng dọc.",
+    "phases": [
+      {
+        "range": "0° - 60°",
+        "primary": "Cơ Delta phần trước và phần đòn Cơ Ngực lớn khởi động"
+      },
+      {
+        "range": "60° - 120°",
+        "primary": "Cơ Quạ - cánh tay và cơ Nhị đầu hỗ trợ"
+      },
+      {
+        "range": "120° - 180°",
+        "primary": "Cơ Răng trước xoay bả vai để hoàn thành tầm vận động tối đa"
+      }
+    ],
+    "muscles": [
+      {
+        "muscleId": "deltoid_anterior",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "pectoralis_major",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "latissimus_dorsi",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "deltoid_posterior",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "coracobrachialis",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "biceps_brachii",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "serratus_anterior",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "supraspinatus",
+        "role": "stabilizer"
+      }
+    ]
+  },
+  "shoulder_extension": {
+    "id": "shoulder_extension",
+    "name_vi": "Duỗi vai (Đưa tay ra sau)",
+    "name_en": "Shoulder Extension / Hyperextension",
+    "plane_vi": "Mặt phẳng đứng dọc (Sagittal plane)",
+    "axis_vi": "Trục ngang",
+    "range_of_motion": "0° - 50°/60°",
+    "description_vi": "Kéo cánh tay ra phía sau mặt phẳng thân người.",
+    "phases": [
+      {
+        "range": "0° - 50°",
+        "primary": "Cơ Lưng rộng và Cơ Delta phần sau phát lực chính đưa cánh tay ra sau"
+      }
+    ],
+    "muscles": [
+      {
+        "muscleId": "latissimus_dorsi",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "deltoid_posterior",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "teres_major",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "deltoid_anterior",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "pectoralis_major",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "triceps_brachii",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "rhomboid_major",
+        "role": "stabilizer"
+      }
+    ]
+  },
+  "shoulder_internal_rotation": {
+    "id": "shoulder_internal_rotation",
+    "name_vi": "Xoay trong vai",
+    "name_en": "Shoulder Internal Rotation",
+    "plane_vi": "Mặt phẳng ngang (Transverse plane)",
+    "axis_vi": "Trục dọc thân xương cánh tay",
+    "range_of_motion": "0° - 70°/80°",
+    "description_vi": "Xoay mặt trước cánh tay hướng vào trong về phía đường giữa.",
+    "phases": [
+      {
+        "range": "Toàn dải",
+        "primary": "Cơ Dưới vai (chóp xoay) giữ vai trong khi Cơ Ngực lớn và Cơ Lưng rộng phát mô-men xoắn"
+      }
+    ],
+    "muscles": [
+      {
+        "muscleId": "subscapularis",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "pectoralis_major",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "latissimus_dorsi",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "teres_major",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "infraspinatus",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "teres_minor",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "deltoid_anterior",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "serratus_anterior",
+        "role": "stabilizer"
+      }
+    ]
+  },
+  "shoulder_external_rotation": {
+    "id": "shoulder_external_rotation",
+    "name_vi": "Xoay ngoài vai",
+    "name_en": "Shoulder External Rotation",
+    "plane_vi": "Mặt phẳng ngang (Transverse plane)",
+    "axis_vi": "Trục dọc thân xương cánh tay",
+    "range_of_motion": "0° - 90°",
+    "description_vi": "Xoay mặt trước cánh tay ra phía ngoài, là động tác then chốt để ném và vung vợt.",
+    "phases": [
+      {
+        "range": "Toàn dải",
+        "primary": "Cặp cơ chóp xoay sau (Cơ Dưới gai + Cơ Tròn bé) co đồng bộ cùng Cơ Delta sau"
+      }
+    ],
+    "muscles": [
+      {
+        "muscleId": "infraspinatus",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "teres_minor",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "deltoid_posterior",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "subscapularis",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "pectoralis_major",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "supraspinatus",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "rhomboid_major",
+        "role": "stabilizer"
+      },
+      {
+        "muscleId": "trapezius_middle",
+        "role": "stabilizer"
+      }
+    ]
+  },
+  "scapular_elevation": {
+    "id": "scapular_elevation",
+    "name_vi": "Nâng xương bả vai (Nhún vai)",
+    "name_en": "Scapular Elevation",
+    "plane_vi": "Mặt phẳng trán",
+    "axis_vi": "Dịch chuyển thẳng đứng",
+    "range_of_motion": "Khoảng 10 - 12 cm",
+    "description_vi": "Kéo toàn bộ đai vai và xương bả vai hướng lên phía tai.",
+    "phases": [
+      {
+        "range": "Toàn dải",
+        "primary": "Cơ Thang trên và Cơ Nâng vai đồng vận kéo góc trên và ngoài xương bả vai lên"
+      }
+    ],
+    "muscles": [
+      {
+        "muscleId": "trapezius_upper",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "levator_scapulae",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "trapezius_lower",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "serratus_anterior",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "rhomboid_major",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "rhomboid_minor",
+        "role": "synergist"
+      }
+    ]
+  },
+  "scapular_retraction": {
+    "id": "scapular_retraction",
+    "name_vi": "Khép xương bả vai (Ưỡn ngực kéo vai ra sau)",
+    "name_en": "Scapular Retraction / Adduction",
+    "plane_vi": "Mặt phẳng trán / ngang",
+    "axis_vi": "Dịch chuyển vào đường giữa",
+    "range_of_motion": "Khoảng 4 - 6 cm",
+    "description_vi": "Kéo hai bờ trong xương bả vai áp sát vào cột sống lưng.",
+    "phases": [
+      {
+        "range": "Toàn dải",
+        "primary": "Cơ Trám và Cơ Thang phần giữa siết chặt xương bả vai về đường giữa"
+      }
+    ],
+    "muscles": [
+      {
+        "muscleId": "rhomboid_major",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "rhomboid_minor",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "trapezius_middle",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "serratus_anterior",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "pectoralis_major",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "latissimus_dorsi",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "trapezius_lower",
+        "role": "synergist"
+      }
+    ]
+  },
+  "elbow_flexion": {
+    "id": "elbow_flexion",
+    "name_vi": "Gập khuỷu tay",
+    "name_en": "Elbow Flexion",
+    "plane_vi": "Mặt phẳng đứng dọc",
+    "axis_vi": "Trục ngang mỏm trên lồi cầu",
+    "range_of_motion": "0° - 145°/150°",
+    "description_vi": "Gập cẳng tay về phía mặt trước cánh tay.",
+    "phases": [
+      {
+        "range": "Toàn dải",
+        "primary": "Cơ Cánh tay (lực thuần) và Cơ Nhị đầu (mạnh nhất khi cẳng tay ngửa) phối hợp gập khuỷu"
+      }
+    ],
+    "muscles": [
+      {
+        "muscleId": "brachialis",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "biceps_brachii",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "triceps_brachii",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "coracobrachialis",
+        "role": "synergist"
+      },
+      {
+        "muscleId": "deltoid_anterior",
+        "role": "stabilizer"
+      }
+    ]
+  },
+  "elbow_extension": {
+    "id": "elbow_extension",
+    "name_vi": "Duỗi khuỷu tay",
+    "name_en": "Elbow Extension",
+    "plane_vi": "Mặt phẳng đứng dọc",
+    "axis_vi": "Trục ngang mỏm trên lồi cầu",
+    "range_of_motion": "145° trở về 0° (hoặc ưỡn quá mức 5°)",
+    "description_vi": "Duỗi thẳng cẳng tay từ tư thế gập.",
+    "phases": [
+      {
+        "range": "Toàn dải",
+        "primary": "Cả ba đầu cơ Tam đầu cánh tay co mạnh mẽ kéo mỏm khuỷu xương trụ"
+      }
+    ],
+    "muscles": [
+      {
+        "muscleId": "triceps_brachii",
+        "role": "agonist"
+      },
+      {
+        "muscleId": "biceps_brachii",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "brachialis",
+        "role": "antagonist"
+      },
+      {
+        "muscleId": "latissimus_dorsi",
+        "role": "stabilizer"
+      },
+      {
+        "muscleId": "deltoid_posterior",
+        "role": "stabilizer"
+      }
+    ]
+  }
+}

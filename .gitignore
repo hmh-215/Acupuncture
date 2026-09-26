@@ -1,0 +1,38 @@
+# Dependency & Node
+node_modules/
+package-lock.json
+
+# Large 3D binary raw files & archives (> 100MB GitHub limit)
+*.blend
+*.blend1
+*.zip
+*.tar.gz
+*.7z
+*.rar
+3D-models/Z-Biomechanics-extracted/
+
+# Temporary Audio/Video & processing artifacts
+temp_*
+*.wav
+*.mp3
+*.mp4
+*.mkv
+*.avi
+chunk.wav
+temp_audio.wav
+test_*.png
+screenshot*.png
+
+# Python & System
+__pycache__/
+*.pyc
+.env
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

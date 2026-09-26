@@ -1,0 +1,52 @@
+{
+  "video_name": "kinh cân 5.mp4",
+  "video_path": "D:\\huong\\antigravity\\châm cứu\\TaiLieu-DauVao\\kinh cân 5.mp4",
+  "duration": "02:10",
+  "total_seconds": 130.432,
+  "transcripts": [
+    {
+      "start": "00:15",
+      "end": "00:33",
+      "start_sec": 15.0,
+      "end_sec": 33.0,
+      "text": "đi theo đường kinh"
+    },
+    {
+      "start": "00:45",
+      "end": "01:03",
+      "start_sec": 45.0,
+      "end_sec": 63.0,
+      "text": "trung tâm lý Trung Quốc tâm lý đúng không cái thằng này với thằng này cũng được"
+    },
+    {
+      "start": "01:00",
+      "end": "01:18",
+      "start_sec": 60.0,
+      "end_sec": 78.0,
+      "text": "cái thằng này với thằng này nó chia 1 2 5"
+    },
+    {
+      "start": "01:15",
+      "end": "01:33",
+      "start_sec": 75.0,
+      "end_sec": 93.0,
+      "text": "Nếu mà định lý nó sẽ bị nhão ra Nhưng mà nếu mà thằng này căng cứng thì là thằng Tính âm của nó mặt bên"
+    },
+    {
+      "start": "01:30",
+      "end": "01:48",
+      "start_sec": 90.0,
+      "end_sec": 108.0,
+      "text": "Ok Google"
+    }
+  ],
+  "keyframes": [
+    "temp_work\\kinh_cân_5\\frames\\frame_0001.jpg",
+    "temp_work\\kinh_cân_5\\frames\\frame_0002.jpg",
+    "temp_work\\kinh_cân_5\\frames\\frame_0003.jpg",
+    "temp_work\\kinh_cân_5\\frames\\frame_0004.jpg",
+    "temp_work\\kinh_cân_5\\frames\\frame_0005.jpg",
+    "temp_work\\kinh_cân_5\\frames\\frame_0006.jpg",
+    "temp_work\\kinh_cân_5\\frames\\frame_0007.jpg"
+  ]
+}

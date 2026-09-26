@@ -1,0 +1,29 @@
+{
+  "video_name": "kinh cân 4.mp4",
+  "video_path": "D:\\huong\\antigravity\\châm cứu\\TaiLieu-DauVao\\kinh cân 4.mp4",
+  "duration": "01:31",
+  "total_seconds": 91.563,
+  "transcripts": [
+    {
+      "start": "00:15",
+      "end": "00:33",
+      "start_sec": 15.0,
+      "end_sec": 33.0,
+      "text": "đợi anh nhiều ấn mạnh mới đau"
+    },
+    {
+      "start": "00:30",
+      "end": "00:48",
+      "start_sec": 30.0,
+      "end_sec": 48.0,
+      "text": "điều khiển được lúc vào lúc 9:45"
+    }
+  ],
+  "keyframes": [
+    "temp_work\\kinh_cân_4\\frames\\frame_0001.jpg",
+    "temp_work\\kinh_cân_4\\frames\\frame_0002.jpg",
+    "temp_work\\kinh_cân_4\\frames\\frame_0003.jpg",
+    "temp_work\\kinh_cân_4\\frames\\frame_0004.jpg",
+    "temp_work\\kinh_cân_4\\frames\\frame_0005.jpg"
+  ]
+}

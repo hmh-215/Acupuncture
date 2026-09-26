@@ -1,0 +1,734 @@
+/* ================================================================
+   THEME.CSS — Design System cho Ứng Dụng 3D Cơ Xương Khớp
+   Kế thừa từ Dark Slate Studio y khoa (AGENTS.md)
+   ================================================================ */
+
+/* === CSS Custom Properties — Mặc định Chế độ Sáng (Light Mode Y Khoa) === */
+:root {
+  --bg: #f8fafc;
+  --bg-deep: #f1f5f9;
+  --card: #ffffff;
+  --card-hover: #f8fafc;
+  --border: #cbd5e1;
+  --text: #0f172a;
+  --muted: #475569;
+  --cyan: #0284c7;
+  --amber: #d97706;
+  --red: #dc2626;
+  --green: #16a34a;
+  --purple: #7c3aed;
+
+  /* Semantic colors for muscle roles */
+  --role-agonist: var(--red);
+  --role-antagonist: var(--cyan);
+  --role-synergist: var(--amber);
+  --role-stabilizer: var(--green);
+
+  /* Typography */
+  --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Cascadia Code', 'Fira Code', monospace;
+
+  /* Spacing */
+  --gap: 16px;
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+/* === Chế độ Tối (Dark Slate Studio Y Khoa) === */
+body.dark-theme {
+  --bg: #0f172a;
+  --bg-deep: #090d16;
+  --card: #1e293b;
+  --card-hover: #253349;
+  --border: #334155;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --cyan: #38bdf8;
+  --amber: #f59e0b;
+  --red: #ef4444;
+  --green: #10b981;
+  --purple: #a78bfa;
+}
+
+/* === Global Reset === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 15px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* === HEADER === */
+.app-header {
+  text-align: center;
+  padding: 24px var(--gap) 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 9999px;
+  padding: 4px 16px;
+  margin-bottom: 12px;
+}
+
+.app-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--text), var(--cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* === MAIN LAYOUT — 2 Column Grid === */
+.app-layout {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: var(--gap);
+  padding: var(--gap);
+  max-width: 1600px;
+  margin: 0 auto;
+  min-height: calc(100vh - 200px);
+}
+
+.viewport-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+/* === VIEWPORT CARD === */
+.viewport-card {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+body.dark-theme .viewport-card {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.three-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: var(--bg-deep);
+  cursor: grab;
+}
+.three-container:active {
+  cursor: grabbing;
+}
+
+.three-container canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(241, 245, 249, 0.92);
+  z-index: 10;
+}
+body.dark-theme .loading-overlay {
+  background: rgba(9, 13, 22, 0.9);
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--border);
+  border-top-color: var(--cyan);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-overlay p {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Hover Tooltip */
+.hover-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--card);
+  border: 1px solid var(--cyan);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  color: var(--text);
+  white-space: nowrap;
+  z-index: 20;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transform: translate(-50%, -120%);
+}
+body.dark-theme .hover-tooltip {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* === CONTROL BAR === */
+.control-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+body.dark-theme .control-bar {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+.layers-control-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .layers-control-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .layers-control-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.layer-control-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+.layer-control-card:hover {
+  border-color: var(--cyan);
+}
+
+.layer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle-label input[type="checkbox"] {
+  accent-color: var(--cyan);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.layer-title {
+  color: var(--text);
+  font-size: 0.85rem;
+}
+
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.slider-wrapper .slider {
+  width: 100%;
+}
+
+.slider-num {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.control-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.slider-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 120px;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  outline: none;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--cyan);
+  cursor: pointer;
+}
+
+#opacity-value {
+  font-size: 0.8rem;
+  color: var(--muted);
+  min-width: 30px;
+}
+
+/* === BUTTONS === */
+.btn {
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn:hover {
+  background: var(--card-hover);
+  border-color: var(--cyan);
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+}
+.btn-icon:hover {
+  color: var(--text);
+  background: rgba(255,255,255,0.05);
+}
+
+/* === CARD SYSTEM === */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+.card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-header .card-title {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* === SEARCH & SELECT === */
+.search-box {
+  margin-bottom: 10px;
+}
+
+.search-input,
+.select-input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-family: var(--font-main);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.search-input:focus,
+.select-input:focus {
+  border-color: var(--cyan);
+}
+
+.select-input {
+  cursor: pointer;
+}
+.select-input option {
+  background: var(--card);
+  color: var(--text);
+}
+
+/* === MOVEMENT INFO === */
+.movement-info {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.movement-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.movement-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.meta-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--cyan);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.phases-container {
+  margin-top: 8px;
+}
+
+.phase-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 6px 0;
+  font-size: 0.8rem;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+}
+.phase-item:last-child {
+  border-bottom: none;
+}
+
+.phase-range {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--amber);
+  min-width: 60px;
+  white-space: nowrap;
+}
+
+.phase-desc {
+  color: var(--muted);
+}
+
+/* === LEGEND === */
+.legend-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+
+.legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-item em {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+/* === ROLE FILTER BUTTONS === */
+.role-filter {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.filter-btn {
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filter-btn:hover {
+  border-color: var(--btn-color, var(--text));
+  color: var(--btn-color, var(--text));
+}
+.filter-btn.active {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--btn-color, var(--text));
+  color: var(--btn-color, var(--text));
+  font-weight: 600;
+}
+
+/* === MUSCLE LIST === */
+.muscle-list {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.muscle-placeholder {
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 16px;
+}
+
+.muscle-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.15s;
+  border-left: 3px solid transparent;
+}
+.muscle-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+.muscle-item.selected {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.muscle-item[data-role="agonist"] { border-left-color: var(--red); }
+.muscle-item[data-role="antagonist"] { border-left-color: var(--cyan); }
+.muscle-item[data-role="synergist"] { border-left-color: var(--amber); }
+.muscle-item[data-role="stabilizer"] { border-left-color: var(--green); }
+
+.muscle-color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.muscle-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.muscle-role-tag {
+  font-size: 0.65rem;
+  padding: 1px 6px;
+  border-radius: 9999px;
+  margin-left: auto;
+  white-space: nowrap;
+}
+.muscle-role-tag[data-role="agonist"] {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--red);
+}
+.muscle-role-tag[data-role="antagonist"] {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--cyan);
+}
+.muscle-role-tag[data-role="synergist"] {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--amber);
+}
+.muscle-role-tag[data-role="stabilizer"] {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--green);
+}
+
+/* === MUSCLE DETAIL PANEL === */
+.detail-latin {
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 4px 0 12px;
+}
+
+.detail-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-row {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.detail-row strong {
+  display: block;
+  color: var(--cyan);
+  font-size: 0.75rem;
+  margin-bottom: 2px;
+}
+
+/* === ACUPOINT SECTION === */
+.acupoint-section {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.section-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.acupoint-list {
+  list-style: none;
+}
+
+.acupoint-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.3);
+  font-size: 0.8rem;
+}
+.acupoint-item:last-child {
+  border-bottom: none;
+}
+
+.acupoint-code {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--red);
+  background: rgba(239, 68, 68, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.acupoint-name {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.acupoint-location {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+/* === FOOTER === */
+.app-footer {
+  text-align: center;
+  padding: 16px var(--gap);
+  border-top: 1px solid var(--border);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.app-footer p {
+  margin: 2px 0;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+  .info-column {
+    max-height: none;
+  }
+}
+
+@media (max-width: 600px) {
+  html { font-size: 13px; }
+  .app-header h1 { font-size: 1.4rem; }
+  .control-bar { flex-direction: column; align-items: flex-start; }
+  .three-container { aspect-ratio: 4 / 3; }
+}

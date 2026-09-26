@@ -1,0 +1,2165 @@
+=== BÀI 2 ===
+
+--- PDF PAGE 26 ---
+Bài 2
+ĐẠI CƯ0NG V i HỆ Cff, Cơ VÀ MẠC CỦA DẦU
+■  ■  '  ■
+MỤC TIÊU
+1. Trình bày được cấu tạo chung của một cơ vân, các kiểu sắp xếp SỢ I cơ và  
+cách phân loại cơ theo chức năng.
+2. Mô tả được các nhóm cơ ở đầu: tên gọi, cách bám, thần kinh chi phôi và  
+động tác của của mỗi cơ.
+1. ĐẠI CƯƠNG VỀ HỆ Cơ
+Hệ cơ được trình bày ở bài này là hệ thống của các cơ và nhóm cơ xương tạo nên 
+những cử động ở các khớp. Trong hệ này, mỗi cơ xương là một cơ quan do mô cơ 
+xương và mô liên kết tạo nên.
+1.1. Đại cương về mô cơ
+Cơ thể ta có ba loại mô cơ khác nhau về mô học, vị trí và sự chi phối thần kinh: 
+cơ xương, cơ trơn và cơ tim.
+1.1.1. Mô c ơ  xư ơ n g (H.2.1). Loại cơ này còn được gọi là cơ vân vì, khi nhìn dưới 
+kính hiển vi, tế bào cơ (sợi cơ) có những dải sáng và tối xen kẽ (vân). Mô cơ xương 
+chủ yếu là vận động theo ý muốn. Hầu hết cơ xương cũng vận động không theo ý 
+muốn ở chừng mực nào đó. Ví dụ, ta thường không biết về cử động co giãn của cỡ 
+hoành, về tình trạng co thường xuyên của các cơ giữ tư thế, hoặc về các phản xạ ruỗi.
+Các nhân
+Hình 2.1: a. Một sợi cơ xương; b. Một bó sợi cơ xương và mô liên kết đi kèm
+22
+
+--- PDF PAGE 27 ---
+1.1.2. Mô c ơ  trơn  (H.2.2). Mô cơ trơn có mặt ở thành của các cấu trúc rỗng, như các 
+mạch máu, đường dẫn khí và hầu hết các cơ quan trong ổ bụng. Nó cũng bám vàocac 
+nang lông ở da. Dưới kính hiển vi, tế bào cơ trơn có hình thoi với duy nhât một nhân ơ 
+trung tâm và không có vân ngang. Cơ trơn do thần kinh tự chủ chi phối nên không đáp 
+ứng vận động theo ý muốn.
+Hình 2.2. Mô cơ trơn
+1.1.3. Mô c ơ  tim  (H.2.3). Sợi cơ tim cũng có vân ngang như sợi cơ xương nhưng các 
+sợi có nhánh nối với nhau làm cho cơ tim trở thành một phiến cơ chứ không phải một 
+tập hợp của các sợi cơ riêng rẽ. Loại cơ này cũng do thần kinh tự chủ chi phối và còn 
+có khả năng tự co bóp khi không có xung động từ thần kinh trung ương đi tới.
+Hình 2.3. Mô cơ tim
+1.2. Các loại cơ xương và cách gọi tên cơ
+Các cơ xương được chia thành nhiều loại dựa vào hình dạng, số đầu nguyên ủy
+số bụng cơ, cách sắp xếp bó sợi cơ và chức năng.
+*  Các loại theo hình dạng  và cách sắp xếp bó sợi :  cơ hình thoi, cơ dẹt, cơ thẳng 
+cơ tam giác, cơ vuông, cơ lông vũ (đơn, kép và đa lông vũ), cơ vòng.
+*  Các loại theo số  đầu nguyên ủy.  cơ nhị đầu, cơ tam đầu, cơ tứ đầu.
+*  Các loại theo sô bụng cơ:  cơ hai bụng
+*  Các loại theo chức năng-,  cơ khép, cơ giạng, cơ xoay, cơ gấp, cơ ruỗi, cơ sấp
+cơ ngửa, cơ đối chiếu, cơ thắt, cơ giãn.
+23
+
+--- PDF PAGE 28 ---
+Mỗi cơ cụ thể được gọi tên dựa vào cách phân loại nói trên kết hợp với các đặc 
+điểm về vị trí, kích thước và hướng sợi cơ.
+1.3. Câu trúc của cơ xương
+Mỗi cơ có phần bụng cơ  (belly) nằm giữa các đầu bám  (attachment) bằng gán. 
+Phần bụng cơ do các sợi cơ và thành phần mô liên kết tạo nên. Các sợi cơ xêp thành 
+từng bó sợi cơ. Nhiều bó sợi cơ hợp thành một cơ. Các sợi cơ, các bó sợi cơ và toàn bộ 
+cơ đều được các màng mô liên kết vây quanh: màng vây quanh mỗi sợi cơ là màng nội  
+cơ, màng vây quanh mỗi bó sợi cơ là màng chu cơ  và màng vây quanh toàn bộ cơ là 
+màng ngoài cơ.  Các màng mô liên kết của bụng cơ kéo dài về các đầu cơ và liên tiêp 
+với các gân. Gân hoàn toàn do mô liên kết tạo nên. Nó là phần không co rút được mà 
+chỉ truyền lực co của bụng cơ tới xương hoặc các cấu trúc khác. Những gân rộng và 
+dẹt được gọi là cân.
+Lớp mô liên kết nằm giữa cơ và da được chia thành hai phần: phần đặc nầm sâu 
+sát màng ngoài cơ là mạc bọc cơ  hay mạc sâu,  phần lỏng lẻo (chứa mỡ) ờ ngay dưới da 
+gọi là tấm dưới da  hay mạc nông.  Những chẽ mạc ngăn cách nhóm cơ này với nhóm 
+cơ kia được gọi là vách gian cơ.
+Có một số cấu trúc tạo thuận lợi cho sự di chuyển của các gân cơ. Đó là các bao  
+xơ của gân ,  các hãm gân  (retinacula), các túi hoạt dịch  (synovial bursa) và các bao  
+hoạt dịch  (synovial sheath).
+1.4. Các đầu bám của cơ
+Hầu hết các cơ đi qua ít nhất một khớp và thường bám vào các xương tham gia 
+tiếp khớp tại khớp đó. Khi một cơ co, nó kéo một trong các xương tiếp khớp về phía 
+xương kia. Hai xương tiếp khớp thường không dịch chuyển ngang nhau khi cơ co. Một 
+xương thường vẫn ở vị trí ban đầu hay dịch chuyển ít, hoặc vì nó được các cơ khác cố 
+định bằng cách kéo về hướng ngược lại, hoặc do vị trí và cấu trúc của nó làm nó không 
+dịch chuyển được. Như vậy, các đầu bám của cơ được phân biệt thành đầu cố định  
+(fixed end) và đầu di động  (mobile end). Đầu cố định thường được gọi là nguyên ủy  đầu 
+di động là bám tận.  Ở các chi, đầu cố định (hay nguyên ủy) thường là đầu gần của cơ.
+1.5. Các kiểu sắp xếp bó sợi cơ (H.2.4)
+Các sợi cơ bám xương được sắp xếp trong cơ thành các bó. Các sợi cơ tronơ mỗi 
+bó thì nằm song song nhau, nhưng sự sắp xếp của các bó so với các gân có thể thuộc 
+một trong năm kiểu đặc trưng: song song, hình thoi, vòng, tam giác, hoặc lông vũ. Ỏ 
+cơ song song, các bó sợi chạy song song với trục dọc của cơ và tận cùng tại các đầu 
+gân dẹt. Cơ hình thoi có các bó chạy gần song song với trục dọc cùa cơ; bụng cơ thuôn 
+nhỏ dần về phía các đầu gân. Các bó của cơ vòng săp xếp thành các vòng tròn đổng 
+tâm tạo nên một cơ thắt vây quanh một lỗ nào đó. ơ  cơ tam giác, các bó cơ nằm trên 
+một vùng rộng hội tụ về một gân trung tâm. Các cơ lông vũ có bó sợi cơ ngắn nếu so 
+với tổng chiều dài cơ; gân cơ trải ra trên hầu như toàn bộ chiều dài cơ. Ở cơ lôn® vũ 
+đơn, các bó sắp xếp chỉ ở một bên gàn. Cơ lông vũ kép có các bó nằm ờ cả hai bẽn 
+gân. Cơ đa lông vũ do nhiều cơ lông vũ kép gộp lại.
+24
+
+--- PDF PAGE 29 ---
+Kiểu sắp xếp bó sợi cơ ảnh hưởng tới lực co và tầm vận động của cơ. Khi một cơ 
+co, nó ngắn lại và chỉ có chiều dài bằng khoảng 70% chiều dài lúc nghỉ của nó. Như 
+vậy, các sợi cơ trong một cơ càng dài thì tầm vận động mà nó tạo ra càng lớn. Trai lại, 
+sức co của một cơ phụ thuộc vào tổng số sợi cơ mà nó chứa, vì một S Ợ I ngăn có thê co 
+mạnh như một sợi dài. Vì một cơ cho trước nào đó có thể chứa hoặc một số lượng nhỏ 
+sợi dài hoặc một số lượng lớn sợi ngắn, cách sắp xếp bó sợi cơ thể hiện sự bù trừ giữa 
+lực co và tầm vận động. Các cơ lông vũ có một số lượng lớn bó sợi kéo lên các gân của 
+chúng, đem lại cho chúng lực co lớn hơn nhưng một tầm vận động nhỏ hơn. Các cơ 
+song song, trái lại, có tương đối ít bó sợi chạy đọc theo chiều dài cơ; như vậy, chúng 
+có một tầm vận động lớn hơn nhưng lực co yếu hơn.
+Hình 2.4. Các kiểu cấu trúc của cơ xương 
+a,f. Cơ với các bó sợi song song; b,g. Cơ hình quạt;
+c. Cơ hình lông vũ đơn; d. Cơ hình lông vũ kép; e. Cơ hình thoi
+1.6. Sự phối hợp giữa các cơ và nhóm cơ
+Một động tác bất kỳ nào đó cũng là kết quả của sự hoạt động phối hợp của nhiều 
+cơ. Hầu hết các cơ xương được xếp thành những cặp đối kháng nhau: các cơ gấp-các 
+cơ ruổi, các cơ giạng-các cơ khép v.v... Trong các cặp đối kháng, một cơ, được gọi là
+25
+
+--- PDF PAGE 30 ---
+cơ chủ vận  (prime mover/agonist), co để gây nên cử động mong muốn trong khi cơ 
+kia, cơ đối kháng  (antagonist), giãn ra và tuân theo những tác động cùa cơ chủ vận. Ví 
+dụ ở cử động gấp cẳng tay tại khớp khuỷu, cơ nhị đầu là cơ chủ vận, cơ tam đầu là cơ 
+đối kháng. Cơ chủ vận và cơ đối kháng thường nằm ờ hai phía đối ngược nhau cùa một 
+xương hoặc khớp. Cơ chủ vận và cơ đối kháng hoán đổi vai trò với nhau. Trong cư 
+động duỗi cẳng tay, cơ tam đầu là cơ chủ vận, cơ nhị đầu là cơ đối kháng.
+Một số cơ, gọi là cơ cỏ' định  (fixators), co đồng thời với cơ chủ vận để giữ vững 
+nguyên uỷ của cơ chủ vận, giúp cho cơ chủ vận hoạt động có hiệu quả. Ví dụ, các cơ 
+đi từ thân tới đai ngực có tác dụng cố định đai ngực và cho phép cơ delta gây ra cư 
+động của cánh tay trên khớp vai.
+Có nhiều trường hợp cơ chủ vận đi ngang qua một số khớp trước khi vượt qua 
+một khớp mà tại đó động tác chính của nó diễn ra. Để ngăn cản những cử động không 
+mong muốn ở một khớp trung gian, một số cơ gọi là cơ hiệp đồng  (synergists) sẽ co và 
+cố định khớp trung gian đó. Ví dụ, các cơ gấp và duỗi cổ tay co đê cố định khớp cỏ 
+tay, và điều này cho phép các cơ gấp và duỗi ngón tay hoạt động có hiệu quả.
+Tuỳ thuộc vào động tác cần hoàn thành, nhiều cơ có thể đóng vai trò như một cơ 
+chủ vận, một cơ đối kháng, một cơ cố định hoặc một cơ hiệp đồng.
+1.7. Sự cung cấp thần kinh cho cơ
+Nhánh thần kinh đi tới một cơ là thần kinh hỗn hợp gồm cả sợi vận động 
+(khoảng 60%), sợi cảm giác (khoảng 40%) và một số sợi giao cảm.
+Mỗi sợi vận động xuất phát từ một nơron vận động có thân nằm ở thân não hoặc 
+tuỷ sống và tận cùng bằng cách chia ra nhiều nhánh đi tới một nhóm sợi cơ. Mỗi 
+nhánh tiếp xúc với một sợi cơ tại khớp thần kinh-cơ.  Tại đây, các nhánh tận cùng sợi 
+trục phình to ra thành bọng tận cùng synap.
+Các sợi cảm giác xuất phát từ các đầu tận cùng cảm giác nằm trong cơ hoặc gân, 
+được gọi tên lần lượt là thoi cơ hoặc thoi gân.  Những đầu tận cùng này được kích thích 
+bởi sức căng trong cơ sinh ra trong lúc co cơ chủ động hoặc giãn cơ thụ động.
+Chức năng của các sợi cảm giác là vận chuyển tới hệ thần kinh trung ương thông 
+tin về độ căng cơ. Thông tin này đóng vai trò thiết yếu cho việc duy trì trương lực cơ 
+và tư thế cơ thể và cho việc thực hiện các động tác phối hợp theo ý muốn.
+Các sợi giao cảm phân phối vào cơ trơn của thành các mạch máu nuôi cơ.
+Một nơron vận động và tất cả các sợi cơ mà nó chi phối hợp nên một đơn vị
+vận động.
+Trong lúc nghỉ, cơ vân ở trạng thái co bán phần và trạng thái này gọi là trương  
+lực cơ. Vì các sợi cơ không bao giờ ở trạng thái trung gian giữa co và giãn, trương lực 
+cơ có được là nhờ trong cơ luôn luôn có một ít sợi cơ co hoàn toàn, số đônơ còn lai 
+giãn hoàn toàn. Để tránh mỏi cơ, các nhóm đơn vị vận động (các nhóm sợi cơ) khác 
+nhau luân phiên nhau ờ vào trạng thái hoạt động tại các thời gian khác nhau. Trương 
+lực cơ được duy trì nhờ cung phản xạ hai nơron.  Tổn thương một hoặc cả hai nơron 
+này dẫn tới mất trương lực cơ và cơ sẽ bị nhẽo.
+26
+
+--- PDF PAGE 31 ---
+Khi co cơ, sô các đơn vị vận động đi vào trạng thái hoạt động ngày càng tăng đong 
+thời mức hoạt động của các đơn vị vận động của các cơ đối kháng giảm đi. Khi cần co cơ 
+tối đa, tất cả các đơn vị vận động của một cơ được đưa vào trạng thái hoạt động.
+Hệ cơ có năm chức nâng: tạo ra các cử động, duy trì các tư thế của cơ thể, điều 
+hoà thể tích của các cơ quan, sinh nhiệt và làm dịch chuyển các chât trong cơ thê.
+2. CÁC Cơ CỦA ĐẦU (MUSCLES OF HEAD)
+Các cơ của đầu bao gồm các cơ mặt, các cơ nhai, các cơ ngoài nhãn cầu, các cơ 
+tiểu cốt tai, các cơ lưỡi, các cơ khẩu cái mềm và eo họng.
+Bài này chỉ trình bày các cơ mặt và các cơ nhai, các nhóm cơ khác được trình 
+bày ở các phần có liên quan: các cơ ngoài nhãn cầu ở bài mắt và thần kinh thị giác, 
+các cơ tiểu cốt tai ở bài tai và thần kinh tiền đình-ốc tai, các cơ lưỡi và các cơ khẩu cái 
+và eo họng ở các bài về miệng và hầu.
+2.1. Các cơ mặt (facial muscles) (Bảng 2.1) (H. 2.5 và H. 2.6)
+Hình 2.5. Các cơ bám da đầu
+Các cơ mặt đem lại cho loài người khả năng biểu hiện nhiều loại cảm xúc khác 
+nhau trên nét mặt. Các cơ này nằm giữa các lớp của mạc nông. Chúng thường có một  
+đầu bám vào mạc hoặc các xương của sọ, một đầu bám vào da.  Chính vì chung bám 
+vào da nên khi co làm dịch chuyển da chứ không phải một khớp như các cơ khác.
+Trong số các cơ mặt, có những cơ bao quanh các lỗ vào của các hốc tự nhiên của 
+đầu như mắt, mũi và miệng. Các cơ này có chức năng như các cơ thắt  (sphincter) và 
+các cơ giãn  (dilator). Ví dụ, cơ vòng mắt làm nhắm mắt.
+Về chi phối thần kinh, tất cả các cơ mặt do thần kinh mặt vận động.
+27
+
+--- PDF PAGE 32 ---
+Theo định khu và chức năng, các cơ mặt được xếp thành 5  nhóm: cơ trên sọ, các 
+cơ quanh tai, các cơ quanh ổ mắt và mí, các cơ mũi và các cơ quanh miệng. Phân 
+chính của các cơ trên sọ  là cơ chẩm-trán.  Cơ nàv có hai bụng chẩm và trán nằm trên 
+các xương cùng tên và được nôi với nhau bời cân trên sọ. Ở mỗi bên mặt. phần lớn các 
+cơ của nhóm cơ quanh miệng tập trung lại và đan với nhau tại một điểm ờ ngang bên 
+ngoài góc miệng tạo nên một trụ xơ-cơ chắc đặc (gọi là modiolus).  Trụ này giông như 
+trục cùa một bánh xe mà các cơ tới bám chung là nan hoa.
+Cơ
+Hình 2.6. Các cơ bám da cổ và mặt
+Bụng trán cơ chẩm - trán - -
+Cơ tai trước 
+Cơ vòng mắt
+Các cơ gò má lớn và bé 
+nâng mõi trên và cánh mũi
+Cơ cười ........-
+Cơ vòng miệng- 
+Cơ hạ góc miệng
+Cơ bám da c ổ --------
+Cơ cau mày
+Cơ cao
+-- Cơ mũi (phần ngang) 
+Cơ nâng góc miệng
+Cơ hạ vách mũi
+-------Cơ thổi kèn
+Cơ hạ môi dưới 
+------Cơ cằm
+-  -Cơ ức - đòn - chum
+28
+
+--- PDF PAGE 33 ---
+Bảng 2.1. Các cơ mặt
+Cơ Nguyên uỷ Bám tận Động tác
+Các cơ  quanh tai
+Cơ tai trước  
+(auricularis anterior)
+Mạc trên sọ Phía trước gờ luân
+Các cơ quanh tai là 
+những cơ kém phát 
+triển.
+Cơ tai trên
+(auricularis superior)
+Mạc trên sọ Phần trên mặt sau loa tai
+Cơ tai sau
+(auricularis posterior) Mỏm chũm Lồi xoăn tai
+Cơ trên sọ
+(epicranius) gồm:
+Cơ chẩm trán
+(occipitofrontalis) 
+có hai bụng
+Bụng trán
+Bụng chẩm
+Cân trên sọ
+Đường gáy trên xương 
+chẩm và mỏm chũm 
+xương thái dương
+Da phía trên bờ ổ mắt 
+Cân trên sọ
+Kéo da đầu ra trước, 
+nâng lông mày, nhăn 
+da trán (bụng trán).
+Kéo da đầu ra sau 
+(bụng chẩm)
+Cơ thái dương đỉnh  
+(temporoparietalis)
+Hoà lẫn với các cơ tai 
+ở mặt bên sọ
+Cân trên sọ Kém phát triển
+Các cơ  quanh ó’m ắt
+Cơ vòng mắt
+(orbicularis oculi) gồm 
+hai phần chính là phần  
+ổ  mắt và phần mí
+Xương thành trong ổ 
+mắt (phần ổ mắt) và 
+dây chằng mí trong 
+(phần mí)
+Các sợi chạy vòng quanh 
+ổ mắt (phần ổ mắt) hoặc 
+đi ra ngoài trong hai mí 
+mắt và đan với nhau ở 
+góc mắt ngoài
+Nhắm mắt
+Cơ cau mày  
+(corruggator supercilii)
+Đầu trong cung mày 
+của xương trán
+Da ở giữa vùng lông mày Kéo lông mày xuống 
+dưới và làm nhăn da 
+trán theo chiều dọc 
+(cau mày)
+Cơ hạ mày  
+(depressor supercilii)
+Là một số sợi trên của 
+phần ổ mắt cơ vòng mắt
+Các sợi chạy lên bám vào 
+da vùng lông mày
+Kéo lông mày xuống 
+dưới
+Các cơ  m ủi
+Cơ cao  (procerus)
+Mạc phủ phần dưới 
+xương mũi
+Da trán, giữa hai lông 
+mày, ở sát hoặc hoà lẫn 
+với bờ trong bụng trán cơ 
+chẩm - trán
+Kéo góc trong lông 
+mày xuống, gây ra 
+các nếp nhăn ngang 
+trên sống mũi
+Cơ mũi  (nasalis) gồm 
+phần ngang và phần 
+cánh
+Ngay phía ngoài khuyết 
+mũi xương hàm trên, 
+các sợi phần cánh bám 
+ở phía dưới, trong các 
+sợi phần ngang
+Các sợi phần ngang chạy 
+vào trong và lên trên liên 
+tiếp với phần ngang bên 
+đối diện qua một cân vắt 
+ngang trên sụn mũi. Các 
+sợi phần cánh bám vào 
+sụn cánh mũi
+Phần ngang làm hẹp 
+lô mũi; phần cánh 
+kéo cánh mũi xuống 
+dưới và ra ngoài, làm 
+nở rộng lỗ mũi
+Cơ hạ vách mủi
+(depressor septi nasi)
+(Một phần của phần 
+cánh cơ mũi)
+Ngay trên răng cửa 
+giữa xương hàm trên
+Phần di động của vách 
+mũi
+Kéo vách mũi xuống 
+dưới, cùng phần 
+cánh cơ mũi làm nở 
+mũi
+29
+
+--- PDF PAGE 34 ---
+Các cơ quanh m iệng
+Cơ vòng miệng
+(orbicularis oris)
+(gồm phần bờ và phần 
+môi cách nhau bởi 
+đường tiếp giáp giữa 
+môi đỏ và da)
+Trụ xơ - cơ ờ ngay 
+ngoài góc miệng 
+(modiolus), nơi cơ 
+vòng miệng đan với 
+các cơ khác
+Các sợi cơ chạy vào 
+trong, sợi phần bờ đi 
+trong môi đỏ, sợi phần 
+mỏi đi ở ngoại vi, đan xen 
+với sợi bên đối diện rồi 
+bám vào da
+Khép và đưa môi ra 
+trước, ép mõi vào 
+răng, thay đổi hình 
+dạng của môi trong 
+lúc nói
+Cơ nâng môi trên cánh  
+mũi
+(levator labii superioris 
+alaeque nasi)
+Phần trên mỏm trán 
+xương hàm trên
+Đi xuống chia hai bó
+- Bó trong vào sụn cánh 
+mũi lớn
+- Bó ngoài vào mõi trên
+Bó ngoài nâng môi 
+trên, bó trong làm nở 
+mũi
+Cơ nàng môi trên  
+(levator labii superioris)
+Bờ dưới ổ mắt (vào 
+xương hàm trên và 
+xương gò má) ở ngay 
+trẽn lỗ dưới ổ mắt
+Môi trên, giữa bó ngoài 
+cơ nâng mỏi trên cánh 
+mũi và cơ gò má nhỏ, hoà 
+lẫn với cơ vòng miệng
+Nâng môi trên, làm 
+thay đổi rãnh mũi - 
+môi (rãnh sâu khi 
+buồn)
+Cơ gò má nhỏ  
+(zygomaticus m inor)
+Mặt ngoài xương gò 
+má, ngay sau đường 
+khớp gò má - hàm trên
+Mỏi trên, hoà lẫn vào cơ 
+vòng miệng
+Nâng môi trên, làm lộ 
+các răng hàm trên
+Cơ gò má lởn  
+(zygomaticus m ajor)
+Xương gò má, trước 
+đường khớp gò má - 
+thái dương
+Trụ xơ - cơ ngoài góc 
+miệng, hoà lẫn với cơ 
+nàng góc miệng và cơ 
+vòng miệng
+Kéo góc miệng lên 
+trên và ra ngoài khi 
+cười
+Cơ nâng góc miệng  
+(levator anguli oris)
+Hố nanh xương hàm 
+trén, ngay dưới lỗ dưới 
+ổ mắt
+Trụ xơ - cơ ngoài góc 
+miệng, hoà lẫn vói các cơ 
+khác
+Nâng góc miệng làm 
+lộ răng khi mỉm cười
+Cơ hạ môi dưới
+(depressor labii 
+inferioris)
+Đường chéo xương 
+hàm dưới, giữa lỗ cằm 
+và đường giữa thân 
+xương
+Hoà lẫn với cơ cười và cơ 
+vòng miệng tại trụ xơ - 
+cơ ngoài góc miệng
+Kéo góc miệng 
+xuống dưới và ra 
+ngoài khi mở miệng 
+và khi biểu lộ sự 
+buồn chán
+Cơ hạ góc miệng Đường chéo xương 
+hàm dưới
+Modiolus Hạ góc miệng
+Cơ cười  
+(risorius)
+Mạc tuyến mang tai 
+(co thể ở cả cung gò 
+má và mạc cơ cắn)
+Trụ xơ - cơ ngoài góc 
+miệng
+Kéo góc miệng sang 
+bên như khi ở trạng 
+thái căng thảng. 
+Thực ra cơ này 
+không tham gia vào 
+cử động cười nhiều 
+hơn các cơ khác
+Cơ thổi kèn  
+(buccinator) hay cơ mút
+Mặt ngoài mỏm huyệt 
+răng của xương hàm 
+trên và xương hàm 
+dưới (ngang mức các 
+răng hàm lớn) và 
+đường đan chân bướm 
+-  hàm dưới (ở giữa hai 
+xương)
+Các sợi cơ tập trung tại 
+trụ xơ - cơ ngoài góc 
+miệng, tại đây các sợi từ 
+phần dưới đường đan 
+chạy chéo vào phần trên 
+cơ vòng miệng, sợi từ 
+phần trên đường đan 
+chạy chéo vào phần dưới 
+cơ vòng miệng, sơi từ các 
+xương hàm đi thảng vào 
+các môi tương ứng
+Ép má vào răng như 
+khi thổi, mút và huýt 
+sáo; kéo góc miệng 
+sang bèn; giúp nhai 
+thức ăn bằng cách 
+giữ cho thức ăn ờ 
+giữa hai hàm răng
+Cơ cằm (mentalis) Hố răng cửa xương 
+hàm dưới
+Chạy xuống bám vào da 
+cằm
+Nâng và đưa môi dưới 
+ra trước, nâng và làm 
+nhàn da cằm
+30
+
+--- PDF PAGE 35 ---
+2.2. Các cơ nhai (masticatory muscles)
+Các cơ nhai là những cơ vận động xương hàm dưới trong khi nhai và nói. Nhóm 
+này có 4 cơ: cơ cắn, cơ thái dương  và hai cơ chân bướm ngoài  và trong.  Cả 4 cơ đêu do 
+thần kinh hàm dưới, nhánh của thần kinh sinh ba, vận động.
+2.2.1. C ơ cắn (m asseter)  ( H.2.7a ) là một cơ hình 4 cạnh phủ ở mặt ngoài ngành 
+xương hàm dưới. Cơ gồm hai phần nông và sâu từ cung gò má chạy xuống dưới và ra 
+sau để bám tận vào góc và ngành xương hàm dưới. Động tác: kéo xương hàm dưới lên 
+trên để các răng khớp vào nhau trong khi nhai, kéo xương hàm dưới ra sau (phần sâu).
+2.2.2. C ơ thái dư ơ ng (tem poralis)  (H2.7b)  nằm ở hố thái dương.
+Nguyên uỷ:  phần hố thái dương do xương trán và xương thái dương tạo nên. Bám 
+tận: các sợi cơ chạy xuống và hội tụ thành một gân. Gân này đi qua khe giữa cung gò 
+má và mặt bên của sọ rồi bám tận vào mỏm vẹt và bờ trước của ngành xương hàm dưới.
+Động tác :  nâng xương hàm dưới khi cả cơ co; riêng các sợi sau co kéo xương 
+hàm ra sau sau khi hàm dưới được kéo ra trước.
+2.2.3. Cơ chân bướm ngoài (lateral pterygoid)  (H 2.8)
+Nguyên ủy:  cơ bám vào xương bướm bằng hai đầu. Đầu trên bám vào cánh lớn 
+đầu dưới bám vào mặt ngoài mảnh ngoài mỏm chân bướm.
+Bám tận :  các sợi cơ chạy ra sau và ra ngoài bám vào hõm cơ chân bướm ở măt 
+trước cổ lồi cầu xương hàm dưới, vào bao và đĩa khớp thái dương - hàm dưới. Cơ chân 
+bướm ngoài kéo mỏm lồi cầu và đĩa khớp xương hàm dưới ra trước, nhờ đó xương hàm 
+dưới được kéo ra trước và hạ thấp trong khi đó chỏm của nó xoay trên đĩa khớp. Kết 
+quả là miệng được há ra.
+ba
+Hình 2.7. Cơ cắn (a) và cơ thái dương (b)
+31
+
+--- PDF PAGE 36 ---
+2.2.4. Cơ chân bướm trong (medial pterygoid)  (H. 2.8)
+Mảnh ngoài mỏm chân bướm
+Hình 2.8. Các cơ chân bướm trong và ngoài
+Nguyên uỷ:  mặt trong mảnh ngoài mòm chân bướm, củ (ụ) xương hàm trên và 
+mỏm tháp xương khẩu cái.
+Bám tận:  các sợi cơ chạy xuống dưới, ra sau và ra ngoài rồi bám tận vào phần 
+sau - dưới của ngành và góc xương hàm dưới.
+Động tác:  nâng xương hàm dưới; đưa xương hàm dưới ra trước khi cùng co với 
+cơ chân bướm ngoài. Khi các cơ chân bướm ờ một bên co, xương hàm dưới cùng bên 
+xoay ra trước và sang phía đối diện quanh trục thẳng đứng là chỏm xương hàm dưới 
+bên đối diện.
+32
+
+=== BÀI 3 ===
+
+--- PDF PAGE 37 ---
+Bài 3
+CÁC Cơ VÀ MẠC CỦA cổ VÀ THÂN
+MỤC TIÊU
+Trình bày được cách bám, động tác và sự chi phối thần kinh của các cơ và các  
+nhóm cơ của cổ và thản.
+1. Cơ VÀ MẠC CỦA CỔ
+1.1. Các cơ của cổ (muscles of neck)
+Cổ được chia thành ba vùng: vùng cổ trước, vùng cổ bên và vùng cổ sau (vùng 
+gáy). Các cơ của vùng cổ sau được xếp vào nhóm các cơ của lưng nên không được mô 
+tả ở phần này. Các cơ nằm trong hai vùng cổ trước và bên được chia thành 3 nhóm, từ 
+nông vào sâu:
+Các cơ nông ở hai bên cổ gồm cơ ức - đòn - chũm  và cơ bám da cổ\
+Các cơ trên móng và các cơ dưới móng  nằm ở vùng cổ trước;
+Các cơ trước và các cơ bên cột sống.
+Ngoài các cơ vùng cổ trước-bên, các cơ dưới chẩm  cũng được xem như một 
+trong các nhóm cơ của co.
+1.1.1. Các cơ nông vùng cổ bên
+1.1.1.1. Cơ bám da cổ  (platysma) (H.2.6)
+Cơ bám da cổ là một phiến cơ rộng. Đầu dưới của cơ (đầu nguyên ủy) bám vào 
+mạc phủ phần trên của các cơ ngực lớn và delta. Các sợi cơ chạy lên trên và vào trong 
+trong mô dưới da của mặt bên của cổ. Các sợi trước đan xen tại đường giữa với các sợi 
+trước đối bên ở sau và dưới khớp dính cằm. Các sợi trung gian bám vào bờ dưới thân 
+xương hàm dưới hoặc chạy lên ở dưới cơ hạ góc miệng để bám vào nửa ngoài của môi 
+dưới. Các sợi sau bắt chéo xương hàm dưới và phần trước cơ cắn để tới bám vào da phần 
+dưới của mặt, trong đó nhiều sợi hoà lẫn với các cơ bám vào trụ xơ-cơ ngoài góc miệng.
+Cơ bám da cổ do nhánh cổ của thần kinh mặt vận động. Sự co cơ có tác dụng làm 
+giảm độ lõm giữa xương hàm dưới và mặt bên của cổ. Các sợi bám vào môi và góc 
+miệng có tác dụng kéo hai phần miệng này xuống.
+1.1.1.2. Cơ ức - đòn  - chũm  (sternocleidomastoid) ( H.2.6)  chạy chếch từ dưới lên qua 
+mặt bên của cổ. Nó là một mốc bề mặt rõ nét, nhất là khi co.
+Nguyên ủy:  phần trên mặt trước cán ức và 1/3 trong mặt trên xương đòn.
+Bám tận:  mật ngoài mỏm chũm xương thái dương, 1/2 ngoài đường gáy trên.
+Thần kinh:  thần kinh phụ chi phối vận động, nhánh từ ngành trước thần kinh cổ
+II chi phối cảm giác bản thê.
+33
+
+--- PDF PAGE 38 ---
+Động tác:  một cơ co làm nghiêng đầu về vai cùng bên, đổng thời làm xoay mặt 
+về phía đối diện. Hai cơ co kéo đầu ra trước và hỗ trợ cơ dài cổ gấp cột sông cô.
+1.1.2. Các cơ trên móng  (suprahyoid muscles) và các cơ dưới móng (infrahyoid
+muscles) (H.3.1) (Bảng 3.1)
+Các cơ trên móng  nẳm trên xương móng, nối xương móng vào sọ và bao gồm cơ 
+hàm móng, cơ cằm móng, cơ trâm móng và cơ hai bụng. Các cơ dưới móng  gồm 4 cơ 
+nằm dưới xương móng: cơ ức móng, cơ ức giáp, cơ giáp móng và cơ vai móng. Cả 4 cơ 
+này khi co làm hạ thấp xương móng và thanh quản trong lúc nuốt và nói. Nhóm cơ trên 
+móng và nhóm cơ dưới móng có tác dụng đối kháng nhau. Tuy nhiên, khi cả hai nhóm 
+cơ cùng co thì giữ cố định xương móng, làm cho các cơ lưỡi bám vào xương móng có 
+thể hoạt động được trên một nền xương cô định. Hai nhóm cơ có thể phối hợp trong cử 
+động xoay tròn xương móng. Trừ cơ hai bụng, tất cả các cơ trên và dưới móng được 
+gọi tên theo chỗ bám.
+--------------Xương hàm dưới
+Hình 3.1. Các cơ trên móng và dưới móng
+'U
+
+--- PDF PAGE 39 ---
+Bảng 3.1. Các cơ trên móng và các cơ dưới móng
+Cơ Nguyên uỷ Bám tận
+Thẩn kinh 
+chi phối
+Động tác
+Các cơ  trên m óng
+Cơ hàm - móng  
+(mylohyoid)
+Đường hàm 
+móng xương 
+hàm dưới
+Mặt trước thân 
+xương móng và 
+đường đan sơi 
+giữa (từ khớp 
+dính cằm tới 
+xương móng)
+Thần kinh cơ 
+hàm móng, một 
+nhánh của thần 
+kinh huyệt răng 
+dưới (thuộc thần 
+kinh hàm dưới)
+Nâng xương móng, 
+nâng sàn miệng; 
+hạ xương hàm dưới
+Cơ cằm  - móng  
+(geniohyoid)
+Gai cằm dưới ở 
+mặt sau khớp 
+dính cằm
+Mặt trước thân 
+xương móng
+Nhánh của 
+thần kinh Cl qua 
+đường thần kinh 
+XII
+Kéo xương móng 
+ra trước và lên 
+trên; làm ngắn sàn 
+miệng
+Cơ trâm - móng  
+(stylohyoid)
+Mỏm trâm 
+xương thái 
+dương
+Tại chỗ nối thân 
+với sừng lớn 
+xương móng
+Nhánh cơ trâm 
+mỏng của thần 
+kinh mặt
+Nâng và kéo xương 
+móng ra sau, kéo 
+dài sàn miệng
+Cơ hai bụng  
+(digastric) gốm 
+hai bụng nối với 
+nhau bằng một 
+gân trung gian
+Bụng sau: 
+khuyết chũm 
+xương thái 
+dương
+Bụng trước: hố 
+cơ hai bụng của 
+xương hàm dưới
+Gân trung gian 
+bám vào thân và 
+sừng lớn xương 
+móng; gân xuyên 
+qua cơ trâm 
+móng
+Bụng sau: thần 
+kinh mặt;
+Bụng trước: thẩn 
+kinh hàm móng, 
+nhánh của thần 
+kinh huyệt răng 
+dưới (thuộc thần 
+kinh hàm dưới)
+Nâng xương móng 
+và cố định xương 
+móng. Hạ xương 
+hàm dưới
+Các cơ dưới móng
+Cơ ức - móng  
+(sternohyoid)
+Mặt sau đầu 
+trong xương 
+đòn, dây chằng 
+ức-đòn sau và 
+mặt sau cán ức
+Bờ dưới thân 
+xương móng, sát 
+đường giữa
+Các nhánh từ 
+quai cổ (Cl, Cll 
+và C lll)
+•
+Hạ thấp xương 
+móng và thanh 
+quản
+Cơ vai  - móng
+(omohyoid) có hai 
+bụng
+Bụng dưới  bám 
+vào bờ trên 
+xương vai gần 
+khuyết trên vai. 
+Các sợi chạy 
+lên tới một gân 
+trung gian ở sau 
+cơ ức đòn chũm
+Bụng trên:  các 
+sợi từ gân trung 
+gian chạy lẽn 
+bám vào bờ dưới 
+thân xương móng
+Các nhánh từ 
+quai cổ (Cll và 
+CIII)
+Ha thấp, kéo ra 
+sau và giữ vững 
+xương móng; kéo 
+căng phần dưới 
+của mạc cổ sâu
+Cơ ức - giáp  
+(sternothyroid)
+Mặt sau của 
+cán ức và sụn 
+sườn I
+Đường chéo của 
+mảnh sụn giáp
+Các nhánh từ 
+quai cổ (Cl - C lll)
+Kéo xương móng 
+và thanh quản 
+xuống dưới
+Cơ giáp - móng  
+(thyrohyoid)
+Đường chéo 
+của mảnh sụn 
+giáp
+Bờ dưới của thân 
+và sừng lớn 
+xương móng
+Thần kinh Cl 
+qua đường thần 
+kinh XII
+Hạ xương móng và 
+nâng sụn giáp
+35
+
+--- PDF PAGE 40 ---
+1.2. Các mạc cổ
+-  Tấm dưới da cổ. Tấm dưới da cổ thường được gọi là mạc nông của cổ. Mạc 
+này bao bọc cơ bám da cổ và vùi trong mạc này là các thần kinh bì, các tĩnh mạch 
+nông và các hạch bạch huyết nông.
+—  Mạc cổ (cervical fascia). Nếu tấm dưới da cổ được gọi là mạc cổ nông thì mạc có 
+cũng được gọi là mạc cổ sâu.  Mạc cổ là mô liên kết xốp bao bọc các cơ, các mạch máu và 
+các tạng cổ. Mạc cổ đặc lại ờ một sô vùng tạo nên những lá sợi gọi là lá nống, lá trước khí 
+quản và lá trước sông. Nó cũng đặc lại ớ quanh các mạch cảnh tạo nên bao cảnh.
++ Lá nông mạc cổ  (superficial layer), hay lá bọc ,  hoàn toàn bao quanh cổ, tách 
+ra để bọc cơ thang và cơ ức đòn chũm; nó bám ở sau vào dây chằng gáy. Nó được ví 
+như trần của các tam giác cổ trước và sau.
+Ỏ phía trên, lá nông mạc bám vào đường gáy trên của xương chẩm, mỏm chũm 
+và dọc theo toàn bộ nền của xương hàm dưới. Ở giữa mỏm chũm và xương hàm dưới, 
+nó bao bọc tuyến nước bọt mang tai. Lá phủ mặt nông của tuyến chạy lén như là mạc  
+mang tai  và bám vào cung gò má. Lá phủ mặt sâu của tuyến dày lên tạo nên dây  
+chằng trâm hàm  dưới đi từ góc hàm dưới tới mỏm trâm. Ở phía dưới, lá nông bám 
+vào mỏm cùng vai, xương đòn và cán xương ức. Ở ngay trên cán ức, nó tách ra thành 
+hai lá bám vào các bờ trước và sau của cán ức. Ở giữa hai lá này là một khoang nhỏ 
+gọi là khoang trên ức, một khoang chứa phần dưới tĩnh mạch cảnh trước, cung tĩnh 
+mạch cảnh và có thể một hạch bạch huyết. Trên phần dưới của tam giác cổ sau, lá 
+nông tách thành hai lá bám vào các bờ trước và sau của xương đòn; lá sâu cũng bao 
+bọc bụng dưới cơ vai móng.
++ Lá trước kh í quản  tạo nên một bao mạc cho tuyến giáp. Ở trên, nó bám vào 
+cung sụn nhẫn; ờ dưới, nó chạy vào trung thất trên cùng với các tĩnh mạch giáp dưới.•
++ Lá trước sông  của mạc cổ che phủ các cơ trước sống và trải rộng sang bên 
+trước cơ bậc thang trước, cơ bậc thang giữa và cơ nâng vai, tạo nên một sàn mạc của 
+tam giác cổ sau. Khi động mạch dưới đòn và đám rối cánh tay thoát ra từ sau cơ bậc 
+thang trước, chúng kéo theo lá trước sống đi xuống và sang bên ờ sau xương đòn, tạo 
+nên bao nách, về phía bên, lá trước sống trờ nên một mô xốp nằm dưới cơ thang. Về 
+phía trên, nó bám vào nền sọ; về phía dưới, nó đi xuống trước cơ dài cổ vào trung 
+thất trên, nơi nó hoà lẫn với dây chăng dọc trước, về phía trước, lá trước sống được 
+ngăn cách với hầu bằng một khoang chứa mô liên kết xốp gọi là khoang sau hau. Tất 
+cả các ngành trước của các thần kinh sống cổ lúc đầu nằm ờ sau lá trươc sống. Thần 
+kinh hoành, thần kinh lưng vai và thần kinh cơ răng trước luôn giữ vị trí ờ sau lá 
+trước sống trên suốt đường -đ i của chúng ở cổ nhưng thần kinh phụ nằm nông hơn lá 
+trước sống.
+1.3. Các tam giác cổ
+Cổ được chia thành các vùng trước, bên và sau. Vùng cổ sau tương ứng với vùn° 
+chứa cơ thang; còn các vùng cổ trước và bên ngăn cách nhau bằng vùng ức đòn chũm ". 
+Vùng cổ trước  còn được gọi là tam giác cổ trước  (anterior triangle of neck); vùng cổ  
+bên cũng được gọi là tam giác cổ sau  (posterior triangle of neck).
+36
+
+--- PDF PAGE 41 ---
+1.3.1. Tam giác cổ trước
+Các giới hạn của tam giác cổ trước là: ờ trước là đường giữa trước; ở trên là một 
+đường chạy dọc nền xương hàm dưới và chạy tiếp tục từ góc hàm dưới tới mỏm chũm; 
+ở sau là bờ trước cơ ức đòn chũm. Đỉnh của tam giác nằm ở bờ trên xương ức. Tam 
+giác cổ trước được cơ hai bụng và bụng trên cơ vai móng chia thành các tam giác nhỏ 
+hơn: tam giác cảnh, tam giác cơ, tam giác dưới hàm dưới và tam giác dưới căm.
+Tam giác cơ. Tam giác cơ được giới hạn ở trước bởi đoạn đường giữa cổ từ 
+xương móng tới xương ức, ở sau-dưới bởi bờ trước cơ ức đòn chũm và ở sau trên bởi 
+bụng trên cơ vai móng.
+Tam giác cảnh. Tam giác cảnh được giới hạn ở sau bởi cơ ức đòn chũm, ở 
+trước-dưới bời bụng trên cơ vai móng và ở trên bởi bụng sau cơ hai bụng. Tam giác 
+cảnh được che phủ bởi mạc cổ và các lớp nông hơn mạc cổ; sàn của nó do các cơ khít 
+hầu giữa và dưới cùng một phần của các cơ giáp móng và móng lưỡi tạo nên. Tam giác 
+cảnh chứa: (1) đoạn cuối của động mạc cảnh chung và đoạn đầu củạ các động mạch 
+cảnh trong và ngoài; (2) các nhánh của động mạch cảnh ngoài và các tĩnh mạch tương 
+ứng với chúng; (3) thẩn kinh hạ thiệt cùng rễ trên của quai cổ và (4) các thần kinh 
+thanh quản trong và ngoài.
+Tam giác dưới hàm dưới. Tam giác dưới hàm dưới (thường được gọi là tam giác 
+hai bụng), được giới hạn ở trên bởi nền xương hàm dưới, ở sau-dưới bời bụng sau cơ 
+hai bụng và ở trước-dưới bởi bụng trước cơ hai bụng. Nó được che phủ bởi lá nông 
+mạc cổ và các lớp nông hơn; sàn của nó do các cơ hàm móng và móng lưỡi tạo nên. 
+Vùng trước của tam giác chứa tuỵấajiưác bọt.dựợi hàrn cùng với dộng mach mặt đi ở 
+mặt sâu của tuyến và tĩnh mạch mặt và các hạch bạch huyết..dưới hàm di-C Lmăl nông 
+của tuyến. Vùng sau của tam giác chứa phần dưới của tuyến mang tai.
+Tam giác dưứi càm. Tam giác dưới cằm là một tam giác đơn. Đỉnh của nó là 
+cằm, nền là thân xương móng và hai cạnh bên là bụng trước của các cơ hai bụng. Sàn 
+của tam giác dưới cằm là cơ hàm móng. Nó chứa các hạch bạch huyết và các tĩnh 
+mạch nhỏ hợp nên tĩnh mạch cảnh trước.
+1.3.2. Tam giác cô sau
+Tam giác cổ sau được giới hạn ở trước bởi cơ ức đòn chũm, ở sau bởi bờ trước cơ 
+thang và ớ dưới bời phần ba giữa xương đòn; đỉnh của nó nằm ớ giữa các chỗ bám tận 
+của cơ ức đòn chũm và cơ thang vào mỏm chũm. Nó được che phủ bới lá nông mạc cổ 
+và các lớp nông hơn; sàn của nó được tạo bởi, từ trên xuống, cơ bán gai đầu, cơ gối 
+đầu, cơ nâng vai và cơ bậc thang giữa. Bụng dưới cơ vai móng bắt chéo tam giác cổ 
+sau và chia nó thành tam giác chấm  và tam giác vai đòn;  tam giác chẩm là tam giác 
+lớn hơn nằm ớ trẽn. Các thành phần đi qua tam giác cổ sau bao gồm: thán kinh phu 
+các nhánh cúa đám rối cổ lộ ra ớ bờ sau cơ ức đòn chũm, phần trên đòn của đám rồi 
+cánh tay, đoạn ngoài cơ bậc thang của động mạch dưới đòn, động mạch ngang cổ 
+động mạch trên vai, tĩnh mạch cảnh ngoài và các nhánh của nó.
+2. CÁC Cơ CỦA THÂN
+Các cơ của thân bao gồm các cơ lưng,  các cơ ngực  (trong đó có cơ hoành)  và các 
+cơ bụng  (bao gồm cả các cơ của hoành chậu hông  và đáy chậu).
+37
+
+--- PDF PAGE 42 ---
+2.1. Các cơ của lưng (muscles of back)
+Các cơ ở lưng bao gồm các cơ đích thưc (riêng) của lưng và các cơ không đích 
+thực của lưng.
+2.1.1. Các c ơ  lưng đích thực  (muscles of back proper) ( H.3.2 ) là các cơ sâu nàm 
+cạnh cột sống (hay cơ nội tại của cột sống). Chúng hợp nên một khối cơ phức tạp đi từ 
+chậu hông tới xương sọ và bao gồm:
+Cơ dựng sông  (erector spinae).
+Các cơ gai ngang  (spinotransversales) và các cơ ngang-gai  (transversospinales. 
+Các cơ gian gai  (interspinales).
+Các cơ gian ngang  (intertransversarii)
+Tác dụng của các cơ lưng đích thực là ruỗi, nghiêng và xoay cột sống. Chúng 
+đều do các nhánh sau của thần kinh sống chi phối.
+2.1.2. Các c ơ  lung kh ô n g  đích thực  (H.3.3) là các cơ nông bao gồm cơ thang , cơ 
+lưng rộng, cơ nâng vai ,  cơ trám, cơ răng sau trên  và cơ răng sau dưới.  Trừ các cơ rãng 
+sau, các cơ lưng không đích thực đều đã được mô tả cùng với cơ chi trên. Cơ răng sau  
+trên (serratus posterior superior) từ mỏm gai các đốt sống từ cổ VI đến ngực II đi tới 
+bốn xương sườn trên cùng. Cơ răng sau dưới  từ mỏm gai các đốt sống từ ngực XI đến 
+thắt lưng III đi tới bốn xương sườn dưới cùng.
+38
+
+--- PDF PAGE 43 ---
+Cơ thảng đầu sau bé 
+^  Cơ thảng đầu sau lớn
+—  Cơ chéo đầu trên
+•  — Cơ chéo đầu dưới
+—  Cơ bán gai đầu
+— Cơ dài đầu
+—  Cơ dài cổ 
+— Các cơ chậu-sườn cổ và ngực
+— Cơ nhiều chân
+-  Khối cơ dựng sống
+Cơ gai ngực
+Cơ dài ngực
+Cơ chậu-sườn thắt lưng-
+-------------N VI
+Cơ bán gai ngực
+Cơ gối đầu —.  
+Cơ bán gai cổ —
+Cơ gối cổ —
+Cơ chậu-sườn cổ —
+Cơ dài cổ - -
+Cơ chậu-sườn ngực
+Hình 3.2. Các cơ nội tại của lưng
+39
+
+--- PDF PAGE 44 ---
+Hình 3.3. c ác cơ răng sau
+2.2. Các cơ của ngực (muscles of thorax)
+Các cơ ngực bao gồm:
+Các cơ làm thay đổi kích thước của lồng ngực (trong lúc thở). Cơ quan trọng 
+nhất của nhóm này là cơ hoành  (được mô tả riêng ờ mục 2.4). Những cơ hô hấp khác 
+chiếm khoảng nằm giữa các xương sườn và được xếp thành ba lớp ( H.3.4).  ỏ  lớp nông 
+có 11 cơ gian sườn ngoài  (external intercostal muscle), các sợi cùa chúng chạy chếch 
+xuống dưới và ra trước từ bờ dưới xương sườn trên tới bờ trên xương sườn dưới. Chúng 
+nâng các xương sườn trong lúc hít vào. 11 cơ gian sườn trong  (internal intercostal 
+muscle) chiếm lớp giữa của các khoang gian sườn. Các sợi của chúng chạy chếch 
+xuống dưới và ra sau từ bờ dưới của xương sườn trên tới bờ trên cùa xương sườn dưới. 
+Chúng kéo các xương sườn lại gần nhau trong thì thờ ra gãng sức, làm giảm các đường 
+kính bên và trước-sau của lồng ngực. Bó mạch-thần kinh gian sườn chia cơ gian sườn 
+trong thành hai lớp; lớp ở trong (sâu hơn) bó mạch-thần kinh còn được gọi là cơ gian  
+sườn trong cùng.  Lớp cơ sâu chỉ có ở phần dưới lồng ngực, bao gồm cơ ngang ngưc
+40
+
+--- PDF PAGE 45 ---
+(transversus thoracis) đi từ nửa dưới mặt sau xương ức tới mật sau các sụn sườn từ thứ
+III tới thứ VI, các cơ dưới sườn  (subcostales) từ bờ dưới các xương sườn đi tới bờ trên 
+của xương sườn thứ hai hoặc thứ ba phía dưới
+Các cơ gian sườn, các cơ dưới sườn và cơ ngang ngực do các thần kinh gian sườn 
+chi phối.
+Cơ gian sườn ngoài
+Cơ gian sườn trong Cơ ngang ngực
+D/c ngang sườn trên
+-  Cơ gian 
+sườn trong
+—  Cơ dưới sườn
+--C ơ  gian sườn 
+trong cùng
+Mỏm ngang
+Cơ gian sườn trong
+Đ/m và t/m 
+ngực trong
+ngoài
+Các nhánh gian sườn trước
+Bó mạch tk 
+gian sườn
+Cơ gian 
+sườn ngoài
+Hình 3.4. Các cơ gian sườn
+Đầu trước khoang gian sườn nhìn ngoài (a) và nhìn trong (b)
+Đầu sau khoang gian sườn nhìn ngoài (c) và nhìn trong (d)
+Các cơ cũng nằm trên lổng ngực nhưng lại vận động đai ngực hoặc xương cánh 
+tay (như cơ ngực to, cơ ngực bé, cơ dưới đòn, cơ răng trước) được mô tả cùng với cơ 
+chi trên.
+2.3. Các cơ thành bụng
+2.3.1. Các cơ thành bụng trước bên  (H.3.5) (Bảng 3.2)
+Từ nông vào sâu, thành bụng trước-bên được cấu tạo bởi da, mạc nông các cơ 
+mạc ngang và phúc mạc. Có 4 cơ chính: ở phía trước có cơ thắng bụng'  ờ phía bên có
+41
+
+--- PDF PAGE 46 ---
+ba cơ rọng, dẹt tính từ nông vào sâu là cơ chéo bụng ngoài, cơ chéo bụng trong  và cơ 
+ngang bụng.
+Cơ thẳng bụng  là một cơ dài từ mào mu và khớp mu chạy lên bám vào các sụn 
+sươn V - VII và mỏm mũi kiếm xương ức, tức là đi suốt chiều dài thành bụng trước. 
+Mặt trước của cơ bị chia cắt bởi từ 3 đến 5 dải mô xơ chạy ngang gọi là các đường gán  
+cắt ngang.
+ơ  thành bụng bên, ba lớp cơ dẹt cũng đủ tạo nên một thành cơ vững chắc vì các 
+sợi của mỗi cơ chạy theo một hướng khác nhau. Các sợi của cơ chéo bụng ngoài  chạy 
+chêch xuống dưới và vào trong; các sợi củ a cơ chéo bụng trong  chạy thãng góc VỚI 
+các sợi của cơ chéo bụng ngoài; các sợi của cơ ngang bụng  chạy ngang quanh thành 
+bụng. Nhờ sự sắp xếp này mà thành bụng trở nên khoẻ, các tạng trong ổ bụng không 
+thể chui ra ngoài qua khe giữa các bó sợi cơ. Khi chạv tới gần bờ ngoài cơ thãng bụng, 
+mỗi cơ dẹt của thành bụng bên đều liên tiếp với một lá cân (gân dẹt). Cân của cả ba cơ 
+tiếp tục chạy trước hoặc sau cơ thẳng bụng để đi vào đường giữa bụng và tạo nên bao
+cơ thẳng bụng  với hai lá trước và sau. Ở 3/4 trên thành bụng trước, lá trước bao cơ 
+thảng bụng do cân cơ chéo bụng ngoài và lá trước cân cơ chéo bụng trong tạo nên; lá 
+sau do cân cơ ngang bụng và lá sau cân cơ chéo bụng trong tạo nên. ơ  1/4 dưới thành 
+bụng trước, cân của cả ba cơ đi trước cơ thẳng bụng và tạo nên lá trước của bao cơ, lá 
+sau bao cơ thẳng bụng ở đoạn này do mạc ngang tạo nên. Cân của ba cơ dính liền với 
+nhau và với cân của ba cơ bên đối diện tại đường giữa-trước đê tạo nên một đường đan 
+gân gọi là dường trắng.  Đường trắng nằm giữa hai cơ thẳng bụng và trải dài từ mỏm 
+mũi kiếm xương ức tới khớp mu.
+Cơ chéo bụng ngoài
+Mật cắt của lá trước 
+bao cơ thảng bụng
+Cơ thảng bụng
+Đường gân ngang
+Cơ ngực lớn -
+Đ/m thượng vị trèn 
+Cơ chéo bụng ngoài 
+Cơ ngang bụng
+Cơ chéo bụng trong
+Mặt cắt của lá trước 
+bao cơ thảng bụng
+Đường cung
+Lá sau bao cơ thảng bụng
+Đ/m thượng vị dưới 
+Cơ tháp
+Mạc ngang
+Hình 3.5. Các cơ thành bụng trước-bên
+42
+
+--- PDF PAGE 47 ---
+Bảng 3.2. Các cơ thành bụng trước-bên
+Cơ Nguyên uỷ Bám tận Đ ộng tác
+Cơ thẳng bụng  
+(rectus abdominis)
+Củ mu và mào mu Sụn của các xương 
+sườn V -  VII và mỏm 
+mũi kiếm xương ức
+Gấp cột sống, nhất là 
+đoạn thắt lưng, và làm 
+căng cột sống.
+Cơ tháp  
+(piramidalis)
+Thân xương mu Phần dưới đường 
+trắng
+Làm căng đường trắng
+Cơ chéo bụng ngoài  
+(external oblique )
+Mặt ngoài các xương 
+sườn từ V đến XII
+Đường trắng, củ mu 
+và nửa trước mào 
+chậu
+Co cơ cả  hai bên: ép các 
+tạng bụng và gấp cột 
+sống; co cơ một bên: làm 
+nghiêng cột sống và 
+xoay cột sống
+Cơ chéo bụng trong  
+(internal oblique)
+Mạc ngực-thắt lưng, 
+mào chậu và 1/2 
+ngoài dây chằng bẹn
+Bờ dưới các xương 
+sườn X -  XII, đường 
+trắng và xương mu 
+(qua liềm bẹn)
+Co cơ hai bên: ép các 
+tạng bụng và gấp cột 
+sống; co cơ một bên: 
+nghiêng bên và xoay cột 
+sống
+Cơ ngang bụng
+(transversus
+abdominis)
+Mặt trong của 6 
+xương sườn và sụn 
+sườn dưới, mạc 
+ngực-thắt lưng, mào 
+chậu và 1/3 ngoài 
+dây chằng bẹn
+Đường trắng, mào mu 
+và lược xương mu 
+(qua liềm bẹn)
+Ép các tạng bụng
+Tác dụng của các cơ thành bụng trước bên
+Với tính chất như một nhóm cơ, các cơ của thành bụng trước bên bảo vệ và giữ 
+cho các tạng bụng không sa ra ngoài; gấp, nghiêng bên và xoay cột sống; nén ép các 
+tạng bụng trong lúc thở ra gắng sức; và tạo ra áp lực cần thiết trong ổ bụng trong lúc 
+đại tiện, tiểu tiện và sinh đẻ.
+Thần kinh chi phối các cơ thành bụng trước bên
+Cơ thẳng bụng được chi phối bởi những nhánh từ các thần kinh NV I I  - Nxn;  cơ 
+chéo bụng ngoài được chi phối bởi những nhánh từ các thần kinh NV ] |  - NX || và thần 
+kinh chậu-hạ vị; cơ chéo bụng trong và cơ ngang bụng do những nhánh từ các thần 
+kinh NV I ,  - NX || và các thần kinh chậu-hạ vị và chậu-bẹn chi phối.
+2.3.2. Các cơ thành bụng sau  (H.3.6)
+Thành bụng sau được tạo nên bởi cột sống, cơ thắt lưng lớn, cơ chậu và cơ vuông 
+thắt lưng. Cơ thắt lưng-chậu  đã được mô tả ở phần cơ chi dưới (Bài 8). Ở đây chỉ mô tả 
+cơ vuông thắt lưng.
+Cơ vuông thắt lưng (quadratus lumbarum)
+Nguyên uỷ, dường di:  xuất phát từ phần sau của mào chậu, các sợi cơ chạy thẳng 
+lên trên.
+Bám tận: bờ dưới xương sườn XII và mỏm ngang các đốt sống thắt lưng từ I đến IV.
+43
+
+--- PDF PAGE 48 ---
+Hình 3.6. Các cơ thành bụng sau
+2.4. Cơ hoành (H.3.7)
+Cơ hoành (diaphagm) là một phiến cơ xơ cong hình vòm ngăn cách khoang ngực 
+với khoang bụng. Mặt lồi của nó hướng về phía khoang ngực. Cơ hoành gồm phần cơ  
+ở xung quanh và phần gàn  ờ giữa. Trên cơ hoành có nhiểu lỗ để các tạng, mạch và 
+thần kinh đi qua.
+Nguyên uỷ.  Mặc dù là một phiến cơ liên tục, cơ hoành được chia làm ba phần 
+(ức, sườn  và thắt hnig)  dựa trên các vùng bám ờ ngoại vi.
+Phần ức  (sternal part) bám vào mặt sau mòm mũi kiếm xương ức;
+Phần sườn  (costal part) gồm các trẽ cơ bám vào mặt trong của 6 sụn và xương 
+sườn dưới. Các trê cơ cùa cơ hoành đan xen với các trẽ cơ của cơ ngang bụng.
+Phần thắt liC ììg (lumbar part) bám vào các dây chằng cung trong và ngoài V  à vào 
+cột sống thắt lưng bời hai trụ.
+Các trụ. Trụ pliải  (right crus) bám vào bám vào mặt trước-bên cùa thân và đĩa 
+gian đốt sống cùa ba đốt sống thắt lưng trên. Trụ trái  (left crus) ngắn hơn. bám vào 
+thân hai đốt sống thắt lưng trên. Bờ gân trong của hai trụ gặp nhau tại đường giữa để 
+tạo nên một cung vắt ngang trước động mạch chù gọi là dây chằng cung giữa  (median 
+arcuate ligament)
+Dày chẳng cung trong  (medial arcuate ligament) là chổ dầy lên của lá mạc phủ 
+phần trên cơ thắt lưng lớn. về phía trong nó liên tiếp với bờ gân ngoài của tru cun° 
+bên và bám vào thân các đốt sống thăt lưng I và II; về phía ngoài, nó bám vào mỏm 
+ngang đốt sống thắt lưng I.
+D à\ cliảng cung ngoài  (lateral arcuate ligament) bắc naang qua trước phần trẽn 
+cơ vuông thắt lưng, là chỗ dầy lên của lá mạc phủ cơ vuông thắt lưna. Nó đi từ mom 
+ngang đot sống ngực XII tới bờ dưới xương sườn XII.
+Bám tán.  Từ các chỗ bám ờ ngoại vi, các sợi cùa cơ hoành tập trung vào mỏt tấm 
+gân giữa gọi la gàn trung tâm  (central tendon) - nơi bám tận chung cùa các phần C ơ
+44
+
+--- PDF PAGE 49 ---
+hoành. Các sợi của phần ức thì ngắn và gần như chạy ngang. Các sợi từ hai dây chãng 
+cung và từ các xương sườn - sụn sườn thì dài hơn. Lúc đầu chúng chạy gân như thăng 
+đứng rồi sau đó chạy cong về phía gân trung tâm. Các sợi từ hai trụ chạy phân tán. Các 
+sợi trong của trụ phải ôm quanh thực quản trên đường vòng sang trái.
+Gân trung tâm nằm gần ở giữa cơ nhưng hơi lệch về phía trước. Nó có hình ba lá. 
+Lá trước hay lá giữa có dạng tam giác cân đỉnh hướng ra trước. Các lá phải và trái có 
+hình lưỡi và chạy về phía sau-bên.
+Lỗ tĩnh m ạ ch------™
+Phần thắt lưng
+D/c cung trong
+Phần ức
+■  Gân trung tâm
+LỖ thực quản / /  \  Phần sườn
+LỖ động mạch chủ D/c cun9 n9oài 
+Hình 3.7. Cơ hoành
+Các lỗ cơ hoành.  Các cấu trúc chạy qua lại giữa ngực và bụng qua các lỗ của cơ 
+hoành. Có ba lỗ lớn cho động mạch chủ, thực quản và tĩnh mạch chủ dưới và một số lỗ 
+nhỏ hơn.
+Lỗ động mạch chủ  (aortic hiatus) nằm ở ngang mức bờ dưới đốt sống ngực XII, 
+hơi lệch về phía trái đường giữa. Lỗ này nằm trước cột sống và giữa hai trụ. Đây là nơi 
+đi qua của động mạch chủ và ống ngực.
+Lỗ thực quản  (esophageal hiatus) nằm ở ngang mức đốt sống ngực X; nó ở trên 
+trước và hơi về phía trái lỗ động mạch chủ. Lỗ thực quản nằm ở phần cơ. Bao quanh lỗ 
+là các sợi cơ xuất phát từ phần trong của trụ phải và bắt chéo qua đường giữa. Đi qua 
+lỗ có thực quản và các thân thần kinh X trước và sau. Các nhánh thực quản của các 
+mạch vị trái và một số mạch bạch huyết cũng đi qua đây.
+Lồ tĩnh mạcli chủ  (caval opening) nằm ở gân trung tâm, giữa lá phải và lá trước. 
+Lỗ nằm ngang mức đĩa gian đốt sống ngực VIII và IX. Đi qua lỗ có tĩnh mạch chủ 
+dưới và một số nhánh của thần kinh hoành phải.
+Các lỗ nhỏ.  Trên mỗi trụ cơ hoành có hai lỗ nhỏ. Một lỗ cho thần kinh tạng lớn 
+qua, một lỗ cho thần kinh tạng bé qua. Thân giao cảm thường đi sau cơ hoành cu thể 
+là sau dây chằng cung trong.
+45
+
+--- PDF PAGE 50 ---
+2.5. Các cơ của hoảnh chậu hông và đáy chậu
+2.5.1. Các cơ của hoành chậu hông  (H.3.8)
+quà lẻ 
+ngồi-cụt 
+ngồi
+ơ bịt trong 
+Cung gân cơ nâng hậu môn 
+Cơ nàng hậu môn
+Niệu đạoI
+Thể đáy chậu
+Cơ mu-trực tràng
+/  Cơ mu-cụt
+Cơ chậụ-cụt
+Ịsllll^lllSề 
+*  'ỹ./íĩ p
+Cơ mu-cụt và 
+phần nàng tuyến tiền liệt 
+Cung gản cơ náng hậu môn
+Niệu đạo
+Thể đáy châu
+—•— í------Cơ chậu-cụt
+Cơ bịt trong V  i / 'N \ /
+Cơ nàng hâu môn í Thể hậu mỏn-cụt 
+u nhô xương cùng
+Ổng hặu mõn 
+Hình 3.8. Các cơ hoành chậu hòng nam
+46
+
+--- PDF PAGE 51 ---
+Lỗ dưới của chậu hông được đậy bằng cơ nâng hậu môn  và cơ ngồi-cụt.  Những 
+cơ này cùng với các mạc phủ ở các mặt trên và dưới của chúng được gọi chung la 
+hoành chậu hông.  Hoành chậu hông bị niệu đạo và ống hậu môn xuyên qua, riêng ơ nư 
+có thêm âm đạo xuyên qua.
+2.5.1.1. Cơ nâng hậu môn  (levator ani) đi từ xương mu ở trước tới xương cụt ở sau và 
+từ hai thành bên chậu hông tiến về đường giữa. Nó gồm 3 phần: (1 ) cơ mu-cụt  
+(pubococcygeus) là phần đi từ xương mu tới xương cụt; một số sợi của nó bám vào 
+niệu đạo, vào ống hậu môn (gọi là cơ mu-hậu môn  - pubo-analis), vào âm đạo của nữ 
+(gọi là cơ mu-âm đạo  -pubovaginalis), vào thể đáy chậu (gọi là cơ mu-đáy chậu -  
+puboperinealis). Những sợi trong cùng của nam giới nâng đỡ cho tuyến tiền liệt và vì 
+vậy được gọi là cơ mu tiền liệt  (puboprostaticus). Ở sau ống hậu môn, cơ mu-cụt bám 
+vào đỉnh xương cụt và vào đường đan xơ-cơ nối ống hậu môn với xương cụt (gọi là thể  
+hậu môn-cụt).  (2) Cơ mu-trực tràng  (puborectalis) từ xương mu chạy ra sau ôm lấy bờ 
+sau ống hậu môn và đan với những sợi của cơ bên đối diện. Cơ này nằm dưới cơ mu- 
+cụt. (3) Cơ chậu-cụt  (iliococcygeus) từ gai ngồi và cung gán cơ nâng hậu môn  chạy 
+vào trong và ra sau bám vào xương cụt và thể hậu môn-cụt
+2.5.1.2. Cơ ngồi-cụt  (ischiococcygeus) từ gai ngồi toả rộng ra bám vào bờ bên của hai  
+đốt sống cùng dưới và hai đốt sống cụt trên.
+Hoành chậu hông có tác dụng nâng đỡ và duy trì vị trí của các tạng chậu hông; 
+kháng lại tình trạng tăng áp lực trong ổ bụng lúc thở ra gắng sức, ho, nôn, tiểu tiện, đại 
+tiện; kéo xương cùng ra trước sau lúc đại tiện hoặc sinh con; co khít các lỗ xuyên qua 
+hoành chậu hông.
+Cơ nâng hậu môn do các thần kinh sống cùng II - IV chi phối; cơ ngồi-cụt do các 
+thần kinh cùng IV - V chi phối.
+5.1.2. Các cơ của đáy chậu  (xem bài 4B)
+47
+
+=== BÀI 4A ===
+
+--- PDF PAGE 52 ---
+Bài 4A
+THÀNH NGỰC - BỤNG VÀ ÔNG BẸN
+■ ■  ■
+MỤC TIÊU
+Mô tả được giái phẫu bề mặt và cấu tạo của thành ngực-bụng và ông bẹn
+1. THÀNH NGỰC
+Ngực gồm thành ngực và khoang ngực; khoang ngực chứa các tạng ngực. Bài 
+này trình bày giải phẫu bề mặt của thành ngực và cấu tạo của thành ngực.
+1.1. Giải phẫu bể mặt
+Đê có thê khám ngực bằng cách nhìn, sờ, gõ và nghe, thầy thuốc phải biết được 
+giải phẫu bình thường của ngực, biết được vị trí bình thường của tim và các phổi trong  
+mối liên quan với các mốc bề mặt có thể nhìn hoặc sờ được trên các mặt trước và sau 
+của thành ngực.
+1.1.1. Các mốc bể mặt trên mặt trước thành ngực
+-  Khuyết tĩnh mạch cảnh:  nằm ờ bờ trên của cán ức, giữa đầu trong của các 
+xương đòn, ngang mức bờ dưới cùa thân đốt sống ngực thứ hai.
+-  Góc ức: góc giữa thân và cán ức, ngang mức với nơi sụn sườn thứ hai khớp với bờ 
+bên xương ức, đối diện đĩa gian đốt sống giữa các đốt sống ngực thứ thư và thứ 
+năm.
+-  Khớp mũi kiếm-ức :  khớp giữa mỏm mũi kiếm xương ức với thân xương ức 
+ngang mức với thân đốt sống ngực thứ chín.
+-  Góc dưới sườn: nằm ờ đầu dưới xương ức, giữa các chỗ bám của các sụn sườn
+thứ bảy vào xương ức.
+-  Bờ sườn :  là giới hạn dưới cùa ngực và do sụn của các xương sườn từ thứ bảy 
+đến thứ mười cùng với đầu của các sụn sườn XI và XII tạo nên; phần thấp nhất 
+của bờ sườn do xương sườn thứ mười tạo nên và nằm ờ ngang mức đốt sônơ thắt 
+lưng thứ ba.
+-  Các xương sườn:  trừ xương sườn thứ nhất nằm sau xương đòn không thể sờ 
+được, mặt bên của các xương sườn còn lại đểu có thể sờ được bằng ngón tay 
+và muốn xác định một xương sườn nào đó thì trước tiên ta luôn phai xac định 
+xương sườn thứ hai tại góc ức.
+-  Núm vú: ở  nam thường nằm ờ khoang gian sườn thứ tư, cách đường Siũa
+khoảng 9 cm; vị trí núm vú của nữ không hằng định.
+48
+
+--- PDF PAGE 53 ---
+-  Vị trí mỏm tim đập :  thường thấy ở khoang gian sườn thứ năm bên trái, cach 
+đường giữa khoảng 9 cm; dễ sờ thấy hơn khi bệnh nhân ngồi nghiêng ra trươc.
+-  Các nếp nách', nếp nách trước  do bờ dưới cơ ngực lớn tạo nên; nêp nách sau  
+do gân của cơ lưng rộng tạo nên.
+1.1.2. Các mốc bể mặt trên mặt sau thành ngực
+-  Mỏm gai của các đốt sống ngực:  nằm trên đường giữa sau. Đặt ngón tay trỏ 
+vào mặt sau đường giữa cổ và vuốt xuống dưới, mỏm gai đầu tiên sờ thấy 
+được là của đốt sống cổ thứ bảy, dưới nữa là mỏm gai của các đốt sống ngực. 
+Mỏm gai của các đốt sống cổ CI - CVI được dây chằng gáy che phủ. Lưu ý 
+rằng, đỉnh mỏm gai của một đốt sống ngực nằm ngay sau thân của đốt sống 
+kế tiếp bên dưới.
+-  A'ương vai: góc trén  nằm ngang mức mỏm gai của đốt sống ngực thứ hai; gai 
+vai nằm dưới da và rễ của nó ở ngang mức với mỏm gai của đốt sống ngực thứ 
+ba; góc dưới  nằm ngang mức với mỏm gai của đốt sống ngực thứ bảy.
+1.1.3. Các đường định hướng
+-  Đường giữa ức:  nằm trên đường giữa xương ức.
+-  Đường giữa đòn:  đường từ điểm giữa xương đòn chạy thẳng đứng xuống dưới.
+-  Đường nách trước :  từ nếp nách trước chạy thẳng đứng xuống dưới.
+-  Đường nách sau:  từ nếp nách sau chạy thẳng đứng xuống dưới.
+-  Đường nách giữa :  từ một điểm nằm giữa các nếp nách trước và sau chạy thẳng 
+đứng xuống dưới.
+-  Đường vai:  đường thảng đứng trên thành ngực sau, đi qua góc dưới của 
+xương vai.
+1.1.4. Những mốc trên bé mặt của các cơ quan trong khoang ngực
+1.1.4.1. Khí quản.  Khí quản đi từ bờ dưới sụn nhẫn, ngang mức đốt sống cổ thứ sáu,
+tới ngang mức góc ức. Có thể sờ thấy khí quản ở đường giữa nền cổ, tại khuyết trên ức.
+1.1.4.2. Phổi
+-  Đỉnh phổi  nhô vào nền cổ, vẽ nên một đường cong lồi lên trên đi từ khớp ức- 
+đòn tới một điểm ở khoảng 2,5 cm trên chỗ tiếp nối các 1/3 giữa và trong của 
+xương đòn.
+-  Bờ trước  của phổi bắt đầu ở sau khớp ức đòn và đi xuống dưới và vào trong tới 
+sát gần đường giữa ở sau góc ức. Từ đày nó lại đi xuống dưới và ra ngoài cho 
+tới tận bờ ngoài khớp mỏm mũi kiếm-ức thì liên tiếp với bờ dưới. Bờ trước của 
+phổi trái có đường đi giống như bên phải cho tới ngang mức sụn sườn thứ tư. 
+Từ đây, nó đi lệch sang bên, cách xa bờ bên xương ức một khoảng cách thay 
+đổi để tạo nên khuyết tim  rồi đột ngột chạy xuống để liên tiếp V Ớ I  bờ dưới ơ 
+ngang mức, nhưng ở bên ngoài, khớp mũi kiếm-ức.
+49
+
+--- PDF PAGE 54 ---
+-  Bờ dưới  cúa phối khi hít vào vừa phải đi theo một đường cong bất chéo xương  
+sườn thứ sáu trẽn đường giữa đòn, xương sườn thứ tám trên đường nách giữa 
+và xương sườn thứ mười ớ cạnh cột sống.
+-  Bở sau  của phổi chạy dọc mỏm gai của các đốt sống từ cổ VII tới ngực XI 
+nhưng cách đường giữa khoáng 4 cm.
+-  Khe chếch  của phổi chiếu lên bể mặt bằng một đường từ rễ của gai vai đi 
+chếch xuống dưới, sang bên và ra trước, theo đường đi cùa xương sườn thứ VI, 
+tới chỗ tiếp nôi giữa sụn và xương sườn VI.
+-  Khe ngang  cúa phổi phải được đại diện bằng một đường vạch ngang dọc theo 
+sụn sườn thứ tư cho tới khi gặp khe chếch trên đường nách giữa.
+1.1.4.3. Màng phổi thành
+-  Mùng phổi  rổ nhô lên trên vào cổ và có mốc bề mật như của đỉnh phổi.
+-  Níịách sườn-tnmg thất  cùa phổi phải đối chiếu lên thành ngực trước giông 
+như cùa bờ trước phổi phải; ngách sườn-trung thất của phổi trái cũng có 
+khuyết tim như của bờ trước phổi trái nhưng khuyết này không rộng như 
+khuyết tim của phổi, tức là ngách sườn-trung thất ít cách xa bờ bên xương ức 
+hơn so với bờ trước phổi.
+-  Ngách sườii-hoànli  hay bờ dưới của màng phổi chạy theo một đường cong; 
+đường này bắt chéo xương sườn thứ tám trên đường giữa đòn và xương sườn 
+thứ X trên đường nách giữa rồi đạt tới xương sườn XII ở sát cạnh cột sông.
+1.1.4.4. Tim
+Tim được coi như có một đính và bốn bờ. Đỉnh tim tương ứng với nơi ta sờ thấy 
+tim đập, ớ khoang gian sườn thứ năm bên trái cách đường giữa 9 cm. Bờ trên, nơi có 
+gốc của các mạch máu lớn, chạy từ một điếm trên sụn sườn thứ hai bên trái (ngang góc 
+ức) cách bờ trái xương ức 1,3 cm tới một điểm trên sụn sườn thứ ba phải cách bờ phải 
+xương ức 1,3 cm. Bờ phải, vốn do tâm nhĩ phải tạo nên, từ một điểm trên sụn sườn thứ 
+ba bên phái cách bờ xương ức 1,3 cm đi xuống đến một điểm trên sụn sườn thứ sáu 
+bên phải cách bờ xương ức 1,3 cm. Bờ trái, vốn phần lớn do tâm thất trái tạo nên. đi từ 
+một điếm trên sụn sườn thứ hai trái cách bờ xương ức 1,3 cm tới đỉnh tim. Bờ dưới, do 
+tâm thất phái và phần đinh thất trái tạo nên, đi từ sụn sườn thứ sáu bên phải cách bờ ức 
+1,3 cm tới đính tim.
+1.1.4.5. Các mạch máu lớn
+Cung động mạch chú. động mạch cánh tay đầu và động mạch cảnh chung trái 
+nằm sau cán ức. Tĩnh mạch chù trên và phân tận cùng cùa các tĩnh mạch cánh tay đầu 
+phái và trái nằm sau cán ức. Các mạch ngực trong chạy thảng đứng xuống dưới sau các 
+sụn sườn, cách bờ xương ức 1,3 cm, tới tận khoang gian sườn thứ sáu. Các mạch gian 
+sườn và thần kinh gian sườn (theo trình tự từ trên xuống là tĩnh mạch, động mạch và 
+thần kinh) năm ngay dưới các xương sườn tương ứng.
+50
+
+--- PDF PAGE 55 ---
+1.2. Câu tạo của thành ngực
+Thành ngực xương được che phủ trên mật ngoài bởi da và các cơ gắn đai vai V Ớ I  
+thân; mặt trong được lót bời màng phổi thành.
+Thành ngực được tạo nên về phía sau bời đoạn ngực của cột sống, ở trước bới 
+xương ức và các sụn sườn, ớ bên bởi các xương sườn và các khoang gian sườn; và ơ 
+dưới bới cơ hoành, cơ ngăn cách khoang ngực với khoang bụng.
+2. THÀNH BỤNG
+Có thể định nghĩa bụng như là phần của thân nằm giữa cơ hoành ỡ trên và eo trên 
+ớ dưới.
+2.1. Giải phẫu bề mặt (H 4A.1)
+Mỏm m ũi kiếm.  Mỏm này sờ thấy được ở chỗ lõm, nơi mà các bờ sườn gập 
+nhau tại góc dưới ức. Chỗ tiếp nối móm mũi kiếm-ức ngang mức với thân đốt sống 
+ngực thứ chín.
+Bờ sườn.  Đây là bờ cong bên dưới của thành ngực được tạo nên bởi sụn của các 
+xương sườn VII - X ở trước và sụn của các xương sườn XI - XII ớ sau. Nơi thấp nhất 
+của bờ sườn là sụn sườn thứ X, nàm ờ ngang mức thân đốt sống thắt lưng thứ ba. 
+Xương sườn thứ XII có thể ngắn và khó sờ thấy.
+Mào chậu.  Có thê sờ thấy toàn bộ chiều dài mào chậu, từ gai chậu trước-trên tới 
+gai chậu sau-trên; nơi cao nhất của mào chậu ờ ngang mức thân đốt sống thắt lưng thứ 
+tư. Ở khoảng 5  cm sau gai chậu trước-trên, mép ngoài mào chậu nhô lên tạo thành củ 
+mào chậu; cú này nằm ngang mức thân đốt sống thắt lưng thứ nãm.
+Dáy chằng bẹn.  Đây là bờ dưới cuộn lại của cân cơ chéo bụng ngoài. Nó đi từ gai 
+chậu trước-trên tới cú mu, một mốc xương có thể sờ thấy ở mặt trên thân xương mu.
+Khóp mu.  Đây là khớp sụn sợi nằm trên đường giữa ở giữa thân của các xương mu.
+Điểm giữa bẹn.  Đây là điếm nằm trên dây chằng bẹn, ớ giữa khớp mu và gai 
+chậu trước-trèn. Sờ vào đây có thể thấy được mạch đập của nơi tiếp nối động mạch 
+chậu ngoài với động mạch đùi.
+Vòng (lỗ) bẹn nông.  Đây là một lỗ nằm trong cân của cơ chéo bụng ngoài, ờ 
+trên và trong củ mu. Có thể lấy đầu ngón tay út đẩy da phần trên bìu vào lỗ và sờ thấy 
+dược thừng tinh.
+Đường trắng.  Đây là dải xơ đi từ khớp mu đến mỏm mũi kiếm và nằm trên 
+đường giữa. Nó do cân cùa các cơ thành bụng trước ờ hai bên dính lại với nhau tạo nên 
+và được đại diện trên bề mặt bằng một rãnh nông khó nhận thấy.
+Rón.  Rốn nằm trên đường giữa-trước của bụng và hằng định về vị trí.
+Đường bán nguyệt.  Đường này là bờ bên của cơ thảng bụng và bắt chéo bờ sườn 
+tại đỉnh của sụn sườn thứ chín.
+51
+
+--- PDF PAGE 56 ---
+Hình 4A.1. Các mốc bề mặt và các vùng của thành bụng trước
+52
+
+--- PDF PAGE 57 ---
+2.2. Các vùng bụng (H. 4A.1)
+Vì mục đích lâm sàng, bụng được chia thành chín vùng bằng hai đường thăng 
+đứng và hai đường nằm ngang. Mỗi đường thẳng đứng đi qua điểm giữa bẹn. Đường 
+nằm ngang trên, đôi khi được gọi là mặt phảng dưới sườn,  nối điểm thấp nhât của bờ 
+sườn ớ hai bên. Đây là bờ dưới của sụn sườn thứ mười và nằm ngang mức với đôt sông 
+thắt lưng thứ ba. Đường ngang dưới, thường được gọi là mặt phẳng gian củ,  nối củ của 
+các mào chậu ớ hai bên. Mặt phảng này nằm ngang mức thân của đốt sống thăt lưng 
+thứ nãm.
+Chín vùng bụng nằm ớ ba tầng bụng: ờ tầng trên có vùng thượng vị  nằm giữa các 
+vùnq hạ sườn phải  và trái; ờ tầng giữa có vùng rốn  nằm giữa các vùng thắt lưng phải  
+và trái', ờ tầng dưới có vùng hạ vị nằm giữa các vùng hố  chậu phải  và trái.
+Mặt phẳng nganẹ qua mởn vị.  Mặt phảng này thường được dùng trong lâm sàng. 
+Nó đi qua đinh của các sụn sườn thứ chín ỡ hai bên, tức là nơi mà bờ ngoài cơ thẳng 
+bụng (đường bán nguyệt) bất chéo bờ sườn. Mặt phảng này đi qua môn vị, chỗ tiếp nối 
+tá-hỗng tràng, cổ tuỵ và rốn của hai thận. Đế thấy được cơ tháng bụng hai bên khi co,  
+yêu cầu bệnh nhân ngồi dậy mà không dùng tay.
+Mặt phắng gian mào.  Mặt phảng này đi ngang qua điểm cao nhất của hai mào 
+chậu và nàm ngang mức với thân của đốt sống thắt lưng thứ tư.
+2.3. Mốc bể mặt của các tạng bụng
+VỊ trí của phần lớn các tạng bụng biến đổi theo cá thể và ớ mỗi cá thể lại chịu 
+ảnh hướng nhiều của tư thế và sự hô hấp. Những cơ quan dưới đây ít nhiều cô định và 
+những mốc bể mặt của chúng có giá trị về lâm sàng.
+Gan.  Phần lớn gan nầm trong vùng hạ sườn phải, dưới sự che phủ của các xương 
+sườn dưới, và vùng thượng vị. ơ  trẻ em, cho tới cuối tuổi thứ ba, bờ dưới gan vượt quá 
+bờ sườn 1  hoặc 2 bể ngang ngón tay. Ta không sờ được gan ờ người lớn mà béo hoặc 
+có cơ thẳng bụng phát triển. Ớ một người lớn gầy, nhất là khi hít vào sâu, bờ dưới gan 
+có thể ỡ thấp hơn bờ sườn tới một bề ngang ngón tay.
+Túi mật.  Đáy túi mật nằm ớ nơi mà bờ ngoài cơ thẳng bụng bắt chéo bờ sườn, 
+tức ngang với đầu sụn sườn thứ chín bẽn phái.
+Lách.  Lách nằm trong vùng hạ sườn trái dưới sự che phủ của các xương sườn IX- 
+XI. Trục dọc của nó tương ứng với trục của xương sườn thứ mười, và ờ người lớn 
+thường không nhô ra trước quá đường nách giữa. Có thể sờ thấy được đầu dưới của 
+lách trẻ em.
+Tuy.  Tuỵ nằm dọc mặt phảng ngang qua môn vị: đầu tuỵ nằm về phía dưới và 
+bên phái, cổ nàm trên mặt phảng, còn thân và đuôi nằm ờ trên (cao hơn) và bên trái.
+Thận.  Thận phái nằm hơi thấp hơn thận trái (do gan) và có thể sờ thấy đầu dưới 
+của nó ớ vùng thắt lưng phải vào cuối thì hít vào sâu ờ một người gầy có hệ cơ bụng 
+kém phát triển. Mỗi thận dịch chuyển khoảng 2,5 cm theo hướng thang đứng tronơ cư 
+động hô hấp đầy đủ của cơ hoành. Không sờ thấy thận trái bình thường. Trên thành 
+bụng trước, rốn thận nằm trên mặt phẩng ngang qua môn vị, cách đường giữa khoảno
+53
+
+--- PDF PAGE 58 ---
+ba bề ngang ngón tay. Trên thành lưng, thận đi từ ngang mức mỏm gai đốt sòng ngực 
+thứ mười hai đến ngang mức mỏm gai đốt sống thắt lưng thứ ba, và rốn thận ờ ngang 
+mức đốt sống thắt lưng thứ nhất.
+Động mạch chủ  Động mạch chủ nằm trên đườn° giữa cũa bụng và chia thành 
+các động mạch chậu chung ờ ngang mức đốt sống thắt lưng thứ tư. tức là trên mạt 
+phẳng gian mào.
+2.4. Câu tạo của thành bụng
+Thành bụng trước-bên chủ yếu cấu tạo bằng các cơ chạv từ các xương sườn tới 
+chậu hông; thành bụng sau chủ yếu do cột sống và các cơ gắn liền với nó tạo nen. 
+riêng phần dưới do cánh cùa hai xương chậu.
+Về phía trên, thành bụng do cơ hoành, cơ ngăn khoang ngực với khoang bụng, 
+tạo nên; vì cơ hoành cong lồi lên trên nên nó và phần dưới thành ngực vây quanh cac 
+tạng ở phần trên ổ bụng, tức là tạo nên phần trên của thành bụng, Ở dưới, khoang bụng 
+liên tiếp với khoang chậu hông qua eo chậu trên (có thể coi khoang chậu hỏng như một 
+phần của khoang bụng), v ề  phía trước, thành bụng được tạo nên ở trên bời phần dưới  
+của thành ngực và ớ dưới bời các cơ thẳng bụng, chéo bụng ngoài, chéo bụng trong và 
+ngang bụng. Thành bụng sau được tạo nên trên đường giữa bới cột Sốn 2 thát lưng; ớ 
+mỗi bên bới xương sườn XII, phần trên chậu hông xương, cơ thắt lưng chậu, cơ vuông 
+thắt lưng và cân nguyên uỷ của cơ ngang bụng. Thành bụng bên được tạo nén ờ trên 
+bới phần dưới thành ngực, và ở dưới bời các cơ chéo bụng ngoài, chéo bụng trong và 
+ngang bụng.
+Các lớp cúa thành bụng trước bên
+Da và mạc nông. Các dường xẻ  tự nhiên trên da chạy theo chiều ngang. Các 
+đường rạch ở da bụng theo chiều ngang chi để lại vết sẹo nhỏ. Mạc nông, hay mỏ hoặc 
+tấm dưới da, có thế được chia thành một lớp mỡ nông và một lớp màng (bằng mô xơ) ờ 
+sâu, nhất là ở phần dưới. Lớp mỡ có thể rất dày ở người béo phì. Mạc nông liên tiếp ờ 
+dưới qua dây chằng bẹn với tấm dưới da của đùi và lớp màng của nó dính với mạc đùi. ở  
+giữa hai đùi, mạc nông liên tiêp với tấm dưới da của bìu (hay môi lớn) và của đáv chậu.
+Da thành bụng trước-bên được chi phối bởi các nhánh bì bên và các nhánh bì 
+trước của nhánh trước sáu thần kinh ngực dưới; mỗi nhánh bì bên lại chia thành hai 
+nhánh: nhánh trước chạy về phía rốn và nhánh sau chạy về phía lưng. Phần dưới cùng 
+của thành bụng, ở trên dây chăng bẹn và khớp mu, được chi phôi bởi nhánh bì trước 
+của thân kinh chậu-hạ V Ị. Các nhánh chính của nhánh trước các thần kinh n°ực dưới 
+(các thân kinh gian sươn và thân kinh dưới sườn) chạy giữa cơ chéo bụng tronơ  và cơ 
+ngang bụng và các nhánh bì do chúng tách ra phải xuyen qua các cơ chéo bụng để đi 
+vào mạc nông. Da bụng bẽn được cấp máu bời các nhánh bì bên của các mạch gian 
+sườn sau, dưới sườn và thăt lưng; da thành bụng trước được cấp máu bời các nhánh bì 
+trước đi kèm với các thân kinh bì trước nhưng tách ra từ các mạch thượng vị trẽn và 
+dưới. Da phần dưới thành bụng trước được cấp máu bời các mạch mũ chậu nòng và 
+thượng vị nông, nhánh cua các mạch đùi. Các tĩnh mạch cùa da bụng hướng vẽ và tiếp 
+nối với nhau ờ rốn. Mạng lưới tĩnh mạch quanh rốn tiếp nối với tĩnh mạch cừa qua các 
+tĩnh mạch cạnh rốn.
+54
+
+--- PDF PAGE 59 ---
+Mạc sáu.  Mạc sâu phú trên các cơ chi là một lớp mô liên kêt mong.
+Các cơ.  Các cơ của thành bụng trước bên bao gồm các cơ chéo bụng ngoài, chéo 
+bụng trong, ngang bụng, thảng bụng và tháp (xem bai Các cơ và mạc cùa thân). Nhánh 
+trước của sáu thần kinh ngực dưới và thần kinh thắt lưng thứ nhất nằm giữa cơ chéo 
+bụng trong và cơ ngang bụng. Các độna mạch thượng vị dưới và trên đi sau cơ thãng 
+bụng, trong bao cơ.
+Lớp mạc.  Mật trong thành cơ cùa bụng được phủ bới lớp mạc liên tiếp ờ dưới với 
+lớp mạc tương tự lót thành chậu hông. Lớp mạc này được phân chia và gọi tên theo cấu 
+trúc mà nó che phú: mạc hoànli  phủ mặt dưới cơ hoành, mạc ngang  phủ thành bụng 
+trước bên (chù yếu do cơ ngang bụng tạo nên), mạc thắt lưng  phủ cơ thắt lưng, mạc 
+cliậu phủ cơ chậu. Lớp mạc ngăn cách với phúc mạc bằng lớp mô ngoài phúc mạc 
+chứa nhiểu mỡ.
+Phúc mạc.  Thành bụng được lót bằng phúc mạc thành: nó liên tiếp ờ dưới với 
+phúc mạc thành chậu hông.
+3. ỐNG BẸN
+Dáy chằng bẹn  và lỗ bẹn nông  (H.4A.2 ). Cơ chéo bụng ngoài có một bờ tự do 
+nằm giữa gai chậu trước-trên và cù mu. Bờ này cùng các sợi collagen tạo nên dây 
+chảng bẹn.  Phần gân cơ chéo bụng ngoài bám vào thân xương mu (từ củ mu trờ vào) 
+không liên tục mà bị xè thành hai trụ, trụ ngoài  và trụ trong.
+Gai chậu trước trên
+D/c bẹn
+Các sợi gian trụ 
+Mac đùi ■
+----------Cơ thảng bụng
+--------Cân cơ chéo bụng ngoài
+-T rụ  trong 
+_ - D/c phản chiếu
+------Xg mu
+Trụ ngoài
+H ìn h  4 A .2 . Lỗ bẹn nông
+Khe hờ hình tam giác giữa hai trụ được các sợi gian trụ  và các sợi từ chỗ bám 
+cùa trụ ngoài quặt lên đường trắng (dày chằng phân chiểu)  viền tròn lại tạo nên lỗ bẹn  
+nông.
+Liềm bẹn.  Nhữnơ sợi dưới cùns cùa cơ chéo bụng trons và cơ naano bụnơ bám 
+vào dây chằng bẹn: cơ chéo bụng trons vào 1/2 ngoài, cơ ngang bụno vào 1/3 nơoài 
+Từ đó các sợi của hai cơ này chạy vào trong ờ trên dây chằng bẹn và hợp nên liềm ben  
+Liềm bẹn vòng xuống ờ sau lỗ bẹn nôna rồi bám vào mào mu và lược xươn° mu Như 
+vậy, giữa liềm bẹn và nưa trong dây chăng bẹn có một khe hớ cơ chạy chếch xuốno dưới
+
+--- PDF PAGE 60 ---
+và vào trong, đầu trong của khe thông với lỗ bẹn nông, ớ trước khe là cân cơ chéo bụng 
+ngoài, ở sau là mạc ngang. Trên mạc ngang có một đường dày lên gọi là dây chằng liên  
+hô\ dây chăng này có đầu trên liên tiếp với đường cung, đầu dưới dính vào dây chăng 
+bẹn ở ngang mức với đầu ngoài khe hở cơ. Từ bờ ngoài của dây chằng liên hố, mạc 
+ngang chĩu xuống thành một túi đi qua khe hở cơ và lỗ bẹn nông để xuống bìu - bọc 
+quanh tinh hoàn. Điểm mà mạc ngang bắt đầu chĩu xuống được gọi là lô bẹn sâu.
+Khe hở cơ nói trên được gọi là ông bẹn.  Thành phần quanh ống là các thành, các 
+đầu ống là các lỗ bẹn. Như vậy: thành trước  là cân cơ chéo bụng ngoài và một phần cơ 
+chéo bụng trong; thành sau  là mạc ngang, mô ngoài phúc mạc và phúc mạc; thành  
+trên  là liềm bẹn và thành dưới  là dây chằng bẹn. Các thành phần đi qua ống bẹn là 
+thừng tinh ở nam và dây chằng tròn ở nữ.
+Lỗ bẹn sâu
+Các mạch thượng vị dưới
+Cơ chéo bụng trong -
+Cơ ngang bụng -  -
+D/c liên hố -
+ỉ
+-  - Cân cơ chéo bụng trong
+- -  Mạc ngang
+Cơ thẳng bụng
+-  -  Gân kết hợp
+D/c khuyết -
+Hình 4A.3. Vùng ống bẹn ở sâu dưới cơ chéo bụng trong, 
+mạc tinh trong (từ mạc ngang) bị cắt ở lỗ bẹn sâu
+Phúc mạc và mỡ 
+ngoài phúc mạc -■
+Mạc ngang -  -
+_ ,  Nếp rốn ngoài
+- Nếp rốn trong 
+~ ~ Nếp rốn giữa 
+""" Cơ thảng bụng 
+'  Liềm bẹn
+Cơ ngang bụng -
+Cơ chéo bụng trong "
+Cơ chéo bụng ngoài 
+Da và tấm dưới da
+\
+b ơ  chéo bụng ngoài
+Tinh hoàn
+Hình 4A.4. Thiết đồ nằm ngang qua trục ống bẹn
+56
+
+--- PDF PAGE 61 ---
+Trên thành sau của ống bẹn, có ba thành phần đi trong mô mỡ giữa mạc ngang 
+và phúc mạc, tính từ giữa sang bên là: dủ\ chần ẹ rốn giữa, thừng dộng mạch rón  và 
+dộng mạcli thượng vị dưới.  Các thành phần này đội phúc mạc lên thành ba nêp rốn, 
+cũng kể từ giữa sang bên, là: nếp rốn giữa , nếp rốn trong  (gần giữa) và nếp rốn ngoài  
+(bẽn). Các nếp rốn giới hạn nên ba hố phúc mạc: liô' bẹn ngoài  (bên) nằm ngoài nêp 
+rốn ngoài, hô bẹn trong  (giữa) nằm giữa nếp rốn ngoài và nếp rốn trong, và hô trên  
+bàng quang  nằm giữa nếp rốn trong và nếp rốn giữa. Ruột hoặc mạc nối lớn có thể đi 
+qua khe hờ cơ của thành bụng để đi vào bìu, gây nên tình trạng gọi là thoát vị bẹn. 
+Thoát vị bẹn sảy ra ờ hô' bẹn ngoài được gọi là thoát vị bẹn gián tiếp, ở  hố bẹn trong 
+hoặc hố trên bàng quang (hiếm gặp) gọi là thoát vị bẹn trực tiếp.
+57
+
+=== BÀI 4B ===
+
+--- PDF PAGE 62 ---
+Bài 4B
+Đ Á Y  C H Ậ U
+MỤC TIÊU
+Trình bày được các cơ, mạc và các khoang của (láy chậu.
+Đáy chậu nằm dưới hoành chậu hỏng. Đây là vùng hình thoi đi từ xương mu ờ 
+trước tới xương cụt ờ sau và ở giữa hai cú ngồi. Đường kẻ ngang qua hai củ ngồi chia 
+đáy chậu thành tam giác niệu dục  ớ trước chứa các cơ quan sinh dục ngoài và tam giác  
+hậu môn ờ  sau chứa ống hậu môn. Ỏ trung tâm đáy chậu có một khối mô xơ-cơ gọi là 
+thê đáy chậu ,  nơi bám cùa nhiéu cơ đáy chậu.
+1. CÁC Cơ CỦA ĐÁY CHẬU (Bảng 4B) (H 4B.1)
+' Cơ mông lớn
+A
+58
+
+--- PDF PAGE 63 ---
+< /
+Các cơ nâng hậu môn và 
+thắt hậu môn ngoài
+đáy chậu I
+Cơ ngang đáy chậu nông
+Hình 4B.1. Các cơ của kho a n g  đáy chậu nông 
+A . ở nữ B . ở nam
+Các cơ đáy chậu được xếp thành 2 lớp; lớp nông và lớp sâu. Các cơ của lớp nông  
+là cơ lì gan %  đáy chậu nông, cơ liành xốp  và cơ Iigổi hang.  Các cơ sâu của đáy chậu là 
+cơ ngang đáy chậu sâu  và cơ thắt niệu dạo ngoài.  Các cơ đáv chậu sâu và mạc phù 
+trên hai mặt cùa chúng tạo nên hoành niệu-dục.  Các cơ cùa hoành niệu-dục hỗ trợ tiểu 
+tiện và phóng tinh (ở nam). Cơ thắt hậu môn ngoài  (cùa tam giác hậu môn) bao quanh 
+ống hậu môn và dính chặt với vùng da bao quanh bờ ống hậu môn.
+Các cơ cùa đáy chậu được chi phối bới nhánh đáy chậu thần kinh thẹn,  trừ cơ 
+thắt hậu môn ngoài do thần kinh sông cùng 4 và nhánh trực tràng dưới cùa thần kinh 
+thẹn chi phối.
+59
+
+--- PDF PAGE 64 ---
+Bảng 4B. Các cơ của đáy chậu
+Cơ Nguyên uỷ Bám tận Đ ộng tác
+Các c ơ  dáy chậu nông
+Cơ ngang đáy chậu nông
+(superficial transverse 
+perineal muscle)
+Củ ngối Thể đáy chậu Giúp giữ vững thể đáy 
+chậu
+Cơ hành xốp  
+(bulbosponsosus)
+Thể đáy chậu Mạc hoành niêu 
+dục, vật xốp của 
+dương vật và mạc 
+sâu trên mu dương 
+vật; cung mu, rễ và 
+mu ảm vật ở nữ
+Giúp tống nốt các giot 
+nước tiểu và tinh dịch 
+qua niệu đao, làm 
+cương dương vật ở 
+nam; làm khít lỗ âm 
+đao và làm cương âm 
+vật ở nữ
+Cơ ngôi-hang  
+(ischiocavernosus)
+Củ ngói, các ngành 
+xương ngồi và 
+xương mu
+Vật hang của dương 
+vật và ảm vật
+Duy trì cương dương 
+vật hoặc âm vật
+Các cơ đáy chậu sâu
+Cơ ngang đáy chậu sâu
+(deep transverse perineal 
+muscle )
+Ngành xương ngồi Thể đáy chậu Giúp tống nốt các gìot 
+nước tiểu và tinh dich
+Cơ thắt niệu đạo ngoài
+(external urethral 
+sphincter)
+Các ngành của 
+xương ngồi và 
+xương mu
+Đường đan giữa ở 
+nam và thành âm 
+đao ở nữ
+Giứp tổng nốt các giot 
+nước tiểu và tinh dich
+Cơ thắt hậu mòn ngoài  
+(external anal sphincter)
+Thể hâu môn - cụt Thể đáy chậu Giữ vững và làm đóng 
+ống hậu môn
+2. GIỚI HẠN VÀ PHÂN CHIA ĐÁY CHẬU
+Đáy chậu vừa là một vùng bề mặt vừa là một "ngăn" nông cùa cơ thế. Khi đùi 
+khép, bề mật đáy chậu là một vùng hẹp nằm giữa bờ trong cùa hai góc đùi. Khi đùi 
+giạng, đáy chậu là một vùng hình trám đi từ gò mu ờ trước tới đầu trên khe liên mõno 
+ờ sau và hai bên là bờ trong của hai gốc đùi và hai nếp lằn mỏng. Ngăn đáy cháu nãm 
+dưới khoang chậu hông và được ngãn cách với khoang chậu hông bới hoành châu 
+hông. Các cấu trúc xương - sợi bao quanh ngăn đáy chậu là: khớp mu ờ trước, xương 
+cụt ờ sau, các củ ngồi ở hai bên, các ngành ngỏi-mu ở trước-bên và các dây chăng 
+cùng-cù ớ sau-bên.
+Một đường kè ngang tường tượng nối đầu trước cùa hai ụ  ngồi chia đáy châu 
+thành hai tam giác: tam giác  (hay vùng) hậu môn  ớ sau chứa ỏng hậu món. tam ạiác  
+(hay vùng) niệu-dục ở  trước chứa các cơ quan sinh dục ngoài của nữ hoặc nam.
+60
+
+--- PDF PAGE 65 ---
+3. TAM GIÁC NIỆU - DỤC (H. 4B.2 và H. 4B.3)
+(mac
+chậu
+Hai lớp của tấm dưới da thành bụng
+của tấm dưới da đáy chậu 
+Túi đáy chậu dưới da
+______Cơ nâng hậu môn
+. Màng đáy chậu và 
+các cơ đáy chậu sâu
+'  Hố ngổi-hậu môn
+Hình 4B.2. Các lớp và các khoang của đáy chậu trên thiết đồ đứng dọc
+3.1. Giải phẫu bể mặt. Nhìn bề mặt, tam giác niệu - dục khác nhau giữa nam và nữ. 
+Vùng niệu-dục của nam được da bìu che phủ gần hết và nằm dưới da là rễ dương vật và 
+các cơ đáy chậu nông. Tam giác niệu-dục của nữ chứa toàn bộ cơ quan sinh dục ngoài 
+(âm hộ) của nữ: ờ giữa là tiền đình âm đạo chứa lô âm đạo và lỗ niệu đạo, ờ hai bên là 
+các môi lớn và bé. và ờ trước là âm vật.
+3.2. Các lóp mô. Tam giác niệu-dục ở hai giới được cấu tạo bằng năm lớp mô oiốno 
+nhau, tính từ nông vào sâu là: (1) da và tấm dưới da đáy chậu, (2) mạc đáy chậu (3)
+D/c cung mu
+„ T/m mu dương vật
+ế '
+Màng đáy chậu và 
+- -  ■  các cơ đáy chậu sâu
+-  -  Trực tràng
+\  Tấm dưới da đáy 
+\
+N
+'  Mạc đáy chậu 
+--------Áo cơ dartos
+D/c treo dương vật - -
+Tấm dưới da J Lớp m ỡ -----
+nông) thành bụng I  Lớp màng - -
+Xg m u ----------
+61
+
+--- PDF PAGE 66 ---
+cac tạng cương và các cơ đáy chậu nông vây quanh, (4) màng đáy chậu và (5) các cơ 
+đay chậu sâu. ơ  giữa những lớp mô này là ba khoang.
+Tàm dưới da đáy chậu  (subcutaneous tissue of perineum). Tấm dưới da bao gổm 
+một lớp mỡ nông và một lớp mùng  (membranous layer) ờ sâu. Lớp mỡ thì dày ờ nữ. 
+mỏng ớ nam. Tấm dưới da đáy chậu liên tiếp với tấm dưới da của đùi, thành bụng 
+trước, tam giác hậu môn, bìu và dương vật. Tấm dưới da cùa bìu trớ thành áo dartos va 
+tấm dưới da của tam giác hậu môn khong có lớp màng. Bờ sau cùa lớp màng tấm dưới 
+da đáy chậu quặt lên dính với bờ sau màng đáy chậu, hai bờ bên dính với ngành ngồi- 
+mu và liên tiếp với mạc đùi.
+Mạc đáy chậu  (perineal fascia) là lá dưới (lá nông) của mạc bọc các cơ đáy chậu 
+nông. Các bờ bên của mạc này dính vào ngành ngồi-mu, bờ sau đính vào màng đáy 
+chậu, ơ  trước, nó liên tiếp với mạc dương vật và lớp mạc phù cơ chéo bụng ngoài và 
+bao cơ thảng bụng.
+Các cơ đáy chậu nông  và các tạng cương  (xem các bái cơ quan sinh dục nam và 
+cơ quan sinh dục nữ), ở nam, các tạng cương là phần rễ cùa dương vật bám vào mặt 
+dưới màng đáy chậu, bao gồm hành dương vật chứa niệu đạo và các trụ dương vật; các 
+cơ đáy chậu nông của nam (xem Cơ đáy chậu) gồm các cơ hành xốp vây quanh hành 
+dương vật, các cơ ngồi-hang vây quanh hai trụ dương vật và cơ ngang đáv chậu nông, 
+ơ  nữ, thay cho hành dương vật là hai khối mỏ xốp gọi là hành tiền đinh nàm ớ hai bên 
+âm đạo; mỗi cơ hành xốp cùa nữ che phù một hành tiền đình và được ngăn cách với cơ 
+bên đối diện bằng âm đạo. Mặt nông (mặt dưới) của các cơ đáy chậu nóng được che 
+phú bằng mạc đáy chậu.
+M àng đáy chậu  (perineal membrane) là một màng mỏng và dai hình tam giác 
+dính ờ hai bên vào các ngành phải và trái cung mu. Ở nam, góc trước của màng đáy 
+chậu dày lên thành dây chẳng ngang đáy chậu  nằm ngay dưới khớp mu. Giữa dây 
+chằng này và dây chằng cung mu có một khe hở để tĩnh mạch mu sâu dương vật đi 
+qua. Ở nữ không có dây chằng ngang đáy chậu. Bờ sau màng đáy chậu dính với bờ sau 
+của lớp màng tấm dưới da và bờ sau mạc đáy chậu. Thể đáy chậu  (perineal body) là 
+một khối xơ - cơ không đều bám vào giữa bờ sau cùa màng đáy chậu. Nó năm trước 
+ống hậu môn, sau hành dương vật (của nam) và tiền đình ám đạo (cùa nữ). Ngoài các 
+sợi trun và sợi collagen, đày còn là nơi hội tụ cúa cơ hành xốp, cơ thắt hậu mon nooài 
+và các cơ ngang đáy chậu nông và sâu.
+Các cơ đáy chậu sáu.  Các cơ này nằm trên màng đáy chậu, dưới hoành châu 
+hông. Các cơ ờ nam là cơ thắt niệu đạo ngoài và cơ ngang đáy chậu sâu. Cơ thắt niêu 
+đạo ngoài của nữ gồm phần chính là một cơ vòng thực sự vây quanh niệu đạo. Từ cơ 
+vòng này có những sợi chạy về phía sau - bén bám vào ngành xương ngồi gọi là cơ ép  
+niệu dạo  (compressor urethrae) và những sợi chạy vòng quanh cà niệu đạo và âm đao 
+tạo nén cơ tliắt niệu đụo-âm dạo  (sphincter urethrovaginalis). Cơ ngang đáy chậu sâu 
+của nữ chủ yếu là cơ trơn và cơ này cùng với cơ thát niệu đạo của nữ được gọi chuno la 
+cơ thắt niệu-dục.  Các cơ đáy chậu sâu không phai là một phiên cơ dẹt, phảng mà nằm 
+theo hướng thảng đứng hơn là nằm trên mặt phãng ngang. Chi có cơ thắt niệu đao 
+ngoài là có mạc phú ở mặt trên. Vì những lí do đó mà gần đây màng đáy chậu cùno 
+cac cơ đáy chậu sâu không được gọi là "hoành niộu-dục" nữa.
+62
+
+--- PDF PAGE 67 ---
+Trụ dương vật 
+Hành dương vật •
+Túi đáy chậu dưới da
+-----Tuyến tiền liệt
+Ngách trước hố ngổi-hậu môn 
+Các cơ đáy chậu sâu 
+Khoang đáy chậu nòng
+Mạc đáy chậu
+Lớp màng của tấm dưới da đáy chậu
+Hình 4B.3. Các lớp và các khoang của đáy chậu trên thiết đồ đứng ngang
+Các khoang của tam giác niệu dục.  Giữa các lớp của tam giác niệu dục có ba 
+khoang.
+Túi ílúy chậu dưới da  (subcutaneous perineal pouch) là một khoans tiểm tàng 
+nằm giữa lớp màng của tấm dưới da đáy chậu và mạc đáy chậu. Tràn nước tiểu hoặc tụ 
+máu trong túi đáy chậu dưới da có thế lan dưới lớp màng tới thành bụng trước, bìu và 
+dương vật.
+Nẹăn đáy cliậu nôiiỊỉ  (superficial perineal compartment) là một túi kín hoàn toàn, 
+được giới hạn bời mạc đáy chậu ớ dưới và màng đáy chậu ờ trẽn. Ngăn này kín vì bờ 
+sau của mạc đáy chậu và màng đáy chậu dính vào nhau, các bờ bên của chúng dính 
+vào ngành nsổi-mu. Nsãn đáy chậu nông cùa nam chứa: (1) các tạng cươns và các cơ 
+đáy chậu nông (xem phần trên), (2) những nhánh của các mạch thẹn trong và thần kinh 
+thẹn. Riêng ờ I 1Ữ . nsãn này còn chứa các tuyến tiền đình lớn và các tuyến tiền đình bé; 
+hai tuyến tiền đình lớn nằm ở hai bên tiền đình âm đạo, ờ sau-bên lỗ âm đạo và được 
+hành tiền đình che phù.
+63
+
+--- PDF PAGE 68 ---
+Túi đáy chậu sâu  (deep perineal pouch) là khoang nằm trên màng đáy chậu. Túi 
+nay khong phai là một khoang kín mà thông lên trên với ngách trước của hố ngồi-hậu 
+mon. Tui đáy chậu sâu chứa các cơ đáy chậu sâu, đoạn trung gian của niệu đạo và các 
+mạch mau-thân kinh có liên quan. Riêng ờ nam có các tuyến hành niệu đạo.
+4. TAM GIÁC (HAY VÙNG) HẬU MÔN
+Vùng hậu môn nằm dưới hoành chậu hông. Ở giữa tam giác hậu môn là ống hậu 
+môn được cơ thắt hậu môn ngoài bao quanh. Đầu trước của cơ thắt hậu môn ngoài dính 
+với thể đáy chậu, đầu sau nôi với xương cụt bời một dải xơ-cơ gọi là thể hậu m ỏn -cụ t. 
+ơ  hai bên và ớ sau-bên ông hậu môn là các hô ngồi-hậu môn chứa đầy mỡ.
+Trên mặt cắt đứng ngang ( H.4B.4 ), hố ngồi-hậu môn có hình tam giác với: giới 
+hạn dưới là da; thành ngoài do cơ bịt trong và mạc cơ bịt trong tạo nên; thành trên- 
+trong dốc nghiêng do mặt dưới hoành chậu hông tạo nên. Mô liên kết dưới da trong hố 
+này được gọi là thể mỡ hố ngồi-hậu môn  (fat body of ischio-anal fossa). Hố thông ở 
+sau với một khoang tiềm tàng nằm dưới cơ mông lớn và mờ rộng về phía trước thành 
+một ngách nằm giữa hoành chậu hông và các cơ đáy chậu sâu. Hai hố không thông 
+nhau ớ trước nhưng thông với nhau ờ sau ống hậu môn vì tại đây những sợi của cơ thắt 
+hậu môn ngoài (trên đường đi tới xương cụt) không dính với cơ nâng hậu môn. Các 
+mạch thẹn trong và thần kinh thẹn đi ớ thành bên hố ngồi-hậu môn, trong một ống mạc 
+ớ mặt trong cơ bịt trong gọi là ống thẹn  (pudendal canal). Thần kinh trực tràng dưới 
+(nhánh của thần kinh thẹn) và các mạch trực tràng dưới (nhánh cúa các mạch thẹn 
+trong) tách ra từ đầu sau ống thẹn và đi ngang qua hố ngồi-hậu môn tới ống hậu môn.
+Trực tràng
+Hình 4B.4. Thiết đồ đứng ngang qua hố ngồi - hậu môn
+64
+
+--- PDF PAGE 69 ---
+Bài ỉ
+Cơ VÀ MẠC CỦA CHI TRÊN: 
+Cơ CỦA CÁC VÙNG NÁCH VÀ CÁNH TAY
+MỤC TIẾU
+ỉ. Trìnli bày được cách bám và thần kinh chi phối cùa mỗi cơ trong các nhóm  
+cơ vận động đai ngực, xương cánh tay và cẳng tay.
+2. Mô tả được các cấu trúc do cơ-mạc tạo nên
+Các cơ chi trên thường được mỏ tả theo các vùng của chi trên: vùng vai và nách,  
+vùng cánh tay, vùng cẳng tay, vùng bàn tay.  Theo tác dụng, cơ chi trên còn được xếp 
+theo các nhóm gây nên các cử động cùa các phần (đoạn) chi trên: cơ vận động đai 
+ngực, cơ vận động cánh tay, cơ vận động cẳng tay, cơ vận động bàn tay và ngón tay. 
+Các cơ trong một vùng có thể gây ra cử động của một số đoạn chi trên và cử động của 
+một đoạn chi trên (trên 1  khớp) có thê do cơ ờ một số vùng gây ra.
+1. CÁC Cơ VÀ MẠC ở  VAI VÀ NÁCH (Bảng 5.1)
+Các cơ ờ vai và nách là những cơ vây quanh đai ngực và đầu trên xương cánh 
+tay. Chúng thuộc vào ba vùng là vùng ngực, vùng bá vai  và vùng delta.  Xét về nguyên 
+uỷ và bám tận, những cơ này thuộc hai loại:
+Các cơ nội tại  (7 cơ) có cả hai đầu bám vào xương chi trên, cụ thể là đi từ đai 
+ngực tới xương cánh tay. Chúng đích thực là cơ của chi trên và gây ra cử động của 
+cánh tav trên khớp vai.
+Các cơ ngoại lai  (9 cơ) đi từ cột sống hoặc lồng ngực tới đai ngực và xương 
+cánh tav, tức là đầu nguyên uỷ của chúng bám vào các xương trục. Tuỳ theo chỗ bám 
+tận mà cơ ngoại lai vận động đai ngực hay cánh tay. Theo mô tả định khu, các cơ 
+ngoại lai thuộc về vùng lưng và vùng ngực nhưng do vận động đai ngực và cánh tay, 
+chúng được mô tả cùng với các cơ đích thực của chi trên. Các cơ vận động đai ngực 
+có vai trò cố định nguyên uỷ của các cơ vận động cánh tay hoặc làm tăng tầm cử 
+động cùa cánh tav.
+Về chi phối thần kinh, tất cả các cơ vùng vai và nách do các nhánh bên của đám 
+rối cánh tay vận động (trừ cơ thang do thần kinh phụ và đám rối cổ vận động).
+1.1. Các cơ và mạc của vùng ngực (H. 5.1 và H. 5.2)
+Các cơ của vùng ngực được mô tả ở đây là các cơ nối chi trên với ngực và bao 
+gồm: cơ răna trước và cơ ngực nhỏ nối các xương sườn với xương vai; cơ ngực lớn đi 
+từ ngực và bụng tới xương cánh tay, và cơ dưới đòn nối xương sườn thứ nhất vơi xương 
+đòn. Cơ răng trước nằm trên thành trong của nách, các cơ còn lại góp phần tạo nên 
+thành trước của nách.
+65
+
+--- PDF PAGE 70 ---
+Cơ ngực lớn  là một cơ rộng, dày, hình quạt phủ phần trên thành ngực. Cơ ngực  
+bé là một cơ dẹt hình tam giác nằm sau cơ ngực lớn .C ơ  dưới đòn  là cơ nhỏ hình trụ 
+nằm dưới xương đòn. Cơ răng trước  là một cơ rộng, dẹt nằm giữa xương vai va cac 
+xương sườn.
+Hình 5.1. Cơ ngực lớn
+Cơ ngực lốn
+Tk ngực trong
+v Cơ ngực bé
+tam đâu /
+Cơ lưng rộng Cơ răng trước và tk ngực dài 
+Hình 5 2. Các cơ trên các thành của nách
+Cơ dưới đòn
+\
+Cơ delta^ Cơ ngực bé
+' x  \
+Cơ ngưc lớn
+\
+Cơ quạ - cánh tay
+\
+Cơ nhị đầu
+Ị*
+\
+Tk ngừc ngoài 
+I
+66
+
+--- PDF PAGE 71 ---
+Mạc vùng ngực trước.  Mạc vùng ngực trước được gọi là mạc ngực  (pectoral 
+fascia). Mạc này che phủ cơ ngực lớn. Nó bám ờ trong vào xương ức, ở trên vào xương 
+đòn và liên tiếp ở phía dưới-bên với mạc của vai, nách và thành ngực. Ở giữa cơ ngực 
+lớn và cơ lưng rộng, mạc ngực tạo nên sàn của nách và được gọi là mạc nách.  Mạc 
+nách chia ra ờ bờ ngoài cơ lưng rộng thành hai lá bao bọc cơ này và bám vào mỏm gai 
+các đốt sống ngực ở phía sau. Mạc nách tách ra tại bờ dưới cơ ngực lớn một lá đi lên ở 
+mật sâu của cơ; lá này tách ra bọc cơ ngực bé và tại bờ trên cơ ngực bé thì liên tiếp với 
+mạc đòn-ngực. Phần mạc nối mạc nách với mạc bọc cơ ngực bé được gọi là dây chằng 
+treo nách.
+Mạc đòn-ngực.  Mạc đòn-ngực là lá sợi dày nằm sau phần đòn của cơ ngực lớn; 
+nó chiếm khoảng nằm giữa cơ dưới đòn và cơ ngực bé, và che phủ các mạch và thần 
+kinh của nách. Ở trẽn, nó tách ra bọc cơ dưới đòn và bám vào xương đòn. Ở dưới, nó 
+bọc quanh cơ ngực nhỏ và liên tiếp với mạc nách. Tĩnh mạch đầu, các mạch ngực-cùng 
+vai và thần kinh ngực ngoài đi qua mạc đòn ngực.
+1.2. Các cơ và mạc của các vùng bả vai và lưng (H.5.3)
+Hình 5.3. Các cơ vùng bả vai và lưng
+67
+
+--- PDF PAGE 72 ---
+Các cơ vùng này bao gồm hai nhóm nông và sâu
+Nhóm nông có 2 cơ: cơ thang  và cơ lưng rộng ;  chúng đều là cơ ngoại lai với chi 
+trên và kêt nối cột sống với chi trên Cơ thang  là một cơ rộng, dẹt, hình tam giác trải 
+rọng từ xương sọ và cột sống ở phía trong tới đai ngực ờ phía ngoài. Nó là cơ nỏns nhát 
+trùm lên vùng cổ sau và phần trên vùng lưng. Cơ thang hai bên hợp nên một hình thang. 
+Cơ hùĩg rộng  cũng là một cơ rộng hình tam giác che phủ phần dưới vùng lưng.
+Nhóm sâu gồm các cơ ngoại lai và các cơ nội tại đối với chi trên.
+Các cơ ngoại lai đều chạy từ cột sống đến xương vai và vận động đai ngực. Đó là 
+ba cơ: cơ trám lớn, cơ trám bé  và cơ nâng vai.
+Các cơ nội tại gồm 6 cơ đi từ xương vai đến xương cánh tay và gây nên cử động 
+của cánh tay: cơ dưới gai, cơ trên gai, cơ dưới vai, cơ tròn bé, cơ tròn lớn  và cơ quạ-  
+cánh tay. Cơ dưới vai  là một cơ rộng hình tam giác lấp đầy hố dưới vai của xương vai 
+và tạo nên một phần thành sau của nách. Cơ trên gai  và cơ dưới gai  là những cơ nằm 
+trong các hố cùng tên của xương vai. Cơ tròn bé  và cơ tròn lớn  là 2 cơ bám vào bờ 
+ngoài xương vai. Cơ tròn lớn ở dưới cơ tròn bé và góp phần tạo nên thành sau của 
+nách. Cơ quạ-cảnh tay  là một cơ thuôn dài chạy dọc thành ngoài của nách.
+Cơ dưới vai, cơ trên gai, cơ dưới gai  và cơ tròn bé  có vai trò quan trọng trong 
+việc giữ chắc khớp vai vì các gân dẹt của chúng dính liền nhau để tạo nên một vòng 
+tròn gần hoàn chinh bao quanh khớp vai (đai xoay).
+Mạc vùng lưng.  Mạc vùng lưng nằm dưới tấm dưới da dày chứa nhiều mỡ. Nó là 
+một màng sợi mỏng bám vào đường gáy trên và dây chằng gáy, và vào mỏm gai tất cả 
+các đốt sống dưới đốt cổ bảy. Nó gắn ở ngoài vào gai vai và mỏm cùng vai và tiếp tục 
+ở trên cơ delta xuống cánh tay. Ớ ngực, nó liên tiếp với mạc nách và mạc cơ ngực lớn: 
+trên bụng, nó liên tiếp với mạc phủ các cơ bụng và dính ở dưới với mào chậu.
+1.3. Cơ vùng delta (Các H.5.1; 5.2 và 5.3)
+Vùng delta chỉ có một cơ: cơ delta.  Cơ delta là một cơ dày và khoè trùm lén 
+khớp vai và tạo nên ụ vai. Cơ này là vị trí thường dùng để tiêm bắp. Các sợi của cơ 
+delta từ nhiều điểm khác nhau của đai ngực chạy xuống xương cánh tay nên mỏi nhóm 
+sợi có thể gây nên một cử động riêng của cánh tay.
+Bảng 5.1. Các cơ ở vai và nách
+Cơ Nguyên uỷ Bám tận Đ ộng tác
+Các cơ ở vùng ngực
+Cơ ngực lớn
+(pectoralis major)
+Gốm phần đòn, phần 
+ức sườn và phần bụng
+Phần đòn:  2/3 trong 
+xương đòn
+Phần ức  - sườn: 
+xương ức và các 
+sụn sườn I  - VI
+Phần bụng:  bao cơ 
+thẳng bụng
+M ép ngoài rãnh 
+gian củ xương 
+cánh tay (mào củ 
+lớn)
+Khep và xoay trong cánh 
+tay tai khớp vai, riêng 
+phần đòn gấp cánh tay
+68
+
+--- PDF PAGE 73 ---
+Cơ ngực bé  
+(pectoralis minor)
+Các xương sườn 
+III -V
+Mỏm quạ xương vai Hạ và xoay xương vai 
+xuống dưới; nâng các 
+xương sườn lúc hít vào 
+hết sức khi xương vai 
+được cố định
+Cơ dưới đòn  
+(subclavius)
+Sụn sườn và xương 
+sườn 1
+Rãnh dưới đòn của 
+xương đòn
+Hạ và đưa xương đòn ra 
+trước; cố định đai ngực
+Cơ răng trước  
+(seratus anterior)
+8 hoặc 9 xương 
+sườn trên
+Bờ trong và góc 
+dưới xương vai
+G iạng xương vai và xoay 
+xương vai lên trên; nâng 
+xương sườn lên khi xương 
+vai được cố định
+Các c ơ  ở  vùng bả  
+vai và lư ng
+Cơ thang  (trapezius)
+Đường gáy trên của 
+xương chẩm, mòm_ 
+(jai. của tất cà các 
+đốt sống cổ và ngực
+1/3 ngoài bờ sau 
+xương đòn, mỏm 
+cùng vai và gai vai
+Các sợi trên nâng xương 
+vai và <iuỗi đầu; các sợi 
+giữa khép xương vai; các 
+sợ i d ư ớ i hạ xương vai; các 
+sợ i trên và dư ớ i cùng co 
+xoay xương vai lên trên
+Cơ lưng rộng  
+(latissimus dorsi)
+Mỏm gai các đốt 
+sống từ NVI tới TLV, 
+các mào cùng, 1/3 
+sau mào chậu, bốn 
+xương sườn dưới
+Rãnh gian củ 
+xương cánh tay
+Duỗi, khép và xoay trong 
+cánh tay tại khớp vai; kéo 
+cánh tay xuống dưới và ra 
+sau
+Cơ nâng vai  
+(levator scapulae)
+Mỏm ngang của bốn 
+hoặc năm đốt sống 
+cổ trên
+Phẩn trên gai vai 
+của bờ trong 
+xương vai
+Nâng và xoay xương vai
+Cơ trám lớn  
+(rhomboid major)
+Mỏm gai các đốt 
+sông ngực II - V
+Phần dưới gai vai 
+của bd trong 
+xương vai
+N âng, khép và xoay xương 
+vai xuống (dưới
+Cơ trám bé  
+(rhomboid minor)
+Mỏm cjai các đốt 
+sống C O  VII và ngực I
+Phần trẽn gai vai 
+của bờ trong 
+xương vai
+Nâng, khép và xoay xương 
+vai xuống dưới
+Cơ dưới vai  
+(subscapularis)
+Hố dưới vai của 
+xương vai
+Củ bé xương cánh 
+tay
+Xoay trong cánh tay tại 
+khớp vai
+Cơ trẽn gai  
+(supraspinatus)
+Hố trên gai của 
+xương vai
+Củ lớn xương cánh 
+tay
+Giạng cánh tay tại khớp 
+vai
+Cơ dưới gai  
+(infraspinatus)
+Hố dưới gai của 
+xương vai
+Củ lớn xương cánh 
+tay
+Xoay ngoài và khép cánh 
+tay tại khớp vai
+Cơ tròn lởn  
+(teres major)
+Góc dưới xương vai Mép trong rãnh 
+gian củ (mào củ bé)
+Duỗi, khép và xoay trong 
+cánh tay tại khớp vái
+Cơ tròn bé  
+(teres minor)
+Phần dưới bd ngoài 
+xương vai
+Củ lớn xương cánh 
+tay
+X oay ngoài, duỗi và khép 
+cánh tay tại khớp vai
+Cơ quạ-cánh tay  
+(coracobrachialis)
+Mỏm quạ xương vai Chỗ nối 1/3 trên và 
+1/3 giữa mặt trong 
+thân xương cánh tay
+Gấp và khép cánh tay tại 
+khớp vai
+C ơ vùng delta
+Cơ delta  
+(deltoid)
+1/3 ngoài bờ trước 
+xương đòn (các sợi 
+trước); mỏm cùng 
+vai (các sợi ngoài); 
+gai vai (các sợi sau)
+Lồi củ delta xương 
+cánh tay
+T ại khớp v ai: các sợ i ngoài 
+giạng cánh tay, các sợ i 
+trước gấp và xoay trong 
+cánh tay, các sợ i sau ru ỗ i 
+và xoay ngoài cánh tay
+69
+
+--- PDF PAGE 74 ---
+2. CÁC Cơ VÀ MẠC CỦA CÁNH TAY
+Mạc canh tay. Mạc cánh tay liên tiếp với mạc phủ cơ delta và cơ ngực lớn; nó 
+ao ọc cac cơ của cánh tay và tách ra hai vách gian cơ chạy vào sâu bám vào xương 
+cánh tay.
+Vách gian cơ ngoài  từ mép ngoài rãnh gian củ bám dọc mào trên lồi cầu ngoài 
+tơi mom trên lôi cầu ngoài; nó bị thần kinh quay xuyên qua. Vách gian cơ trong  bám 
+tư mep trong ranh gian cú dọc mào trên lồi cầu trong tới mỏm trên lồi cầu trong; nó bị 
+than kinh trụ và động mạch bên trụ trên xuyên qua. Hai vách gian cơ cùng xương cánh 
+tay chia canh tay thành hai ngăn mạc trước và sau, mỏi ngân chứa các cơ, mach máu 
+và thần kinh của nó.
+Ngăn trước của cánh tay chứa ba cơ là cơ nhị đầu cánh tay, cơ cánh tay và cơ qụa 
+canh tay. Các cơ này được động mạch cánh tay cấp máu và được chi phối bời thần kinh 
+cơ bi. Các câu trúc đi qua ngăn trước bao gồm: các thần kinh cơ bì, giữa và trụ; động 
+mạch cánh tay và tĩnh mạch nền.
+B
+Hình 5.4. Các cơ trong ngăn trước của cánh tay 
+A. Lớp nông B. Lớp sâu
+70
+
+--- PDF PAGE 75 ---
+Ngăn sau cánh tay chứa cơ tam đầu cánh tay, một cơ do động mạch cánh tay sâu 
+cấp máu và do thần kinh quay chi phối. Những cấu trúc đi qua đây bao gồm các thần 
+kinh quay và trụ.
+Ngăn trước cùa cánh tay  còn được gọi là ngăn cơ gấp vì chứa hai cơ gấp cẳng 
+tay: cơ cánh tay ớ sâu và cơ nhị đầu cánh tay ờ nông (H.5.4). Ngãn sau của cánh tay 
+còn được gọi là ngãn cơ ruỗi vì cơ tam đầu cánh tay nằm trong ngãn này (H.5.5) là cơ 
+ruỗi cẳng tay.
+Nguyên uỷ, bám tận và động tác của cácrcơ cánh tay được trình bày ở Bảng 5.2.
+Cơ tam đầu
+Hình 5.5. Cơ tam đầu (ngăn cánh tay sau)
+71
+
+--- PDF PAGE 76 ---
+Bảng 5.2. Các cơ của cánh tay
+Cơ Nguyên uỷ Bám tận Động tác
+Cơ cánh tay
+(brachialis)
+2/3 dưới mặt trước xương 
+cánh tay
+Mỏm vẹt xương 
+tru
+Gấp cảng tay tại 
+khớp khuỷu
+Cơ nhị đẩu cánh tay
+(biceps brachii)
+Bám vào xương vai bằng 
+hai đầu: đầu dài vào củ trẽn 
+ổ chảo, đầu ngắn vào mỏm 
+quạ
+Gân chính vào lồi 
+củ xương quay, 
+chẽ cân phụ vào 
+mạc cẳng tay
+Gấp cảng tay tại 
+khớp khuyu, ngửa  
+cẳng tay tại khớp 
+quay-trụ gần và 
+gấp cánh tay tại 
+khớp vai
+Cơ tam đẩu cánh tay
+(triceps brachii)
+Có 3 đầu bám:
+Đầu dài  bám vào củ dưới ổ 
+chảo xương vai;
+Đầu ngoài  bám vào mặt sau 
+xương cánh tay ở phía trên - 
+ngoài rãnh thần kinh quay;
+Đầu trong  bám vào mặt sau 
+xương cánh tay ở phía dưới - 
+trong rãnh thần kinh quay.
+Mỏm khuỷu xương 
+trụ
+Duỗi cẳng tay tại 
+khớp khuỷu và duỗi 
+cánh tay tại khớp 
+vai
+Nhìn chung ba cơ ở cánh tay gây nên các cử động gấp và duỗi của cẳng tay trên 
+khớp khuỷu (khớp cánh tay-quay-trụ). Cặp động tác đối kháng nhau này còn được 
+thực hiện bởi 2 cơ ở cẳng tay là cơ cánh tay quay (gấp) và cơ khuỷu (duỗi). Ngoài ra, 
+các động tác sấp, ngửa cẳng tay trên các khớp quay-trụ chủ yếu do các cơ ở cẳng tay 
+thực hiện.
+3. NHỮNG CẤU TRÚC CƠ-MẠC CỦA NÁCH VÀ CÁNH TAY
+Các cơ và mạc ở vai và nách vây quanh một khoang chứa các mạch nách, các 
+hạch bạch huyết và phần dưới đòn của đám rối cánh tay. Nách được coi như một hình 
+tháp với bốn thành, một nền ở dưới và một đỉnh ở trên. Nền nách được trực tiếp tạo nên 
+bởi mạc nách; đỉnh nách là khe nằm giữa cơ dưới đòn và bó trên cùng của cơ răng 
+trước. Các cơ và mạc trên các thành của nách bao gồm: cơ quạ cánh tay, các cơ ngực 
+và các mạc có liên quan ở thành trước; cơ dưới vai, cơ tròn lớn và đầu dài cơ tam đầu ở 
+thành sau; cơ răng trước ở thành trong; thành ngoài của nách là phần trên xương cánh 
+tay nằm trong khe hẹp giữa các thành trước và sau của nách.
+Trên thành sau của nách, các cơ tròn cùng với xương cánh tay giới hạn nên một 
+khe. Đầu dài cơ tam đầu đi ngang qua khe này và chia nó thành hai phần: phần ngoẳi 
+là lỗ tứ giác, nơi các mạch mũ cánh tay sau và thần kinh nách đi qua, phần trong được 
+gọi là tam giác bả vai, là nơi mà các mạch mũ vai đi qua. Khe hình tam giác nằm giữa 
+xương cánh tay, đầu dài cơ tam đâu và cơ tròn lớn là nơi đi qua của động mạch cánh 
+tay sau và thần kinh quay.
+Các mạch cánh tay đi qua ngăn mạc trước của cánh tay. Khoang cơ - mạc chứa 
+các mạch này thường được gọi là ống cánh tay.  Ong này được giới hạm bời: ờ sau là 
+vách gian cơ trong, ở trong là mạc cánh tay, ở trước - ngoài là cơ quạ - cánh tay và cơ 
+nhị đầu cánh tay.
+72
+
+--- PDF PAGE 77 ---
+Bài 6
+Cơ VÀ MẠC CỦA CHI TRỆN: 
+Cơ CỦA CÁC VÙNG CẲNG TAY VÀ BÀN TAY
+MỤC TIÊU
+1. Trình bày được cách bám vàr -thần kinh chi phối cùa mỗi cơ trong các nhóm  
+cơ vận động bàn tay và ngón tay.
+2. Mô tả được các cấu trúc do cơ - mạc tạo nên.
+1. CÁC Cơ VÀ MẠC CỦA CANG t a y
+1.1. Các ngăn mạc của cẳng tay
+Cẳng tay được bao bọc trong một bao mạc; mạc này gắn với bờ sau của xương 
+trụ. Mạc cẳng tay cùng với màng gian cốt (giữa xương quay và xương trụ) và vách sợi 
+gian cơ (giữa cơ cánh tay quay ờ ngoài, cơ sấp tròn và cơ gấp cổ tay quay ờ trong) chia 
+cẳng tay thành hai ngăn mạc trước và sau. Ngăn mạc trước  chứa các cơ gấp bàn tay và
+ngón tay nên còn được gọi là ngăn cơ gấp  của cẳng tay. Ngăn mạc sau, hay ngăn cơ
+duỗi , chứa các cơ duỗi bàn tay và ngón tay.
+1.2. Các hãm gân gấp và duỗi /
+Hãm gân gấp là chỗ dày lên của mạc ờ mặt trước cổ tay. Nó bám ở trong vào 
+xương đậu và móc xương móc, ờ ngoài vào củ của xương thuyền và xương thang. Hãm 
+gân gấp cùng với mặt trước lõm của khối xương cổ tay giới hạn nên một ống để thần 
+kinh giữa và các gân gấp ngón tay đi qua. Nó liên tiếp với mạc cẳng tay ở trên và với 
+cân gan tay ở dưới.
+Hãm gân duỗi là chỗ dày lên của mạc phủ vùng mu cổ tay. Nó cũng bám vào các 
+bờ của khối xương cổ tay và cùng khối xương này giới hạn nên một khoang chứa các 
+gân duỗi. Mặt sâu của hãm gân duỗi tách ra các vách sợi đến bám vào các xương cổ 
+tay, chia ngăn chứa gân duỗi này thành 6 đường hầm nhò riêng biệt; mỗi đường hầm 
+được lót bằng một bao hoạt dịch và chứa một gân duỗi.
+1.3. Các cơ trong ngăn mạc trước của cẳng tay (Bảng 6.1) (H.6.1)
+Ngăn này chứa 8 cơ xếp thành 4 lớp theo thứ tự từ nông vào sâu là:
+Lớp thứ nhất  tính từ ngoài vào trong có 4 cơ: cơ sấp tròn, cơ gấp cổ tay quay, cơ 
+gan tay dài và cơ gấp cổ tay trụ
+Lớp thứ hai  có 1  cơ: cơ gấp các ngón tay nông
+Lớp thứ ba có  2 cơ: cơ gấp ngón cái dài  ờ ngoài và cơ gấp các ngón sáu ờ  trong. 
+Lớp thứ tư có  1  cơ: cơ sấp vuông  ờ 1/4 dưới cẳng tav
+73
