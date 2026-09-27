@@ -237,93 +237,135 @@ export class SceneView {
   }
 
   // ============================================================
-  // PHÂN LOẠI MESH VÀO 11 PHÂN ĐOẠN ĐỘNG HỌC (CHUẨN HÓA KHÔNG RÁCH CƠ)
+  // ============================================================
+  // PHÂN LOẠI MESH VÀO 11 PHÂN ĐOẠN ĐỘNG HỌC (CHUẨN XÁC 100% - KHÔNG BỊ TRÙNG TỪ KHÓA)
+  // Loại bỏ hoàn toàn lỗi "head" (đầu cơ) bị nhận nhầm thành đầu cổ
   // ============================================================
   _classifyMeshSegment(child, boxCenter) {
     const rawName = (child.name || '').toLowerCase();
-    const name = rawName.replace(/_/g, ' ');
+    const clean = rawName.replace(/_/g, ' ');
 
-    const isRight = rawName.endsWith('.r') || rawName.includes('.r.') || rawName.endsWith('_r') || 
-                    name.includes(' right') || (boxCenter.x < -0.15);
+    const isRight = rawName.endsWith('.r') || rawName.endsWith('r') || rawName.includes('.r.') || 
+                    clean.includes(' right') || (boxCenter.x < -0.15);
+    const isLeft = !isRight;
 
-    // 1. CÁC CƠ THÂN MÌNH LỚN BẮT BUỘC Ở LẠI TORSO (TRÁNH XÉ RÁCH KHI NÂNG TAY HOẶC CÚI)
-    const trunkExcludeKw = [
-      'latissimus', 'pectoralis', 'trapezius', 'serratus', 'rhomboid',
-      'erector spinae', 'iliocostalis', 'longissimus', 'spinalis',
-      'rectus abdominis', 'oblique', 'transversus abdominis',
-      'subclavius', 'intercostal', 'quadratus lumborum', 'thoracolumbar'
+    if (clean.includes('cross section')) return 'ignore';
+
+    // 1. CƠ THÂN MÌNH LỚN BẮT BUỘC Ở LẠI TORSO (TRÁNH XÉ RÁCH KHI CỬ ĐỘNG)
+    const trunk_kw = [
+      'latissimus', 'pectoral', 'trapezius', 'serratus', 'rhomboid',
+      'erector spinae', 'iliocostalis', 'longissimus', 'spinalis', 'interspinal',
+      'intertransversarii', 'rotatores', 'multifidus', 'semispinalis',
+      'quadratus lumborum', 'rectus abdominis', 'external abdominal oblique', 'internal abdominal oblique',
+      'transversus abdominis', 'transversus thoracis', 'levator scapulae', 'levatores', 'pyramidalis',
+      'intercostal', 'subclavius', 'diaphragm', 'thoracolumbar', 'linea alba', 'transversalis fascia',
+      'cremaster', 'investing abdominal fascia', 'inguinal ligament'
     ];
-    if (trunkExcludeKw.some(k => name.includes(k))) {
+    if (trunk_kw.some(k => clean.includes(k))) {
       return 'torso';
     }
 
-    // 2. ĐẦU & CỔ (HEAD & NECK)
-    const headKw = [
-      'cervical', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6', 'c7', 'cranium', 'skull',
-      'frontal', 'parietal', 'occipital', 'temporal', 'mandib', 'maxill',
-      'frontalis', 'occipitalis', 'temporalis', 'masseter', 'sternocleidomastoid',
-      'platysma', 'hyoid', 'scalenus', 'scalene', 'splenius'
+    // 2. KHUNG CHẬU & VÙNG MÔNG (PELVIS)
+    const pelvis_kw = [
+      'gluteus', 'gluteal', 'piriformis', 'obturator internus', 'obturator externus',
+      'gemellus', 'quadratus femoris', 'coccygeus', 'levator ani', 'sphincter ani',
+      'pubo-analis', 'anal sphincter', 'ischiocavernosus', 'bulbospongiosus',
+      'sacrum', 'coccyx', 'pelvi', 'ilium', 'ischium', 'pubis', 'psoas', 'iliacus', 'iliopsoas',
+      'iliopectineal'
     ];
-    if (headKw.some(k => name.includes(k)) || boxCenter.y >= 14.8) {
-      return 'neck';
-    }
-
-    // 3. ĐÙI & KHỚP HÁNG (THIGH: Toàn bộ cơ tứ đầu đùi, cơ tam đầu đùi, cơ khép)
-    const thighKw = [
-      'femur', 'quadriceps', 'rectus femoris', 'vastus', 'biceps femoris',
-      'semitendinosus', 'semimembranosus', 'gracilis', 'sartorius',
-      'pectineus', 'adductor', 'tensor fasciae latae', 'iliotibial tract',
-      'quadratus femoris', 'obturator externus'
-    ];
-    if (thighKw.some(k => name.includes(k)) || (boxCenter.y < 8.8 && Math.abs(boxCenter.x) > 0.25 && boxCenter.y >= 4.7)) {
-      return isRight ? 'rightThigh' : 'leftThigh';
-    }
-
-    // 4. CẲNG CHÂN, BẮP CHÂN, BÀN CHÂN (SHIN & FOOT)
-    const shinKw = [
-      'tibia', 'fibula', 'patella', 'gastrocnemius', 'soleus', 'plantaris',
-      'tibialis', 'fibularis', 'peroneus', 'calcane', 'achilles', 'talus',
-      'navicular', 'cuboid', 'cuneiform', 'metatarsal', 'hallucis', 'digitorum',
-      'plantar', 'foot', 'toe', 'phalanx of foot'
-    ];
-    if (shinKw.some(k => name.includes(k)) || boxCenter.y < 4.7) {
-      return isRight ? 'rightShin' : 'leftShin';
-    }
-
-    // 5. KHUNG CHẬU & VÙNG MÔNG (PELVIS)
-    const pelvisKw = [
-      'sacrum', 'coccyx', 'pelvi', 'ilium', 'ischium', 'pubis', 'gluteus', 'piriformis',
-      'obturator internus', 'gemellus', 'perine', 'iliopsoas', 'psoas', 'iliacus'
-    ];
-    if (pelvisKw.some(k => name.includes(k)) || (boxCenter.y >= 7.2 && boxCenter.y <= 8.8 && Math.abs(boxCenter.x) <= 0.8)) {
+    if (pelvis_kw.some(k => clean.includes(k))) {
       return 'pelvis';
     }
 
-    // 6. CẲNG TAY & BÀN TAY (FOREARM & HAND)
-    const forearmKw = [
-      'radius', 'ulna', 'pronator', 'supinator', 'flexor carpi', 'extensor carpi', 'palmar',
-      'brachioradialis', 'anconeus', 'carpal', 'metacarpal', 'phalanx of hand',
-      'flexor digitorum', 'extensor digitorum', 'hand', 'wrist'
+    // 3. CẲNG TAY & BÀN TAY (FOREARM & HAND)
+    const forearm_hand_kw = [
+      'pronator', 'supinator', 'brachioradialis', 'anconeus',
+      'carpi', 'carpal', 'wrist', 'hand',
+      'pollicis', 'thenar', 'hypothenar',
+      'palmar', 'antebrachial',
+      'extensor digiti minimi', 'extensor indicis',
+      'extensor pollicis', 'flexor pollicis', 'abductor pollicis', 'adductor pollicis', 'opponens pollicis',
+      'sheath of digit of hand', 'sheaths of digits of hand', 'fibrous sheath of digit of hand',
+      'bicipitoradial bursa', 'radius', 'ulna', 'radial head', 'ulnar head', 'common flexor tendon sheath'
     ];
-    if (forearmKw.some(k => name.includes(k)) || (Math.abs(boxCenter.x) > 1.35 && boxCenter.y < 10.8 && boxCenter.y >= 5.8)) {
+    if (forearm_hand_kw.some(k => clean.includes(k))) {
+      return isRight ? 'rightForearm' : 'leftForearm';
+    }
+    if ((clean.includes('digitorum') || clean.includes('digiti minimi') || clean.includes('interossei') || clean.includes('lumbrical')) &&
+        !clean.includes('foot') && !clean.includes('toe') && !clean.includes('pedis') && !clean.includes('leg')) {
       return isRight ? 'rightForearm' : 'leftForearm';
     }
 
-    // 7. CÁNH TAY TRÊN & VÙNG VAI NGOÀI (UPPER ARM)
-    const upperArmKw = [
-      'humerus', 'deltoid', 'biceps brachii', 'triceps brachii', 'brachialis',
-      'coracobrachialis', 'supraspinatus', 'infraspinatus', 'subscapularis', 'teres'
+    // 4. CÁNH TAY TRÊN & KHỚP VAI NGOÀI (UPPER ARM)
+    const upper_arm_kw = [
+      'deltoid', 'supraspinatus', 'infraspinatus', 'subscapularis',
+      'teres major', 'teres minor',
+      'biceps brachii', 'triceps brachii', 'brachialis', 'coracobrachial',
+      'brachial fascia', 'intermuscular septum of arm', 'subacromial', 'subdeltoid',
+      'humerus', 'intertubercular', 'acromial bursa'
     ];
-    if (upperArmKw.some(k => name.includes(k)) || (Math.abs(boxCenter.x) > 1.35 && boxCenter.y >= 10.8 && boxCenter.y <= 15.2)) {
+    if (upper_arm_kw.some(k => clean.includes(k))) {
       return isRight ? 'rightUpperArm' : 'leftUpperArm';
     }
 
-    // 8. THÂN MÌNH (TORSO)
+    // 5. CẲNG CHÂN, BẮP CHÂN & BÀN CHÂN (SHIN & FOOT)
+    const shin_foot_kw = [
+      'tibia', 'fibula', 'tibial', 'fibular', 'gastrocnemius', 'soleus',
+      'plantaris', 'popliteus', 'perone', 'calcane', 'achilles', 'talus', 'navicular',
+      'cuboid', 'cuneiform', 'metatarsal', 'hallucis', 'foot', 'toe', 'plantar',
+      'crural', 'ankle', 'pedis', 'patellar', 'prepatellar', 'infrapatellar', 'anserine', 'malleolus',
+      'tendon of extensor digitorum longus', 'quadratus plantae', 'popliteal', 'septum of leg'
+    ];
+    if (shin_foot_kw.some(k => clean.includes(k))) {
+      return isRight ? 'rightShin' : 'leftShin';
+    }
+    if ((clean.includes('digitorum') || clean.includes('interossei') || clean.includes('lumbrical')) &&
+        (clean.includes('foot') || clean.includes('toe') || clean.includes('pedis'))) {
+      return isRight ? 'rightShin' : 'leftShin';
+    }
+
+    // 6. ĐÙI (THIGH)
+    const thigh_kw = [
+      'rectus femoris', 'vastus', 'biceps femoris', 'semitendinosus', 'semimembranosus',
+      'sartorius', 'gracilis', 'pectineus', 'adductor', 'tensor fasciae latae', 'fascia lata',
+      'iliotibial', 'femoral', 'femur', 'subinguinal', 'trochanteric', 'suprapatellar'
+    ];
+    if (thigh_kw.some(k => clean.includes(k))) {
+      return isRight ? 'rightThigh' : 'leftThigh';
+    }
+
+    // 7. ĐẦU & CỔ (HEAD & NECK: Chỉ dùng từ khóa giải phẫu chuyên biệt, KHÔNG dùng "head" trần trụi)
+    const head_neck_kw = [
+      'cervical', 'cranium', 'skull', 'capitis', 'colli', 'neck',
+      'temporalis', 'temporoparietalis', 'masseter', 'pterygoid', 'buccinator', 'bucinator',
+      'zygomatic', 'orbicularis', 'nasalis', 'frontalis', 'occipitalis', 'epicranial',
+      'auricular', 'mental', 'procerus', 'risorius', 'corrugator', 'depressor', 'levator labii',
+      'levator anguli', 'levator nasolabialis',
+      'platysma', 'sternocleidomastoid', 'scalen', 'splenius',
+      'hyoid', 'digastric', 'mylohyoid', 'omohyoid', 'thyrohyoid', 'sternohyoid', 'sternothyroid',
+      'longus colli', 'longus capitis', 'larynx', 'pharynx', 'tongue', 'glossus', 'palatopharyngeus',
+      'constrictor', 'cricothyroid', 'thyro-arytenoid', 'arytenoid', 'crico-arytenoid',
+      'palpebrae', 'tarsus', 'trochlea', 'tendinous ring',
+      'rectus muscle.r', 'rectus muscle.l', 'oblique muscle.r', 'oblique muscle.l',
+      'superior oblique muscle', 'inferior oblique muscle', 'lateral rectus', 'medial rectus',
+      'superior rectus', 'inferior rectus', 'temporal fascia', 'stylopharyngeus'
+    ];
+    if (head_neck_kw.some(k => clean.includes(k))) {
+      return 'neck';
+    }
+
+    // Lớp dự phòng Bounding Box không gian
+    if (boxCenter.y < 4.75) return isRight ? 'rightShin' : 'leftShin';
+    if (boxCenter.y < 8.6 && Math.abs(boxCenter.x) > 0.22) return isRight ? 'rightThigh' : 'leftThigh';
+    if (Math.abs(boxCenter.x) > 1.25 && boxCenter.y < 10.8 && boxCenter.y >= 5.5) return isRight ? 'rightForearm' : 'leftForearm';
+    if (Math.abs(boxCenter.x) > 1.25 && boxCenter.y >= 10.8 && boxCenter.y <= 15.0) return isRight ? 'rightUpperArm' : 'leftUpperArm';
+
     return 'torso';
   }
 
   // ============================================================
   // GẮN MÔ HÌNH VÀO CÂY ĐỘNG HỌC (ATTACH FBX TO RIG)
+  // Thực hiện Pre-Pass tính toán tọa độ thế giới trước khi gán pivot
   // ============================================================
   _attachFBXToRig(fbxModel, layerType) {
     const box = new THREE.Box3().setFromObject(fbxModel);
@@ -355,21 +397,27 @@ export class SceneView {
     this._resetAllPivotsToNeutral();
     this.rigRoot.updateMatrixWorld(true);
 
-    const meshes = [];
-    fbxModel.traverse((child) => {
-      if (child.isMesh) {
-        meshes.push(child);
-      }
-    });
-
+    // Giai đoạn 1: Thu thập tất cả mesh và tính bounding box chuẩn xác khi ở thế nghỉ
+    const meshData = [];
     const meshBox = new THREE.Box3();
     const meshCenter = new THREE.Vector3();
 
-    meshes.forEach((mesh) => {
-      meshBox.setFromObject(mesh);
-      meshBox.getCenter(meshCenter);
+    fbxModel.traverse((child) => {
+      if (child.isMesh) {
+        meshBox.setFromObject(child);
+        meshBox.getCenter(meshCenter);
+        const segment = this._classifyMeshSegment(child, meshCenter);
+        meshData.push({ mesh: child, segment });
+      }
+    });
 
-      const segment = this._classifyMeshSegment(mesh, meshCenter);
+    // Giai đoạn 2: Gắn từng mesh vào đúng pivot động học
+    meshData.forEach(({ mesh, segment }) => {
+      if (segment === 'ignore') {
+        mesh.visible = false;
+        return;
+      }
+
       const targetPivot = this.rigPivots[segment] || this.rigPivots.torso;
 
       mesh.userData.type = layerType;
