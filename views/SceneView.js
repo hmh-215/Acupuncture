@@ -57,7 +57,9 @@ export class SceneView {
 
     // Thông số căn chỉnh kích thước tỷ lệ chung
     this.uniformScaleFactor = null;
+    this.bodyOffsetX = 0;
     this.bodyOffsetY = undefined;
+    this.bodyOffsetZ = 0;
 
     // Độ mờ độc lập (MẶC ĐỊNH: Hệ Cơ 100% ĐỤC HOÀN TOÀN)
     this.muscleOpacity = 1.0;
@@ -348,27 +350,29 @@ export class SceneView {
   // Thực hiện Pre-Pass tính toán tọa độ thế giới trước khi gán pivot
   // ============================================================
   _attachFBXToRig(fbxModel, layerType) {
-    const box = new THREE.Box3().setFromObject(fbxModel);
-    const size = box.getSize(new THREE.Vector3());
-    const center = box.getCenter(new THREE.Vector3());
-
     if (!this.uniformScaleFactor) {
+      const box = new THREE.Box3().setFromObject(fbxModel);
+      const size = box.getSize(new THREE.Vector3());
+      const center = box.getCenter(new THREE.Vector3());
+
       const targetHeight = 17.0;
       this.uniformScaleFactor = targetHeight / (size.y || 1);
-    }
 
-    fbxModel.scale.set(this.uniformScaleFactor, this.uniformScaleFactor, this.uniformScaleFactor);
+      fbxModel.scale.set(this.uniformScaleFactor, this.uniformScaleFactor, this.uniformScaleFactor);
 
-    box.setFromObject(fbxModel);
-    box.getCenter(center);
+      box.setFromObject(fbxModel);
+      box.getCenter(center);
 
-    if (this.bodyOffsetY === undefined) {
+      this.bodyOffsetX = -center.x;
       this.bodyOffsetY = -center.y + 9;
+      this.bodyOffsetZ = -center.z;
+    } else {
+      fbxModel.scale.set(this.uniformScaleFactor, this.uniformScaleFactor, this.uniformScaleFactor);
     }
 
-    fbxModel.position.x = -center.x;
+    fbxModel.position.x = this.bodyOffsetX;
     fbxModel.position.y = this.bodyOffsetY;
-    fbxModel.position.z = -center.z;
+    fbxModel.position.z = this.bodyOffsetZ;
 
     this.scene.add(fbxModel);
     fbxModel.updateMatrixWorld(true);
@@ -476,7 +480,7 @@ export class SceneView {
           // MẶC ĐỊNH: MÀU XÁM SLATE TRUNG TÍNH Y KHOA + ĐỤC 100% (OPAQUE SOLID)
           const neutralMuscleMat = new THREE.MeshPhongMaterial({
             color: 0x94a3b8, // Xám Slate trung tính
-            transparent: false,
+            transparent: true,
             opacity: 1.0,
             shininess: 30,
             depthWrite: true
@@ -902,7 +906,8 @@ export class SceneView {
         mesh.material.emissiveIntensity = 0;
         mesh.material.opacity = this.muscleOpacity;
         mesh.material.transparent = !isSolid;
-        mesh.material.depthWrite = true;
+        mesh.material.depthWrite = isSolid;
+        mesh.material.needsUpdate = true;
         mesh.renderOrder = 0;
       });
       return;
@@ -918,6 +923,7 @@ export class SceneView {
       mesh.material.opacity = ghostOpacity;
       mesh.material.transparent = true;
       mesh.material.depthWrite = false; // Ngăn che khuất cơ sâu bên trong
+      mesh.material.needsUpdate = true;
       mesh.renderOrder = 0;
     });
 
@@ -940,9 +946,10 @@ export class SceneView {
           mesh.material.color.setHex(hex);
           mesh.material.emissive.setHex(hex);
           mesh.material.emissiveIntensity = 0.75;
-          mesh.material.opacity = 1.0;
-          mesh.material.transparent = false; // Luôn đục vững chắc để quan sát rõ nét
+          mesh.material.opacity = this.muscleOpacity;
+          mesh.material.transparent = this.muscleOpacity < 0.99;
           mesh.material.depthWrite = true;
+          mesh.material.needsUpdate = true;
           mesh.renderOrder = 10; // Render sau các mesh mờ để luôn nổi lên trên
         });
       }
@@ -1008,6 +1015,13 @@ export class SceneView {
       if (mesh.userData.code === code) {
         mesh.scale.set(1.4, 1.4, 1.4);
         if (mesh.children[0]) mesh.children[0].material.color.setHex(0xffffff);
+
+        // Hướng camera tập trung vào huyệt vị đang chọn
+        if (mesh.position) {
+          const targetY = mesh.position.y;
+          this.controls.target.set(0, targetY, 0);
+          this.controls.update();
+        }
       } else {
         mesh.scale.set(1.0, 1.0, 1.0);
         if (mesh.children[0]) mesh.children[0].material.color.setHex(0xfacc15);
@@ -1029,7 +1043,9 @@ export class SceneView {
     this.allNervousMeshes.forEach((mesh) => {
       if (mesh.material) {
         mesh.material.opacity = this.nervousOpacity;
-        mesh.material.transparent = this.nervousOpacity < 1.0;
+        mesh.material.transparent = this.nervousOpacity < 0.99;
+        mesh.material.depthWrite = this.nervousOpacity >= 0.99;
+        mesh.material.needsUpdate = true;
       }
     });
   }

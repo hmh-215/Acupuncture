@@ -147,26 +147,64 @@ export class MovementViewModel extends Observable {
    */
   search(query) {
     this.state.searchQuery = query || '';
-    if (!this.state.selectedMovement) return;
-
     const q = (query || '').trim().toLowerCase();
-    const movement = this.state.selectedMovement;
-    
-    const allActive = (movement.muscles || []).map(mRole => {
-      const id = mRole.muscleId || mRole.id;
-      const detail = this.appVM.muscleData?.[id] || {};
-      return { id, role: mRole.role, ...detail };
-    });
 
-    if (!q) {
-      this.state.activeMuscles = allActive;
+    // Trường hợp 1: Đang chọn một cử động -> Lọc danh sách cơ trong cử động đó
+    if (this.state.selectedMovement) {
+      const movement = this.state.selectedMovement;
+      const allActive = (movement.muscles || []).map(mRole => {
+        const id = mRole.muscleId || mRole.id;
+        const detail = this.appVM.muscleData?.[id] || {};
+        return { id, role: mRole.role, ...detail };
+      });
+
+      if (!q) {
+        this.state.activeMuscles = allActive;
+        this.appVM.sceneVM.highlightMusclesForMovement(allActive);
+        return;
+      }
+
+      const filtered = allActive.filter(m => {
+        const nameVi = (m.name_vi || '').toLowerCase();
+        const nameLatin = (m.name_latin || '').toLowerCase();
+        const id = (m.id || '').toLowerCase();
+        return nameVi.includes(q) || nameLatin.includes(q) || id.includes(q);
+      });
+
+      this.state.activeMuscles = filtered;
+      this.appVM.sceneVM.highlightMusclesForMovement(filtered);
       return;
     }
 
-    this.state.activeMuscles = allActive.filter(m => {
+    // Trường hợp 2: Chưa chọn cử động -> Tìm kiếm toàn cục trên toàn bộ kho cơ bắp y khoa
+    if (!q) {
+      this.state.activeMuscles = [];
+      this.appVM.sceneVM.highlightMusclesForMovement([]);
+      this.selectMuscleForDetail(null);
+      return;
+    }
+
+    const allMuscles = this.appVM.getMuscles();
+    const matchedMuscles = allMuscles.filter(m => {
       const nameVi = (m.name_vi || '').toLowerCase();
       const nameLatin = (m.name_latin || '').toLowerCase();
-      return nameVi.includes(q) || nameLatin.includes(q);
+      const id = (m.id || '').toLowerCase();
+      return nameVi.includes(q) || nameLatin.includes(q) || id.includes(q);
     });
+
+    if (matchedMuscles.length > 0) {
+      const activeList = matchedMuscles.map(m => ({
+        id: m.id,
+        role: 'agonist',
+        ...m
+      }));
+      this.state.activeMuscles = activeList;
+      this.appVM.sceneVM.highlightMusclesForMovement(activeList);
+      this.selectMuscleForDetail(matchedMuscles[0].id);
+    } else {
+      this.state.activeMuscles = [];
+      this.appVM.sceneVM.highlightMusclesForMovement([]);
+      this.selectMuscleForDetail(null);
+    }
   }
 }
