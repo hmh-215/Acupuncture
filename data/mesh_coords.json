@@ -1,0 +1,6176 @@
+[
+  {
+    "name": "Common_tendon_sheath_of_fibularis_musclesr",
+    "x": -0.974,
+    "y": 1.055,
+    "z": -0.547,
+    "sy": 0.428,
+    "minY": 0.841,
+    "maxY": 1.269
+  },
+  {
+    "name": "Plantar_tendon_sheath_of_fibularis_longus_musclel",
+    "x": 0.987,
+    "y": 0.758,
+    "z": -0.134,
+    "sy": 0.071,
+    "minY": 0.722,
+    "maxY": 0.793
+  },
+  {
+    "name": "Common_tendon_sheath_of_fibularis_musclesl",
+    "x": 0.974,
+    "y": 1.055,
+    "z": -0.547,
+    "sy": 0.428,
+    "minY": 0.841,
+    "maxY": 1.269
+  },
+  {
+    "name": "Plantar_tendon_sheath_of_fibularis_longus_muscler",
+    "x": -0.987,
+    "y": 0.758,
+    "z": -0.134,
+    "sy": 0.071,
+    "minY": 0.722,
+    "maxY": 0.793
+  },
+  {
+    "name": "Tendon_sheath_of_tibialis_posterior_musclel",
+    "x": 0.565,
+    "y": 1.2,
+    "z": -0.469,
+    "sy": 0.396,
+    "minY": 1.002,
+    "maxY": 1.398
+  },
+  {
+    "name": "Tendon_sheath_of_flexor_hallucis_longusr",
+    "x": -0.681,
+    "y": 1.121,
+    "z": -0.543,
+    "sy": 0.505,
+    "minY": 0.869,
+    "maxY": 1.373
+  },
+  {
+    "name": "Tendon_sheath_of_tibialis_posterior_muscler",
+    "x": -0.565,
+    "y": 1.2,
+    "z": -0.469,
+    "sy": 0.396,
+    "minY": 1.002,
+    "maxY": 1.398
+  },
+  {
+    "name": "Tendon_sheath_of_flexor_digitorum_longusr",
+    "x": -0.589,
+    "y": 1.093,
+    "z": -0.512,
+    "sy": 0.665,
+    "minY": 0.761,
+    "maxY": 1.425
+  },
+  {
+    "name": "Tendon_sheath_of_flexor_hallucis_longusl",
+    "x": 0.681,
+    "y": 1.121,
+    "z": -0.543,
+    "sy": 0.505,
+    "minY": 0.869,
+    "maxY": 1.373
+  },
+  {
+    "name": "Tendon_sheath_of_flexor_digitorum_longusl",
+    "x": 0.589,
+    "y": 1.093,
+    "z": -0.512,
+    "sy": 0.665,
+    "minY": 0.761,
+    "maxY": 1.425
+  },
+  {
+    "name": "Tendon_sheath_of_extensor_digitorum_longusl",
+    "x": 0.936,
+    "y": 1.481,
+    "z": -0.173,
+    "sy": 0.69,
+    "minY": 1.136,
+    "maxY": 1.826
+  },
+  {
+    "name": "Tendon_sheath_of_extensor_digitorum_longusr",
+    "x": -0.936,
+    "y": 1.481,
+    "z": -0.173,
+    "sy": 0.69,
+    "minY": 1.136,
+    "maxY": 1.826
+  },
+  {
+    "name": "Tendon_sheath_of_extensor_hallucis_longusr",
+    "x": -0.821,
+    "y": 1.442,
+    "z": -0.061,
+    "sy": 0.781,
+    "minY": 1.052,
+    "maxY": 1.833
+  },
+  {
+    "name": "Tendon_sheath_of_extensor_hallucis_longusl",
+    "x": 0.821,
+    "y": 1.442,
+    "z": -0.061,
+    "sy": 0.781,
+    "minY": 1.052,
+    "maxY": 1.833
+  },
+  {
+    "name": "Tendon_sheath_of_tibialis_anteriorl",
+    "x": 0.756,
+    "y": 1.513,
+    "z": -0.157,
+    "sy": 0.731,
+    "minY": 1.148,
+    "maxY": 1.878
+  },
+  {
+    "name": "Tendon_sheath_of_tibialis_anteriorr",
+    "x": -0.756,
+    "y": 1.513,
+    "z": -0.157,
+    "sy": 0.731,
+    "minY": 1.148,
+    "maxY": 1.878
+  },
+  {
+    "name": "Subcutaneous_bursa_of_tuberosity_of_tibial",
+    "x": 0.834,
+    "y": 4.295,
+    "z": 0.055,
+    "sy": 0.228,
+    "minY": 4.181,
+    "maxY": 4.41
+  },
+  {
+    "name": "Superior_bursa_of_biceps_femoris_musclel",
+    "x": 0.63,
+    "y": 8.427,
+    "z": -0.517,
+    "sy": 0.215,
+    "minY": 8.319,
+    "maxY": 8.534
+  },
+  {
+    "name": "Subtendinous_bursa_of_iliacus_muscler",
+    "x": -0.915,
+    "y": 8.336,
+    "z": -0.174,
+    "sy": 0.208,
+    "minY": 8.232,
+    "maxY": 8.44
+  },
+  {
+    "name": "Sciatic_bursa_of_obturator_internusl",
+    "x": 0.543,
+    "y": 8.924,
+    "z": -0.522,
+    "sy": 0.197,
+    "minY": 8.825,
+    "maxY": 9.022
+  },
+  {
+    "name": "Lateral_subtendinous_bursa_of_gastrocnemius_musclel",
+    "x": 1.054,
+    "y": 5.179,
+    "z": -0.431,
+    "sy": 0.175,
+    "minY": 5.092,
+    "maxY": 5.267
+  },
+  {
+    "name": "Suprapatellar_bursal",
+    "x": 0.849,
+    "y": 5.728,
+    "z": 0.032,
+    "sy": 0.673,
+    "minY": 5.392,
+    "maxY": 6.065
+  },
+  {
+    "name": "Subtendinous_bursa_of_tibialis_anteriorr",
+    "x": -0.618,
+    "y": 0.971,
+    "z": 0.156,
+    "sy": 0.124,
+    "minY": 0.909,
+    "maxY": 1.032
+  },
+  {
+    "name": "Sciatic_bursa_of_obturator_internusr",
+    "x": -0.543,
+    "y": 8.924,
+    "z": -0.522,
+    "sy": 0.197,
+    "minY": 8.825,
+    "maxY": 9.022
+  },
+  {
+    "name": "Trochanteric_bursa_of_gluteus_medius_muscler",
+    "x": -1.381,
+    "y": 8.891,
+    "z": -0.324,
+    "sy": 0.222,
+    "minY": 8.78,
+    "maxY": 9.002
+  },
+  {
+    "name": "Subcutaneous_prepatellar_bursar",
+    "x": -0.849,
+    "y": 4.843,
+    "z": 0.142,
+    "sy": 0.182,
+    "minY": 4.752,
+    "maxY": 4.934
+  },
+  {
+    "name": "Subcutaneous_prepatellar_bursal",
+    "x": 0.849,
+    "y": 4.843,
+    "z": 0.142,
+    "sy": 0.182,
+    "minY": 4.752,
+    "maxY": 4.934
+  },
+  {
+    "name": "Trochanteric_bursa_of_gluteus_maximus_muscler",
+    "x": -1.3,
+    "y": 8.76,
+    "z": -0.464,
+    "sy": 0.3,
+    "minY": 8.61,
+    "maxY": 8.91
+  },
+  {
+    "name": "Subcutaneous_calcaneal_bursal",
+    "x": 0.694,
+    "y": 0.865,
+    "z": -0.926,
+    "sy": 0.283,
+    "minY": 0.723,
+    "maxY": 1.007
+  },
+  {
+    "name": "Subtendinous_prepatellar_bursal",
+    "x": 0.849,
+    "y": 4.845,
+    "z": 0.114,
+    "sy": 0.239,
+    "minY": 4.725,
+    "maxY": 4.964
+  },
+  {
+    "name": "Bursa_of_piriformis_muscler",
+    "x": -1.236,
+    "y": 9.002,
+    "z": -0.199,
+    "sy": 0.079,
+    "minY": 8.962,
+    "maxY": 9.042
+  },
+  {
+    "name": "(Iliopectineal_bursa)r",
+    "x": -0.82,
+    "y": 9.051,
+    "z": 0.18,
+    "sy": 0.316,
+    "minY": 8.893,
+    "maxY": 9.209
+  },
+  {
+    "name": "Anserine_bursar",
+    "x": -0.547,
+    "y": 4.227,
+    "z": -0.263,
+    "sy": 0.28,
+    "minY": 4.087,
+    "maxY": 4.367
+  },
+  {
+    "name": "Subcutaneous_infrapatellar_bursar",
+    "x": -0.859,
+    "y": 4.536,
+    "z": 0.067,
+    "sy": 0.232,
+    "minY": 4.42,
+    "maxY": 4.652
+  },
+  {
+    "name": "Lateral_subtendinous_bursa_of_gastrocnemius_muscler",
+    "x": -1.054,
+    "y": 5.179,
+    "z": -0.431,
+    "sy": 0.175,
+    "minY": 5.092,
+    "maxY": 5.267
+  },
+  {
+    "name": "Sciatic_bursa_of_gluteus_maximus_musclel",
+    "x": 0.593,
+    "y": 8.563,
+    "z": -0.514,
+    "sy": 0.255,
+    "minY": 8.435,
+    "maxY": 8.69
+  },
+  {
+    "name": "Subfacial_prepatellar_bursar",
+    "x": -0.849,
+    "y": 4.845,
+    "z": 0.122,
+    "sy": 0.204,
+    "minY": 4.744,
+    "maxY": 4.947
+  },
+  {
+    "name": "Subfacial_prepatellar_bursal",
+    "x": 0.849,
+    "y": 4.845,
+    "z": 0.122,
+    "sy": 0.204,
+    "minY": 4.744,
+    "maxY": 4.947
+  },
+  {
+    "name": "Suprapatellar_bursar",
+    "x": -0.849,
+    "y": 5.728,
+    "z": 0.032,
+    "sy": 0.673,
+    "minY": 5.392,
+    "maxY": 6.065
+  },
+  {
+    "name": "Trochanteric_bursa_of_gluteus_medius_musclel",
+    "x": 1.381,
+    "y": 8.891,
+    "z": -0.324,
+    "sy": 0.222,
+    "minY": 8.78,
+    "maxY": 9.002
+  },
+  {
+    "name": "Medial_subtendinous_bursa_of_gastrocnemius_muscler",
+    "x": -0.606,
+    "y": 5.317,
+    "z": -0.343,
+    "sy": 0.186,
+    "minY": 5.224,
+    "maxY": 5.41
+  },
+  {
+    "name": "Subcutaneous_bursa_of_medial_malleolusl",
+    "x": 0.489,
+    "y": 1.331,
+    "z": -0.393,
+    "sy": 0.234,
+    "minY": 1.214,
+    "maxY": 1.448
+  },
+  {
+    "name": "Subtendinous_calcaneal_bursar",
+    "x": -0.745,
+    "y": 1.094,
+    "z": -0.789,
+    "sy": 0.267,
+    "minY": 0.96,
+    "maxY": 1.227
+  },
+  {
+    "name": "Semimembranosus_bursar",
+    "x": -0.431,
+    "y": 4.522,
+    "z": -0.327,
+    "sy": 0.206,
+    "minY": 4.419,
+    "maxY": 4.625
+  },
+  {
+    "name": "(Iliopectineal_bursa)l",
+    "x": 0.82,
+    "y": 9.051,
+    "z": 0.18,
+    "sy": 0.316,
+    "minY": 8.893,
+    "maxY": 9.209
+  },
+  {
+    "name": "Subtendinous_bursa_of_tibialis_anteriorl",
+    "x": 0.618,
+    "y": 0.971,
+    "z": 0.156,
+    "sy": 0.124,
+    "minY": 0.909,
+    "maxY": 1.032
+  },
+  {
+    "name": "Intermuscular_gluteal_bursael",
+    "x": 1.039,
+    "y": 8.079,
+    "z": -0.364,
+    "sy": 0.31,
+    "minY": 7.925,
+    "maxY": 8.234
+  },
+  {
+    "name": "Superior_bursa_of_biceps_femoris_muscler",
+    "x": -0.63,
+    "y": 8.427,
+    "z": -0.517,
+    "sy": 0.215,
+    "minY": 8.319,
+    "maxY": 8.534
+  },
+  {
+    "name": "Sciatic_bursa_of_gluteus_maximus_muscler",
+    "x": -0.593,
+    "y": 8.563,
+    "z": -0.514,
+    "sy": 0.255,
+    "minY": 8.435,
+    "maxY": 8.69
+  },
+  {
+    "name": "Subcutaneous_infrapatellar_bursal",
+    "x": 0.859,
+    "y": 4.536,
+    "z": 0.067,
+    "sy": 0.232,
+    "minY": 4.42,
+    "maxY": 4.652
+  },
+  {
+    "name": "Subcutaneous_bursa_of_lateral_malleolusl",
+    "x": 1.079,
+    "y": 1.132,
+    "z": -0.532,
+    "sy": 0.201,
+    "minY": 1.031,
+    "maxY": 1.233
+  },
+  {
+    "name": "Subcutaneous_bursa_of_tuberosity_of_tibiar",
+    "x": -0.834,
+    "y": 4.295,
+    "z": 0.055,
+    "sy": 0.228,
+    "minY": 4.181,
+    "maxY": 4.41
+  },
+  {
+    "name": "Trochanteric_bursa_of_gluteus_minimus_musclel",
+    "x": 1.426,
+    "y": 8.904,
+    "z": -0.193,
+    "sy": 0.206,
+    "minY": 8.802,
+    "maxY": 9.007
+  },
+  {
+    "name": "Subcutaneous_bursa_of_medial_malleolusr",
+    "x": -0.489,
+    "y": 1.331,
+    "z": -0.393,
+    "sy": 0.234,
+    "minY": 1.214,
+    "maxY": 1.448
+  },
+  {
+    "name": "Anserine_bursal",
+    "x": 0.547,
+    "y": 4.227,
+    "z": -0.263,
+    "sy": 0.28,
+    "minY": 4.087,
+    "maxY": 4.367
+  },
+  {
+    "name": "Subcutaneous_calcaneal_bursar",
+    "x": -0.694,
+    "y": 0.865,
+    "z": -0.926,
+    "sy": 0.283,
+    "minY": 0.723,
+    "maxY": 1.007
+  },
+  {
+    "name": "Subtendinous_bursa_of_sartorius_muscler",
+    "x": -0.646,
+    "y": 4.215,
+    "z": -0.125,
+    "sy": 0.38,
+    "minY": 4.025,
+    "maxY": 4.405
+  },
+  {
+    "name": "Subcutaneous_trochanteric_bursar",
+    "x": -1.459,
+    "y": 8.733,
+    "z": -0.183,
+    "sy": 0.294,
+    "minY": 8.586,
+    "maxY": 8.88
+  },
+  {
+    "name": "Subtendinous_bursa_of_iliacus_musclel",
+    "x": 0.915,
+    "y": 8.336,
+    "z": -0.174,
+    "sy": 0.208,
+    "minY": 8.232,
+    "maxY": 8.44
+  },
+  {
+    "name": "Inferior_subtendinous_bursa_of_biceps_femoris_musclel",
+    "x": 1.203,
+    "y": 4.502,
+    "z": -0.495,
+    "sy": 0.167,
+    "minY": 4.418,
+    "maxY": 4.585
+  },
+  {
+    "name": "Inferior_subtendinous_bursa_of_biceps_femoris_muscler",
+    "x": -1.203,
+    "y": 4.502,
+    "z": -0.495,
+    "sy": 0.167,
+    "minY": 4.418,
+    "maxY": 4.585
+  },
+  {
+    "name": "Subtendinous_bursa_of_obturator_internusl",
+    "x": 1.066,
+    "y": 8.894,
+    "z": -0.239,
+    "sy": 0.08,
+    "minY": 8.854,
+    "maxY": 8.934
+  },
+  {
+    "name": "Trochanteric_bursa_of_gluteus_minimus_muscler",
+    "x": -1.426,
+    "y": 8.904,
+    "z": -0.193,
+    "sy": 0.206,
+    "minY": 8.802,
+    "maxY": 9.007
+  },
+  {
+    "name": "Bursa_of_piriformis_musclel",
+    "x": 1.236,
+    "y": 9.002,
+    "z": -0.199,
+    "sy": 0.079,
+    "minY": 8.962,
+    "maxY": 9.042
+  },
+  {
+    "name": "Subtendinous_prepatellar_bursar",
+    "x": -0.849,
+    "y": 4.845,
+    "z": 0.114,
+    "sy": 0.239,
+    "minY": 4.725,
+    "maxY": 4.964
+  },
+  {
+    "name": "Deep_infrapatellar_bursal",
+    "x": 0.863,
+    "y": 4.591,
+    "z": 0.01,
+    "sy": 0.164,
+    "minY": 4.508,
+    "maxY": 4.673
+  },
+  {
+    "name": "Subtendinous_calcaneal_bursal",
+    "x": 0.745,
+    "y": 1.094,
+    "z": -0.789,
+    "sy": 0.267,
+    "minY": 0.96,
+    "maxY": 1.227
+  },
+  {
+    "name": "Subcutaneous_bursa_of_lateral_malleolusr",
+    "x": -1.079,
+    "y": 1.132,
+    "z": -0.532,
+    "sy": 0.201,
+    "minY": 1.031,
+    "maxY": 1.233
+  },
+  {
+    "name": "Subcutaneous_trochanteric_bursal",
+    "x": 1.459,
+    "y": 8.733,
+    "z": -0.183,
+    "sy": 0.294,
+    "minY": 8.586,
+    "maxY": 8.88
+  },
+  {
+    "name": "Subtendinous_bursa_of_sartorius_musclel",
+    "x": 0.646,
+    "y": 4.215,
+    "z": -0.125,
+    "sy": 0.38,
+    "minY": 4.025,
+    "maxY": 4.405
+  },
+  {
+    "name": "Deep_infrapatellar_bursar",
+    "x": -0.863,
+    "y": 4.591,
+    "z": 0.01,
+    "sy": 0.164,
+    "minY": 4.508,
+    "maxY": 4.673
+  },
+  {
+    "name": "Medial_subtendinous_bursa_of_gastrocnemius_musclel",
+    "x": 0.606,
+    "y": 5.317,
+    "z": -0.343,
+    "sy": 0.186,
+    "minY": 5.224,
+    "maxY": 5.41
+  },
+  {
+    "name": "Subtendinous_bursa_of_obturator_internusr",
+    "x": -1.066,
+    "y": 8.894,
+    "z": -0.239,
+    "sy": 0.08,
+    "minY": 8.854,
+    "maxY": 8.934
+  },
+  {
+    "name": "Semimembranosus_bursal",
+    "x": 0.431,
+    "y": 4.522,
+    "z": -0.327,
+    "sy": 0.206,
+    "minY": 4.419,
+    "maxY": 4.625
+  },
+  {
+    "name": "Trochanteric_bursa_of_gluteus_maximus_musclel",
+    "x": 1.3,
+    "y": 8.76,
+    "z": -0.464,
+    "sy": 0.3,
+    "minY": 8.61,
+    "maxY": 8.91
+  },
+  {
+    "name": "Intermuscular_gluteal_bursaer",
+    "x": -1.039,
+    "y": 8.079,
+    "z": -0.364,
+    "sy": 0.31,
+    "minY": 7.925,
+    "maxY": 8.234
+  },
+  {
+    "name": "Gluteus_medius_muscler",
+    "x": -1.052,
+    "y": 9.561,
+    "z": -0.27,
+    "sy": 1.679,
+    "minY": 8.721,
+    "maxY": 10.401
+  },
+  {
+    "name": "Tensor_fasciae_latael",
+    "x": 1.254,
+    "y": 7.381,
+    "z": -0.059,
+    "sy": 6.049,
+    "minY": 4.357,
+    "maxY": 10.406
+  },
+  {
+    "name": "Iliotibial_tractl",
+    "x": 1.254,
+    "y": 7.381,
+    "z": -0.158,
+    "sy": 6.049,
+    "minY": 4.357,
+    "maxY": 10.406
+  },
+  {
+    "name": "Gluteus_medius_musclel",
+    "x": 1.052,
+    "y": 9.561,
+    "z": -0.27,
+    "sy": 1.679,
+    "minY": 8.721,
+    "maxY": 10.401
+  },
+  {
+    "name": "Gluteus_maximus_musclel",
+    "x": 0.74,
+    "y": 8.875,
+    "z": -0.665,
+    "sy": 2.693,
+    "minY": 7.528,
+    "maxY": 10.221
+  },
+  {
+    "name": "Gluteus_minimus_musclel",
+    "x": 1.089,
+    "y": 9.44,
+    "z": -0.123,
+    "sy": 1.344,
+    "minY": 8.768,
+    "maxY": 10.112
+  },
+  {
+    "name": "Tensor_fasciae_lataer",
+    "x": -1.254,
+    "y": 7.381,
+    "z": -0.059,
+    "sy": 6.049,
+    "minY": 4.357,
+    "maxY": 10.406
+  },
+  {
+    "name": "Iliotibial_tractr",
+    "x": -1.254,
+    "y": 7.381,
+    "z": -0.158,
+    "sy": 6.049,
+    "minY": 4.357,
+    "maxY": 10.406
+  },
+  {
+    "name": "Gluteus_maximus_muscler",
+    "x": -0.74,
+    "y": 8.875,
+    "z": -0.665,
+    "sy": 2.693,
+    "minY": 7.528,
+    "maxY": 10.221
+  },
+  {
+    "name": "Gluteus_minimus_muscler",
+    "x": -1.089,
+    "y": 9.44,
+    "z": -0.123,
+    "sy": 1.344,
+    "minY": 8.768,
+    "maxY": 10.112
+  },
+  {
+    "name": "Fibularis_tertius_muscler",
+    "x": -1.053,
+    "y": 1.374,
+    "z": -0.171,
+    "sy": 1.228,
+    "minY": 0.76,
+    "maxY": 1.988
+  },
+  {
+    "name": "Extensor_digitorum_longusr",
+    "x": -1.156,
+    "y": 2.592,
+    "z": 0.373,
+    "sy": 4.056,
+    "minY": 0.563,
+    "maxY": 4.62
+  },
+  {
+    "name": "Tendon_of_extensor_digitorum_longusr",
+    "x": -1.156,
+    "y": 0.974,
+    "z": 0.509,
+    "sy": 0.82,
+    "minY": 0.563,
+    "maxY": 1.384
+  },
+  {
+    "name": "Extensor_hallucis_longusr",
+    "x": -0.902,
+    "y": 2.076,
+    "z": 0.262,
+    "sy": 2.803,
+    "minY": 0.674,
+    "maxY": 3.477
+  },
+  {
+    "name": "Tibialis_anterior_musclel",
+    "x": 0.87,
+    "y": 2.701,
+    "z": -0.012,
+    "sy": 3.686,
+    "minY": 0.858,
+    "maxY": 4.544
+  },
+  {
+    "name": "Tibialis_anterior_muscler",
+    "x": -0.87,
+    "y": 2.701,
+    "z": -0.012,
+    "sy": 3.686,
+    "minY": 0.858,
+    "maxY": 4.544
+  },
+  {
+    "name": "Extensor_digitorum_longusl",
+    "x": 1.156,
+    "y": 2.592,
+    "z": 0.373,
+    "sy": 4.056,
+    "minY": 0.563,
+    "maxY": 4.62
+  },
+  {
+    "name": "Tendon_of_extensor_digitorum_longusl",
+    "x": 1.156,
+    "y": 0.974,
+    "z": 0.509,
+    "sy": 0.82,
+    "minY": 0.563,
+    "maxY": 1.384
+  },
+  {
+    "name": "Extensor_hallucis_longusl",
+    "x": 0.902,
+    "y": 2.076,
+    "z": 0.262,
+    "sy": 2.803,
+    "minY": 0.674,
+    "maxY": 3.477
+  },
+  {
+    "name": "Fibularis_tertius_musclel",
+    "x": 1.053,
+    "y": 1.374,
+    "z": -0.171,
+    "sy": 1.228,
+    "minY": 0.76,
+    "maxY": 1.988
+  },
+  {
+    "name": "Flexor_digitorum_brevisl",
+    "x": 1.043,
+    "y": 0.605,
+    "z": 0.224,
+    "sy": 0.2,
+    "minY": 0.505,
+    "maxY": 0.705
+  },
+  {
+    "name": "Plantar_interossei_musclesr",
+    "x": -1.15,
+    "y": 0.722,
+    "z": 0.451,
+    "sy": 0.263,
+    "minY": 0.591,
+    "maxY": 0.854
+  },
+  {
+    "name": "Medial_head_of_flexor_hallucis_brevisl",
+    "x": 0.656,
+    "y": 0.742,
+    "z": 0.424,
+    "sy": 0.397,
+    "minY": 0.544,
+    "maxY": 0.941
+  },
+  {
+    "name": "Medial_head_of_flexor_hallucis_brevisr",
+    "x": -0.656,
+    "y": 0.742,
+    "z": 0.424,
+    "sy": 0.397,
+    "minY": 0.544,
+    "maxY": 0.941
+  },
+  {
+    "name": "Lateral_head_of_flexor_hallucis_brevisr",
+    "x": -0.704,
+    "y": 0.717,
+    "z": 0.435,
+    "sy": 0.385,
+    "minY": 0.524,
+    "maxY": 0.909
+  },
+  {
+    "name": "Lateral_head_of_flexor_hallucis_brevisl",
+    "x": 0.704,
+    "y": 0.717,
+    "z": 0.435,
+    "sy": 0.385,
+    "minY": 0.524,
+    "maxY": 0.909
+  },
+  {
+    "name": "Flexor_digiti_minimi_of_footl",
+    "x": 1.219,
+    "y": 0.616,
+    "z": 0.276,
+    "sy": 0.184,
+    "minY": 0.524,
+    "maxY": 0.708
+  },
+  {
+    "name": "Flexor_digiti_minimi_of_footr",
+    "x": -1.219,
+    "y": 0.616,
+    "z": 0.276,
+    "sy": 0.184,
+    "minY": 0.524,
+    "maxY": 0.708
+  },
+  {
+    "name": "Abductor_digiti_minimi_of_footr",
+    "x": -1.038,
+    "y": 0.62,
+    "z": -0.08,
+    "sy": 0.165,
+    "minY": 0.537,
+    "maxY": 0.703
+  },
+  {
+    "name": "Abductor_hallucisr",
+    "x": -0.653,
+    "y": 0.714,
+    "z": 0.089,
+    "sy": 0.269,
+    "minY": 0.58,
+    "maxY": 0.849
+  },
+  {
+    "name": "Extensor_hallucis_brevisl",
+    "x": 0.844,
+    "y": 0.946,
+    "z": 0.28,
+    "sy": 0.479,
+    "minY": 0.707,
+    "maxY": 1.186
+  },
+  {
+    "name": "Abductor_digiti_minimi_of_footl",
+    "x": 1.038,
+    "y": 0.62,
+    "z": -0.08,
+    "sy": 0.165,
+    "minY": 0.537,
+    "maxY": 0.703
+  },
+  {
+    "name": "Dorsal_interossei_muscles_of_footl",
+    "x": 1.017,
+    "y": 0.795,
+    "z": 0.498,
+    "sy": 0.368,
+    "minY": 0.611,
+    "maxY": 0.979
+  },
+  {
+    "name": "Flexor_digitorum_brevisr",
+    "x": -1.043,
+    "y": 0.605,
+    "z": 0.224,
+    "sy": 0.2,
+    "minY": 0.505,
+    "maxY": 0.705
+  },
+  {
+    "name": "Transverse_head_of_adductor_hallucisl",
+    "x": 1.006,
+    "y": 0.618,
+    "z": 0.585,
+    "sy": 0.074,
+    "minY": 0.581,
+    "maxY": 0.655
+  },
+  {
+    "name": "Oblique_head_of_adductor_hallucisl",
+    "x": 0.905,
+    "y": 0.728,
+    "z": 0.313,
+    "sy": 0.301,
+    "minY": 0.577,
+    "maxY": 0.878
+  },
+  {
+    "name": "Transverse_head_of_adductor_hallucisr",
+    "x": -1.006,
+    "y": 0.618,
+    "z": 0.585,
+    "sy": 0.074,
+    "minY": 0.581,
+    "maxY": 0.655
+  },
+  {
+    "name": "Oblique_head_of_adductor_hallucisr",
+    "x": -0.905,
+    "y": 0.728,
+    "z": 0.313,
+    "sy": 0.301,
+    "minY": 0.577,
+    "maxY": 0.878
+  },
+  {
+    "name": "Dorsal_interossei_muscles_of_footr",
+    "x": -1.017,
+    "y": 0.795,
+    "z": 0.498,
+    "sy": 0.368,
+    "minY": 0.611,
+    "maxY": 0.979
+  },
+  {
+    "name": "Quadratus_plantae_musclel",
+    "x": 0.839,
+    "y": 0.694,
+    "z": -0.267,
+    "sy": 0.17,
+    "minY": 0.609,
+    "maxY": 0.779
+  },
+  {
+    "name": "(Opponens_digiti_minimi_muscle_of_foot)r",
+    "x": -1.168,
+    "y": 0.649,
+    "z": 0.14,
+    "sy": 0.116,
+    "minY": 0.591,
+    "maxY": 0.707
+  },
+  {
+    "name": "Lumbrical_muscles_of_footl",
+    "x": 0.806,
+    "y": 0.666,
+    "z": 0.383,
+    "sy": 0.202,
+    "minY": 0.565,
+    "maxY": 0.767
+  },
+  {
+    "name": "Abductor_hallucisl",
+    "x": 0.653,
+    "y": 0.714,
+    "z": 0.089,
+    "sy": 0.269,
+    "minY": 0.58,
+    "maxY": 0.849
+  },
+  {
+    "name": "Extensor_hallucis_brevisr",
+    "x": -0.844,
+    "y": 0.946,
+    "z": 0.28,
+    "sy": 0.479,
+    "minY": 0.707,
+    "maxY": 1.186
+  },
+  {
+    "name": "Extensor_digitorum_brevisr",
+    "x": -1.12,
+    "y": 0.881,
+    "z": 0.37,
+    "sy": 0.587,
+    "minY": 0.588,
+    "maxY": 1.175
+  },
+  {
+    "name": "(Opponens_digiti_minimi_muscle_of_foot)l",
+    "x": 1.168,
+    "y": 0.649,
+    "z": 0.14,
+    "sy": 0.116,
+    "minY": 0.591,
+    "maxY": 0.707
+  },
+  {
+    "name": "Plantar_interossei_musclesl",
+    "x": 1.15,
+    "y": 0.722,
+    "z": 0.451,
+    "sy": 0.263,
+    "minY": 0.591,
+    "maxY": 0.854
+  },
+  {
+    "name": "Lumbrical_muscles_of_footr",
+    "x": -0.806,
+    "y": 0.666,
+    "z": 0.383,
+    "sy": 0.202,
+    "minY": 0.565,
+    "maxY": 0.767
+  },
+  {
+    "name": "Extensor_digitorum_brevisl",
+    "x": 1.12,
+    "y": 0.881,
+    "z": 0.37,
+    "sy": 0.587,
+    "minY": 0.588,
+    "maxY": 1.175
+  },
+  {
+    "name": "Quadratus_plantae_muscler",
+    "x": -0.839,
+    "y": 0.694,
+    "z": -0.267,
+    "sy": 0.17,
+    "minY": 0.609,
+    "maxY": 0.779
+  },
+  {
+    "name": "Adductor_brevisr",
+    "x": -0.59,
+    "y": 7.967,
+    "z": 0.119,
+    "sy": 1.762,
+    "minY": 7.086,
+    "maxY": 8.848
+  },
+  {
+    "name": "Adductor_longusl",
+    "x": 0.533,
+    "y": 7.523,
+    "z": 0.199,
+    "sy": 2.646,
+    "minY": 6.2,
+    "maxY": 8.846
+  },
+  {
+    "name": "Adductor_brevisl",
+    "x": 0.59,
+    "y": 7.967,
+    "z": 0.119,
+    "sy": 1.762,
+    "minY": 7.086,
+    "maxY": 8.848
+  },
+  {
+    "name": "Gracilis_musclel",
+    "x": 0.361,
+    "y": 6.334,
+    "z": -0.059,
+    "sy": 4.933,
+    "minY": 3.868,
+    "maxY": 8.801
+  },
+  {
+    "name": "Pectineus_musclel",
+    "x": 0.571,
+    "y": 8.42,
+    "z": 0.225,
+    "sy": 1.312,
+    "minY": 7.764,
+    "maxY": 9.075
+  },
+  {
+    "name": "Adductor_magnusl",
+    "x": 0.615,
+    "y": 6.892,
+    "z": -0.072,
+    "sy": 3.666,
+    "minY": 5.059,
+    "maxY": 8.725
+  },
+  {
+    "name": "(Adductor_minimus)l",
+    "x": 0.586,
+    "y": 8.203,
+    "z": 0.037,
+    "sy": 1.043,
+    "minY": 7.682,
+    "maxY": 8.725
+  },
+  {
+    "name": "Obturator_externusr",
+    "x": -0.737,
+    "y": 8.738,
+    "z": -0.058,
+    "sy": 0.309,
+    "minY": 8.584,
+    "maxY": 8.893
+  },
+  {
+    "name": "Obturator_externusl",
+    "x": 0.737,
+    "y": 8.738,
+    "z": -0.058,
+    "sy": 0.309,
+    "minY": 8.584,
+    "maxY": 8.893
+  },
+  {
+    "name": "Gracilis_muscler",
+    "x": -0.361,
+    "y": 6.334,
+    "z": -0.059,
+    "sy": 4.933,
+    "minY": 3.868,
+    "maxY": 8.801
+  },
+  {
+    "name": "Adductor_longusr",
+    "x": -0.533,
+    "y": 7.523,
+    "z": 0.199,
+    "sy": 2.646,
+    "minY": 6.2,
+    "maxY": 8.846
+  },
+  {
+    "name": "Pectineus_muscler",
+    "x": -0.571,
+    "y": 8.42,
+    "z": 0.225,
+    "sy": 1.312,
+    "minY": 7.764,
+    "maxY": 9.075
+  },
+  {
+    "name": "Adductor_magnusr",
+    "x": -0.615,
+    "y": 6.892,
+    "z": -0.072,
+    "sy": 3.666,
+    "minY": 5.059,
+    "maxY": 8.725
+  },
+  {
+    "name": "(Adductor_minimus)r",
+    "x": -0.586,
+    "y": 8.203,
+    "z": 0.037,
+    "sy": 1.043,
+    "minY": 7.682,
+    "maxY": 8.725
+  },
+  {
+    "name": "Fibularis_longus_musclel",
+    "x": 1.056,
+    "y": 2.618,
+    "z": -0.221,
+    "sy": 3.789,
+    "minY": 0.724,
+    "maxY": 4.513
+  },
+  {
+    "name": "Fibularis_brevis_muscler",
+    "x": -1.052,
+    "y": 2.037,
+    "z": -0.413,
+    "sy": 2.687,
+    "minY": 0.693,
+    "maxY": 3.381
+  },
+  {
+    "name": "Fibularis_longus_muscler",
+    "x": -1.056,
+    "y": 2.618,
+    "z": -0.221,
+    "sy": 3.789,
+    "minY": 0.724,
+    "maxY": 4.513
+  },
+  {
+    "name": "Fibularis_brevis_musclel",
+    "x": 1.052,
+    "y": 2.037,
+    "z": -0.413,
+    "sy": 2.687,
+    "minY": 0.693,
+    "maxY": 3.381
+  },
+  {
+    "name": "Short_head_of_biceps_femorisl",
+    "x": 1.05,
+    "y": 5.971,
+    "z": -0.383,
+    "sy": 3.011,
+    "minY": 4.465,
+    "maxY": 7.476
+  },
+  {
+    "name": "Semitendinosus_muscler",
+    "x": -0.507,
+    "y": 6.246,
+    "z": -0.495,
+    "sy": 4.596,
+    "minY": 3.948,
+    "maxY": 8.544
+  },
+  {
+    "name": "Short_head_of_biceps_femorisr",
+    "x": -1.05,
+    "y": 5.971,
+    "z": -0.383,
+    "sy": 3.011,
+    "minY": 4.465,
+    "maxY": 7.476
+  },
+  {
+    "name": "Semimembranosus_muscler",
+    "x": -0.468,
+    "y": 6.374,
+    "z": -0.448,
+    "sy": 4.174,
+    "minY": 4.287,
+    "maxY": 8.461
+  },
+  {
+    "name": "Long_head_of_biceps_femorisl",
+    "x": 0.891,
+    "y": 6.506,
+    "z": -0.518,
+    "sy": 4.251,
+    "minY": 4.381,
+    "maxY": 8.632
+  },
+  {
+    "name": "Semitendinosus_musclel",
+    "x": 0.507,
+    "y": 6.246,
+    "z": -0.495,
+    "sy": 4.596,
+    "minY": 3.948,
+    "maxY": 8.544
+  },
+  {
+    "name": "Semimembranosus_musclel",
+    "x": 0.468,
+    "y": 6.374,
+    "z": -0.448,
+    "sy": 4.174,
+    "minY": 4.287,
+    "maxY": 8.461
+  },
+  {
+    "name": "Long_head_of_biceps_femorisr",
+    "x": -0.891,
+    "y": 6.506,
+    "z": -0.518,
+    "sy": 4.251,
+    "minY": 4.381,
+    "maxY": 8.632
+  },
+  {
+    "name": "Lateral_head_of_gastrocnemiusl",
+    "x": 1.075,
+    "y": 3.981,
+    "z": -0.706,
+    "sy": 2.691,
+    "minY": 2.635,
+    "maxY": 5.327
+  },
+  {
+    "name": "Soleus_musclel",
+    "x": 0.862,
+    "y": 3.15,
+    "z": -0.545,
+    "sy": 2.756,
+    "minY": 1.772,
+    "maxY": 4.528
+  },
+  {
+    "name": "Plantaris_musclel",
+    "x": 0.771,
+    "y": 3.127,
+    "z": -0.486,
+    "sy": 4.82,
+    "minY": 0.717,
+    "maxY": 5.537
+  },
+  {
+    "name": "Lateral_head_of_gastrocnemiusr",
+    "x": -1.075,
+    "y": 3.981,
+    "z": -0.706,
+    "sy": 2.691,
+    "minY": 2.635,
+    "maxY": 5.327
+  },
+  {
+    "name": "Medial_head_of_gastrocnemiusl",
+    "x": 0.603,
+    "y": 3.996,
+    "z": -0.642,
+    "sy": 2.995,
+    "minY": 2.499,
+    "maxY": 5.493
+  },
+  {
+    "name": "Calcaneal_tendonr",
+    "x": -0.838,
+    "y": 1.787,
+    "z": -0.817,
+    "sy": 2.2,
+    "minY": 0.687,
+    "maxY": 2.887
+  },
+  {
+    "name": "Medial_head_of_gastrocnemiusr",
+    "x": -0.603,
+    "y": 3.996,
+    "z": -0.642,
+    "sy": 2.995,
+    "minY": 2.499,
+    "maxY": 5.493
+  },
+  {
+    "name": "Soleus_muscler",
+    "x": -0.862,
+    "y": 3.15,
+    "z": -0.545,
+    "sy": 2.756,
+    "minY": 1.772,
+    "maxY": 4.528
+  },
+  {
+    "name": "Calcaneal_tendonl",
+    "x": 0.838,
+    "y": 1.787,
+    "z": -0.817,
+    "sy": 2.2,
+    "minY": 0.687,
+    "maxY": 2.887
+  },
+  {
+    "name": "Plantaris_muscler",
+    "x": -0.771,
+    "y": 3.127,
+    "z": -0.486,
+    "sy": 4.82,
+    "minY": 0.717,
+    "maxY": 5.537
+  },
+  {
+    "name": "Popliteus_muscler",
+    "x": -0.874,
+    "y": 4.458,
+    "z": -0.475,
+    "sy": 1.251,
+    "minY": 3.833,
+    "maxY": 5.083
+  },
+  {
+    "name": "Popliteus_musclel",
+    "x": 0.874,
+    "y": 4.458,
+    "z": -0.475,
+    "sy": 1.251,
+    "minY": 3.833,
+    "maxY": 5.083
+  },
+  {
+    "name": "Tibialis_posterior_muscler",
+    "x": -0.784,
+    "y": 2.542,
+    "z": -0.205,
+    "sy": 3.436,
+    "minY": 0.824,
+    "maxY": 4.26
+  },
+  {
+    "name": "Flexor_digitorum_longusr",
+    "x": -0.959,
+    "y": 2.23,
+    "z": 0.287,
+    "sy": 3.434,
+    "minY": 0.513,
+    "maxY": 3.947
+  },
+  {
+    "name": "Flexor_hallucis_longusr",
+    "x": -0.865,
+    "y": 2.108,
+    "z": 0.22,
+    "sy": 3.175,
+    "minY": 0.521,
+    "maxY": 3.695
+  },
+  {
+    "name": "Flexor_hallucis_longusl",
+    "x": 0.865,
+    "y": 2.108,
+    "z": 0.22,
+    "sy": 3.175,
+    "minY": 0.521,
+    "maxY": 3.695
+  },
+  {
+    "name": "Flexor_digitorum_longusl",
+    "x": 0.959,
+    "y": 2.23,
+    "z": 0.287,
+    "sy": 3.434,
+    "minY": 0.513,
+    "maxY": 3.947
+  },
+  {
+    "name": "Tibialis_posterior_musclel",
+    "x": 0.784,
+    "y": 2.542,
+    "z": -0.205,
+    "sy": 3.436,
+    "minY": 0.824,
+    "maxY": 4.26
+  },
+  {
+    "name": "Superior_gemellus_muscler",
+    "x": -0.846,
+    "y": 9.048,
+    "z": -0.343,
+    "sy": 0.272,
+    "minY": 8.912,
+    "maxY": 9.184
+  },
+  {
+    "name": "Inferior_gemellus_muscler",
+    "x": -0.904,
+    "y": 8.844,
+    "z": -0.394,
+    "sy": 0.232,
+    "minY": 8.728,
+    "maxY": 8.96
+  },
+  {
+    "name": "Obturator_internusl",
+    "x": 0.697,
+    "y": 8.913,
+    "z": -0.202,
+    "sy": 0.597,
+    "minY": 8.615,
+    "maxY": 9.212
+  },
+  {
+    "name": "Quadratus_femoris_musclel",
+    "x": 0.881,
+    "y": 8.589,
+    "z": -0.349,
+    "sy": 0.457,
+    "minY": 8.36,
+    "maxY": 8.817
+  },
+  {
+    "name": "Inferior_gemellus_musclel",
+    "x": 0.904,
+    "y": 8.844,
+    "z": -0.394,
+    "sy": 0.232,
+    "minY": 8.728,
+    "maxY": 8.96
+  },
+  {
+    "name": "Obturator_internusr",
+    "x": -0.697,
+    "y": 8.913,
+    "z": -0.202,
+    "sy": 0.597,
+    "minY": 8.615,
+    "maxY": 9.212
+  },
+  {
+    "name": "Superior_gemellus_musclel",
+    "x": 0.846,
+    "y": 9.048,
+    "z": -0.343,
+    "sy": 0.272,
+    "minY": 8.912,
+    "maxY": 9.184
+  },
+  {
+    "name": "Piriformis_musclel",
+    "x": 0.787,
+    "y": 9.307,
+    "z": -0.475,
+    "sy": 0.63,
+    "minY": 8.992,
+    "maxY": 9.622
+  },
+  {
+    "name": "Piriformis_muscler",
+    "x": -0.787,
+    "y": 9.307,
+    "z": -0.475,
+    "sy": 0.63,
+    "minY": 8.992,
+    "maxY": 9.622
+  },
+  {
+    "name": "Quadratus_femoris_muscler",
+    "x": -0.881,
+    "y": 8.589,
+    "z": -0.349,
+    "sy": 0.457,
+    "minY": 8.36,
+    "maxY": 8.817
+  },
+  {
+    "name": "Vastus_medialis_musclel",
+    "x": 0.694,
+    "y": 6.32,
+    "z": 0.116,
+    "sy": 4.076,
+    "minY": 4.282,
+    "maxY": 8.358
+  },
+  {
+    "name": "Vastus_lateralis_muscler",
+    "x": -1.219,
+    "y": 6.555,
+    "z": 0.007,
+    "sy": 4.571,
+    "minY": 4.269,
+    "maxY": 8.84
+  },
+  {
+    "name": "Medial_patellar_retinaculumr",
+    "x": -0.482,
+    "y": 4.938,
+    "z": -0.146,
+    "sy": 0.331,
+    "minY": 4.772,
+    "maxY": 5.103
+  },
+  {
+    "name": "Lateral_patellar_retinaculuml",
+    "x": 1.091,
+    "y": 4.9,
+    "z": -0.178,
+    "sy": 0.229,
+    "minY": 4.785,
+    "maxY": 5.014
+  },
+  {
+    "name": "Lateral_patellar_retinaculumr",
+    "x": -1.091,
+    "y": 4.9,
+    "z": -0.178,
+    "sy": 0.229,
+    "minY": 4.785,
+    "maxY": 5.014
+  },
+  {
+    "name": "Vastus_medialis_muscler",
+    "x": -0.694,
+    "y": 6.32,
+    "z": 0.116,
+    "sy": 4.076,
+    "minY": 4.282,
+    "maxY": 8.358
+  },
+  {
+    "name": "Sartorius_muscler",
+    "x": -0.728,
+    "y": 6.915,
+    "z": 0.093,
+    "sy": 5.988,
+    "minY": 3.921,
+    "maxY": 9.909
+  },
+  {
+    "name": "Rectus_femoris_muscler",
+    "x": -1.074,
+    "y": 6.863,
+    "z": 0.224,
+    "sy": 5.45,
+    "minY": 4.138,
+    "maxY": 9.588
+  },
+  {
+    "name": "Vastus_intermedius_musclel",
+    "x": 1.047,
+    "y": 6.459,
+    "z": 0.11,
+    "sy": 4.081,
+    "minY": 4.418,
+    "maxY": 8.5
+  },
+  {
+    "name": "Sartorius_musclel",
+    "x": 0.728,
+    "y": 6.915,
+    "z": 0.093,
+    "sy": 5.988,
+    "minY": 3.921,
+    "maxY": 9.909
+  },
+  {
+    "name": "Vastus_intermedius_muscler",
+    "x": -1.047,
+    "y": 6.459,
+    "z": 0.11,
+    "sy": 4.081,
+    "minY": 4.418,
+    "maxY": 8.5
+  },
+  {
+    "name": "Medial_patellar_retinaculuml",
+    "x": 0.482,
+    "y": 4.938,
+    "z": -0.146,
+    "sy": 0.331,
+    "minY": 4.772,
+    "maxY": 5.103
+  },
+  {
+    "name": "Rectus_femoris_musclel",
+    "x": 1.074,
+    "y": 6.863,
+    "z": 0.224,
+    "sy": 5.45,
+    "minY": 4.138,
+    "maxY": 9.588
+  },
+  {
+    "name": "Vastus_lateralis_musclel",
+    "x": 1.219,
+    "y": 6.555,
+    "z": 0.007,
+    "sy": 4.571,
+    "minY": 4.269,
+    "maxY": 8.84
+  },
+  {
+    "name": "Psoas_majorr",
+    "x": -0.58,
+    "y": 10.084,
+    "z": -0.052,
+    "sy": 3.797,
+    "minY": 8.186,
+    "maxY": 11.983
+  },
+  {
+    "name": "Psoas_majorl",
+    "x": 0.58,
+    "y": 10.084,
+    "z": -0.052,
+    "sy": 3.797,
+    "minY": 8.186,
+    "maxY": 11.983
+  },
+  {
+    "name": "Iliacus_musclel",
+    "x": 0.906,
+    "y": 9.309,
+    "z": 0.025,
+    "sy": 2.314,
+    "minY": 8.152,
+    "maxY": 10.467
+  },
+  {
+    "name": "Iliacus_muscler",
+    "x": -0.906,
+    "y": 9.309,
+    "z": 0.025,
+    "sy": 2.314,
+    "minY": 8.152,
+    "maxY": 10.467
+  },
+  {
+    "name": "Cross_Section_Y001",
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "sy": 0,
+    "minY": null,
+    "maxY": null
+  },
+  {
+    "name": "Hyoglossus_muscler",
+    "x": -0.091,
+    "y": 15.537,
+    "z": 0.457,
+    "sy": 0.253,
+    "minY": 15.411,
+    "maxY": 15.664
+  },
+  {
+    "name": "Genioglossus_musclel",
+    "x": 0.05,
+    "y": 15.602,
+    "z": 0.519,
+    "sy": 0.361,
+    "minY": 15.421,
+    "maxY": 15.782
+  },
+  {
+    "name": "Genioglossus_muscler",
+    "x": -0.05,
+    "y": 15.602,
+    "z": 0.519,
+    "sy": 0.361,
+    "minY": 15.421,
+    "maxY": 15.782
+  },
+  {
+    "name": "Hyoglossus_musclel",
+    "x": 0.091,
+    "y": 15.537,
+    "z": 0.457,
+    "sy": 0.253,
+    "minY": 15.411,
+    "maxY": 15.664
+  },
+  {
+    "name": "Palatopharyngeus_muscler",
+    "x": -0.096,
+    "y": 15.496,
+    "z": 0.043,
+    "sy": 0.88,
+    "minY": 15.056,
+    "maxY": 15.936
+  },
+  {
+    "name": "Palatopharyngeus_musclel",
+    "x": 0.096,
+    "y": 15.496,
+    "z": 0.043,
+    "sy": 0.88,
+    "minY": 15.056,
+    "maxY": 15.936
+  },
+  {
+    "name": "Epicranial_aponeurosisr",
+    "x": -0.334,
+    "y": 16.955,
+    "z": -0.141,
+    "sy": 1.09,
+    "minY": 16.41,
+    "maxY": 17.5
+  },
+  {
+    "name": "Frontalis_musclel",
+    "x": 0.292,
+    "y": 16.818,
+    "z": 0.629,
+    "sy": 0.701,
+    "minY": 16.467,
+    "maxY": 17.168
+  },
+  {
+    "name": "Occipitalis_musclel",
+    "x": 0.381,
+    "y": 16.442,
+    "z": -0.845,
+    "sy": 0.33,
+    "minY": 16.277,
+    "maxY": 16.607
+  },
+  {
+    "name": "Temporoparietalis_muscler",
+    "x": -0.613,
+    "y": 16.687,
+    "z": -0.166,
+    "sy": 1.028,
+    "minY": 16.174,
+    "maxY": 17.201
+  },
+  {
+    "name": "Occipitalis_muscler",
+    "x": -0.381,
+    "y": 16.442,
+    "z": -0.845,
+    "sy": 0.33,
+    "minY": 16.277,
+    "maxY": 16.607
+  },
+  {
+    "name": "Frontalis_muscler",
+    "x": -0.292,
+    "y": 16.818,
+    "z": 0.629,
+    "sy": 0.701,
+    "minY": 16.467,
+    "maxY": 17.168
+  },
+  {
+    "name": "Temporoparietalis_musclel",
+    "x": 0.613,
+    "y": 16.687,
+    "z": -0.166,
+    "sy": 1.028,
+    "minY": 16.174,
+    "maxY": 17.201
+  },
+  {
+    "name": "Epicranial_aponeurosisl",
+    "x": 0.334,
+    "y": 16.955,
+    "z": -0.141,
+    "sy": 1.09,
+    "minY": 16.41,
+    "maxY": 17.5
+  },
+  {
+    "name": "Corrugator_superciliir",
+    "x": -0.202,
+    "y": 16.54,
+    "z": 0.773,
+    "sy": 0.19,
+    "minY": 16.446,
+    "maxY": 16.635
+  },
+  {
+    "name": "Orbital_part_of_orbicularis_oculir",
+    "x": -0.312,
+    "y": 16.348,
+    "z": 0.68,
+    "sy": 0.497,
+    "minY": 16.099,
+    "maxY": 16.596
+  },
+  {
+    "name": "Procerus_musclel",
+    "x": 0.116,
+    "y": 16.545,
+    "z": 0.832,
+    "sy": 0.365,
+    "minY": 16.363,
+    "maxY": 16.728
+  },
+  {
+    "name": "Palpebral_part_of_orbicularis_oculir",
+    "x": -0.295,
+    "y": 16.338,
+    "z": 0.691,
+    "sy": 0.245,
+    "minY": 16.215,
+    "maxY": 16.46
+  },
+  {
+    "name": "Zygomaticus_major_muscler",
+    "x": -0.408,
+    "y": 15.941,
+    "z": 0.6,
+    "sy": 0.545,
+    "minY": 15.669,
+    "maxY": 16.214
+  },
+  {
+    "name": "Palpebral_part_of_orbicularis_oculil",
+    "x": 0.295,
+    "y": 16.338,
+    "z": 0.691,
+    "sy": 0.245,
+    "minY": 16.215,
+    "maxY": 16.46
+  },
+  {
+    "name": "Nasalis_musclel",
+    "x": 0.082,
+    "y": 16.258,
+    "z": 0.86,
+    "sy": 0.403,
+    "minY": 16.057,
+    "maxY": 16.46
+  },
+  {
+    "name": "Zygomaticus_major_musclel",
+    "x": 0.408,
+    "y": 15.941,
+    "z": 0.6,
+    "sy": 0.545,
+    "minY": 15.669,
+    "maxY": 16.214
+  },
+  {
+    "name": "Zygomaticus_minor_muscler",
+    "x": -0.315,
+    "y": 16.045,
+    "z": 0.691,
+    "sy": 0.306,
+    "minY": 15.892,
+    "maxY": 16.198
+  },
+  {
+    "name": "Levator_labii_superiorisr",
+    "x": -0.253,
+    "y": 16.043,
+    "z": 0.732,
+    "sy": 0.289,
+    "minY": 15.898,
+    "maxY": 16.188
+  },
+  {
+    "name": "Depressor_anguli_orisl",
+    "x": 0.239,
+    "y": 15.614,
+    "z": 0.595,
+    "sy": 0.416,
+    "minY": 15.406,
+    "maxY": 15.822
+  },
+  {
+    "name": "Depressor_septi_nasil",
+    "x": 0.084,
+    "y": 15.923,
+    "z": 0.822,
+    "sy": 0.161,
+    "minY": 15.842,
+    "maxY": 16.004
+  },
+  {
+    "name": "Orbicularis_oris_muscler",
+    "x": -0.161,
+    "y": 15.739,
+    "z": 0.781,
+    "sy": 0.454,
+    "minY": 15.512,
+    "maxY": 15.966
+  },
+  {
+    "name": "Bucinatorr",
+    "x": -0.283,
+    "y": 15.754,
+    "z": 0.534,
+    "sy": 0.363,
+    "minY": 15.573,
+    "maxY": 15.936
+  },
+  {
+    "name": "Risorius_musclel",
+    "x": 0.385,
+    "y": 15.712,
+    "z": 0.544,
+    "sy": 0.271,
+    "minY": 15.576,
+    "maxY": 15.847
+  },
+  {
+    "name": "Zygomaticus_minor_musclel",
+    "x": 0.315,
+    "y": 16.045,
+    "z": 0.691,
+    "sy": 0.306,
+    "minY": 15.892,
+    "maxY": 16.198
+  },
+  {
+    "name": "Levator_nasolabialisr",
+    "x": -0.134,
+    "y": 16.146,
+    "z": 0.776,
+    "sy": 0.291,
+    "minY": 16.001,
+    "maxY": 16.292
+  },
+  {
+    "name": "Mentalis_muscler",
+    "x": -0.076,
+    "y": 15.48,
+    "z": 0.757,
+    "sy": 0.147,
+    "minY": 15.407,
+    "maxY": 15.554
+  },
+  {
+    "name": "Orbital_part_of_orbicularis_oculil",
+    "x": 0.312,
+    "y": 16.348,
+    "z": 0.68,
+    "sy": 0.497,
+    "minY": 16.099,
+    "maxY": 16.596
+  },
+  {
+    "name": "Corrugator_superciliil",
+    "x": 0.202,
+    "y": 16.54,
+    "z": 0.773,
+    "sy": 0.19,
+    "minY": 16.446,
+    "maxY": 16.635
+  },
+  {
+    "name": "Depressor_anguli_orisr",
+    "x": -0.239,
+    "y": 15.614,
+    "z": 0.595,
+    "sy": 0.416,
+    "minY": 15.406,
+    "maxY": 15.822
+  },
+  {
+    "name": "Depressor_labii_inferiorisl",
+    "x": 0.159,
+    "y": 15.576,
+    "z": 0.688,
+    "sy": 0.295,
+    "minY": 15.429,
+    "maxY": 15.724
+  },
+  {
+    "name": "Orbicularis_oris_musclel",
+    "x": 0.161,
+    "y": 15.739,
+    "z": 0.781,
+    "sy": 0.454,
+    "minY": 15.512,
+    "maxY": 15.966
+  },
+  {
+    "name": "Depressor_septi_nasir",
+    "x": -0.084,
+    "y": 15.923,
+    "z": 0.822,
+    "sy": 0.161,
+    "minY": 15.842,
+    "maxY": 16.004
+  },
+  {
+    "name": "Mentalis_musclel",
+    "x": 0.076,
+    "y": 15.48,
+    "z": 0.757,
+    "sy": 0.147,
+    "minY": 15.407,
+    "maxY": 15.554
+  },
+  {
+    "name": "Levator_anguli_orisl",
+    "x": 0.205,
+    "y": 15.95,
+    "z": 0.724,
+    "sy": 0.2,
+    "minY": 15.85,
+    "maxY": 16.05
+  },
+  {
+    "name": "Levator_nasolabialisl",
+    "x": 0.134,
+    "y": 16.146,
+    "z": 0.776,
+    "sy": 0.291,
+    "minY": 16.001,
+    "maxY": 16.292
+  },
+  {
+    "name": "Levator_labii_superiorisl",
+    "x": 0.253,
+    "y": 16.043,
+    "z": 0.732,
+    "sy": 0.289,
+    "minY": 15.898,
+    "maxY": 16.188
+  },
+  {
+    "name": "Nasalis_muscler",
+    "x": -0.082,
+    "y": 16.258,
+    "z": 0.86,
+    "sy": 0.403,
+    "minY": 16.057,
+    "maxY": 16.46
+  },
+  {
+    "name": "Procerus_muscler",
+    "x": -0.116,
+    "y": 16.545,
+    "z": 0.832,
+    "sy": 0.365,
+    "minY": 16.363,
+    "maxY": 16.728
+  },
+  {
+    "name": "Levator_anguli_orisr",
+    "x": -0.205,
+    "y": 15.95,
+    "z": 0.724,
+    "sy": 0.2,
+    "minY": 15.85,
+    "maxY": 16.05
+  },
+  {
+    "name": "Bucinatorl",
+    "x": 0.283,
+    "y": 15.754,
+    "z": 0.534,
+    "sy": 0.363,
+    "minY": 15.573,
+    "maxY": 15.936
+  },
+  {
+    "name": "Depressor_labii_inferiorisr",
+    "x": -0.159,
+    "y": 15.576,
+    "z": 0.688,
+    "sy": 0.295,
+    "minY": 15.429,
+    "maxY": 15.724
+  },
+  {
+    "name": "Risorius_muscler",
+    "x": -0.385,
+    "y": 15.712,
+    "z": 0.544,
+    "sy": 0.271,
+    "minY": 15.576,
+    "maxY": 15.847
+  },
+  {
+    "name": "Temporalis_musclel",
+    "x": 0.573,
+    "y": 16.465,
+    "z": 0.033,
+    "sy": 1.159,
+    "minY": 15.886,
+    "maxY": 17.044
+  },
+  {
+    "name": "Superficial_part_of_masseterl",
+    "x": 0.494,
+    "y": 15.858,
+    "z": 0.337,
+    "sy": 0.621,
+    "minY": 15.548,
+    "maxY": 16.168
+  },
+  {
+    "name": "Inferior_head_of_lateral_pterygoid_muscler",
+    "x": -0.343,
+    "y": 16.089,
+    "z": 0.16,
+    "sy": 0.225,
+    "minY": 15.976,
+    "maxY": 16.201
+  },
+  {
+    "name": "Deep_part_of_masseterr",
+    "x": -0.483,
+    "y": 15.887,
+    "z": 0.236,
+    "sy": 0.654,
+    "minY": 15.56,
+    "maxY": 16.214
+  },
+  {
+    "name": "Superior_head_of_lateral_pterygoid_muscler",
+    "x": -0.323,
+    "y": 16.192,
+    "z": 0.181,
+    "sy": 0.147,
+    "minY": 16.118,
+    "maxY": 16.266
+  },
+  {
+    "name": "Deep_part_of_masseterl",
+    "x": 0.483,
+    "y": 15.887,
+    "z": 0.236,
+    "sy": 0.654,
+    "minY": 15.56,
+    "maxY": 16.214
+  },
+  {
+    "name": "Superficial_part_of_masseterr",
+    "x": -0.494,
+    "y": 15.858,
+    "z": 0.337,
+    "sy": 0.621,
+    "minY": 15.548,
+    "maxY": 16.168
+  },
+  {
+    "name": "Superior_head_of_lateral_pterygoid_musclel",
+    "x": 0.323,
+    "y": 16.192,
+    "z": 0.181,
+    "sy": 0.147,
+    "minY": 16.118,
+    "maxY": 16.266
+  },
+  {
+    "name": "Medial_pterygoid_musclel",
+    "x": 0.257,
+    "y": 15.94,
+    "z": 0.234,
+    "sy": 0.492,
+    "minY": 15.694,
+    "maxY": 16.186
+  },
+  {
+    "name": "Medial_pterygoid_muscler",
+    "x": -0.257,
+    "y": 15.94,
+    "z": 0.234,
+    "sy": 0.492,
+    "minY": 15.694,
+    "maxY": 16.186
+  },
+  {
+    "name": "Inferior_head_of_lateral_pterygoid_musclel",
+    "x": 0.343,
+    "y": 16.089,
+    "z": 0.16,
+    "sy": 0.225,
+    "minY": 15.976,
+    "maxY": 16.201
+  },
+  {
+    "name": "Temporalis_muscler",
+    "x": -0.573,
+    "y": 16.465,
+    "z": 0.033,
+    "sy": 1.159,
+    "minY": 15.886,
+    "maxY": 17.044
+  },
+  {
+    "name": "Trochlea_of_superior_oblique_muscler",
+    "x": -0.146,
+    "y": 16.494,
+    "z": 0.723,
+    "sy": 0.037,
+    "minY": 16.476,
+    "maxY": 16.513
+  },
+  {
+    "name": "Inferior_rectus_muscler",
+    "x": -0.245,
+    "y": 16.3,
+    "z": 0.485,
+    "sy": 0.238,
+    "minY": 16.181,
+    "maxY": 16.42
+  },
+  {
+    "name": "Inferior_tarsusr",
+    "x": -0.314,
+    "y": 16.262,
+    "z": 0.694,
+    "sy": 0.081,
+    "minY": 16.221,
+    "maxY": 16.302
+  },
+  {
+    "name": "Levator_palpebrae_superiorisr",
+    "x": -0.282,
+    "y": 16.435,
+    "z": 0.511,
+    "sy": 0.174,
+    "minY": 16.348,
+    "maxY": 16.522
+  },
+  {
+    "name": "Superior_tarsusl",
+    "x": 0.312,
+    "y": 16.401,
+    "z": 0.694,
+    "sy": 0.119,
+    "minY": 16.342,
+    "maxY": 16.46
+  },
+  {
+    "name": "Medial_rectus_muscler",
+    "x": -0.175,
+    "y": 16.357,
+    "z": 0.499,
+    "sy": 0.188,
+    "minY": 16.263,
+    "maxY": 16.451
+  },
+  {
+    "name": "Common_tendinous_ringl",
+    "x": 0.163,
+    "y": 16.422,
+    "z": 0.307,
+    "sy": 0.068,
+    "minY": 16.388,
+    "maxY": 16.456
+  },
+  {
+    "name": "Inferior_rectus_musclel",
+    "x": 0.245,
+    "y": 16.3,
+    "z": 0.485,
+    "sy": 0.238,
+    "minY": 16.181,
+    "maxY": 16.42
+  },
+  {
+    "name": "Superior_tarsusr",
+    "x": -0.312,
+    "y": 16.401,
+    "z": 0.694,
+    "sy": 0.119,
+    "minY": 16.342,
+    "maxY": 16.46
+  },
+  {
+    "name": "Superior_rectus_musclel",
+    "x": 0.253,
+    "y": 16.437,
+    "z": 0.499,
+    "sy": 0.08,
+    "minY": 16.397,
+    "maxY": 16.477
+  },
+  {
+    "name": "Inferior_tarsusl",
+    "x": 0.314,
+    "y": 16.262,
+    "z": 0.694,
+    "sy": 0.081,
+    "minY": 16.221,
+    "maxY": 16.302
+  },
+  {
+    "name": "Superior_oblique_musclel",
+    "x": 0.266,
+    "y": 16.436,
+    "z": 0.524,
+    "sy": 0.126,
+    "minY": 16.373,
+    "maxY": 16.499
+  },
+  {
+    "name": "Medial_rectus_musclel",
+    "x": 0.175,
+    "y": 16.357,
+    "z": 0.499,
+    "sy": 0.188,
+    "minY": 16.263,
+    "maxY": 16.451
+  },
+  {
+    "name": "Trochlea_of_superior_oblique_musclel",
+    "x": 0.146,
+    "y": 16.494,
+    "z": 0.723,
+    "sy": 0.037,
+    "minY": 16.476,
+    "maxY": 16.513
+  },
+  {
+    "name": "Inferior_oblique_musclel",
+    "x": 0.285,
+    "y": 16.262,
+    "z": 0.625,
+    "sy": 0.171,
+    "minY": 16.177,
+    "maxY": 16.347
+  },
+  {
+    "name": "Inferior_oblique_muscler",
+    "x": -0.285,
+    "y": 16.262,
+    "z": 0.625,
+    "sy": 0.171,
+    "minY": 16.177,
+    "maxY": 16.347
+  },
+  {
+    "name": "Common_tendinous_ringr",
+    "x": -0.163,
+    "y": 16.422,
+    "z": 0.307,
+    "sy": 0.068,
+    "minY": 16.388,
+    "maxY": 16.456
+  },
+  {
+    "name": "Levator_palpebrae_superiorisl",
+    "x": 0.282,
+    "y": 16.435,
+    "z": 0.511,
+    "sy": 0.174,
+    "minY": 16.348,
+    "maxY": 16.522
+  },
+  {
+    "name": "Superior_oblique_muscler",
+    "x": -0.266,
+    "y": 16.436,
+    "z": 0.524,
+    "sy": 0.126,
+    "minY": 16.373,
+    "maxY": 16.499
+  },
+  {
+    "name": "Lateral_rectus_muscler",
+    "x": -0.309,
+    "y": 16.364,
+    "z": 0.477,
+    "sy": 0.186,
+    "minY": 16.271,
+    "maxY": 16.457
+  },
+  {
+    "name": "Superior_rectus_muscler",
+    "x": -0.253,
+    "y": 16.437,
+    "z": 0.499,
+    "sy": 0.08,
+    "minY": 16.397,
+    "maxY": 16.477
+  },
+  {
+    "name": "Lateral_rectus_musclel",
+    "x": 0.309,
+    "y": 16.364,
+    "z": 0.477,
+    "sy": 0.186,
+    "minY": 16.271,
+    "maxY": 16.457
+  },
+  {
+    "name": "Cross_Section_Z001",
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "sy": 0,
+    "minY": null,
+    "maxY": null
+  },
+  {
+    "name": "External_anal_sphincterr",
+    "x": -0.061,
+    "y": 8.54,
+    "z": -0.597,
+    "sy": 0.216,
+    "minY": 8.432,
+    "maxY": 8.648
+  },
+  {
+    "name": "External_anal_sphincterl",
+    "x": 0.061,
+    "y": 8.54,
+    "z": -0.597,
+    "sy": 0.216,
+    "minY": 8.432,
+    "maxY": 8.648
+  },
+  {
+    "name": "Pubo-analis_muscler",
+    "x": -0.152,
+    "y": 8.682,
+    "z": -0.247,
+    "sy": 0.302,
+    "minY": 8.531,
+    "maxY": 8.833
+  },
+  {
+    "name": "Pubococcygeus_musclel",
+    "x": 0.165,
+    "y": 8.817,
+    "z": -0.318,
+    "sy": 0.483,
+    "minY": 8.576,
+    "maxY": 9.058
+  },
+  {
+    "name": "Tendinous_arch_of_levator_anir",
+    "x": -0.349,
+    "y": 8.943,
+    "z": -0.175,
+    "sy": 0.341,
+    "minY": 8.773,
+    "maxY": 9.113
+  },
+  {
+    "name": "Iliococcygeus_musclel",
+    "x": 0.23,
+    "y": 8.888,
+    "z": -0.356,
+    "sy": 0.447,
+    "minY": 8.665,
+    "maxY": 9.112
+  },
+  {
+    "name": "Pubo-analis_musclel",
+    "x": 0.152,
+    "y": 8.682,
+    "z": -0.247,
+    "sy": 0.302,
+    "minY": 8.531,
+    "maxY": 8.833
+  },
+  {
+    "name": "Tendinous_arch_of_levator_anil",
+    "x": 0.349,
+    "y": 8.943,
+    "z": -0.175,
+    "sy": 0.341,
+    "minY": 8.773,
+    "maxY": 9.113
+  },
+  {
+    "name": "Pubococcygeus_muscler",
+    "x": -0.165,
+    "y": 8.817,
+    "z": -0.318,
+    "sy": 0.483,
+    "minY": 8.576,
+    "maxY": 9.058
+  },
+  {
+    "name": "Iliococcygeus_muscler",
+    "x": -0.23,
+    "y": 8.888,
+    "z": -0.356,
+    "sy": 0.447,
+    "minY": 8.665,
+    "maxY": 9.112
+  },
+  {
+    "name": "Coccygeus_musclel",
+    "x": 0.246,
+    "y": 9.001,
+    "z": -0.66,
+    "sy": 0.41,
+    "minY": 8.796,
+    "maxY": 9.206
+  },
+  {
+    "name": "Coccygeus_muscler",
+    "x": -0.246,
+    "y": 9.001,
+    "z": -0.66,
+    "sy": 0.41,
+    "minY": 8.796,
+    "maxY": 9.206
+  },
+  {
+    "name": "Rectus_posterior_major_capitis_musclel",
+    "x": 0.179,
+    "y": 15.803,
+    "z": -0.52,
+    "sy": 0.466,
+    "minY": 15.57,
+    "maxY": 16.036
+  },
+  {
+    "name": "Obliquus_superior_capitis_muscler",
+    "x": -0.356,
+    "y": 15.952,
+    "z": -0.437,
+    "sy": 0.229,
+    "minY": 15.837,
+    "maxY": 16.066
+  },
+  {
+    "name": "Rectus_posterior_minor_capitis_musclel",
+    "x": 0.119,
+    "y": 15.94,
+    "z": -0.59,
+    "sy": 0.26,
+    "minY": 15.811,
+    "maxY": 16.07
+  },
+  {
+    "name": "Obliquus_inferior_capitis_musclel",
+    "x": 0.222,
+    "y": 15.686,
+    "z": -0.36,
+    "sy": 0.315,
+    "minY": 15.529,
+    "maxY": 15.843
+  },
+  {
+    "name": "Rectus_posterior_major_capitis_muscler",
+    "x": -0.179,
+    "y": 15.803,
+    "z": -0.52,
+    "sy": 0.466,
+    "minY": 15.57,
+    "maxY": 16.036
+  },
+  {
+    "name": "Rectus_posterior_minor_capitis_muscler",
+    "x": -0.119,
+    "y": 15.94,
+    "z": -0.59,
+    "sy": 0.26,
+    "minY": 15.811,
+    "maxY": 16.07
+  },
+  {
+    "name": "Obliquus_inferior_capitis_muscler",
+    "x": -0.222,
+    "y": 15.686,
+    "z": -0.36,
+    "sy": 0.315,
+    "minY": 15.529,
+    "maxY": 15.843
+  },
+  {
+    "name": "Obliquus_superior_capitis_musclel",
+    "x": 0.356,
+    "y": 15.952,
+    "z": -0.437,
+    "sy": 0.229,
+    "minY": 15.837,
+    "maxY": 16.066
+  },
+  {
+    "name": "Iliocostalis_thoracis_muscler",
+    "x": -0.661,
+    "y": 13.244,
+    "z": -0.661,
+    "sy": 3.163,
+    "minY": 11.663,
+    "maxY": 14.825
+  },
+  {
+    "name": "Iliocostalis_lumborum_muscler",
+    "x": -0.573,
+    "y": 11.216,
+    "z": -0.743,
+    "sy": 3.9,
+    "minY": 9.266,
+    "maxY": 13.166
+  },
+  {
+    "name": "Iliocostalis_thoracis_musclel",
+    "x": 0.661,
+    "y": 13.244,
+    "z": -0.661,
+    "sy": 3.163,
+    "minY": 11.663,
+    "maxY": 14.825
+  },
+  {
+    "name": "Iliocostalis_colli_muscler",
+    "x": -0.497,
+    "y": 14.464,
+    "z": -0.566,
+    "sy": 1.763,
+    "minY": 13.582,
+    "maxY": 15.345
+  },
+  {
+    "name": "Iliocostalis_lumborum_musclel",
+    "x": 0.573,
+    "y": 11.216,
+    "z": -0.743,
+    "sy": 3.9,
+    "minY": 9.266,
+    "maxY": 13.166
+  },
+  {
+    "name": "Iliocostalis_colli_muscle",
+    "x": 0.497,
+    "y": 14.464,
+    "z": -0.566,
+    "sy": 1.763,
+    "minY": 13.582,
+    "maxY": 15.345
+  },
+  {
+    "name": "Spinalis_capitis_muscler",
+    "x": -0.235,
+    "y": 15.537,
+    "z": -0.552,
+    "sy": 1.24,
+    "minY": 14.917,
+    "maxY": 16.157
+  },
+  {
+    "name": "Spinalis_thoracis_musclel",
+    "x": 0.054,
+    "y": 12.65,
+    "z": -0.812,
+    "sy": 3.772,
+    "minY": 10.764,
+    "maxY": 14.537
+  },
+  {
+    "name": "Spinalis_thoracis_muscler",
+    "x": -0.054,
+    "y": 12.65,
+    "z": -0.812,
+    "sy": 3.772,
+    "minY": 10.764,
+    "maxY": 14.537
+  },
+  {
+    "name": "Spinalis_colli_musclel",
+    "x": 0.053,
+    "y": 15.021,
+    "z": -0.69,
+    "sy": 1.057,
+    "minY": 14.493,
+    "maxY": 15.55
+  },
+  {
+    "name": "Spinalis_colli_muscler",
+    "x": -0.053,
+    "y": 15.021,
+    "z": -0.69,
+    "sy": 1.057,
+    "minY": 14.493,
+    "maxY": 15.55
+  },
+  {
+    "name": "Spinalis_capitis_musclel",
+    "x": 0.235,
+    "y": 15.537,
+    "z": -0.552,
+    "sy": 1.24,
+    "minY": 14.917,
+    "maxY": 16.157
+  },
+  {
+    "name": "Longissimus_colli_muscler",
+    "x": -0.326,
+    "y": 14.675,
+    "z": -0.549,
+    "sy": 1.893,
+    "minY": 13.728,
+    "maxY": 15.621
+  },
+  {
+    "name": "Longissimus_capitis_muscler",
+    "x": -0.428,
+    "y": 15.34,
+    "z": -0.445,
+    "sy": 1.571,
+    "minY": 14.555,
+    "maxY": 16.126
+  },
+  {
+    "name": "Longissimus_capitis_musclel",
+    "x": 0.428,
+    "y": 15.34,
+    "z": -0.445,
+    "sy": 1.571,
+    "minY": 14.555,
+    "maxY": 16.126
+  },
+  {
+    "name": "Longissimus_thoracis_muscler",
+    "x": -0.344,
+    "y": 12.177,
+    "z": -0.68,
+    "sy": 5.479,
+    "minY": 9.438,
+    "maxY": 14.917
+  },
+  {
+    "name": "Longissimus_colli_musclel",
+    "x": 0.326,
+    "y": 14.675,
+    "z": -0.549,
+    "sy": 1.893,
+    "minY": 13.728,
+    "maxY": 15.621
+  },
+  {
+    "name": "Longissimus_thoracis_musclel",
+    "x": 0.344,
+    "y": 12.177,
+    "z": -0.68,
+    "sy": 5.479,
+    "minY": 9.438,
+    "maxY": 14.917
+  },
+  {
+    "name": "Rotatoresr",
+    "x": -0.195,
+    "y": 12.455,
+    "z": -0.654,
+    "sy": 6.35,
+    "minY": 9.28,
+    "maxY": 15.63
+  },
+  {
+    "name": "Rotatoresl",
+    "x": 0.195,
+    "y": 12.455,
+    "z": -0.654,
+    "sy": 6.35,
+    "minY": 9.28,
+    "maxY": 15.63
+  },
+  {
+    "name": "Semispinalis_colli_muscler",
+    "x": -0.171,
+    "y": 14.745,
+    "z": -0.605,
+    "sy": 1.424,
+    "minY": 14.033,
+    "maxY": 15.457
+  },
+  {
+    "name": "Semispinalis_thoracis_muscler",
+    "x": -0.164,
+    "y": 13.329,
+    "z": -0.819,
+    "sy": 2.811,
+    "minY": 11.924,
+    "maxY": 14.735
+  },
+  {
+    "name": "Semispinalis_thoracis_musclel",
+    "x": 0.164,
+    "y": 13.329,
+    "z": -0.819,
+    "sy": 2.811,
+    "minY": 11.924,
+    "maxY": 14.735
+  },
+  {
+    "name": "Semispinalis_colli_musclel",
+    "x": 0.171,
+    "y": 14.745,
+    "z": -0.605,
+    "sy": 1.424,
+    "minY": 14.033,
+    "maxY": 15.457
+  },
+  {
+    "name": "Multifidus_thoracis_muscler",
+    "x": -0.152,
+    "y": 13.41,
+    "z": -0.714,
+    "sy": 3.077,
+    "minY": 11.872,
+    "maxY": 14.948
+  },
+  {
+    "name": "Multifidus_lumborum_muscler",
+    "x": -0.248,
+    "y": 11.166,
+    "z": -0.511,
+    "sy": 1.613,
+    "minY": 10.359,
+    "maxY": 11.973
+  },
+  {
+    "name": "Multifidus_colli_musclel",
+    "x": 0.141,
+    "y": 15.324,
+    "z": -0.385,
+    "sy": 0.98,
+    "minY": 14.833,
+    "maxY": 15.814
+  },
+  {
+    "name": "Multifidus_lumborum_musclel",
+    "x": 0.248,
+    "y": 11.166,
+    "z": -0.511,
+    "sy": 1.613,
+    "minY": 10.359,
+    "maxY": 11.973
+  },
+  {
+    "name": "Multifidus_thoracis_musclel",
+    "x": 0.152,
+    "y": 13.41,
+    "z": -0.714,
+    "sy": 3.077,
+    "minY": 11.872,
+    "maxY": 14.948
+  },
+  {
+    "name": "Multifidus_colli_muscler",
+    "x": -0.141,
+    "y": 15.324,
+    "z": -0.385,
+    "sy": 0.98,
+    "minY": 14.833,
+    "maxY": 15.814
+  },
+  {
+    "name": "Interspinales_colli_musclesr",
+    "x": -0.039,
+    "y": 15.361,
+    "z": -0.597,
+    "sy": 0.903,
+    "minY": 14.909,
+    "maxY": 15.812
+  },
+  {
+    "name": "Interspinales_thoracis_musclesr",
+    "x": -0.036,
+    "y": 14.467,
+    "z": -0.927,
+    "sy": 0.448,
+    "minY": 14.243,
+    "maxY": 14.692
+  },
+  {
+    "name": "Interspinales_thoracis_musclesl",
+    "x": 0.036,
+    "y": 14.467,
+    "z": -0.927,
+    "sy": 0.448,
+    "minY": 14.243,
+    "maxY": 14.692
+  },
+  {
+    "name": "Interspinales_lumborum_musclesr",
+    "x": -0.032,
+    "y": 11.103,
+    "z": -0.725,
+    "sy": 1.602,
+    "minY": 10.302,
+    "maxY": 11.904
+  },
+  {
+    "name": "Interspinales_lumborum_musclesl",
+    "x": 0.032,
+    "y": 11.103,
+    "z": -0.725,
+    "sy": 1.602,
+    "minY": 10.302,
+    "maxY": 11.904
+  },
+  {
+    "name": "Interspinales_colli_musclesl",
+    "x": 0.039,
+    "y": 15.361,
+    "z": -0.597,
+    "sy": 0.903,
+    "minY": 14.909,
+    "maxY": 15.812
+  },
+  {
+    "name": "Splenius_capitis_muscler",
+    "x": -0.299,
+    "y": 15.082,
+    "z": -0.642,
+    "sy": 2.155,
+    "minY": 14.004,
+    "maxY": 16.159
+  },
+  {
+    "name": "Splenius_colli_muscler",
+    "x": -0.208,
+    "y": 14.568,
+    "z": -0.614,
+    "sy": 2.574,
+    "minY": 13.281,
+    "maxY": 15.855
+  },
+  {
+    "name": "Splenius_colli_musclel",
+    "x": 0.208,
+    "y": 14.568,
+    "z": -0.614,
+    "sy": 2.574,
+    "minY": 13.281,
+    "maxY": 15.855
+  },
+  {
+    "name": "Splenius_capitis_musclel",
+    "x": 0.299,
+    "y": 15.082,
+    "z": -0.642,
+    "sy": 2.155,
+    "minY": 14.004,
+    "maxY": 16.159
+  },
+  {
+    "name": "Ventral_parts_of_lateral_intertransversarii_lumborum_musclesl",
+    "x": 0.25,
+    "y": 10.935,
+    "z": -0.289,
+    "sy": 1.165,
+    "minY": 10.353,
+    "maxY": 11.517
+  },
+  {
+    "name": "Levator_scapulaer",
+    "x": -0.559,
+    "y": 15.056,
+    "z": -0.555,
+    "sy": 1.528,
+    "minY": 14.292,
+    "maxY": 15.82
+  },
+  {
+    "name": "Latissimus_dorsi_muscler",
+    "x": -0.911,
+    "y": 11.795,
+    "z": -0.722,
+    "sy": 4.101,
+    "minY": 9.744,
+    "maxY": 13.846
+  },
+  {
+    "name": "Levator_scapulael",
+    "x": 0.559,
+    "y": 15.056,
+    "z": -0.555,
+    "sy": 1.528,
+    "minY": 14.292,
+    "maxY": 15.82
+  },
+  {
+    "name": "Rhomboid_minor_muscler",
+    "x": -0.316,
+    "y": 14.528,
+    "z": -0.882,
+    "sy": 1.01,
+    "minY": 14.023,
+    "maxY": 15.033
+  },
+  {
+    "name": "Serratus_posterior_superior_musclel",
+    "x": 0.512,
+    "y": 14.437,
+    "z": -0.637,
+    "sy": 1.257,
+    "minY": 13.808,
+    "maxY": 15.065
+  },
+  {
+    "name": "Rhomboid_minor_musclel",
+    "x": 0.316,
+    "y": 14.528,
+    "z": -0.882,
+    "sy": 1.01,
+    "minY": 14.023,
+    "maxY": 15.033
+  },
+  {
+    "name": "Transverse_part_of_trapezius_muscler",
+    "x": -0.814,
+    "y": 14.529,
+    "z": -0.753,
+    "sy": 0.811,
+    "minY": 14.123,
+    "maxY": 14.934
+  },
+  {
+    "name": "Ascending_part_of_trapezius_muscler",
+    "x": -0.635,
+    "y": 15.377,
+    "z": -0.488,
+    "sy": 1.591,
+    "minY": 14.581,
+    "maxY": 16.173
+  },
+  {
+    "name": "Ascending_part_of_trapezius_musclel",
+    "x": 0.635,
+    "y": 15.377,
+    "z": -0.488,
+    "sy": 1.591,
+    "minY": 14.581,
+    "maxY": 16.173
+  },
+  {
+    "name": "Transverse_part_of_trapezius_musclel",
+    "x": 0.814,
+    "y": 14.529,
+    "z": -0.753,
+    "sy": 0.811,
+    "minY": 14.123,
+    "maxY": 14.934
+  },
+  {
+    "name": "Descending_part_of_trapezius_muscler",
+    "x": -0.679,
+    "y": 13.099,
+    "z": -1.027,
+    "sy": 2.94,
+    "minY": 11.629,
+    "maxY": 14.569
+  },
+  {
+    "name": "Descending_part_of_trapezius_musclel",
+    "x": 0.679,
+    "y": 13.099,
+    "z": -1.027,
+    "sy": 2.94,
+    "minY": 11.629,
+    "maxY": 14.569
+  },
+  {
+    "name": "Serratus_posterior_inferior_musclel",
+    "x": 0.542,
+    "y": 11.537,
+    "z": -0.793,
+    "sy": 1.785,
+    "minY": 10.645,
+    "maxY": 12.43
+  },
+  {
+    "name": "Latissimus_dorsi_musclel",
+    "x": 0.911,
+    "y": 11.795,
+    "z": -0.722,
+    "sy": 4.101,
+    "minY": 9.744,
+    "maxY": 13.846
+  },
+  {
+    "name": "Rhomboid_major_muscler",
+    "x": -0.432,
+    "y": 13.919,
+    "z": -1.01,
+    "sy": 1.8,
+    "minY": 13.02,
+    "maxY": 14.819
+  },
+  {
+    "name": "Dorsal_parts_of_lateral_intertransversarii_lumborum_musclesl",
+    "x": 0.343,
+    "y": 11.144,
+    "z": -0.438,
+    "sy": 1.501,
+    "minY": 10.393,
+    "maxY": 11.894
+  },
+  {
+    "name": "Ventral_parts_of_lateral_intertransversarii_lumborum_musclesr",
+    "x": -0.25,
+    "y": 10.935,
+    "z": -0.289,
+    "sy": 1.165,
+    "minY": 10.353,
+    "maxY": 11.517
+  },
+  {
+    "name": "Dorsal_parts_of_lateral_intertransversarii_lumborum_musclesr",
+    "x": -0.343,
+    "y": 11.144,
+    "z": -0.438,
+    "sy": 1.501,
+    "minY": 10.393,
+    "maxY": 11.894
+  },
+  {
+    "name": "Serratus_posterior_superior_muscler",
+    "x": -0.512,
+    "y": 14.437,
+    "z": -0.637,
+    "sy": 1.257,
+    "minY": 13.808,
+    "maxY": 15.065
+  },
+  {
+    "name": "Serratus_posterior_inferior_muscler",
+    "x": -0.542,
+    "y": 11.537,
+    "z": -0.793,
+    "sy": 1.785,
+    "minY": 10.645,
+    "maxY": 12.43
+  },
+  {
+    "name": "Rhomboid_major_musclel",
+    "x": 0.432,
+    "y": 13.919,
+    "z": -1.01,
+    "sy": 1.8,
+    "minY": 13.02,
+    "maxY": 14.819
+  },
+  {
+    "name": "Brachialis_muscler",
+    "x": -2.123,
+    "y": 12.111,
+    "z": -0.318,
+    "sy": 2.321,
+    "minY": 10.95,
+    "maxY": 13.272
+  },
+  {
+    "name": "Brachialis_musclel",
+    "x": 2.123,
+    "y": 12.111,
+    "z": -0.318,
+    "sy": 2.321,
+    "minY": 10.95,
+    "maxY": 13.272
+  },
+  {
+    "name": "Short_head_of_biceps_brachiir",
+    "x": -1.788,
+    "y": 13.034,
+    "z": -0.124,
+    "sy": 2.729,
+    "minY": 11.67,
+    "maxY": 14.398
+  },
+  {
+    "name": "Long_head_of_biceps_brachiir",
+    "x": -1.898,
+    "y": 12.721,
+    "z": -0.196,
+    "sy": 3.569,
+    "minY": 10.937,
+    "maxY": 14.506
+  },
+  {
+    "name": "Long_head_of_biceps_brachiil",
+    "x": 1.898,
+    "y": 12.721,
+    "z": -0.196,
+    "sy": 3.569,
+    "minY": 10.937,
+    "maxY": 14.506
+  },
+  {
+    "name": "Short_head_of_biceps_brachiil",
+    "x": 1.788,
+    "y": 13.034,
+    "z": -0.124,
+    "sy": 2.729,
+    "minY": 11.67,
+    "maxY": 14.398
+  },
+  {
+    "name": "Coracobrachialis_musclel",
+    "x": 1.651,
+    "y": 13.55,
+    "z": -0.216,
+    "sy": 1.586,
+    "minY": 12.757,
+    "maxY": 14.343
+  },
+  {
+    "name": "Coracobrachialis_muscler",
+    "x": -1.651,
+    "y": 13.55,
+    "z": -0.216,
+    "sy": 1.586,
+    "minY": 12.757,
+    "maxY": 14.343
+  },
+  {
+    "name": "Flexor_digitorum_profundusl",
+    "x": 2.636,
+    "y": 9.37,
+    "z": 0.239,
+    "sy": 3.648,
+    "minY": 7.546,
+    "maxY": 11.193
+  },
+  {
+    "name": "Pronator_quadratusr",
+    "x": -2.572,
+    "y": 9.401,
+    "z": 0.099,
+    "sy": 0.521,
+    "minY": 9.141,
+    "maxY": 9.662
+  },
+  {
+    "name": "Flexor_digitorum_profundusr",
+    "x": -2.636,
+    "y": 9.37,
+    "z": 0.239,
+    "sy": 3.648,
+    "minY": 7.546,
+    "maxY": 11.193
+  },
+  {
+    "name": "Flexor_pollicis_longusr",
+    "x": -2.852,
+    "y": 9.457,
+    "z": 0.228,
+    "sy": 2.38,
+    "minY": 8.267,
+    "maxY": 10.646
+  },
+  {
+    "name": "Pronator_quadratusl",
+    "x": 2.572,
+    "y": 9.401,
+    "z": 0.099,
+    "sy": 0.521,
+    "minY": 9.141,
+    "maxY": 9.662
+  },
+  {
+    "name": "Flexor_pollicis_longusl",
+    "x": 2.852,
+    "y": 9.457,
+    "z": 0.228,
+    "sy": 2.38,
+    "minY": 8.267,
+    "maxY": 10.646
+  },
+  {
+    "name": "Humeral_head_of_flexor_carpi_ulnarisr",
+    "x": -2.189,
+    "y": 10.12,
+    "z": -0.06,
+    "sy": 2.755,
+    "minY": 8.743,
+    "maxY": 11.498
+  },
+  {
+    "name": "Humero-ulnar_head_of_flexor_digitorum_superficialisr",
+    "x": -2.498,
+    "y": 9.599,
+    "z": 0.136,
+    "sy": 3.895,
+    "minY": 7.652,
+    "maxY": 11.547
+  },
+  {
+    "name": "Superficial_head_of_pronator_teresl",
+    "x": 2.296,
+    "y": 10.921,
+    "z": -0.201,
+    "sy": 1.505,
+    "minY": 10.168,
+    "maxY": 11.674
+  },
+  {
+    "name": "Radial_head_of_flexor_digitorum_superficialisr",
+    "x": -2.476,
+    "y": 9.996,
+    "z": 0.028,
+    "sy": 1.848,
+    "minY": 9.072,
+    "maxY": 10.92
+  },
+  {
+    "name": "Deep_head_of_pronator_teresl",
+    "x": 2.377,
+    "y": 10.755,
+    "z": -0.189,
+    "sy": 0.97,
+    "minY": 10.27,
+    "maxY": 11.241
+  },
+  {
+    "name": "Palmaris_longus_muscler",
+    "x": -2.424,
+    "y": 9.899,
+    "z": 0.062,
+    "sy": 3.311,
+    "minY": 8.243,
+    "maxY": 11.554
+  },
+  {
+    "name": "Humeral_head_of_flexor_carpi_ulnarisl",
+    "x": 2.189,
+    "y": 10.12,
+    "z": -0.06,
+    "sy": 2.755,
+    "minY": 8.743,
+    "maxY": 11.498
+  },
+  {
+    "name": "Flexor_carpi_radialisl",
+    "x": 2.356,
+    "y": 10.163,
+    "z": -0.009,
+    "sy": 2.856,
+    "minY": 8.735,
+    "maxY": 11.591
+  },
+  {
+    "name": "Palmaris_longus_musclel",
+    "x": 2.424,
+    "y": 9.899,
+    "z": 0.062,
+    "sy": 3.311,
+    "minY": 8.243,
+    "maxY": 11.554
+  },
+  {
+    "name": "Superficial_head_of_pronator_teresr",
+    "x": -2.296,
+    "y": 10.921,
+    "z": -0.201,
+    "sy": 1.505,
+    "minY": 10.168,
+    "maxY": 11.674
+  },
+  {
+    "name": "Ulnar_head_of_flexor_carpi_ulnarisr",
+    "x": -2.161,
+    "y": 10.347,
+    "z": -0.237,
+    "sy": 2.2,
+    "minY": 9.248,
+    "maxY": 11.447
+  },
+  {
+    "name": "Flexor_carpi_radialisr",
+    "x": -2.356,
+    "y": 10.163,
+    "z": -0.009,
+    "sy": 2.856,
+    "minY": 8.735,
+    "maxY": 11.591
+  },
+  {
+    "name": "Radial_head_of_flexor_digitorum_superficialisl",
+    "x": 2.476,
+    "y": 9.996,
+    "z": 0.028,
+    "sy": 1.848,
+    "minY": 9.072,
+    "maxY": 10.92
+  },
+  {
+    "name": "Ulnar_head_of_flexor_carpi_ulnarisl",
+    "x": 2.161,
+    "y": 10.347,
+    "z": -0.237,
+    "sy": 2.2,
+    "minY": 9.248,
+    "maxY": 11.447
+  },
+  {
+    "name": "Humero-ulnar_head_of_flexor_digitorum_superficialisl",
+    "x": 2.498,
+    "y": 9.599,
+    "z": 0.136,
+    "sy": 3.895,
+    "minY": 7.652,
+    "maxY": 11.547
+  },
+  {
+    "name": "Deep_head_of_pronator_teresr",
+    "x": -2.377,
+    "y": 10.755,
+    "z": -0.189,
+    "sy": 0.97,
+    "minY": 10.27,
+    "maxY": 11.241
+  },
+  {
+    "name": "Anconeus_musclel",
+    "x": 2.249,
+    "y": 11.104,
+    "z": -0.518,
+    "sy": 1.046,
+    "minY": 10.581,
+    "maxY": 11.626
+  },
+  {
+    "name": "Extensor_carpi_radialis_brevisl",
+    "x": 2.586,
+    "y": 10.249,
+    "z": -0.223,
+    "sy": 3.125,
+    "minY": 8.687,
+    "maxY": 11.812
+  },
+  {
+    "name": "Humeral_head_of_extensor_carpi_ulnarisl",
+    "x": 2.352,
+    "y": 10.289,
+    "z": -0.241,
+    "sy": 2.887,
+    "minY": 8.845,
+    "maxY": 11.733
+  },
+  {
+    "name": "Anconeus_muscler",
+    "x": -2.249,
+    "y": 11.104,
+    "z": -0.518,
+    "sy": 1.046,
+    "minY": 10.581,
+    "maxY": 11.626
+  },
+  {
+    "name": "Extensor_carpi_radialis_longusl",
+    "x": 2.57,
+    "y": 10.383,
+    "z": -0.182,
+    "sy": 3.329,
+    "minY": 8.718,
+    "maxY": 12.047
+  },
+  {
+    "name": "Extensor_digiti_minimil",
+    "x": 2.426,
+    "y": 9.833,
+    "z": -0.063,
+    "sy": 3.357,
+    "minY": 8.155,
+    "maxY": 11.512
+  },
+  {
+    "name": "Extensor_digiti_minimir",
+    "x": -2.426,
+    "y": 9.833,
+    "z": -0.063,
+    "sy": 3.357,
+    "minY": 8.155,
+    "maxY": 11.512
+  },
+  {
+    "name": "Extensor_carpi_radialis_brevisr",
+    "x": -2.586,
+    "y": 10.249,
+    "z": -0.223,
+    "sy": 3.125,
+    "minY": 8.687,
+    "maxY": 11.812
+  },
+  {
+    "name": "Ulnar_head_of_extensor_carpi_ulnarisl",
+    "x": 2.317,
+    "y": 9.747,
+    "z": -0.069,
+    "sy": 2.048,
+    "minY": 8.723,
+    "maxY": 10.771
+  },
+  {
+    "name": "Brachioradialis_muscler",
+    "x": -2.522,
+    "y": 10.778,
+    "z": -0.157,
+    "sy": 3.488,
+    "minY": 9.034,
+    "maxY": 12.522
+  },
+  {
+    "name": "Extensor_carpi_radialis_longusr",
+    "x": -2.57,
+    "y": 10.383,
+    "z": -0.182,
+    "sy": 3.329,
+    "minY": 8.718,
+    "maxY": 12.047
+  },
+  {
+    "name": "Extensor_digitorumr",
+    "x": -2.723,
+    "y": 9.646,
+    "z": -0.009,
+    "sy": 3.943,
+    "minY": 7.675,
+    "maxY": 11.618
+  },
+  {
+    "name": "Extensor_digitoruml",
+    "x": 2.723,
+    "y": 9.646,
+    "z": -0.009,
+    "sy": 3.943,
+    "minY": 7.675,
+    "maxY": 11.618
+  },
+  {
+    "name": "Brachioradialis_musclel",
+    "x": 2.522,
+    "y": 10.778,
+    "z": -0.157,
+    "sy": 3.488,
+    "minY": 9.034,
+    "maxY": 12.522
+  },
+  {
+    "name": "Ulnar_head_of_extensor_carpi_ulnarisr",
+    "x": -2.317,
+    "y": 9.747,
+    "z": -0.069,
+    "sy": 2.048,
+    "minY": 8.723,
+    "maxY": 10.771
+  },
+  {
+    "name": "Humeral_head_of_extensor_carpi_ulnarisr",
+    "x": -2.352,
+    "y": 10.289,
+    "z": -0.241,
+    "sy": 2.887,
+    "minY": 8.845,
+    "maxY": 11.733
+  },
+  {
+    "name": "Extensor_pollicis_longusr",
+    "x": -2.807,
+    "y": 9.287,
+    "z": 0.154,
+    "sy": 2.09,
+    "minY": 8.242,
+    "maxY": 10.332
+  },
+  {
+    "name": "Extensor_indicisl",
+    "x": 2.772,
+    "y": 8.609,
+    "z": 0.306,
+    "sy": 2.059,
+    "minY": 7.58,
+    "maxY": 9.639
+  },
+  {
+    "name": "Extensor_pollicis_brevisr",
+    "x": -2.82,
+    "y": 9.206,
+    "z": 0.151,
+    "sy": 1.402,
+    "minY": 8.505,
+    "maxY": 9.907
+  },
+  {
+    "name": "Abductor_pollicis_longusr",
+    "x": -2.668,
+    "y": 9.758,
+    "z": -0.039,
+    "sy": 1.877,
+    "minY": 8.819,
+    "maxY": 10.696
+  },
+  {
+    "name": "Abductor_pollicis_longusl",
+    "x": 2.668,
+    "y": 9.758,
+    "z": -0.039,
+    "sy": 1.877,
+    "minY": 8.819,
+    "maxY": 10.696
+  },
+  {
+    "name": "Extensor_pollicis_longusl",
+    "x": 2.807,
+    "y": 9.287,
+    "z": 0.154,
+    "sy": 2.09,
+    "minY": 8.242,
+    "maxY": 10.332
+  },
+  {
+    "name": "Extensor_indicisr",
+    "x": -2.772,
+    "y": 8.609,
+    "z": 0.306,
+    "sy": 2.059,
+    "minY": 7.58,
+    "maxY": 9.639
+  },
+  {
+    "name": "Supinatorr",
+    "x": -2.458,
+    "y": 10.942,
+    "z": -0.323,
+    "sy": 1.279,
+    "minY": 10.302,
+    "maxY": 11.581
+  },
+  {
+    "name": "Supinatorl",
+    "x": 2.458,
+    "y": 10.942,
+    "z": -0.323,
+    "sy": 1.279,
+    "minY": 10.302,
+    "maxY": 11.581
+  },
+  {
+    "name": "Extensor_pollicis_brevisl",
+    "x": 2.82,
+    "y": 9.206,
+    "z": 0.151,
+    "sy": 1.402,
+    "minY": 8.505,
+    "maxY": 9.907
+  },
+  {
+    "name": "Supraspinatus_muscler",
+    "x": -1.322,
+    "y": 14.375,
+    "z": -0.566,
+    "sy": 0.327,
+    "minY": 14.212,
+    "maxY": 14.539
+  },
+  {
+    "name": "Subscapularis_musclel",
+    "x": 1.176,
+    "y": 13.775,
+    "z": -0.57,
+    "sy": 1.145,
+    "minY": 13.202,
+    "maxY": 14.347
+  },
+  {
+    "name": "Teres_minor_musclel",
+    "x": 1.491,
+    "y": 13.821,
+    "z": -0.625,
+    "sy": 0.894,
+    "minY": 13.374,
+    "maxY": 14.269
+  },
+  {
+    "name": "Subscapularis_muscler",
+    "x": -1.176,
+    "y": 13.775,
+    "z": -0.57,
+    "sy": 1.145,
+    "minY": 13.202,
+    "maxY": 14.347
+  },
+  {
+    "name": "Infraspinatus_musclel",
+    "x": 1.292,
+    "y": 13.854,
+    "z": -0.743,
+    "sy": 1.135,
+    "minY": 13.286,
+    "maxY": 14.421
+  },
+  {
+    "name": "Infraspinatus_muscler",
+    "x": -1.292,
+    "y": 13.854,
+    "z": -0.743,
+    "sy": 1.135,
+    "minY": 13.286,
+    "maxY": 14.421
+  },
+  {
+    "name": "Teres_minor_muscler",
+    "x": -1.491,
+    "y": 13.821,
+    "z": -0.625,
+    "sy": 0.894,
+    "minY": 13.374,
+    "maxY": 14.269
+  },
+  {
+    "name": "Supraspinatus_musclel",
+    "x": 1.322,
+    "y": 14.375,
+    "z": -0.566,
+    "sy": 0.327,
+    "minY": 14.212,
+    "maxY": 14.539
+  },
+  {
+    "name": "Clavicular_part_of_deltoid_muscler",
+    "x": -1.474,
+    "y": 13.886,
+    "z": -0.102,
+    "sy": 1.554,
+    "minY": 13.11,
+    "maxY": 14.663
+  },
+  {
+    "name": "Scapular_spinal_part_of_deltoid_musclel",
+    "x": 1.586,
+    "y": 13.717,
+    "z": -0.662,
+    "sy": 1.563,
+    "minY": 12.935,
+    "maxY": 14.498
+  },
+  {
+    "name": "Scapular_spinal_part_of_deltoid_muscler",
+    "x": -1.586,
+    "y": 13.717,
+    "z": -0.662,
+    "sy": 1.563,
+    "minY": 12.935,
+    "maxY": 14.498
+  },
+  {
+    "name": "Clavicular_part_of_deltoid_musclel",
+    "x": 1.474,
+    "y": 13.886,
+    "z": -0.102,
+    "sy": 1.554,
+    "minY": 13.11,
+    "maxY": 14.663
+  },
+  {
+    "name": "Acromial_part_of_deltoid_muscler",
+    "x": -1.97,
+    "y": 13.851,
+    "z": -0.343,
+    "sy": 1.475,
+    "minY": 13.113,
+    "maxY": 14.588
+  },
+  {
+    "name": "Acromial_part_of_deltoid_musclel",
+    "x": 1.97,
+    "y": 13.851,
+    "z": -0.343,
+    "sy": 1.475,
+    "minY": 13.113,
+    "maxY": 14.588
+  },
+  {
+    "name": "Teres_major_musclel",
+    "x": 1.415,
+    "y": 13.414,
+    "z": -0.618,
+    "sy": 0.86,
+    "minY": 12.984,
+    "maxY": 13.844
+  },
+  {
+    "name": "Teres_major_muscler",
+    "x": -1.416,
+    "y": 13.414,
+    "z": -0.618,
+    "sy": 0.86,
+    "minY": 12.984,
+    "maxY": 13.844
+  },
+  {
+    "name": "Palmar_interossei_musclesl",
+    "x": 2.446,
+    "y": 8.402,
+    "z": 0.342,
+    "sy": 0.382,
+    "minY": 8.211,
+    "maxY": 8.593
+  },
+  {
+    "name": "Abductor_digiti_minimi_of_handl",
+    "x": 2.367,
+    "y": 8.545,
+    "z": 0.363,
+    "sy": 0.67,
+    "minY": 8.21,
+    "maxY": 8.88
+  },
+  {
+    "name": "Superficial_head_of_flexor_pollicis_brevisl",
+    "x": 2.9,
+    "y": 8.746,
+    "z": 0.429,
+    "sy": 0.308,
+    "minY": 8.592,
+    "maxY": 8.901
+  },
+  {
+    "name": "Flexor_digiti_minimi_of_handl",
+    "x": 2.426,
+    "y": 8.542,
+    "z": 0.36,
+    "sy": 0.619,
+    "minY": 8.232,
+    "maxY": 8.851
+  },
+  {
+    "name": "Opponens_pollicis_muscler",
+    "x": -2.876,
+    "y": 8.731,
+    "z": 0.358,
+    "sy": 0.284,
+    "minY": 8.589,
+    "maxY": 8.873
+  },
+  {
+    "name": "Lumbrical_muscles_of_handr",
+    "x": -2.692,
+    "y": 8.211,
+    "z": 0.39,
+    "sy": 0.928,
+    "minY": 7.746,
+    "maxY": 8.675
+  },
+  {
+    "name": "Deep_head_of_flexor_pollicis_brevisr",
+    "x": -2.91,
+    "y": 8.83,
+    "z": 0.363,
+    "sy": 0.332,
+    "minY": 8.664,
+    "maxY": 8.997
+  },
+  {
+    "name": "Oblique_head_of_adductor_pollicisl",
+    "x": 2.868,
+    "y": 8.674,
+    "z": 0.314,
+    "sy": 0.311,
+    "minY": 8.519,
+    "maxY": 8.83
+  },
+  {
+    "name": "Palmar_interossei_musclesr",
+    "x": -2.446,
+    "y": 8.402,
+    "z": 0.342,
+    "sy": 0.382,
+    "minY": 8.211,
+    "maxY": 8.593
+  },
+  {
+    "name": "Lumbrical_muscles_of_handl",
+    "x": 2.692,
+    "y": 8.211,
+    "z": 0.39,
+    "sy": 0.928,
+    "minY": 7.746,
+    "maxY": 8.675
+  },
+  {
+    "name": "Transverse_head_of_adductor_pollicisr",
+    "x": -2.883,
+    "y": 8.499,
+    "z": 0.318,
+    "sy": 0.394,
+    "minY": 8.302,
+    "maxY": 8.696
+  },
+  {
+    "name": "Opponens_digiti_minimi_muscle_of_handl",
+    "x": 2.441,
+    "y": 8.598,
+    "z": 0.315,
+    "sy": 0.476,
+    "minY": 8.359,
+    "maxY": 8.836
+  },
+  {
+    "name": "Abductor_pollicis_brevisr",
+    "x": -2.921,
+    "y": 8.821,
+    "z": 0.343,
+    "sy": 0.395,
+    "minY": 8.624,
+    "maxY": 9.018
+  },
+  {
+    "name": "Oblique_head_of_adductor_pollicisr",
+    "x": -2.868,
+    "y": 8.674,
+    "z": 0.314,
+    "sy": 0.311,
+    "minY": 8.519,
+    "maxY": 8.83
+  },
+  {
+    "name": "Opponens_digiti_minimi_muscle_of_handr",
+    "x": -2.441,
+    "y": 8.598,
+    "z": 0.315,
+    "sy": 0.476,
+    "minY": 8.359,
+    "maxY": 8.836
+  },
+  {
+    "name": "Flexor_digiti_minimi_of_handr",
+    "x": -2.426,
+    "y": 8.542,
+    "z": 0.36,
+    "sy": 0.619,
+    "minY": 8.232,
+    "maxY": 8.851
+  },
+  {
+    "name": "Opponens_pollicis_musclel",
+    "x": 2.876,
+    "y": 8.731,
+    "z": 0.358,
+    "sy": 0.284,
+    "minY": 8.589,
+    "maxY": 8.873
+  },
+  {
+    "name": "Deep_head_of_flexor_pollicis_brevisl",
+    "x": 2.91,
+    "y": 8.83,
+    "z": 0.363,
+    "sy": 0.332,
+    "minY": 8.664,
+    "maxY": 8.997
+  },
+  {
+    "name": "Dorsal_interossei_muscles_of_handr",
+    "x": -2.747,
+    "y": 8.43,
+    "z": 0.282,
+    "sy": 0.711,
+    "minY": 8.074,
+    "maxY": 8.785
+  },
+  {
+    "name": "Superficial_head_of_flexor_pollicis_brevisr",
+    "x": -2.9,
+    "y": 8.746,
+    "z": 0.429,
+    "sy": 0.308,
+    "minY": 8.592,
+    "maxY": 8.901
+  },
+  {
+    "name": "Abductor_pollicis_brevisl",
+    "x": 2.921,
+    "y": 8.821,
+    "z": 0.343,
+    "sy": 0.395,
+    "minY": 8.624,
+    "maxY": 9.018
+  },
+  {
+    "name": "Abductor_digiti_minimi_of_handr",
+    "x": -2.367,
+    "y": 8.545,
+    "z": 0.363,
+    "sy": 0.67,
+    "minY": 8.21,
+    "maxY": 8.88
+  },
+  {
+    "name": "Transverse_head_of_adductor_pollicisl",
+    "x": 2.883,
+    "y": 8.499,
+    "z": 0.318,
+    "sy": 0.394,
+    "minY": 8.302,
+    "maxY": 8.696
+  },
+  {
+    "name": "Dorsal_interossei_muscles_of_handl",
+    "x": 2.747,
+    "y": 8.43,
+    "z": 0.282,
+    "sy": 0.711,
+    "minY": 8.074,
+    "maxY": 8.785
+  },
+  {
+    "name": "Medial_head_of_triceps_brachiil",
+    "x": 2.034,
+    "y": 12.471,
+    "z": -0.471,
+    "sy": 2.342,
+    "minY": 11.3,
+    "maxY": 13.642
+  },
+  {
+    "name": "Lateral_head_of_triceps_brachiil",
+    "x": 2.081,
+    "y": 12.692,
+    "z": -0.62,
+    "sy": 2.646,
+    "minY": 11.369,
+    "maxY": 14.015
+  },
+  {
+    "name": "Long_head_of_triceps_brachiir",
+    "x": -1.776,
+    "y": 12.721,
+    "z": -0.652,
+    "sy": 2.719,
+    "minY": 11.361,
+    "maxY": 14.08
+  },
+  {
+    "name": "Lateral_head_of_triceps_brachiir",
+    "x": -2.081,
+    "y": 12.692,
+    "z": -0.62,
+    "sy": 2.646,
+    "minY": 11.369,
+    "maxY": 14.015
+  },
+  {
+    "name": "Long_head_of_triceps_brachiil",
+    "x": 1.776,
+    "y": 12.721,
+    "z": -0.652,
+    "sy": 2.719,
+    "minY": 11.361,
+    "maxY": 14.08
+  },
+  {
+    "name": "Medial_head_of_triceps_brachiir",
+    "x": -2.034,
+    "y": 12.471,
+    "z": -0.471,
+    "sy": 2.342,
+    "minY": 11.3,
+    "maxY": 13.642
+  },
+  {
+    "name": "Tendon_sheath_of_flexor_carpi_radialisr",
+    "x": -2.653,
+    "y": 9.072,
+    "z": 0.279,
+    "sy": 0.355,
+    "minY": 8.894,
+    "maxY": 9.249
+  },
+  {
+    "name": "Common_flexor_tendon_sheathr",
+    "x": -2.632,
+    "y": 8.599,
+    "z": 0.403,
+    "sy": 1.211,
+    "minY": 7.994,
+    "maxY": 9.205
+  },
+  {
+    "name": "Common_flexor_tendon_sheathl",
+    "x": 2.633,
+    "y": 8.598,
+    "z": 0.405,
+    "sy": 1.214,
+    "minY": 7.991,
+    "maxY": 9.205
+  },
+  {
+    "name": "Tendon_sheath_of_flexor_carpi_radialisl",
+    "x": 2.653,
+    "y": 9.072,
+    "z": 0.279,
+    "sy": 0.355,
+    "minY": 8.894,
+    "maxY": 9.249
+  },
+  {
+    "name": "Tendon_sheath_of_flexor_pollicis_longusl",
+    "x": 2.91,
+    "y": 8.84,
+    "z": 0.362,
+    "sy": 0.863,
+    "minY": 8.408,
+    "maxY": 9.271
+  },
+  {
+    "name": "Tendon_sheath_of_flexor_pollicis_longusr",
+    "x": -2.91,
+    "y": 8.84,
+    "z": 0.362,
+    "sy": 0.863,
+    "minY": 8.408,
+    "maxY": 9.271
+  },
+  {
+    "name": "Tendon_sheath_of_extensor_pollicis_longusr",
+    "x": -2.819,
+    "y": 8.961,
+    "z": 0.084,
+    "sy": 0.414,
+    "minY": 8.754,
+    "maxY": 9.168
+  },
+  {
+    "name": "Tendon_sheath_-_abd_pollicis_longus_-_ext_pollicis_brevisl",
+    "x": 2.885,
+    "y": 9.033,
+    "z": 0.095,
+    "sy": 0.491,
+    "minY": 8.788,
+    "maxY": 9.279
+  },
+  {
+    "name": "Tendon_sheath_of_extensors_carpi_radialisl",
+    "x": 2.805,
+    "y": 9.086,
+    "z": 0.045,
+    "sy": 0.323,
+    "minY": 8.924,
+    "maxY": 9.247
+  },
+  {
+    "name": "Tendon_sheath_of_extensor_digitorum_and_extensor_indicisr",
+    "x": -2.65,
+    "y": 8.991,
+    "z": 0.004,
+    "sy": 0.484,
+    "minY": 8.749,
+    "maxY": 9.233
+  },
+  {
+    "name": "Tendon_sheath_of_extensor_digiti_minimi_manusl",
+    "x": 2.454,
+    "y": 8.805,
+    "z": 0.1,
+    "sy": 0.741,
+    "minY": 8.435,
+    "maxY": 9.176
+  },
+  {
+    "name": "Tendon_sheath_of_extensor_pollicis_longusl",
+    "x": 2.819,
+    "y": 8.961,
+    "z": 0.084,
+    "sy": 0.414,
+    "minY": 8.754,
+    "maxY": 9.168
+  },
+  {
+    "name": "Tendon_sheath_of_extensor_digitorum_and_extensor_indicisl",
+    "x": 2.65,
+    "y": 8.991,
+    "z": 0.004,
+    "sy": 0.484,
+    "minY": 8.749,
+    "maxY": 9.233
+  },
+  {
+    "name": "Tendon_sheath_of_extensor_digiti_minimi_manusr",
+    "x": -2.454,
+    "y": 8.805,
+    "z": 0.1,
+    "sy": 0.741,
+    "minY": 8.435,
+    "maxY": 9.176
+  },
+  {
+    "name": "Tendon_sheath_of_extensor_carpi_ulnarisl",
+    "x": 2.427,
+    "y": 9.021,
+    "z": 0.041,
+    "sy": 0.248,
+    "minY": 8.897,
+    "maxY": 9.145
+  },
+  {
+    "name": "Tendon_sheath_of_extensor_carpi_ulnarisr",
+    "x": -2.427,
+    "y": 9.021,
+    "z": 0.041,
+    "sy": 0.248,
+    "minY": 8.897,
+    "maxY": 9.145
+  },
+  {
+    "name": "Tendon_sheath_-_abd_pollicis_longus_-_ext_pollicis_brevisr",
+    "x": -2.885,
+    "y": 9.033,
+    "z": 0.095,
+    "sy": 0.491,
+    "minY": 8.788,
+    "maxY": 9.279
+  },
+  {
+    "name": "Tendon_sheath_of_extensors_carpi_radialisr",
+    "x": -2.805,
+    "y": 9.086,
+    "z": 0.045,
+    "sy": 0.323,
+    "minY": 8.924,
+    "maxY": 9.247
+  },
+  {
+    "name": "Cruciform_part_of_fibrous_sheath_of_digit_of_handr",
+    "x": -2.729,
+    "y": 7.939,
+    "z": 0.54,
+    "sy": 0.56,
+    "minY": 7.659,
+    "maxY": 8.219
+  },
+  {
+    "name": "Synovial_sheaths_of_digits_of_handl",
+    "x": 2.845,
+    "y": 7.905,
+    "z": 0.566,
+    "sy": 0.581,
+    "minY": 7.614,
+    "maxY": 8.195
+  },
+  {
+    "name": "Cruciform_part_of_fibrous_sheath_of_digit_of_handl",
+    "x": 2.729,
+    "y": 7.939,
+    "z": 0.54,
+    "sy": 0.56,
+    "minY": 7.659,
+    "maxY": 8.219
+  },
+  {
+    "name": "Synovial_sheaths_of_digits_of_handr",
+    "x": -2.845,
+    "y": 7.905,
+    "z": 0.566,
+    "sy": 0.581,
+    "minY": 7.614,
+    "maxY": 8.195
+  },
+  {
+    "name": "Intertubercular_tendon_sheathr",
+    "x": -1.773,
+    "y": 14.325,
+    "z": -0.131,
+    "sy": 0.323,
+    "minY": 14.164,
+    "maxY": 14.487
+  },
+  {
+    "name": "Intertubercular_tendon_sheathl",
+    "x": 1.773,
+    "y": 14.325,
+    "z": -0.131,
+    "sy": 0.323,
+    "minY": 14.164,
+    "maxY": 14.487
+  },
+  {
+    "name": "Coracobrachial_bursal",
+    "x": 1.475,
+    "y": 14.192,
+    "z": -0.141,
+    "sy": 0.22,
+    "minY": 14.082,
+    "maxY": 14.302
+  },
+  {
+    "name": "Subtendinous_bursa_of_infraspinatus_muscler",
+    "x": -1.81,
+    "y": 14.316,
+    "z": -0.462,
+    "sy": 0.177,
+    "minY": 14.228,
+    "maxY": 14.405
+  },
+  {
+    "name": "Bicipitoradial_bursal",
+    "x": 2.386,
+    "y": 11.032,
+    "z": -0.156,
+    "sy": 0.153,
+    "minY": 10.955,
+    "maxY": 11.108
+  },
+  {
+    "name": "Subdeltoid_bursar",
+    "x": -1.905,
+    "y": 14.349,
+    "z": -0.245,
+    "sy": 0.289,
+    "minY": 14.205,
+    "maxY": 14.494
+  },
+  {
+    "name": "Subtendinous_bursa_of_trapezius_muscler",
+    "x": -1.029,
+    "y": 14.321,
+    "z": -0.943,
+    "sy": 0.273,
+    "minY": 14.185,
+    "maxY": 14.457
+  },
+  {
+    "name": "Subacromial_bursal",
+    "x": 1.606,
+    "y": 14.482,
+    "z": -0.364,
+    "sy": 0.092,
+    "minY": 14.436,
+    "maxY": 14.527
+  },
+  {
+    "name": "Subtendinous_bursa_of_teres_major_musclel",
+    "x": 1.826,
+    "y": 13.672,
+    "z": -0.263,
+    "sy": 0.261,
+    "minY": 13.541,
+    "maxY": 13.803
+  },
+  {
+    "name": "Coracobrachial_bursar",
+    "x": -1.475,
+    "y": 14.192,
+    "z": -0.141,
+    "sy": 0.22,
+    "minY": 14.082,
+    "maxY": 14.302
+  },
+  {
+    "name": "Subtendinous_bursa_of_triceps_brachii_musclel",
+    "x": 2.157,
+    "y": 11.516,
+    "z": -0.582,
+    "sy": 0.302,
+    "minY": 11.365,
+    "maxY": 11.666
+  },
+  {
+    "name": "Subtendinous_bursa_of_teres_major_muscler",
+    "x": -1.826,
+    "y": 13.672,
+    "z": -0.263,
+    "sy": 0.261,
+    "minY": 13.541,
+    "maxY": 13.803
+  },
+  {
+    "name": "Subcutaneous_acromial_bursar",
+    "x": -1.609,
+    "y": 14.579,
+    "z": -0.475,
+    "sy": 0.168,
+    "minY": 14.495,
+    "maxY": 14.663
+  },
+  {
+    "name": "Subcutaneous_acromial_bursal",
+    "x": 1.609,
+    "y": 14.579,
+    "z": -0.475,
+    "sy": 0.168,
+    "minY": 14.495,
+    "maxY": 14.663
+  },
+  {
+    "name": "Subacromial_bursar",
+    "x": -1.606,
+    "y": 14.482,
+    "z": -0.364,
+    "sy": 0.092,
+    "minY": 14.436,
+    "maxY": 14.527
+  },
+  {
+    "name": "Subtendinous_bursa_of_infraspinatus_musclel",
+    "x": 1.81,
+    "y": 14.316,
+    "z": -0.462,
+    "sy": 0.177,
+    "minY": 14.228,
+    "maxY": 14.405
+  },
+  {
+    "name": "Subdeltoid_bursal",
+    "x": 1.905,
+    "y": 14.349,
+    "z": -0.245,
+    "sy": 0.289,
+    "minY": 14.205,
+    "maxY": 14.494
+  },
+  {
+    "name": "Bicipitoradial_bursar",
+    "x": -2.386,
+    "y": 11.032,
+    "z": -0.156,
+    "sy": 0.153,
+    "minY": 10.955,
+    "maxY": 11.108
+  },
+  {
+    "name": "Subtendinous_bursa_of_trapezius_musclel",
+    "x": 1.029,
+    "y": 14.321,
+    "z": -0.943,
+    "sy": 0.273,
+    "minY": 14.184,
+    "maxY": 14.457
+  },
+  {
+    "name": "Subtendinous_bursa_of_triceps_brachii_muscler",
+    "x": -2.157,
+    "y": 11.516,
+    "z": -0.582,
+    "sy": 0.302,
+    "minY": 11.365,
+    "maxY": 11.666
+  },
+  {
+    "name": "Lateral_intermuscular_septum_of_armr",
+    "x": -2.274,
+    "y": 12.506,
+    "z": -0.393,
+    "sy": 0.991,
+    "minY": 12.01,
+    "maxY": 13.002
+  },
+  {
+    "name": "Deltoid_fasciar",
+    "x": -1.631,
+    "y": 13.882,
+    "z": -0.474,
+    "sy": 1.623,
+    "minY": 13.071,
+    "maxY": 14.694
+  },
+  {
+    "name": "Antebrachial_fascial",
+    "x": 2.383,
+    "y": 10.376,
+    "z": -0.203,
+    "sy": 3.155,
+    "minY": 8.798,
+    "maxY": 11.954
+  },
+  {
+    "name": "Extensor_retinaculum_of_wristl",
+    "x": 2.65,
+    "y": 8.998,
+    "z": 0.04,
+    "sy": 0.4,
+    "minY": 8.798,
+    "maxY": 9.198
+  },
+  {
+    "name": "Brachial_fasciar",
+    "x": -2.023,
+    "y": 12.678,
+    "z": -0.433,
+    "sy": 2.017,
+    "minY": 11.67,
+    "maxY": 13.687
+  },
+  {
+    "name": "Medial_intermuscular_septum_of_armr",
+    "x": -1.845,
+    "y": 12.401,
+    "z": -0.345,
+    "sy": 1.415,
+    "minY": 11.694,
+    "maxY": 13.109
+  },
+  {
+    "name": "Antebrachial_fasciar",
+    "x": -2.383,
+    "y": 10.376,
+    "z": -0.203,
+    "sy": 3.155,
+    "minY": 8.798,
+    "maxY": 11.954
+  },
+  {
+    "name": "Extensor_retinaculum_of_wristr",
+    "x": -2.65,
+    "y": 8.998,
+    "z": 0.04,
+    "sy": 0.4,
+    "minY": 8.798,
+    "maxY": 9.198
+  },
+  {
+    "name": "Flexor_retinaculum_of_wristr",
+    "x": -2.636,
+    "y": 9.009,
+    "z": 0.204,
+    "sy": 0.411,
+    "minY": 8.803,
+    "maxY": 9.214
+  },
+  {
+    "name": "Palmar_aponeurosisr",
+    "x": -2.805,
+    "y": 8.215,
+    "z": 0.601,
+    "sy": 1.559,
+    "minY": 7.435,
+    "maxY": 8.995
+  },
+  {
+    "name": "Dorsal_fascia_of_handr",
+    "x": -2.801,
+    "y": 8.211,
+    "z": 0.475,
+    "sy": 1.565,
+    "minY": 7.428,
+    "maxY": 8.993
+  },
+  {
+    "name": "Palmar_aponeurosisl",
+    "x": 2.805,
+    "y": 8.215,
+    "z": 0.601,
+    "sy": 1.559,
+    "minY": 7.435,
+    "maxY": 8.995
+  },
+  {
+    "name": "Flexor_retinaculum_of_wristl",
+    "x": 2.636,
+    "y": 9.009,
+    "z": 0.204,
+    "sy": 0.411,
+    "minY": 8.803,
+    "maxY": 9.214
+  },
+  {
+    "name": "Deltoid_fascial",
+    "x": 1.631,
+    "y": 13.882,
+    "z": -0.474,
+    "sy": 1.623,
+    "minY": 13.071,
+    "maxY": 14.694
+  },
+  {
+    "name": "Medial_intermuscular_septum_of_arml",
+    "x": 1.845,
+    "y": 12.401,
+    "z": -0.345,
+    "sy": 1.415,
+    "minY": 11.694,
+    "maxY": 13.109
+  },
+  {
+    "name": "Superficial_transverse_metacarpal_ligamentl",
+    "x": 2.693,
+    "y": 8.245,
+    "z": 0.417,
+    "sy": 0.227,
+    "minY": 8.131,
+    "maxY": 8.358
+  },
+  {
+    "name": "Brachial_fascial",
+    "x": 2.023,
+    "y": 12.678,
+    "z": -0.433,
+    "sy": 2.017,
+    "minY": 11.67,
+    "maxY": 13.687
+  },
+  {
+    "name": "Lateral_intermuscular_septum_of_arml",
+    "x": 2.274,
+    "y": 12.506,
+    "z": -0.393,
+    "sy": 0.991,
+    "minY": 12.01,
+    "maxY": 13.002
+  },
+  {
+    "name": "Dorsal_fascia_of_handl",
+    "x": 2.801,
+    "y": 8.211,
+    "z": 0.475,
+    "sy": 1.565,
+    "minY": 7.428,
+    "maxY": 8.993
+  },
+  {
+    "name": "Superficial_transverse_metacarpal_ligamentr",
+    "x": -2.693,
+    "y": 8.245,
+    "z": 0.417,
+    "sy": 0.227,
+    "minY": 8.131,
+    "maxY": 8.358
+  },
+  {
+    "name": "Masseteric_fascial",
+    "x": 0.49,
+    "y": 15.884,
+    "z": 0.294,
+    "sy": 0.689,
+    "minY": 15.54,
+    "maxY": 16.229
+  },
+  {
+    "name": "Masseteric_fasciar",
+    "x": -0.49,
+    "y": 15.884,
+    "z": 0.294,
+    "sy": 0.689,
+    "minY": 15.54,
+    "maxY": 16.229
+  },
+  {
+    "name": "Superficial_layer_of_temporal_fasciar",
+    "x": -0.628,
+    "y": 16.634,
+    "z": 0.022,
+    "sy": 0.844,
+    "minY": 16.212,
+    "maxY": 17.056
+  },
+  {
+    "name": "Superficial_layer_of_temporal_fascial",
+    "x": 0.628,
+    "y": 16.634,
+    "z": 0.022,
+    "sy": 0.844,
+    "minY": 16.212,
+    "maxY": 17.056
+  },
+  {
+    "name": "Clavipectoral_fasciar",
+    "x": -1.176,
+    "y": 13.71,
+    "z": 0.163,
+    "sy": 1.597,
+    "minY": 12.911,
+    "maxY": 14.508
+  },
+  {
+    "name": "Pectoral_fascial",
+    "x": 0.861,
+    "y": 13.588,
+    "z": 0.66,
+    "sy": 1.967,
+    "minY": 12.604,
+    "maxY": 14.572
+  },
+  {
+    "name": "Pectoral_fasciar",
+    "x": -0.861,
+    "y": 13.588,
+    "z": 0.66,
+    "sy": 1.967,
+    "minY": 12.604,
+    "maxY": 14.572
+  },
+  {
+    "name": "Clavipectoral_fascial",
+    "x": 1.176,
+    "y": 13.71,
+    "z": 0.163,
+    "sy": 1.597,
+    "minY": 12.911,
+    "maxY": 14.508
+  },
+  {
+    "name": "Transverse_intermuscular_septum_of_legl",
+    "x": 0.818,
+    "y": 2.99,
+    "z": -0.527,
+    "sy": 2.918,
+    "minY": 1.531,
+    "maxY": 4.449
+  },
+  {
+    "name": "Crural_fascial",
+    "x": 0.863,
+    "y": 2.712,
+    "z": 0.12,
+    "sy": 4.417,
+    "minY": 0.503,
+    "maxY": 4.92
+  },
+  {
+    "name": "Anterior_intermuscular_septum_of_legl",
+    "x": 1.115,
+    "y": 3.027,
+    "z": -0.396,
+    "sy": 2.91,
+    "minY": 1.572,
+    "maxY": 4.482
+  },
+  {
+    "name": "Superior_fibular_retinaculuml",
+    "x": 0.797,
+    "y": 1.097,
+    "z": -0.249,
+    "sy": 0.597,
+    "minY": 0.798,
+    "maxY": 1.395
+  },
+  {
+    "name": "Fascia_latar",
+    "x": -0.796,
+    "y": 7.587,
+    "z": -0.299,
+    "sy": 5.695,
+    "minY": 4.74,
+    "maxY": 10.435
+  },
+  {
+    "name": "Superior_extensor_retinaculum_of_anklel",
+    "x": 0.874,
+    "y": 1.694,
+    "z": -0.326,
+    "sy": 0.315,
+    "minY": 1.536,
+    "maxY": 1.851
+  },
+  {
+    "name": "Medial_femoral_intermuscular_septumr",
+    "x": -0.633,
+    "y": 7.371,
+    "z": 0.092,
+    "sy": 4.056,
+    "minY": 5.343,
+    "maxY": 9.399
+  },
+  {
+    "name": "Superior_extensor_retinaculum_of_ankler",
+    "x": -0.874,
+    "y": 1.694,
+    "z": -0.326,
+    "sy": 0.315,
+    "minY": 1.536,
+    "maxY": 1.851
+  },
+  {
+    "name": "Inferior_extensor_retinaculum_of_anklel",
+    "x": 0.796,
+    "y": 1.358,
+    "z": -0.281,
+    "sy": 0.284,
+    "minY": 1.216,
+    "maxY": 1.5
+  },
+  {
+    "name": "Inferior_fibular_retinaculuml",
+    "x": 1.064,
+    "y": 0.928,
+    "z": 0.012,
+    "sy": 0.488,
+    "minY": 0.685,
+    "maxY": 1.172
+  },
+  {
+    "name": "Inferior_extensor_retinaculum_of_ankler",
+    "x": -0.796,
+    "y": 1.358,
+    "z": -0.281,
+    "sy": 0.284,
+    "minY": 1.216,
+    "maxY": 1.5
+  },
+  {
+    "name": "Plantar_aponeurosisl",
+    "x": 0.949,
+    "y": 0.599,
+    "z": -0.011,
+    "sy": 0.193,
+    "minY": 0.502,
+    "maxY": 0.695
+  },
+  {
+    "name": "Popliteal_fascial",
+    "x": 0.756,
+    "y": 5.358,
+    "z": -0.731,
+    "sy": 0.967,
+    "minY": 4.875,
+    "maxY": 5.842
+  },
+  {
+    "name": "Piriformis_fascial",
+    "x": 0.787,
+    "y": 9.307,
+    "z": -0.475,
+    "sy": 0.64,
+    "minY": 8.987,
+    "maxY": 9.627
+  },
+  {
+    "name": "Medial_femoral_intermuscular_septuml",
+    "x": 0.633,
+    "y": 7.371,
+    "z": 0.092,
+    "sy": 4.056,
+    "minY": 5.343,
+    "maxY": 9.399
+  },
+  {
+    "name": "Lateral_femoral_intermuscular_septumr",
+    "x": -1.118,
+    "y": 6.602,
+    "z": -0.336,
+    "sy": 2.672,
+    "minY": 5.266,
+    "maxY": 7.938
+  },
+  {
+    "name": "Inferior_fibular_retinaculumr",
+    "x": -1.064,
+    "y": 0.928,
+    "z": 0.012,
+    "sy": 0.488,
+    "minY": 0.685,
+    "maxY": 1.172
+  },
+  {
+    "name": "Anterior_intermuscular_septum_of_legr",
+    "x": -1.115,
+    "y": 3.027,
+    "z": -0.396,
+    "sy": 2.91,
+    "minY": 1.572,
+    "maxY": 4.482
+  },
+  {
+    "name": "Superficial_transverse_metatarsal_ligamentr",
+    "x": -1.01,
+    "y": 0.529,
+    "z": 0.605,
+    "sy": 0.057,
+    "minY": 0.5,
+    "maxY": 0.557
+  },
+  {
+    "name": "Piriformis_fasciar",
+    "x": -0.787,
+    "y": 9.307,
+    "z": -0.475,
+    "sy": 0.64,
+    "minY": 8.987,
+    "maxY": 9.627
+  },
+  {
+    "name": "Superior_fibular_retinaculumr",
+    "x": -0.797,
+    "y": 1.097,
+    "z": -0.249,
+    "sy": 0.597,
+    "minY": 0.798,
+    "maxY": 1.395
+  },
+  {
+    "name": "Fascia_latal",
+    "x": 0.796,
+    "y": 7.587,
+    "z": -0.299,
+    "sy": 5.695,
+    "minY": 4.74,
+    "maxY": 10.435
+  },
+  {
+    "name": "Superficial_transverse_metatarsal_ligamentl",
+    "x": 1.01,
+    "y": 0.529,
+    "z": 0.605,
+    "sy": 0.057,
+    "minY": 0.5,
+    "maxY": 0.557
+  },
+  {
+    "name": "Lateral_femoral_intermuscular_septuml",
+    "x": 1.118,
+    "y": 6.602,
+    "z": -0.336,
+    "sy": 2.672,
+    "minY": 5.266,
+    "maxY": 7.938
+  },
+  {
+    "name": "Transverse_intermuscular_septum_of_legr",
+    "x": -0.818,
+    "y": 2.99,
+    "z": -0.527,
+    "sy": 2.918,
+    "minY": 1.531,
+    "maxY": 4.449
+  },
+  {
+    "name": "Popliteal_fasciar",
+    "x": -0.756,
+    "y": 5.358,
+    "z": -0.731,
+    "sy": 0.967,
+    "minY": 4.875,
+    "maxY": 5.842
+  },
+  {
+    "name": "Plantar_aponeurosisr",
+    "x": -0.949,
+    "y": 0.599,
+    "z": -0.011,
+    "sy": 0.193,
+    "minY": 0.502,
+    "maxY": 0.695
+  },
+  {
+    "name": "Crural_fasciar",
+    "x": -0.863,
+    "y": 2.712,
+    "z": 0.12,
+    "sy": 4.417,
+    "minY": 0.503,
+    "maxY": 4.92
+  },
+  {
+    "name": "Flexor_retinaculum_of_ankler",
+    "x": -0.542,
+    "y": 0.969,
+    "z": -0.603,
+    "sy": 0.795,
+    "minY": 0.572,
+    "maxY": 1.366
+  },
+  {
+    "name": "Posterior_intermuscular_septum_of_legr",
+    "x": -1.132,
+    "y": 2.888,
+    "z": -0.617,
+    "sy": 2.909,
+    "minY": 1.434,
+    "maxY": 4.342
+  },
+  {
+    "name": "Iliopectineal_archl",
+    "x": 0.594,
+    "y": 9.123,
+    "z": 0.378,
+    "sy": 0.272,
+    "minY": 8.987,
+    "maxY": 9.259
+  },
+  {
+    "name": "Iliopectineal_archr",
+    "x": -0.594,
+    "y": 9.123,
+    "z": 0.378,
+    "sy": 0.279,
+    "minY": 8.984,
+    "maxY": 9.263
+  },
+  {
+    "name": "Flexor_retinaculum_of_anklel",
+    "x": 0.542,
+    "y": 0.969,
+    "z": -0.603,
+    "sy": 0.795,
+    "minY": 0.572,
+    "maxY": 1.366
+  },
+  {
+    "name": "Posterior_intermuscular_septum_of_legl",
+    "x": 1.132,
+    "y": 2.888,
+    "z": -0.617,
+    "sy": 2.909,
+    "minY": 1.434,
+    "maxY": 4.342
+  },
+  {
+    "name": "Middle_layer_of_thoracolumbar_fasciar",
+    "x": -0.472,
+    "y": 10.886,
+    "z": -0.638,
+    "sy": 1.819,
+    "minY": 9.977,
+    "maxY": 11.796
+  },
+  {
+    "name": "Middle_layer_of_thoracolumbar_fascial",
+    "x": 0.472,
+    "y": 10.886,
+    "z": -0.638,
+    "sy": 1.819,
+    "minY": 9.977,
+    "maxY": 11.796
+  },
+  {
+    "name": "Anterior_layer_of_thoracolumbar_fasciar",
+    "x": -0.487,
+    "y": 10.837,
+    "z": -0.523,
+    "sy": 1.741,
+    "minY": 9.966,
+    "maxY": 11.708
+  },
+  {
+    "name": "Posterior_layer_of_thoracolumbar_fasciar",
+    "x": -0.359,
+    "y": 10.881,
+    "z": -0.713,
+    "sy": 2.356,
+    "minY": 9.703,
+    "maxY": 12.059
+  },
+  {
+    "name": "Posterior_layer_of_thoracolumbar_fascial",
+    "x": 0.359,
+    "y": 10.881,
+    "z": -0.713,
+    "sy": 2.356,
+    "minY": 9.703,
+    "maxY": 12.059
+  },
+  {
+    "name": "Anterior_layer_of_thoracolumbar_fascial",
+    "x": 0.487,
+    "y": 10.837,
+    "z": -0.523,
+    "sy": 1.741,
+    "minY": 9.966,
+    "maxY": 11.708
+  },
+  {
+    "name": "Investing_abdominal_fasciar",
+    "x": -0.853,
+    "y": 11.635,
+    "z": -0.057,
+    "sy": 5.528,
+    "minY": 8.871,
+    "maxY": 14.399
+  },
+  {
+    "name": "Investing_abdominal_fascial",
+    "x": 0.853,
+    "y": 11.635,
+    "z": -0.057,
+    "sy": 5.528,
+    "minY": 8.871,
+    "maxY": 14.399
+  },
+  {
+    "name": "Diaphragmatic_fascia",
+    "x": -0.005,
+    "y": 12.017,
+    "z": 0.152,
+    "sy": 1.937,
+    "minY": 11.049,
+    "maxY": 12.986
+  },
+  {
+    "name": "Iliopsoas_fascial",
+    "x": 0.52,
+    "y": 10.041,
+    "z": 0.028,
+    "sy": 3.368,
+    "minY": 8.357,
+    "maxY": 11.725
+  },
+  {
+    "name": "Iliopsoas_fasciar",
+    "x": -0.68,
+    "y": 9.934,
+    "z": 0.028,
+    "sy": 3.368,
+    "minY": 8.25,
+    "maxY": 11.618
+  },
+  {
+    "name": "Transversalis_fascia",
+    "x": 0,
+    "y": 10.833,
+    "z": 0.197,
+    "sy": 3.778,
+    "minY": 8.944,
+    "maxY": 12.722
+  },
+  {
+    "name": "Superficial_investing_cervical_fascial",
+    "x": 0.861,
+    "y": 15.214,
+    "z": -0.258,
+    "sy": 2.154,
+    "minY": 14.137,
+    "maxY": 16.291
+  },
+  {
+    "name": "Superficial_investing_cervical_fasciar",
+    "x": -0.861,
+    "y": 15.214,
+    "z": -0.258,
+    "sy": 2.154,
+    "minY": 14.137,
+    "maxY": 16.291
+  },
+  {
+    "name": "Cross_Section_X001",
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "sy": 0,
+    "minY": null,
+    "maxY": null
+  },
+  {
+    "name": "Diaphragm",
+    "x": -0.004,
+    "y": 11.95,
+    "z": 0.138,
+    "sy": 2.197,
+    "minY": 10.851,
+    "maxY": 13.049
+  },
+  {
+    "name": "Subclavius_muscler",
+    "x": -0.643,
+    "y": 14.414,
+    "z": 0.148,
+    "sy": 0.277,
+    "minY": 14.276,
+    "maxY": 14.553
+  },
+  {
+    "name": "Pectoralis_minor_musclel",
+    "x": 1.058,
+    "y": 13.735,
+    "z": 0.256,
+    "sy": 1.389,
+    "minY": 13.041,
+    "maxY": 14.43
+  },
+  {
+    "name": "External_intercostal_musclesl",
+    "x": 0.85,
+    "y": 12.982,
+    "z": -0.034,
+    "sy": 3.72,
+    "minY": 11.123,
+    "maxY": 14.842
+  },
+  {
+    "name": "Serratus_anterior_musclel",
+    "x": 1.053,
+    "y": 13.28,
+    "z": -0.275,
+    "sy": 2.745,
+    "minY": 11.907,
+    "maxY": 14.652
+  },
+  {
+    "name": "Clavicular_head_of_pectoralis_major_muscler",
+    "x": -1.134,
+    "y": 13.992,
+    "z": 0.132,
+    "sy": 1.056,
+    "minY": 13.465,
+    "maxY": 14.52
+  },
+  {
+    "name": "Sternocostal_head_of_pectoralis_major_muscler",
+    "x": -0.982,
+    "y": 13.464,
+    "z": 0.52,
+    "sy": 1.821,
+    "minY": 12.553,
+    "maxY": 14.374
+  },
+  {
+    "name": "(Abdominal_part_of_pectoralis_major_muscle)l",
+    "x": 1.201,
+    "y": 13.03,
+    "z": 0.465,
+    "sy": 1.768,
+    "minY": 12.146,
+    "maxY": 13.914
+  },
+  {
+    "name": "Clavicular_head_of_pectoralis_major_musclel",
+    "x": 1.134,
+    "y": 13.992,
+    "z": 0.132,
+    "sy": 1.056,
+    "minY": 13.465,
+    "maxY": 14.52
+  },
+  {
+    "name": "Sternocostal_head_of_pectoralis_major_musclel",
+    "x": 0.982,
+    "y": 13.464,
+    "z": 0.52,
+    "sy": 1.821,
+    "minY": 12.553,
+    "maxY": 14.374
+  },
+  {
+    "name": "(Abdominal_part_of_pectoralis_major_muscle)r",
+    "x": -1.201,
+    "y": 13.03,
+    "z": 0.465,
+    "sy": 1.768,
+    "minY": 12.146,
+    "maxY": 13.914
+  },
+  {
+    "name": "Pectoralis_minor_muscler",
+    "x": -1.058,
+    "y": 13.735,
+    "z": 0.256,
+    "sy": 1.389,
+    "minY": 13.041,
+    "maxY": 14.43
+  },
+  {
+    "name": "Innermost_intercostal_musclesl",
+    "x": 0.891,
+    "y": 12.892,
+    "z": 0,
+    "sy": 3.246,
+    "minY": 11.269,
+    "maxY": 14.515
+  },
+  {
+    "name": "External_intercostal_musclesr",
+    "x": -0.85,
+    "y": 12.982,
+    "z": -0.034,
+    "sy": 3.72,
+    "minY": 11.123,
+    "maxY": 14.842
+  },
+  {
+    "name": "Subclavius_musclel",
+    "x": 0.643,
+    "y": 14.414,
+    "z": 0.148,
+    "sy": 0.277,
+    "minY": 14.276,
+    "maxY": 14.553
+  },
+  {
+    "name": "Levatores_breves_costaruml",
+    "x": 0.488,
+    "y": 13.34,
+    "z": -0.635,
+    "sy": 3.229,
+    "minY": 11.725,
+    "maxY": 14.954
+  },
+  {
+    "name": "Levatores_longi_costarumr",
+    "x": -0.532,
+    "y": 13.326,
+    "z": -0.647,
+    "sy": 3.296,
+    "minY": 11.678,
+    "maxY": 14.975
+  },
+  {
+    "name": "Levatores_longi_costaruml",
+    "x": 0.532,
+    "y": 13.326,
+    "z": -0.647,
+    "sy": 3.296,
+    "minY": 11.678,
+    "maxY": 14.975
+  },
+  {
+    "name": "Levatores_breves_costarumr",
+    "x": -0.488,
+    "y": 13.34,
+    "z": -0.635,
+    "sy": 3.229,
+    "minY": 11.725,
+    "maxY": 14.954
+  },
+  {
+    "name": "Internal_intercostal_musclesr",
+    "x": -0.761,
+    "y": 12.856,
+    "z": 0.059,
+    "sy": 3.298,
+    "minY": 11.207,
+    "maxY": 14.505
+  },
+  {
+    "name": "Innermost_intercostal_musclesr",
+    "x": -0.891,
+    "y": 12.892,
+    "z": 0,
+    "sy": 3.246,
+    "minY": 11.269,
+    "maxY": 14.515
+  },
+  {
+    "name": "Transversus_thoracis_musclel",
+    "x": 0.454,
+    "y": 13.253,
+    "z": 0.766,
+    "sy": 1.489,
+    "minY": 12.508,
+    "maxY": 13.997
+  },
+  {
+    "name": "Internal_intercostal_musclesl",
+    "x": 0.761,
+    "y": 12.856,
+    "z": 0.059,
+    "sy": 3.298,
+    "minY": 11.207,
+    "maxY": 14.505
+  },
+  {
+    "name": "Transversus_thoracis_muscler",
+    "x": -0.454,
+    "y": 13.253,
+    "z": 0.766,
+    "sy": 1.489,
+    "minY": 12.508,
+    "maxY": 13.997
+  },
+  {
+    "name": "Serratus_anterior_muscler",
+    "x": -1.053,
+    "y": 13.28,
+    "z": -0.275,
+    "sy": 2.745,
+    "minY": 11.907,
+    "maxY": 14.652
+  },
+  {
+    "name": "Rectus_lateralis_capitis_muscler",
+    "x": -0.356,
+    "y": 15.941,
+    "z": -0.198,
+    "sy": 0.213,
+    "minY": 15.835,
+    "maxY": 16.048
+  },
+  {
+    "name": "Scalenus_anterior_musclel",
+    "x": 0.377,
+    "y": 14.948,
+    "z": -0.041,
+    "sy": 0.828,
+    "minY": 14.534,
+    "maxY": 15.361
+  },
+  {
+    "name": "Sternocleidomastoid_musclel",
+    "x": 0.325,
+    "y": 15.212,
+    "z": 0.044,
+    "sy": 1.936,
+    "minY": 14.244,
+    "maxY": 16.179
+  },
+  {
+    "name": "Platysmal",
+    "x": 0.692,
+    "y": 15.129,
+    "z": 0.182,
+    "sy": 1.42,
+    "minY": 14.419,
+    "maxY": 15.839
+  },
+  {
+    "name": "Longus_colli_musclel",
+    "x": 0.137,
+    "y": 15.088,
+    "z": -0.155,
+    "sy": 1.573,
+    "minY": 14.302,
+    "maxY": 15.875
+  },
+  {
+    "name": "Inferior_pharyngeal_constrictorl",
+    "x": 0.116,
+    "y": 15.352,
+    "z": 0.003,
+    "sy": 0.65,
+    "minY": 15.027,
+    "maxY": 15.677
+  },
+  {
+    "name": "Middle_pharyngeal_constrictorl",
+    "x": 0.098,
+    "y": 15.649,
+    "z": 0.147,
+    "sy": 0.457,
+    "minY": 15.42,
+    "maxY": 15.878
+  },
+  {
+    "name": "Stylopharyngeus_musclel",
+    "x": 0.265,
+    "y": 15.666,
+    "z": 0.038,
+    "sy": 0.666,
+    "minY": 15.333,
+    "maxY": 15.999
+  },
+  {
+    "name": "Stylopharyngeus_muscler",
+    "x": -0.265,
+    "y": 15.666,
+    "z": 0.038,
+    "sy": 0.666,
+    "minY": 15.333,
+    "maxY": 15.999
+  },
+  {
+    "name": "Superior_pharyngeal_constrictorl",
+    "x": 0.171,
+    "y": 15.903,
+    "z": 0.19,
+    "sy": 0.536,
+    "minY": 15.635,
+    "maxY": 16.171
+  },
+  {
+    "name": "Superior_pharyngeal_constrictorr",
+    "x": -0.171,
+    "y": 15.903,
+    "z": 0.19,
+    "sy": 0.536,
+    "minY": 15.635,
+    "maxY": 16.171
+  },
+  {
+    "name": "Middle_pharyngeal_constrictorr",
+    "x": -0.098,
+    "y": 15.649,
+    "z": 0.147,
+    "sy": 0.457,
+    "minY": 15.42,
+    "maxY": 15.878
+  },
+  {
+    "name": "Inferior_pharyngeal_constrictorr",
+    "x": -0.116,
+    "y": 15.352,
+    "z": 0.003,
+    "sy": 0.65,
+    "minY": 15.027,
+    "maxY": 15.677
+  },
+  {
+    "name": "Rectus_lateralis_capitis_musclel",
+    "x": 0.356,
+    "y": 15.941,
+    "z": -0.198,
+    "sy": 0.213,
+    "minY": 15.835,
+    "maxY": 16.048
+  },
+  {
+    "name": "Scalenus_posterior_muscler",
+    "x": -0.477,
+    "y": 14.932,
+    "z": -0.292,
+    "sy": 0.536,
+    "minY": 14.664,
+    "maxY": 15.2
+  },
+  {
+    "name": "Rectus_anterior_capitis_muscler",
+    "x": -0.157,
+    "y": 15.982,
+    "z": -0.06,
+    "sy": 0.203,
+    "minY": 15.881,
+    "maxY": 16.084
+  },
+  {
+    "name": "Rectus_anterior_capitis_musclel",
+    "x": 0.157,
+    "y": 15.982,
+    "z": -0.06,
+    "sy": 0.203,
+    "minY": 15.881,
+    "maxY": 16.084
+  },
+  {
+    "name": "Scalenus_posterior_musclel",
+    "x": 0.477,
+    "y": 14.932,
+    "z": -0.292,
+    "sy": 0.536,
+    "minY": 14.664,
+    "maxY": 15.2
+  },
+  {
+    "name": "Stylohyoid_muscler",
+    "x": -0.256,
+    "y": 15.729,
+    "z": 0.106,
+    "sy": 0.627,
+    "minY": 15.415,
+    "maxY": 16.043
+  },
+  {
+    "name": "Mylohyoid_musclel",
+    "x": 0.135,
+    "y": 15.547,
+    "z": 0.503,
+    "sy": 0.28,
+    "minY": 15.408,
+    "maxY": 15.687
+  },
+  {
+    "name": "Anterior_belly_of_digastric_musclel",
+    "x": 0.093,
+    "y": 15.449,
+    "z": 0.485,
+    "sy": 0.063,
+    "minY": 15.417,
+    "maxY": 15.481
+  },
+  {
+    "name": "Posterior_belly_of_digastric_muscler",
+    "x": -0.354,
+    "y": 15.772,
+    "z": 0.024,
+    "sy": 0.641,
+    "minY": 15.452,
+    "maxY": 16.093
+  },
+  {
+    "name": "Posterior_belly_of_digastric_musclel",
+    "x": 0.354,
+    "y": 15.772,
+    "z": 0.024,
+    "sy": 0.641,
+    "minY": 15.452,
+    "maxY": 16.093
+  },
+  {
+    "name": "Intermediate_tendon_of_digastric_muscler",
+    "x": -0.133,
+    "y": 15.454,
+    "z": 0.323,
+    "sy": 0.075,
+    "minY": 15.416,
+    "maxY": 15.491
+  },
+  {
+    "name": "Anterior_belly_of_digastric_muscler",
+    "x": -0.093,
+    "y": 15.449,
+    "z": 0.485,
+    "sy": 0.063,
+    "minY": 15.417,
+    "maxY": 15.481
+  },
+  {
+    "name": "Intermediate_tendon_of_digastric_musclel",
+    "x": 0.133,
+    "y": 15.454,
+    "z": 0.323,
+    "sy": 0.075,
+    "minY": 15.416,
+    "maxY": 15.491
+  },
+  {
+    "name": "Stylohyoid_musclel",
+    "x": 0.256,
+    "y": 15.729,
+    "z": 0.106,
+    "sy": 0.627,
+    "minY": 15.415,
+    "maxY": 16.043
+  },
+  {
+    "name": "Geniohyoid_muscler",
+    "x": -0.057,
+    "y": 15.483,
+    "z": 0.466,
+    "sy": 0.101,
+    "minY": 15.432,
+    "maxY": 15.534
+  },
+  {
+    "name": "Geniohyoid_musclel",
+    "x": 0.057,
+    "y": 15.483,
+    "z": 0.466,
+    "sy": 0.101,
+    "minY": 15.432,
+    "maxY": 15.534
+  },
+  {
+    "name": "Mylohyoid_muscler",
+    "x": -0.135,
+    "y": 15.547,
+    "z": 0.503,
+    "sy": 0.28,
+    "minY": 15.408,
+    "maxY": 15.687
+  },
+  {
+    "name": "Longus_colli_muscler",
+    "x": -0.137,
+    "y": 15.088,
+    "z": -0.155,
+    "sy": 1.573,
+    "minY": 14.302,
+    "maxY": 15.875
+  },
+  {
+    "name": "Longus_capitis_musclel",
+    "x": 0.144,
+    "y": 15.566,
+    "z": -0.053,
+    "sy": 1.1,
+    "minY": 15.016,
+    "maxY": 16.116
+  },
+  {
+    "name": "Sternohyoid_musclel",
+    "x": 0.155,
+    "y": 14.861,
+    "z": 0.243,
+    "sy": 1.08,
+    "minY": 14.321,
+    "maxY": 15.401
+  },
+  {
+    "name": "Sternothyroid_musclel",
+    "x": 0.133,
+    "y": 14.733,
+    "z": 0.2,
+    "sy": 0.987,
+    "minY": 14.239,
+    "maxY": 15.226
+  },
+  {
+    "name": "Thyrohyoid_muscler",
+    "x": -0.137,
+    "y": 15.245,
+    "z": 0.164,
+    "sy": 0.308,
+    "minY": 15.091,
+    "maxY": 15.399
+  },
+  {
+    "name": "Thyrohyoid_musclel",
+    "x": 0.137,
+    "y": 15.245,
+    "z": 0.164,
+    "sy": 0.308,
+    "minY": 15.091,
+    "maxY": 15.399
+  },
+  {
+    "name": "Sternohyoid_muscler",
+    "x": -0.155,
+    "y": 14.861,
+    "z": 0.243,
+    "sy": 1.08,
+    "minY": 14.321,
+    "maxY": 15.401
+  },
+  {
+    "name": "Sternothyroid_muscler",
+    "x": -0.133,
+    "y": 14.733,
+    "z": 0.2,
+    "sy": 0.987,
+    "minY": 14.239,
+    "maxY": 15.226
+  },
+  {
+    "name": "Omohyoid_musclel",
+    "x": 0.577,
+    "y": 14.873,
+    "z": -0.162,
+    "sy": 1.065,
+    "minY": 14.341,
+    "maxY": 15.405
+  },
+  {
+    "name": "Omohyoid_muscler",
+    "x": -0.577,
+    "y": 14.873,
+    "z": -0.162,
+    "sy": 1.065,
+    "minY": 14.341,
+    "maxY": 15.405
+  },
+  {
+    "name": "Scalenus_medius_musclel",
+    "x": 0.391,
+    "y": 15.116,
+    "z": -0.173,
+    "sy": 0.991,
+    "minY": 14.621,
+    "maxY": 15.612
+  },
+  {
+    "name": "Platysmar",
+    "x": -0.692,
+    "y": 15.129,
+    "z": 0.182,
+    "sy": 1.42,
+    "minY": 14.419,
+    "maxY": 15.839
+  },
+  {
+    "name": "Longus_capitis_muscler",
+    "x": -0.144,
+    "y": 15.566,
+    "z": -0.053,
+    "sy": 1.1,
+    "minY": 15.016,
+    "maxY": 16.116
+  },
+  {
+    "name": "Scalenus_medius_muscler",
+    "x": -0.391,
+    "y": 15.116,
+    "z": -0.173,
+    "sy": 0.991,
+    "minY": 14.621,
+    "maxY": 15.612
+  },
+  {
+    "name": "Scalenus_anterior_muscler",
+    "x": -0.377,
+    "y": 14.948,
+    "z": -0.041,
+    "sy": 0.828,
+    "minY": 14.534,
+    "maxY": 15.361
+  },
+  {
+    "name": "Sternocleidomastoid_muscler",
+    "x": -0.325,
+    "y": 15.212,
+    "z": 0.044,
+    "sy": 1.936,
+    "minY": 14.244,
+    "maxY": 16.179
+  },
+  {
+    "name": "External_part_of_thyro-arytenoid_muscler",
+    "x": -0.054,
+    "y": 15.183,
+    "z": 0.121,
+    "sy": 0.092,
+    "minY": 15.137,
+    "maxY": 15.229
+  },
+  {
+    "name": "Lateral_crico-arytenoid_muscler",
+    "x": -0.095,
+    "y": 15.172,
+    "z": 0.01,
+    "sy": 0.107,
+    "minY": 15.119,
+    "maxY": 15.226
+  },
+  {
+    "name": "Oblique_part_of_cricothyroid_musclel",
+    "x": 0.093,
+    "y": 15.061,
+    "z": 0.093,
+    "sy": 0.093,
+    "minY": 15.015,
+    "maxY": 15.107
+  },
+  {
+    "name": "Thyro-epiglottic_part_of_thyro-arytenoid_muscler",
+    "x": -0.045,
+    "y": 15.329,
+    "z": 0.157,
+    "sy": 0.249,
+    "minY": 15.205,
+    "maxY": 15.454
+  },
+  {
+    "name": "Ary-epiglottic_part_of_oblique_arytenoid_musclel",
+    "x": 0.069,
+    "y": 15.356,
+    "z": 0.099,
+    "sy": 0.234,
+    "minY": 15.239,
+    "maxY": 15.473
+  },
+  {
+    "name": "Oblique_part_of_cricothyroid_muscler",
+    "x": -0.093,
+    "y": 15.061,
+    "z": 0.093,
+    "sy": 0.093,
+    "minY": 15.015,
+    "maxY": 15.107
+  },
+  {
+    "name": "Ary-epiglottic_part_of_oblique_arytenoid_muscler",
+    "x": -0.069,
+    "y": 15.356,
+    "z": 0.099,
+    "sy": 0.234,
+    "minY": 15.239,
+    "maxY": 15.473
+  },
+  {
+    "name": "Thyro-epiglottic_part_of_thyro-arytenoid_musclel",
+    "x": 0.045,
+    "y": 15.329,
+    "z": 0.157,
+    "sy": 0.249,
+    "minY": 15.205,
+    "maxY": 15.454
+  },
+  {
+    "name": "Straight_part_of_cricothyroid_musclel",
+    "x": 0.071,
+    "y": 15.108,
+    "z": 0.068,
+    "sy": 0.103,
+    "minY": 15.056,
+    "maxY": 15.159
+  },
+  {
+    "name": "Posterior_crico-arytenoid_musclel",
+    "x": 0.068,
+    "y": 15.151,
+    "z": -0.058,
+    "sy": 0.144,
+    "minY": 15.079,
+    "maxY": 15.222
+  },
+  {
+    "name": "Straight_part_of_cricothyroid_muscler",
+    "x": -0.071,
+    "y": 15.108,
+    "z": 0.068,
+    "sy": 0.103,
+    "minY": 15.056,
+    "maxY": 15.159
+  },
+  {
+    "name": "Lateral_crico-arytenoid_musclel",
+    "x": 0.095,
+    "y": 15.172,
+    "z": 0.01,
+    "sy": 0.107,
+    "minY": 15.119,
+    "maxY": 15.226
+  },
+  {
+    "name": "Posterior_crico-arytenoid_muscler",
+    "x": -0.068,
+    "y": 15.151,
+    "z": -0.058,
+    "sy": 0.144,
+    "minY": 15.079,
+    "maxY": 15.222
+  },
+  {
+    "name": "External_part_of_thyro-arytenoid_musclel",
+    "x": 0.054,
+    "y": 15.183,
+    "z": 0.121,
+    "sy": 0.092,
+    "minY": 15.137,
+    "maxY": 15.229
+  },
+  {
+    "name": "Transverse_arytenoid_muscle",
+    "x": -0.007,
+    "y": 15.189,
+    "z": 0.026,
+    "sy": 0.062,
+    "minY": 15.158,
+    "maxY": 15.22
+  },
+  {
+    "name": "External_abdominal_oblique_musclel",
+    "x": 0.729,
+    "y": 11.027,
+    "z": 0.321,
+    "sy": 4.405,
+    "minY": 8.825,
+    "maxY": 13.23
+  },
+  {
+    "name": "Inguinal_ligamentl",
+    "x": 0.715,
+    "y": 9.391,
+    "z": 0.49,
+    "sy": 1.131,
+    "minY": 8.825,
+    "maxY": 9.956
+  },
+  {
+    "name": "Pyramidalis_muscler",
+    "x": -0.171,
+    "y": 9.292,
+    "z": 0.582,
+    "sy": 0.717,
+    "minY": 8.934,
+    "maxY": 9.65
+  },
+  {
+    "name": "Quadratus_lumborum_musclel",
+    "x": 0.434,
+    "y": 10.865,
+    "z": -0.543,
+    "sy": 2.063,
+    "minY": 9.833,
+    "maxY": 11.896
+  },
+  {
+    "name": "Internal_abdominal_oblique_muscler",
+    "x": -0.651,
+    "y": 10.886,
+    "z": 0.313,
+    "sy": 3.915,
+    "minY": 8.929,
+    "maxY": 12.843
+  },
+  {
+    "name": "Linea_alba",
+    "x": 0.01,
+    "y": 10.819,
+    "z": 0.741,
+    "sy": 3.956,
+    "minY": 8.841,
+    "maxY": 12.798
+  },
+  {
+    "name": "Pyramidalis_musclel",
+    "x": 0.171,
+    "y": 9.292,
+    "z": 0.582,
+    "sy": 0.717,
+    "minY": 8.934,
+    "maxY": 9.65
+  },
+  {
+    "name": "Quadratus_lumborum_muscler",
+    "x": -0.434,
+    "y": 10.865,
+    "z": -0.543,
+    "sy": 2.063,
+    "minY": 9.833,
+    "maxY": 11.896
+  },
+  {
+    "name": "Rectus_abdominis_musclel",
+    "x": 0.423,
+    "y": 10.969,
+    "z": 0.792,
+    "sy": 4.082,
+    "minY": 8.928,
+    "maxY": 13.01
+  },
+  {
+    "name": "Internal_abdominal_oblique_musclel",
+    "x": 0.651,
+    "y": 10.886,
+    "z": 0.313,
+    "sy": 3.915,
+    "minY": 8.929,
+    "maxY": 12.843
+  },
+  {
+    "name": "Transversus_abdominis_muscler",
+    "x": -0.682,
+    "y": 10.945,
+    "z": 0.172,
+    "sy": 4.208,
+    "minY": 8.841,
+    "maxY": 13.049
+  },
+  {
+    "name": "Rectus_abdominis_muscler",
+    "x": -0.423,
+    "y": 10.969,
+    "z": 0.792,
+    "sy": 4.082,
+    "minY": 8.928,
+    "maxY": 13.01
+  },
+  {
+    "name": "Transversus_abdominis_musclel",
+    "x": 0.682,
+    "y": 10.945,
+    "z": 0.172,
+    "sy": 4.208,
+    "minY": 8.841,
+    "maxY": 13.049
+  },
+  {
+    "name": "External_abdominal_oblique_muscler",
+    "x": -0.729,
+    "y": 11.027,
+    "z": 0.321,
+    "sy": 4.405,
+    "minY": 8.825,
+    "maxY": 13.23
+  },
+  {
+    "name": "Inguinal_ligamentr",
+    "x": -0.715,
+    "y": 9.391,
+    "z": 0.49,
+    "sy": 1.131,
+    "minY": 8.825,
+    "maxY": 9.956
+  }
+]
