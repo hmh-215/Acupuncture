@@ -130,6 +130,19 @@ export class UIView {
         this._populateMovementDropdown(query);
         if (this.movementVM) this.movementVM.search(query);
       });
+
+      this.els.searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          if (this.els.movementSelect && this.els.movementSelect.options.length > 1) {
+            const firstValidOption = Array.from(this.els.movementSelect.options).find(opt => opt.value);
+            if (firstValidOption) {
+              this.els.movementSelect.value = firstValidOption.value;
+              if (this.movementVM) this.movementVM.selectMovement(firstValidOption.value);
+            }
+          }
+        }
+      });
     }
 
     // Lọc vai trò cơ
@@ -159,26 +172,31 @@ export class UIView {
     }
 
     if (this.els.sliderMuscleOpacity) {
-      this.els.sliderMuscleOpacity.addEventListener('input', (e) => {
+      const handleMuscleOpacity = (e) => {
         const val = parseFloat(e.target.value);
         if (this.els.valMuscleOpacity) this.els.valMuscleOpacity.textContent = `${Math.round(val)}%`;
         if (this.sceneVM) this.sceneVM.setMuscleOpacity(val / 100);
-      });
+      };
+      this.els.sliderMuscleOpacity.addEventListener('input', handleMuscleOpacity);
+      this.els.sliderMuscleOpacity.addEventListener('change', handleMuscleOpacity);
     }
 
     // Toggle & Slider Hệ Thần Kinh
     if (this.els.toggleNervous) {
       this.els.toggleNervous.addEventListener('change', (e) => {
-        if (this.sceneVM) this.sceneVM.setShowNervousLayer(e.target.checked);
+        const checked = e.target.checked;
+        if (this.sceneVM) this.sceneVM.setShowNervousLayer(checked);
       });
     }
 
     if (this.els.sliderNervousOpacity) {
-      this.els.sliderNervousOpacity.addEventListener('input', (e) => {
+      const handleNervousOpacity = (e) => {
         const val = parseFloat(e.target.value);
         if (this.els.valNervousOpacity) this.els.valNervousOpacity.textContent = `${Math.round(val)}%`;
         if (this.sceneVM) this.sceneVM.setNervousOpacity(val / 100);
-      });
+      };
+      this.els.sliderNervousOpacity.addEventListener('input', handleNervousOpacity);
+      this.els.sliderNervousOpacity.addEventListener('change', handleNervousOpacity);
     }
 
     // Đặt lại góc nhìn và thông số
@@ -241,6 +259,7 @@ export class UIView {
       this.els.mode1Container.style.display = 'block';
       this.els.mode2Container.style.display = 'none';
       if (this.els.acupointDetailCard) this.els.acupointDetailCard.style.display = 'none';
+      if (this.els.chainSelect) this.els.chainSelect.value = '';
     } else {
       this.els.tabModeAcupuncture.classList.add('active');
       this.els.tabModeMovement.classList.remove('active');
@@ -248,6 +267,16 @@ export class UIView {
       this.els.mode1Container.style.display = 'none';
       if (this.els.movementSelect) this.els.movementSelect.value = '';
       if (this.els.movementInfo) this.els.movementInfo.style.display = 'none';
+
+      // Tự động chọn chuỗi đầu tiên để hiển thị trực quan ngay lập tức
+      if (this.appVM.acupunctureVM && !this.appVM.acupunctureVM.state.selectedChainId) {
+        const chains = this.appVM.getChains();
+        if (chains && chains.length > 0) {
+          const firstId = chains[0].id;
+          if (this.els.chainSelect) this.els.chainSelect.value = firstId;
+          this.appVM.acupunctureVM.selectChain(firstId);
+        }
+      }
     }
   }
 
@@ -437,6 +466,10 @@ export class UIView {
           </div>
           <div class="acupoint-meta-inline">📍 ${pt.location_vi}</div>
         `;
+
+        if (this.appVM.acupunctureVM?.state.selectedAcupoint?.code === pt.code) {
+          btn.classList.add('active');
+        }
 
         btn.addEventListener('click', () => {
           if (this.appVM.acupunctureVM) this.appVM.acupunctureVM.selectAcupoint(pt.code);

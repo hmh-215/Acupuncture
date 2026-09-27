@@ -53,3 +53,8 @@ desktop.ini
 .idea/
 *.sublime-project
 *.sublime-workspace
+
+# Hệ thống nội bộ Agent & Skills (Không upload lên GitHub)
+.agents/
+AGENTS.md
+
