@@ -112,77 +112,84 @@ export class SceneView {
     this.rigRoot.name = 'RigRoot';
     this.scene.add(this.rigRoot);
 
-    // 1. Khung chậu (Pelvis) - Gốc tọa độ Y ~ 8.5
+    // 1. Khung chậu (Pelvis) - Gốc tọa độ Y ~ 8.70
     const pelvisPivot = new THREE.Group();
     pelvisPivot.name = 'PelvisPivot';
-    pelvisPivot.position.set(0, 8.5, 0);
+    pelvisPivot.position.set(0, 8.70, 0);
     this.rigRoot.add(pelvisPivot);
 
-    // 2. Thân mình / Thắt lưng (Torso L3-L5) - world Y ~ 9.8 (tương đối: +1.3)
+    // 2. Thắt lưng / Thân dưới (Torso L1-L5) - world Y ~ 9.95 (tương đối: +1.25)
     const torsoPivot = new THREE.Group();
     torsoPivot.name = 'TorsoPivot';
-    torsoPivot.position.set(0, 1.3, 0);
+    torsoPivot.position.set(0, 1.25, 0);
     pelvisPivot.add(torsoPivot);
 
-    // 3. Đầu & Cổ (Neck / Head C7-T1) - world Y ~ 14.8 (tương đối: +5.0)
+    // 3. Khớp ngực / Lồng ngực (Chest T1-T12: Điểm khớp trung gian mới) - world Y ~ 12.45 (tương đối: +2.50)
+    const chestPivot = new THREE.Group();
+    chestPivot.name = 'ChestPivot';
+    chestPivot.position.set(0, 2.50, 0);
+    torsoPivot.add(chestPivot);
+
+    // 4. Đầu & Cổ (Neck / Head C1-C7) - world Y ~ 14.90 (tương đối: +2.45 từ Chest)
     const neckPivot = new THREE.Group();
     neckPivot.name = 'NeckPivot';
-    neckPivot.position.set(0, 5.0, 0);
-    torsoPivot.add(neckPivot);
+    neckPivot.position.set(0, 2.45, 0);
+    chestPivot.add(neckPivot);
 
-    // 4. Khớp vai phải (Right Upper Arm: chỏm xương cánh tay GH joint)
-    // Tinh chỉnh X = -1.65 (sát ổ chảo xương bả vai), Y = 4.35
+    // 5. Khớp vai phải (Right Upper Arm: chỏm cánh tay GH joint - gắn vào Chest)
     const rightUpperArmPivot = new THREE.Group();
     rightUpperArmPivot.name = 'RightUpperArmPivot';
-    rightUpperArmPivot.position.set(-1.65, 4.35, 0);
-    torsoPivot.add(rightUpperArmPivot);
+    rightUpperArmPivot.position.set(-1.65, 1.65, 0); // world Y ~ 14.10
+    chestPivot.add(rightUpperArmPivot);
 
-    // 5. Khớp khuỷu tay phải (Right Forearm: ròng rọc khuỷu tay)
+    // 6. Khớp khuỷu tay phải (Right Forearm: ròng rọc khuỷu tay)
     const rightForearmPivot = new THREE.Group();
     rightForearmPivot.name = 'RightForearmPivot';
     rightForearmPivot.position.set(-0.15, -3.15, 0);
     rightUpperArmPivot.add(rightForearmPivot);
 
-    // 6. Khớp vai trái (Left Upper Arm)
+    // 7. Khớp vai trái (Left Upper Arm - gắn vào Chest)
     const leftUpperArmPivot = new THREE.Group();
     leftUpperArmPivot.name = 'LeftUpperArmPivot';
-    leftUpperArmPivot.position.set(1.65, 4.35, 0);
-    torsoPivot.add(leftUpperArmPivot);
+    leftUpperArmPivot.position.set(1.65, 1.65, 0); // world Y ~ 14.10
+    chestPivot.add(leftUpperArmPivot);
 
-    // 7. Khớp khuỷu tay trái (Left Forearm)
+    // 8. Khớp khuỷu tay trái (Left Forearm)
     const leftForearmPivot = new THREE.Group();
     leftForearmPivot.name = 'LeftForearmPivot';
     leftForearmPivot.position.set(0.15, -3.15, 0);
     leftUpperArmPivot.add(leftForearmPivot);
 
-    // 8. Khớp háng phải (Right Thigh: chỏm xương đùi)
+    // 9. Khớp háng phải (Right Thigh: chỏm xương đùi / ổ cối acetabulum)
+    // Căn chuẩn tọa độ ổ cối: X = -0.95, Y = 0.05, Z = 0.05 (world Y ~ 8.75)
     const rightThighPivot = new THREE.Group();
     rightThighPivot.name = 'RightThighPivot';
-    rightThighPivot.position.set(-1.10, -0.3, 0);
+    rightThighPivot.position.set(-0.95, 0.05, 0.05);
     pelvisPivot.add(rightThighPivot);
 
-    // 9. Khớp đầu gối phải (Right Shin: khe khớp gối)
+    // 10. Khớp đầu gối phải (Right Shin: khe khớp gối)
     const rightShinPivot = new THREE.Group();
     rightShinPivot.name = 'RightShinPivot';
-    rightShinPivot.position.set(0, -3.6, 0);
+    rightShinPivot.position.set(0, -3.70, 0);
     rightThighPivot.add(rightShinPivot);
 
-    // 10. Khớp háng trái (Left Thigh)
+    // 11. Khớp háng trái (Left Thigh)
     const leftThighPivot = new THREE.Group();
     leftThighPivot.name = 'LeftThighPivot';
-    leftThighPivot.position.set(1.10, -0.3, 0);
+    leftThighPivot.position.set(0.95, 0.05, 0.05);
     pelvisPivot.add(leftThighPivot);
 
-    // 11. Khớp đầu gối trái (Left Shin)
+    // 12. Khớp đầu gối trái (Left Shin)
     const leftShinPivot = new THREE.Group();
     leftShinPivot.name = 'LeftShinPivot';
-    leftShinPivot.position.set(0, -3.6, 0);
+    leftShinPivot.position.set(0, -3.70, 0);
     leftThighPivot.add(leftShinPivot);
 
-    // Map các pivot khớp
+    // Map 12 pivot khớp động học
     this.rigPivots = {
       pelvis: pelvisPivot,
       torso: torsoPivot,
+      chest: chestPivot,
       neck: neckPivot,
       rightUpperArm: rightUpperArmPivot,
       rightForearm: rightForearmPivot,
@@ -237,9 +244,8 @@ export class SceneView {
   }
 
   // ============================================================
-  // ============================================================
-  // PHÂN LOẠI MESH VÀO 11 PHÂN ĐOẠN ĐỘNG HỌC (CHUẨN XÁC 100% - KHÔNG BỊ TRÙNG TỪ KHÓA)
-  // Loại bỏ hoàn toàn lỗi "head" (đầu cơ) bị nhận nhầm thành đầu cổ
+  // PHÂN LOẠI MESH VÀO 12 PHÂN ĐOẠN ĐỘNG HỌC (CHUẨN XÁC 100% - KHÔNG TRÙNG LẶP)
+  // Cách ly không gian tuyệt đối: Chi trên |X| >= 1.35; Trục thân & Chi dưới |X| < 1.35
   // ============================================================
   _classifyMeshSegment(child, boxCenter) {
     const rawName = (child.name || '').toLowerCase();
@@ -251,115 +257,89 @@ export class SceneView {
 
     if (clean.includes('cross section')) return 'ignore';
 
-    // 1. CƠ THÂN MÌNH LỚN BẮT BUỘC Ở LẠI TORSO (TRÁNH XÉ RÁCH KHI CỬ ĐỘNG)
-    const trunk_kw = [
-      'latissimus', 'pectoral', 'trapezius', 'serratus', 'rhomboid',
-      'erector spinae', 'iliocostalis', 'longissimus', 'spinalis', 'interspinal',
-      'intertransversarii', 'rotatores', 'multifidus', 'semispinalis',
-      'quadratus lumborum', 'rectus abdominis', 'external abdominal oblique', 'internal abdominal oblique',
-      'transversus abdominis', 'transversus thoracis', 'levator scapulae', 'levatores', 'pyramidalis',
-      'intercostal', 'subclavius', 'diaphragm', 'thoracolumbar', 'linea alba', 'transversalis fascia',
-      'cremaster', 'investing abdominal fascia', 'inguinal ligament'
-    ];
-    if (trunk_kw.some(k => clean.includes(k))) {
-      return 'torso';
+    // 1. CHI TRÊN (UPPER LIMB) - CÁCH LY TUYỆT ĐỐI THEO TỌA ĐỘ KHÔNG GIAN
+    // Cánh tay, cẳng tay, bàn tay buông xuôi luôn có |X| >= 1.35
+    // Thân mình trục giữa và chi dưới KHÔNG BAO GIỜ vượt quá |X| = 1.28
+    if (Math.abs(boxCenter.x) >= 1.35) {
+      // Cơ thân mình lớn gắn vào ngực/lưng ở lại chest
+      if (clean.includes('pectoralis major') || clean.includes('latissimus dorsi') || 
+          clean.includes('trapezius') || clean.includes('serratus anterior')) {
+        return 'chest';
+      }
+
+      // Khớp khuỷu tay: Y < 11.20 là Cẳng tay & Bàn tay; Y >= 11.20 là Cánh tay trên
+      if (boxCenter.y < 11.20) {
+        return isRight ? 'rightForearm' : 'leftForearm';
+      } else {
+        return isRight ? 'rightUpperArm' : 'leftUpperArm';
+      }
     }
 
-    // 2. KHUNG CHẬU & VÙNG MÔNG (PELVIS)
-    const pelvis_kw = [
-      'gluteus', 'gluteal', 'piriformis', 'obturator internus', 'obturator externus',
-      'gemellus', 'quadratus femoris', 'coccygeus', 'levator ani', 'sphincter ani',
-      'pubo-analis', 'anal sphincter', 'ischiocavernosus', 'bulbospongiosus',
-      'sacrum', 'coccyx', 'pelvi', 'ilium', 'ischium', 'pubis', 'psoas', 'iliacus', 'iliopsoas',
-      'iliopectineal'
-    ];
-    if (pelvis_kw.some(k => clean.includes(k))) {
-      return 'pelvis';
-    }
+    // TỪ ĐÂY TRỞ XUỐNG, CHẮC CHẮN |X| < 1.35:
+    // TUYỆT ĐỐI KHÔNG THỂ LÀ CÁNH TAY, CẲNG TAY HAY BÀN TAY!
 
-    // 3. CẲNG TAY & BÀN TAY (FOREARM & HAND)
-    const forearm_hand_kw = [
-      'pronator', 'supinator', 'brachioradialis', 'anconeus',
-      'carpi', 'carpal', 'wrist', 'hand',
-      'pollicis', 'thenar', 'hypothenar',
-      'palmar', 'antebrachial',
-      'extensor digiti minimi', 'extensor indicis',
-      'extensor pollicis', 'flexor pollicis', 'abductor pollicis', 'adductor pollicis', 'opponens pollicis',
-      'sheath of digit of hand', 'sheaths of digits of hand', 'fibrous sheath of digit of hand',
-      'bicipitoradial bursa', 'radius', 'ulna', 'radial head', 'ulnar head', 'common flexor tendon sheath'
-    ];
-    if (forearm_hand_kw.some(k => clean.includes(k))) {
-      return isRight ? 'rightForearm' : 'leftForearm';
-    }
-    if ((clean.includes('digitorum') || clean.includes('digiti minimi') || clean.includes('interossei') || clean.includes('lumbrical')) &&
-        !clean.includes('foot') && !clean.includes('toe') && !clean.includes('pedis') && !clean.includes('leg')) {
-      return isRight ? 'rightForearm' : 'leftForearm';
-    }
-
-    // 4. CÁNH TAY TRÊN & KHỚP VAI NGOÀI (UPPER ARM)
-    const upper_arm_kw = [
-      'deltoid', 'supraspinatus', 'infraspinatus', 'subscapularis',
-      'teres major', 'teres minor',
-      'biceps brachii', 'triceps brachii', 'brachialis', 'coracobrachial',
-      'brachial fascia', 'intermuscular septum of arm', 'subacromial', 'subdeltoid',
-      'humerus', 'intertubercular', 'acromial bursa'
-    ];
-    if (upper_arm_kw.some(k => clean.includes(k))) {
-      return isRight ? 'rightUpperArm' : 'leftUpperArm';
-    }
-
-    // 5. CẲNG CHÂN, BẮP CHÂN & BÀN CHÂN (SHIN & FOOT)
-    const shin_foot_kw = [
-      'tibia', 'fibula', 'tibial', 'fibular', 'gastrocnemius', 'soleus',
-      'plantaris', 'popliteus', 'perone', 'calcane', 'achilles', 'talus', 'navicular',
-      'cuboid', 'cuneiform', 'metatarsal', 'hallucis', 'foot', 'toe', 'plantar',
-      'crural', 'ankle', 'pedis', 'patellar', 'prepatellar', 'infrapatellar', 'anserine', 'malleolus',
-      'tendon of extensor digitorum longus', 'quadratus plantae', 'popliteal', 'septum of leg'
-    ];
-    if (shin_foot_kw.some(k => clean.includes(k))) {
-      return isRight ? 'rightShin' : 'leftShin';
-    }
-    if ((clean.includes('digitorum') || clean.includes('interossei') || clean.includes('lumbrical')) &&
-        (clean.includes('foot') || clean.includes('toe') || clean.includes('pedis'))) {
+    // 2. CẲNG CHÂN & BÀN CHÂN (SHIN & FOOT: Y < 4.75)
+    if (boxCenter.y < 4.75) {
       return isRight ? 'rightShin' : 'leftShin';
     }
 
-    // 6. ĐÙI (THIGH)
-    const thigh_kw = [
-      'rectus femoris', 'vastus', 'biceps femoris', 'semitendinosus', 'semimembranosus',
-      'sartorius', 'gracilis', 'pectineus', 'adductor', 'tensor fasciae latae', 'fascia lata',
-      'iliotibial', 'femoral', 'femur', 'subinguinal', 'trochanteric', 'suprapatellar'
-    ];
-    if (thigh_kw.some(k => clean.includes(k))) {
+    // Vùng khe khớp gối (4.75 <= Y <= 5.50)
+    if (boxCenter.y <= 5.50) {
+      if (clean.includes('poplite') || clean.includes('gastrocnemius') || clean.includes('soleus') || 
+          clean.includes('tibia') || clean.includes('fibul') || clean.includes('anserine')) {
+        return isRight ? 'rightShin' : 'leftShin';
+      } else {
+        return isRight ? 'rightThigh' : 'leftThigh';
+      }
+    }
+
+    // 3. ĐÙI (THIGH: 5.50 < Y < 8.65)
+    if (boxCenter.y < 8.65) {
+      // Cơ đáy chậu / hậu môn sâu ở lại pelvis
+      if (clean.includes('sphincter ani') || clean.includes('levator ani') || 
+          clean.includes('pubo-analis') || clean.includes('coccygeus') || clean.includes('ischiocavernosus')) {
+        return 'pelvis';
+      }
       return isRight ? 'rightThigh' : 'leftThigh';
     }
 
-    // 7. ĐẦU & CỔ (HEAD & NECK: Chỉ dùng từ khóa giải phẫu chuyên biệt, KHÔNG dùng "head" trần trụi)
+    // 4. KHUNG CHẬU (PELVIS: 8.65 <= Y <= 9.35)
+    if (boxCenter.y <= 9.35) {
+      // Các cơ đùi nguyên ủy cao bám vào gai chậu/ụ ngồi chuyển động cùng đùi
+      if (clean.includes('adductor') || clean.includes('gracilis') || clean.includes('rectus femoris') || 
+          clean.includes('sartorius') || clean.includes('vastus') || clean.includes('biceps femoris') || 
+          clean.includes('semitendinosus') || clean.includes('semimembranosus')) {
+        return isRight ? 'rightThigh' : 'leftThigh';
+      }
+      return 'pelvis';
+    }
+
+    // 5. ĐẦU & CỔ (HEAD & NECK: Y >= 14.80 HOẶC TỪ KHÓA CỔ GIẢI PHẪU)
     const head_neck_kw = [
-      'cervical', 'cranium', 'skull', 'capitis', 'colli', 'neck',
-      'temporalis', 'temporoparietalis', 'masseter', 'pterygoid', 'buccinator', 'bucinator',
-      'zygomatic', 'orbicularis', 'nasalis', 'frontalis', 'occipitalis', 'epicranial',
-      'auricular', 'mental', 'procerus', 'risorius', 'corrugator', 'depressor', 'levator labii',
-      'levator anguli', 'levator nasolabialis',
-      'platysma', 'sternocleidomastoid', 'scalen', 'splenius',
-      'hyoid', 'digastric', 'mylohyoid', 'omohyoid', 'thyrohyoid', 'sternohyoid', 'sternothyroid',
-      'longus colli', 'longus capitis', 'larynx', 'pharynx', 'tongue', 'glossus', 'palatopharyngeus',
-      'constrictor', 'cricothyroid', 'thyro-arytenoid', 'arytenoid', 'crico-arytenoid',
-      'palpebrae', 'tarsus', 'trochlea', 'tendinous ring',
-      'rectus muscle.r', 'rectus muscle.l', 'oblique muscle.r', 'oblique muscle.l',
-      'superior oblique muscle', 'inferior oblique muscle', 'lateral rectus', 'medial rectus',
-      'superior rectus', 'inferior rectus', 'temporal fascia', 'stylopharyngeus'
+      'sternocleidomastoid', 'platysma', 'scalen', 'splenius', 'hyoid', 'digastric',
+      'mylohyoid', 'omohyoid', 'thyrohyoid', 'sternohyoid', 'sternothyroid',
+      'longus colli', 'longus capitis', 'larynx', 'pharynx', 'tongue', 'constrictor',
+      'cricothyroid', 'arytenoid', 'masseter', 'temporalis', 'pterygoid', 'buccinator',
+      'orbicularis', 'zygomatic', 'nasalis', 'frontalis', 'occipitalis', 'auricular',
+      'mental', 'corrugator', 'procerus', 'risorius', 'palpebrae'
     ];
+    if (boxCenter.y >= 14.80) {
+      if (clean.includes('trapezius') || clean.includes('levator scapulae') || 
+          clean.includes('rhomboid') || clean.includes('erector spinae')) {
+        return 'chest';
+      }
+      return 'neck';
+    }
     if (head_neck_kw.some(k => clean.includes(k))) {
       return 'neck';
     }
 
-    // Lớp dự phòng Bounding Box không gian
-    if (boxCenter.y < 4.75) return isRight ? 'rightShin' : 'leftShin';
-    if (boxCenter.y < 8.6 && Math.abs(boxCenter.x) > 0.22) return isRight ? 'rightThigh' : 'leftThigh';
-    if (Math.abs(boxCenter.x) > 1.25 && boxCenter.y < 10.8 && boxCenter.y >= 5.5) return isRight ? 'rightForearm' : 'leftForearm';
-    if (Math.abs(boxCenter.x) > 1.25 && boxCenter.y >= 10.8 && boxCenter.y <= 15.0) return isRight ? 'rightUpperArm' : 'leftUpperArm';
+    // 6. KHỚP TRUNG GIAN: LỒNG NGỰC (CHEST T1-T12: Y >= 11.20)
+    if (boxCenter.y >= 11.20) {
+      return 'chest';
+    }
 
+    // 7. THẮT LƯNG / THÂN DƯỚI (TORSO L1-L5: 9.35 < Y < 11.20)
     return 'torso';
   }
 
@@ -735,7 +715,8 @@ export class SceneView {
   }
 
   // ============================================================
-  // HỆ THỐNG TƯ THẾ TƯỢNG ĐỘNG HỌC (CHUẨN HÓA GÓC SINH LÝ Y KHOA)
+  // HỆ THỐNG TƯ THẾ TƯỢNG ĐỘNG HỌC (CHUẨN HÓA GÓC SINH LÝ Y KHOA 12 KHỚP)
+  // Kết hợp khớp ngực Chest trung gian & triệt tiêu lỗi tách rời đùi - lưng
   // ============================================================
   _applyStatuePose(movementId) {
     for (const k of Object.keys(this.targetRotations)) {
@@ -747,90 +728,132 @@ export class SceneView {
 
     switch (movementId) {
       // 1. NÂNG TAY LÊN CAO QUA ĐẦU (Overhead Reach)
-      // Tinh chỉnh góc sinh lý ~77° giạng tay + vươn tới: cơ delta & thân mình gắn kết hoàn hảo
+      // Khớp ngực mở nhẹ ra sau, cánh tay vươn cao, cổ ngửa theo
       case 'overhead_reach':
-        this.targetRotations.rightUpperArm.set(0.10, 0.15, -1.35);
-        this.targetRotations.rightForearm.set(0, 0, 0);
-        this.targetRotations.leftUpperArm.set(0, 0, 0.08);
-        this.targetRotations.leftForearm.set(0, 0, 0);
-        this.targetRotations.torso.set(0, 0, -0.05);
+        this.targetRotations.chest.set(-0.06, 0, -0.05);
         this.targetRotations.neck.set(-0.15, -0.10, 0);
+        this.targetRotations.rightUpperArm.set(0.10, 0.15, -1.45);
+        this.targetRotations.rightForearm.set(-0.25, 0, 0);
+        this.targetRotations.leftUpperArm.set(0, 0, 0.12);
+        this.targetRotations.leftForearm.set(0, 0, 0);
+        this.targetRotations.torso.set(0, 0, -0.03);
         break;
 
       // 2. XOAY NGƯỜI / XOAY THÂN MÌNH (Trunk Rotation)
+      // Phân bổ xoay đa tầng: Lưng dưới 0.20 rad, Lồng ngực xoay thêm 0.28 rad
       case 'trunk_rotation':
-        this.targetRotations.torso.set(0, 0.45, 0);
-        this.targetRotations.neck.set(0, 0.20, 0);
-        this.targetRotations.rightUpperArm.set(0, -0.1, 0.08);
-        this.targetRotations.leftUpperArm.set(0, 0.1, -0.08);
+        this.targetRotations.torso.set(0, 0.20, 0);
+        this.targetRotations.chest.set(0, 0.28, 0);
+        this.targetRotations.neck.set(0, 0.18, 0);
+        this.targetRotations.rightUpperArm.set(0, -0.12, 0.10);
+        this.targetRotations.leftUpperArm.set(0, 0.12, -0.10);
         break;
 
-      // 3. BƯỚC ĐI (Gait Cycle) - Khớp gối khít khao, không trôi cơ
+      // 3. BƯỚC ĐI (Gait Cycle) - Khớp háng & khe khớp gối ăn khớp sinh lý
       case 'walking_gait':
-        this.targetRotations.rightThigh.set(-0.28, 0, 0.02);
-        this.targetRotations.rightShin.set(0.15, 0, 0);
-        this.targetRotations.leftThigh.set(0.22, 0, -0.02);
-        this.targetRotations.leftShin.set(0.25, 0, 0);
-        this.targetRotations.leftUpperArm.set(-0.30, 0, -0.05);
-        this.targetRotations.rightUpperArm.set(0.25, 0, 0.05);
-        this.targetRotations.torso.set(0, 0.08, 0);
+        this.targetRotations.rightThigh.set(-0.32, 0, 0.02);
+        this.targetRotations.rightShin.set(0.12, 0, 0);
+        this.targetRotations.leftThigh.set(0.26, 0, -0.02);
+        this.targetRotations.leftShin.set(0.32, 0, 0);
+        this.targetRotations.leftUpperArm.set(-0.35, 0, -0.05);
+        this.targetRotations.leftForearm.set(-0.15, 0, 0);
+        this.targetRotations.rightUpperArm.set(0.30, 0, 0.05);
+        this.targetRotations.chest.set(0, -0.08, 0);
+        this.targetRotations.torso.set(0, 0.05, 0);
         break;
 
-      // 4. CÚI NGƯỜI GẬP LƯNG (Forward Trunk Bending)
-      // Chia đều độ cong giữa thắt lưng và khớp háng: đường cong chữ C giải phẫu mềm mại
+      // 4. CÚI NGƯỜI GẬP LƯNG (Forward Trunk Bending) - CƠ SINH HỌC CHUẨN XÁC
+      // Xoay khung chậu +0.68 rad, đùi phản xoay -0.68 rad giữ cẳng chân thẳng đứng 100%
+      // Lưng dưới cong +0.35 rad, lồng ngực cong +0.30 rad, hai tay buông thõng tự nhiên -1.10 rad
       case 'forward_bending':
-        this.targetRotations.torso.set(0.38, 0, 0);
-        this.targetRotations.neck.set(0.15, 0, 0);
-        this.targetRotations.rightThigh.set(0.22, 0, 0);
-        this.targetRotations.leftThigh.set(0.22, 0, 0);
-        this.targetRotations.rightUpperArm.set(-0.35, 0, 0);
-        this.targetRotations.leftUpperArm.set(-0.35, 0, 0);
-        this.targetPositions.pelvis.y = this.basePositions.pelvis.y - 0.15;
+        this.targetRotations.pelvis.set(0.68, 0, 0);
+        this.targetRotations.rightThigh.set(-0.68, 0, 0);
+        this.targetRotations.leftThigh.set(-0.68, 0, 0);
+        this.targetRotations.torso.set(0.35, 0, 0);
+        this.targetRotations.chest.set(0.30, 0, 0);
+        this.targetRotations.neck.set(0.12, 0, 0);
+        this.targetRotations.rightUpperArm.set(-1.10, 0, 0);
+        this.targetRotations.leftUpperArm.set(-1.10, 0, 0);
+        this.targetRotations.rightForearm.set(0, 0, 0);
+        this.targetRotations.leftForearm.set(0, 0, 0);
+        this.targetPositions.pelvis.z = this.basePositions.pelvis.z - 0.35;
+        this.targetPositions.pelvis.y = this.basePositions.pelvis.y - 0.10;
         break;
 
       // 5. GIƯƠNG CUNG BẮN TÊN (Archer Draw)
       case 'archer_pull':
-        this.targetRotations.torso.set(0, 0.40, 0);
-        this.targetRotations.neck.set(0, 0.40, 0);
-        this.targetRotations.leftUpperArm.set(-0.1, 0.2, 1.25);
+        this.targetRotations.torso.set(0, 0.20, 0);
+        this.targetRotations.chest.set(0, 0.28, 0);
+        this.targetRotations.neck.set(0, 0.42, 0);
+        this.targetRotations.leftUpperArm.set(-0.10, 0.15, 1.35);
         this.targetRotations.leftForearm.set(0, 0, 0);
-        this.targetRotations.rightUpperArm.set(0.15, -0.3, -1.25);
-        this.targetRotations.rightForearm.set(-1.65, 0, 0);
+        this.targetRotations.rightUpperArm.set(0.15, -0.30, -1.30);
+        this.targetRotations.rightForearm.set(-1.80, 0, 0);
         this.targetRotations.rightThigh.set(0, 0, -0.15);
         this.targetRotations.leftThigh.set(0, 0, 0.15);
         break;
 
       // 6. GIẠNG VAI (Shoulder Abduction)
       case 'shoulder_abduction':
-        this.targetRotations.rightUpperArm.set(0, 0, -1.25);
+        this.targetRotations.chest.set(0, 0, -0.06);
+        this.targetRotations.rightUpperArm.set(0, 0, -1.45);
         this.targetRotations.rightForearm.set(0, 0, 0);
         break;
 
       // 7. KHÉP VAI (Shoulder Adduction)
       case 'shoulder_adduction':
-        this.targetRotations.rightUpperArm.set(0.2, 0.15, 0.35);
-        this.targetRotations.rightForearm.set(-0.20, 0, 0);
+        this.targetRotations.rightUpperArm.set(0.20, 0.20, 0.40);
+        this.targetRotations.rightForearm.set(-0.30, 0, 0);
         break;
 
       // 8. GẬP VAI (Shoulder Flexion)
       case 'shoulder_flexion':
-        this.targetRotations.rightUpperArm.set(-1.25, 0, 0);
+        this.targetRotations.chest.set(-0.04, 0, 0);
+        this.targetRotations.rightUpperArm.set(-1.40, 0, 0);
         this.targetRotations.rightForearm.set(0, 0, 0);
         break;
 
       // 9. DUỖI VAI (Shoulder Extension)
       case 'shoulder_extension':
-        this.targetRotations.rightUpperArm.set(0.55, 0, 0);
+        this.targetRotations.chest.set(0.04, 0, 0);
+        this.targetRotations.rightUpperArm.set(0.65, 0, 0);
         this.targetRotations.rightForearm.set(0, 0, 0);
         break;
 
-      // 10. GẬP KHUỶU TAY (Elbow Flexion)
-      case 'elbow_flexion':
-        this.targetRotations.rightUpperArm.set(-0.15, 0, 0);
-        this.targetRotations.rightForearm.set(-1.90, 0, 0);
+      // 10. XOAY TRONG VAI (Shoulder Internal Rotation)
+      case 'shoulder_internal_rotation':
+        this.targetRotations.rightUpperArm.set(-0.15, 0.85, -0.20);
+        this.targetRotations.rightForearm.set(-1.57, 0, 0);
         break;
 
-      // 11. DUỖI KHUỶU TAY (Elbow Extension)
+      // 11. XOAY NGOÀI VAI (Shoulder External Rotation)
+      case 'shoulder_external_rotation':
+        this.targetRotations.rightUpperArm.set(0.10, -0.85, -0.20);
+        this.targetRotations.rightForearm.set(-1.57, 0, 0);
+        break;
+
+      // 12. NÂNG XƯƠNG BẢ VAI (Scapular Elevation)
+      case 'scapular_elevation':
+        this.targetPositions.chest.y = this.basePositions.chest.y + 0.15;
+        this.targetPositions.rightUpperArm.y = this.basePositions.rightUpperArm.y + 0.25;
+        this.targetPositions.leftUpperArm.y = this.basePositions.leftUpperArm.y + 0.25;
+        this.targetRotations.neck.set(0.08, 0, 0);
+        break;
+
+      // 13. KHÉP XƯƠNG BẢ VAI (Scapular Retraction)
+      case 'scapular_retraction':
+        this.targetRotations.chest.set(-0.12, 0, 0);
+        this.targetRotations.rightUpperArm.set(0.35, -0.20, -0.15);
+        this.targetRotations.leftUpperArm.set(0.35, 0.20, 0.15);
+        break;
+
+      // 14. GẬP KHUỶU TAY (Elbow Flexion)
+      case 'elbow_flexion':
+        this.targetRotations.rightUpperArm.set(-0.15, 0, 0);
+        this.targetRotations.rightForearm.set(-2.10, 0, 0);
+        break;
+
+      // 15. DUỖI KHUỶU TAY (Elbow Extension)
       case 'elbow_extension':
         this.targetRotations.rightUpperArm.set(0.10, 0, 0);
         this.targetRotations.rightForearm.set(0, 0, 0);
@@ -862,23 +885,41 @@ export class SceneView {
   }
 
   // ============================================================
-  // HIGHLIGHT CƠ THÔNG MINH (CƠ NỀN XÁM ĐỤC 100% - KHÔNG TRONG SUỐT)
+  // HIGHLIGHT CƠ THÔNG MINH (CHẾ ĐỘ X-RAY GHOST SILHOUETTE CHO CƠ SÂU)
+  // Khi không chọn chuyển động: Tượng đặc 100% màu xám slate
+  // Khi chọn chuyển động: Cơ nền mờ trong suốt (X-Ray), cơ tham gia sáng rực nổi bật
   // ============================================================
   _updateMuscleHighlights(muscles) {
-    const isSolid = this.muscleOpacity >= 0.99;
+    const hasMovement = Boolean(muscles && muscles.length > 0);
     const neutralColor = 0x94a3b8; // Xám Slate y khoa trung tính
 
-    // Đặt lại toàn bộ cơ về màu xám trung tính
+    if (!hasMovement) {
+      // Trạng thái tượng bình thường: Đục 100% (hoặc theo thanh trượt muscleOpacity)
+      const isSolid = this.muscleOpacity >= 0.99;
+      this.allMuscleMeshes.forEach((mesh) => {
+        mesh.material.color.setHex(neutralColor);
+        mesh.material.emissive.setHex(0x000000);
+        mesh.material.emissiveIntensity = 0;
+        mesh.material.opacity = this.muscleOpacity;
+        mesh.material.transparent = !isSolid;
+        mesh.material.depthWrite = true;
+        mesh.renderOrder = 0;
+      });
+      return;
+    }
+
+    // Khi có chuyển động: Cơ nền chuyển sang hiệu ứng X-Ray bán trong suốt (Ghost Silhouette)
+    // Giúp các nhóm cơ sâu bên trong (Supraspinatus, Subscapularis, Psoas...) không bị che khuất
+    const ghostOpacity = 0.28 * this.muscleOpacity;
     this.allMuscleMeshes.forEach((mesh) => {
       mesh.material.color.setHex(neutralColor);
       mesh.material.emissive.setHex(0x000000);
       mesh.material.emissiveIntensity = 0;
-      mesh.material.opacity = this.muscleOpacity;
-      mesh.material.transparent = !isSolid;
-      mesh.material.depthWrite = true;
+      mesh.material.opacity = ghostOpacity;
+      mesh.material.transparent = true;
+      mesh.material.depthWrite = false; // Ngăn che khuất cơ sâu bên trong
+      mesh.renderOrder = 0;
     });
-
-    if (!muscles || muscles.length === 0) return;
 
     const roleColorMap = {
       agonist: 0xef4444,          // Đỏ rực - Chủ vận
@@ -898,10 +939,11 @@ export class SceneView {
         meshList.forEach(mesh => {
           mesh.material.color.setHex(hex);
           mesh.material.emissive.setHex(hex);
-          mesh.material.emissiveIntensity = 0.65;
+          mesh.material.emissiveIntensity = 0.75;
           mesh.material.opacity = 1.0;
-          mesh.material.transparent = false; // Luôn đục vững chắc để quan sát rõ
+          mesh.material.transparent = false; // Luôn đục vững chắc để quan sát rõ nét
           mesh.material.depthWrite = true;
+          mesh.renderOrder = 10; // Render sau các mesh mờ để luôn nổi lên trên
         });
       }
     });
