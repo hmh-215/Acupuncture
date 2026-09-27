@@ -1,48 +1,54 @@
 import { Observable } from './Observable.js';
 import { SceneViewModel } from './SceneViewModel.js';
 import { MovementViewModel } from './MovementViewModel.js';
+import { AcupunctureViewModel } from './AcupunctureViewModel.js';
 
 /**
  * AppViewModel
- * The root ViewModel responsible for managing application-level state,
- * loading JSON data, and orchestrating child ViewModels.
+ * ViewModel gốc quản lý trạng thái toàn ứng dụng, nạp dữ liệu JSON,
+ * điều phối 2 chế độ: Chế độ 1 (Động học cử động) & Chế độ 2 (Trị liệu chuỗi cơ cân).
  */
 export class AppViewModel extends Observable {
   constructor() {
     super({
       isLoading: true,
       error: null,
-      dataLoaded: false
+      dataLoaded: false,
+      activeMode: 'movement' // 'movement' (Chế độ 1) | 'acupuncture' (Chế độ 2)
     });
     
     this.muscleData = null;
     this.movementData = null;
     this.acupointData = null;
     this.boneMapping = null;
+    this.chainsData = null;
     
     this.sceneVM = new SceneViewModel(this);
     this.movementVM = new MovementViewModel(this);
+    this.acupunctureVM = new AcupunctureViewModel(this);
   }
   
   /**
-   * Loads all JSON data files and initializes child ViewModels.
+   * Nạp toàn bộ dữ liệu JSON của ứng dụng
    */
   async initialize() {
     this.state.isLoading = true;
     this.state.error = null;
     
     try {
-      const [muscles, movements, acupoints, bones] = await Promise.all([
+      const [muscles, movements, acupoints, bones, chains] = await Promise.all([
         fetch('./data/muscles.json').then(r => r.json()),
         fetch('./data/movements.json').then(r => r.json()),
         fetch('./data/acupoints.json').then(r => r.json()),
-        fetch('./data/bone-mapping.json').then(r => r.json())
+        fetch('./data/bone-mapping.json').then(r => r.json()),
+        fetch('./data/acupuncture-chains.json').then(r => r.json())
       ]);
       
       this.muscleData = muscles;
       this.movementData = movements;
       this.acupointData = acupoints;
       this.boneMapping = bones;
+      this.chainsData = chains;
       
       this.batch(() => {
         this.state.isLoading = false;
@@ -51,56 +57,71 @@ export class AppViewModel extends Observable {
       
     } catch (err) {
       this.batch(() => {
-        // Must use Vietnamese for UI text
-        this.state.error = 'Lỗi tải dữ liệu: ' + err.message;
+        this.state.error = 'Lỗi tải dữ liệu y khoa: ' + err.message;
         this.state.isLoading = false;
       });
     }
   }
 
   /**
-   * Get all muscles as an array.
-   * @returns {Array} Array of muscle objects
+   * Chuyển đổi giữa 2 chế độ ứng dụng
+   * @param {'movement' | 'acupuncture'} mode 
    */
+  setMode(mode) {
+    if (this.state.activeMode === mode) return;
+    this.state.activeMode = mode;
+
+    if (mode === 'movement') {
+      // Chuyển sang Chế độ 1: Khôi phục cử động đang chọn nếu có
+      this.acupunctureVM.reset();
+      const currentMovId = this.movementVM.state.selectedMovementId;
+      if (currentMovId) {
+        this.movementVM.selectMovement(currentMovId);
+      } else {
+        this.sceneVM.highlightMusclesForMovement([]);
+        this.sceneVM.displayAcupoints([]);
+      }
+    } else {
+      // Chuyển sang Chế độ 2: Xóa highlight cử động và trả tư thế về đứng thẳng trung tính
+      this.movementVM.selectMovement(null);
+      this.sceneVM.resetView();
+      const currentChainId = this.acupunctureVM.state.selectedChainId;
+      if (currentChainId) {
+        this.acupunctureVM.selectChain(currentChainId);
+      }
+    }
+  }
+
   getMuscles() {
     if (!this.muscleData) return [];
     return Object.values(this.muscleData);
   }
 
-  /**
-   * Get a muscle by its ID.
-   * @param {string} id
-   * @returns {Object|null}
-   */
   getMuscleById(id) {
     if (!this.muscleData) return null;
     return this.muscleData[id] || null;
   }
 
-  /**
-   * Get a bone's Vietnamese name from the mapping.
-   * @param {string} meshName - The mesh name from the 3D model
-   * @returns {string} Vietnamese name or original mesh name
-   */
   getBoneNameVi(meshName) {
     if (!this.boneMapping || !this.boneMapping[meshName]) return meshName;
     return this.boneMapping[meshName].name_vi;
   }
 
-  /**
-   * Get all movements as an array.
-   * @returns {Array}
-   */
   getMovements() {
     if (!this.movementData) return [];
     return Object.values(this.movementData);
   }
 
-  /**
-   * Get acupoint data by code.
-   * @param {string} code - WHO acupoint code (e.g. "LI-15")
-   * @returns {Object|null}
-   */
+  getChains() {
+    if (!this.chainsData) return [];
+    return Object.values(this.chainsData);
+  }
+
+  getChainById(id) {
+    if (!this.chainsData) return null;
+    return this.chainsData[id] || null;
+  }
+
   getAcupoint(code) {
     if (!this.acupointData) return null;
     return this.acupointData[code] || null;

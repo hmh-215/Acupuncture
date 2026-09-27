@@ -1,0 +1,356 @@
+{
+  "cervical_trapezius_syndrome": {
+    "id": "cervical_trapezius_syndrome",
+    "name_vi": "Hội chứng Cổ Vai Gáy (Co cứng Cơ Thang trên & Cơ Nâng vai)",
+    "name_en": "Cervicobrachial Syndrome & Upper Trapezius Hypertonicity",
+    "pain_muscles": ["trapezius_upper", "levator_scapulae"],
+    "myofascial_chain_vi": "Chuỗi Cơ Cân Nông Sau (Superficial Back Line) & Chuỗi Cánh Tay Sau (Deep Back Arm Line)",
+    "meridian_chain_vi": "Kinh Cân Thái Dương Bàng Quang, Thiếu Dương Tam Tiêu & Thái Dương Tiểu Trường",
+    "biomechanics_vi": "Tư thế đầu đưa ra trước (Forward Head Posture) làm tăng mô-men tải trọng cột sống cổ lên gấp 3-4 lần, gây co rút lệch tâm liên tục ở Cơ Thang phần trên và Cơ Nâng vai, sinh các Điểm Cân Kết (Trigger Points) tại góc trên xương bả vai.",
+    "chain_muscles": [
+      { "muscleId": "rhomboid_major", "role": "chain", "note": "Cơ Trám lớn - Kéo giữ xương bả vai" },
+      { "muscleId": "infraspinatus", "role": "chain", "note": "Cơ Dưới gai - Chuỗi đối ứng chóp xoay" },
+      { "muscleId": "deltoid_posterior", "role": "chain", "note": "Cơ Delta sau - Chuỗi truyền lực cánh tay" },
+      { "muscleId": "erector_spinae", "role": "chain", "note": "Cơ Dựng sống cổ - Khóa trục cột sống" },
+      { "muscleId": "pectoralis_major", "role": "antagonist_tight", "note": "Cơ Ngực lớn - Co rút mặt trước gây gù vai" }
+    ],
+    "acupoints": [
+      {
+        "code": "GB-21",
+        "name_vi": "Kiên Tỉnh",
+        "name_han": "肩井",
+        "position_3d": { "x": -1.35, "y": 14.1, "z": -0.15 },
+        "location_vi": "Điểm giữa đường nối mỏm gai đốt sống C7 (Đại Chùy) và mỏm cùng vai, ngay trên gờ cao nhất của Cơ Thang.",
+        "depth_mm": "10 - 20 mm",
+        "direction_vi": "Châm thẳng hoặc nghiêng ra sau, CẤM châm sâu hướng vào trong ngực.",
+        "deqi_vi": "Cảm giác tê tức nặng vùng vai, lan truyền xuống góc trên xương bả vai và mặt ngoài cánh tay.",
+        "safety_vi": "⚠️ CẢNH BÁO AN TOÀN TUYỆT ĐỐI: Dưới đáy huyệt là đỉnh màng phổi (Cupula pleurae). Châm thẳng quá sâu > 25mm có nguy cơ đâm thủng màng phổi gây TRÀN KHÍ MÀNG PHỔI CẤP. Cấm dùng cho phụ nữ có thai (kích thích co bóp tử cung)."
+      },
+      {
+        "code": "GB-20",
+        "name_vi": "Phong Trì",
+        "name_han": "風池",
+        "position_3d": { "x": -0.65, "y": 14.9, "z": -0.65 },
+        "location_vi": "Hõm dưới xương chẩm, bờ ngoài Cơ Thang, bờ trong Cơ Ức đòn chũm.",
+        "depth_mm": "15 - 25 mm",
+        "direction_vi": "Mũi kim hướng về phía hốc mắt đối diện hoặc chóp mũi.",
+        "deqi_vi": "Tê tức sâu đáy sọ, lan lên đỉnh đầu hoặc thái dương.",
+        "safety_vi": "⚠️ CẢNH BÁO AN TOÀN: Cấm châm chếch lên trên quá sâu vì có thể xuyên qua màng chẩm đội chạm hành tủy và bó mạch đốt sống gây đột quỵ."
+      },
+      {
+        "code": "SI-11",
+        "name_vi": "Thiên Tông",
+        "name_han": "天宗",
+        "position_3d": { "x": -1.25, "y": 12.8, "z": -0.75 },
+        "location_vi": "Tại hố dưới gai xương bả vai, trong cơ Dưới gai, tạo thành tam giác đều với hai góc của gai vai.",
+        "depth_mm": "12 - 20 mm",
+        "direction_vi": "Châm thẳng hoặc xiên, kim chạm bản xương bả vai (thấu cốt pháp).",
+        "deqi_vi": "Tức buốt mạnh tại chỗ lan tỏa khắp mặt sau xương bả vai và mặt sau cánh tay.",
+        "safety_vi": "An toàn cao do có xương bả vai che chắn, điểm vàng giải tỏa Trigger Point của cơ Dưới gai."
+      },
+      {
+        "code": "BL-11",
+        "name_vi": "Đại Trữ",
+        "name_han": "大杼",
+        "position_3d": { "x": -0.45, "y": 13.5, "z": -0.70 },
+        "location_vi": "Dưới mỏm gai đốt sống D1 (ngực 1) đo ngang ra 1.5 thốn.",
+        "depth_mm": "10 - 15 mm",
+        "direction_vi": "Châm xiên chếch 45° hướng về phía cột sống, cấm châm thẳng sâu.",
+        "deqi_vi": "Căng tức vùng liên bả vai.",
+        "safety_vi": "⚠️ Dưới cơ là màng phổi thành ngực, cấm châm thẳng sâu tránh tràn khí màng phổi."
+      }
+    ],
+    "treatment_protocol_vi": "Áp dụng kỹ thuật Châm Phân Thứ (châm nhiều hướng trong khối xơ hóa Cơ Thang) kết hợp Tọa Châm tại Kiên Tỉnh để giải phóng áp lực chèn ép nhánh rễ thần kinh phụ (N. accessorius, CN XI)."
+  },
+
+  "rotator_cuff_impingement": {
+    "id": "rotator_cuff_impingement",
+    "name_vi": "Hội chứng Chóp Xoay & Viêm Gân Khớp Vai (Cơ Trên gai & Dưới gai)",
+    "name_en": "Rotator Cuff Tendinopathy & Subacromial Impingement",
+    "pain_muscles": ["supraspinatus", "infraspinatus", "teres_minor"],
+    "myofascial_chain_vi": "Chuỗi Cánh Tay Sau & Bên (Posterior Arm Lines)",
+    "meridian_chain_vi": "Kinh Cân Dương Minh Đại Trường, Thiếu Dương Tam Tiêu, Thái Dương Tiểu Trường",
+    "biomechanics_vi": "Gân cơ Trên gai chui qua khoang hẹp dưới mỏm cùng vai (Subacromial space). Khi giạng vai, đầu xương cánh tay trượt lên ép gân vào vòm cùng vai - quạ, gây rách vi thể và viêm điểm bám gân cơ chóp xoay.",
+    "chain_muscles": [
+      { "muscleId": "deltoid_middle", "role": "chain", "note": "Cơ Delta giữa - Chủ vận giạng vai tạo lực nâng" },
+      { "muscleId": "subscapularis", "role": "chain", "note": "Cơ Dưới vai - Cân bằng chóp xoay mặt trước" },
+      { "muscleId": "biceps_brachii", "role": "chain", "note": "Đầu dài cơ Nhị đầu - Chạy qua rãnh gian củ" },
+      { "muscleId": "latissimus_dorsi", "role": "antagonist_tight", "note": "Cơ Lưng rộng - Kéo hạ và xoay trong xương cánh tay" }
+    ],
+    "acupoints": [
+      {
+        "code": "LI-15",
+        "name_vi": "Kiên Ngung",
+        "name_han": "肩髃",
+        "position_3d": { "x": -1.95, "y": 13.9, "z": 0.10 },
+        "location_vi": "Tại hõm trước - ngoài mỏm cùng vai khi cánh tay giạng 90°.",
+        "depth_mm": "15 - 25 mm",
+        "direction_vi": "Châm thẳng chếch nhẹ xuống dưới hướng vào khớp vai.",
+        "deqi_vi": "Đắc khí căng nặng toàn bộ khớp ổ chảo - cánh tay, lan truyền xuống cánh tay.",
+        "safety_vi": "Tránh chọc mạnh vào sụn khớp màng hoạt dịch; châm vào bao khớp giải áp dịch ứ trệ."
+      },
+      {
+        "code": "TE-14",
+        "name_vi": "Kiên Liêu",
+        "name_han": "肩髎",
+        "position_3d": { "x": -1.95, "y": 13.85, "z": -0.35 },
+        "location_vi": "Tại hõm sau - ngoài mỏm cùng vai khi cánh tay giạng 90°.",
+        "depth_mm": "15 - 25 mm",
+        "direction_vi": "Châm thẳng hoặc hướng kim vào khe khớp vai.",
+        "deqi_vi": "Cảm giác tê nặng sâu trong chóp xoay sau.",
+        "safety_vi": "An toàn đối với thần kinh nách khi xác định đúng hõm xương."
+      },
+      {
+        "code": "SI-9",
+        "name_vi": "Kiên Trinh",
+        "name_han": "肩貞",
+        "position_3d": { "x": -1.65, "y": 12.7, "z": -0.65 },
+        "location_vi": "Phía sau khớp vai, từ nếp gấp nách sau đo thẳng lên 1 thốn.",
+        "depth_mm": "15 - 25 mm",
+        "direction_vi": "Châm thẳng vào bờ sau cơ delta và cơ tròn lớn.",
+        "deqi_vi": "Tê tức lan tỏa ra mặt sau khớp vai.",
+        "safety_vi": "Tránh châm quá sâu hướng vào hõm nách vì có bó mạch thần kinh nách."
+      },
+      {
+        "code": "LI-11",
+        "name_vi": "Khúc Trì",
+        "name_han": "曲池",
+        "position_3d": { "x": -2.25, "y": 10.6, "z": 0.10 },
+        "location_vi": "Tại điểm giữa nếp gấp khuỷu tay và lồi cầu ngoài xương cánh tay khi co khuỷu vuông góc.",
+        "depth_mm": "15 - 25 mm",
+        "direction_vi": "Châm thẳng.",
+        "deqi_vi": "Tê tức lan xuống cẳng tay và bàn tay.",
+        "safety_vi": "Huyệt Hợp thuộc Kim, giải nhiệt kháng viêm gân chóp xoay đặc hiệu."
+      }
+    ],
+    "treatment_protocol_vi": "Sử dụng kỹ thuật Thấu Thích Pháp (Châm Kiên Ngung thấu Tí Nhu hoặc Kiên Liêu thấu Cực Tuyền) kết hợp Động Châm: lưu kim và yêu cầu bệnh nhân chủ động nâng xoay vai nhẹ nhàng để giải dính bao khớp."
+  },
+
+  "sciatica_piriformis_syndrome": {
+    "id": "sciatica_piriformis_syndrome",
+    "name_vi": "Hội chứng Cơ Hình Lê & Đau Thần Kinh Tọa (Piriformis & Sciatica)",
+    "name_en": "Piriformis Syndrome & Sciatic Nerve Compression",
+    "pain_muscles": ["piriformis", "gluteus_maximus", "gluteus_medius"],
+    "myofascial_chain_vi": "Chuỗi Cơ Cân Nông Sau (Superficial Back Line) & Chuỗi Bên (Lateral Line)",
+    "meridian_chain_vi": "Kinh Cân Thái Dương Bàng Quang & Thiếu Dương Đởm",
+    "biomechanics_vi": "Cơ Hình lê bị co thắt phì đại chèn ép trực tiếp lên Dây thần kinh Tọa (N. ischiadicus) chui qua khuyết ngồi lớn, gây đau buốt dọc từ mông lan xuống mặt sau đùi, khoeo chân và bàn chân.",
+    "chain_muscles": [
+      { "muscleId": "biceps_femoris", "role": "chain", "note": "Cơ Nhị đầu đùi - Dẫn truyền dọc dây thần kinh tọa" },
+      { "muscleId": "gastrocnemius", "role": "chain", "note": "Cơ Bụng chân - Căng tức cẳng chân sau" },
+      { "muscleId": "erector_spinae", "role": "chain", "note": "Cơ Dựng sống thắt lưng - Co cứng bù trừ lệch khung chậu" },
+      { "muscleId": "iliopsoas", "role": "antagonist_tight", "note": "Cơ Thắt lưng chậu - Kéo nghiêng chậu trước" }
+    ],
+    "acupoints": [
+      {
+        "code": "GB-30",
+        "name_vi": "Hoàn Khiêu",
+        "name_han": "環跳",
+        "position_3d": { "x": -1.25, "y": 7.9, "z": -0.35 },
+        "location_vi": "Nằm nghiêng co chân, điểm nối 1/3 ngoài và 2/3 trong của đường nối từ mấu chuyển lớn xương đùi đến mỏm gai đốt sống cùng 4.",
+        "depth_mm": "50 - 75 mm (Kim dài số 3-4 thốn)",
+        "direction_vi": "Châm thẳng hơi chếch vào trong và xuống dưới, xuyên qua cơ mông lớn chạm đến bờ cơ hình lê.",
+        "deqi_vi": "Điện giật phóng thẳng một luồng tê buốt dọc mặt sau đùi xuống tận gót chân (dấu hiệu đắc khí vào bao dây thần kinh tọa).",
+        "safety_vi": "Cần châm kim dài đủ sâu mới tới khối cơ hình lê; khi bệnh nhân có cảm giác điện giật phải dừng đẩy kim và vê nhẹ, không chọc giật liên tục."
+      },
+      {
+        "code": "BL-54",
+        "name_vi": "Trật Biên",
+        "name_han": "秩邊",
+        "position_3d": { "x": -0.85, "y": 7.8, "z": -0.45 },
+        "location_vi": "Ngang mỏm gai đốt sống cùng 4 (S4) đo ngang ra 3 thốn.",
+        "depth_mm": "40 - 60 mm",
+        "direction_vi": "Châm thẳng hoặc hơi nghiêng ra ngoài.",
+        "deqi_vi": "Cảm giác tê nặng sâu vùng chậu lan xuống đùi sau.",
+        "safety_vi": "An toàn cao vùng cơ mông dày."
+      },
+      {
+        "code": "BL-40",
+        "name_vi": "Ủy Trung",
+        "name_han": "委中",
+        "position_3d": { "x": -1.15, "y": 4.6, "z": -0.35 },
+        "location_vi": "Chính giữa nếp gấp khoeo chân, giữa gân cơ nhị đầu đùi và gân cơ bán mạc.",
+        "depth_mm": "15 - 25 mm",
+        "direction_vi": "Châm thẳng, hoặc chích nặn máu tĩnh mạch khoeo bằng kim tam lăng.",
+        "deqi_vi": "Tức buốt toàn khoeo chân lan xuống bắp chân.",
+        "safety_vi": "⚠️ Tránh đâm xuyên thẳng vào động mạch khoeo (nằm sâu hơn) và tĩnh mạch khoeo; khi châm sờ mạch đập để tránh."
+      },
+      {
+        "code": "BL-60",
+        "name_vi": "Côn Lôn",
+        "name_han": "崑崙",
+        "position_3d": { "x": -1.05, "y": 0.8, "z": -0.15 },
+        "location_vi": "Hõm giữa đỉnh mắt cá ngoài và bờ ngoài gân gót (Achilles).",
+        "depth_mm": "10 - 15 mm",
+        "direction_vi": "Châm thẳng hướng về phía mắt cá trong (thấu Thái Khê).",
+        "deqi_vi": "Tê buốt vùng gót chân và mắt cá ngoài.",
+        "safety_vi": "Huyệt kỵ thai phụ; có tác dụng dẫn khí từ đầu lưng dồn xuống chân giải áp thần kinh."
+      }
+    ],
+    "treatment_protocol_vi": "Áp dụng kỹ thuật Tọa Châm kim sâu 60mm tại Hoàn Khiêu kết hợp Ôn Châm (gắn ngải cứu lên đốc kim) để trừ hàn thấp kinh lạc, giãn mềm cơ hình lê giải phóng dây thần kinh tọa."
+  },
+
+  "lumbar_erector_spinae_strain": {
+    "id": "lumbar_erector_spinae_strain",
+    "name_vi": "Đau Thắt Lưng Cấp & Co Cứng Cơ Dựng Sống (Lumbar Muscle Strain)",
+    "name_en": "Acute Lumbar Spasm & Erector Spinae Strain",
+    "pain_muscles": ["erector_spinae"],
+    "myofascial_chain_vi": "Chuỗi Cơ Cân Nông Sau (Superficial Back Line)",
+    "meridian_chain_vi": "Kinh Cân Thái Dương Bàng Quang & Mạch Đốc",
+    "biomechanics_vi": "Mất cân bằng giữa cơ dựng sống thắt lưng (bị kéo căng quá mức) và nhóm cơ lõi bụng (Core: Cơ ngang bụng, Cơ thẳng bụng yếu), dẫn đến co cứng bảo vệ (Protective Spasm) khóa cứng khớp liên mấu đốt sống L4-L5.",
+    "chain_muscles": [
+      { "muscleId": "gluteus_maximus", "role": "chain", "note": "Cơ Mông lớn - Điểm neo chuỗi nông sau" },
+      { "muscleId": "latissimus_dorsi", "role": "chain", "note": "Cơ Lưng rộng - Liên kết cân ngực thắt lưng" },
+      { "muscleId": "rectus_abdominis", "role": "antagonist_tight", "note": "Cơ Bụng - Cơ đối vận kiểm soát độ nghiêng chậu" },
+      { "muscleId": "oblique_externus", "role": "chain", "note": "Cơ Chéo bụng ngoài - Ổn định xoay lồng ngực" }
+    ],
+    "acupoints": [
+      {
+        "code": "BL-23",
+        "name_vi": "Thận Du",
+        "name_han": "腎兪",
+        "position_3d": { "x": -0.55, "y": 9.4, "z": -0.65 },
+        "location_vi": "Dưới mỏm gai đốt sống thắt lưng 2 (L2) đo ngang ra 1.5 thốn, trong khối Cơ Dựng Sống.",
+        "depth_mm": "20 - 30 mm",
+        "direction_vi": "Châm thẳng hoặc hơi nghiêng về phía thân đốt sống.",
+        "deqi_vi": "Tê tức nặng sâu vùng thắt lưng, cảm giác ấm lan tỏa.",
+        "safety_vi": "⚠️ CẤM châm xiên quá sâu ra ngoài vì có nguy cơ đâm vào nhu mô thận hoặc cực dưới của thận."
+      },
+      {
+        "code": "BL-25",
+        "name_vi": "Đại Trường Du",
+        "name_han": "大腸兪",
+        "position_3d": { "x": -0.55, "y": 8.6, "z": -0.60 },
+        "location_vi": "Dưới mỏm gai đốt sống thắt lưng 4 (L4, ngang mào chậu) đo ngang ra 1.5 thốn.",
+        "depth_mm": "25 - 35 mm",
+        "direction_vi": "Châm thẳng.",
+        "deqi_vi": "Tê tức sâu lan xuống hông và mông.",
+        "safety_vi": "Huyệt cốt lõi giải phóng co cứng cơ dựng sống đoạn L4-L5."
+      },
+      {
+        "code": "EX-B2",
+        "name_vi": "Hoa Đà Giáp Tích (L2-L5)",
+        "name_han": "華佗夾脊",
+        "position_3d": { "x": -0.25, "y": 9.0, "z": -0.62 },
+        "location_vi": "Dưới mỗi mỏm gai đốt sống thắt lưng đo ngang ra 0.5 thốn, ngay sát rãnh gian mỏm gai.",
+        "depth_mm": "20 - 30 mm",
+        "direction_vi": "Châm thẳng hoặc hơi nghiêng nhẹ hướng vào thân đốt sống.",
+        "deqi_vi": "Căng tức sâu từng phân đoạn rễ thần kinh tủy sống.",
+        "safety_vi": "Tác động chọn lọc vào nhánh sau thần kinh gai sống (Dorsal ramus), giải phóng hạch giao cảm."
+      }
+    ],
+    "treatment_protocol_vi": "Châm tả nhóm huyệt Hoa Đà Giáp Tích đoạn L3-L5 kết hợp cứu ngải tại Thận Du, kết hợp châm viễn đạo Ủy Trung (BL-40) để dỡ bỏ co cứng cơ thắt lưng theo nguyên lý 'Yêu bối Ủy Trung cầu'."
+  },
+
+  "carpal_tunnel_flexor_strain": {
+    "id": "carpal_tunnel_flexor_strain",
+    "name_vi": "Hội chứng Ống Cổ Tay & Co Cứng Gân Gập Cẳng Tay",
+    "name_en": "Carpal Tunnel Syndrome & Forearm Flexor Hypertonicity",
+    "pain_muscles": ["brachioradialis"],
+    "myofascial_chain_vi": "Chuỗi Cánh Tay Trước Nông & Sâu (Front Arm Lines)",
+    "meridian_chain_vi": "Kinh Cân Thái Âm Phế, Quyết Âm Tâm Bào & Thiếu Âm Tâm",
+    "biomechanics_vi": "Sử dụng bàn phím hoặc cầm nắm lặp đi lặp lại làm tăng áp lực khoang ống cổ tay lên gấp 3 lần, gân gập ngón bị viêm bao gân chèn ép Dây thần kinh Giữa (N. medianus).",
+    "chain_muscles": [
+      { "muscleId": "biceps_brachii", "role": "chain", "note": "Cơ Nhị đầu cánh tay - Cân cơ nhị đầu hòa vào mạc cẳng tay" },
+      { "muscleId": "coracobrachialis", "role": "chain", "note": "Cơ Quạ cánh tay - Gốc bám mỏm quạ" },
+      { "muscleId": "pectoralis_major", "role": "chain", "note": "Cơ Ngực lớn - Đầu chuỗi cánh tay trước" }
+    ],
+    "acupoints": [
+      {
+        "code": "PC-7",
+        "name_vi": "Đại Lăng",
+        "name_han": "大陵",
+        "position_3d": { "x": -2.35, "y": 8.1, "z": 0.05 },
+        "location_vi": "Chính giữa nếp gấp xa nhất cổ tay, giữa gân cơ gan tay lớn và gân cơ gấp chung nông các ngón.",
+        "depth_mm": "8 - 12 mm",
+        "direction_vi": "Châm thẳng hoặc luồn kim dưới dây chằng vòng cổ tay hướng vào ống cổ tay.",
+        "deqi_vi": "Tê buốt lan tỏa theo 3 ngón tay cái, trỏ, giữa (vùng chi phối thần kinh giữa).",
+        "safety_vi": "⚠️ Không chọc trực tiếp làm tổn thương thân thần kinh giữa; khi bệnh nhân thấy luồng điện giật mạnh lập tức rút nhẹ kim 1mm."
+      },
+      {
+        "code": "PC-6",
+        "name_vi": "Nội Quan",
+        "name_han": "內關",
+        "position_3d": { "x": -2.32, "y": 8.7, "z": 0.06 },
+        "location_vi": "Từ nếp gấp cổ tay đo lên 2 thốn, giữa hai gân cơ gan tay dài và gấp cổ tay quay.",
+        "depth_mm": "10 - 15 mm",
+        "direction_vi": "Châm thẳng hoặc thấu Ngoại Quan (TE-5).",
+        "deqi_vi": "Căng tức cẳng tay, lan lên ngực sườn hoặc xuống bàn tay.",
+        "safety_vi": "Huyệt Lạc của Tâm Bào, điều hòa nhịp tim và thư giãn gân mạc cẳng tay."
+      },
+      {
+        "code": "LI-4",
+        "name_vi": "Hợp Cốc",
+        "name_han": "合谷",
+        "position_3d": { "x": -2.45, "y": 7.4, "z": 0.12 },
+        "location_vi": "Trên mu bàn tay, giữa xương bàn ngón 1 và 2, tại điểm lồi cao nhất của cơ gian cốt mu tay 1 khi khép ngón cái sát ngón trỏ.",
+        "depth_mm": "12 - 20 mm",
+        "direction_vi": "Châm thẳng hoặc hơi nghiêng về phía lòng bàn tay (thấu Lao Cung).",
+        "deqi_vi": "Tê tức căng mạnh cả mu tay và ngón trỏ.",
+        "safety_vi": "⚠️ TUYỆT ĐỐI CẤM CHÂM CHO PHỤ NỮ MANG THAI (gây co bóp tử cung mạnh, trụy thai)."
+      }
+    ],
+    "treatment_protocol_vi": "Áp dụng kỹ thuật Luồn Kim Dưới Mạc (thấu thích pháp qua ống cổ tay) kết hợp bấm huyệt mở khoang cân mạc cẳng tay trước."
+  },
+
+  "knee_quadriceps_patellofemoral": {
+    "id": "knee_quadriceps_patellofemoral",
+    "name_vi": "Đau Mặt Trước Gối & Co Rút Cơ Tứ Đầu Đùi (Patellofemoral Pain)",
+    "name_en": "Patellofemoral Pain Syndrome & Quadriceps Tightness",
+    "pain_muscles": ["rectus_femoris"],
+    "myofascial_chain_vi": "Chuỗi Cơ Cân Nông Trước (Superficial Front Line)",
+    "meridian_chain_vi": "Kinh Cân Dương Minh Vị & Thái Âm Tỳ",
+    "biomechanics_vi": "Cơ Thẳng đùi co rút kéo xương bánh chè tì đè mạnh vào rãnh ròng rọc xương đùi, gây thoái hóa mặt sau sụn bánh chè và đau nhức khi leo cầu thang hoặc ngồi xổm.",
+    "chain_muscles": [
+      { "muscleId": "tibialis_anterior", "role": "chain", "note": "Cơ Chày trước - Nối tiếp chuỗi trước xuống bàn chân" },
+      { "muscleId": "iliopsoas", "role": "chain", "note": "Cơ Thắt lưng chậu - Gốc bám thắt lưng cùng" },
+      { "muscleId": "gluteus_maximus", "role": "antagonist_tight", "note": "Cơ Mông lớn - Cơ đối vận duỗi háng bị ức chế" }
+    ],
+    "acupoints": [
+      {
+        "code": "ST-34",
+        "name_vi": "Lương Khâu",
+        "name_han": "梁丘",
+        "position_3d": { "x": -1.25, "y": 5.6, "z": 0.25 },
+        "location_vi": "Bờ trên ngoài xương bánh chè đo thẳng lên 2 thốn, trong rãnh giữa cơ thẳng đùi và cơ rộng ngoài.",
+        "depth_mm": "15 - 25 mm",
+        "direction_vi": "Châm thẳng.",
+        "deqi_vi": "Tê tức mạnh tại chỗ lan xuống khớp gối.",
+        "safety_vi": "Huyệt Khích của kinh Vị, đặc trị giảm đau cấp tính gân cơ tứ đầu đùi."
+      },
+      {
+        "code": "ST-35",
+        "name_vi": "Độc Tỵ",
+        "name_han": "犢鼻",
+        "position_3d": { "x": -1.25, "y": 4.8, "z": 0.28 },
+        "location_vi": "Gập gối vuông góc, tại hõm dưới ngoài xương bánh chè (ngoài dây chằng bánh chè).",
+        "depth_mm": "15 - 25 mm",
+        "direction_vi": "Châm xiên hướng mũi kim vào giữa khớp gối.",
+        "deqi_vi": "Tê tức toàn bộ bao khớp gối.",
+        "safety_vi": "Tránh chọc mạnh vào sụn chêm ngoài; giải áp dịch bao hoạt dịch dưới bánh chè."
+      },
+      {
+        "code": "ST-36",
+        "name_vi": "Túc Tam Lý",
+        "name_han": "足三里",
+        "position_3d": { "x": -1.28, "y": 3.9, "z": 0.22 },
+        "location_vi": "Dưới Độc Tỵ đo thẳng xuống 3 thốn, cách mào chày 1 khoát ngón tay về phía ngoài (trong Cơ Chày Trước).",
+        "depth_mm": "20 - 30 mm",
+        "direction_vi": "Châm thẳng.",
+        "deqi_vi": "Căng tức sâu tê rần lan xuống mu bàn chân.",
+        "safety_vi": "Huyệt Cường tráng toàn thân, tăng tuần hoàn nuôi dưỡng sụn khớp gối."
+      },
+      {
+        "code": "SP-10",
+        "name_vi": "Huyết Hải",
+        "name_han": "血海",
+        "position_3d": { "x": -0.85, "y": 5.6, "z": 0.25 },
+        "location_vi": "Bờ trên trong xương bánh chè đo lên 2 thốn, trong khối cơ rộng trong.",
+        "depth_mm": "15 - 25 mm",
+        "direction_vi": "Châm thẳng.",
+        "deqi_vi": "Tê tức vùng đùi trong.",
+        "safety_vi": "Hoạt huyết hóa ứ, giãn mềm cơ rộng trong."
+      }
+    ],
+    "treatment_protocol_vi": "Áp dụng kỹ thuật Châm Hạc Đỉnh thấu Độc Tỵ kết hợp điện châm tần số thưa - dày (Dense-Disperse) để giải cơ tứ đầu đùi và kích thích tiết dịch hoạt dịch khớp gối."
+  }
+}
