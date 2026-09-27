@@ -30,21 +30,27 @@ async function main() {
   }
 
   const urlParams = new URLSearchParams(window.location.search);
+  const modeParam = urlParams.get('mode');
+  const chainParam = urlParams.get('chain');
   const movementParam = urlParams.get('movement');
-  if (movementParam && appVM.movementVM) {
+
+  if (modeParam === 'acupuncture' || chainParam) {
+    appVM.setMode('acupuncture');
+    const tabAcu = document.getElementById('tab-mode-acupuncture');
+    if (tabAcu) tabAcu.click();
+
+    if (chainParam && appVM.acupunctureVM) {
+      appVM.acupunctureVM.selectChain(chainParam);
+      const selChain = document.getElementById('chain-select');
+      if (selChain) selChain.value = chainParam;
+    }
+  } else if (movementParam && appVM.movementVM) {
     appVM.movementVM.selectMovement(movementParam);
     const sel = document.getElementById('movement-select');
     if (sel) sel.value = movementParam;
   }
 
-  if (urlParams.has('skeleton') && appVM.sceneVM) {
-    const showSkel = urlParams.get('skeleton') === '1' || urlParams.get('skeleton') === 'true';
-    appVM.sceneVM.setShowSkeleton(showSkel);
-    const cb = document.getElementById('toggle-skeleton');
-    if (cb) cb.checked = showSkel;
-  }
-
-  console.log('✅ Ứng dụng 3D Cơ Xương Khớp đã sẵn sàng!');
+  console.log('✅ Ứng dụng 3D Hệ Cơ & Châm Cứu đã sẵn sàng!');
 }
 
 document.addEventListener('DOMContentLoaded', () => {

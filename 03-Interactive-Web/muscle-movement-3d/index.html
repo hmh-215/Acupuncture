@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hệ Cơ Xương Khớp 3D — Châm Cứu & Vận Động</title>
+  <title>Hệ Cơ & Thần Kinh 3D — Châm Cứu & Động Học</title>
   <link rel="stylesheet" href="assets/css/theme.css">
 
   <!-- Three.js via ES Module importmap -->
@@ -20,9 +20,9 @@
 <body>
   <!-- ===================== HEADER ===================== -->
   <header class="app-header">
-    <div class="badge">CHUYÊN ĐỀ Y KHOA TƯƠNG TÁC • HỆ CƠ XƯƠNG KHỚP 3D</div>
-    <h1>Hệ Cơ Xương Khớp & Châm Cứu</h1>
-    <p class="subtitle">Khám phá mối liên hệ giữa chuyển động, nhóm cơ tham gia và huyệt vị châm cứu</p>
+    <div class="badge">CHUYÊN ĐỀ Y KHOA TƯƠNG TÁC • HỆ CƠ & HUYỆT VỊ CHÂM CỨU 3D</div>
+    <h1>Hệ Cơ Bắp & Huyệt Vị Châm Cứu 3D</h1>
+    <p class="subtitle">Khám phá động học chuyển động, chuỗi cơ cân lâm sàng và định vị huyệt vị châm cứu WHO</p>
   </header>
 
   <!-- ===================== MAIN LAYOUT ===================== -->
@@ -36,7 +36,7 @@
           <!-- Three.js canvas will be injected here -->
           <div id="loading-overlay" class="loading-overlay">
             <div class="spinner"></div>
-            <p>Đang tải mô hình 3D...</p>
+            <p>Đang tải mô hình hệ cơ 3D...</p>
           </div>
           <!-- Hover tooltip -->
           <div id="hover-tooltip" class="hover-tooltip" style="display:none;"></div>
@@ -51,54 +51,26 @@
             <div class="layer-header">
               <label class="toggle-label">
                 <input type="checkbox" id="toggle-muscles" checked>
-                <span class="layer-title">💪 Hệ Cơ</span>
+                <span class="layer-title">💪 Hệ Cơ (Muscular)</span>
               </label>
-              <span id="val-muscle-opacity" class="slider-num">95%</span>
+              <span id="val-muscle-opacity" class="slider-num">100%</span>
             </div>
             <div class="slider-wrapper">
-              <input type="range" id="slider-muscle-opacity" min="5" max="100" value="95" class="slider" title="Điều chỉnh độ đậm/nhạt của Hệ Cơ">
+              <input type="range" id="slider-muscle-opacity" min="5" max="100" value="100" class="slider" title="Điều chỉnh độ đậm/nhạt của Hệ Cơ (100% = Đục hoàn toàn)">
             </div>
           </div>
 
-          <!-- 2. Hệ Xương -->
-          <div class="layer-control-card" id="card-control-skeleton">
-            <div class="layer-header">
-              <label class="toggle-label">
-                <input type="checkbox" id="toggle-skeleton">
-                <span class="layer-title">🦴 Hệ Xương</span>
-              </label>
-              <span id="val-skeleton-opacity" class="slider-num">80%</span>
-            </div>
-            <div class="slider-wrapper">
-              <input type="range" id="slider-skeleton-opacity" min="5" max="100" value="80" class="slider" title="Điều chỉnh độ mờ của Hệ Xương">
-            </div>
-          </div>
-
-          <!-- 3. Hệ Thần Kinh -->
+          <!-- 2. Hệ Thần Kinh -->
           <div class="layer-control-card" id="card-control-nervous">
             <div class="layer-header">
               <label class="toggle-label">
                 <input type="checkbox" id="toggle-nervous">
-                <span class="layer-title">🧠 Hệ Thần Kinh</span>
+                <span class="layer-title">🧠 Hệ Thần Kinh (Nervous)</span>
               </label>
               <span id="val-nervous-opacity" class="slider-num">90%</span>
             </div>
             <div class="slider-wrapper">
               <input type="range" id="slider-nervous-opacity" min="5" max="100" value="90" class="slider" title="Điều chỉnh độ mờ của Hệ Thần Kinh">
-            </div>
-          </div>
-
-          <!-- 4. Hệ Tuần Hoàn -->
-          <div class="layer-control-card" id="card-control-vascular">
-            <div class="layer-header">
-              <label class="toggle-label">
-                <input type="checkbox" id="toggle-vascular">
-                <span class="layer-title">🫀 Hệ Tuần Hoàn</span>
-              </label>
-              <span id="val-vascular-opacity" class="slider-num">90%</span>
-            </div>
-            <div class="slider-wrapper">
-              <input type="range" id="slider-vascular-opacity" min="5" max="100" value="90" class="slider" title="Điều chỉnh độ mờ của Hệ Tuần Hoàn">
             </div>
           </div>
         </div>
@@ -113,75 +85,145 @@
     <!-- RIGHT: Info Panels -->
     <aside class="info-column">
 
-      <!-- Movement Selector Card -->
-      <div class="card" id="movement-card">
-        <h2 class="card-title">🏃 Chọn Chuyển Động & Tư Thế</h2>
-        <div class="search-box">
-          <input type="text" id="search-input" placeholder="Tìm nhanh cử động (nâng tay, xoay, bước...) hoặc tên cơ..." class="search-input">
-        </div>
-        <select id="movement-select" class="select-input">
-          <option value="">— Chọn chuyển động mẫu —</option>
-        </select>
-        <!-- Movement description -->
-        <div id="movement-info" class="movement-info" style="display:none;">
-          <p id="movement-desc" class="movement-desc"></p>
-          <div class="movement-meta">
-            <span id="movement-plane" class="meta-tag"></span>
-            <span id="movement-rom" class="meta-tag"></span>
+      <!-- MODE TABS -->
+      <div class="mode-tabs">
+        <button id="tab-mode-movement" class="mode-tab active" data-mode="movement" title="Khảo sát cử động đại thể và phân vai cơ học">
+          <span class="tab-icon">🏃</span> Chế Độ 1: Động Học Cử Động
+        </button>
+        <button id="tab-mode-acupuncture" class="mode-tab" data-mode="acupuncture" title="Phân tích hội chứng đau cơ, chuỗi cơ cân & điểm huyệt 3D">
+          <span class="tab-icon">⚡</span> Chế Độ 2: Trị Liệu & Chuỗi Kinh Cân
+        </button>
+      </div>
+
+      <!-- ==================== CHẾ ĐỘ 1: ĐỘNG HỌC CỬ ĐỘNG ==================== -->
+      <div id="mode-1-container">
+        <!-- Movement Selector Card -->
+        <div class="card" id="movement-card">
+          <h2 class="card-title">🏃 Chọn Cử Động & Tư Thế</h2>
+          <div class="search-box">
+            <input type="text" id="search-input" placeholder="Tìm nhanh cử động (nâng tay, bước, cúi...) hoặc tên cơ..." class="search-input">
           </div>
-          <!-- Phase breakdown -->
-          <div id="movement-phases" class="phases-container"></div>
+          <select id="movement-select" class="select-input">
+            <option value="">— Chọn chuyển động mẫu —</option>
+          </select>
+          <!-- Movement description -->
+          <div id="movement-info" class="movement-info" style="display:none;">
+            <p id="movement-desc" class="movement-desc"></p>
+            <div class="movement-meta">
+              <span id="movement-plane" class="meta-tag"></span>
+              <span id="movement-rom" class="meta-tag"></span>
+            </div>
+            <!-- Phase breakdown -->
+            <div id="movement-phases" class="phases-container"></div>
+          </div>
+        </div>
+
+        <!-- Active Muscles List -->
+        <div class="card" id="muscles-card">
+          <h2 class="card-title">💪 Các Nhóm Cơ Tham Gia</h2>
+          <div class="role-filter">
+            <button class="filter-btn active" data-role="all">Tất cả</button>
+            <button class="filter-btn" data-role="agonist" style="--btn-color: var(--red);">Chủ vận</button>
+            <button class="filter-btn" data-role="antagonist" style="--btn-color: var(--cyan);">Đối vận</button>
+            <button class="filter-btn" data-role="synergist" style="--btn-color: var(--amber);">Hiệp đồng</button>
+            <button class="filter-btn" data-role="stabilizer" style="--btn-color: var(--green);">Ổn định</button>
+          </div>
+          <ul id="muscle-list" class="muscle-list">
+            <li class="muscle-placeholder">Chọn một cử động để xem phân vai các nhóm cơ</li>
+          </ul>
         </div>
       </div>
 
-      <!-- Legend Card -->
+      <!-- ==================== CHẾ ĐỘ 2: TRỊ LIỆU & CHÂU KINH CÂN ==================== -->
+      <div id="mode-2-container" style="display:none;">
+        <div class="card" id="acupuncture-card">
+          <h2 class="card-title">⚡ Chọn Vùng Đau & Hội Chứng Cân Cơ</h2>
+          <select id="chain-select" class="select-input">
+            <option value="">— Chọn bệnh lý cân cơ / điểm đau —</option>
+          </select>
+
+          <!-- Chain Information -->
+          <div id="chain-info" class="chain-info-box" style="display:none;">
+            <div class="chain-field">
+              <div class="chain-field-title">🔗 Chuỗi Cơ Cân Giải Phẫu & Kinh Cân YHCT:</div>
+              <p id="chain-myofascial" style="font-weight: 600; color: var(--text);"></p>
+              <p id="chain-meridian" style="color: var(--muted); font-size: 0.8rem;"></p>
+            </div>
+            <div class="chain-field">
+              <div class="chain-field-title">⚙️ Cơ Chế Cơ Sinh Học & Điểm Cân Kết:</div>
+              <p id="chain-biomechanics" style="line-height: 1.5; color: var(--text);"></p>
+            </div>
+            <div class="chain-field">
+              <div class="chain-field-title">🩺 Phác Đồ Thủ Pháp Đạo Dẫn:</div>
+              <p id="chain-protocol" style="line-height: 1.5; color: var(--cyan); font-weight: 500;"></p>
+            </div>
+          </div>
+
+          <!-- Acupoints Interactive List -->
+          <div id="chain-acupoint-section" class="acupoint-section" style="display:none;">
+            <h3 class="section-title">🔴 Các Huyệt Vị Đặc Trị (Nhấp để tiêu điểm trên 3D)</h3>
+            <div id="chain-acupoints-list" class="acupoint-interactive-list"></div>
+          </div>
+        </div>
+
+        <!-- Acupoint Detail Card -->
+        <div class="card" id="acupoint-detail-card" style="display:none;">
+          <div class="card-header">
+            <h2 class="card-title" id="acupoint-detail-title">—</h2>
+          </div>
+          <div class="detail-grid">
+            <div class="detail-row">
+              <strong>📍 Định vị giải phẫu:</strong>
+              <span id="acupoint-detail-loc"></span>
+            </div>
+            <div class="detail-row">
+              <strong>📐 Độ sâu & Hướng kim:</strong>
+              <span id="acupoint-detail-depth"></span>
+            </div>
+            <div class="detail-row">
+              <strong>⚡ Cảm giác Đắc Khí:</strong>
+              <span id="acupoint-detail-deqi"></span>
+            </div>
+          </div>
+          <div id="acupoint-detail-safety" class="safety-alert"></div>
+        </div>
+      </div>
+
+      <!-- ==================== CHÚ GIẢI KÝ HIỆU (LEGEND) ==================== -->
       <div class="card" id="legend-card">
-        <h2 class="card-title">📌 CHÚ GIẢI KÝ HIỆU</h2>
+        <h2 class="card-title">📌 CHÚ GIẢI KÝ HIỆU Y KHOA</h2>
         <div class="legend-grid">
+          <!-- Chế độ 1 -->
           <div class="legend-item">
-            <span class="legend-dot" style="background: var(--red);"></span>
+            <span class="legend-dot" style="background: #ef4444; box-shadow: 0 0 6px #ef4444;"></span>
             <span>Cơ chủ vận <em>(Agonist)</em></span>
           </div>
           <div class="legend-item">
-            <span class="legend-dot" style="background: var(--cyan);"></span>
+            <span class="legend-dot" style="background: #38bdf8; box-shadow: 0 0 6px #38bdf8;"></span>
             <span>Cơ đối vận <em>(Antagonist)</em></span>
           </div>
           <div class="legend-item">
-            <span class="legend-dot" style="background: var(--amber);"></span>
-            <span>Cơ hiệp đồng <em>(Synergist)</em></span>
+            <span class="legend-dot" style="background: #f59e0b; box-shadow: 0 0 6px #f59e0b;"></span>
+            <span>Cơ hiệp đồng / Chuỗi liên đới</span>
           </div>
           <div class="legend-item">
-            <span class="legend-dot" style="background: var(--green);"></span>
+            <span class="legend-dot" style="background: #10b981; box-shadow: 0 0 6px #10b981;"></span>
             <span>Cơ ổn định <em>(Stabilizer)</em></span>
           </div>
+          <!-- Chế độ 2 & Lớp chung -->
           <div class="legend-item">
-            <span class="legend-dot" style="background: #facc15; box-shadow: 0 0 6px #eab308;"></span>
-            <span>Hệ thần kinh <em>(Nervous)</em></span>
+            <span class="legend-dot" style="background: #dc2626; box-shadow: 0 0 8px #dc2626;"></span>
+            <span>Cơ đau chính / Trigger Point</span>
           </div>
           <div class="legend-item">
-            <span class="legend-dot" style="background: #d97706; box-shadow: 0 0 6px #b45309;"></span>
-            <span>Hệ tuần hoàn <em>(Vascular)</em></span>
+            <span class="legend-dot" style="background: #facc15; box-shadow: 0 0 8px #facc15;"></span>
+            <span>Điểm huyệt 3D / Thần kinh</span>
           </div>
           <div class="legend-item">
-            <span class="legend-dot" style="background: var(--muted); border: 2px dashed var(--border);"></span>
-            <span>Hệ xương <em>(Skeleton)</em></span>
+            <span class="legend-dot" style="background: #94a3b8; border: 1px solid #cbd5e1;"></span>
+            <span>Cơ không hoạt động <em>(Xám Đục)</em></span>
           </div>
         </div>
-      </div>
-
-      <!-- Active Muscles List -->
-      <div class="card" id="muscles-card">
-        <h2 class="card-title">💪 Các Cơ Tham Gia</h2>
-        <div class="role-filter">
-          <button class="filter-btn active" data-role="all">Tất cả</button>
-          <button class="filter-btn" data-role="agonist" style="--btn-color: var(--red);">Chủ vận</button>
-          <button class="filter-btn" data-role="antagonist" style="--btn-color: var(--cyan);">Đối vận</button>
-          <button class="filter-btn" data-role="synergist" style="--btn-color: var(--amber);">Hiệp đồng</button>
-          <button class="filter-btn" data-role="stabilizer" style="--btn-color: var(--green);">Ổn định</button>
-        </div>
-        <ul id="muscle-list" class="muscle-list">
-          <li class="muscle-placeholder">Chọn một chuyển động để xem các cơ tham gia</li>
-        </ul>
       </div>
 
       <!-- Muscle Detail Panel (shown when clicking a muscle) -->
@@ -225,8 +267,8 @@
 
   <!-- Footer -->
   <footer class="app-footer">
-    <p>Mô hình 3D: <a href="https://z-anatomy.com" target="_blank">Z-Anatomy</a> (CC BY-SA 4.0) + <a href="https://anatomytool.org" target="_blank">AnatomyTOOL</a> (CC BY-SA 4.0)</p>
-    <p>Dữ liệu y khoa dựa trên Terminologia Anatomica (TA2-2019) & WHO Standard Acupuncture Point Locations</p>
+    <p>Mô hình 3D: <a href="https://z-anatomy.com" target="_blank">Z-Anatomy</a> (CC BY-SA 4.0) — Tối ưu hóa cho WebGL</p>
+    <p>Dữ liệu giải phẫu & châm cứu: Giáo trình ĐHYHN, Netter Anatomy, Terminologia Anatomica (TA2) & WHO Acupuncture Standards</p>
   </footer>
 
   <!-- App Entry Point -->

@@ -2,14 +2,31 @@
 node_modules/
 package-lock.json
 
-# Large 3D binary raw files & archives (> 100MB GitHub limit)
+# Large 3D binary raw files & archives
 *.blend
 *.blend1
 *.zip
 *.tar.gz
 *.7z
 *.rar
-3D-models/Z-Biomechanics-extracted/
+3D-models/
+
+# Tài liệu gốc, PDF, sách và video trích xuất (Chỉ lưu trữ cục bộ, không đưa lên GitHub)
+TaiLieu-DauVao/
+Giai-Phau-DHYHN/
+Kinh-Can/
+He-Co-Xuong/
+He-Dao-Dan/
+_QuanLy/
+scripts/
+*.pdf
+*.docx
+*.doc
+
+# Mô hình đã lược bỏ khỏi Web App (Hệ xương & Tuần hoàn)
+03-Interactive-Web/muscle-movement-3d/assets/models/SkeletalSystem.fbx
+03-Interactive-Web/muscle-movement-3d/assets/models/CardioVascular.fbx
+03-Interactive-Web/muscle-movement-3d/assets/models/overview-skeleton.obj
 
 # Temporary Audio/Video & processing artifacts
 temp_*

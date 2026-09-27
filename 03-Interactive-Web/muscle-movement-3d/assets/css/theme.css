@@ -716,6 +716,144 @@ body.dark-theme .control-bar {
   margin: 2px 0;
 }
 
+/* === MODE TABS SWITCHER === */
+.mode-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+  background: var(--bg-deep);
+  padding: 4px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.mode-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 12px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mode-tab:hover {
+  color: var(--text);
+  background: rgba(2, 132, 199, 0.08);
+}
+
+.mode-tab.active {
+  background: var(--card);
+  color: var(--cyan);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+body.dark-theme .mode-tab.active {
+  background: #334155;
+  color: #38bdf8;
+}
+
+.tab-icon {
+  font-size: 1rem;
+}
+
+/* === MODE 2 ACUPUNCTURE & CHAIN STYLES === */
+.chain-info-box {
+  margin-top: 12px;
+  padding: 12px;
+  background: var(--bg-deep);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--amber);
+  font-size: 0.85rem;
+}
+
+.chain-field {
+  margin-bottom: 8px;
+}
+.chain-field:last-child {
+  margin-bottom: 0;
+}
+.chain-field-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+
+.safety-alert {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: rgba(220, 38, 38, 0.08);
+  border: 1px solid rgba(220, 38, 38, 0.25);
+  border-radius: var(--radius-sm);
+  color: var(--red);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.acupoint-interactive-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.acupoint-card-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 12px;
+  background: var(--bg-deep);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font-main);
+}
+
+.acupoint-card-btn:hover, .acupoint-card-btn.active {
+  border-color: var(--red);
+  background: rgba(220, 38, 38, 0.05);
+  transform: translateY(-1px);
+}
+
+.acupoint-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.acupoint-badge {
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: white;
+  background: var(--red);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.acupoint-meta-inline {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* Tối ưu grid điều khiển 2 hệ (Hệ Cơ và Hệ Thần Kinh) */
+.layers-control-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 1024px) {
   .app-layout {
@@ -731,4 +869,5 @@ body.dark-theme .control-bar {
   .app-header h1 { font-size: 1.4rem; }
   .control-bar { flex-direction: column; align-items: flex-start; }
   .three-container { aspect-ratio: 4 / 3; }
+  .layers-control-grid { grid-template-columns: 1fr !important; }
 }
