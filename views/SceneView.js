@@ -273,9 +273,29 @@ export class SceneView {
 
     if (clean.includes('cross section') || clean.includes('axis') || clean.includes('pointer')) return 'ignore';
 
-    // 0. KHUNG CHẬU, MÔNG & CHI DƯỚI: LOẠI TRỪ SỚM TUYỆT ĐỐI (TRÁNH LỖI LỌC NHẦM VÀO TAY)
-    // Các cấu trúc mào chậu, bao hoạt dịch mấu chuyển (Trochanteric bursa), cơ mông (Gluteus),
-    // cơ đùi, cơ cẳng chân có |X| từ 1.35 đến 1.55 TUYỆT ĐỐI KHÔNG ĐƯỢC VÀO CHI TRÊN!
+    // 0. CHI DƯỚI & BÀN CHÂN: GIỚI HẠN CAO ĐỘ TUYỆT ĐỐI (Y < 7.60)
+    // Trong tư thế đứng giải phẫu, bàn tay và các ngón tay khi buông thõng thấp nhất có Y >= 7.80.
+    // Mọi cấu trúc có Y < 7.60 TUYỆT ĐỐI KHÔNG THUỘC CHI TRÊN (loại bỏ 100% lỗi kéo gân chân theo tay)!
+    if (boxCenter.y < 7.60) {
+      if (boxCenter.y < 5.15) {
+        return isRight ? 'rightShin' : 'leftShin';
+      }
+      if (boxCenter.y <= 5.50) {
+        if (clean.includes('poplite') || clean.includes('gastrocnemi') || clean.includes('soleus') || 
+            clean.includes('tibia') || clean.includes('fibul') || clean.includes('anserine') || clean.includes('perone')) {
+          return isRight ? 'rightShin' : 'leftShin';
+        }
+        return isRight ? 'rightThigh' : 'leftThigh';
+      }
+      // 5.50 <= Y < 7.60
+      if (clean.includes('sphincter ani') || clean.includes('levator ani') || 
+          clean.includes('pubo-analis') || clean.includes('coccygeus') || clean.includes('ischiocavernosus')) {
+        return 'pelvis';
+      }
+      return isRight ? 'rightThigh' : 'leftThigh';
+    }
+
+    // Các từ khóa mông, đùi, chậu cho phần Y >= 7.60 (Mào chậu, cơ mông, túi hoạt dịch mấu chuyển)
     const lowerBodyKeywords = [
       'gluteus', 'glutea', 'trochanter', 'bursa of gluteus', 'trochanteric', 'tensor fascia', 
       'iliotibial', 'piriformis', 'pyriformis', 'obturator', 'gemellus', 'quadratus femoris', 
@@ -287,23 +307,9 @@ export class SceneView {
     const isLowerBody = lowerBodyKeywords.some(kw => clean.includes(kw));
 
     if (isLowerBody) {
-      // Cẳng chân & Bàn chân (Y < 5.15)
-      if (boxCenter.y < 5.15) {
-        return isRight ? 'rightShin' : 'leftShin';
-      }
-      // Vùng khớp gối (5.15 <= Y <= 5.50)
-      if (boxCenter.y <= 5.50) {
-        if (clean.includes('poplite') || clean.includes('gastrocnemi') || clean.includes('soleus') || 
-            clean.includes('tibia') || clean.includes('fibul') || clean.includes('anserine')) {
-          return isRight ? 'rightShin' : 'leftShin';
-        }
-        return isRight ? 'rightThigh' : 'leftThigh';
-      }
-      // Đùi (5.50 < Y < 8.65)
       if (boxCenter.y < 8.65) {
         return isRight ? 'rightThigh' : 'leftThigh';
       }
-      // Mông & Khung chậu (Y >= 8.65)
       if (clean.includes('adductor') || clean.includes('gracilis') || clean.includes('rectus femoris') || 
           clean.includes('sartorius') || clean.includes('vastus') || clean.includes('biceps femoris')) {
         return isRight ? 'rightThigh' : 'leftThigh';
@@ -342,22 +348,26 @@ export class SceneView {
       return isRight ? 'rightShoulderGirdle' : 'leftShoulderGirdle';
     }
 
-    // 3. CHI TRÊN (CÁNH TAY, CẲNG TAY, BÀN TAY)
-    // Điều kiện vào chi trên: Có tọa độ biên ngoài (|X| >= 1.35) HOẶC mang từ khóa chi trên rõ ràng
+    // 3. CHI TRÊN (CÁNH TAY, CẲNG TAY, BÀN TAY: BẮT BUỘC Y >= 7.60)
     const upperLimbKeywords = [
       'deltoid', 'biceps brachii', 'triceps brachii', 'brachialis', 'coracobrachialis',
       'brachioradialis', 'pronator', 'supinator', 'flexor carpi', 'extensor carpi',
-      'digitorum', 'pollicis', 'digiti minimi', 'palmar', 'interossei dorsales manus',
-      'abductor digiti', 'lumbrical manus', 'antebrachial'
+      'palmar', 'interossei dorsales manus', 'lumbrical manus', 'antebrachial',
+      'digiti minimi of hand', 'pollicis', 'extensor indicis', 'thenar', 'hypothenar'
     ];
-    const isUpperLimb = (Math.abs(boxCenter.x) >= 1.35) || upperLimbKeywords.some(kw => clean.includes(kw));
+    const isUpperLimb = (boxCenter.y >= 7.60) && ((Math.abs(boxCenter.x) >= 1.35) || upperLimbKeywords.some(kw => clean.includes(kw)));
 
     if (isUpperLimb) {
       // Cơ thân mình lớn gắn vào ngực/lưng ở lại chest
       if (clean.includes('pectoralis major') || clean.includes('pectoralis minor') || 
           clean.includes('latissimus dorsi') || clean.includes('trapezius') || 
-          clean.includes('serratus anterior') || clean.includes('subclavius')) {
+          clean.includes('serratus anterior') || clean.includes('subclavius') ||
+          clean.includes('erector spinae') || clean.includes('intercostal') || clean.includes('serratus posterior')) {
         return 'chest';
+      }
+      if (clean.includes('obliquus') || clean.includes('rectus abdominis') || clean.includes('transversus abdominis') || 
+          clean.includes('quadratus lumborum') || clean.includes('psoas') || clean.includes('iliopsoas')) {
+        return 'torso';
       }
 
       // Khớp khuỷu tay: Y < 11.05 là Cẳng tay & Bàn tay; Y >= 11.05 là Cánh tay trên
@@ -530,7 +540,7 @@ export class SceneView {
     fbxModel.position.y = this.bodyOffsetY;
     fbxModel.position.z = this.bodyOffsetZ;
 
-    this.scene.add(fbxModel);
+    // Cập nhật world matrix mà KHÔNG add fbxModel vào scene (tránh hiển thị các object rác/wireframe chưa được attach vào rig)
     fbxModel.updateMatrixWorld(true);
 
     const savedRotations = this._saveCurrentPivotRotations();
@@ -547,14 +557,28 @@ export class SceneView {
       if (child.isMesh) {
         if (child.userData.isNoise) return;
 
+        const rawName = (child.name || '').toLowerCase();
+        if (layerType === 'nervous') {
+          if (rawName.endsWith('j') || /j\d*$/i.test(rawName) || rawName.includes('.j') ||
+              rawName.includes('cross_section') || rawName.includes('cross section') ||
+              rawName.includes('axis') || rawName.includes('pointer')) {
+            child.visible = false;
+            child.userData.isNoise = true;
+            return;
+          }
+        }
+
         meshBox.setFromObject(child);
         meshBox.getSize(meshSize);
 
-        // Lọc triệt để tia nhiễu có độ dày = 0 hoặc kích thước dị thường
+        // Lọc triệt để tia nhiễu có độ dày = 0 hoặc kích thước dị thường (aspect ratio cực hạn)
         if (layerType === 'nervous') {
-          if (meshSize.x < 0.001 || meshSize.y < 0.001 || meshSize.z < 0.001 || 
-              meshSize.x > 8.0 || meshSize.y > 8.0 || meshSize.z > 8.0) {
+          const maxDim = Math.max(meshSize.x, meshSize.y, meshSize.z);
+          const minDim = Math.min(meshSize.x, meshSize.y, meshSize.z);
+          const vCount = child.geometry && child.geometry.attributes.position ? child.geometry.attributes.position.count : 0;
+          if (minDim < 0.0005 || maxDim > 8.0 || (vCount <= 48 && maxDim > 5.0 * Math.max(minDim, 0.001))) {
             child.visible = false;
+            child.userData.isNoise = true;
             return;
           }
         }
@@ -722,14 +746,21 @@ export class SceneView {
           fbx.traverse((child) => {
             if (child.isMesh) {
               const name = (child.name || '').toLowerCase();
+              const box = new THREE.Box3().setFromObject(child);
+              const size = box.getSize(new THREE.Vector3());
+              const vCount = child.geometry && child.geometry.attributes.position ? child.geometry.attributes.position.count : 0;
+              const maxDim = Math.max(size.x, size.y, size.z);
+              const minDim = Math.min(size.x, size.y, size.z);
+              const isNeedle = (vCount <= 48 && maxDim > 5.0 * Math.max(minDim, 0.001));
+
               const isNoise = 
-                name.endsWith('.j') || name.includes('.j.') || name.endsWith('.g') ||
-                name.includes('cross section') || name.includes('axis') || 
-                name.includes('optic axis') || name.includes('sulcus sclerae') ||
-                name.includes('inferior frontal sulcus') ||
-                (child.geometry && child.geometry.attributes && child.geometry.attributes.position && (
-                  child.geometry.attributes.position.count <= 12
-                ));
+                name.endsWith('j') || /j\d*$/i.test(name) || name.includes('.j') ||
+                name.includes('cross_section') || name.includes('cross section') ||
+                name.includes('axis') || name.includes('pointer') ||
+                name.includes('optic_axis') || name.includes('sulcus_sclerae') ||
+                name.includes('inferior_frontal_sulcus') ||
+                isNeedle || minDim < 0.0005;
+
               if (isNoise) {
                 child.visible = false;
                 child.userData.isNoise = true;
@@ -1190,10 +1221,11 @@ export class SceneView {
         break;
 
       // 8. KHÉP VAI (Shoulder Adduction)
+      // Cánh tay khép đưa nhẹ ra trước bụng (anterior horizontal adduction), loại bỏ 100% clipping vào hông
       case 'shoulder_adduction':
-        this.targetRotations.rightShoulderGirdle.set(0, 0, 0.12);
-        this.targetRotations.rightUpperArm.set(0.15, 0.15, 0.30);
-        this.targetRotations.rightForearm.set(-0.30, 0, 0);
+        this.targetRotations.rightShoulderGirdle.set(0, 0.08, 0.05);
+        this.targetRotations.rightUpperArm.set(-0.35, 0.22, 0.16);
+        this.targetRotations.rightForearm.set(-0.45, 0.10, 0);
         break;
 
       // 9. GẬP VAI (Shoulder Flexion)
