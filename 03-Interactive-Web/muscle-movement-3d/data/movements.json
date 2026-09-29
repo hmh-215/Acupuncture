@@ -761,5 +761,73 @@
         "role": "stabilizer"
       }
     ]
+  },
+  "daodan_hand_behind_back": {
+    "id": "daodan_hand_behind_back",
+    "name_vi": "Thế Đạo Dẫn: Đưa tay sau lưng chạm gáy",
+    "name_en": "Dao Dan: Hand-Behind-Back & Up",
+    "plane_vi": "Mặt phẳng đứng dọc & mặt phẳng ngang",
+    "axis_vi": "Đa trục (Khớp ổ chảo - cánh tay, đai vai & cột sống ngực)",
+    "range_of_motion": "Tầm xa sinh lý (Gập khuỷu tối đa + Xoay trong & Duỗi vai)",
+    "description_vi": "Tư thế Đạo Dẫn kinh điển trích từ 'Yếu Lược Châm Cứu Hệ Đạo Dẫn' (Chương 3): Quy chiếu về Thế Xoay và Thế Ngửa. Đưa tay vòng ra sau lưng, gấp khuỷu vươn ngón tay chạm vùng cổ gáy, đòi hỏi sự phối hợp nhịp nhàng giữa giải phóng cơ ngực lớn, mở cột sống ngực và huy động chóp xoay.",
+    "phases": [
+      {
+        "range": "Khởi động",
+        "primary": "Xương bả vai xoay trong và hạ xuống, cơ Delta sau và cơ Dưới gai phát lực"
+      },
+      {
+        "range": "Tầm giữa",
+        "primary": "Khuỷu tay gấp nhọn, xương cánh tay xoay trong đưa bàn tay áp sát cột sống thắt lưng"
+      },
+      {
+        "range": "Tầm xa",
+        "primary": "Cột sống ngực D4-D8 ưỡn ngửa, cơ trám và cơ nâng vai kéo xương bả vai hướng lên gáy"
+      }
+    ],
+    "muscles": [
+      { "muscleId": "deltoid_posterior", "role": "agonist" },
+      { "muscleId": "infraspinatus", "role": "agonist" },
+      { "muscleId": "teres_minor", "role": "agonist" },
+      { "muscleId": "pectoralis_major", "role": "antagonist" },
+      { "muscleId": "subscapularis", "role": "antagonist" },
+      { "muscleId": "rhomboid_major", "role": "synergist" },
+      { "muscleId": "levator_scapulae", "role": "synergist" },
+      { "muscleId": "erector_spinae", "role": "stabilizer" },
+      { "muscleId": "rectus_abdominis", "role": "stabilizer" }
+    ]
+  },
+  "daodan_archer_pull": {
+    "id": "daodan_archer_pull",
+    "name_vi": "Thế Đạo Dẫn: Bắn Cung mở lồng ngực",
+    "name_en": "Dao Dan: Archer Pull & Lung Meridian Opening",
+    "plane_vi": "Mặt phẳng ngang / trán",
+    "axis_vi": "Trục đứng thân mình & trục khớp vai hai bên",
+    "range_of_motion": "Mở rộng 180° lồng ngực",
+    "description_vi": "Thế Đạo Dẫn Bắn Cung trích từ 'Yếu Lược Châm Cứu Hệ Đạo Dẫn' (Chương 3 & 4): Tay trước đẩy thẳng giữ cung (mở kinh Thủ Thái Âm Phế), tay sau giương dây cung kéo căng mạn sườn, giải phóng co rút lệch tâm cơ ngực bé và cân mạc cánh tay, khơi thông chuỗi tiếp lực toàn thân.",
+    "phases": [
+      {
+        "range": "Định thế",
+        "primary": "Hạ bàn tấn vững vàng (GIÁ ĐỠ), trục cột sống dựng thẳng"
+      },
+      {
+        "range": "Giương cung",
+        "primary": "Tay trước phát lực đẩy mở kinh phế, tay sau kéo lùi xương bả vai khép sát cột sống"
+      },
+      {
+        "range": "Mở giằng giữ",
+        "primary": "Lồng ngực nở rộng tối đa, giải phóng co thắt cơ ngực bé và cơ nhị đầu"
+      }
+    ],
+    "muscles": [
+      { "muscleId": "deltoid_posterior", "role": "agonist" },
+      { "muscleId": "rhomboid_major", "role": "agonist" },
+      { "muscleId": "trapezius_middle", "role": "agonist" },
+      { "muscleId": "pectoralis_major", "role": "antagonist" },
+      { "muscleId": "biceps_brachii", "role": "antagonist" },
+      { "muscleId": "serratus_anterior", "role": "synergist" },
+      { "muscleId": "latissimus_dorsi", "role": "synergist" },
+      { "muscleId": "erector_spinae", "role": "stabilizer" },
+      { "muscleId": "gluteus_maximus", "role": "stabilizer" }
+    ]
   }
 }

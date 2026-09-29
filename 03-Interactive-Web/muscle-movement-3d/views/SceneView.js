@@ -138,63 +138,76 @@ export class SceneView {
     neckPivot.position.set(0, 2.45, 0);
     chestPivot.add(neckPivot);
 
-    // 5. Khớp vai phải (Right Upper Arm: chỏm cánh tay GH joint - gắn vào Chest)
+    // 5. Đai vai phải (Right Shoulder Girdle: Khớp ức - đòn & bả vai) - world Y ~ 13.90, X ~ -1.10, Z ~ -0.25
+    const rightShoulderGirdlePivot = new THREE.Group();
+    rightShoulderGirdlePivot.name = 'RightShoulderGirdlePivot';
+    rightShoulderGirdlePivot.position.set(-1.10, 1.45, -0.25);
+    chestPivot.add(rightShoulderGirdlePivot);
+
+    // 6. Khớp vai phải (Right Upper Arm: Chỏm cánh tay GH joint) - world Y ~ 13.90, X ~ -1.85, Z ~ -0.30
     const rightUpperArmPivot = new THREE.Group();
     rightUpperArmPivot.name = 'RightUpperArmPivot';
-    rightUpperArmPivot.position.set(-1.65, 1.65, 0); // world Y ~ 14.10
-    chestPivot.add(rightUpperArmPivot);
+    rightUpperArmPivot.position.set(-0.75, 0.00, -0.05); // relative to girdle
+    rightShoulderGirdlePivot.add(rightUpperArmPivot);
 
-    // 6. Khớp khuỷu tay phải (Right Forearm: ròng rọc khuỷu tay)
+    // 7. Khớp khuỷu tay phải (Right Forearm: Ròng rọc khuỷu tay) - world Y ~ 11.05, X ~ -2.30, Z ~ -0.30
     const rightForearmPivot = new THREE.Group();
     rightForearmPivot.name = 'RightForearmPivot';
-    rightForearmPivot.position.set(-0.15, -3.15, 0);
+    rightForearmPivot.position.set(-0.45, -2.85, 0.00); // relative to upper arm
     rightUpperArmPivot.add(rightForearmPivot);
 
-    // 7. Khớp vai trái (Left Upper Arm - gắn vào Chest)
+    // 8. Đai vai trái (Left Shoulder Girdle) - world Y ~ 13.90, X ~ 1.10, Z ~ -0.25
+    const leftShoulderGirdlePivot = new THREE.Group();
+    leftShoulderGirdlePivot.name = 'LeftShoulderGirdlePivot';
+    leftShoulderGirdlePivot.position.set(1.10, 1.45, -0.25);
+    chestPivot.add(leftShoulderGirdlePivot);
+
+    // 9. Khớp vai trái (Left Upper Arm) - world Y ~ 13.90, X ~ 1.85, Z ~ -0.30
     const leftUpperArmPivot = new THREE.Group();
     leftUpperArmPivot.name = 'LeftUpperArmPivot';
-    leftUpperArmPivot.position.set(1.65, 1.65, 0); // world Y ~ 14.10
-    chestPivot.add(leftUpperArmPivot);
+    leftUpperArmPivot.position.set(0.75, 0.00, -0.05); // relative to girdle
+    leftShoulderGirdlePivot.add(leftUpperArmPivot);
 
-    // 8. Khớp khuỷu tay trái (Left Forearm)
+    // 10. Khớp khuỷu tay trái (Left Forearm) - world Y ~ 11.05, X ~ 2.30, Z ~ -0.30
     const leftForearmPivot = new THREE.Group();
     leftForearmPivot.name = 'LeftForearmPivot';
-    leftForearmPivot.position.set(0.15, -3.15, 0);
+    leftForearmPivot.position.set(0.45, -2.85, 0.00); // relative to upper arm
     leftUpperArmPivot.add(leftForearmPivot);
 
-    // 9. Khớp háng phải (Right Thigh: chỏm xương đùi / ổ cối acetabulum)
-    // Căn chuẩn tọa độ ổ cối: X = -0.95, Y = 0.05, Z = 0.05 (world Y ~ 8.75)
+    // 11. Khớp háng phải (Right Thigh: chỏm xương đùi / ổ cối acetabulum) - world Y ~ 8.70, X ~ -0.85, Z ~ -0.10
     const rightThighPivot = new THREE.Group();
     rightThighPivot.name = 'RightThighPivot';
-    rightThighPivot.position.set(-0.95, 0.05, 0.05);
+    rightThighPivot.position.set(-0.85, 0.00, -0.10);
     pelvisPivot.add(rightThighPivot);
 
-    // 10. Khớp đầu gối phải (Right Shin: khe khớp gối)
+    // 12. Khớp đầu gối phải (Right Shin: khe khớp gối) - world Y ~ 5.00, X ~ -0.85, Z ~ -0.15
     const rightShinPivot = new THREE.Group();
     rightShinPivot.name = 'RightShinPivot';
-    rightShinPivot.position.set(0, -3.70, 0);
+    rightShinPivot.position.set(0.00, -3.70, -0.05);
     rightThighPivot.add(rightShinPivot);
 
-    // 11. Khớp háng trái (Left Thigh)
+    // 13. Khớp háng trái (Left Thigh) - world Y ~ 8.70, X ~ 0.85, Z ~ -0.10
     const leftThighPivot = new THREE.Group();
     leftThighPivot.name = 'LeftThighPivot';
-    leftThighPivot.position.set(0.95, 0.05, 0.05);
+    leftThighPivot.position.set(0.85, 0.00, -0.10);
     pelvisPivot.add(leftThighPivot);
 
-    // 12. Khớp đầu gối trái (Left Shin)
+    // 14. Khớp đầu gối trái (Left Shin) - world Y ~ 5.00, X ~ 0.85, Z ~ -0.15
     const leftShinPivot = new THREE.Group();
     leftShinPivot.name = 'LeftShinPivot';
-    leftShinPivot.position.set(0, -3.70, 0);
+    leftShinPivot.position.set(0.00, -3.70, -0.05);
     leftThighPivot.add(leftShinPivot);
 
-    // Map 12 pivot khớp động học
+    // Map 14 pivot khớp động học hoàn chỉnh
     this.rigPivots = {
       pelvis: pelvisPivot,
       torso: torsoPivot,
       chest: chestPivot,
       neck: neckPivot,
+      rightShoulderGirdle: rightShoulderGirdlePivot,
       rightUpperArm: rightUpperArmPivot,
       rightForearm: rightForearmPivot,
+      leftShoulderGirdle: leftShoulderGirdlePivot,
       leftUpperArm: leftUpperArmPivot,
       leftForearm: leftForearmPivot,
       rightThigh: rightThighPivot,
@@ -246,8 +259,9 @@ export class SceneView {
   }
 
   // ============================================================
-  // PHÂN LOẠI MESH VÀO 12 PHÂN ĐOẠN ĐỘNG HỌC (CHUẨN XÁC 100% - KHÔNG TRÙNG LẶP)
-  // Cách ly không gian tuyệt đối: Chi trên |X| >= 1.35; Trục thân & Chi dưới |X| < 1.35
+  // PHÂN LOẠI MESH VÀO 14 PHÂN ĐOẠN ĐỘNG HỌC (CHUẨN XÁC 100% Y KHOA)
+  // Loại trừ sớm cấu trúc mông/đùi/cẳng chân -> Triệt tiêu 100% lỗi dính cơ mông vào cổ tay
+  // Tích hợp Đai vai (Shoulder Girdle) nối liền bả vai - ngực - cánh tay
   // ============================================================
   _classifyMeshSegment(child, boxCenter) {
     const rawName = (child.name || '').toLowerCase();
@@ -257,66 +271,47 @@ export class SceneView {
                     clean.includes(' right') || (boxCenter.x < -0.15);
     const isLeft = !isRight;
 
-    if (clean.includes('cross section')) return 'ignore';
+    if (clean.includes('cross section') || clean.includes('axis') || clean.includes('pointer')) return 'ignore';
 
-    // 1. CHI TRÊN (UPPER LIMB) - CÁCH LY TUYỆT ĐỐI THEO TỌA ĐỘ KHÔNG GIAN
-    // Cánh tay, cẳng tay, bàn tay buông xuôi luôn có |X| >= 1.35
-    // Thân mình trục giữa và chi dưới KHÔNG BAO GIỜ vượt quá |X| = 1.28
-    if (Math.abs(boxCenter.x) >= 1.35) {
-      // Cơ thân mình lớn gắn vào ngực/lưng ở lại chest
-      if (clean.includes('pectoralis major') || clean.includes('latissimus dorsi') || 
-          clean.includes('trapezius') || clean.includes('serratus anterior')) {
-        return 'chest';
-      }
+    // 0. KHUNG CHẬU, MÔNG & CHI DƯỚI: LOẠI TRỪ SỚM TUYỆT ĐỐI (TRÁNH LỖI LỌC NHẦM VÀO TAY)
+    // Các cấu trúc mào chậu, bao hoạt dịch mấu chuyển (Trochanteric bursa), cơ mông (Gluteus),
+    // cơ đùi, cơ cẳng chân có |X| từ 1.35 đến 1.55 TUYỆT ĐỐI KHÔNG ĐƯỢC VÀO CHI TRÊN!
+    const lowerBodyKeywords = [
+      'gluteus', 'glutea', 'trochanter', 'bursa of gluteus', 'trochanteric', 'tensor fascia', 
+      'iliotibial', 'piriformis', 'pyriformis', 'obturator', 'gemellus', 'quadratus femoris', 
+      'ischio', 'iliac', 'ilium', 'ischium', 'pubis', 'sacro', 'coccy', 'femur', 'femoral', 
+      'patella', 'tibia', 'fibul', 'perone', 'gastrocnemi', 'soleus', 'plantar', 'poplite', 
+      'adductor', 'gracilis', 'pectine', 'sartori', 'rectus femoris', 'vastus', 'biceps femoris', 
+      'semitendin', 'semimembran', 'sciatic', 'saphen'
+    ];
+    const isLowerBody = lowerBodyKeywords.some(kw => clean.includes(kw));
 
-      // Khớp khuỷu tay: Y < 11.20 là Cẳng tay & Bàn tay; Y >= 11.20 là Cánh tay trên
-      if (boxCenter.y < 11.20) {
-        return isRight ? 'rightForearm' : 'leftForearm';
-      } else {
-        return isRight ? 'rightUpperArm' : 'leftUpperArm';
-      }
-    }
-
-    // TỪ ĐÂY TRỞ XUỐNG, CHẮC CHẮN |X| < 1.35:
-    // TUYỆT ĐỐI KHÔNG THỂ LÀ CÁNH TAY, CẲNG TAY HAY BÀN TAY!
-
-    // 2. CẲNG CHÂN & BÀN CHÂN (SHIN & FOOT: Y < 4.75)
-    if (boxCenter.y < 4.75) {
-      return isRight ? 'rightShin' : 'leftShin';
-    }
-
-    // Vùng khe khớp gối (4.75 <= Y <= 5.50)
-    if (boxCenter.y <= 5.50) {
-      if (clean.includes('poplite') || clean.includes('gastrocnemius') || clean.includes('soleus') || 
-          clean.includes('tibia') || clean.includes('fibul') || clean.includes('anserine')) {
+    if (isLowerBody) {
+      // Cẳng chân & Bàn chân (Y < 5.15)
+      if (boxCenter.y < 5.15) {
         return isRight ? 'rightShin' : 'leftShin';
-      } else {
+      }
+      // Vùng khớp gối (5.15 <= Y <= 5.50)
+      if (boxCenter.y <= 5.50) {
+        if (clean.includes('poplite') || clean.includes('gastrocnemi') || clean.includes('soleus') || 
+            clean.includes('tibia') || clean.includes('fibul') || clean.includes('anserine')) {
+          return isRight ? 'rightShin' : 'leftShin';
+        }
         return isRight ? 'rightThigh' : 'leftThigh';
       }
-    }
-
-    // 3. ĐÙI (THIGH: 5.50 < Y < 8.65)
-    if (boxCenter.y < 8.65) {
-      // Cơ đáy chậu / hậu môn sâu ở lại pelvis
-      if (clean.includes('sphincter ani') || clean.includes('levator ani') || 
-          clean.includes('pubo-analis') || clean.includes('coccygeus') || clean.includes('ischiocavernosus')) {
-        return 'pelvis';
+      // Đùi (5.50 < Y < 8.65)
+      if (boxCenter.y < 8.65) {
+        return isRight ? 'rightThigh' : 'leftThigh';
       }
-      return isRight ? 'rightThigh' : 'leftThigh';
-    }
-
-    // 4. KHUNG CHẬU (PELVIS: 8.65 <= Y <= 9.35)
-    if (boxCenter.y <= 9.35) {
-      // Các cơ đùi nguyên ủy cao bám vào gai chậu/ụ ngồi chuyển động cùng đùi
+      // Mông & Khung chậu (Y >= 8.65)
       if (clean.includes('adductor') || clean.includes('gracilis') || clean.includes('rectus femoris') || 
-          clean.includes('sartorius') || clean.includes('vastus') || clean.includes('biceps femoris') || 
-          clean.includes('semitendinosus') || clean.includes('semimembranosus')) {
+          clean.includes('sartorius') || clean.includes('vastus') || clean.includes('biceps femoris')) {
         return isRight ? 'rightThigh' : 'leftThigh';
       }
       return 'pelvis';
     }
 
-    // 5. ĐẦU & CỔ (HEAD & NECK: Y >= 14.80 HOẶC TỪ KHÓA CỔ GIẢI PHẪU)
+    // 1. ĐẦU & CỔ (HEAD & NECK: Y >= 14.80 HOẶC TỪ KHÓA CỔ GIẢI PHẪU)
     const head_neck_kw = [
       'sternocleidomastoid', 'platysma', 'scalen', 'splenius', 'hyoid', 'digastric',
       'mylohyoid', 'omohyoid', 'thyrohyoid', 'sternohyoid', 'sternothyroid',
@@ -336,13 +331,174 @@ export class SceneView {
       return 'neck';
     }
 
-    // 6. KHỚP TRUNG GIAN: LỒNG NGỰC (CHEST T1-T12: Y >= 11.20)
-    if (boxCenter.y >= 11.20) {
+    // 2. ĐAI VAI & CHÓP XOAY (SHOULDER GIRDLE: BẢ VAI, XƯƠNG ĐÒN & CƠ XOAY VAI)
+    // Các cơ chóp xoay và bả vai bám từ lồng ngực/gai vai đến chỏm cánh tay:
+    // Supraspinatus, Infraspinatus, Subscapularis, Teres minor/major, Levator scapulae, Rhomboids
+    if (clean.includes('supraspinatus') || clean.includes('infraspinatus') || 
+        clean.includes('subscapularis') || clean.includes('teres minor') || 
+        clean.includes('teres major') || clean.includes('levator scapulae') || 
+        clean.includes('rhomboid') || clean.includes('scapula') || 
+        (clean.includes('clavic') && !clean.includes('deltoid') && !clean.includes('pectoralis'))) {
+      return isRight ? 'rightShoulderGirdle' : 'leftShoulderGirdle';
+    }
+
+    // 3. CHI TRÊN (CÁNH TAY, CẲNG TAY, BÀN TAY)
+    // Điều kiện vào chi trên: Có tọa độ biên ngoài (|X| >= 1.35) HOẶC mang từ khóa chi trên rõ ràng
+    const upperLimbKeywords = [
+      'deltoid', 'biceps brachii', 'triceps brachii', 'brachialis', 'coracobrachialis',
+      'brachioradialis', 'pronator', 'supinator', 'flexor carpi', 'extensor carpi',
+      'digitorum', 'pollicis', 'digiti minimi', 'palmar', 'interossei dorsales manus',
+      'abductor digiti', 'lumbrical manus', 'antebrachial'
+    ];
+    const isUpperLimb = (Math.abs(boxCenter.x) >= 1.35) || upperLimbKeywords.some(kw => clean.includes(kw));
+
+    if (isUpperLimb) {
+      // Cơ thân mình lớn gắn vào ngực/lưng ở lại chest
+      if (clean.includes('pectoralis major') || clean.includes('pectoralis minor') || 
+          clean.includes('latissimus dorsi') || clean.includes('trapezius') || 
+          clean.includes('serratus anterior') || clean.includes('subclavius')) {
+        return 'chest';
+      }
+
+      // Khớp khuỷu tay: Y < 11.05 là Cẳng tay & Bàn tay; Y >= 11.05 là Cánh tay trên
+      if (boxCenter.y < 11.05) {
+        return isRight ? 'rightForearm' : 'leftForearm';
+      } else {
+        return isRight ? 'rightUpperArm' : 'leftUpperArm';
+      }
+    }
+
+    // 4. CẲNG CHÂN & BÀN CHÂN (SHIN & FOOT: Y < 4.75)
+    if (boxCenter.y < 4.75) {
+      return isRight ? 'rightShin' : 'leftShin';
+    }
+
+    // Vùng khe khớp gối (4.75 <= Y <= 5.50)
+    if (boxCenter.y <= 5.50) {
+      if (clean.includes('poplite') || clean.includes('gastrocnemius') || clean.includes('soleus') || 
+          clean.includes('tibia') || clean.includes('fibul') || clean.includes('anserine')) {
+        return isRight ? 'rightShin' : 'leftShin';
+      } else {
+        return isRight ? 'rightThigh' : 'leftThigh';
+      }
+    }
+
+    // 5. ĐÙI (THIGH: 5.50 < Y < 8.65)
+    if (boxCenter.y < 8.65) {
+      if (clean.includes('sphincter ani') || clean.includes('levator ani') || 
+          clean.includes('pubo-analis') || clean.includes('coccygeus') || clean.includes('ischiocavernosus')) {
+        return 'pelvis';
+      }
+      return isRight ? 'rightThigh' : 'leftThigh';
+    }
+
+    // 6. KHUNG CHẬU (PELVIS: 8.65 <= Y <= 9.35)
+    if (boxCenter.y <= 9.35) {
+      return 'pelvis';
+    }
+
+    // 7. LỒNG NGỰC (CHEST T1-T12: Y >= 11.05)
+    if (boxCenter.y >= 11.05) {
       return 'chest';
     }
 
-    // 7. THẮT LƯNG / THÂN DƯỚI (TORSO L1-L5: 9.35 < Y < 11.20)
+    // 8. THẮT LƯNG / THÂN DƯỚI (TORSO L1-L5: 9.35 < Y < 11.05)
     return 'torso';
+  }
+
+  // ============================================================
+  // TÁCH CÁC DÂY THẦN KINH CHI DÀI QUA KHỚP (SPLIT SPANNING NERVES)
+  // Giải quyết triệt để lỗi dây thần kinh bị văng ra sau khi gập khuỷu / đầu gối
+  // ============================================================
+  _splitNerveMeshAtY(mesh, splitY, upperSegment, lowerSegment, targetMeshList) {
+    const geom = mesh.geometry;
+    if (!geom || !geom.attributes || !geom.attributes.position) {
+      targetMeshList.push({ mesh, segment: upperSegment });
+      return;
+    }
+
+    const posAttr = geom.attributes.position;
+    const normalAttr = geom.attributes.normal;
+    const indexAttr = geom.index;
+
+    // Kiểm tra bounding box trong không gian thế giới ở thế nghỉ
+    const box = new THREE.Box3().setFromObject(mesh);
+    if (box.min.y >= splitY) {
+      targetMeshList.push({ mesh, segment: upperSegment });
+      return;
+    }
+    if (box.max.y < splitY) {
+      targetMeshList.push({ mesh, segment: lowerSegment });
+      return;
+    }
+
+    const numTriangles = indexAttr ? indexAttr.count / 3 : posAttr.count / 3;
+    const upperTriangles = [];
+    const lowerTriangles = [];
+
+    const vA = new THREE.Vector3();
+    const vB = new THREE.Vector3();
+    const vC = new THREE.Vector3();
+
+    for (let i = 0; i < numTriangles; i++) {
+      const i0 = indexAttr ? indexAttr.getX(i * 3) : i * 3;
+      const i1 = indexAttr ? indexAttr.getX(i * 3 + 1) : i * 3 + 1;
+      const i2 = indexAttr ? indexAttr.getX(i * 3 + 2) : i * 3 + 2;
+
+      vA.fromBufferAttribute(posAttr, i0).applyMatrix4(mesh.matrixWorld);
+      vB.fromBufferAttribute(posAttr, i1).applyMatrix4(mesh.matrixWorld);
+      vC.fromBufferAttribute(posAttr, i2).applyMatrix4(mesh.matrixWorld);
+
+      const midY = (vA.y + vB.y + vC.y) / 3;
+      if (midY >= splitY) {
+        upperTriangles.push(i0, i1, i2);
+      } else {
+        lowerTriangles.push(i0, i1, i2);
+      }
+    }
+
+    const buildSubMesh = (triangles, suffix) => {
+      if (!triangles || triangles.length === 0) return null;
+      const subGeom = new THREE.BufferGeometry();
+      const oldToNew = new Map();
+      const newPositions = [];
+      const newNormals = [];
+      const newIndices = [];
+
+      for (const idx of triangles) {
+        if (!oldToNew.has(idx)) {
+          const newIdx = newPositions.length / 3;
+          oldToNew.set(idx, newIdx);
+          newPositions.push(posAttr.getX(idx), posAttr.getY(idx), posAttr.getZ(idx));
+          if (normalAttr) {
+            newNormals.push(normalAttr.getX(idx), normalAttr.getY(idx), normalAttr.getZ(idx));
+          }
+        }
+        newIndices.push(oldToNew.get(idx));
+      }
+
+      subGeom.setAttribute('position', new THREE.Float32BufferAttribute(newPositions, 3));
+      if (newNormals.length > 0) {
+        subGeom.setAttribute('normal', new THREE.Float32BufferAttribute(newNormals, 3));
+      } else {
+        subGeom.computeVertexNormals();
+      }
+      subGeom.setIndex(newIndices);
+
+      const subMesh = new THREE.Mesh(subGeom, mesh.material);
+      subMesh.name = (mesh.name || 'Nerve') + suffix;
+      subMesh.position.copy(mesh.position);
+      subMesh.rotation.copy(mesh.rotation);
+      subMesh.scale.copy(mesh.scale);
+      subMesh.matrixWorld.copy(mesh.matrixWorld);
+      return subMesh;
+    };
+
+    const upperMesh = buildSubMesh(upperTriangles, '_upper');
+    const lowerMesh = buildSubMesh(lowerTriangles, '_lower');
+
+    if (upperMesh) targetMeshList.push({ mesh: upperMesh, segment: upperSegment });
+    if (lowerMesh) targetMeshList.push({ mesh: lowerMesh, segment: lowerSegment });
   }
 
   // ============================================================
@@ -385,11 +541,45 @@ export class SceneView {
     const meshData = [];
     const meshBox = new THREE.Box3();
     const meshCenter = new THREE.Vector3();
+    const meshSize = new THREE.Vector3();
 
     fbxModel.traverse((child) => {
       if (child.isMesh) {
+        if (child.userData.isNoise) return;
+
         meshBox.setFromObject(child);
+        meshBox.getSize(meshSize);
+
+        // Lọc triệt để tia nhiễu có độ dày = 0 hoặc kích thước dị thường
+        if (layerType === 'nervous') {
+          if (meshSize.x < 0.001 || meshSize.y < 0.001 || meshSize.z < 0.001 || 
+              meshSize.x > 8.0 || meshSize.y > 8.0 || meshSize.z > 8.0) {
+            child.visible = false;
+            return;
+          }
+        }
+
         meshBox.getCenter(meshCenter);
+        const rawName = (child.name || '').toLowerCase();
+        const isRight = rawName.endsWith('.r') || rawName.endsWith('r') || rawName.includes('.r.') || 
+                        rawName.includes(' right') || (meshCenter.x < -0.15);
+
+        // TÁCH DÂY THẦN KINH CHI DÀI: Khớp khuỷu tay (Y = 11.05) & Khớp gối (Y = 5.05)
+        if (layerType === 'nervous') {
+          const isArmNerve = (Math.abs(meshCenter.x) >= 1.25) || 
+            ['median', 'radial', 'ulnar', 'musculocutaneous', 'brachial'].some(k => rawName.includes(k));
+          const isLegNerve = ['sciatic', 'saphenous', 'tibial', 'fibular', 'femoral', 'sural', 'plantar'].some(k => rawName.includes(k));
+
+          if (isArmNerve && meshBox.min.y < 11.05 && meshBox.max.y > 11.05) {
+            this._splitNerveMeshAtY(child, 11.05, isRight ? 'rightUpperArm' : 'leftUpperArm', isRight ? 'rightForearm' : 'leftForearm', meshData);
+            return;
+          }
+          if (isLegNerve && meshBox.min.y < 5.05 && meshBox.max.y > 5.05) {
+            this._splitNerveMeshAtY(child, 5.05, isRight ? 'rightThigh' : 'leftThigh', isRight ? 'rightShin' : 'leftShin', meshData);
+            return;
+          }
+        }
+
         const segment = this._classifyMeshSegment(child, meshCenter);
         meshData.push({ mesh: child, segment });
       }
@@ -531,6 +721,20 @@ export class SceneView {
 
           fbx.traverse((child) => {
             if (child.isMesh) {
+              const name = (child.name || '').toLowerCase();
+              const isNoise = 
+                name.endsWith('.j') || name.includes('.j.') || name.endsWith('.g') ||
+                name.includes('cross section') || name.includes('axis') || 
+                name.includes('optic axis') || name.includes('sulcus sclerae') ||
+                name.includes('inferior frontal sulcus') ||
+                (child.geometry && child.geometry.attributes && child.geometry.attributes.position && (
+                  child.geometry.attributes.position.count <= 12
+                ));
+              if (isNoise) {
+                child.visible = false;
+                child.userData.isNoise = true;
+                return;
+              }
               child.material = nervousMat.clone();
             }
           });
@@ -674,17 +878,183 @@ export class SceneView {
     this.renderer.domElement.addEventListener('click', onClick);
   }
 
-  _getLocalizedName(object) {
-    if (object.userData.type === 'acupoint') {
-      return `🔴 Huyệt ${object.userData.name_vi} (${object.userData.code})`;
-    } else if (object.userData.type === 'muscle') {
-      const muscle = this.appVM.getMuscleById ? this.appVM.getMuscleById(object.userData.id) : null;
-      if (muscle) return `💪 ${muscle.name_vi}`;
-      return `💪 ${object.userData.meshName || object.name}`;
-    } else if (object.userData.type === 'nervous') {
-      return `🧠 ${object.userData.meshName || 'Dây thần kinh'}`;
+  _translateAnatomyNameToVi(rawName, category) {
+    if (!rawName) return 'Cấu trúc giải phẫu';
+    let name = rawName.replace(/_/g, ' ').replace(/\.00\d+/g, '').replace(/_upper|_lower/g, '').trim();
+
+    const isRight = name.endsWith('.r') || name.endsWith(' r') || name.includes('.r.');
+    const isLeft = name.endsWith('.l') || name.endsWith(' l') || name.includes('.l.');
+    const sideSuffix = isRight ? ' (phải)' : (isLeft ? ' (trái)' : '');
+
+    // Làm sạch hậu tố định hướng
+    name = name.replace(/\.[rl](\.|$)/gi, '').replace(/\b(left|right)\b/gi, '').trim();
+    const lower = name.toLowerCase();
+
+    // 1. Thần kinh chính
+    const nerveDict = {
+      'median nerve': 'Dây thần kinh Giữa',
+      'radial nerve': 'Dây thần kinh Quay',
+      'ulnar nerve': 'Dây thần kinh Trụ',
+      'musculocutaneous nerve': 'Dây thần kinh Cơ bì',
+      'axillary nerve': 'Dây thần kinh Nách',
+      'sciatic nerve': 'Dây thần kinh Tọa (Hông to)',
+      'femoral nerve': 'Dây thần kinh Đùi',
+      'tibial nerve': 'Dây thần kinh Chày',
+      'common fibular nerve': 'Dây thần kinh Mác chung',
+      'superficial fibular nerve': 'Dây thần kinh Mác nông',
+      'deep fibular nerve': 'Dây thần kinh Mác sâu',
+      'saphenous nerve': 'Dây thần kinh Hiển',
+      'sural nerve': 'Dây thần kinh Bắp chân',
+      'obturator nerve': 'Dây thần kinh Bịt',
+      'genitofemoral nerve': 'Dây thần kinh Sinh dục đùi',
+      'lateral femoral cutaneous nerve': 'Dây TK bì đùi ngoài',
+      'posterior femoral cutaneous nerve': 'Dây TK bì đùi sau',
+      'lateral antebrachial cutaneous nerve': 'Dây TK bì cẳng tay ngoài',
+      'medial antebrachial cutaneous nerve': 'Dây TK bì cẳng tay trong',
+      'posterior antebrachial cutaneous nerve': 'Dây TK bì cẳng tay sau',
+      'superior lateral brachial cutaneous nerve': 'Dây TK bì cánh tay ngoài trên',
+      'inferior lateral brachial cutaneous nerve': 'Dây TK bì cánh tay ngoài dưới',
+      'medial brachial cutaneous nerve': 'Dây TK bì cánh tay trong',
+      'proper palmar digital branches of median nerve': 'Các nhánh gan ngón tay riêng (TK Giữa)',
+      'proper palmar digital branches of ulnar nerve': 'Các nhánh gan ngón tay riêng (TK Trụ)',
+      'common palmar digital branches of median nerve': 'Các nhánh gan ngón tay chung (TK Giữa)',
+      'common palmar digital branches of ulnar nerve': 'Các nhánh gan ngón tay chung (TK Trụ)',
+      'dorsal digital branches of radial nerve': 'Các nhánh mu ngón tay (TK Quay)',
+      'dorsal digital branches of ulnar nerve': 'Các nhánh mu ngón tay (TK Trụ)',
+      'muscular branches of radial nerve': 'Các nhánh cơ (TK Quay)',
+      'muscular branches of median nerve': 'Các nhánh cơ (TK Giữa)',
+      'muscular branches of ulnar nerve': 'Các nhánh cơ (TK Trụ)',
+      'palmar branch of median nerve': 'Nhánh gan tay (TK Giữa)',
+      'palmar branch of ulnar nerve': 'Nhánh gan tay (TK Trụ)',
+      'deep branch of radial nerve': 'Nhánh sâu (TK Quay)',
+      'superficial branch of radial nerve': 'Nhánh nông (TK Quay)',
+      'lateral plantar nerve': 'Dây thần kinh Gan chân ngoài',
+      'medial plantar nerve': 'Dây thần kinh Gan chân trong',
+      'proper plantar digital branches': 'Các nhánh gan ngón chân riêng',
+      'brachial plexus': 'Đám rối thần kinh cánh tay',
+      'spinal cord': 'Tủy sống',
+      'spinal dura': 'Màng cứng tủy gai',
+      'spinal nerves': 'Các dây thần kinh gai sống',
+      'thoracic nerves': 'Các dây thần kinh ngực',
+      'lumbar nerves': 'Các dây thần kinh thắt lưng',
+      'sacral nerves': 'Các dây thần kinh cùng',
+      'cranial nerves': 'Các dây thần kinh sọ não',
+      'vagus nerve': 'Dây thần kinh Phế vị (X)',
+      'accessory nerve': 'Dây thần kinh Phụ (XI)',
+      'hypoglossal nerve': 'Dây thần kinh Hạ thiệt (XII)',
+      'glossopharyngeal nerve': 'Dây thần kinh Thiệt hầu (IX)',
+      'vestibulocochlear nerve': 'Dây thần kinh Tiền đình ốc tai (VIII)',
+      'facial nerve': 'Dây thần kinh Mặt (VII)',
+      'abducens nerve': 'Dây thần kinh Vận nhãn ngoài (VI)',
+      'trigeminal nerve': 'Dây thần kinh Tam thoa / Sinh ba (V)',
+      'trochlear nerve': 'Dây thần kinh Ròng rọc (IV)',
+      'oculomotor nerve': 'Dây thần kinh Vận nhãn (III)',
+      'optic nerve': 'Dây thần kinh Thị giác (II)',
+      'olfactory nerve': 'Dây thần kinh Khứu giác (I)',
+      'brain': 'Não bộ',
+      'cerebrum': 'Đại não',
+      'cerebral hemisphere': 'Bán cầu đại não',
+      'cerebellum': 'Tiểu não',
+      'brainstem': 'Thân não',
+      'pons': 'Cầu não',
+      'medulla oblongata': 'Hành não'
+    };
+
+    for (const [key, val] of Object.entries(nerveDict)) {
+      if (lower.includes(key)) {
+        return `${val}${sideSuffix}`;
+      }
     }
-    return object.name;
+
+    // 2. Bao hoạt dịch & Mạc gân
+    const bursaDict = {
+      'trochanteric bursa of gluteus medius': 'Túi thanh dịch mấu chuyển cơ mông nhỡ',
+      'trochanteric bursa of gluteus minimus': 'Túi thanh dịch mấu chuyển cơ mông bé',
+      'subcutaneous trochanteric bursa': 'Túi thanh dịch dưới da mấu chuyển lớn',
+      'subdeltoid bursa': 'Túi thanh dịch dưới cơ delta',
+      'subacromial bursa': 'Túi thanh dịch dưới mỏm cùng vai',
+      'bicipitoradial bursa': 'Túi thanh dịch nhị đầu - quay',
+      'subtendinous bursa of triceps brachii': 'Túi thanh dịch dưới gân cơ tam đầu',
+      'subtendinous bursa of infraspinatus': 'Túi thanh dịch dưới gân cơ dưới gai',
+      'subtendinous bursa of teres major': 'Túi thanh dịch dưới gân cơ tròn lớn',
+      'subcutaneous prepatellar bursa': 'Túi thanh dịch dưới da trước bánh chè',
+      'infrapatellar bursa': 'Túi thanh dịch dưới bánh chè',
+      'suprapatellar bursa': 'Túi thanh dịch trên bánh chè',
+      'antebrachial fascia': 'Cân mạc cẳng tay',
+      'thoracolumbar fascia': 'Cân ngực - thắt lưng',
+      'fascia lata': 'Mạc đùi (Fascia lata)',
+      'deltoid fascia': 'Cân cơ delta',
+      'iliotibial tract': 'Dải chậu - chày'
+    };
+
+    for (const [key, val] of Object.entries(bursaDict)) {
+      if (lower.includes(key)) {
+        return `${val}${sideSuffix}`;
+      }
+    }
+
+    // 3. Cơ bắp
+    let vi = name
+      .replace(/^musculus\s+/i, '')
+      .replace(/\s+muscle$/i, '')
+      .replace(/clavicular part of deltoid/i, 'Cơ Delta phần đòn')
+      .replace(/acromial part of deltoid/i, 'Cơ Delta phần cùng vai')
+      .replace(/scapular spinal part of deltoid/i, 'Cơ Delta phần gai vai')
+      .replace(/deltoid/i, 'Cơ Delta')
+      .replace(/supraspinatus/i, 'Cơ Trên gai')
+      .replace(/infraspinatus/i, 'Cơ Dưới gai')
+      .replace(/subscapularis/i, 'Cơ Dưới vai')
+      .replace(/teres minor/i, 'Cơ Tròn bé')
+      .replace(/teres major/i, 'Cơ Tròn lớn')
+      .replace(/pectoralis major/i, 'Cơ Ngực lớn')
+      .replace(/pectoralis minor/i, 'Cơ Ngực bé')
+      .replace(/latissimus dorsi/i, 'Cơ Lưng rộng')
+      .replace(/trapezius/i, 'Cơ Thang')
+      .replace(/serratus anterior/i, 'Cơ Răng trước')
+      .replace(/levator scapulae/i, 'Cơ Nâng vai')
+      .replace(/rhomboid major/i, 'Cơ Trám lớn')
+      .replace(/rhomboid minor/i, 'Cơ Trám bé')
+      .replace(/biceps brachii/i, 'Cơ Nhị đầu cánh tay')
+      .replace(/triceps brachii/i, 'Cơ Tam đầu cánh tay')
+      .replace(/brachialis/i, 'Cơ Cánh tay')
+      .replace(/coracobrachialis/i, 'Cơ Quạ cánh tay')
+      .replace(/brachioradialis/i, 'Cơ Cánh tay quay')
+      .replace(/pronator teres/i, 'Cơ Sấp tròn')
+      .replace(/pronator quadratus/i, 'Cơ Sấp vuông')
+      .replace(/supinator/i, 'Cơ Ngửa')
+      .replace(/gluteus maximus/i, 'Cơ Mông lớn')
+      .replace(/gluteus medius/i, 'Cơ Mông nhỡ')
+      .replace(/gluteus minimus/i, 'Cơ Mông bé')
+      .replace(/tensor fasciae latae/i, 'Cơ Căng mạc đùi')
+      .replace(/piriformis/i, 'Cơ Hình lê')
+      .replace(/rectus femoris/i, 'Cơ Thẳng đùi')
+      .replace(/biceps femoris/i, 'Cơ Nhị đầu đùi')
+      .replace(/semitendinosus/i, 'Cơ Bán gân')
+      .replace(/semimembranosus/i, 'Cơ Bán màng')
+      .replace(/gastrocnemius/i, 'Cơ Bụng chân')
+      .replace(/soleus/i, 'Cơ Dép')
+      .replace(/tibialis anterior/i, 'Cơ Chày trước')
+      .replace(/tibialis posterior/i, 'Cơ Chày sau');
+
+    return `${vi}${sideSuffix}`;
+  }
+
+  _getLocalizedName(object) {
+    if (!object || !object.userData) return '';
+    const ud = object.userData;
+
+    if (ud.type === 'acupoint') {
+      return `🔴 Huyệt ${ud.name_vi} (${ud.code})`;
+    } else if (ud.type === 'muscle') {
+      if (this.appVM && this.appVM.muscleData) {
+        const m = this.appVM.muscleData[ud.id];
+        if (m && m.name_vi) return `💪 ${m.name_vi}`;
+      }
+      return `💪 ${this._translateAnatomyNameToVi(ud.meshName || object.name, 'muscle')}`;
+    } else if (ud.type === 'nervous') {
+      return `🧠 ${this._translateAnatomyNameToVi(ud.meshName || object.name, 'nervous')}`;
+    }
+    return this._translateAnatomyNameToVi(object.name, 'general');
   }
 
   _bindToViewModel() {
@@ -732,11 +1102,12 @@ export class SceneView {
 
     switch (movementId) {
       // 1. NÂNG TAY LÊN CAO QUA ĐẦU (Overhead Reach)
-      // Khớp ngực mở nhẹ ra sau, cánh tay vươn cao, cổ ngửa theo
+      // Khớp ngực mở nhẹ ra sau, đai vai xoay lên trên 25°, cánh tay vươn cao 65°, cổ ngửa theo
       case 'overhead_reach':
         this.targetRotations.chest.set(-0.06, 0, -0.05);
         this.targetRotations.neck.set(-0.15, -0.10, 0);
-        this.targetRotations.rightUpperArm.set(0.10, 0.15, -1.45);
+        this.targetRotations.rightShoulderGirdle.set(0.04, 0.05, -0.40);
+        this.targetRotations.rightUpperArm.set(0.06, 0.10, -1.05);
         this.targetRotations.rightForearm.set(-0.25, 0, 0);
         this.targetRotations.leftUpperArm.set(0, 0, 0.12);
         this.targetRotations.leftForearm.set(0, 0, 0);
@@ -749,6 +1120,8 @@ export class SceneView {
         this.targetRotations.torso.set(0, 0.20, 0);
         this.targetRotations.chest.set(0, 0.28, 0);
         this.targetRotations.neck.set(0, 0.18, 0);
+        this.targetRotations.rightShoulderGirdle.set(0, -0.10, 0);
+        this.targetRotations.leftShoulderGirdle.set(0, 0.10, 0);
         this.targetRotations.rightUpperArm.set(0, -0.12, 0.10);
         this.targetRotations.leftUpperArm.set(0, 0.12, -0.10);
         break;
@@ -767,8 +1140,6 @@ export class SceneView {
         break;
 
       // 4. CÚI NGƯỜI GẬP LƯNG (Forward Trunk Bending) - CƠ SINH HỌC CHUẨN XÁC
-      // Xoay khung chậu +0.68 rad, đùi phản xoay -0.68 rad giữ cẳng chân thẳng đứng 100%
-      // Lưng dưới cong +0.35 rad, lồng ngực cong +0.30 rad, hai tay buông thõng tự nhiên -1.10 rad
       case 'forward_bending':
         this.targetRotations.pelvis.set(0.68, 0, 0);
         this.targetRotations.rightThigh.set(-0.68, 0, 0);
@@ -786,78 +1157,101 @@ export class SceneView {
 
       // 5. GIƯƠNG CUNG BẮN TÊN (Archer Draw)
       case 'archer_pull':
+      case 'daodan_archer_pull':
         this.targetRotations.torso.set(0, 0.20, 0);
         this.targetRotations.chest.set(0, 0.28, 0);
         this.targetRotations.neck.set(0, 0.42, 0);
-        this.targetRotations.leftUpperArm.set(-0.10, 0.15, 1.35);
+        this.targetRotations.leftShoulderGirdle.set(0, 0, -0.15);
+        this.targetRotations.leftUpperArm.set(-0.10, 0.15, 1.25);
         this.targetRotations.leftForearm.set(0, 0, 0);
-        this.targetRotations.rightUpperArm.set(0.15, -0.30, -1.30);
-        this.targetRotations.rightForearm.set(-1.80, 0, 0);
+        this.targetRotations.rightShoulderGirdle.set(0.05, -0.25, -0.30);
+        this.targetRotations.rightUpperArm.set(0.10, -0.15, -1.05);
+        this.targetRotations.rightForearm.set(-1.85, 0, 0);
         this.targetRotations.rightThigh.set(0, 0, -0.15);
         this.targetRotations.leftThigh.set(0, 0, 0.15);
         break;
 
-      // 6. GIẠNG VAI (Shoulder Abduction)
+      // 6. THẾ ĐẠO DẪN: ĐƯA TAY RA SAU LƯNG CHẠM CỔ GÁY (Hand-Behind-Back & Up)
+      case 'daodan_hand_behind_back':
+        this.targetRotations.torso.set(0, -0.10, 0);
+        this.targetRotations.chest.set(-0.08, -0.15, 0);
+        this.targetRotations.neck.set(0.08, 0.05, 0);
+        this.targetRotations.rightShoulderGirdle.set(0.12, -0.20, -0.15);
+        this.targetRotations.rightUpperArm.set(0.40, -0.75, 0.35);
+        this.targetRotations.rightForearm.set(-1.90, -0.35, 0);
+        break;
+
+      // 7. GIẠNG VAI (Shoulder Abduction) - Phối hợp nhịp bả vai - cánh tay (2:1)
       case 'shoulder_abduction':
         this.targetRotations.chest.set(0, 0, -0.06);
-        this.targetRotations.rightUpperArm.set(0, 0, -1.45);
+        this.targetRotations.rightShoulderGirdle.set(0, 0, -0.38);
+        this.targetRotations.rightUpperArm.set(0, 0, -1.15);
         this.targetRotations.rightForearm.set(0, 0, 0);
         break;
 
-      // 7. KHÉP VAI (Shoulder Adduction)
+      // 8. KHÉP VAI (Shoulder Adduction)
       case 'shoulder_adduction':
-        this.targetRotations.rightUpperArm.set(0.20, 0.20, 0.40);
+        this.targetRotations.rightShoulderGirdle.set(0, 0, 0.12);
+        this.targetRotations.rightUpperArm.set(0.15, 0.15, 0.30);
         this.targetRotations.rightForearm.set(-0.30, 0, 0);
         break;
 
-      // 8. GẬP VAI (Shoulder Flexion)
+      // 9. GẬP VAI (Shoulder Flexion)
       case 'shoulder_flexion':
         this.targetRotations.chest.set(-0.04, 0, 0);
-        this.targetRotations.rightUpperArm.set(-1.40, 0, 0);
+        this.targetRotations.rightShoulderGirdle.set(-0.35, 0, 0);
+        this.targetRotations.rightUpperArm.set(-1.10, 0, 0);
         this.targetRotations.rightForearm.set(0, 0, 0);
         break;
 
-      // 9. DUỖI VAI (Shoulder Extension)
+      // 10. DUỖI VAI (Shoulder Extension)
       case 'shoulder_extension':
         this.targetRotations.chest.set(0.04, 0, 0);
-        this.targetRotations.rightUpperArm.set(0.65, 0, 0);
+        this.targetRotations.rightShoulderGirdle.set(0.15, 0, 0);
+        this.targetRotations.rightUpperArm.set(0.50, 0, 0);
         this.targetRotations.rightForearm.set(0, 0, 0);
         break;
 
-      // 10. XOAY TRONG VAI (Shoulder Internal Rotation)
+      // 11. XOAY TRONG VAI (Shoulder Internal Rotation)
       case 'shoulder_internal_rotation':
+        this.targetRotations.rightShoulderGirdle.set(0, 0.15, 0);
         this.targetRotations.rightUpperArm.set(-0.15, 0.85, -0.20);
         this.targetRotations.rightForearm.set(-1.57, 0, 0);
         break;
 
-      // 11. XOAY NGOÀI VAI (Shoulder External Rotation)
+      // 12. XOAY NGOÀI VAI (Shoulder External Rotation)
       case 'shoulder_external_rotation':
+        this.targetRotations.rightShoulderGirdle.set(0, -0.15, 0);
         this.targetRotations.rightUpperArm.set(0.10, -0.85, -0.20);
         this.targetRotations.rightForearm.set(-1.57, 0, 0);
         break;
 
-      // 12. NÂNG XƯƠNG BẢ VAI (Scapular Elevation)
+      // 13. NÂNG XƯƠNG BẢ VAI (Scapular Elevation)
       case 'scapular_elevation':
+        this.targetRotations.rightShoulderGirdle.set(0, 0, -0.22);
+        this.targetRotations.leftShoulderGirdle.set(0, 0, 0.22);
+        this.targetPositions.rightShoulderGirdle.y = this.basePositions.rightShoulderGirdle.y + 0.22;
+        this.targetPositions.leftShoulderGirdle.y = this.basePositions.leftShoulderGirdle.y + 0.22;
         this.targetPositions.chest.y = this.basePositions.chest.y + 0.15;
-        this.targetPositions.rightUpperArm.y = this.basePositions.rightUpperArm.y + 0.25;
-        this.targetPositions.leftUpperArm.y = this.basePositions.leftUpperArm.y + 0.25;
         this.targetRotations.neck.set(0.08, 0, 0);
         break;
 
-      // 13. KHÉP XƯƠNG BẢ VAI (Scapular Retraction)
+      // 14. KHÉP XƯƠNG BẢ VAI (Scapular Retraction)
       case 'scapular_retraction':
         this.targetRotations.chest.set(-0.12, 0, 0);
-        this.targetRotations.rightUpperArm.set(0.35, -0.20, -0.15);
-        this.targetRotations.leftUpperArm.set(0.35, 0.20, 0.15);
+        this.targetRotations.rightShoulderGirdle.set(0, -0.25, 0.10);
+        this.targetRotations.leftShoulderGirdle.set(0, 0.25, -0.10);
+        this.targetRotations.rightUpperArm.set(0.25, -0.15, -0.10);
+        this.targetRotations.leftUpperArm.set(0.25, 0.15, 0.10);
         break;
 
-      // 14. GẬP KHUỶU TAY (Elbow Flexion)
+      // 15. GẬP KHUỶU TAY (Elbow Flexion)
       case 'elbow_flexion':
-        this.targetRotations.rightUpperArm.set(-0.15, 0, 0);
-        this.targetRotations.rightForearm.set(-2.10, 0, 0);
+        this.targetRotations.rightUpperArm.set(-0.10, 0, 0);
+        this.targetRotations.rightForearm.set(-2.00, 0, 0);
         break;
 
-      // 15. DUỖI KHUỶU TAY (Elbow Extension)
+      // 16. DUỖI KHUỶU TAY (Elbow Extension)
       case 'elbow_extension':
         this.targetRotations.rightUpperArm.set(0.10, 0, 0);
         this.targetRotations.rightForearm.set(0, 0, 0);

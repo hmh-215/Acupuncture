@@ -40,6 +40,8 @@
     4. *Đau Thắt Lưng Cấp & Co Cứng Cơ Dựng Sống*.
     5. *Hội chứng Ống Cổ Tay & Co Cứng Gân Gập Cẳng Tay*.
     6. *Đau Mặt Trước Gối & Co Rút Cơ Tứ Đầu Đùi*.
+    7. *Hội chứng Kẹt Tay Ra Sau Lưng Chạm Gáy (Tái Lập Thế Xoay & Ngửa Đạo Dẫn)*.
+    8. *Thế Đạo Dẫn Bắn Cung (Khai Thông Kinh Cân Thủ Thái Âm Phế & Mở Giằng Giữ)*.
   - Tự động nhận diện và highlight:
     - 🔴 **Vùng cơ đau đích / Trigger Point** (Màu đỏ Crimson cảnh báo).
     - 🟡 **Chuỗi cơ cân liên đới** theo đường truyền lực giải phẫu (*Myofascial Chains*) & Kinh Cân YHCT.

@@ -1,7 +1,7 @@
-import { Observable } from './Observable.js?v=4.0';
-import { SceneViewModel } from './SceneViewModel.js?v=4.0';
-import { MovementViewModel } from './MovementViewModel.js?v=4.0';
-import { AcupunctureViewModel } from './AcupunctureViewModel.js?v=4.0';
+import { Observable } from './Observable.js?v=5.0';
+import { SceneViewModel } from './SceneViewModel.js?v=5.0';
+import { MovementViewModel } from './MovementViewModel.js?v=5.0';
+import { AcupunctureViewModel } from './AcupunctureViewModel.js?v=5.0';
 
 /**
  * AppViewModel
