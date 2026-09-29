@@ -71,8 +71,13 @@ while ($listener.IsListening) {
             if ($null -eq $mime) { $mime = "application/octet-stream" }
             $response.ContentType = $mime
 
-            # Header CORS
+            # Header CORS & Caching cho tài nguyên 3D lớn
             $response.AddHeader("Access-Control-Allow-Origin", "*")
+            if ($ext -in @(".fbx", ".glb", ".png", ".jpg", ".jpeg", ".svg", ".ico")) {
+                $response.AddHeader("Cache-Control", "public, max-age=604800")
+            } else {
+                $response.AddHeader("Cache-Control", "no-cache")
+            }
 
             $bytes = [System.IO.File]::ReadAllBytes($filePath)
             $response.ContentLength64 = $bytes.Length

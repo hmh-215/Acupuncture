@@ -568,7 +568,12 @@ export class SceneView {
           }
         }
 
-        meshBox.setFromObject(child);
+        if (child.geometry) {
+          if (!child.geometry.boundingBox) child.geometry.computeBoundingBox();
+          meshBox.copy(child.geometry.boundingBox).applyMatrix4(child.matrixWorld);
+        } else {
+          meshBox.setFromObject(child);
+        }
         meshBox.getSize(meshSize);
 
         // Lọc triệt để tia nhiễu có độ dày = 0 hoặc kích thước dị thường (aspect ratio cực hạn)
@@ -913,161 +918,370 @@ export class SceneView {
     if (!rawName) return 'Cấu trúc giải phẫu';
     let name = rawName.replace(/_/g, ' ').replace(/\.00\d+/g, '').replace(/_upper|_lower/g, '').trim();
 
-    const isRight = name.endsWith('.r') || name.endsWith(' r') || name.includes('.r.');
-    const isLeft = name.endsWith('.l') || name.endsWith(' l') || name.includes('.l.');
+    const isRight = name.endsWith('.r') || name.endsWith(' r') || name.includes('.r.') || name.endsWith('r');
+    const isLeft = name.endsWith('.l') || name.endsWith(' l') || name.includes('.l.') || name.endsWith('l');
     const sideSuffix = isRight ? ' (phải)' : (isLeft ? ' (trái)' : '');
 
     // Làm sạch hậu tố định hướng
-    name = name.replace(/\.[rl](\.|$)/gi, '').replace(/\b(left|right)\b/gi, '').trim();
-    const lower = name.toLowerCase();
+    let cleaned = name.replace(/[\.\s]?[rl](\.|$)/gi, '').replace(/\b(left|right)\b/gi, '').trim();
+    let low = cleaned.toLowerCase();
 
-    // 1. Thần kinh chính
-    const nerveDict = {
-      'median nerve': 'Dây thần kinh Giữa',
-      'radial nerve': 'Dây thần kinh Quay',
-      'ulnar nerve': 'Dây thần kinh Trụ',
-      'musculocutaneous nerve': 'Dây thần kinh Cơ bì',
-      'axillary nerve': 'Dây thần kinh Nách',
-      'sciatic nerve': 'Dây thần kinh Tọa (Hông to)',
-      'femoral nerve': 'Dây thần kinh Đùi',
-      'tibial nerve': 'Dây thần kinh Chày',
-      'common fibular nerve': 'Dây thần kinh Mác chung',
-      'superficial fibular nerve': 'Dây thần kinh Mác nông',
-      'deep fibular nerve': 'Dây thần kinh Mác sâu',
-      'saphenous nerve': 'Dây thần kinh Hiển',
-      'sural nerve': 'Dây thần kinh Bắp chân',
-      'obturator nerve': 'Dây thần kinh Bịt',
-      'genitofemoral nerve': 'Dây thần kinh Sinh dục đùi',
-      'lateral femoral cutaneous nerve': 'Dây TK bì đùi ngoài',
-      'posterior femoral cutaneous nerve': 'Dây TK bì đùi sau',
-      'lateral antebrachial cutaneous nerve': 'Dây TK bì cẳng tay ngoài',
-      'medial antebrachial cutaneous nerve': 'Dây TK bì cẳng tay trong',
-      'posterior antebrachial cutaneous nerve': 'Dây TK bì cẳng tay sau',
-      'superior lateral brachial cutaneous nerve': 'Dây TK bì cánh tay ngoài trên',
-      'inferior lateral brachial cutaneous nerve': 'Dây TK bì cánh tay ngoài dưới',
-      'medial brachial cutaneous nerve': 'Dây TK bì cánh tay trong',
-      'proper palmar digital branches of median nerve': 'Các nhánh gan ngón tay riêng (TK Giữa)',
-      'proper palmar digital branches of ulnar nerve': 'Các nhánh gan ngón tay riêng (TK Trụ)',
-      'common palmar digital branches of median nerve': 'Các nhánh gan ngón tay chung (TK Giữa)',
-      'common palmar digital branches of ulnar nerve': 'Các nhánh gan ngón tay chung (TK Trụ)',
-      'dorsal digital branches of radial nerve': 'Các nhánh mu ngón tay (TK Quay)',
-      'dorsal digital branches of ulnar nerve': 'Các nhánh mu ngón tay (TK Trụ)',
-      'muscular branches of radial nerve': 'Các nhánh cơ (TK Quay)',
-      'muscular branches of median nerve': 'Các nhánh cơ (TK Giữa)',
-      'muscular branches of ulnar nerve': 'Các nhánh cơ (TK Trụ)',
-      'palmar branch of median nerve': 'Nhánh gan tay (TK Giữa)',
-      'palmar branch of ulnar nerve': 'Nhánh gan tay (TK Trụ)',
-      'deep branch of radial nerve': 'Nhánh sâu (TK Quay)',
-      'superficial branch of radial nerve': 'Nhánh nông (TK Quay)',
-      'lateral plantar nerve': 'Dây thần kinh Gan chân ngoài',
-      'medial plantar nerve': 'Dây thần kinh Gan chân trong',
-      'proper plantar digital branches': 'Các nhánh gan ngón chân riêng',
-      'brachial plexus': 'Đám rối thần kinh cánh tay',
-      'spinal cord': 'Tủy sống',
-      'spinal dura': 'Màng cứng tủy gai',
-      'spinal nerves': 'Các dây thần kinh gai sống',
-      'thoracic nerves': 'Các dây thần kinh ngực',
-      'lumbar nerves': 'Các dây thần kinh thắt lưng',
-      'sacral nerves': 'Các dây thần kinh cùng',
-      'cranial nerves': 'Các dây thần kinh sọ não',
-      'vagus nerve': 'Dây thần kinh Phế vị (X)',
-      'accessory nerve': 'Dây thần kinh Phụ (XI)',
-      'hypoglossal nerve': 'Dây thần kinh Hạ thiệt (XII)',
-      'glossopharyngeal nerve': 'Dây thần kinh Thiệt hầu (IX)',
-      'vestibulocochlear nerve': 'Dây thần kinh Tiền đình ốc tai (VIII)',
-      'facial nerve': 'Dây thần kinh Mặt (VII)',
-      'abducens nerve': 'Dây thần kinh Vận nhãn ngoài (VI)',
-      'trigeminal nerve': 'Dây thần kinh Tam thoa / Sinh ba (V)',
-      'trochlear nerve': 'Dây thần kinh Ròng rọc (IV)',
-      'oculomotor nerve': 'Dây thần kinh Vận nhãn (III)',
-      'optic nerve': 'Dây thần kinh Thị giác (II)',
-      'olfactory nerve': 'Dây thần kinh Khứu giác (I)',
-      'brain': 'Não bộ',
-      'cerebrum': 'Đại não',
-      'cerebral hemisphere': 'Bán cầu đại não',
-      'cerebellum': 'Tiểu não',
-      'brainstem': 'Thân não',
-      'pons': 'Cầu não',
-      'medulla oblongata': 'Hành não'
-    };
+    // 1. Thần kinh & Cơ quan thần kinh trung ương
+    const nerveDict = [
+      ['tentorium cerebelli', 'Lều tiểu não'],
+      ['falx cerebri', 'Liềm đại não'],
+      ['spinal dura', 'Màng cứng tủy gai'],
+      ['choroid plexus', 'Đám rối màng mạch'],
+      ['putamen', 'Nhân bèo (Putamen)'],
+      ['caudate nucleus', 'Nhân đuôi (Caudate nucleus)'],
+      ['lentiform nucleus', 'Nhân thấu kính'],
+      ['globus pallidus', 'Cầu nhạt (Globus pallidus)'],
+      ['calcarine sulcus', 'Rãnh cựa'],
+      ['corpus callosum', 'Thể chai'],
+      ['lateral ventricle', 'Não thất bên'],
+      ['third ventricle', 'Não thất ba'],
+      ['fourth ventricle', 'Não thất tư'],
+      ['retina', 'Võng mạc'],
+      ['sclera', 'Củng mạc'],
+      ['lens', 'Thể thủy tinh'],
+      ['cornea', 'Giác mạc'],
+      ['iris', 'Mống mắt'],
+      ['vitreous body', 'Dịch kính'],
+      ['zonular fibres', 'Sợi thể mi (Dây chằng Zinn)'],
+      ['anterior chamber', 'Tiền phòng mắt'],
+      ['posterior chamber', 'Hậu phòng mắt'],
+      ['tympanic membrane', 'Màng nhĩ'],
+      ['auditory tube', 'Vòi tai (Vòi Eustache)'],
+      ['cochlea', 'Ốc tai'],
+      ['vestibule', 'Tiền đình tai'],
+      ['semicircular canal', 'Ống bán khuyên'],
+      ['median nerve', 'Dây thần kinh Giữa'],
+      ['radial nerve', 'Dây thần kinh Quay'],
+      ['ulnar nerve', 'Dây thần kinh Trụ'],
+      ['musculocutaneous nerve', 'Dây thần kinh Cơ bì'],
+      ['axillary nerve', 'Dây thần kinh Nách'],
+      ['sciatic nerve', 'Dây thần kinh Tọa (Hông to)'],
+      ['femoral nerve', 'Dây thần kinh Đùi'],
+      ['tibial nerve', 'Dây thần kinh Chày'],
+      ['common fibular nerve', 'Dây thần kinh Mác chung'],
+      ['superficial fibular nerve', 'Dây thần kinh Mác nông'],
+      ['deep fibular nerve', 'Dây thần kinh Mác sâu'],
+      ['saphenous nerve', 'Dây thần kinh Hiển'],
+      ['sural nerve', 'Dây thần kinh Bắp chân'],
+      ['obturator nerve', 'Dây thần kinh Bịt'],
+      ['genitofemoral nerve', 'Dây thần kinh Sinh dục đùi'],
+      ['lateral femoral cutaneous nerve', 'Dây TK bì đùi ngoài'],
+      ['posterior femoral cutaneous nerve', 'Dây TK bì đùi sau'],
+      ['lateral antebrachial cutaneous nerve', 'Dây TK bì cẳng tay ngoài'],
+      ['medial antebrachial cutaneous nerve', 'Dây TK bì cẳng tay trong'],
+      ['posterior antebrachial cutaneous nerve', 'Dây TK bì cẳng tay sau'],
+      ['superior lateral brachial cutaneous nerve', 'Dây TK bì cánh tay ngoài trên'],
+      ['inferior lateral brachial cutaneous nerve', 'Dây TK bì cánh tay ngoài dưới'],
+      ['medial brachial cutaneous nerve', 'Dây TK bì cánh tay trong'],
+      ['proper palmar digital branches of median nerve', 'Các nhánh gan ngón tay riêng (TK Giữa)'],
+      ['proper palmar digital branches of ulnar nerve', 'Các nhánh gan ngón tay riêng (TK Trụ)'],
+      ['common palmar digital branches of median nerve', 'Các nhánh gan ngón tay chung (TK Giữa)'],
+      ['common palmar digital branches of ulnar nerve', 'Các nhánh gan ngón tay chung (TK Trụ)'],
+      ['dorsal digital branches of radial nerve', 'Các nhánh mu ngón tay (TK Quay)'],
+      ['dorsal digital branches of ulnar nerve', 'Các nhánh mu ngón tay (TK Trụ)'],
+      ['muscular branches of radial nerve', 'Các nhánh cơ (TK Quay)'],
+      ['muscular branches of median nerve', 'Các nhánh cơ (TK Giữa)'],
+      ['muscular branches of ulnar nerve', 'Các nhánh cơ (TK Trụ)'],
+      ['palmar branch of median nerve', 'Nhánh gan tay (TK Giữa)'],
+      ['palmar branch of ulnar nerve', 'Nhánh gan tay (TK Trụ)'],
+      ['deep branch of radial nerve', 'Nhánh sâu (TK Quay)'],
+      ['superficial branch of radial nerve', 'Nhánh nông (TK Quay)'],
+      ['lateral plantar nerve', 'Dây thần kinh Gan chân ngoài'],
+      ['medial plantar nerve', 'Dây thần kinh Gan chân trong'],
+      ['proper plantar digital branches', 'Các nhánh gan ngón chân riêng'],
+      ['brachial plexus', 'Đám rối thần kinh cánh tay'],
+      ['cervical plexus', 'Đám rối thần kinh cổ'],
+      ['lumbar plexus', 'Đám rối thần kinh thắt lưng'],
+      ['sacral plexus', 'Đám rối thần kinh cùng'],
+      ['spinal cord', 'Tủy sống'],
+      ['spinal nerves', 'Các dây thần kinh gai sống'],
+      ['thoracic nerves', 'Các dây thần kinh ngực'],
+      ['lumbar nerves', 'Các dây thần kinh thắt lưng'],
+      ['vagus nerve', 'Dây thần kinh Phế vị (X)'],
+      ['accessory nerve', 'Dây thần kinh Phụ (XI)'],
+      ['hypoglossal nerve', 'Dây thần kinh Hạ thiệt (XII)'],
+      ['glossopharyngeal nerve', 'Dây thần kinh Thiệt hầu (IX)'],
+      ['vestibulocochlear nerve', 'Dây thần kinh Tiền đình ốc tai (VIII)'],
+      ['facial nerve', 'Dây thần kinh Mặt (VII)'],
+      ['abducens nerve', 'Dây thần kinh Vận nhãn ngoài (VI)'],
+      ['trigeminal nerve', 'Dây thần kinh Tam thoa / Sinh ba (V)'],
+      ['trochlear nerve', 'Dây thần kinh Ròng rọc (IV)'],
+      ['oculomotor nerve', 'Dây thần kinh Vận nhãn (III)'],
+      ['optic nerve', 'Dây thần kinh Thị giác (II)'],
+      ['olfactory nerve', 'Dây thần kinh Khứu giác (I)'],
+      ['sympathetic trunk', 'Chuỗi hạch giao cảm'],
+      ['phrenic nerve', 'Dây thần kinh Hoành'],
+      ['intercostal nerve', 'Dây thần kinh Gian sườn'],
+      ['subcostal nerve', 'Dây thần kinh Dưới sườn'],
+      ['iliohypogastric nerve', 'Dây thần kinh Chậu hạ vị'],
+      ['ilioinguinal nerve', 'Dây thần kinh Chậu bẹn'],
+      ['pudendal nerve', 'Dây thần kinh Thẹn'],
+      ['superior gluteal nerve', 'Dây thần kinh Mông trên'],
+      ['inferior gluteal nerve', 'Dây thần kinh Mông dưới'],
+      ['cauda equina', 'Chùm đuôi ngựa'],
+      ['filum terminale', 'Dây tận cùng tủy gai'],
+      ['thalamus', 'Đồi thị'],
+      ['hypothalamus', 'Vùng dưới đồi'],
+      ['hippocampus', 'Hồi hải mã'],
+      ['amygdala', 'Hạnh nhân não'],
+      ['fornix', 'Vòm não'],
+      ['brainstem', 'Thân não'],
+      ['pons', 'Cầu não'],
+      ['medulla oblongata', 'Hành não'],
+      ['midbrain', 'Trung não'],
+      ['cerebellum', 'Tiểu não'],
+      ['cerebrum', 'Đại não'],
+      ['brain', 'Não bộ']
+    ];
 
-    for (const [key, val] of Object.entries(nerveDict)) {
-      if (lower.includes(key)) {
+    for (const [key, val] of nerveDict) {
+      if (low.includes(key)) {
         return `${val}${sideSuffix}`;
       }
     }
 
-    // 2. Bao hoạt dịch & Mạc gân
-    const bursaDict = {
-      'trochanteric bursa of gluteus medius': 'Túi thanh dịch mấu chuyển cơ mông nhỡ',
-      'trochanteric bursa of gluteus minimus': 'Túi thanh dịch mấu chuyển cơ mông bé',
-      'subcutaneous trochanteric bursa': 'Túi thanh dịch dưới da mấu chuyển lớn',
-      'subdeltoid bursa': 'Túi thanh dịch dưới cơ delta',
-      'subacromial bursa': 'Túi thanh dịch dưới mỏm cùng vai',
-      'bicipitoradial bursa': 'Túi thanh dịch nhị đầu - quay',
-      'subtendinous bursa of triceps brachii': 'Túi thanh dịch dưới gân cơ tam đầu',
-      'subtendinous bursa of infraspinatus': 'Túi thanh dịch dưới gân cơ dưới gai',
-      'subtendinous bursa of teres major': 'Túi thanh dịch dưới gân cơ tròn lớn',
-      'subcutaneous prepatellar bursa': 'Túi thanh dịch dưới da trước bánh chè',
-      'infrapatellar bursa': 'Túi thanh dịch dưới bánh chè',
-      'suprapatellar bursa': 'Túi thanh dịch trên bánh chè',
-      'antebrachial fascia': 'Cân mạc cẳng tay',
-      'thoracolumbar fascia': 'Cân ngực - thắt lưng',
-      'fascia lata': 'Mạc đùi (Fascia lata)',
-      'deltoid fascia': 'Cân cơ delta',
-      'iliotibial tract': 'Dải chậu - chày'
-    };
+    // 2. Tiền tố Bao gân, Bao hoạt dịch & Mạc
+    let prefix = '';
+    if (low.includes('plantar tendon sheath of')) {
+      prefix = 'Bao gân gan chân ';
+      low = low.replace('plantar tendon sheath of', '').trim();
+    } else if (low.includes('common tendon sheath of')) {
+      prefix = 'Bao gân chung ';
+      low = low.replace('common tendon sheath of', '').trim();
+    } else if (low.includes('tendon sheath of')) {
+      prefix = 'Bao gân ';
+      low = low.replace('tendon sheath of', '').trim();
+    } else if (low.includes('subcutaneous bursa of')) {
+      prefix = 'Túi thanh dịch dưới da ';
+      low = low.replace('subcutaneous bursa of', '').trim();
+    } else if (low.includes('subtendinous bursa of')) {
+      prefix = 'Túi thanh dịch dưới gân ';
+      low = low.replace('subtendinous bursa of', '').trim();
+    } else if (low.includes('sciatic bursa of')) {
+      prefix = 'Túi thanh dịch ngồi ';
+      low = low.replace('sciatic bursa of', '').trim();
+    } else if (low.includes('trochanteric bursa of')) {
+      prefix = 'Túi thanh dịch mấu chuyển ';
+      low = low.replace('trochanteric bursa of', '').trim();
+    } else if (low.includes('subfacial prepatellar bursa') || low.includes('subfascial prepatellar bursa')) {
+      return `Túi thanh dịch dưới mạc trước bánh chè${sideSuffix}`;
+    } else if (low.includes('subcutaneous prepatellar bursa')) {
+      return `Túi thanh dịch dưới da trước bánh chè${sideSuffix}`;
+    } else if (low.includes('subtendinous prepatellar bursa')) {
+      return `Túi thanh dịch dưới gân trước bánh chè${sideSuffix}`;
+    } else if (low.includes('subcutaneous calcaneal bursa')) {
+      return `Túi thanh dịch dưới da gót chân${sideSuffix}`;
+    } else if (low.includes('subcutaneous infrapatellar bursa')) {
+      return `Túi thanh dịch dưới da dưới bánh chè${sideSuffix}`;
+    } else if (low.includes('anserine bursa')) {
+      return `Túi thanh dịch chân ngỗng${sideSuffix}`;
+    } else if (low.includes('suprapatellar bursa')) {
+      return `Túi thanh dịch trên bánh chè${sideSuffix}`;
+    } else if (low.includes('iliopectineal bursa')) {
+      return `Túi thanh dịch chậu lược${sideSuffix}`;
+    } else if (low.includes('bursa of')) {
+      prefix = 'Túi thanh dịch ';
+      low = low.replace('bursa of', '').trim();
+    } else if (low.includes('tendon of')) {
+      prefix = 'Gân ';
+      low = low.replace('tendon of', '').trim();
+    } else if (low.includes('synovial sheaths of')) {
+      prefix = 'Bao hoạt dịch gân ';
+      low = low.replace('synovial sheaths of', '').trim();
+    } else if (low.includes('fibrous sheath of') || low.includes('cruciform part of fibrous sheath')) {
+      prefix = 'Bao hãm gân ';
+      low = low.replace(/.*fibrous sheath of/i, '').trim();
+    }
 
-    for (const [key, val] of Object.entries(bursaDict)) {
-      if (lower.includes(key)) {
+    // 3. Cơ bắp toàn thân (100% Tiếng Việt y khoa)
+    const muscleDict = [
+      // Chi trên
+      ['clavicular part of deltoid', 'Cơ Delta phần đòn'],
+      ['acromial part of deltoid', 'Cơ Delta phần cùng vai'],
+      ['scapular spinal part of deltoid', 'Cơ Delta phần gai vai'],
+      ['deltoid', 'Cơ Delta'],
+      ['supraspinatus', 'Cơ Trên gai'],
+      ['infraspinatus', 'Cơ Dưới gai'],
+      ['subscapularis', 'Cơ Dưới vai'],
+      ['teres minor', 'Cơ Tròn bé'],
+      ['teres major', 'Cơ Tròn lớn'],
+      ['pectoralis major', 'Cơ Ngực lớn'],
+      ['pectoralis minor', 'Cơ Ngực bé'],
+      ['latissimus dorsi', 'Cơ Lưng rộng'],
+      ['trapezius', 'Cơ Thang'],
+      ['serratus anterior', 'Cơ Răng trước'],
+      ['levator scapulae', 'Cơ Nâng vai'],
+      ['rhomboid major', 'Cơ Trám lớn'],
+      ['rhomboid minor', 'Cơ Trám bé'],
+      ['biceps brachii', 'Cơ Nhị đầu cánh tay'],
+      ['triceps brachii', 'Cơ Tam đầu cánh tay'],
+      ['brachialis', 'Cơ Cánh tay'],
+      ['coracobrachialis', 'Cơ Quạ cánh tay'],
+      ['brachioradialis', 'Cơ Cánh tay quay'],
+      ['pronator teres', 'Cơ Sấp tròn'],
+      ['pronator quadratus', 'Cơ Sấp vuông'],
+      ['supinator', 'Cơ Ngửa'],
+      ['flexor carpi radialis', 'Cơ Gập cổ tay quay'],
+      ['flexor carpi ulnaris', 'Cơ Gập cổ tay trụ'],
+      ['extensor carpi radialis longus', 'Cơ Duỗi cổ tay quay dài'],
+      ['extensor carpi radialis brevis', 'Cơ Duỗi cổ tay quay ngắn'],
+      ['extensor carpi radialis', 'Cơ Duỗi cổ tay quay'],
+      ['extensor carpi ulnaris', 'Cơ Duỗi cổ tay trụ'],
+      ['flexor digitorum superficialis', 'Cơ Gập các ngón nông'],
+      ['flexor digitorum profundus', 'Cơ Gập các ngón sâu'],
+      ['extensor digitorum', 'Cơ Duỗi các ngón tay'],
+      ['extensor digiti minimi', 'Cơ Duỗi ngón út'],
+      ['extensor indicis', 'Cơ Duỗi ngón trỏ'],
+      ['palmaris longus', 'Cơ Gan tay dài'],
+      ['palmaris brevis', 'Cơ Gan tay ngắn'],
+      ['abductor pollicis longus', 'Cơ Dạng ngón cái dài'],
+      ['extensor pollicis brevis', 'Cơ Duỗi ngón cái ngắn'],
+      ['extensor pollicis longus', 'Cơ Duỗi ngón cái dài'],
+      ['flexor pollicis longus', 'Cơ Gập ngón cái dài'],
+      ['abductor pollicis brevis', 'Cơ Dạng ngón cái ngắn'],
+      ['flexor pollicis brevis', 'Cơ Gập ngón cái ngắn'],
+      ['opponens pollicis', 'Cơ Đối ngón cái'],
+      ['adductor pollicis', 'Cơ Khép ngón cái'],
+      ['abductor digiti minimi', 'Cơ Dạng ngón út'],
+      ['flexor digiti minimi brevis', 'Cơ Gập ngón út ngắn'],
+      ['flexor digiti minimi', 'Cơ Gập ngón út'],
+      ['opponens digiti minimi', 'Cơ Đối ngón út'],
+      ['lumbrical', 'Cơ Giun'],
+      ['palmar interossei', 'Cơ Gian cốt gan tay'],
+      ['dorsal interossei', 'Cơ Gian cốt mu tay'],
+      ['interossei', 'Cơ Gian cốt'],
+
+      // Vùng chậu & Chi dưới
+      ['gluteus maximus', 'Cơ Mông lớn'],
+      ['gluteus medius', 'Cơ Mông nhỡ'],
+      ['gluteus minimus', 'Cơ Mông bé'],
+      ['tensor fasciae latae', 'Cơ Căng mạc đùi'],
+      ['tensor fascia lata', 'Cơ Căng mạc đùi'],
+      ['piriformis', 'Cơ Hình lê'],
+      ['obturator internus', 'Cơ Bịt trong'],
+      ['obturator externus', 'Cơ Bịt ngoài'],
+      ['gemellus superior', 'Cơ Sinh đôi trên'],
+      ['gemellus inferior', 'Cơ Sinh đôi dưới'],
+      ['quadratus femoris', 'Cơ Vuông đùi'],
+      ['sartorius', 'Cơ May'],
+      ['rectus femoris', 'Cơ Thẳng đùi'],
+      ['vastus lateralis', 'Cơ Rộng ngoài'],
+      ['vastus medialis', 'Cơ Rộng trong'],
+      ['vastus intermedius', 'Cơ Rộng giữa'],
+      ['articularis genus', 'Cơ Khớp gối'],
+      ['pectineus', 'Cơ Lược'],
+      ['gracilis', 'Cơ Thon'],
+      ['adductor longus', 'Cơ Khép dài'],
+      ['adductor brevis', 'Cơ Khép ngắn'],
+      ['adductor magnus', 'Cơ Khép lớn'],
+      ['adductor minimus', 'Cơ Khép bé'],
+      ['biceps femoris', 'Cơ Nhị đầu đùi'],
+      ['semitendinosus', 'Cơ Bán gân'],
+      ['semimembranosus', 'Cơ Bán màng'],
+      ['tibialis anterior', 'Cơ Chày trước'],
+      ['extensor hallucis longus', 'Cơ Duỗi ngón cái dài'],
+      ['extensor digitorum longus', 'Cơ Duỗi các ngón chân dài'],
+      ['fibularis tertius', 'Cơ Mác ba'],
+      ['peroneus tertius', 'Cơ Mác ba'],
+      ['fibularis longus', 'Cơ Mác dài'],
+      ['peroneus longus', 'Cơ Mác dài'],
+      ['fibularis brevis', 'Cơ Mác ngắn'],
+      ['peroneus brevis', 'Cơ Mác ngắn'],
+      ['fibularis', 'Cơ Mác'],
+      ['peroneus', 'Cơ Mác'],
+      ['gastrocnemius', 'Cơ Bụng chân'],
+      ['soleus', 'Cơ Dép'],
+      ['plantaris', 'Cơ Gan chân gầy'],
+      ['popliteus', 'Cơ Khoeo'],
+      ['flexor hallucis longus', 'Cơ Gập ngón cái dài'],
+      ['flexor digitorum longus', 'Cơ Gập các ngón chân dài'],
+      ['tibialis posterior', 'Cơ Chày sau'],
+      ['extensor hallucis brevis', 'Cơ Duỗi ngón cái ngắn'],
+      ['extensor digitorum brevis', 'Cơ Duỗi các ngón chân ngắn'],
+      ['abductor hallucis', 'Cơ Dạng ngón cái'],
+      ['flexor hallucis brevis', 'Cơ Gập ngón cái ngắn'],
+      ['adductor hallucis', 'Cơ Khép ngón cái'],
+      ['flexor digitorum brevis', 'Cơ Gập các ngón chân ngắn'],
+      ['quadratus plantae', 'Cơ Vuông gan chân'],
+
+      // Thân mình, Bụng & Lưng
+      ['erector spinae', 'Cơ Dựng sống'],
+      ['iliocostalis', 'Cơ Chậu sườn'],
+      ['longissimus', 'Cơ Dài'],
+      ['spinalis', 'Cơ Gai'],
+      ['interspinales', 'Cơ Gian gai'],
+      ['intertransversarii', 'Cơ Gian mỏm ngang'],
+      ['multifidus', 'Cơ Nhiều nhánh (Multifidus)'],
+      ['rotatores', 'Cơ Xoay cột sống'],
+      ['splenius cervicis', 'Cơ Gối cổ'],
+      ['splenius capitis', 'Cơ Gối đầu'],
+      ['quadratus lumborum', 'Cơ Vuông thắt lưng'],
+      ['psoas major', 'Cơ Thắt lưng lớn'],
+      ['psoas minor', 'Cơ Thắt lưng bé'],
+      ['iliacus', 'Cơ Chậu'],
+      ['rectus abdominis', 'Cơ Thẳng bụng'],
+      ['pyramidalis', 'Cơ Tháp'],
+      ['external oblique', 'Cơ Chéo bụng ngoài'],
+      ['internal oblique', 'Cơ Chéo bụng trong'],
+      ['transversus abdominis', 'Cơ Ngang bụng'],
+      ['intercostal', 'Cơ Gian sườn'],
+      ['subclavius', 'Cơ Dưới đòn'],
+
+      // Đầu & Cổ
+      ['sternocleidomastoid', 'Cơ Ức đòn chũm'],
+      ['scalenus anterior', 'Cơ Bậc thang trước'],
+      ['scalenus medius', 'Cơ Bậc thang giữa'],
+      ['scalenus posterior', 'Cơ Bậc thang sau'],
+      ['scalenus', 'Cơ Bậc thang'],
+      ['omohyoid', 'Cơ Vai móng'],
+      ['sternohyoid', 'Cơ Ức móng'],
+      ['sternothyroid', 'Cơ Ức giáp'],
+      ['thyrohyoid', 'Cơ Giáp móng'],
+      ['digastric', 'Cơ Hai bụng'],
+      ['mylohyoid', 'Cơ Hàm móng'],
+      ['geniohyoid', 'Cơ Cằm móng'],
+      ['masseter', 'Cơ Cắn'],
+      ['temporalis', 'Cơ Thái dương'],
+      ['lateral pterygoid', 'Cơ Chân bướm ngoài'],
+      ['medial pterygoid', 'Cơ Chân bướm trong'],
+      ['buccinator', 'Cơ Mút'],
+      ['orbicularis oris', 'Cơ Vòng miệng'],
+      ['orbicularis oculi', 'Cơ Vòng mắt'],
+      ['platysma', 'Cơ Bám da cổ'],
+
+      // Mạc & Cân
+      ['fascia lata', 'Mạc đùi (Fascia lata)'],
+      ['iliotibial tract', 'Dải chậu - chày'],
+      ['extensor retinaculum', 'Hãm gân duỗi'],
+      ['flexor retinaculum', 'Hãm gân gập'],
+      ['palmar aponeurosis', 'Cân gan tay'],
+      ['plantar aponeurosis', 'Cân gan chân'],
+      ['thoracolumbar fascia', 'Cân ngực - thắt lưng'],
+      ['deltoid fascia', 'Cân cơ delta'],
+      ['antebrachial fascia', 'Cân mạc cẳng tay']
+    ];
+
+    for (const [key, val] of muscleDict) {
+      if (low.includes(key)) {
+        if (prefix) {
+          const stripped = val.replace(/^cơ\s+/i, '');
+          return `${prefix}${stripped}${sideSuffix}`;
+        }
         return `${val}${sideSuffix}`;
       }
     }
 
-    // 3. Cơ bắp
-    let vi = name
-      .replace(/^musculus\s+/i, '')
-      .replace(/\s+muscle$/i, '')
-      .replace(/clavicular part of deltoid/i, 'Cơ Delta phần đòn')
-      .replace(/acromial part of deltoid/i, 'Cơ Delta phần cùng vai')
-      .replace(/scapular spinal part of deltoid/i, 'Cơ Delta phần gai vai')
-      .replace(/deltoid/i, 'Cơ Delta')
-      .replace(/supraspinatus/i, 'Cơ Trên gai')
-      .replace(/infraspinatus/i, 'Cơ Dưới gai')
-      .replace(/subscapularis/i, 'Cơ Dưới vai')
-      .replace(/teres minor/i, 'Cơ Tròn bé')
-      .replace(/teres major/i, 'Cơ Tròn lớn')
-      .replace(/pectoralis major/i, 'Cơ Ngực lớn')
-      .replace(/pectoralis minor/i, 'Cơ Ngực bé')
-      .replace(/latissimus dorsi/i, 'Cơ Lưng rộng')
-      .replace(/trapezius/i, 'Cơ Thang')
-      .replace(/serratus anterior/i, 'Cơ Răng trước')
-      .replace(/levator scapulae/i, 'Cơ Nâng vai')
-      .replace(/rhomboid major/i, 'Cơ Trám lớn')
-      .replace(/rhomboid minor/i, 'Cơ Trám bé')
-      .replace(/biceps brachii/i, 'Cơ Nhị đầu cánh tay')
-      .replace(/triceps brachii/i, 'Cơ Tam đầu cánh tay')
-      .replace(/brachialis/i, 'Cơ Cánh tay')
-      .replace(/coracobrachialis/i, 'Cơ Quạ cánh tay')
-      .replace(/brachioradialis/i, 'Cơ Cánh tay quay')
-      .replace(/pronator teres/i, 'Cơ Sấp tròn')
-      .replace(/pronator quadratus/i, 'Cơ Sấp vuông')
-      .replace(/supinator/i, 'Cơ Ngửa')
-      .replace(/gluteus maximus/i, 'Cơ Mông lớn')
-      .replace(/gluteus medius/i, 'Cơ Mông nhỡ')
-      .replace(/gluteus minimus/i, 'Cơ Mông bé')
-      .replace(/tensor fasciae latae/i, 'Cơ Căng mạc đùi')
-      .replace(/piriformis/i, 'Cơ Hình lê')
-      .replace(/rectus femoris/i, 'Cơ Thẳng đùi')
-      .replace(/biceps femoris/i, 'Cơ Nhị đầu đùi')
-      .replace(/semitendinosus/i, 'Cơ Bán gân')
-      .replace(/semimembranosus/i, 'Cơ Bán màng')
-      .replace(/gastrocnemius/i, 'Cơ Bụng chân')
-      .replace(/soleus/i, 'Cơ Dép')
-      .replace(/tibialis anterior/i, 'Cơ Chày trước')
-      .replace(/tibialis posterior/i, 'Cơ Chày sau');
-
-    return `${vi}${sideSuffix}`;
+    // Dự phòng sạch sẽ
+    const cleanFallback = low.replace(/^musculus\s+/i, '').replace(/\s+muscle$/i, '').replace(/\s+muscles$/i, '').trim();
+    if (category === 'nervous' || low.includes('nerve')) {
+      return `Dây thần kinh ${cleanFallback.charAt(0).toUpperCase() + cleanFallback.slice(1)}${sideSuffix}`;
+    }
+    return `Cơ ${cleanFallback.charAt(0).toUpperCase() + cleanFallback.slice(1)}${sideSuffix}`;
   }
 
   _getLocalizedName(object) {
@@ -1077,15 +1291,20 @@ export class SceneView {
     if (ud.type === 'acupoint') {
       return `🔴 Huyệt ${ud.name_vi} (${ud.code})`;
     } else if (ud.type === 'muscle') {
-      if (this.appVM && this.appVM.muscleData) {
-        const m = this.appVM.muscleData[ud.id];
-        if (m && m.name_vi) return `💪 ${m.name_vi}`;
+      if (this.appVM && this.appVM.muscleData && Array.isArray(this.appVM.muscleData)) {
+        const m = this.appVM.muscleData.find(item => item.id === ud.id);
+        if (m && m.name_vi) {
+          const side = (ud.meshName && (ud.meshName.endsWith('.r') || ud.meshName.endsWith('r') || ud.meshName.includes('.r.'))) ? ' (phải)' :
+                       (ud.meshName && (ud.meshName.endsWith('.l') || ud.meshName.endsWith('l') || ud.meshName.includes('.l.'))) ? ' (trái)' : '';
+          return `💪 ${m.name_vi}${side}`;
+        }
       }
       return `💪 ${this._translateAnatomyNameToVi(ud.meshName || object.name, 'muscle')}`;
     } else if (ud.type === 'nervous') {
       return `🧠 ${this._translateAnatomyNameToVi(ud.meshName || object.name, 'nervous')}`;
     }
-    return this._translateAnatomyNameToVi(object.name, 'general');
+
+    return this._translateAnatomyNameToVi(object.name, 'anatomy');
   }
 
   _bindToViewModel() {

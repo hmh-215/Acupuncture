@@ -32,7 +32,7 @@ $port = 8080
 
 # Function to check if port is open
 function Test-PortOccupied ($p) {
-    $conn = Get-NetTCPConnection -LocalPort $p -ErrorAction SilentlyContinue
+    $conn = Get-NetTCPConnection -LocalPort $p -State Listen -ErrorAction SilentlyContinue
     return ($null -ne $conn)
 }
 
