@@ -2,6 +2,8 @@
 
 Ứng dụng web 3D tương tác giúp quan sát và đối chiếu giải phẫu hệ cơ xương khớp với các chuyển động thực tế (sinh cơ học vận động) và hệ thống huyệt vị châm cứu theo chuẩn Tổ chức Y tế Thế giới (WHO).
 
+> 🌐 **Trải Nghiệm Live Demo Trực Tuyến**: [https://hmh-215.github.io/Acupuncture/](https://hmh-215.github.io/Acupuncture/)
+
 ---
 
 ## 🌟 Tính Năng Cốt Lõi
