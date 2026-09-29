@@ -3,6 +3,8 @@
 
 Ứng dụng web 3D tương tác chuyên sâu kết hợp giữa **Y học cổ truyền** (Học thuyết 12 Kinh Cân, Điểm Cân Kết & Tiêu chuẩn định vị huyệt WHO) và **Giải phẫu học — Cơ sinh học hiện đại** (Chuỗi cơ cân Myofascial Chains, Động lực học cử động & Phân vai cơ bắp).
 
+> 🌐 **Trải Nghiệm Live Demo Trực Tuyến**: [https://hmh-215.github.io/Acupuncture/](https://hmh-215.github.io/Acupuncture/)
+
 ---
 
 ## 🌟 TÍNH NĂNG NỔI BẬT
