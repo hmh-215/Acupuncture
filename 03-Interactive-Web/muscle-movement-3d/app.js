@@ -1,6 +1,6 @@
-import { AppViewModel } from './viewmodels/AppViewModel.js?v=5.2';
-import { SceneView } from './views/SceneView.js?v=5.2';
-import { UIView } from './views/UIView.js?v=5.2';
+import { AppViewModel } from './viewmodels/AppViewModel.js?v=5.3';
+import { SceneView } from './views/SceneView.js?v=5.3';
+import { UIView } from './views/UIView.js?v=5.3';
 
 async function main() {
   console.log('Đang khởi tạo ứng dụng...');
@@ -53,7 +53,7 @@ async function main() {
   console.log('✅ Ứng dụng 3D Hệ Cơ & Châm Cứu đã sẵn sàng!');
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function startApp() {
   main().catch(err => {
     console.error('Lỗi khởi tạo ứng dụng:', err);
     const overlay = document.getElementById('loading-overlay');
@@ -66,4 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
       alert(`Lỗi khởi tạo ứng dụng: ${err.message}`);
     }
   });
-});
+}
+
+// Khởi chạy an toàn: nếu DOM đã sẵn sàng (interactive/complete) thì chạy ngay,
+// ngược lại thì chờ sự kiện DOMContentLoaded.
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', startApp);
+} else {
+  startApp();
+}
