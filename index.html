@@ -6,13 +6,13 @@
   <title>Hệ Cơ & Thần Kinh 3D — Châm Cứu & Động Học</title>
   <link rel="stylesheet" href="assets/css/theme.css">
 
-  <!-- Three.js via ES Module importmap -->
+  <!-- Three.js via ES Module importmap (Local Bundle 100% Offline & Tốc độ cao) -->
   <script type="importmap">
   {
     "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
-      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/",
-      "fflate": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/libs/fflate.module.js"
+      "three": "./assets/libs/three/build/three.module.js",
+      "three/addons/": "./assets/libs/three/examples/jsm/",
+      "fflate": "./assets/libs/three/examples/jsm/libs/fflate.module.js"
     }
   }
   </script>
@@ -271,7 +271,7 @@
     <p>Dữ liệu giải phẫu & châm cứu: Giáo trình ĐHYHN, Netter Anatomy, Terminologia Anatomica (TA2), Yếu Lược Châm Cứu Hệ Đạo Dẫn & WHO Acupuncture Standards</p>
   </footer>
 
-  <!-- App Entry Point (v5.2 cache bust) -->
-  <script type="module" src="app.js?v=5.2"></script>
+  <!-- App Entry Point (v5.3 cache bust) -->
+  <script type="module" src="app.js?v=5.3"></script>
 </body>
 </html>
