@@ -1,90 +1,102 @@
-# Ứng Dụng 3D Tương Tác: Hệ Cơ Xương Khớp & Châm Cứu
+# Ứng Dụng 3D Hệ Cơ Bắp & Huyệt Vị Châm Cứu
+### (3D Muscular System & Acupuncture Interactive Web Suite)
 
-Ứng dụng web 3D tương tác giúp quan sát và đối chiếu giải phẫu hệ cơ xương khớp với các chuyển động thực tế (sinh cơ học vận động) và hệ thống huyệt vị châm cứu theo chuẩn Tổ chức Y tế Thế giới (WHO).
+Ứng dụng web 3D tương tác chuyên sâu kết hợp giữa **Y học cổ truyền** (Học thuyết 12 Kinh Cân, Điểm Cân Kết & Tiêu chuẩn định vị huyệt WHO) và **Giải phẫu học — Cơ sinh học hiện đại** (Chuỗi cơ cân Myofascial Chains, Động lực học cử động & Phân vai cơ bắp).
 
-> 🌐 **Trải Nghiệm Live Demo Trực Tuyến**: [https://hmh-215.github.io/Acupuncture/](https://hmh-215.github.io/Acupuncture/)
+<p align="center">
+  <a href="https://hmh-215.github.io/Acupuncture/" target="_blank">
+    <img src="https://img.shields.io/badge/▶_LIVE_DEMO-TRẢI_NGHIỆM_TRỰC_TUYẾN-0284c7?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Trải nghiệm Live Demo Trực Tuyến" height="42" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/hmh-215/Acupuncture" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="Mã nguồn GitHub" height="42" />
+  </a>
+</p>
 
----
-
-## 🌟 Tính Năng Cốt Lõi
-
-1. **Minh Họa Vận Động Đa Cơ (Multi-muscle Movement Highlighting):**
-   - Chọn bất kỳ cử động khớp nào (Giạng vai, Khép vai, Gập vai, Duỗi vai, Xoay trong/ngoài, Gập/Duỗi khuỷu, v.v.).
-   - Hệ thống tự động làm nổi bật các nhóm cơ tham gia theo đúng vai trò sinh cơ học:
-     - 🔴 **Cơ chủ vận (*Agonist*):** Màu đỏ (`#ef4444`)
-     - 🔵 **Cơ đối vận (*Antagonist*):** Màu xanh Cyan (`#38bdf8`)
-     - 🟡 **Cơ hiệp đồng (*Synergist*):** Màu vàng Amber (`#f59e0b`)
-     - 🟢 **Cơ ổn định (*Stabilizer*):** Màu xanh ngọc Emerald (`#10b981`)
-
-2. **Khám Phá Tương Tác 3D Không Gian Thực (3D Raycasting & Tooltip):**
-   - Di chuột lên từng cơ hoặc mỏm xương: Hiển thị nhãn tên tiếng Việt chuẩn mực y khoa.
-   - Nhấp chuột vào một cơ bất kỳ: Tự động **cô lập cơ đó (*Isolate*)**, làm mờ các thành phần xung quanh và mở bảng thông tin chi tiết (Nguyên ủy, Bám tận, Động tác, Thần kinh, Mạch máu).
-
-3. **Tích Hợp Huyệt Vị Châm Cứu Chuẩn WHO:**
-   - Liên kết trực tiếp giữa cấu trúc cơ học và các huyệt vị kinh lạc nằm trên thân cơ (ví dụ: cơ Delta liên kết huyệt *Kiên Ngung - LI-15*, cơ Thang liên kết huyệt *Kiên Tỉnh - GB-21*).
-   - Hiển thị vị trí giải phẫu, độ sâu châm an toàn và các cảnh báo nguy cơ (tránh tràn khí màng phổi, chống chỉ định thai kỳ).
-
-4. **Kiến Trúc Chuẩn MVVM (Model - View - ViewModel):**
-   - **Model:** Các cơ sở dữ liệu độc lập `muscles.json`, `movements.json`, `acupoints.json`, `bone-mapping.json`.
-   - **ViewModel:** Quản lý logic phân vai, lọc cơ, tìm kiếm và trạng thái 3D thông qua `Observable.js` (Proxy-based reactivity).
-   - **View:** `SceneView.js` (render Three.js WebGL) và `UIView.js` (điều khiển DOM giao diện).
+<p align="center">
+  <img src="assets/demo.png" alt="Acupuncture 3D Web App — Minh họa Động học Cử động & Chuỗi Cơ Cân Châm Cứu" width="960" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);" />
+</p>
 
 ---
 
-## 🚀 Hướng Dẫn Khởi Chạy
+## 🌟 TÍNH NĂNG NỔI BẬT
 
-Do các trình duyệt hiện đại chặn nạp tài nguyên cục bộ (CORS) khi mở trực tiếp file `file:///`, ứng dụng cần chạy qua máy chủ HTTP tĩnh:
+### 1. Hai Chế Độ Tương Tác Y Khoa Độc Lập
 
-### Cách 1: Chạy bằng file Batch (Nhanh nhất trên Windows)
-- Nhấp đúp chuột vào file:  
-  `03-Interactive-Web/muscle-movement-3d/start-server.bat`
-- Trình duyệt sẽ tự động mở tại địa chỉ `http://localhost:8080`.
+- **🏃 Chế Độ 1: Động Học Cử Động (Kinematic Movement Analysis)**:
+  - Mô phỏng các cử động giải phẫu và tư thế tượng động học (*Statue Poses*) chuẩn sinh lý: *Nâng tay qua đầu (Overhead Reach), Xoay người (Trunk Rotation), Dáng đi (Walking Gait), Cúi gập lưng (Forward Bending), Thế bắn cung Đạo dẫn (Archer Pull), Gập khuỷu tay...*
+  - Tự động phân tích và highlight các nhóm cơ tham gia theo 4 vai trò y khoa chuẩn mực:
+    - 🔴 **Chủ vận (Agonist)**: Phát lực chính sinh công.
+    - 🔵 **Đối vận (Antagonist)**: Co ly tâm kiểm soát và hãm lực.
+    - 🟠 **Hiệp đồng (Synergist)**: Trợ lực và hiệp đồng cử động.
+    - 🟢 **Ổn định (Stabilizer)**: Khóa gốc chi và giữ vững trục khớp.
+  - Các cơ không tham gia cử động được thể hiện bằng **Màu Xám Slate Trung Tính** đục 100% (*Opaque Solid*), giúp các nhóm cơ chủ vận và đối vận nổi bật rõ ràng, không bị chìm hay lẫn màu.
 
-### Cách 2: Khởi chạy bằng dòng lệnh PowerShell / Terminal
+- **⚡ Chế Độ 2: Trị Liệu & Chuỗi Kinh Cân (Myofascial Pain & Acupuncture Chain)**:
+  - Khảo sát các hội chứng cơ đau và điểm kích hoạt (*Trigger Points / Điểm Cân Kết*) phổ biến trên lâm sàng:
+    1. *Hội chứng Cổ Vai Gáy (Co cứng Cơ Thang trên & Cơ Nâng vai)*.
+    2. *Hội chứng Chóp Xoay & Viêm Gân Vai (Cơ Trên gai & Dưới gai)*.
+    3. *Hội chứng Cơ Hình Lê & Đau Thần Kinh Tọa (Chèn ép dây thần kinh tọa)*.
+    4. *Đau Thắt Lưng Cấp & Co Cứng Cơ Dựng Sống*.
+    5. *Hội chứng Ống Cổ Tay & Co Cứng Gân Gập Cẳng Tay*.
+    6. *Đau Mặt Trước Gối & Co Rút Cơ Tứ Đầu Đùi*.
+  - Tự động nhận diện và highlight:
+    - 🔴 **Vùng cơ đau đích / Trigger Point** (Màu đỏ Crimson cảnh báo).
+    - 🟡 **Chuỗi cơ cân liên đới** theo đường truyền lực giải phẫu (*Myofascial Chains*) & Kinh Cân YHCT.
+    - 🔵 **Cơ co rút đối ứng**: Phản ánh mất cân bằng đối kháng cơ.
+  - **Hệ thống Điểm Huyệt 3D (Interactive 3D Acupoint Markers)**:
+    - Hiển thị các điểm cầu phát sáng nhịp tim trực tiếp trên tọa độ 3D của cơ thể (*Kiên Tỉnh GB-21, Phong Trì GB-20, Thiên Tông SI-11, Hoàn Khiêu GB-30, Thận Du BL-23, Hợp Cốc LI-4, Ủy Trung BL-40, Túc Tam Lý ST-36...*).
+    - Khi nhấp chọn huyệt vị, camera 3D tự động căn tiêu điểm trực diện vào huyệt.
+    - Xem chi tiết: Mốc xương giải phẫu, Độ sâu châm an toàn (mm), Hướng đâm kim, Cảm giác Đắc Khí mong muốn và **Cảnh báo an toàn y khoa** (nguy cơ tràn khí màng phổi, chọc tạng, huyệt kỵ thai phụ).
+
+---
+
+### 2. Hai Hệ Thống Giải Phẫu Cốt Lõi
+
+- 💪 **Hệ Cơ Thật (Muscular System)**: Dựng từ dữ liệu giải phẫu thực tế Z-Anatomy với hàng trăm thớ cơ riêng biệt. Thanh trượt Opacity điều chỉnh độ mờ linh hoạt từ 5% đến 100% (ở mức 100% mô hình hoàn toàn đục, người dùng có thể xoay 360° quan sát khối cơ chân thực; khi giảm độ mờ sẽ kích hoạt chế độ X-Ray thấu quang nhìn xuyên thấu vào các lớp cơ sâu).
+- 🧠 **Hệ Thần Kinh (Nervous System)**: Toggle bật/tắt độc lập, hiển thị mạng lưới thần kinh tủy sống và ngoại biên màu vàng neon phát sáng, được căn chỉnh đồng bộ tọa độ chính xác tuyệt đối bên trong khoang cơ thể.
+
+---
+
+## 🚀 HƯỚNG DẪN CHẠY ỨNG DỤNG CỤC BỘ (LOCAL)
+
+Do trình duyệt bảo mật chặn tính năng tải file mô hình 3D (`.fbx`) và dữ liệu (`.json`) qua giao thức `file://`, bạn có thể khởi chạy máy chủ cục bộ bằng **1 trong các cách đơn giản sau**:
+
+### Cách 1: Nhấp đúp chuột (Tiện nhất trên Windows)
+- Nhấp đúp chuột vào file **`start-server.bat`** tại thư mục gốc.
+- Hệ thống sẽ tự động khởi tạo máy chủ HTTP và mở sẵn trình duyệt tại: `http://localhost:8080/`.
+
+### Cách 2: Khởi chạy bằng PowerShell
 ```powershell
-cd "d:\huong\antigravity\châm cứu\03-Interactive-Web\muscle-movement-3d"
-# Dùng Python có sẵn trong máy:
+.\start-server.bat
+# hoặc vào thư mục webapp:
+cd 03-Interactive-Web\muscle-movement-3d
+powershell -ExecutionPolicy Bypass -File .\run.ps1
+```
+
+### Cách 3: Sử dụng Python
+```bash
+cd 03-Interactive-Web/muscle-movement-3d
 python -m http.server 8080
 ```
-Sau đó mở trình duyệt truy cập: `http://localhost:8080`.
-
-### Cách 3: Dùng extension "Live Server" trong VS Code / Cursor
-- Nhấp chuột phải vào file `index.html` -> chọn **Open with Live Server**.
+Sau đó mở trình duyệt truy cập: `http://localhost:8080/`
 
 ---
 
-## 📂 Cấu Trúc Thư Mục Dự Án
+## 📜 TÀI LIỆU THAM KHẢO & NGUỒN DỮ LIỆU
 
-```text
-muscle-movement-3d/
-├── index.html                   # Giao diện chính 2 cột (Viewport 3D + Thẻ thông tin)
-├── app.js                       # Điểm khởi tạo ứng dụng (Application Orchestrator)
-├── start-server.bat             # Trình khởi chạy 1-click trên Windows
-├── README.md                    # Tài liệu hướng dẫn sử dụng và kiến trúc
-├── assets/
-│   ├── css/
-│   │   └── theme.css            # Hệ thống màu Dark Slate Studio chuẩn y khoa
-│   └── models/                  # [3D ASSETS] Mô hình giải phẫu thật 100%
-│       ├── MuscularSystem.fbx   # 550 thớ cơ thật từ Z-Anatomy chính thức (37.3 MB)
-│       └── overview-skeleton.obj# 144 xương thật từ AnatomyTOOL (48.4 MB)
-├── data/                        # [MODEL LAYER] Cơ sở dữ liệu JSON
-│   ├── muscles.json             # 21 cơ đai vai và cánh tay (Nguyên ủy, bám tận, thần kinh)
-│   ├── movements.json           # 10 cử động giải phẫu chuẩn với phân vai chi tiết
-│   ├── acupoints.json           # 14 huyệt vị WHO liên quan
-│   └── bone-mapping.json        # Ánh xạ 58 xương giải phẫu sang tiếng Việt
-├── viewmodels/                  # [VIEWMODEL LAYER] Logic nghiệp vụ và phản ứng
-│   ├── Observable.js            # Hệ thống quản lý trạng thái phản ứng Proxy
-│   ├── AppViewModel.js          # Root ViewModel nạp dữ liệu và điều phối
-│   ├── SceneViewModel.js        # Quản lý trạng thái 3D (highlight, opacity, layer)
-│   └── MovementViewModel.js     # Xử lý chọn cử động, lọc vai trò, tìm kiếm
-└── views/                       # [VIEW LAYER] Hiển thị và tương tác
-    ├── SceneView.js             # Render Three.js WebGL (FBXLoader + OBJLoader + Raycasting)
-    └── UIView.js                # Đồng bộ DOM, cập nhật danh sách và thẻ thông tin
-```
+Toàn bộ nội dung tri thức, phân vai vận động, chuỗi liên đới cơ và định vị huyệt vị trong ứng dụng được nghiên cứu, học tập và tổng hợp trực tiếp từ các nguồn tài liệu chính thống của dự án:
 
----
+1. **Mô Hình 3D Giải Phẫu Minh Họa**:
+   - **[Z-Anatomy](https://z-anatomy.com/)**: Mô hình giải phẫu người 3D mã nguồn mở (theo giấy phép Creative Commons Attribution-ShareAlike 4.0 International - CC BY-SA 4.0). Dữ liệu hình học được tối ưu hóa cho dựng hình WebGL thời gian thực trên Three.js.
 
-## 🛡️ Bản Quyền Dữ Liệu
-- Danh pháp giải phẫu: **Terminologia Anatomica (TA2-2019)**
-- Vị trí huyệt vị: **WHO Standard Acupuncture Point Locations in the Western Pacific Region**
-- Mô hình tham chiếu: **Z-Anatomy & AnatomyTOOL** (CC BY-SA 4.0)
+2. **Tài Liệu Y Học Cổ Truyền & Cơ Sinh Học Châm Cứu Đạo Dẫn**:
+   - **Độ Sinh Đường — Yếu Lược Châm Cứu Hệ Đạo Dẫn**: Ths. Bs Ngô Tiến Hưởng (`GOC-KINHDIEN_DoSinhDuong_YeuLuocChamCuuHeDaoDan_NgoTienHuong.pdf`). Nền tảng phân tích cơ sinh học vận động, chuỗi truyền lực đạo dẫn và phương pháp châm cứu chức năng phục hồi cân cơ.
+   - **Học Thuyết 12 Kinh Cân Y Học Cổ Truyền**: Cầu nối khoa học giữa đường tuần hành của 12 Kinh Cân với giải phẫu các chuỗi cơ cân hiện đại (*Myofascial Chains*).
+
+3. **Giáo Trình Giải Phẫu Học Hiện Đại**:
+   - **Giáo Trình Giải Phẫu Người — Trường Đại Học Y Hà Nội**: Chủ biên PGS. TS. Nguyễn Văn Huy, Bộ môn Giải phẫu — ĐHYHN (`GOC-GIAOTRINH_Giai-Phau-Nguoi-Dai-Hoc-Y-Ha-Noi.pdf`, 516 trang). Cung cấp cơ sở khoa học chính xác về mốc xương định vị, nguyên ủy, bám tận, mạch máu và các nhánh thần kinh chi phối.
+   - **Atlas Mô Học & Cơ Sinh Học Hệ Xương Khớp**: (`GOC-ATLAS_HeCoXuong_MoXuongKhop_Infographics.pdf`).
+
+4. **Tiêu Chuẩn Định Vị Huyệt Vị Y Khoa Quốc Tế**:
+   - **WHO Standard Acupuncture Point Locations in the Western Pacific Region**: Tổ chức Y tế Thế giới (WHO / WPRO). Chuẩn hóa mã định danh quốc tế (WHO Codes), mốc định vị giải phẫu sống, góc châm, độ sâu an toàn (mm) và các cảnh báo nguy cơ lâm sàng.
