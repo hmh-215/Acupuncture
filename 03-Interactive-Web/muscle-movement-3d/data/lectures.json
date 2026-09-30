@@ -1,0 +1,170 @@
+[
+  {
+    "id": "chuong-01",
+    "chapter": "Chương 01",
+    "title": "Chuỗi Động Học & Tương Tác Cơ Chủ Vận — Đối Vận",
+    "duration": "12:45",
+    "status": "ready_script",
+    "badge": "Đã hoàn thành Storyboard & Assets",
+    "video_src": "",
+    "summary": "Phân tích chuyển động đại thể của khớp vai và chuỗi động học chi trên. Cơ chế đối kháng nhịp nhàng giữa nhóm cơ chủ vận (Agonist) và đối vận (Antagonist) theo định luật ức chế tương hỗ Sherrington. Mối liên hệ mật thiết giữa tư thế tĩnh và động học giải phẫu ứng dụng.",
+    "micro_shots": [
+      {
+        "time": "00:00 - 04:15",
+        "shot": "Shot 01a: Đại thể & Chuỗi động học",
+        "desc": "Cử động đại thể giạng vai 0° – 180°, tương tác nhịp bả vai - cánh tay (Scapulohumeral Rhythm tỉ lệ 2:1) giữa cơ Delta và cơ chóp xoay."
+      },
+      {
+        "time": "04:15 - 08:30",
+        "shot": "Shot 01b: Vi thể Actin - Myosin & Áp lực khoang",
+        "desc": "Kính lúp hiển vi phóng đại cấu trúc Sarcomere, chu kỳ cầu trượt Actin-Myosin, hiện tượng ép dẹt lòng mao mạch nuôi dưỡng và áp lực khoang cân mạc đạt 0.016 bar."
+      },
+      {
+        "time": "08:30 - 12:45",
+        "shot": "Shot 01c: Hệ quả lâm sàng & Định vị huyệt vị",
+        "desc": "Sự hình thành Điểm Cân Kết (Myofascial Trigger Point) tại cơ Thang trên, dòng lực co rút và kỹ thuật châm định vị huyệt Kiên Tỉnh (GB-21) chuẩn xác theo góc châm an toàn."
+      }
+    ],
+    "transcript": "Chào mừng các bạn đến với Chương 1 của Hệ Thống Bài Giảng Yếu Lược Châm Cứu Hệ Đạo Dẫn. Trong phân cảnh này, chúng ta quan sát chuỗi động học của khớp vai và khớp khuỷu. Khi cơ Delta phần giữa co ngắn để nâng cánh tay, cơ Ngực lớn và cơ Lưng rộng phải chủ động giãn dài để duy trì sự mượt mà của quỹ đạo. Ở mức độ vi thể, hàng triệu cầu nối Myosin liên tục bám trượt trên sợi Actin, tiêu tốn năng lượng ATP và sinh nhiệt cục bộ. Nếu trương lực cơ mất cân bằng kéo dài, các điểm co thắt cục bộ sẽ hình thành Điểm Cân Kết gây đau lan tỏa dọc theo chuỗi kinh cân."
+  },
+  {
+    "id": "chuong-02",
+    "chapter": "Chương 02",
+    "title": "Cơ Chế Co Cơ Hướng Tâm (Concentric) & Co Cơ Lệch Tâm (Eccentric)",
+    "duration": "15:20",
+    "status": "ready_script",
+    "badge": "Đã hoàn thành Storyboard & Assets",
+    "video_src": "",
+    "summary": "So sánh cơ sinh học giữa hai hình thái co cơ chủ chốt: Co hướng tâm (bụng cơ phình to, sợi cơ rút ngắn, tạo lực chuyển động) và Co lệch tâm (bụng cơ bị kéo dài dưới lực tải, đóng vai trò như phanh hãm bảo vệ khớp). Tại sao co cơ lệch tâm là nguyên nhân hàng đầu gây vi tổn thương và hình thành điểm đau cân mạc.",
+    "micro_shots": [
+      {
+        "time": "00:00 - 05:10",
+        "shot": "Shot 02a: Động học co hướng tâm cơ Nhị đầu",
+        "desc": "Cử động gập khuỷu tay: Cơ Nhị đầu cánh tay co hướng tâm phình to, kéo xương quay nâng lên; cơ Tam đầu giãn dài có kiểm soát."
+      },
+      {
+        "time": "05:10 - 10:20",
+        "shot": "Shot 02b: Co lệch tâm hãm tải & Vi tổn thương Sarcomere",
+        "desc": "Pha hạ tạ chậm: Cơ Nhị đầu buộc phải co lệch tâm để hãm rơi, các sợi Sarcomere chịu lực căng kéo giãn tối đa, nguy cơ rách vi thể Z-disc."
+      },
+      {
+        "time": "10:20 - 15:20",
+        "shot": "Shot 02c: Phác đồ phục hồi & Châm cứu giải phóng áp lực",
+        "desc": "Kỹ thuật châm huyệt Khúc Trì (LI-11) và Thủ Tam Lý (LI-10) giải phóng co thắt gân bám lồi cầu, phục hồi tuần hoàn vi mạch."
+      }
+    ],
+    "transcript": "Trong chương 2, chúng ta đi sâu vào cơ chế co cơ hướng tâm và co cơ lệch tâm. Trong chuyển động gập khuỷu, cơ Nhị đầu cánh tay đóng vai trò chủ vận co hướng tâm, làm ngắn khoảng cách giữa hai đầu bám tận. Ngược lại, trong quá trình hạ vật nặng có kiểm soát, cơ phải co lệch tâm, vừa phát sinh lực hãm vừa bị kéo dài. Lực căng cơ học cực đại tác động trực tiếp lên các dải Z-disc vi thể. Việc nhận diện được pha co cơ lệch tâm giúp bác sĩ lâm sàng giải thích được nguồn gốc các cơn đau âm ỉ mạn tính và chọn lựa huyệt vị điều trị trúng đích."
+  },
+  {
+    "id": "chuong-03",
+    "chapter": "Chương 03",
+    "title": "Hệ Thống Thụ Thể Thần Kinh Gân Golgi (GTO) & Điều Hòa Trương Lực Cơ",
+    "duration": "14:10",
+    "status": "ready_script",
+    "badge": "Đã hoàn thành Storyboard & Assets",
+    "video_src": "",
+    "summary": "Khám phá cấu trúc cảm thụ bản thể tinh vi: Thoi cơ (Muscle Spindle) nhạy cảm với tốc độ kéo dài và Thụ thể gân Golgi (Golgi Tendon Organ - GTO) nhạy cảm với lực căng cơ. Cơ chế phản xạ ức chế tự thân (Autogenic Inhibition) và ứng dụng kỹ thuật châm kích thích GTO để lập tức hạ trương lực cơ co cứng.",
+    "micro_shots": [
+      {
+        "time": "00:00 - 04:30",
+        "shot": "Shot 03a: Định vị vị trí Thụ thể GTO tại ranh giới Cơ - Gân",
+        "desc": "Mô hình 3D ranh giới gân - cơ bắp chân (Musculotendinous Junction) của gân Achilles và gân cơ Tam đầu cánh tay."
+      },
+      {
+        "time": "04:30 - 09:15",
+        "shot": "Shot 03b: Điện thế hoạt động & Cung phản xạ tủy sống",
+        "desc": "Xung thần kinh phát xung từ sợi cảm giác Ib truyền thẳng vào sừng sau tủy sống, kích hoạt neuron trung gian ức chế tế bào vận động Alpha."
+      },
+      {
+        "time": "09:15 - 14:10",
+        "shot": "Shot 03c: Kỹ thuật kích thích huyệt vị giải phóng trương lực",
+        "desc": "Châm vê kim nhẹ nhàng tại huyệt Thừa Sơn (BL-57) và Côn Lôn (BL-60) tạo kích thích cơ học lên GTO, làm giãn cơ bắp chân tức thì."
+      }
+    ],
+    "transcript": "Chương 3 giải mã bí ẩn của thụ thể thần kinh gân Golgi, gọi tắt là GTO. Nằm xen kẽ giữa các bó sợi collagen tại vùng tiếp giáp gân cơ, GTO được ví như chiếc cảm biến áp suất siêu nhạy. Khi lực co cơ đạt ngưỡng giới hạn, các sợi collagen ép chặt vào nhánh tận cùng của sợi thần kinh cảm giác Ib. Tín hiệu truyền về tủy sống sẽ ngay lập tức ức chế xung vận động, khiến cơ thả lỏng nhằm bảo vệ gân không bị rách đứt. Bằng thao tác châm kim chính xác vào vùng chuyển tiếp gân cơ, chúng ta có thể chủ động kích hoạt cơ chế ức chế tự thân này để hóa giải cơn co cứng cơ cấp tính."
+  },
+  {
+    "id": "chuong-04",
+    "chapter": "Chương 04",
+    "title": "Cơ Sinh Học Điểm Cân Kết & Hội Chứng Chèn Ép Khoang Cân Mạc",
+    "duration": "18:30",
+    "status": "in_production",
+    "badge": "Đang tổng hợp tư liệu lâm sàng",
+    "video_src": "",
+    "summary": "Giải phẫu bệnh lý của Điểm Cân Kết (Myofascial Trigger Point): Khủng hoảng năng lượng tế bào (Energy Crisis), tích tụ Axit Lactic, chất P và giảm pH cục bộ. Cơ chế chèn ép các vi mạch máu và nhánh thần kinh bì cảm giác, tạo ra hiện tượng đau lan tỏa (Referred Pain Pattern) đặc trưng của từng nhóm cơ.",
+    "micro_shots": [
+      {
+        "time": "00:00 - 06:00",
+        "shot": "Shot 04a: Vùng đau lan tỏa trên bề mặt cơ thể",
+        "desc": "Bản đồ nhiệt phản chiếu vùng đau quy chiếu từ cơ Thang, cơ Nâng vai và cơ Dưới gai lên vùng đầu mặt và cánh tay."
+      },
+      {
+        "time": "06:00 - 12:00",
+        "shot": "Shot 04b: Cấu trúc mô bệnh học nốt co cứng (Taut Band)",
+        "desc": "Vi thể sợi cơ co rút vĩnh viễn không thể tái nạp Canxi, thiếu máu nuôi dưỡng mô và tạo vòng xoắn bệnh lý Đau - Co cứng - Đau."
+      },
+      {
+        "time": "12:00 - 18:30",
+        "shot": "Shot 04c: Kỹ thuật châm xuyên cân & Kích thích co giật cục bộ (LTR)",
+        "desc": "Mũi kim xuyên qua bao cân mạc vào lõi điểm cân kết tạo phản ứng co rút cục bộ (Local Twitch Response), phá vỡ chu trình co cứng."
+      }
+    ],
+    "transcript": "Trong Chương 4, chúng ta tiếp cận một trong những bệnh lý phổ biến nhất của hệ vận động: Điểm Cân Kết cơ mạc. Tại vùng trung tâm của một dải căng cơ, các đầu mút tận cùng thần kinh tiết ra quá mức Acetylcholine, khiến ion Canxi liên tục giải phóng làm các Sarcomere co thắt liên tục. Sự co rút này bóp nghẹt các mao mạch máu lân cận, cắt đứt nguồn cung oxy và dinh dưỡng. Kỹ thuật châm cứu vi thể chọc trúng tâm điểm sẽ kích hoạt đáp ứng co rút cục bộ, lập tức tái lập dòng máu nuôi dưỡng và loại bỏ các chất gây đau tích tụ."
+  },
+  {
+    "id": "chuong-05",
+    "chapter": "Chương 05",
+    "title": "Kỹ Thuật Châm Cứu Định Vị Giải Phẫu & Tiêu Chuẩn Đắc Khí Y Khoa",
+    "duration": "20:15",
+    "status": "in_production",
+    "badge": "Đang chuẩn bị mô hình 3D",
+    "video_src": "",
+    "summary": "Tiêu chuẩn giải phẫu xác định vị trí huyệt vị theo các mốc xương cố định và rãnh cơ sinh học. Phân tích hiện tượng Đắc Khí (De-Qi) dưới góc nhìn mô học: Sự xoắn vặn của các sợi Collagen quanh thân kim, giải phóng Adenosine giảm đau và điều biến tín hiệu dẫn truyền thần kinh trung ương.",
+    "micro_shots": [
+      {
+        "time": "00:00 - 07:00",
+        "shot": "Shot 05a: Mốc định vị giải phẫu sống (Bony Landmarks)",
+        "desc": "Xác định các mốc định vị mỏm cùng vai, gai xương bả vai, rãnh gian củ và các gai đốt sống C7 - L5."
+      },
+      {
+        "time": "07:00 - 13:30",
+        "shot": "Shot 05b: Tương tác mô học giữa thân kim và sợi Collagen",
+        "desc": "Thao tác vê kim (Twirling) làm các sợi collagen và nguyên bào sợi xoắn chặt quanh kim tạo lực cản cơ học 'kim bị kẹp chặt' (Needle Grasp)."
+      },
+      {
+        "time": "13:30 - 20:15",
+        "shot": "Shot 05c: Cảm giác căng, tức, tê, nặng và dẫn truyền cảm thụ",
+        "desc": "Sợi thần kinh A-delta và C truyền tín hiệu về đồi thị và não bộ, kích thích giải phóng Endorphin nội sinh."
+      }
+    ],
+    "transcript": "Chương 5 mang đến góc nhìn khoa học thực nghiệm về khái niệm Đắc Khí trong châm cứu cổ truyền. Khi mũi kim tiến sâu qua các lớp biểu bì, trung bì và xuyên vào bao cân mạc, thao tác vê kim nhẹ nhàng tạo ra hiện tượng cơ học kỳ diệu: các sợi collagen dạng gel cuốn chặt lấy thân kim thép không gỉ. Sự kéo căng cơ học này truyền tín hiệu cơ - sinh học đến các tế bào lân cận, kích hoạt giải phóng lượng lớn Adenosine - một chất giảm đau tự nhiên cực mạnh, đồng thời điều hòa trương lực hệ thần kinh tự chủ."
+  },
+  {
+    "id": "chuong-06",
+    "chapter": "Chương 06",
+    "title": "Cảnh Báo An Toàn Lâm Sàng: Đỉnh Màng Phổi, Mạch Máu & Thần Kinh Sâu",
+    "duration": "16:40",
+    "status": "in_production",
+    "badge": "Đang chuẩn bị mô hình 3D",
+    "video_src": "",
+    "summary": "Mặt cắt giải phẫu an toàn tại các vùng huyệt vị nguy hiểm cao: Kiên Tỉnh (GB-21) với nguy cơ tràn khí màng phổi, Phong Trì (GB-20) với động mạch đốt sống và hành tủy, Khuyết Bồn (ST-12) với đám rối thần kinh cánh tay. Quy tắc góc châm nghiêng, giới hạn độ sâu tối đa và xử trí tai biến lâm sàng.",
+    "micro_shots": [
+      {
+        "time": "00:00 - 05:30",
+        "shot": "Shot 06a: Mặt cắt 3D vùng Đỉnh màng phổi tại huyệt Kiên Tỉnh (GB-21)",
+        "desc": "Mô phỏng khoảng cách nguy hiểm từ đáy hố cơ Thang đến đỉnh màng phổi (Cupula pleurae) chỉ cách nhau 15 - 20mm."
+      },
+      {
+        "time": "05:30 - 11:00",
+        "shot": "Shot 06b: Động mạch đốt sống và thân não tại huyệt Phong Trì (GB-20)",
+        "desc": "Hướng kim an toàn hướng về phía hốc mắt đối diện, tuyệt đối cấm châm hướng lên trên và vào trong tránh tổn thương hành tủy."
+      },
+      {
+        "time": "11:00 - 16:40",
+        "shot": "Shot 06c: Hướng châm xiên an toàn và quy tắc ngón tay bảo vệ",
+        "desc": "Kỹ thuật nhấc nếp cơ trước khi châm, sử dụng ngón trỏ và ngón cái làm cữ độ sâu để triệt tiêu hoàn toàn rủi ro thủng tạng."
+      }
+    ],
+    "transcript": "An toàn của người bệnh là nguyên tắc tối thượng trong y học. Trong Chương 6, chúng ta xem xét kỹ lưỡng các vùng giải phẫu nguy hiểm mà người thầy thuốc cần phải nằm lòng. Điển hình tại huyệt Kiên Tỉnh, cơ Thang nằm ngay phía trên đỉnh màng phổi. Nếu châm thẳng góc quá sâu, mũi kim có thể chọc thủng màng phổi màng tạng gây tràn khí màng phổi cấp tính đe dọa tính mạng. Bằng cách châm xiên ra ngoài hoặc hướng ra sau với góc châm 45 độ, kết hợp thao tác véo nâng nếp cơ, chúng ta đảm bảo an toàn tuyệt đối 100% trong mọi tình huống thực hành."
+  }
+]

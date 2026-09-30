@@ -14,11 +14,18 @@ export class UIView {
     this._cacheElements();
     this._bindToViewModels();
     this._setupEventListeners();
+    this._initLectures();
   }
 
   _cacheElements() {
     this.els = {
-      // Chuyển Tab 2 Chế độ
+      // Menu Điều Hướng Cấp Cao (Mục 1: 3D & Mục 2: Video)
+      navBtn3D: document.getElementById('nav-btn-3d'),
+      navBtnVideo: document.getElementById('nav-btn-video'),
+      section3DModel: document.getElementById('section-3d-model'),
+      sectionVideoLectures: document.getElementById('section-video-lectures'),
+
+      // Chuyển Tab 2 Chế độ (trong Mục 1: Mô hình 3D)
       tabModeMovement: document.getElementById('tab-mode-movement'),
       tabModeAcupuncture: document.getElementById('tab-mode-acupuncture'),
       mode1Container: document.getElementById('mode-1-container'),
@@ -74,7 +81,26 @@ export class UIView {
 
       btnResetView: document.getElementById('btn-reset-view'),
       btnToggleTheme: document.getElementById('btn-toggle-theme'),
-      loadingOverlay: document.getElementById('loading-overlay')
+      loadingOverlay: document.getElementById('loading-overlay'),
+
+      // Mục 2: Video Player & Danh Sách Bài Giảng Theo Chương
+      videoActiveBadge: document.getElementById('video-active-badge'),
+      videoActiveTitle: document.getElementById('video-active-title'),
+      videoActiveDuration: document.getElementById('video-active-duration'),
+      videoActiveStatus: document.getElementById('video-active-status'),
+      videoScreenContainer: document.getElementById('video-screen-container'),
+      videoPlaceholderScreen: document.getElementById('video-placeholder-screen'),
+      placeholderHeading: document.getElementById('placeholder-heading'),
+      placeholderSub: document.getElementById('placeholder-sub'),
+      btnPlayPlaceholder: document.getElementById('btn-play-placeholder'),
+      ctrlPlayPause: document.getElementById('ctrl-play-pause'),
+      ctrlTimelineProgress: document.getElementById('ctrl-timeline-progress'),
+      ctrlTimeDisplay: document.getElementById('ctrl-time-display'),
+      vtabSummaryText: document.getElementById('vtab-summary-text'),
+      vtabShotsList: document.getElementById('vtab-shots-list'),
+      vtabTranscriptText: document.getElementById('vtab-transcript-text'),
+      playlistItemsList: document.getElementById('playlist-items-list'),
+      playlistSearchInput: document.getElementById('playlist-search-input')
     };
   }
 
@@ -110,7 +136,15 @@ export class UIView {
   }
 
   _setupEventListeners() {
-    // Chuyển Tab 2 Chế độ
+    // Menu Điều Hướng Cấp Cao (Mục 1: Mô Hình 3D vs Mục 2: Video Thuyết Minh Bài Giảng)
+    if (this.els.navBtn3D) {
+      this.els.navBtn3D.addEventListener('click', () => this.switchTopSection('section-3d-model'));
+    }
+    if (this.els.navBtnVideo) {
+      this.els.navBtnVideo.addEventListener('click', () => this.switchTopSection('section-video-lectures'));
+    }
+
+    // Chuyển Tab 2 Chế độ (trong Mục 1)
     if (this.els.tabModeMovement && this.els.tabModeAcupuncture) {
       this.els.tabModeMovement.addEventListener('click', () => this._switchMode('movement'));
       this.els.tabModeAcupuncture.addEventListener('click', () => this._switchMode('acupuncture'));
@@ -247,6 +281,49 @@ export class UIView {
         if (this.sceneVM) this.sceneVM.clearIsolation();
       });
     }
+
+    // === MỤC 2: VIDEO THUYẾT MINH BÀI GIẢNG LISTENERS ===
+    // Chuyển Tab trong khung Video (Tóm tắt / Micro-Shots / Transcript)
+    document.querySelectorAll('.vtab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.vtab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.vtab-content').forEach(c => c.style.display = 'none');
+        btn.classList.add('active');
+        const targetId = btn.getAttribute('data-vtab');
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) targetEl.style.display = 'block';
+      });
+    });
+
+    // Tìm kiếm trong Playlist bài giảng theo chương
+    if (this.els.playlistSearchInput) {
+      this.els.playlistSearchInput.addEventListener('input', (e) => {
+        this.filterPlaylist(e.target.value);
+      });
+    }
+
+    // Nút Play / Pause mô phỏng khung video
+    let isPlaying = false;
+    let playInterval = null;
+    let simulatedProgress = 32;
+    const handleTogglePlay = () => {
+      isPlaying = !isPlaying;
+      if (this.els.ctrlPlayPause) this.els.ctrlPlayPause.textContent = isPlaying ? '⏸' : '▶';
+      if (this.els.btnPlayPlaceholder) {
+        this.els.btnPlayPlaceholder.style.transform = isPlaying ? 'scale(0.92)' : 'scale(1)';
+        this.els.btnPlayPlaceholder.title = isPlaying ? 'Đang phát mô phỏng bài giảng (Nhấn để tạm dừng)' : 'Nhấn để phát video';
+      }
+      if (isPlaying) {
+        playInterval = setInterval(() => {
+          simulatedProgress = (simulatedProgress + 0.5) % 100;
+          if (this.els.ctrlTimelineProgress) this.els.ctrlTimelineProgress.style.width = `${simulatedProgress}%`;
+        }, 400);
+      } else {
+        if (playInterval) clearInterval(playInterval);
+      }
+    };
+    if (this.els.btnPlayPlaceholder) this.els.btnPlayPlaceholder.addEventListener('click', handleTogglePlay);
+    if (this.els.ctrlPlayPause) this.els.ctrlPlayPause.addEventListener('click', handleTogglePlay);
   }
 
   _switchMode(mode) {
@@ -554,5 +631,152 @@ export class UIView {
   _showError(err) {
     if (!err) return;
     alert(err);
+  }
+
+  // ============================================================
+  // MỤC 1 & MỤC 2: ĐIỀU HƯỚNG CẤP CAO & QUẢN LÝ VIDEO BÀI GIẢNG
+  // ============================================================
+
+  /**
+   * Chuyển đổi giữa Mục 1 (Mô hình 3D Hệ Đạo Dẫn) và Mục 2 (Video Thuyết Minh Bài Giảng)
+   */
+  switchTopSection(targetSectionId) {
+    if (targetSectionId === 'section-3d-model') {
+      if (this.els.navBtn3D) this.els.navBtn3D.classList.add('active');
+      if (this.els.navBtnVideo) this.els.navBtnVideo.classList.remove('active');
+      if (this.els.section3DModel) this.els.section3DModel.style.display = 'grid';
+      if (this.els.sectionVideoLectures) this.els.sectionVideoLectures.style.display = 'none';
+
+      // Kích hoạt tính toán lại viewport Three.js sau khi hiện lại canvas
+      if (window.dispatchEvent) {
+        window.dispatchEvent(new Event('resize'));
+      }
+    } else if (targetSectionId === 'section-video-lectures') {
+      if (this.els.navBtn3D) this.els.navBtn3D.classList.remove('active');
+      if (this.els.navBtnVideo) this.els.navBtnVideo.classList.add('active');
+      if (this.els.section3DModel) this.els.section3DModel.style.display = 'none';
+      if (this.els.sectionVideoLectures) this.els.sectionVideoLectures.style.display = 'grid';
+    }
+  }
+
+  /**
+   * Khởi tạo và nạp dữ liệu danh sách bài giảng từ lectures.json
+   */
+  async _initLectures() {
+    try {
+      const res = await fetch('./data/lectures.json?v=5.6');
+      this.lectures = await res.json();
+      this.selectedLectureId = this.lectures.length > 0 ? this.lectures[0].id : null;
+      this._renderPlaylist(this.lectures);
+      if (this.selectedLectureId) {
+        this.selectLecture(this.selectedLectureId);
+      }
+    } catch (e) {
+      console.warn('Chưa nạp được danh mục bài giảng:', e);
+    }
+  }
+
+  /**
+   * Hiển thị danh sách các chương bài giảng lên playlist sidebar
+   */
+  _renderPlaylist(list) {
+    if (!this.els.playlistItemsList) return;
+    this.els.playlistItemsList.innerHTML = '';
+
+    if (!list || list.length === 0) {
+      this.els.playlistItemsList.innerHTML = '<div style="padding: 12px; color: var(--muted); font-size: 0.8rem; text-align: center;">Không tìm thấy bài giảng phù hợp</div>';
+      return;
+    }
+
+    list.forEach(lecture => {
+      const card = document.createElement('div');
+      card.className = `playlist-item-card ${lecture.id === this.selectedLectureId ? 'active' : ''}`;
+      card.setAttribute('data-lecture-id', lecture.id);
+      card.innerHTML = `
+        <div class="playlist-item-top">
+          <span class="playlist-item-chapter">${lecture.chapter}</span>
+          <span class="playlist-item-duration">⏱️ ${lecture.duration}</span>
+        </div>
+        <h4 class="playlist-item-title">${lecture.title}</h4>
+        <span class="playlist-item-badge">🏷️ ${lecture.badge}</span>
+      `;
+      card.addEventListener('click', () => {
+        this.selectLecture(lecture.id);
+      });
+      this.els.playlistItemsList.appendChild(card);
+    });
+  }
+
+  /**
+   * Chọn và tải bài giảng lên khung phát video và các tab chi tiết
+   */
+  selectLecture(id) {
+    if (!this.lectures) return;
+    const lecture = this.lectures.find(l => l.id === id);
+    if (!lecture) return;
+    this.selectedLectureId = id;
+
+    // Cập nhật trạng thái active trong danh sách playlist
+    document.querySelectorAll('.playlist-item-card').forEach(card => {
+      if (card.getAttribute('data-lecture-id') === id) {
+        card.classList.add('active');
+      } else {
+        card.classList.remove('active');
+      }
+    });
+
+    // Cập nhật Header khung Video
+    if (this.els.videoActiveBadge) this.els.videoActiveBadge.textContent = `${lecture.chapter.toUpperCase()} • BÀI GIẢNG CƠ SINH HỌC & ĐẠO DẪN`;
+    if (this.els.videoActiveTitle) this.els.videoActiveTitle.textContent = lecture.title;
+    if (this.els.videoActiveDuration) this.els.videoActiveDuration.textContent = lecture.duration;
+    if (this.els.videoActiveStatus) this.els.videoActiveStatus.textContent = lecture.badge;
+    if (this.els.placeholderHeading) this.els.placeholderHeading.textContent = lecture.title;
+    if (this.els.placeholderSub) this.els.placeholderSub.textContent = `Mô hình 3D Z-Anatomy & Google Flow • Thời lượng ${lecture.duration} • Thuyết minh 100% Tiếng Việt`;
+    if (this.els.ctrlTimeDisplay) this.els.ctrlTimeDisplay.textContent = `00:00 / ${lecture.duration}`;
+
+    // Cập nhật Tab 1: Tóm tắt bài giảng
+    if (this.els.vtabSummaryText) this.els.vtabSummaryText.textContent = lecture.summary;
+
+    // Cập nhật Tab 2: Phân đoạn Micro-Shots
+    if (this.els.vtabShotsList) {
+      this.els.vtabShotsList.innerHTML = '';
+      if (lecture.micro_shots && lecture.micro_shots.length > 0) {
+        lecture.micro_shots.forEach(s => {
+          const item = document.createElement('div');
+          item.className = 'vshot-item';
+          item.innerHTML = `
+            <span class="vshot-time-badge">${s.time}</span>
+            <div class="vshot-details">
+              <span class="vshot-name">${s.shot}</span>
+              <p class="vshot-desc">${s.desc}</p>
+            </div>
+          `;
+          this.els.vtabShotsList.appendChild(item);
+        });
+      }
+    }
+
+    // Cập nhật Tab 3: Transcript thuyết minh
+    if (this.els.vtabTranscriptText) {
+      this.els.vtabTranscriptText.textContent = `"${lecture.transcript}"`;
+    }
+  }
+
+  /**
+   * Lọc danh sách bài giảng theo từ khóa tìm kiếm
+   */
+  filterPlaylist(query) {
+    if (!this.lectures) return;
+    const q = (query || '').toLowerCase().trim();
+    if (!q) {
+      this._renderPlaylist(this.lectures);
+      return;
+    }
+    const filtered = this.lectures.filter(l => 
+      l.title.toLowerCase().includes(q) || 
+      l.chapter.toLowerCase().includes(q) || 
+      l.summary.toLowerCase().includes(q)
+    );
+    this._renderPlaylist(filtered);
   }
 }

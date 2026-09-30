@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hệ Cơ & Thần Kinh 3D — Châm Cứu & Động Học</title>
-  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/theme.css?v=5.6">
   <link rel="icon" href="data:,">
 
   <!-- Three.js via ES Module importmap (Local Bundle 100% Offline & Tốc độ cao) -->
@@ -26,8 +26,26 @@
     <p class="subtitle">Khám phá động học chuyển động, chuỗi cơ cân lâm sàng và định vị huyệt vị châm cứu WHO</p>
   </header>
 
-  <!-- ===================== MAIN LAYOUT ===================== -->
-  <main class="app-layout">
+  <!-- ===================== TOP NAVIGATION MENU (MỤC 1 & MỤC 2) ===================== -->
+  <nav class="top-nav-bar" id="top-nav-bar">
+    <button class="nav-tab-btn active" id="nav-btn-3d" data-section="section-3d-model">
+      <span class="nav-tab-icon">🧬</span>
+      <div class="nav-tab-text">
+        <span class="nav-tab-title">MỤC 1: MÔ HÌNH 3D HỆ ĐẠO DẪN</span>
+        <span class="nav-tab-subtitle">Động học cơ bắp & Trị liệu chuỗi kinh cân lâm sàng</span>
+      </div>
+    </button>
+    <button class="nav-tab-btn" id="nav-btn-video" data-section="section-video-lectures">
+      <span class="nav-tab-icon">🎬</span>
+      <div class="nav-tab-text">
+        <span class="nav-tab-title">MỤC 2: VIDEO THUYẾT MINH BÀI GIẢNG</span>
+        <span class="nav-tab-subtitle">Bài giảng cơ sinh học & Thị phạm lâm sàng theo chương</span>
+      </div>
+    </button>
+  </nav>
+
+  <!-- ===================== SECTION 1: MÔ HÌNH 3D HỆ ĐẠO DẪN ===================== -->
+  <main class="app-layout" id="section-3d-model">
 
     <!-- LEFT: 3D Viewport -->
     <section class="viewport-column">
@@ -266,13 +284,138 @@
     </aside>
   </main>
 
+  <!-- ===================== SECTION 2: VIDEO THUYẾT MINH BÀI GIẢNG ===================== -->
+  <main class="video-lectures-layout" id="section-video-lectures" style="display: none;">
+    <!-- LEFT: Video Player Column -->
+    <section class="video-player-column">
+      <div class="video-player-card">
+        <!-- Active Chapter Title Header -->
+        <div class="video-header-bar">
+          <div class="video-chapter-badge" id="video-active-badge">CHƯƠNG 01 • BÀI GIẢNG CƠ SINH HỌC</div>
+          <h2 class="video-active-title" id="video-active-title">Chuỗi Động Học & Tương Tác Cơ Chủ Vận — Đối Vận</h2>
+          <div class="video-active-meta">
+            <span>⏱️ Thời lượng: <strong id="video-active-duration">12:45</strong></span>
+            <span>🎓 Giảng viên: <strong>Hệ Thống Yếu Lược Châm Cứu Hệ Đạo Dẫn</strong></span>
+            <span>📍 Tình trạng: <span class="badge-status-tag" id="video-active-status">Đã có Storyboard & 3D Assets</span></span>
+          </div>
+        </div>
+
+        <!-- 16:9 Video Canvas / Player Area -->
+        <div class="video-screen-container" id="video-screen-container">
+          <!-- Video Element (Hidden until video file provided) -->
+          <video id="html5-video-player" class="native-video-player" controls style="display: none; width: 100%; height: 100%; border-radius: var(--radius);"></video>
+
+          <!-- Interactive Video Placeholder Graphic -->
+          <div class="video-placeholder-screen" id="video-placeholder-screen">
+            <div class="video-medical-grid-overlay"></div>
+            <div class="video-placeholder-content">
+              <div class="video-play-btn-large" id="btn-play-placeholder" title="Nhấn để mô phỏng phát bài giảng hoặc duyệt kịch bản phân cảnh">
+                <svg viewBox="0 0 24 24" width="38" height="38" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <div class="video-placeholder-tag">KHUNG PHÁT VIDEO CHUYÊN ĐỀ Y KHOA • 4K UHD</div>
+              <h3 class="video-placeholder-heading" id="placeholder-heading">Chuỗi Động Học & Tương Tác Cơ Chủ Vận — Đối Vận</h3>
+              <p class="video-placeholder-sub" id="placeholder-sub">Mô hình diễn họa 3D Unreal Engine 5 kết hợp Google Flow & Veo • Thuyết minh 100% Tiếng Việt</p>
+              <div class="video-badges-row">
+                <span class="vbadge">🎙️ Voice-over Y Khoa Chuẩn</span>
+                <span class="vbadge">📐 Hệ Micro-Shots (a, b, c)</span>
+                <span class="vbadge">🔬 Vi thể Actin - Myosin 3D</span>
+              </div>
+            </div>
+
+            <!-- Video Player Controls Preview Bar -->
+            <div class="video-controls-bar">
+              <button class="ctrl-btn" id="ctrl-play-pause" title="Phát/Tạm dừng">▶</button>
+              <div class="ctrl-timeline-wrapper">
+                <div class="ctrl-timeline-bar">
+                  <div class="ctrl-timeline-progress" id="ctrl-timeline-progress" style="width: 32%;"></div>
+                </div>
+              </div>
+              <span class="ctrl-time-text" id="ctrl-time-display">04:15 / 12:45</span>
+              <div class="ctrl-speed-selector">
+                <span class="speed-btn active">1.0x</span>
+              </div>
+              <button class="ctrl-btn" title="Âm lượng">🔊</button>
+              <button class="ctrl-btn" title="Toàn màn hình">⛶</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Lecture Tabs: Summary, Micro-Shots, Transcript -->
+        <div class="video-tabs-card">
+          <div class="video-tab-nav">
+            <button class="vtab-btn active" data-vtab="tab-vsummary">📝 Tóm Tắt Bài Giảng</button>
+            <button class="vtab-btn" data-vtab="tab-vshots">⏱️ Phân Đoạn Micro-Shots</button>
+            <button class="vtab-btn" data-vtab="tab-vtranscript">📜 Kịch Bản Thuyết Minh</button>
+          </div>
+
+          <!-- Content Tab 1: Summary -->
+          <div class="vtab-content active" id="tab-vsummary">
+            <div class="vtab-text-block">
+              <h4 class="vtab-subheading">💡 Nội dung cốt lõi:</h4>
+              <p id="vtab-summary-text" class="vtab-body-text"></p>
+              <div class="vtab-callout-box">
+                <strong>📌 Chỉ định lâm sàng & Ứng dụng:</strong>
+                <p id="vtab-clinical-note">Hiểu rõ cơ chế co cơ giúp tối ưu hóa góc châm, độ sâu và kỹ thuật đắc khí nhằm hóa giải vòng xoắn co cứng cơ mạn tính.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Tab 2: Micro-Shots -->
+          <div class="vtab-content" id="tab-vshots" style="display: none;">
+            <div class="vtab-shots-list" id="vtab-shots-list">
+              <!-- Rendered dynamically from lectures.json -->
+            </div>
+          </div>
+
+          <!-- Content Tab 3: Transcript -->
+          <div class="vtab-content" id="tab-vtranscript" style="display: none;">
+            <div class="vtab-transcript-container">
+              <div class="vtab-transcript-header">
+                <span>🎙️ Giọng đọc thuyết minh: Nam y khoa • Điềm tĩnh • Tốc độ chuẩn sư phạm</span>
+              </div>
+              <blockquote id="vtab-transcript-text" class="vtab-transcript-quote"></blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT: Chapter Playlist Sidebar Column -->
+    <aside class="video-playlist-column">
+      <div class="playlist-card">
+        <div class="playlist-header">
+          <div class="playlist-title-row">
+            <span class="playlist-icon">📚</span>
+            <h3>DANH MỤC BÀI GIẢNG THEO CHƯƠNG</h3>
+          </div>
+          <p class="playlist-desc">Chọn bài giảng để mở video thuyết minh và kịch bản phân đoạn tương ứng</p>
+          <div class="playlist-search-box">
+            <input type="text" id="playlist-search-input" placeholder="🔍 Tìm kiếm chương hoặc chủ đề..." class="playlist-search-input">
+          </div>
+        </div>
+
+        <div class="playlist-items-list" id="playlist-items-list">
+          <!-- Dynamically populated from lectures.json -->
+        </div>
+
+        <!-- Video Integration Helper Notice -->
+        <div class="playlist-footer-notice">
+          <span class="notice-icon">💡</span>
+          <p>Hệ thống hỗ trợ nạp video MP4, WebM trực tiếp hoặc liên kết bài giảng chất lượng cao. Các file video tương ứng theo chương có thể đặt trực tiếp tại thư mục <code>assets/videos/</code>.</p>
+        </div>
+      </div>
+    </aside>
+  </main>
+
   <!-- Footer -->
   <footer class="app-footer">
     <p>Mô hình 3D: <a href="https://z-anatomy.com" target="_blank">Z-Anatomy</a> (CC BY-SA 4.0) — Tối ưu hóa cho WebGL</p>
     <p>Dữ liệu giải phẫu & châm cứu: Giáo trình ĐHYHN, Netter Anatomy, Terminologia Anatomica (TA2), Yếu Lược Châm Cứu Hệ Đạo Dẫn & WHO Acupuncture Standards</p>
   </footer>
 
-  <!-- App Entry Point (v5.5 cache bust) -->
-  <script type="module" src="app.js?v=5.5"></script>
+  <!-- App Entry Point (v5.6 cache bust) -->
+  <script type="module" src="app.js?v=5.6"></script>
 </body>
 </html>
