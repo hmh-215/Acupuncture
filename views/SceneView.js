@@ -589,7 +589,6 @@ export class SceneView {
         }
 
         meshBox.getCenter(meshCenter);
-        const rawName = (child.name || '').toLowerCase();
         const isRight = rawName.endsWith('.r') || rawName.endsWith('r') || rawName.includes('.r.') || 
                         rawName.includes(' right') || (meshCenter.x < -0.15);
 
