@@ -1,6 +1,6 @@
-import { AppViewModel } from './viewmodels/AppViewModel.js?v=5.5';
-import { SceneView } from './views/SceneView.js?v=5.5';
-import { UIView } from './views/UIView.js?v=5.5';
+import { AppViewModel } from './viewmodels/AppViewModel.js?v=5.6';
+import { SceneView } from './views/SceneView.js?v=5.6';
+import { UIView } from './views/UIView.js?v=5.6';
 
 async function main() {
   console.log('Đang khởi tạo ứng dụng...');
@@ -30,11 +30,18 @@ async function main() {
   }
 
   const urlParams = new URLSearchParams(window.location.search);
+  const sectionParam = urlParams.get('section');
+  const lectureParam = urlParams.get('lecture');
   const modeParam = urlParams.get('mode');
   const chainParam = urlParams.get('chain');
   const movementParam = urlParams.get('movement');
 
-  if (modeParam === 'acupuncture' || chainParam) {
+  if (sectionParam === 'video' || lectureParam) {
+    uiView.switchTopSection('section-video-lectures');
+    if (lectureParam) {
+      uiView.selectLecture(lectureParam);
+    }
+  } else if (modeParam === 'acupuncture' || chainParam) {
     appVM.setMode('acupuncture');
     const tabAcu = document.getElementById('tab-mode-acupuncture');
     if (tabAcu) tabAcu.click();
@@ -49,6 +56,11 @@ async function main() {
     const sel = document.getElementById('movement-select');
     if (sel) sel.value = movementParam;
   }
+
+  // Expose globals for inspection
+  window.appVM = appVM;
+  window.sceneView = sceneView;
+  window.uiView = uiView;
 
   console.log('✅ Ứng dụng 3D Hệ Cơ & Châm Cứu đã sẵn sàng!');
 }

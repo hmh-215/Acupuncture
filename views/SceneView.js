@@ -369,11 +369,12 @@ export class SceneView {
     const upperLimbKeywords = [
       'deltoid', 'biceps brachii', 'triceps brachii', 'brachialis', 'coracobrachialis',
       'brachioradialis', 'pronator', 'supinator', 'flexor carpi', 'extensor carpi',
-      'palmar', 'interossei dorsales manus', 'lumbrical manus', 'antebrachial',
+      'palmar', 'interossei dorsales manus', 'lumbrical manus', 'antebrachial', 'antebrachii',
       'digiti minimi of hand', 'pollicis', 'extensor indicis', 'thenar', 'hypothenar',
-      'median', 'radial', 'ulnar', 'musculocutaneous', 'brachial'
+      'median', 'radial', 'ulnar', 'musculocutaneous', 'brachial', 'cutaneous', 'cutaneus',
+      'forearm', 'interosseous', 'digital', 'arm'
     ];
-    const isUpperLimb = (boxCenter.y >= 7.60) && ((Math.abs(boxCenter.x) >= 1.35) || upperLimbKeywords.some(kw => clean.includes(kw)));
+    const isUpperLimb = (boxCenter.y >= 7.60) && ((Math.abs(boxCenter.x) >= 0.70) || upperLimbKeywords.some(kw => clean.includes(kw)));
 
     if (isUpperLimb) {
       // Cơ thân mình lớn gắn vào ngực/lưng ở lại chest
@@ -512,6 +513,15 @@ export class SceneView {
           oldToNew.set(idx, newIdx);
           // CHUYỂN TOÀN BỘ TỌA ĐỘ ĐỈNH VÀ PHÁP TUYẾN VỀ KHÔNG GIAN THẾ GIỚI CHUẨN (SCENE WORLD SPACE)
           vTemp.set(posAttr.getX(idx), posAttr.getY(idx), posAttr.getZ(idx)).applyMatrix4(mesh.matrixWorld);
+
+          // ĐẢM BẢO KHÔNG CÓ BẤT KỲ ĐỈNH NÀO CỦA CẲNG TAY VƯỢT LÊN TRÊN KHỚP KHUỶU TAY (Y > splitY)
+          // VÀ KHÔNG CÓ ĐỈNH NÀO CỦA CÁNH TAY TRÊN BỊ THÕNG XUỐNG DƯỚI KHỚP KHUỶU TAY (Y < splitY)
+          if (suffix === '_lower') {
+            vTemp.y = Math.min(vTemp.y, splitY);
+          } else if (suffix === '_upper') {
+            vTemp.y = Math.max(vTemp.y, splitY);
+          }
+
           newPositions.push(vTemp.x, vTemp.y, vTemp.z);
           if (normalAttr) {
             nTemp.set(normalAttr.getX(idx), normalAttr.getY(idx), normalAttr.getZ(idx)).transformDirection(mesh.matrixWorld);
@@ -633,8 +643,9 @@ export class SceneView {
 
         // TÁCH DÂY THẦN KINH CHI DÀI: Khớp khuỷu tay (Y = 11.05) & Khớp gối (Y = 5.05)
         if (layerType === 'nervous') {
-          const isArmNerve = (Math.abs(meshCenter.x) >= 1.05) || 
-            ['median', 'radial', 'ulnar', 'musculocutaneous', 'brachial', 'antebrachial', 'palmar', 'digital'].some(k => rawName.includes(k));
+          const isArmNerve = (Math.abs(meshCenter.x) >= 0.70 && meshCenter.y >= 7.60) || 
+            ['median', 'radial', 'ulnar', 'musculocutaneous', 'brachial', 'antebrachial', 'antebrachii', 
+             'palmar', 'digital', 'cutan', 'forearm', 'interosseous', 'axillary'].some(k => rawName.includes(k));
           const isLegNerve = ['sciatic', 'saphenous', 'tibial', 'fibular', 'femoral', 'sural', 'plantar'].some(k => rawName.includes(k));
 
           if (isArmNerve && meshBox.min.y < 11.05 && meshBox.max.y > 11.05) {
@@ -645,6 +656,34 @@ export class SceneView {
             this._splitNerveMeshAtY(child, 5.05, isRight ? 'rightThigh' : 'leftThigh', isRight ? 'rightShin' : 'leftShin', meshData);
             return;
           }
+
+          const segment = this._classifyMeshSegment(child, meshCenter);
+
+          // BẢO VỆ TUYỆT ĐỐI (FAIL-SAFE): Không cho phép bất kỳ dây thần kinh cẳng tay nào có đỉnh vượt lên trên khớp khuỷu (Y > 11.05)
+          // hoặc thần kinh cánh tay bị thõng xuống dưới khớp khuỷu (Y < 11.05)
+          if (isArmNerve) {
+            if ((segment === 'rightForearm' || segment === 'leftForearm') && meshBox.max.y > 11.05) {
+              this._splitNerveMeshAtY(child, 11.05, isRight ? 'rightUpperArm' : 'leftUpperArm', isRight ? 'rightForearm' : 'leftForearm', meshData);
+              return;
+            }
+            if ((segment === 'rightUpperArm' || segment === 'leftUpperArm') && meshBox.min.y < 11.05) {
+              this._splitNerveMeshAtY(child, 11.05, isRight ? 'rightUpperArm' : 'leftUpperArm', isRight ? 'rightForearm' : 'leftForearm', meshData);
+              return;
+            }
+          }
+          if (isLegNerve) {
+            if ((segment === 'rightShin' || segment === 'leftShin') && meshBox.max.y > 5.05) {
+              this._splitNerveMeshAtY(child, 5.05, isRight ? 'rightThigh' : 'leftThigh', isRight ? 'rightShin' : 'leftShin', meshData);
+              return;
+            }
+            if ((segment === 'rightThigh' || segment === 'leftThigh') && meshBox.min.y < 5.05) {
+              this._splitNerveMeshAtY(child, 5.05, isRight ? 'rightThigh' : 'leftThigh', isRight ? 'rightShin' : 'leftShin', meshData);
+              return;
+            }
+          }
+
+          meshData.push({ mesh: child, segment });
+          return;
         }
 
         const segment = this._classifyMeshSegment(child, meshCenter);
