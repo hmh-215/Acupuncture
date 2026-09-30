@@ -365,30 +365,40 @@ export class SceneView {
       return isRight ? 'rightShoulderGirdle' : 'leftShoulderGirdle';
     }
 
-    // 3. CHI TRÊN (CÁNH TAY, CẲNG TAY, BÀN TAY: BẮT BUỘC Y >= 7.60)
+    // 2.5. CẤU TRÚC THÂN MÌNH (LỒNG NGỰC, LƯNG & BỤNG - BẢO VỆ TUYỆT ĐỐI KHÔNG BỊ TAY KÉO THEO)
+    // Đặc trị: Investing abdominal fascia (cân mạc bụng), Pectoral fascia (cân mạc ngực),
+    // Clavipectoral fascia, Thoracolumbar fascia, cơ ngực, cơ bụng, cơ liên sườn...
+    const chestKeywords = [
+      'pectoral', 'clavipectoral', 'latissimus', 'trapezius', 'serratus', 'subclavius',
+      'intercostal', 'thorac', 'costal', 'costo', 'sternal', 'sternum', 'sternalis',
+      'erector spinae', 'iliocostalis', 'longissimus', 'spinalis'
+    ];
+    if (chestKeywords.some(kw => clean.includes(kw))) {
+      return 'chest';
+    }
+
+    const torsoKeywords = [
+      'abdomin', 'obliquus', 'transversalis fascia', 'fascia transversalis',
+      'quadratus lumborum', 'psoas', 'iliopsoas', 'linea alba', 'rectus sheath',
+      'pyramidalis', 'lumbar', 'lumborum'
+    ];
+    if (torsoKeywords.some(kw => clean.includes(kw))) {
+      return 'torso';
+    }
+
+    // 3. CHI TRÊN (CÁNH TAY, CẲNG TAY, BÀN TAY: BẮT BUỘC Y >= 7.60 VÀ |X| >= 1.35 HOẶC TỪ KHÓA ĐẶC THÙ)
     const upperLimbKeywords = [
       'deltoid', 'biceps brachii', 'triceps brachii', 'brachialis', 'coracobrachialis',
       'brachioradialis', 'pronator', 'supinator', 'flexor carpi', 'extensor carpi',
       'palmar', 'interossei dorsales manus', 'lumbrical manus', 'antebrachial', 'antebrachii',
       'digiti minimi of hand', 'pollicis', 'extensor indicis', 'thenar', 'hypothenar',
-      'median', 'radial', 'ulnar', 'musculocutaneous', 'brachial', 'cutaneous', 'cutaneus',
-      'forearm', 'interosseous', 'digital', 'arm'
+      'median', 'radial', 'ulnar', 'musculocutaneous', 'brachial',
+      'antebrachial cutaneous', 'brachial cutaneous',
+      'forearm', 'interosseous', 'digital'
     ];
-    const isUpperLimb = (boxCenter.y >= 7.60) && ((Math.abs(boxCenter.x) >= 0.70) || upperLimbKeywords.some(kw => clean.includes(kw)));
+    const isUpperLimb = (boxCenter.y >= 7.60) && ((Math.abs(boxCenter.x) >= 1.35) || upperLimbKeywords.some(kw => clean.includes(kw)));
 
     if (isUpperLimb) {
-      // Cơ thân mình lớn gắn vào ngực/lưng ở lại chest
-      if (clean.includes('pectoralis major') || clean.includes('pectoralis minor') || 
-          clean.includes('latissimus dorsi') || clean.includes('trapezius') || 
-          clean.includes('serratus anterior') || clean.includes('subclavius') ||
-          clean.includes('erector spinae') || clean.includes('intercostal') || clean.includes('serratus posterior')) {
-        return 'chest';
-      }
-      if (clean.includes('obliquus') || clean.includes('rectus abdominis') || clean.includes('transversus abdominis') || 
-          clean.includes('quadratus lumborum') || clean.includes('psoas') || clean.includes('iliopsoas')) {
-        return 'torso';
-      }
-
       // Khớp khuỷu tay: Y < 11.05 là Cẳng tay & Bàn tay; Y >= 11.05 là Cánh tay trên
       if (boxCenter.y < 11.05) {
         return isRight ? 'rightForearm' : 'leftForearm';
@@ -643,9 +653,13 @@ export class SceneView {
 
         // TÁCH DÂY THẦN KINH CHI DÀI: Khớp khuỷu tay (Y = 11.05) & Khớp gối (Y = 5.05)
         if (layerType === 'nervous') {
-          const isArmNerve = (Math.abs(meshCenter.x) >= 0.70 && meshCenter.y >= 7.60) || 
+          const isTrunkNerve = ['intercostal', 'thoracic', 'subcostal', 'iliohypogastric', 'ilioinguinal', 
+                                'genitofemoral', 'phrenic', 'vagus', 'sympathetic', 'spinal nerve', 
+                                'spinal cord', 'dura', 'cauda'].some(k => rawName.includes(k));
+
+          const isArmNerve = !isTrunkNerve && ((Math.abs(meshCenter.x) >= 1.35 && meshCenter.y >= 7.60) || 
             ['median', 'radial', 'ulnar', 'musculocutaneous', 'brachial', 'antebrachial', 'antebrachii', 
-             'palmar', 'digital', 'cutan', 'forearm', 'interosseous', 'axillary'].some(k => rawName.includes(k));
+             'palmar', 'digital', 'forearm', 'interosseous', 'axillary'].some(k => rawName.includes(k)));
           const isLegNerve = ['sciatic', 'saphenous', 'tibial', 'fibular', 'femoral', 'sural', 'plantar'].some(k => rawName.includes(k));
 
           if (isArmNerve && meshBox.min.y < 11.05 && meshBox.max.y > 11.05) {
@@ -809,7 +823,7 @@ export class SceneView {
 
   async _loadNervousSystemFBX() {
     if (this.isNervousLoaded) return;
-    this._updateLoadingText('Đang nạp & liên kết hệ thần kinh Z-Anatomy (vàng neon)...');
+    this._updateLoadingText('Đang nạp & liên kết hệ thần kinh Z-Anatomy (hồng y khoa)...');
 
     return new Promise((resolve, reject) => {
       const loader = new FBXLoader();
@@ -817,8 +831,8 @@ export class SceneView {
         'assets/models/NervousSystem.fbx',
         (fbx) => {
           const nervousMat = new THREE.MeshPhongMaterial({
-            color: 0xfacc15,
-            emissive: 0xca8a04,
+            color: 0xec4899,
+            emissive: 0xdb2777,
             emissiveIntensity: 0.55,
             transparent: true,
             opacity: this.nervousOpacity,
@@ -1504,8 +1518,8 @@ export class SceneView {
         this.targetRotations.chest.set(-0.08, -0.15, 0);
         this.targetRotations.neck.set(0.08, 0.05, 0);
         this.targetRotations.rightShoulderGirdle.set(0.12, -0.20, -0.15);
-        this.targetRotations.rightUpperArm.set(0.40, -0.75, 0.35);
-        this.targetRotations.rightForearm.set(-1.90, -0.35, 0);
+        this.targetRotations.rightUpperArm.set(0.80, -1.10, 0.70);
+        this.targetRotations.rightForearm.set(2.10, 1.00, 0.60);
         break;
 
       // 7. GIẠNG VAI (Shoulder Abduction) - Phối hợp nhịp bả vai - cánh tay (2:1)
