@@ -3,23 +3,50 @@
     "id": "cervical_trapezius_syndrome",
     "name_vi": "Hội chứng Cổ Vai Gáy (Co cứng Cơ Thang trên & Cơ Nâng vai)",
     "name_en": "Cervicobrachial Syndrome & Upper Trapezius Hypertonicity",
-    "pain_muscles": ["trapezius_upper", "levator_scapulae"],
+    "pain_muscles": [
+      "trapezius_upper",
+      "levator_scapulae"
+    ],
     "myofascial_chain_vi": "Chuỗi Cơ Cân Nông Sau (Superficial Back Line) & Chuỗi Cánh Tay Sau (Deep Back Arm Line)",
     "meridian_chain_vi": "Kinh Cân Thái Dương Bàng Quang, Thiếu Dương Tam Tiêu & Thái Dương Tiểu Trường",
     "biomechanics_vi": "Tư thế đầu đưa ra trước (Forward Head Posture) làm tăng mô-men tải trọng cột sống cổ lên gấp 3-4 lần, gây co rút lệch tâm liên tục ở Cơ Thang phần trên và Cơ Nâng vai, sinh các Điểm Cân Kết (Trigger Points) tại góc trên xương bả vai.",
     "chain_muscles": [
-      { "muscleId": "rhomboid_major", "role": "chain", "note": "Cơ Trám lớn - Kéo giữ xương bả vai" },
-      { "muscleId": "infraspinatus", "role": "chain", "note": "Cơ Dưới gai - Chuỗi đối ứng chóp xoay" },
-      { "muscleId": "deltoid_posterior", "role": "chain", "note": "Cơ Delta sau - Chuỗi truyền lực cánh tay" },
-      { "muscleId": "erector_spinae", "role": "chain", "note": "Cơ Dựng sống cổ - Khóa trục cột sống" },
-      { "muscleId": "pectoralis_major", "role": "antagonist_tight", "note": "Cơ Ngực lớn - Co rút mặt trước gây gù vai" }
+      {
+        "muscleId": "rhomboid_major",
+        "role": "chain",
+        "note": "Cơ Trám lớn - Kéo giữ xương bả vai"
+      },
+      {
+        "muscleId": "infraspinatus",
+        "role": "chain",
+        "note": "Cơ Dưới gai - Chuỗi đối ứng chóp xoay"
+      },
+      {
+        "muscleId": "deltoid_posterior",
+        "role": "chain",
+        "note": "Cơ Delta sau - Chuỗi truyền lực cánh tay"
+      },
+      {
+        "muscleId": "erector_spinae",
+        "role": "chain",
+        "note": "Cơ Dựng sống cổ - Khóa trục cột sống"
+      },
+      {
+        "muscleId": "pectoralis_major",
+        "role": "antagonist_tight",
+        "note": "Cơ Ngực lớn - Co rút mặt trước gây gù vai"
+      }
     ],
     "acupoints": [
       {
         "code": "GB-21",
         "name_vi": "Kiên Tỉnh",
         "name_han": "肩井",
-        "position_3d": { "x": -1.35, "y": 14.1, "z": -0.15 },
+        "position_3d": {
+          "x": -1.35,
+          "y": 14.1,
+          "z": -0.15
+        },
         "location_vi": "Điểm giữa đường nối mỏm gai đốt sống C7 (Đại Chùy) và mỏm cùng vai, ngay trên gờ cao nhất của Cơ Thang.",
         "depth_mm": "10 - 20 mm",
         "direction_vi": "Châm thẳng hoặc nghiêng ra sau, CẤM châm sâu hướng vào trong ngực.",
@@ -30,7 +57,11 @@
         "code": "GB-20",
         "name_vi": "Phong Trì",
         "name_han": "風池",
-        "position_3d": { "x": -0.65, "y": 14.9, "z": -0.65 },
+        "position_3d": {
+          "x": -0.65,
+          "y": 14.9,
+          "z": -0.65
+        },
         "location_vi": "Hõm dưới xương chẩm, bờ ngoài Cơ Thang, bờ trong Cơ Ức đòn chũm.",
         "depth_mm": "15 - 25 mm",
         "direction_vi": "Mũi kim hướng về phía hốc mắt đối diện hoặc chóp mũi.",
@@ -41,7 +72,11 @@
         "code": "SI-11",
         "name_vi": "Thiên Tông",
         "name_han": "天宗",
-        "position_3d": { "x": -1.25, "y": 12.8, "z": -0.75 },
+        "position_3d": {
+          "x": -1.25,
+          "y": 12.8,
+          "z": -0.75
+        },
         "location_vi": "Tại hố dưới gai xương bả vai, trong cơ Dưới gai, tạo thành tam giác đều với hai góc của gai vai.",
         "depth_mm": "12 - 20 mm",
         "direction_vi": "Châm thẳng hoặc xiên, kim chạm bản xương bả vai (thấu cốt pháp).",
@@ -52,7 +87,11 @@
         "code": "BL-11",
         "name_vi": "Đại Trữ",
         "name_han": "大杼",
-        "position_3d": { "x": -0.45, "y": 13.5, "z": -0.70 },
+        "position_3d": {
+          "x": -0.45,
+          "y": 13.5,
+          "z": -0.7
+        },
         "location_vi": "Dưới mỏm gai đốt sống D1 (ngực 1) đo ngang ra 1.5 thốn.",
         "depth_mm": "10 - 15 mm",
         "direction_vi": "Châm xiên chếch 45° hướng về phía cột sống, cấm châm thẳng sâu.",
@@ -62,27 +101,50 @@
     ],
     "treatment_protocol_vi": "Áp dụng kỹ thuật Châm Phân Thứ (châm nhiều hướng trong khối xơ hóa Cơ Thang) kết hợp Tọa Châm tại Kiên Tỉnh để giải phóng áp lực chèn ép nhánh rễ thần kinh phụ (N. accessorius, CN XI)."
   },
-
   "rotator_cuff_impingement": {
     "id": "rotator_cuff_impingement",
     "name_vi": "Hội chứng Chóp Xoay & Viêm Gân Khớp Vai (Cơ Trên gai & Dưới gai)",
     "name_en": "Rotator Cuff Tendinopathy & Subacromial Impingement",
-    "pain_muscles": ["supraspinatus", "infraspinatus", "teres_minor"],
+    "pain_muscles": [
+      "supraspinatus",
+      "infraspinatus",
+      "teres_minor"
+    ],
     "myofascial_chain_vi": "Chuỗi Cánh Tay Sau & Bên (Posterior Arm Lines)",
     "meridian_chain_vi": "Kinh Cân Dương Minh Đại Trường, Thiếu Dương Tam Tiêu, Thái Dương Tiểu Trường",
     "biomechanics_vi": "Gân cơ Trên gai chui qua khoang hẹp dưới mỏm cùng vai (Subacromial space). Khi giạng vai, đầu xương cánh tay trượt lên ép gân vào vòm cùng vai - quạ, gây rách vi thể và viêm điểm bám gân cơ chóp xoay.",
     "chain_muscles": [
-      { "muscleId": "deltoid_middle", "role": "chain", "note": "Cơ Delta giữa - Chủ vận giạng vai tạo lực nâng" },
-      { "muscleId": "subscapularis", "role": "chain", "note": "Cơ Dưới vai - Cân bằng chóp xoay mặt trước" },
-      { "muscleId": "biceps_brachii", "role": "chain", "note": "Đầu dài cơ Nhị đầu - Chạy qua rãnh gian củ" },
-      { "muscleId": "latissimus_dorsi", "role": "antagonist_tight", "note": "Cơ Lưng rộng - Kéo hạ và xoay trong xương cánh tay" }
+      {
+        "muscleId": "deltoid_middle",
+        "role": "chain",
+        "note": "Cơ Delta giữa - Chủ vận giạng vai tạo lực nâng"
+      },
+      {
+        "muscleId": "subscapularis",
+        "role": "chain",
+        "note": "Cơ Dưới vai - Cân bằng chóp xoay mặt trước"
+      },
+      {
+        "muscleId": "biceps_brachii",
+        "role": "chain",
+        "note": "Đầu dài cơ Nhị đầu - Chạy qua rãnh gian củ"
+      },
+      {
+        "muscleId": "latissimus_dorsi",
+        "role": "antagonist_tight",
+        "note": "Cơ Lưng rộng - Kéo hạ và xoay trong xương cánh tay"
+      }
     ],
     "acupoints": [
       {
         "code": "LI-15",
         "name_vi": "Kiên Ngung",
         "name_han": "肩髃",
-        "position_3d": { "x": -1.95, "y": 13.9, "z": 0.10 },
+        "position_3d": {
+          "x": -1.95,
+          "y": 13.9,
+          "z": 0.1
+        },
         "location_vi": "Tại hõm trước - ngoài mỏm cùng vai khi cánh tay giạng 90°.",
         "depth_mm": "15 - 25 mm",
         "direction_vi": "Châm thẳng chếch nhẹ xuống dưới hướng vào khớp vai.",
@@ -93,7 +155,11 @@
         "code": "TE-14",
         "name_vi": "Kiên Liêu",
         "name_han": "肩髎",
-        "position_3d": { "x": -1.95, "y": 13.85, "z": -0.35 },
+        "position_3d": {
+          "x": -1.95,
+          "y": 13.85,
+          "z": -0.35
+        },
         "location_vi": "Tại hõm sau - ngoài mỏm cùng vai khi cánh tay giạng 90°.",
         "depth_mm": "15 - 25 mm",
         "direction_vi": "Châm thẳng hoặc hướng kim vào khe khớp vai.",
@@ -104,7 +170,11 @@
         "code": "SI-9",
         "name_vi": "Kiên Trinh",
         "name_han": "肩貞",
-        "position_3d": { "x": -1.65, "y": 12.7, "z": -0.65 },
+        "position_3d": {
+          "x": -1.65,
+          "y": 12.7,
+          "z": -0.65
+        },
         "location_vi": "Phía sau khớp vai, từ nếp gấp nách sau đo thẳng lên 1 thốn.",
         "depth_mm": "15 - 25 mm",
         "direction_vi": "Châm thẳng vào bờ sau cơ delta và cơ tròn lớn.",
@@ -115,7 +185,11 @@
         "code": "LI-11",
         "name_vi": "Khúc Trì",
         "name_han": "曲池",
-        "position_3d": { "x": -2.25, "y": 10.6, "z": 0.10 },
+        "position_3d": {
+          "x": -2.25,
+          "y": 10.6,
+          "z": 0.1
+        },
         "location_vi": "Tại điểm giữa nếp gấp khuỷu tay và lồi cầu ngoài xương cánh tay khi co khuỷu vuông góc.",
         "depth_mm": "15 - 25 mm",
         "direction_vi": "Châm thẳng.",
@@ -125,27 +199,50 @@
     ],
     "treatment_protocol_vi": "Sử dụng kỹ thuật Thấu Thích Pháp (Châm Kiên Ngung thấu Tí Nhu hoặc Kiên Liêu thấu Cực Tuyền) kết hợp Động Châm: lưu kim và yêu cầu bệnh nhân chủ động nâng xoay vai nhẹ nhàng để giải dính bao khớp."
   },
-
   "sciatica_piriformis_syndrome": {
     "id": "sciatica_piriformis_syndrome",
     "name_vi": "Hội chứng Cơ Hình Lê & Đau Thần Kinh Tọa (Piriformis & Sciatica)",
     "name_en": "Piriformis Syndrome & Sciatic Nerve Compression",
-    "pain_muscles": ["piriformis", "gluteus_maximus", "gluteus_medius"],
+    "pain_muscles": [
+      "piriformis",
+      "gluteus_maximus",
+      "gluteus_medius"
+    ],
     "myofascial_chain_vi": "Chuỗi Cơ Cân Nông Sau (Superficial Back Line) & Chuỗi Bên (Lateral Line)",
     "meridian_chain_vi": "Kinh Cân Thái Dương Bàng Quang & Thiếu Dương Đởm",
     "biomechanics_vi": "Cơ Hình lê bị co thắt phì đại chèn ép trực tiếp lên Dây thần kinh Tọa (N. ischiadicus) chui qua khuyết ngồi lớn, gây đau buốt dọc từ mông lan xuống mặt sau đùi, khoeo chân và bàn chân.",
     "chain_muscles": [
-      { "muscleId": "biceps_femoris", "role": "chain", "note": "Cơ Nhị đầu đùi - Dẫn truyền dọc dây thần kinh tọa" },
-      { "muscleId": "gastrocnemius", "role": "chain", "note": "Cơ Bụng chân - Căng tức cẳng chân sau" },
-      { "muscleId": "erector_spinae", "role": "chain", "note": "Cơ Dựng sống thắt lưng - Co cứng bù trừ lệch khung chậu" },
-      { "muscleId": "iliopsoas", "role": "antagonist_tight", "note": "Cơ Thắt lưng chậu - Kéo nghiêng chậu trước" }
+      {
+        "muscleId": "biceps_femoris",
+        "role": "chain",
+        "note": "Cơ Nhị đầu đùi - Dẫn truyền dọc dây thần kinh tọa"
+      },
+      {
+        "muscleId": "gastrocnemius",
+        "role": "chain",
+        "note": "Cơ Bụng chân - Căng tức cẳng chân sau"
+      },
+      {
+        "muscleId": "erector_spinae",
+        "role": "chain",
+        "note": "Cơ Dựng sống thắt lưng - Co cứng bù trừ lệch khung chậu"
+      },
+      {
+        "muscleId": "iliopsoas",
+        "role": "antagonist_tight",
+        "note": "Cơ Thắt lưng chậu - Kéo nghiêng chậu trước"
+      }
     ],
     "acupoints": [
       {
         "code": "GB-30",
         "name_vi": "Hoàn Khiêu",
         "name_han": "環跳",
-        "position_3d": { "x": -1.25, "y": 7.9, "z": -0.35 },
+        "position_3d": {
+          "x": -1.25,
+          "y": 7.9,
+          "z": -0.35
+        },
         "location_vi": "Nằm nghiêng co chân, điểm nối 1/3 ngoài và 2/3 trong của đường nối từ mấu chuyển lớn xương đùi đến mỏm gai đốt sống cùng 4.",
         "depth_mm": "50 - 75 mm (Kim dài số 3-4 thốn)",
         "direction_vi": "Châm thẳng hơi chếch vào trong và xuống dưới, xuyên qua cơ mông lớn chạm đến bờ cơ hình lê.",
@@ -156,7 +253,11 @@
         "code": "BL-54",
         "name_vi": "Trật Biên",
         "name_han": "秩邊",
-        "position_3d": { "x": -0.85, "y": 7.8, "z": -0.45 },
+        "position_3d": {
+          "x": -0.85,
+          "y": 7.8,
+          "z": -0.45
+        },
         "location_vi": "Ngang mỏm gai đốt sống cùng 4 (S4) đo ngang ra 3 thốn.",
         "depth_mm": "40 - 60 mm",
         "direction_vi": "Châm thẳng hoặc hơi nghiêng ra ngoài.",
@@ -167,7 +268,11 @@
         "code": "BL-40",
         "name_vi": "Ủy Trung",
         "name_han": "委中",
-        "position_3d": { "x": -1.15, "y": 4.6, "z": -0.35 },
+        "position_3d": {
+          "x": -1.15,
+          "y": 4.6,
+          "z": -0.35
+        },
         "location_vi": "Chính giữa nếp gấp khoeo chân, giữa gân cơ nhị đầu đùi và gân cơ bán mạc.",
         "depth_mm": "15 - 25 mm",
         "direction_vi": "Châm thẳng, hoặc chích nặn máu tĩnh mạch khoeo bằng kim tam lăng.",
@@ -178,7 +283,11 @@
         "code": "BL-60",
         "name_vi": "Côn Lôn",
         "name_han": "崑崙",
-        "position_3d": { "x": -1.05, "y": 0.8, "z": -0.15 },
+        "position_3d": {
+          "x": -1.05,
+          "y": 0.8,
+          "z": -0.15
+        },
         "location_vi": "Hõm giữa đỉnh mắt cá ngoài và bờ ngoài gân gót (Achilles).",
         "depth_mm": "10 - 15 mm",
         "direction_vi": "Châm thẳng hướng về phía mắt cá trong (thấu Thái Khê).",
@@ -188,27 +297,48 @@
     ],
     "treatment_protocol_vi": "Áp dụng kỹ thuật Tọa Châm kim sâu 60mm tại Hoàn Khiêu kết hợp Ôn Châm (gắn ngải cứu lên đốc kim) để trừ hàn thấp kinh lạc, giãn mềm cơ hình lê giải phóng dây thần kinh tọa."
   },
-
   "lumbar_erector_spinae_strain": {
     "id": "lumbar_erector_spinae_strain",
     "name_vi": "Đau Thắt Lưng Cấp & Co Cứng Cơ Dựng Sống (Lumbar Muscle Strain)",
     "name_en": "Acute Lumbar Spasm & Erector Spinae Strain",
-    "pain_muscles": ["erector_spinae"],
+    "pain_muscles": [
+      "erector_spinae"
+    ],
     "myofascial_chain_vi": "Chuỗi Cơ Cân Nông Sau (Superficial Back Line)",
     "meridian_chain_vi": "Kinh Cân Thái Dương Bàng Quang & Mạch Đốc",
     "biomechanics_vi": "Mất cân bằng giữa cơ dựng sống thắt lưng (bị kéo căng quá mức) và nhóm cơ lõi bụng (Core: Cơ ngang bụng, Cơ thẳng bụng yếu), dẫn đến co cứng bảo vệ (Protective Spasm) khóa cứng khớp liên mấu đốt sống L4-L5.",
     "chain_muscles": [
-      { "muscleId": "gluteus_maximus", "role": "chain", "note": "Cơ Mông lớn - Điểm neo chuỗi nông sau" },
-      { "muscleId": "latissimus_dorsi", "role": "chain", "note": "Cơ Lưng rộng - Liên kết cân ngực thắt lưng" },
-      { "muscleId": "rectus_abdominis", "role": "antagonist_tight", "note": "Cơ Bụng - Cơ đối vận kiểm soát độ nghiêng chậu" },
-      { "muscleId": "oblique_externus", "role": "chain", "note": "Cơ Chéo bụng ngoài - Ổn định xoay lồng ngực" }
+      {
+        "muscleId": "gluteus_maximus",
+        "role": "chain",
+        "note": "Cơ Mông lớn - Điểm neo chuỗi nông sau"
+      },
+      {
+        "muscleId": "latissimus_dorsi",
+        "role": "chain",
+        "note": "Cơ Lưng rộng - Liên kết cân ngực thắt lưng"
+      },
+      {
+        "muscleId": "rectus_abdominis",
+        "role": "antagonist_tight",
+        "note": "Cơ Bụng - Cơ đối vận kiểm soát độ nghiêng chậu"
+      },
+      {
+        "muscleId": "oblique_externus",
+        "role": "chain",
+        "note": "Cơ Chéo bụng ngoài - Ổn định xoay lồng ngực"
+      }
     ],
     "acupoints": [
       {
         "code": "BL-23",
         "name_vi": "Thận Du",
         "name_han": "腎兪",
-        "position_3d": { "x": -0.55, "y": 9.4, "z": -0.65 },
+        "position_3d": {
+          "x": -0.55,
+          "y": 9.4,
+          "z": -0.65
+        },
         "location_vi": "Dưới mỏm gai đốt sống thắt lưng 2 (L2) đo ngang ra 1.5 thốn, trong khối Cơ Dựng Sống.",
         "depth_mm": "20 - 30 mm",
         "direction_vi": "Châm thẳng hoặc hơi nghiêng về phía thân đốt sống.",
@@ -219,7 +349,11 @@
         "code": "BL-25",
         "name_vi": "Đại Trường Du",
         "name_han": "大腸兪",
-        "position_3d": { "x": -0.55, "y": 8.6, "z": -0.60 },
+        "position_3d": {
+          "x": -0.55,
+          "y": 8.6,
+          "z": -0.6
+        },
         "location_vi": "Dưới mỏm gai đốt sống thắt lưng 4 (L4, ngang mào chậu) đo ngang ra 1.5 thốn.",
         "depth_mm": "25 - 35 mm",
         "direction_vi": "Châm thẳng.",
@@ -230,7 +364,11 @@
         "code": "EX-B2",
         "name_vi": "Hoa Đà Giáp Tích (L2-L5)",
         "name_han": "華佗夾脊",
-        "position_3d": { "x": -0.25, "y": 9.0, "z": -0.62 },
+        "position_3d": {
+          "x": -0.25,
+          "y": 9.0,
+          "z": -0.62
+        },
         "location_vi": "Dưới mỗi mỏm gai đốt sống thắt lưng đo ngang ra 0.5 thốn, ngay sát rãnh gian mỏm gai.",
         "depth_mm": "20 - 30 mm",
         "direction_vi": "Châm thẳng hoặc hơi nghiêng nhẹ hướng vào thân đốt sống.",
@@ -240,26 +378,43 @@
     ],
     "treatment_protocol_vi": "Châm tả nhóm huyệt Hoa Đà Giáp Tích đoạn L3-L5 kết hợp cứu ngải tại Thận Du, kết hợp châm viễn đạo Ủy Trung (BL-40) để dỡ bỏ co cứng cơ thắt lưng theo nguyên lý 'Yêu bối Ủy Trung cầu'."
   },
-
   "carpal_tunnel_flexor_strain": {
     "id": "carpal_tunnel_flexor_strain",
     "name_vi": "Hội chứng Ống Cổ Tay & Co Cứng Gân Gập Cẳng Tay",
     "name_en": "Carpal Tunnel Syndrome & Forearm Flexor Hypertonicity",
-    "pain_muscles": ["brachioradialis"],
+    "pain_muscles": [
+      "brachioradialis"
+    ],
     "myofascial_chain_vi": "Chuỗi Cánh Tay Trước Nông & Sâu (Front Arm Lines)",
     "meridian_chain_vi": "Kinh Cân Thái Âm Phế, Quyết Âm Tâm Bào & Thiếu Âm Tâm",
     "biomechanics_vi": "Sử dụng bàn phím hoặc cầm nắm lặp đi lặp lại làm tăng áp lực khoang ống cổ tay lên gấp 3 lần, gân gập ngón bị viêm bao gân chèn ép Dây thần kinh Giữa (N. medianus).",
     "chain_muscles": [
-      { "muscleId": "biceps_brachii", "role": "chain", "note": "Cơ Nhị đầu cánh tay - Cân cơ nhị đầu hòa vào mạc cẳng tay" },
-      { "muscleId": "coracobrachialis", "role": "chain", "note": "Cơ Quạ cánh tay - Gốc bám mỏm quạ" },
-      { "muscleId": "pectoralis_major", "role": "chain", "note": "Cơ Ngực lớn - Đầu chuỗi cánh tay trước" }
+      {
+        "muscleId": "biceps_brachii",
+        "role": "chain",
+        "note": "Cơ Nhị đầu cánh tay - Cân cơ nhị đầu hòa vào mạc cẳng tay"
+      },
+      {
+        "muscleId": "coracobrachialis",
+        "role": "chain",
+        "note": "Cơ Quạ cánh tay - Gốc bám mỏm quạ"
+      },
+      {
+        "muscleId": "pectoralis_major",
+        "role": "chain",
+        "note": "Cơ Ngực lớn - Đầu chuỗi cánh tay trước"
+      }
     ],
     "acupoints": [
       {
         "code": "PC-7",
         "name_vi": "Đại Lăng",
         "name_han": "大陵",
-        "position_3d": { "x": -2.35, "y": 8.1, "z": 0.05 },
+        "position_3d": {
+          "x": -2.35,
+          "y": 8.1,
+          "z": 0.05
+        },
         "location_vi": "Chính giữa nếp gấp xa nhất cổ tay, giữa gân cơ gan tay lớn và gân cơ gấp chung nông các ngón.",
         "depth_mm": "8 - 12 mm",
         "direction_vi": "Châm thẳng hoặc luồn kim dưới dây chằng vòng cổ tay hướng vào ống cổ tay.",
@@ -270,7 +425,11 @@
         "code": "PC-6",
         "name_vi": "Nội Quan",
         "name_han": "內關",
-        "position_3d": { "x": -2.32, "y": 8.7, "z": 0.06 },
+        "position_3d": {
+          "x": -2.32,
+          "y": 8.7,
+          "z": 0.06
+        },
         "location_vi": "Từ nếp gấp cổ tay đo lên 2 thốn, giữa hai gân cơ gan tay dài và gấp cổ tay quay.",
         "depth_mm": "10 - 15 mm",
         "direction_vi": "Châm thẳng hoặc thấu Ngoại Quan (TE-5).",
@@ -281,7 +440,11 @@
         "code": "LI-4",
         "name_vi": "Hợp Cốc",
         "name_han": "合谷",
-        "position_3d": { "x": -2.45, "y": 7.4, "z": 0.12 },
+        "position_3d": {
+          "x": -2.45,
+          "y": 7.4,
+          "z": 0.12
+        },
         "location_vi": "Trên mu bàn tay, giữa xương bàn ngón 1 và 2, tại điểm lồi cao nhất của cơ gian cốt mu tay 1 khi khép ngón cái sát ngón trỏ.",
         "depth_mm": "12 - 20 mm",
         "direction_vi": "Châm thẳng hoặc hơi nghiêng về phía lòng bàn tay (thấu Lao Cung).",
@@ -291,26 +454,43 @@
     ],
     "treatment_protocol_vi": "Áp dụng kỹ thuật Luồn Kim Dưới Mạc (thấu thích pháp qua ống cổ tay) kết hợp bấm huyệt mở khoang cân mạc cẳng tay trước."
   },
-
   "knee_quadriceps_patellofemoral": {
     "id": "knee_quadriceps_patellofemoral",
     "name_vi": "Đau Mặt Trước Gối & Co Rút Cơ Tứ Đầu Đùi (Patellofemoral Pain)",
     "name_en": "Patellofemoral Pain Syndrome & Quadriceps Tightness",
-    "pain_muscles": ["rectus_femoris"],
+    "pain_muscles": [
+      "rectus_femoris"
+    ],
     "myofascial_chain_vi": "Chuỗi Cơ Cân Nông Trước (Superficial Front Line)",
     "meridian_chain_vi": "Kinh Cân Dương Minh Vị & Thái Âm Tỳ",
     "biomechanics_vi": "Cơ Thẳng đùi co rút kéo xương bánh chè tì đè mạnh vào rãnh ròng rọc xương đùi, gây thoái hóa mặt sau sụn bánh chè và đau nhức khi leo cầu thang hoặc ngồi xổm.",
     "chain_muscles": [
-      { "muscleId": "tibialis_anterior", "role": "chain", "note": "Cơ Chày trước - Nối tiếp chuỗi trước xuống bàn chân" },
-      { "muscleId": "iliopsoas", "role": "chain", "note": "Cơ Thắt lưng chậu - Gốc bám thắt lưng cùng" },
-      { "muscleId": "gluteus_maximus", "role": "antagonist_tight", "note": "Cơ Mông lớn - Cơ đối vận duỗi háng bị ức chế" }
+      {
+        "muscleId": "tibialis_anterior",
+        "role": "chain",
+        "note": "Cơ Chày trước - Nối tiếp chuỗi trước xuống bàn chân"
+      },
+      {
+        "muscleId": "iliopsoas",
+        "role": "chain",
+        "note": "Cơ Thắt lưng chậu - Gốc bám thắt lưng cùng"
+      },
+      {
+        "muscleId": "gluteus_maximus",
+        "role": "antagonist_tight",
+        "note": "Cơ Mông lớn - Cơ đối vận duỗi háng bị ức chế"
+      }
     ],
     "acupoints": [
       {
         "code": "ST-34",
         "name_vi": "Lương Khâu",
         "name_han": "梁丘",
-        "position_3d": { "x": -1.25, "y": 5.6, "z": 0.25 },
+        "position_3d": {
+          "x": -1.25,
+          "y": 5.6,
+          "z": 0.25
+        },
         "location_vi": "Bờ trên ngoài xương bánh chè đo thẳng lên 2 thốn, trong rãnh giữa cơ thẳng đùi và cơ rộng ngoài.",
         "depth_mm": "15 - 25 mm",
         "direction_vi": "Châm thẳng.",
@@ -321,7 +501,11 @@
         "code": "ST-35",
         "name_vi": "Độc Tỵ",
         "name_han": "犢鼻",
-        "position_3d": { "x": -1.25, "y": 4.8, "z": 0.28 },
+        "position_3d": {
+          "x": -1.25,
+          "y": 4.8,
+          "z": 0.28
+        },
         "location_vi": "Gập gối vuông góc, tại hõm dưới ngoài xương bánh chè (ngoài dây chằng bánh chè).",
         "depth_mm": "15 - 25 mm",
         "direction_vi": "Châm xiên hướng mũi kim vào giữa khớp gối.",
@@ -332,7 +516,11 @@
         "code": "ST-36",
         "name_vi": "Túc Tam Lý",
         "name_han": "足三里",
-        "position_3d": { "x": -1.28, "y": 3.9, "z": 0.22 },
+        "position_3d": {
+          "x": -1.28,
+          "y": 3.9,
+          "z": 0.22
+        },
         "location_vi": "Dưới Độc Tỵ đo thẳng xuống 3 thốn, cách mào chày 1 khoát ngón tay về phía ngoài (trong Cơ Chày Trước).",
         "depth_mm": "20 - 30 mm",
         "direction_vi": "Châm thẳng.",
@@ -343,7 +531,11 @@
         "code": "SP-10",
         "name_vi": "Huyết Hải",
         "name_han": "血海",
-        "position_3d": { "x": -0.85, "y": 5.6, "z": 0.25 },
+        "position_3d": {
+          "x": -0.85,
+          "y": 5.6,
+          "z": 0.25
+        },
         "location_vi": "Bờ trên trong xương bánh chè đo lên 2 thốn, trong khối cơ rộng trong.",
         "depth_mm": "15 - 25 mm",
         "direction_vi": "Châm thẳng.",
@@ -357,22 +549,46 @@
     "id": "daodan_hand_behind_back_up",
     "name_vi": "Hội chứng Kẹt Tay Ra Sau Lưng Chạm Gáy (Tái Lập Thế Xoay & Ngửa Đạo Dẫn)",
     "name_en": "Dao Dan: Hand-Behind-Back & Up Movement Restriction",
-    "pain_muscles": ["subscapularis", "pectoralis_major", "deltoid_posterior"],
+    "pain_muscles": [
+      "subscapularis",
+      "pectoralis_major",
+      "deltoid_posterior"
+    ],
     "myofascial_chain_vi": "Chuỗi Cơ Cân Cánh Tay Nông Trước (SFAL) & Chuỗi Cơ Cân Cánh Tay Sâu Sau (DBAL)",
     "meridian_chain_vi": "Kinh Cân Thủ Thái Âm Phế, Thủ Dương Minh Đại Trường & Thủ Thái Dương Tiểu Trường",
     "biomechanics_vi": "Trích từ Chương 3 'Yếu Lược Châm Cứu Hệ Đạo Dẫn': Vị trí đau ở mặt trước vai thực chất là nạn nhân; nguyên nhân do co cứng cơ ngực lớn và cơ dưới vai khóa chặt xương bả vai ở thế xoay trong và gù ngực (mất thế ngửa D4-D8). Khi cố với tay lên gáy, mấu chuyển cánh tay va chạm vào mỏm cùng vai gây rách vi thể gân chóp xoay.",
     "chain_muscles": [
-      { "muscleId": "rhomboid_major", "role": "chain", "note": "Cơ Trám lớn - Đồng vận kéo xương bả vai áp sát cột sống" },
-      { "muscleId": "levator_scapulae", "role": "chain", "note": "Cơ Nâng vai - Tham gia nâng góc trên bả vai" },
-      { "muscleId": "erector_spinae", "role": "chain", "note": "Cơ Dựng sống ngực - Mở thế ngửa lồng ngực D4-D8" },
-      { "muscleId": "pectoralis_minor", "role": "antagonist_tight", "note": "Cơ Ngực bé - Kìm giữ mỏm quạ cắm về phía trước" }
+      {
+        "muscleId": "rhomboid_major",
+        "role": "chain",
+        "note": "Cơ Trám lớn - Đồng vận kéo xương bả vai áp sát cột sống"
+      },
+      {
+        "muscleId": "levator_scapulae",
+        "role": "chain",
+        "note": "Cơ Nâng vai - Tham gia nâng góc trên bả vai"
+      },
+      {
+        "muscleId": "erector_spinae",
+        "role": "chain",
+        "note": "Cơ Dựng sống ngực - Mở thế ngửa lồng ngực D4-D8"
+      },
+      {
+        "muscleId": "pectoralis_minor",
+        "role": "antagonist_tight",
+        "note": "Cơ Ngực bé - Kìm giữ mỏm quạ cắm về phía trước"
+      }
     ],
     "acupoints": [
       {
         "code": "SI-9",
         "name_vi": "Kiên Trinh",
         "name_han": "肩貞",
-        "position_3d": { "x": -1.55, "y": 13.2, "z": -0.55 },
+        "position_3d": {
+          "x": -1.55,
+          "y": 13.2,
+          "z": -0.55
+        },
         "location_vi": "Phía sau dưới khớp vai, từ nếp gấp nách sau đo thẳng lên 1 thốn, bờ sau cơ Delta.",
         "depth_mm": "15 - 25 mm",
         "direction_vi": "Châm thẳng hoặc hơi xiên lên trên.",
@@ -383,7 +599,11 @@
         "code": "SI-10",
         "name_vi": "Nhu Du",
         "name_han": "臑俞",
-        "position_3d": { "x": -1.60, "y": 13.9, "z": -0.60 },
+        "position_3d": {
+          "x": -1.6,
+          "y": 13.9,
+          "z": -0.6
+        },
         "location_vi": "Khi tay buông xuôi, thẳng trên nếp nách sau đo lên, ngay dưới gờ gai xương bả vai.",
         "depth_mm": "15 - 20 mm",
         "direction_vi": "Châm thẳng.",
@@ -394,7 +614,11 @@
         "code": "LU-1",
         "name_vi": "Trung Phủ",
         "name_han": "中府",
-        "position_3d": { "x": -1.15, "y": 13.6, "z": 0.35 },
+        "position_3d": {
+          "x": -1.15,
+          "y": 13.6,
+          "z": 0.35
+        },
         "location_vi": "Ở khoang gian sườn 1, dưới huyệt Vân Môn 1 thốn, cách đường giữa ngực 6 thốn.",
         "depth_mm": "10 - 15 mm",
         "direction_vi": "Châm xiên hướng ra ngoài hoặc chếch lên trên, TUYỆT ĐỐI CẤM châm thẳng sâu vào trong ngực.",
@@ -405,7 +629,11 @@
         "code": "BL-13",
         "name_vi": "Phế Du",
         "name_han": "肺俞",
-        "position_3d": { "x": -0.45, "y": 13.0, "z": -0.70 },
+        "position_3d": {
+          "x": -0.45,
+          "y": 13.0,
+          "z": -0.7
+        },
         "location_vi": "Dưới mỏm gai đốt sống ngực D3 đo ngang ra 1.5 thốn.",
         "depth_mm": "10 - 15 mm",
         "direction_vi": "Châm xiên 45° hướng về phía cột sống.",
@@ -419,22 +647,46 @@
     "id": "daodan_archer_pull_chest_open",
     "name_vi": "Thế Đạo Dẫn Bắn Cung (Khai Thông Kinh Cân Thủ Thái Âm Phế & Mở Giằng Giữ)",
     "name_en": "Dao Dan: Archer Draw Lung Meridian Opening Protocol",
-    "pain_muscles": ["pectoralis_minor", "biceps_brachii", "brachialis"],
+    "pain_muscles": [
+      "pectoralis_minor",
+      "biceps_brachii",
+      "brachialis"
+    ],
     "myofascial_chain_vi": "Chuỗi Cơ Cân Cánh Tay Trước Sâu (Deep Front Arm Line - DFAL)",
     "meridian_chain_vi": "Kinh Cân Thủ Thái Âm Phế & Thủ Dương Minh Đại Trường",
     "biomechanics_vi": "Trích từ Chương 3 & 4 'Yếu Lược Châm Cứu Hệ Đạo Dẫn': Thói quen ngồi gù lưng khép vai tạo phản xạ co rút mạn tính ở dải cân mạc từ cơ ngực bé qua cơ nhị đầu đến bờ quay cẳng tay. Thế Bắn Cung mở rộng lồng ngực tối đa, kết hợp Động Châm giúp tái phân bố trương lực cơ từ tầng vỏ nông vào tầng lõi sâu.",
     "chain_muscles": [
-      { "muscleId": "deltoid_posterior", "role": "chain", "note": "Cơ Delta sau - Chủ vận kéo lùi cánh tay" },
-      { "muscleId": "rhomboid_major", "role": "chain", "note": "Cơ Trám lớn - Kéo xương bả vai khép trục" },
-      { "muscleId": "serratus_anterior", "role": "chain", "note": "Cơ Răng trước - Ghì giữ lồng ngực phẳng" },
-      { "muscleId": "erector_spinae", "role": "stabilizer", "note": "Cơ Dựng sống ngực thắt lưng - Giữ vững trục thế ĐẠO" }
+      {
+        "muscleId": "deltoid_posterior",
+        "role": "chain",
+        "note": "Cơ Delta sau - Chủ vận kéo lùi cánh tay"
+      },
+      {
+        "muscleId": "rhomboid_major",
+        "role": "chain",
+        "note": "Cơ Trám lớn - Kéo xương bả vai khép trục"
+      },
+      {
+        "muscleId": "serratus_anterior",
+        "role": "chain",
+        "note": "Cơ Răng trước - Ghì giữ lồng ngực phẳng"
+      },
+      {
+        "muscleId": "erector_spinae",
+        "role": "stabilizer",
+        "note": "Cơ Dựng sống ngực thắt lưng - Giữ vững trục thế ĐẠO"
+      }
     ],
     "acupoints": [
       {
         "code": "LU-5",
         "name_vi": "Xích Trạch",
         "name_han": "尺澤",
-        "position_3d": { "x": -2.35, "y": 10.9, "z": -0.15 },
+        "position_3d": {
+          "x": -2.35,
+          "y": 10.9,
+          "z": -0.15
+        },
         "location_vi": "Trên nếp gấp khuỷu tay, tại bờ ngoài gân cơ nhị đầu cánh tay.",
         "depth_mm": "15 - 25 mm",
         "direction_vi": "Châm thẳng.",
@@ -445,7 +697,11 @@
         "code": "LI-4",
         "name_vi": "Hợp Cốc",
         "name_han": "合谷",
-        "position_3d": { "x": -2.60, "y": 8.5, "z": 0.10 },
+        "position_3d": {
+          "x": -2.6,
+          "y": 8.5,
+          "z": 0.1
+        },
         "location_vi": "Tại điểm giữa bờ ngoài xương bàn ngón tay thứ 2 (ngón trỏ), trong cơ gian cốt mu tay thứ nhất.",
         "depth_mm": "15 - 25 mm",
         "direction_vi": "Châm thẳng hướng về huyệt Lao Cung.",
@@ -456,7 +712,11 @@
         "code": "BL-43",
         "name_vi": "Cao Hoang",
         "name_han": "膏肓",
-        "position_3d": { "x": -0.90, "y": 12.7, "z": -0.72 },
+        "position_3d": {
+          "x": -0.9,
+          "y": 12.7,
+          "z": -0.72
+        },
         "location_vi": "Dưới mỏm gai đốt sống ngực D4 đo ngang ra 3 thốn (bờ trong xương bả vai).",
         "depth_mm": "10 - 15 mm",
         "direction_vi": "Châm xiên hướng về phía xương bả vai.",
@@ -467,7 +727,11 @@
         "code": "LU-1",
         "name_vi": "Trung Phủ",
         "name_han": "中府",
-        "position_3d": { "x": -1.15, "y": 13.6, "z": 0.35 },
+        "position_3d": {
+          "x": -1.15,
+          "y": 13.6,
+          "z": 0.35
+        },
         "location_vi": "Khoang gian sườn 1, dưới mỏm quạ ngoài 1 thốn.",
         "depth_mm": "10 - 15 mm",
         "direction_vi": "Châm xiên hướng ra ngoài cánh tay.",
@@ -476,5 +740,489 @@
       }
     ],
     "treatment_protocol_vi": "Kỹ thuật Động Châm Hệ Đạo Dẫn: Lưu kim tại LU-5 và LI-4, hướng dẫn bệnh nhân đứng thế trung bình tấn và thực hiện động tác kéo giương cung từ từ 5 - 10 lần. Sức căng cân mạc kết hợp kim dẫn động sẽ giải tỏa toàn bộ co thắt chuỗi mặt trước cánh tay."
+  },
+  "lateral_epicondylitis_tennis_elbow": {
+    "id": "lateral_epicondylitis_tennis_elbow",
+    "name_vi": "Hội chứng Viêm Lồi Cầu Ngoài & Co Cứng Cơ Duỗi Cẳng Tay (Tennis Elbow)",
+    "name_en": "Lateral Epicondylitis & Forearm Extensor Myofascial Strain",
+    "pain_muscles": [
+      "extensor_carpi_radialis_brevis",
+      "extensor_carpi_radialis_longus",
+      "brachioradialis"
+    ],
+    "myofascial_chain_vi": "Chuỗi Cánh Tay Sau Nông (Superficial Back Arm Line) & Chuỗi Xoắn Ốc (Spiral Line)",
+    "meridian_chain_vi": "Kinh Cân Thủ Dương Minh Đại Trường & Thủ Thiếu Dương Tam Tiêu",
+    "biomechanics_vi": "Động tác duỗi cổ tay và ngửa cẳng tay lặp đi lặp lại tạo ứng suất xé rách vi thể tại gân bám chung nhóm cơ duỗi ở mỏm trên lồi cầu ngoài xương cánh tay, gây viêm vô khuẩn và co cứng thứ phát cơ cánh tay quay.",
+    "chain_muscles": [
+      {
+        "muscleId": "extensor_digitorum",
+        "role": "chain",
+        "note": "Cơ Duỗi các ngón tay - Chuỗi lực cẳng tay sau"
+      },
+      {
+        "muscleId": "triceps_brachii",
+        "role": "chain",
+        "note": "Cơ Tam đầu cánh tay - Chuỗi truyền lực chi trên"
+      },
+      {
+        "muscleId": "deltoid_posterior",
+        "role": "chain",
+        "note": "Cơ Delta sau - Khóa đai vai"
+      },
+      {
+        "muscleId": "pronator_teres",
+        "role": "antagonist_tight",
+        "note": "Cơ Sấp tròn - Co cứng đối vận mặt trước"
+      }
+    ],
+    "acupoints": [
+      {
+        "code": "LI-11",
+        "name_vi": "Khúc Trì",
+        "name_han": "曲池",
+        "position_3d": {
+          "x": -2.35,
+          "y": 11.2,
+          "z": 0.15
+        },
+        "location_vi": "Đầu ngoài nếp gấp khuỷu tay khi gập góc 90°, bờ ngoài cơ cánh tay quay.",
+        "depth_mm": "20 - 30 mm",
+        "direction_vi": "Châm thẳng hoặc hướng kim về phía Thiếu Hải (HT-3).",
+        "deqi_vi": "Cảm giác tê tức buốt mạnh lan tỏa dọc cơ cẳng tay ngoài xuống cổ tay.",
+        "safety_vi": "Tránh châm quá sâu chếch vào trong chạm nhánh thần kinh quay."
+      },
+      {
+        "code": "LI-10",
+        "name_vi": "Thủ Tam Lý",
+        "name_han": "手三里",
+        "position_3d": {
+          "x": -2.55,
+          "y": 10.3,
+          "z": 0.2
+        },
+        "location_vi": "Dưới Khúc Trì 2 thốn trên bờ ngoài cẳng tay, điểm bụng cơ duỗi cổ tay quay.",
+        "depth_mm": "15 - 25 mm",
+        "direction_vi": "Châm thẳng.",
+        "deqi_vi": "Đắc khí căng nặng toàn bộ khối cơ duỗi cẳng tay.",
+        "safety_vi": "Điểm kích hoạt Trigger Point vàng để giải phóng áp lực lồi cầu ngoài."
+      },
+      {
+        "code": "TE-5",
+        "name_vi": "Ngoại Quan",
+        "name_han": "外關",
+        "position_3d": {
+          "x": -2.75,
+          "y": 8.7,
+          "z": -0.15
+        },
+        "location_vi": "Mặt sau cẳng tay, trên lằn chỉ cổ tay 2 thốn, giữa xương quay và xương trụ.",
+        "depth_mm": "15 - 20 mm",
+        "direction_vi": "Châm thẳng hoặc xiên nhẹ lên trên.",
+        "deqi_vi": "Tê tức sâu truyền lên khuỷu tay hoặc xuống mu bàn tay.",
+        "safety_vi": "Thấu huyệt Ngoại Quan sang Nội Quan (PC-6) tăng hiệu quả thông kinh lạc."
+      },
+      {
+        "code": "LI-4",
+        "name_vi": "Hợp Cốc",
+        "name_han": "合谷",
+        "position_3d": {
+          "x": -2.88,
+          "y": 8.4,
+          "z": 0.12
+        },
+        "location_vi": "Chính giữa bờ ngoài xương bàn ngón 2, trên cơ gian cốt mu tay 1.",
+        "depth_mm": "12 - 20 mm",
+        "direction_vi": "Châm thẳng hướng về phía lòng bàn tay.",
+        "deqi_vi": "Tê buốt truyền ngược lên cẳng tay theo kinh Đại Trường.",
+        "safety_vi": "⚠️ CẤM châm phụ nữ có thai (kích thích co bóp tử cung gây sảy thai)."
+      }
+    ]
+  },
+  "medial_epicondylitis_golfers_elbow": {
+    "id": "medial_epicondylitis_golfers_elbow",
+    "name_vi": "Hội chứng Viêm Lồi Cầu Trong & Co Cứng Gân Gập Cẳng Tay (Golfer's Elbow)",
+    "name_en": "Medial Epicondylitis & Forearm Flexor Pronator Strain",
+    "pain_muscles": [
+      "pronator_teres",
+      "flexor_carpi_radialis",
+      "flexor_carpi_ulnaris"
+    ],
+    "myofascial_chain_vi": "Chuỗi Cánh Tay Trước Nông (Superficial Front Arm Line)",
+    "meridian_chain_vi": "Kinh Cân Thủ Quyết Âm Tâm Bào & Thủ Thiếu Âm Tâm",
+    "biomechanics_vi": "Quá tải lực co tâm và lệch tâm của nhóm cơ gấp cổ tay và sấp cẳng tay tạo lực căng kéo cực đại lên mỏm trên lồi cầu trong, chèn ép nhánh thần kinh trụ hoặc thần kinh giữa đi qua rãnh khuỷu.",
+    "chain_muscles": [
+      {
+        "muscleId": "biceps_brachii",
+        "role": "chain",
+        "note": "Cơ Nhị đầu cánh tay - Chuỗi cơ cánh tay trước"
+      },
+      {
+        "muscleId": "brachialis",
+        "role": "chain",
+        "note": "Cơ Cánh tay - Điểm tựa gập khuỷu"
+      },
+      {
+        "muscleId": "pectoralis_major",
+        "role": "chain",
+        "note": "Cơ Ngực lớn - Chuỗi gốc chi trước"
+      },
+      {
+        "muscleId": "extensor_carpi_radialis_longus",
+        "role": "antagonist_tight",
+        "note": "Cơ Duỗi cổ tay - Đối vận mặt sau"
+      }
+    ],
+    "acupoints": [
+      {
+        "code": "HT-3",
+        "name_vi": "Thiếu Hải",
+        "name_han": "少海",
+        "position_3d": {
+          "x": -2.05,
+          "y": 11.0,
+          "z": -0.2
+        },
+        "location_vi": "Đầu trong nếp gấp khuỷu tay khi gập khuỷu, giữa mỏm trên lồi cầu trong và gân cơ nhị đầu.",
+        "depth_mm": "15 - 25 mm",
+        "direction_vi": "Châm thẳng hoặc hướng nhẹ ra ngoài.",
+        "deqi_vi": "Tê tức sâu tại chỗ lan ra mặt trong cẳng tay theo đường đi kinh Tâm.",
+        "safety_vi": "Tránh châm quá sâu về phía sau chạm động mạch cánh tay hoặc thần kinh giữa."
+      },
+      {
+        "code": "PC-3",
+        "name_vi": "Khúc Trạch",
+        "name_han": "曲澤",
+        "position_3d": {
+          "x": -2.2,
+          "y": 11.1,
+          "z": 0.1
+        },
+        "location_vi": "Trên nếp gấp khuỷu tay, ngay bờ trong gân cơ nhị đầu cánh tay.",
+        "depth_mm": "15 - 25 mm",
+        "direction_vi": "Châm thẳng.",
+        "deqi_vi": "Tê tức truyền xuống giữa cẳng tay vào lòng bàn tay.",
+        "safety_vi": "⚠️ Cạnh động mạch cánh tay, dùng ngón tay đẩy động mạch sang một bên trước khi châm."
+      },
+      {
+        "code": "PC-6",
+        "name_vi": "Nội Quan",
+        "name_han": "內關",
+        "position_3d": {
+          "x": -2.6,
+          "y": 8.7,
+          "z": 0.15
+        },
+        "location_vi": "Mặt trước cẳng tay, trên nếp gấp cổ tay 2 thốn, giữa hai gân cơ gan tay lớn và gập cổ tay quay.",
+        "depth_mm": "15 - 20 mm",
+        "direction_vi": "Châm thẳng vuông góc.",
+        "deqi_vi": "Tê rần như điện giật nhẹ lan xuống ngón 2, 3 (thần kinh giữa).",
+        "safety_vi": "Định vị chính xác giữa 2 gân, không kích thích mạnh tránh gây tổn thương thân thần kinh giữa."
+      },
+      {
+        "code": "SI-8",
+        "name_vi": "Tiểu Hải",
+        "name_han": "小海",
+        "position_3d": {
+          "x": -2.15,
+          "y": 10.9,
+          "z": -0.3
+        },
+        "location_vi": "Trong rãnh thần kinh trụ, giữa mỏm khuỷu và mỏm trên lồi cầu trong xương cánh tay.",
+        "depth_mm": "8 - 15 mm",
+        "direction_vi": "Châm chếch kim lên trên hoặc xuống dưới 0.5 thốn.",
+        "deqi_vi": "Cảm giác tê buốt dọc bờ trụ cẳng tay xuống ngón út (ngón 5).",
+        "safety_vi": "Huyệt nằm ngay trên dây thần kinh trụ, chỉ vê kim nhẹ nhàng, tránh châm trực diện thô bạo."
+      }
+    ]
+  },
+  "itb_friction_tensor_fasciae": {
+    "id": "itb_friction_tensor_fasciae",
+    "name_vi": "Hội chứng Dải Chậu Chày & Đau Co Rút Cơ Căng Cân Đùi (ITB Syndrome)",
+    "name_en": "Iliotibial Band Friction Syndrome & Tensor Fasciae Latae Strain",
+    "pain_muscles": [
+      "tensor_fasciae_latae",
+      "gluteus_medius",
+      "vastus_lateralis"
+    ],
+    "myofascial_chain_vi": "Chuỗi Cơ Cân Bên (Lateral Line)",
+    "meridian_chain_vi": "Kinh Cân Túc Thiếu Dương Đởm",
+    "biomechanics_vi": "Cơ căng cân đùi (TFL) và cơ mông nhỡ co rút liên tục làm căng dải chậu chày (ITB), gây ma sát tái diễn tại lồi cầu ngoài xương đùi trong thì gập - duỗi gối 30°, làm viêm bao thanh dịch dải chậu chày.",
+    "chain_muscles": [
+      {
+        "muscleId": "gluteus_maximus",
+        "role": "chain",
+        "note": "Cơ Mông lớn - Hòa sợi vào dải chậu chày"
+      },
+      {
+        "muscleId": "peroneus_longus",
+        "role": "chain",
+        "note": "Cơ Mác dài - Chuỗi cơ cân bên cẳng chân"
+      },
+      {
+        "muscleId": "quadratus_lumborum",
+        "role": "chain",
+        "note": "Cơ Vuông thắt lưng - Khóa lệch chậu bên"
+      },
+      {
+        "muscleId": "adductor_magnus",
+        "role": "antagonist_tight",
+        "note": "Cơ Khép lớn - Đối vận mặt trong đùi"
+      }
+    ],
+    "acupoints": [
+      {
+        "code": "GB-30",
+        "name_vi": "Hoàn Khiêu",
+        "name_han": "環跳",
+        "position_3d": {
+          "x": -1.35,
+          "y": 8.2,
+          "z": -0.45
+        },
+        "location_vi": "Chỗ lõm 1/3 ngoài đường nối mấu chuyển lớn xương đùi với mỏm gai đốt sống cùng 4.",
+        "depth_mm": "40 - 75 mm",
+        "direction_vi": "Châm thẳng kim dài (kim 3-4 thốn) hướng về khớp háng.",
+        "deqi_vi": "Cảm giác tức nặng sâu như dòng điện lan dọc mặt ngoài đùi xuống bàn chân.",
+        "safety_vi": "Cần kim dài xuyên qua lớp cơ mông dày, vô trùng tuyệt đối tránh áp-xe vùng mông."
+      },
+      {
+        "code": "GB-31",
+        "name_vi": "Phong Thị",
+        "name_han": "風市",
+        "position_3d": {
+          "x": -1.25,
+          "y": 6.8,
+          "z": 0.05
+        },
+        "location_vi": "Mặt ngoài đùi, trên nếp khoeo 7 thốn, nơi đầu ngón tay giữa chạm vào khi đứng nghiêm.",
+        "depth_mm": "25 - 40 mm",
+        "direction_vi": "Châm thẳng hoặc nghiêng nhẹ theo thớ cơ dải chậu chày.",
+        "deqi_vi": "Tê tức nặng dọc dải chậu chày lan xuống gối.",
+        "safety_vi": "Huyệt đặc hiệu thư cân giải cơ mặt ngoài đùi."
+      },
+      {
+        "code": "GB-34",
+        "name_vi": "Dương Lăng Tuyền",
+        "name_han": "陽陵泉",
+        "position_3d": {
+          "x": -1.15,
+          "y": 4.8,
+          "z": -0.1
+        },
+        "location_vi": "Chỗ lõm phía trước và dưới chỏm xương mác ngoài.",
+        "depth_mm": "25 - 40 mm",
+        "direction_vi": "Châm thẳng hoặc xiên xuống dưới.",
+        "deqi_vi": "Căng tức buốt mạnh vùng gối ngoài lan xuống ngón chân 4.",
+        "safety_vi": "Tránh châm quá sâu ra sau làm tổn thương dây thần kinh mác chung tại cổ xương mác."
+      },
+      {
+        "code": "GB-39",
+        "name_vi": "Huyền Chung (Tuyệt Cốt)",
+        "name_han": "懸鐘",
+        "position_3d": {
+          "x": -1.05,
+          "y": 2.2,
+          "z": -0.05
+        },
+        "location_vi": "Trên đỉnh mắt cá ngoài 3 thốn, ngay bờ sau xương mác.",
+        "depth_mm": "20 - 30 mm",
+        "direction_vi": "Châm thẳng.",
+        "deqi_vi": "Tê tức lan xuống bàn chân ngoài.",
+        "safety_vi": "Hội huyệt của Tủy, giải trừ co rút cân cơ chi dưới."
+      }
+    ]
+  },
+  "pes_anserine_medial_knee": {
+    "id": "pes_anserine_medial_knee",
+    "name_vi": "Hội chứng Gân Chân Vịt & Thoái Hóa Khớp Gối Trong (Pes Anserine Tendinopathy)",
+    "name_en": "Pes Anserine Tendinitis & Medial Compartment Knee Osteoarthritis",
+    "pain_muscles": [
+      "gracilis",
+      "sartorius",
+      "semitendinosus"
+    ],
+    "myofascial_chain_vi": "Chuỗi Cơ Cân Nông Sau (Superficial Back Line) & Chuỗi Cơ Cân Sâu Trước (Deep Front Line)",
+    "meridian_chain_vi": "Kinh Cân Túc Thái Âm Tỳ & Kinh Cân Túc Quyết Âm Can",
+    "biomechanics_vi": "Ba gân cơ (May, Thon, Bán gân) hợp nhất bám vào mặt trước trong đầu trên xương chày tạo thành gân Chân Vịt (Pes Anserinus). Co rút quá mức gây viêm bao thanh dịch chân vịt và tăng tải trọng nén ép lên sụn chêm trong khớp gối.",
+    "chain_muscles": [
+      {
+        "muscleId": "vastus_medialis",
+        "role": "chain",
+        "note": "Cơ Rộng trong - Giữ xương bánh chè"
+      },
+      {
+        "muscleId": "semimembranosus",
+        "role": "chain",
+        "note": "Cơ Bán mạc - Trụ đỡ góc sau trong gối"
+      },
+      {
+        "muscleId": "tibialis_posterior",
+        "role": "chain",
+        "note": "Cơ Chày sau - Nâng vòm bàn chân"
+      },
+      {
+        "muscleId": "tensor_fasciae_latae",
+        "role": "antagonist_tight",
+        "note": "Cơ Căng cân đùi - Kéo lệch ngoài xương bánh chè"
+      }
+    ],
+    "acupoints": [
+      {
+        "code": "SP-9",
+        "name_vi": "Âm Lăng Tuyền",
+        "name_han": "陰陵泉",
+        "position_3d": {
+          "x": -0.65,
+          "y": 4.7,
+          "z": -0.15
+        },
+        "location_vi": "Ở chỗ lõm dưới lồi cầu trong xương chày, ngay bờ sau trong xương chày.",
+        "depth_mm": "20 - 35 mm",
+        "direction_vi": "Châm thẳng hoặc hướng kim xuyên sang Dương Lăng Tuyền (GB-34).",
+        "deqi_vi": "Căng tức buốt toàn bộ mặt trong khớp gối lan xuống cẳng chân trong.",
+        "safety_vi": "Huyệt trừ thấp tiêu viêm khớp gối hàng đầu."
+      },
+      {
+        "code": "SP-10",
+        "name_vi": "Huyết Hải",
+        "name_han": "血海",
+        "position_3d": {
+          "x": -0.7,
+          "y": 5.6,
+          "z": 0.2
+        },
+        "location_vi": "Mặt trước trong đùi, từ góc trên trong xương bánh chè đo lên 2 thốn, trên cơ rộng trong.",
+        "depth_mm": "20 - 30 mm",
+        "direction_vi": "Châm thẳng hoặc chếch lên trên 45°.",
+        "deqi_vi": "Cảm giác tức nặng lan tỏa khắp bờ trên trong khớp gối.",
+        "safety_vi": "Huyệt hoạt huyết trừ ứ, giảm thoái hóa và đau nhức quanh bánh chè."
+      },
+      {
+        "code": "LR-8",
+        "name_vi": "Khúc Tuyền",
+        "name_han": "曲泉",
+        "position_3d": {
+          "x": -0.6,
+          "y": 4.9,
+          "z": -0.25
+        },
+        "location_vi": "Khi gập gối, huyệt nằm ở đầu trong nếp gấp khoeo chân, trên gân cơ bán mạc và bán gân.",
+        "depth_mm": "20 - 30 mm",
+        "direction_vi": "Châm thẳng.",
+        "deqi_vi": "Tức nặng sâu tại góc khoeo trong khớp gối.",
+        "safety_vi": "Hợp huyệt hành Thủy của kinh Can, chủ trị co cứng gân khớp gối."
+      },
+      {
+        "code": "ST-36",
+        "name_vi": "Túc Tam Lý",
+        "name_han": "足三里",
+        "position_3d": {
+          "x": -0.95,
+          "y": 4.4,
+          "z": 0.35
+        },
+        "location_vi": "Dưới mắt ngoài xương bánh chè 3 thốn, cách mào xương chày 1 khoát ngón tay, trên cơ chày trước.",
+        "depth_mm": "25 - 40 mm",
+        "direction_vi": "Châm thẳng.",
+        "deqi_vi": "Tê tức nặng sâu lan tỏa xuống cổ chân và bàn chân.",
+        "safety_vi": "Đại bổ khí huyết, tăng lực chống đỡ cho toàn bộ chi dưới."
+      }
+    ]
+  },
+  "gastrocnemius_achilles_strain": {
+    "id": "gastrocnemius_achilles_strain",
+    "name_vi": "Hội chứng Co Rút Cơ Bụng Chân & Viêm Gân Gót Achilles (Achilles Tendinopathy)",
+    "name_en": "Gastrocnemius Muscle Strain & Achilles Tendinopathy",
+    "pain_muscles": [
+      "gastrocnemius",
+      "soleus"
+    ],
+    "myofascial_chain_vi": "Chuỗi Cơ Cân Nông Sau (Superficial Back Line)",
+    "meridian_chain_vi": "Kinh Cân Túc Thái Dương Bàng Quang & Túc Thiếu Âm Thận",
+    "biomechanics_vi": "Cơ bụng chân (Gastrocnemius) và cơ dép (Soleus) co rút kinh niên làm giảm biên độ gập mu bàn chân, dồn toàn bộ phản lực mặt đất lên gân gót Achilles và màng cân gan chân (Plantar fascia), gây đau gót chân và gai xương gót.",
+    "chain_muscles": [
+      {
+        "muscleId": "hamstrings",
+        "role": "chain",
+        "note": "Nhóm Cơ Ụ ngồi - cẳng chân - Chuỗi cơ sau đùi liên kết qua lồi cầu"
+      },
+      {
+        "muscleId": "plantar_fascia",
+        "role": "chain",
+        "note": "Cân Gan chân - Nối dài liên tục từ gân gót"
+      },
+      {
+        "muscleId": "gluteus_maximus",
+        "role": "chain",
+        "note": "Cơ Mông lớn - Chuỗi phát lực hông sau"
+      },
+      {
+        "muscleId": "tibialis_anterior",
+        "role": "antagonist_tight",
+        "note": "Cơ Chày trước - Cơ đối vận gập mu cổ chân"
+      }
+    ],
+    "acupoints": [
+      {
+        "code": "BL-40",
+        "name_vi": "Ủy Trung",
+        "name_han": "委中",
+        "position_3d": {
+          "x": -0.85,
+          "y": 5.0,
+          "z": -0.4
+        },
+        "location_vi": "Chính giữa nếp gấp khoeo chân, giữa hai gân cơ nhị đầu đùi và bán mạc.",
+        "depth_mm": "20 - 35 mm",
+        "direction_vi": "Châm thẳng hoặc trích huyết hạ nhiệt trừ ứ.",
+        "deqi_vi": "Tức nặng sâu vùng khoeo lan xuống bắp chân.",
+        "safety_vi": "⚠️ Thận trọng tránh đâm vào động mạch và tĩnh mạch khoeo sâu nằm ở trục giữa."
+      },
+      {
+        "code": "BL-57",
+        "name_vi": "Thừa Sơn",
+        "name_han": "承山",
+        "position_3d": {
+          "x": -0.85,
+          "y": 3.5,
+          "z": -0.38
+        },
+        "location_vi": "Tại đỉnh góc nhọn nơi hai bụng cơ sinh đôi (cơ bụng chân) tách ra ở mặt sau cẳng chân.",
+        "depth_mm": "25 - 40 mm",
+        "direction_vi": "Châm thẳng.",
+        "deqi_vi": "Căng tức cực mạnh toàn bộ bắp chuối bắp chân.",
+        "safety_vi": "Huyệt vàng giải phóng chuột rút bắp chân và co cứng gân gót."
+      },
+      {
+        "code": "BL-60",
+        "name_vi": "Côn Lôn",
+        "name_han": "崑崙",
+        "position_3d": {
+          "x": -0.95,
+          "y": 1.1,
+          "z": -0.35
+        },
+        "location_vi": "Chỗ lõm giữa đỉnh mắt cá ngoài và bờ ngoài gân gót Achilles.",
+        "depth_mm": "15 - 20 mm",
+        "direction_vi": "Châm thẳng hướng kim sang huyệt Thái Khê (KI-3).",
+        "deqi_vi": "Tê tức buốt quanh gân gót và gót chân.",
+        "safety_vi": "⚠️ Phụ nữ mang thai không nên châm sâu hoặc vê kim mạnh."
+      },
+      {
+        "code": "KI-3",
+        "name_vi": "Thái Khê",
+        "name_han": "太谿",
+        "position_3d": {
+          "x": -0.7,
+          "y": 1.1,
+          "z": -0.35
+        },
+        "location_vi": "Chỗ lõm giữa đỉnh mắt cá trong và bờ trong gân gót Achilles.",
+        "depth_mm": "15 - 20 mm",
+        "direction_vi": "Châm thẳng hướng về phía mắt cá ngoài.",
+        "deqi_vi": "Tức nặng ấm áp lan tỏa khắp gót chân và gan bàn chân.",
+        "safety_vi": "Nguyên huyệt của Thận, dưỡng âm nhuận cân giải viêm thoái hóa gân gót."
+      }
+    ]
   }
 }

@@ -295,13 +295,30 @@ export class SceneView {
       return isRight ? 'rightThigh' : 'leftThigh';
     }
 
+    // ============================================================
+    // 0. CƠ & DÂY CHẰNG BÀN TAY, CỔ TAY (INTRINSIC HAND, WRIST & DIGIT STRUCTURES: Y >= 7.60)
+    // Đặc trị: Cơ khép ngón cái (Adductor pollicis), các cơ mô cái (Thenar),
+    // cơ mô út (Hypothenar), cơ gian cốt (Interossei manus), cơ giun (Lumbricals of hand),
+    // cân gan tay (Palmar aponeurosis)...
+    // BẮT BUỘC gắn vào Cẳng tay / Bàn tay (rightForearm / leftForearm) để chuyển động đồng bộ 100%!
+    // ============================================================
+    const handKeywords = [
+      'pollicis', 'of hand', 'manus', 'palmar', 'thenar', 'hypothenar', 
+      'carpi', 'antebrachial', 'pronator', 'supinator', 'brachioradialis',
+      'digiti minimi of hand', 'extensor indicis'
+    ];
+    if (boxCenter.y >= 7.60 && handKeywords.some(kw => clean.includes(kw))) {
+      return isRight ? 'rightForearm' : 'leftForearm';
+    }
+
     // Các từ khóa mông, đùi, chậu cho phần Y >= 7.60 (Mào chậu, cơ mông, túi hoạt dịch mấu chuyển)
     const lowerBodyKeywords = [
       'gluteus', 'glutea', 'trochanter', 'bursa of gluteus', 'trochanteric', 'tensor fascia', 
       'iliotibial', 'piriformis', 'pyriformis', 'obturator', 'gemellus', 'quadratus femoris', 
       'ischio', 'iliac', 'ilium', 'ischium', 'pubis', 'sacro', 'coccy', 'femur', 'femoral', 
       'patella', 'tibia', 'fibul', 'perone', 'gastrocnemi', 'soleus', 'plantar', 'poplite', 
-      'adductor', 'gracilis', 'pectine', 'sartori', 'rectus femoris', 'vastus', 'biceps femoris', 
+      'adductor magnus', 'adductor longus', 'adductor brevis', 'adductor minimus', 'adductor hallucis',
+      'gracilis', 'pectine', 'sartori', 'rectus femoris', 'vastus', 'biceps femoris', 
       'semitendin', 'semimembran', 'sciatic', 'saphen'
     ];
     const isLowerBody = lowerBodyKeywords.some(kw => clean.includes(kw));
@@ -353,7 +370,8 @@ export class SceneView {
       'deltoid', 'biceps brachii', 'triceps brachii', 'brachialis', 'coracobrachialis',
       'brachioradialis', 'pronator', 'supinator', 'flexor carpi', 'extensor carpi',
       'palmar', 'interossei dorsales manus', 'lumbrical manus', 'antebrachial',
-      'digiti minimi of hand', 'pollicis', 'extensor indicis', 'thenar', 'hypothenar'
+      'digiti minimi of hand', 'pollicis', 'extensor indicis', 'thenar', 'hypothenar',
+      'median', 'radial', 'ulnar', 'musculocutaneous', 'brachial'
     ];
     const isUpperLimb = (boxCenter.y >= 7.60) && ((Math.abs(boxCenter.x) >= 1.35) || upperLimbKeywords.some(kw => clean.includes(kw)));
 
@@ -432,7 +450,8 @@ export class SceneView {
     const indexAttr = geom.index;
 
     // Kiểm tra bounding box trong không gian thế giới ở thế nghỉ
-    const box = new THREE.Box3().setFromObject(mesh);
+    if (!geom.boundingBox) geom.computeBoundingBox();
+    const box = geom.boundingBox.clone().applyMatrix4(mesh.matrixWorld);
     if (box.min.y >= splitY) {
       targetMeshList.push({ mesh, segment: upperSegment });
       return;
@@ -467,6 +486,18 @@ export class SceneView {
       }
     }
 
+    if (upperTriangles.length === 0) {
+      targetMeshList.push({ mesh, segment: lowerSegment });
+      return;
+    }
+    if (lowerTriangles.length === 0) {
+      targetMeshList.push({ mesh, segment: upperSegment });
+      return;
+    }
+
+    const vTemp = new THREE.Vector3();
+    const nTemp = new THREE.Vector3();
+
     const buildSubMesh = (triangles, suffix) => {
       if (!triangles || triangles.length === 0) return null;
       const subGeom = new THREE.BufferGeometry();
@@ -479,9 +510,12 @@ export class SceneView {
         if (!oldToNew.has(idx)) {
           const newIdx = newPositions.length / 3;
           oldToNew.set(idx, newIdx);
-          newPositions.push(posAttr.getX(idx), posAttr.getY(idx), posAttr.getZ(idx));
+          // CHUYỂN TOÀN BỘ TỌA ĐỘ ĐỈNH VÀ PHÁP TUYẾN VỀ KHÔNG GIAN THẾ GIỚI CHUẨN (SCENE WORLD SPACE)
+          vTemp.set(posAttr.getX(idx), posAttr.getY(idx), posAttr.getZ(idx)).applyMatrix4(mesh.matrixWorld);
+          newPositions.push(vTemp.x, vTemp.y, vTemp.z);
           if (normalAttr) {
-            newNormals.push(normalAttr.getX(idx), normalAttr.getY(idx), normalAttr.getZ(idx));
+            nTemp.set(normalAttr.getX(idx), normalAttr.getY(idx), normalAttr.getZ(idx)).transformDirection(mesh.matrixWorld);
+            newNormals.push(nTemp.x, nTemp.y, nTemp.z);
           }
         }
         newIndices.push(oldToNew.get(idx));
@@ -497,15 +531,20 @@ export class SceneView {
 
       const subMesh = new THREE.Mesh(subGeom, mesh.material);
       subMesh.name = (mesh.name || 'Nerve') + suffix;
-      subMesh.position.copy(mesh.position);
-      subMesh.rotation.copy(mesh.rotation);
-      subMesh.scale.copy(mesh.scale);
-      subMesh.matrixWorld.copy(mesh.matrixWorld);
+      // Vì geometry đã ở không gian thế giới, đặt transform gốc về (0,0,0) scale 1
+      subMesh.position.set(0, 0, 0);
+      subMesh.rotation.set(0, 0, 0);
+      subMesh.scale.set(1, 1, 1);
+      subMesh.updateMatrixWorld(true);
       return subMesh;
     };
 
     const upperMesh = buildSubMesh(upperTriangles, '_upper');
     const lowerMesh = buildSubMesh(lowerTriangles, '_lower');
+
+    // Ẩn mesh nguyên bản tránh trùng lặp
+    mesh.visible = false;
+    mesh.userData.isNoise = true;
 
     if (upperMesh) targetMeshList.push({ mesh: upperMesh, segment: upperSegment });
     if (lowerMesh) targetMeshList.push({ mesh: lowerMesh, segment: lowerSegment });
@@ -594,8 +633,8 @@ export class SceneView {
 
         // TÁCH DÂY THẦN KINH CHI DÀI: Khớp khuỷu tay (Y = 11.05) & Khớp gối (Y = 5.05)
         if (layerType === 'nervous') {
-          const isArmNerve = (Math.abs(meshCenter.x) >= 1.25) || 
-            ['median', 'radial', 'ulnar', 'musculocutaneous', 'brachial'].some(k => rawName.includes(k));
+          const isArmNerve = (Math.abs(meshCenter.x) >= 1.05) || 
+            ['median', 'radial', 'ulnar', 'musculocutaneous', 'brachial', 'antebrachial', 'palmar', 'digital'].some(k => rawName.includes(k));
           const isLegNerve = ['sciatic', 'saphenous', 'tibial', 'fibular', 'femoral', 'sural', 'plantar'].some(k => rawName.includes(k));
 
           if (isArmNerve && meshBox.min.y < 11.05 && meshBox.max.y > 11.05) {
