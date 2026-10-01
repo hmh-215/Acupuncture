@@ -1,6 +1,6 @@
-import { AppViewModel } from './viewmodels/AppViewModel.js?v=5.9';
-import { SceneView } from './views/SceneView.js?v=5.9';
-import { UIView } from './views/UIView.js?v=5.9';
+import { AppViewModel } from './viewmodels/AppViewModel.js?v=6.0';
+import { SceneView } from './views/SceneView.js?v=6.0';
+import { UIView } from './views/UIView.js?v=6.0';
 
 async function main() {
   console.log('Đang khởi tạo ứng dụng...');
