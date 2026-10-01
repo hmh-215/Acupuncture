@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { FBXLoader } from 'three/addons/loaders/FBXLoader.js';
+import { MuscleDeformer } from './MuscleDeformer.js?v=5.8';
 
 /**
  * SceneView.js
@@ -10,12 +11,14 @@ import { FBXLoader } from 'three/addons/loaders/FBXLoader.js';
  * 3. Mô phỏng tư thế tượng động học (Statue Poses) chuẩn sinh lý (không bị vỡ rách khớp).
  * 4. Highlight cơ thông minh: Cơ không hoạt động màu Xám Đục (Opaque solid), cơ hoạt động phát sáng rực rỡ.
  * 5. Hệ thống Điểm Huyệt 3D (Interactive 3D Acupoint Markers) phát sáng nhịp tim phục vụ Chế độ 2.
+ * 6. Module Biến dạng cơ bắp mềm (MuscleDeformer) cho các cơ cầu nối co giãn mượt mà.
  */
 export class SceneView {
   constructor(container, sceneVM, appVM) {
     this.container = container;
     this.sceneVM = sceneVM;
     this.appVM = appVM;
+    this.muscleDeformer = new MuscleDeformer();
 
     this.scene = new THREE.Scene();
     this.currentTheme = 'light';
@@ -233,6 +236,9 @@ export class SceneView {
     }
 
     this.rigRoot.updateMatrixWorld(true);
+    if (this.muscleDeformer) {
+      this.muscleDeformer.init(this.rigPivots);
+    }
   }
 
   _saveCurrentPivotRotations() {
@@ -443,6 +449,35 @@ export class SceneView {
 
     // 8. THẮT LƯNG / THÂN DƯỚI (TORSO L1-L5: 9.35 < Y < 11.05)
     return 'torso';
+  }
+
+  /**
+   * LƯỚI LỌC BẢO VỆ GIẢI PHẪU (SANITY GUARD ASSERTIONS)
+   * Ngăn chặn tuyệt đối mọi lỗi rò rỉ mesh thân mình (ngực/bụng/lưng) vào chi trên/dưới.
+   */
+  _validateAnatomicalSanity(name, segment, boxCenter) {
+    if (!name || !segment) return segment || 'chest';
+    const clean = name.toLowerCase().replace(/_/g, ' ');
+
+    // 1. Tuyệt đối không cho phép cơ ngực/bụng/lưng nằm trong tay hoặc chân
+    const trunkKeywords = ['pectoral', 'abdomin', 'intercostal', 'obliquus', 'rectus sheath', 'latissimus', 'erector spinae', 'trapezius'];
+    if (trunkKeywords.some(k => clean.includes(k))) {
+      if (segment.includes('Forearm') || segment.includes('UpperArm') || segment.includes('Shin') || segment.includes('Thigh')) {
+        console.warn(`[Sanity Guard] Thu hồi mesh thân mình '${name}' từ '${segment}' về 'chest'/'torso'!`);
+        return (clean.includes('abdomin') || clean.includes('obliquus')) ? 'torso' : 'chest';
+      }
+    }
+
+    // 2. Tuyệt đối không cho phép cơ chi dưới nằm ở chi trên hoặc cổ
+    const legKeywords = ['gluteus', 'femur', 'tibia', 'fibul', 'patella', 'soleus', 'gastrocnemius', 'plantar'];
+    if (legKeywords.some(k => clean.includes(k))) {
+      if (segment.includes('Forearm') || segment.includes('UpperArm') || segment === 'neck') {
+        console.warn(`[Sanity Guard] Thu hồi mesh chi dưới '${name}' từ '${segment}' về 'pelvis'/'shin'!`);
+        return (boxCenter && boxCenter.y < 5.5) ? 'rightShin' : 'pelvis';
+      }
+    }
+
+    return segment;
   }
 
   // ============================================================
@@ -700,7 +735,15 @@ export class SceneView {
           return;
         }
 
-        const segment = this._classifyMeshSegment(child, meshCenter);
+        let segment = null;
+        if (layerType === 'muscle' && this.appVM && this.appVM.meshJointRegistry) {
+          segment = this.appVM.meshJointRegistry[child.name] || this.appVM.meshJointRegistry[child.name.toLowerCase()];
+        }
+        if (!segment) {
+          segment = this._classifyMeshSegment(child, meshCenter);
+        }
+        segment = this._validateAnatomicalSanity(child.name, segment, meshCenter);
+
         meshData.push({ mesh: child, segment });
       }
     });
@@ -729,6 +772,27 @@ export class SceneView {
             this.muscleMeshMap.set(mappedId, []);
           }
           this.muscleMeshMap.get(mappedId).push(mesh);
+        }
+
+        // Tự động đăng ký biến dạng cơ mềm (Procedural Soft Skinning) cho các cơ cầu nối ngực/lưng
+        if (this.muscleDeformer) {
+          const lowerName = (mesh.name || '').toLowerCase();
+          const isRight = lowerName.endsWith('.r') || lowerName.endsWith('r') || lowerName.includes('.r.') || (mesh.position.x < -0.15);
+          if (lowerName.includes('pectoralis_major') || lowerName.includes('pectoralis major')) {
+            this.muscleDeformer.registerBridgeMuscle(mesh, {
+              anchorPivot: 'chest',
+              driverPivot: isRight ? 'rightUpperArm' : 'leftUpperArm',
+              type: 'pectoralis_major',
+              isRight
+            });
+          } else if (lowerName.includes('latissimus_dorsi') || lowerName.includes('latissimus dorsi')) {
+            this.muscleDeformer.registerBridgeMuscle(mesh, {
+              anchorPivot: 'chest',
+              driverPivot: isRight ? 'rightUpperArm' : 'leftUpperArm',
+              type: 'latissimus',
+              isRight
+            });
+          }
         }
       } else if (layerType === 'nervous') {
         mesh.userData.id = mesh.name;
@@ -1796,6 +1860,11 @@ export class SceneView {
   _animate() {
     this.animationId = requestAnimationFrame(() => this._animate());
     this._updatePoseInterpolation();
+
+    // Biến dạng & co giãn cơ bắp mềm mại (Procedural Soft Skinning)
+    if (this.muscleDeformer) {
+      this.muscleDeformer.update();
+    }
 
     // Hiệu ứng Pulsing nhịp tim cho các Điểm Huyệt 3D
     if (this.activeAcupointMeshes.length > 0) {

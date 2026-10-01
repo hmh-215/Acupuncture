@@ -1,4 +1,4 @@
-import { Observable } from './Observable.js?v=5.7';
+import { Observable } from './Observable.js?v=5.8';
 
 /**
  * AcupunctureViewModel
