@@ -1,8 +1,8 @@
-﻿import * as THREE from 'three';
+import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { FBXLoader } from 'three/addons/loaders/FBXLoader.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { MuscleDeformer } from './MuscleDeformer.js?v=7.0';
+import { MuscleDeformer } from './MuscleDeformer.js?v=7.1';
 
 /**
  * SceneView.js
@@ -32,9 +32,13 @@ export class SceneView {
     this.camera = new THREE.PerspectiveCamera(45, aspect, 0.1, 300);
     this.camera.position.set(0, 11, 27);
 
-    this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    this.renderer = new THREE.WebGLRenderer({ 
+      antialias: true, 
+      alpha: true,
+      powerPreference: 'high-performance'
+    });
     this.renderer.setSize(container.clientWidth, container.clientHeight);
-    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
     this.container.appendChild(this.renderer.domElement);
 
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
@@ -60,11 +64,11 @@ export class SceneView {
     this.muscleMeshMap = new Map();
     this.hoveredObject = null;
 
-    // Thông số căn chỉnh kích thước tỷ lệ chung
-    this.uniformScaleFactor = null;
-    this.bodyOffsetX = 0;
-    this.bodyOffsetY = undefined;
-    this.bodyOffsetZ = 0;
+    // Thông số căn chỉnh kích thước tỷ lệ chung (Hằng số chuẩn hóa đồng bộ 100% với MuscularSystem Z-Anatomy)
+    this.uniformScaleFactor = 0.09993381217765253;
+    this.bodyOffsetX = 0.0;
+    this.bodyOffsetY = 0.4355495;
+    this.bodyOffsetZ = -0.0315754;
 
     // Độ mờ độc lập (MẶC ĐỊNH: Hệ Cơ 100% ĐỤC HOÀN TOÀN)
     this.muscleOpacity = 1.0;
@@ -612,26 +616,15 @@ export class SceneView {
   // Thực hiện Pre-Pass tính toán tọa độ thế giới trước khi gán pivot
   // ============================================================
   _attachFBXToRig(fbxModel, layerType) {
-    if (!this.uniformScaleFactor) {
-      const box = new THREE.Box3().setFromObject(fbxModel);
-      const size = box.getSize(new THREE.Vector3());
-      const center = box.getCenter(new THREE.Vector3());
-
-      const targetHeight = 17.0;
-      this.uniformScaleFactor = targetHeight / (size.y || 1);
-
-      fbxModel.scale.set(this.uniformScaleFactor, this.uniformScaleFactor, this.uniformScaleFactor);
-
-      box.setFromObject(fbxModel);
-      box.getCenter(center);
-
-      this.bodyOffsetX = -center.x;
-      this.bodyOffsetY = -center.y + 9;
-      this.bodyOffsetZ = -center.z;
-    } else {
-      fbxModel.scale.set(this.uniformScaleFactor, this.uniformScaleFactor, this.uniformScaleFactor);
+    // Khi nạp Hệ Thần Kinh hoặc khi chưa có scale, BẮT BUỘC dùng hệ quy chiếu chuẩn hóa của Hệ Cơ (chiều cao 17.0, tâm Y=9.0)
+    if (!this.uniformScaleFactor || layerType === 'nervous') {
+      this.uniformScaleFactor = 0.09993381217765253;
+      this.bodyOffsetX = 0.0;
+      this.bodyOffsetY = 0.4355495;
+      this.bodyOffsetZ = -0.0315754;
     }
 
+    fbxModel.scale.set(this.uniformScaleFactor, this.uniformScaleFactor, this.uniformScaleFactor);
     fbxModel.position.x = this.bodyOffsetX;
     fbxModel.position.y = this.bodyOffsetY;
     fbxModel.position.z = this.bodyOffsetZ;
@@ -866,6 +859,10 @@ export class SceneView {
   // ============================================================
   async _loadMuscularSystemGLB() {
     this._updateLoadingText('Đang nạp hệ cơ Skinned Mesh 3D (GPU Skinning)...');
+    this.uniformScaleFactor = 0.09993381217765253;
+    this.bodyOffsetX = 0.0;
+    this.bodyOffsetY = 0.4355495;
+    this.bodyOffsetZ = -0.0315754;
     return new Promise((resolve, reject) => {
       const loader = new GLTFLoader();
       loader.load(
@@ -1988,6 +1985,7 @@ export class SceneView {
     this.camera.aspect = w / h;
     this.camera.updateProjectionMatrix();
     this.renderer.setSize(w, h);
+    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
   }
 
   dispose() {
@@ -1996,4 +1994,5 @@ export class SceneView {
     this.renderer.dispose();
   }
 }
+
 
