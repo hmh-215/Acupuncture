@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Observable.js
  * A lightweight Proxy-based reactive state management system.
  */
@@ -145,3 +145,4 @@ export class Observable {
     this._computedDeps.clear();
   }
 }
+

@@ -9,6 +9,8 @@ package-lock.json
 *.tar.gz
 *.7z
 *.rar
+*.bin
+muscles_raw_dump.bin
 3D-models/
 
 # Tài liệu gốc, PDF, sách và video trích xuất (Chỉ lưu trữ cục bộ, không đưa lên GitHub)

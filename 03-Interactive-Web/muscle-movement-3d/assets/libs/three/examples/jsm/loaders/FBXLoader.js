@@ -1,4 +1,4 @@
-import {
+﻿import {
 	AmbientLight,
 	AnimationClip,
 	Bone,
@@ -4321,3 +4321,4 @@ function slice( a, b, from, to ) {
 
 
 export { FBXLoader };
+

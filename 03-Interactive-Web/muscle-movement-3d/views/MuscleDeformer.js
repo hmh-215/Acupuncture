@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+﻿import * as THREE from 'three';
 
 /**
  * MuscleDeformer
@@ -204,3 +204,4 @@ export class MuscleDeformer {
     this.isInitialized = false;
   }
 }
+

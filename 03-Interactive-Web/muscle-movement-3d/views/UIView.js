@@ -1,4 +1,4 @@
-/**
+﻿/**
  * UIView.js
  * Quản lý toàn bộ giao diện DOM, bảng điều khiển 2 Chế độ và tương tác người dùng:
  * - Chế độ 1: 🏃 Động Học Cử Động (Chủ vận, Đối vận, Hiệp đồng, Ổn định)
@@ -664,7 +664,7 @@ export class UIView {
    */
   async _initLectures() {
     try {
-      const res = await fetch('./data/lectures.json?v=6.0');
+      const res = await fetch('./data/lectures.json?v=7.0');
       this.lectures = await res.json();
       this.selectedLectureId = this.lectures.length > 0 ? this.lectures[0].id : null;
       this._renderPlaylist(this.lectures);
@@ -780,3 +780,4 @@ export class UIView {
     this._renderPlaylist(filtered);
   }
 }
+
