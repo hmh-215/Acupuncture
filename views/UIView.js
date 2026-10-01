@@ -1,4 +1,4 @@
-﻿/**
+/**
  * UIView.js
  * Quản lý toàn bộ giao diện DOM, bảng điều khiển 2 Chế độ và tương tác người dùng:
  * - Chế độ 1: 🏃 Động Học Cử Động (Chủ vận, Đối vận, Hiệp đồng, Ổn định)
@@ -378,13 +378,17 @@ export class UIView {
     const groupPresets = document.createElement('optgroup');
     groupPresets.label = '🌟 CHUỖI VẬN ĐỘNG TOÀN THÂN & ĐẠO DẪN (PRESETS)';
 
+    const groupLeg = document.createElement('optgroup');
+    groupLeg.label = '🦵 CỬ ĐỘNG CHI DƯỚI & KHUNG CHẬU (SQUAT, LUNGES, DEADLIFT, HIP THRUST)';
+
     const groupShoulder = document.createElement('optgroup');
     groupShoulder.label = '🏃 CỬ ĐỘNG KHỚP VAI & ĐAI VAI';
 
     const groupElbow = document.createElement('optgroup');
     groupElbow.label = '💪 CỬ ĐỘNG KHUỶU & CẲNG TAY';
 
-    const presetIds = ['overhead_reach', 'trunk_rotation', 'walking_gait', 'forward_bending', 'archer_pull'];
+    const presetIds = ['overhead_reach', 'trunk_rotation', 'walking_gait', 'forward_bending', 'archer_pull', 'daodan_archer_pull', 'daodan_hand_behind_back'];
+    const legIds = ['squat', 'lunges', 'deadlift', 'hip_thrust'];
 
     movements.forEach(m => {
       const opt = document.createElement('option');
@@ -393,6 +397,8 @@ export class UIView {
 
       if (presetIds.includes(m.id)) {
         groupPresets.appendChild(opt);
+      } else if (legIds.includes(m.id) || m.id.startsWith('leg_') || m.id.startsWith('hip_')) {
+        groupLeg.appendChild(opt);
       } else if (m.id.startsWith('shoulder_') || m.id.startsWith('scapular_')) {
         groupShoulder.appendChild(opt);
       } else if (m.id.startsWith('elbow_')) {
@@ -403,6 +409,7 @@ export class UIView {
     });
 
     if (groupPresets.children.length > 0) this.els.movementSelect.appendChild(groupPresets);
+    if (groupLeg.children.length > 0) this.els.movementSelect.appendChild(groupLeg);
     if (groupShoulder.children.length > 0) this.els.movementSelect.appendChild(groupShoulder);
     if (groupElbow.children.length > 0) this.els.movementSelect.appendChild(groupElbow);
   }
@@ -664,7 +671,7 @@ export class UIView {
    */
   async _initLectures() {
     try {
-      const res = await fetch('./data/lectures.json?v=7.1');
+      const res = await fetch('./data/lectures.json?v=7.2');
       this.lectures = await res.json();
       this.selectedLectureId = this.lectures.length > 0 ? this.lectures[0].id : null;
       this._renderPlaylist(this.lectures);
