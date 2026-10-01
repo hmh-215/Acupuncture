@@ -1,7 +1,7 @@
-import { Observable } from './Observable.js?v=5.8';
-import { SceneViewModel } from './SceneViewModel.js?v=5.8';
-import { MovementViewModel } from './MovementViewModel.js?v=5.8';
-import { AcupunctureViewModel } from './AcupunctureViewModel.js?v=5.8';
+import { Observable } from './Observable.js?v=5.9';
+import { SceneViewModel } from './SceneViewModel.js?v=5.9';
+import { MovementViewModel } from './MovementViewModel.js?v=5.9';
+import { AcupunctureViewModel } from './AcupunctureViewModel.js?v=5.9';
 
 /**
  * AppViewModel
@@ -42,7 +42,7 @@ export class AppViewModel extends Observable {
         fetch('./data/acupoints.json').then(r => r.json()),
         fetch('./data/bone-mapping.json').then(r => r.json()),
         fetch('./data/acupuncture-chains.json').then(r => r.json()),
-        fetch('./data/mesh-joint-registry.json?v=5.8').then(r => r.json()).catch(() => ({}))
+        fetch('./data/mesh-joint-registry.json?v=5.9').then(r => r.json()).catch(() => ({}))
       ]);
       
       this.muscleData = muscles;

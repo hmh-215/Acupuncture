@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { FBXLoader } from 'three/addons/loaders/FBXLoader.js';
-import { MuscleDeformer } from './MuscleDeformer.js?v=5.8';
+import { MuscleDeformer } from './MuscleDeformer.js?v=5.9';
 
 /**
  * SceneView.js
@@ -774,26 +774,6 @@ export class SceneView {
           this.muscleMeshMap.get(mappedId).push(mesh);
         }
 
-        // Tự động đăng ký biến dạng cơ mềm (Procedural Soft Skinning) cho các cơ cầu nối ngực/lưng
-        if (this.muscleDeformer) {
-          const lowerName = (mesh.name || '').toLowerCase();
-          const isRight = lowerName.endsWith('.r') || lowerName.endsWith('r') || lowerName.includes('.r.') || (mesh.position.x < -0.15);
-          if (lowerName.includes('pectoralis_major') || lowerName.includes('pectoralis major')) {
-            this.muscleDeformer.registerBridgeMuscle(mesh, {
-              anchorPivot: 'chest',
-              driverPivot: isRight ? 'rightUpperArm' : 'leftUpperArm',
-              type: 'pectoralis_major',
-              isRight
-            });
-          } else if (lowerName.includes('latissimus_dorsi') || lowerName.includes('latissimus dorsi')) {
-            this.muscleDeformer.registerBridgeMuscle(mesh, {
-              anchorPivot: 'chest',
-              driverPivot: isRight ? 'rightUpperArm' : 'leftUpperArm',
-              type: 'latissimus',
-              isRight
-            });
-          }
-        }
       } else if (layerType === 'nervous') {
         mesh.userData.id = mesh.name;
         mesh.userData.meshName = mesh.name;
@@ -801,7 +781,34 @@ export class SceneView {
         this.allNervousMeshes.push(mesh);
       }
 
+      // Gắn mesh vào đúng pivot động học
       targetPivot.attach(mesh);
+
+      // Tự động đăng ký biến dạng cơ mềm (Procedural Soft Skinning) cho các cơ cầu nối ngực/lưng
+      // BẮT BUỘC gọi sau khi mesh đã được attach vào targetPivot để đảm bảo ma trận đồng nhất
+      if (layerType === 'muscle' && this.muscleDeformer) {
+        const lowerName = (mesh.name || '').toLowerCase();
+        let isRight = false;
+        if (lowerName.endsWith('r') || lowerName.includes('.r') || lowerName.includes('right')) {
+          isRight = true;
+        } else if (lowerName.endsWith('l') || lowerName.includes('.l') || lowerName.includes('left')) {
+          isRight = false;
+        } else {
+          isRight = mesh.position.x < 0;
+        }
+
+        const anchor = targetPivot;
+        const driver = isRight ? this.rigPivots.rightUpperArm : this.rigPivots.leftUpperArm;
+
+        if (lowerName.includes('pectoralis_major') || lowerName.includes('pectoralis major')) {
+          this.muscleDeformer.registerBridgeMuscle(mesh, anchor, driver, 'pectoralis_major', isRight);
+        } else if (lowerName.includes('latissimus_dorsi') || lowerName.includes('latissimus dorsi')) {
+          this.muscleDeformer.registerBridgeMuscle(mesh, anchor, driver, 'latissimus', isRight);
+        } else if (lowerName.includes('pectoralis_minor') || lowerName.includes('pectoralis minor')) {
+          const girdleDriver = isRight ? this.rigPivots.rightShoulderGirdle : this.rigPivots.leftShoulderGirdle;
+          this.muscleDeformer.registerBridgeMuscle(mesh, anchor, girdleDriver, 'pectoralis_minor', isRight);
+        }
+      }
     });
 
     this.scene.remove(fbxModel);
@@ -1860,6 +1867,11 @@ export class SceneView {
   _animate() {
     this.animationId = requestAnimationFrame(() => this._animate());
     this._updatePoseInterpolation();
+
+    // Đồng bộ ma trận thế giới toàn bộ rig trước khi tính toán biến dạng LBS
+    if (this.rigRoot) {
+      this.rigRoot.updateMatrixWorld(true);
+    }
 
     // Biến dạng & co giãn cơ bắp mềm mại (Procedural Soft Skinning)
     if (this.muscleDeformer) {
