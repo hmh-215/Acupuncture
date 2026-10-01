@@ -829,5 +829,141 @@
       { "muscleId": "erector_spinae", "role": "stabilizer" },
       { "muscleId": "gluteus_maximus", "role": "stabilizer" }
     ]
+  },
+  "squat": {
+    "id": "squat",
+    "name_vi": "Ngồi xổm gập gối - háng sâu (Squat)",
+    "name_en": "Deep Knee & Hip Flexion (Squat)",
+    "plane_vi": "Mặt phẳng đứng dọc (Sagittal plane)",
+    "axis_vi": "Trục ngang qua khớp háng và khớp gối (Bilateral frontal-horizontal axis)",
+    "range_of_motion": "0° - 120° gập gối & háng",
+    "description_vi": "Vận động đa khớp chuỗi động học khép kín (CKC): đồng thời gập khớp háng và khớp gối hạ thấp trọng tâm, đòi hỏi sự phối hợp đồng bộ giữa nhóm duỗi khớp háng và nhóm duỗi khớp gối trong khi cơ dựng sống và cơ lõi bụng giữ vững trục cột sống thắt lưng.",
+    "phases": [
+      {
+        "range": "Pha hạ người (Eccentric)",
+        "primary": "Cơ Tứ đầu đùi và Cơ Mông lớn co ly tâm kiểm soát tốc độ hạ trọng tâm cơ thể"
+      },
+      {
+        "range": "Pha điểm đáy (Bottom transition)",
+        "primary": "Cơ Khung chậu, Cơ Mông nhỡ và Cơ Chày trước kích hoạt tối đa ổn định khớp gối và vòm bàn chân"
+      },
+      {
+        "range": "Pha đạp đứng lên (Concentric)",
+        "primary": "Cơ Mông lớn và Cơ Tứ đầu đùi co hướng tâm phát lực đẩy hông và duỗi thẳng khớp gối"
+      }
+    ],
+    "muscles": [
+      { "muscleId": "gluteus_maximus", "role": "agonist" },
+      { "muscleId": "rectus_femoris", "role": "agonist" },
+      { "muscleId": "biceps_femoris", "role": "antagonist" },
+      { "muscleId": "iliopsoas", "role": "antagonist" },
+      { "muscleId": "gastrocnemius", "role": "synergist" },
+      { "muscleId": "gluteus_medius", "role": "synergist" },
+      { "muscleId": "erector_spinae", "role": "stabilizer" },
+      { "muscleId": "rectus_abdominis", "role": "stabilizer" },
+      { "muscleId": "tibialis_anterior", "role": "stabilizer" }
+    ]
+  },
+  "lunges": {
+    "id": "lunges",
+    "name_vi": "Bước chùng chân khuỵu gối (Lunges)",
+    "name_en": "Forward Lunge & Split Squat",
+    "plane_vi": "Mặt phẳng đứng dọc bất đối xứng (Sagittal plane)",
+    "axis_vi": "Trục ngang hai khớp háng và gối",
+    "range_of_motion": "Gập 90° gối trước, duỗi háng - gập 90° gối sau",
+    "description_vi": "Vận động chân đơn phương (unilateral): chân trước chịu 70% tải trọng ở tư thế gập 90° háng và gối; chân sau duỗi háng căng dãn cơ thắt lưng chậu. Đòi hỏi cơ mông nhỡ và cơ lõi kích hoạt mạnh mẽ để chống nghiêng và xoay khung chậu.",
+    "phases": [
+      {
+        "range": "Pha bước tới & tiếp đất",
+        "primary": "Chân trước tiếp gót vững chắc, cơ chày trước và cơ tứ đầu đùi hấp thụ lực chấn động"
+      },
+      {
+        "range": "Pha chùng gối hạ trọng tâm",
+        "primary": "Gối trước gập 90°, mông lớn chân trước co ly tâm; cơ thắt lưng chậu chân sau bị kéo căng"
+      },
+      {
+        "range": "Pha đạp về vị trí ban đầu",
+        "primary": "Cơ Mông lớn và cơ tứ đầu đùi chân trước co hướng tâm đạp lùi thân người về tư thế đứng thẳng"
+      }
+    ],
+    "muscles": [
+      { "muscleId": "rectus_femoris", "role": "agonist" },
+      { "muscleId": "gluteus_maximus", "role": "agonist" },
+      { "muscleId": "biceps_femoris", "role": "antagonist" },
+      { "muscleId": "iliopsoas", "role": "antagonist" },
+      { "muscleId": "gluteus_medius", "role": "synergist" },
+      { "muscleId": "gastrocnemius", "role": "synergist" },
+      { "muscleId": "erector_spinae", "role": "stabilizer" },
+      { "muscleId": "rectus_abdominis", "role": "stabilizer" },
+      { "muscleId": "tibialis_anterior", "role": "stabilizer" }
+    ]
+  },
+  "deadlift": {
+    "id": "deadlift",
+    "name_vi": "Gập bản lề háng - Kéo nâng tạ (Deadlift)",
+    "name_en": "Hip Hinge & Posterior Chain Pull (Deadlift)",
+    "plane_vi": "Mặt phẳng đứng dọc (Sagittal plane)",
+    "axis_vi": "Trục ngang xuyên qua khớp háng (Transverse hip axis)",
+    "range_of_motion": "Gập háng 80° - 90°, gối gập nhẹ 20° - 30°",
+    "description_vi": "Vận động bản lề háng kinh điển (Hip Hinge) huy động toàn bộ chuỗi cơ cân sau (Posterior Chain): Cơ gân kheo và cơ mông lớn tạo lực đòn bẩy duỗi háng, trong khi toàn bộ cơ dựng sống, cơ lưng rộng và cơ thang gồng cứng đẳng trương để bảo vệ đĩa đệm cột sống.",
+    "phases": [
+      {
+        "range": "Pha chuẩn bị & gập bản lề háng",
+        "primary": "Đẩy xương ụ ngồi ra sau, gân kheo căng cơ ly tâm, cột sống giữ thẳng tự nhiên"
+      },
+      {
+        "range": "Pha phát lực kéo nâng",
+        "primary": "Cơ Mông lớn và Cơ Nhị đầu đùi gân kheo co hướng tâm cực mạnh đưa khớp háng về trước"
+      },
+      {
+        "range": "Pha khóa trục đỉnh (Lockout)",
+        "primary": "Cơ Mông lớn siết chặt tối đa, cơ dựng sống và cơ lưng rộng khóa vững đai vai - thắt lưng"
+      }
+    ],
+    "muscles": [
+      { "muscleId": "gluteus_maximus", "role": "agonist" },
+      { "muscleId": "biceps_femoris", "role": "agonist" },
+      { "muscleId": "rectus_femoris", "role": "antagonist" },
+      { "muscleId": "iliopsoas", "role": "antagonist" },
+      { "muscleId": "latissimus_dorsi", "role": "synergist" },
+      { "muscleId": "erector_spinae", "role": "synergist" },
+      { "muscleId": "rectus_abdominis", "role": "stabilizer" },
+      { "muscleId": "trapezius_upper", "role": "stabilizer" },
+      { "muscleId": "gluteus_medius", "role": "stabilizer" }
+    ]
+  },
+  "hip_thrust": {
+    "id": "hip_thrust",
+    "name_vi": "Nâng hông đẩy chậu / Cầu mông (Hip Thrust)",
+    "name_en": "Supine / Bench Hip Thrust & Glute Bridge",
+    "plane_vi": "Mặt phẳng đứng dọc (Sagittal plane)",
+    "axis_vi": "Trục ngang khớp háng",
+    "range_of_motion": "Duỗi khớp háng từ gập 90° lên duỗi hoàn toàn 0° - 10°",
+    "description_vi": "Bài tập cô lập và tối ưu hóa lực co cơ hướng tâm của Cơ Mông lớn ở vị trí cơ co ngắn nhất (Shortened position), triệt tiêu sự bù trừ của cơ dựng sống bằng việc giữ lồng ngực và xương chậu khóa chặt ở pha đỉnh.",
+    "phases": [
+      {
+        "range": "Pha hạ háng có kiểm soát",
+        "primary": "Khớp háng gập về góc 90°, cơ mông lớn giãn có kiểm soát"
+      },
+      {
+        "range": "Pha phát lực nâng đẩy chậu",
+        "primary": "Lực đẩy dồn vào gót chân, cơ mông lớn co hướng tâm đẩy khung chậu hướng thẳng lên"
+      },
+      {
+        "range": "Pha khóa đỉnh (Peak contraction)",
+        "primary": "Xương chậu cuộn nhẹ về sau, cơ mông lớn siết cứng cực đại trong 1-2 giây"
+      }
+    ],
+    "muscles": [
+      { "muscleId": "gluteus_maximus", "role": "agonist" },
+      { "muscleId": "biceps_femoris", "role": "agonist" },
+      { "muscleId": "iliopsoas", "role": "antagonist" },
+      { "muscleId": "rectus_femoris", "role": "antagonist" },
+      { "muscleId": "erector_spinae", "role": "synergist" },
+      { "muscleId": "gastrocnemius", "role": "synergist" },
+      { "muscleId": "rectus_abdominis", "role": "stabilizer" },
+      { "muscleId": "gluteus_medius", "role": "stabilizer" },
+      { "muscleId": "oblique_externus", "role": "stabilizer" }
+    ]
   }
 }

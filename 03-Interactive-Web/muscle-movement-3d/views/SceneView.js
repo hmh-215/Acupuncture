@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { FBXLoader } from 'three/addons/loaders/FBXLoader.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { MuscleDeformer } from './MuscleDeformer.js?v=7.1';
+import { MuscleDeformer } from './MuscleDeformer.js?v=7.2';
 
 /**
  * SceneView.js
@@ -1659,12 +1659,12 @@ export class SceneView {
 
       // 6. THẾ ĐẠO DẪN: ĐƯA TAY RA SAU LƯNG CHẠM CỔ GÁY (Hand-Behind-Back & Up)
       case 'daodan_hand_behind_back':
-        this.targetRotations.torso.set(0, -0.10, 0);
-        this.targetRotations.chest.set(-0.08, -0.15, 0);
-        this.targetRotations.neck.set(0.08, 0.05, 0);
-        this.targetRotations.rightShoulderGirdle.set(0.12, -0.20, -0.15);
-        this.targetRotations.rightUpperArm.set(0.80, -1.10, 0.70);
-        this.targetRotations.rightForearm.set(2.10, 1.00, 0.60);
+        this.targetRotations.torso.set(0, -0.06, 0);
+        this.targetRotations.chest.set(-0.06, -0.10, 0);
+        this.targetRotations.neck.set(0.06, 0.05, 0);
+        this.targetRotations.rightShoulderGirdle.set(0.08, -0.15, -0.10);
+        this.targetRotations.rightUpperArm.set(0.40, -1.05, 0.45);
+        this.targetRotations.rightForearm.set(2.55, 0.15, 0.05);
         break;
 
       // 7. GIẠNG VAI (Shoulder Abduction) - Phối hợp nhịp bả vai - cánh tay (2:1)
@@ -1744,6 +1744,66 @@ export class SceneView {
         this.targetRotations.rightForearm.set(0, 0, 0);
         break;
 
+      // 17. NGỒI XỔM GẬP GỐI - HÁNG SÂU (Squat)
+      case 'squat':
+        this.targetPositions.pelvis.y = this.basePositions.pelvis.y - 1.20;
+        this.targetRotations.pelvis.set(0.15, 0, 0);
+        this.targetRotations.rightThigh.set(-1.15, 0, 0.08);
+        this.targetRotations.leftThigh.set(-1.15, 0, -0.08);
+        this.targetRotations.rightShin.set(1.45, 0, 0);
+        this.targetRotations.leftShin.set(1.45, 0, 0);
+        this.targetRotations.torso.set(0.38, 0, 0);
+        this.targetRotations.chest.set(0.18, 0, 0);
+        this.targetRotations.neck.set(0.05, 0, 0);
+        this.targetRotations.rightUpperArm.set(-0.65, 0, 0);
+        this.targetRotations.leftUpperArm.set(-0.65, 0, 0);
+        break;
+
+      // 18. BƯỚC CHÙNG CHÂN KHUỴU GỐI (Lunges)
+      case 'lunges':
+        this.targetPositions.pelvis.y = this.basePositions.pelvis.y - 0.85;
+        this.targetRotations.pelvis.set(0.05, 0, 0);
+        this.targetRotations.rightThigh.set(-1.15, 0, 0.05);
+        this.targetRotations.rightShin.set(1.25, 0, 0);
+        this.targetRotations.leftThigh.set(0.35, 0, -0.05);
+        this.targetRotations.leftShin.set(1.30, 0, 0);
+        this.targetRotations.torso.set(0.08, 0, 0);
+        this.targetRotations.chest.set(0.04, 0, 0);
+        this.targetRotations.rightUpperArm.set(0.05, 0, -0.08);
+        this.targetRotations.leftUpperArm.set(0.05, 0, 0.08);
+        break;
+
+      // 19. GẬP BẢN LỀ HÁNG - KÉO NÂNG TẠ (Deadlift)
+      case 'deadlift':
+        this.targetPositions.pelvis.y = this.basePositions.pelvis.y - 0.45;
+        this.targetPositions.pelvis.z = this.basePositions.pelvis.z - 0.40;
+        this.targetRotations.pelvis.set(0.38, 0, 0);
+        this.targetRotations.rightThigh.set(-0.45, 0, 0.05);
+        this.targetRotations.leftThigh.set(-0.45, 0, -0.05);
+        this.targetRotations.rightShin.set(0.38, 0, 0);
+        this.targetRotations.leftShin.set(0.38, 0, 0);
+        this.targetRotations.torso.set(0.48, 0, 0);
+        this.targetRotations.chest.set(0.28, 0, 0);
+        this.targetRotations.neck.set(0.10, 0, 0);
+        this.targetRotations.rightUpperArm.set(-0.85, 0, 0);
+        this.targetRotations.leftUpperArm.set(-0.85, 0, 0);
+        break;
+
+      // 20. NÂNG HÔNG ĐẨY CHẬU / CẦU MÔNG (Hip Thrust)
+      case 'hip_thrust':
+        this.targetPositions.pelvis.y = this.basePositions.pelvis.y - 0.50;
+        this.targetRotations.pelvis.set(-0.12, 0, 0);
+        this.targetRotations.rightThigh.set(-0.80, 0, 0.06);
+        this.targetRotations.leftThigh.set(-0.80, 0, -0.06);
+        this.targetRotations.rightShin.set(1.45, 0, 0);
+        this.targetRotations.leftShin.set(1.45, 0, 0);
+        this.targetRotations.torso.set(-0.35, 0, 0);
+        this.targetRotations.chest.set(-0.30, 0, 0);
+        this.targetRotations.neck.set(0.12, 0, 0);
+        this.targetRotations.rightUpperArm.set(0.00, 0, -0.45);
+        this.targetRotations.leftUpperArm.set(0.00, 0, 0.45);
+        break;
+
       default:
         break;
     }
@@ -1768,12 +1828,13 @@ export class SceneView {
       }
     }
 
-    // ĐỒNG BỘ 100% GÓC QUAY SANG KHUNG XƯƠNG GLTF SKINNED MESH (GPU SKINNING)
+    // ĐỒNG BỘ 100% GÓC QUAY VÀ VỊ TRÍ SANG KHUNG XƯƠNG GLTF SKINNED MESH (GPU SKINNING)
     if (this.skeletonBones) {
       for (const [key, bone] of Object.entries(this.skeletonBones)) {
         const pivot = this.rigPivots[key];
         if (pivot && bone) {
           bone.rotation.copy(pivot.rotation);
+          bone.position.copy(pivot.position);
         }
       }
     }
