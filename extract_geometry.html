@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Binary Geometry Extractor</title>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./assets/libs/three/build/three.module.js",
+      "three/addons/": "./assets/libs/three/examples/jsm/",
+      "fflate": "./assets/libs/three/examples/jsm/libs/fflate.module.js"
+    }
+  }
+  </script>
+</head>
+<body style="background:#0f172a; color:#f8fafc; font-family:sans-serif; padding:20px;">
+  <h2>Trích xuất nhị phân (Binary) Hệ Cơ Z-Anatomy phục vụ Volumetric Skinning</h2>
+  <div id="status" style="font-size:18px; color:#38bdf8; margin-top:20px;">Đang khởi tạo...</div>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { FBXLoader } from 'three/addons/loaders/FBXLoader.js';
+
+    const statusEl = document.getElementById('status');
+    statusEl.textContent = 'Đang nạp MuscularSystem.fbx...';
+
+    const loader = new FBXLoader();
+    loader.load('./assets/models/MuscularSystem.fbx', (fbx) => {
+      statusEl.textContent = 'Đã nạp xong FBX! Đang tính toán ma trận thế giới chuẩn...';
+
+      // 1. Tính toán scale và căn chỉnh tâm
+      const box = new THREE.Box3().setFromObject(fbx);
+      const size = box.getSize(new THREE.Vector3());
+      const center = box.getCenter(new THREE.Vector3());
+      const targetHeight = 17.0;
+      const uniformScaleFactor = targetHeight / (size.y || 1);
+
+      fbx.scale.set(uniformScaleFactor, uniformScaleFactor, uniformScaleFactor);
+      box.setFromObject(fbx);
+      box.getCenter(center);
+
+      fbx.position.x = -center.x;
+      fbx.position.y = -center.y + 9;
+      fbx.position.z = -center.z;
+      fbx.updateMatrixWorld(true);
+
+      // 2. Thu thập dữ liệu từng mesh
+      const meshes = [];
+      const vTemp = new THREE.Vector3();
+      const nTemp = new THREE.Vector3();
+      const normalMatrix = new THREE.Matrix3();
+      const textEncoder = new TextEncoder();
+
+      fbx.traverse((child) => {
+        if (child.isMesh && child.geometry && child.geometry.attributes.position) {
+          const geom = child.geometry;
+          const posAttr = geom.attributes.position;
+          const normalAttr = geom.attributes.normal;
+          const indexAttr = geom.index;
+
+          normalMatrix.getNormalMatrix(child.matrixWorld);
+
+          const vertexCount = posAttr.count;
+          const positions = new Float32Array(vertexCount * 3);
+          const normals = new Float32Array(vertexCount * 3);
+
+          for (let i = 0; i < vertexCount; i++) {
+            vTemp.fromBufferAttribute(posAttr, i);
+            vTemp.applyMatrix4(child.matrixWorld);
+            positions[i * 3] = vTemp.x;
+            positions[i * 3 + 1] = vTemp.y;
+            positions[i * 3 + 2] = vTemp.z;
+
+            if (normalAttr) {
+              nTemp.fromBufferAttribute(normalAttr, i);
+              nTemp.applyMatrix3(normalMatrix).normalize();
+              normals[i * 3] = nTemp.x;
+              normals[i * 3 + 1] = nTemp.y;
+              normals[i * 3 + 2] = nTemp.z;
+            } else {
+              normals[i * 3] = 0;
+              normals[i * 3 + 1] = 1;
+              normals[i * 3 + 2] = 0;
+            }
+          }
+
+          let indices;
+          if (indexAttr) {
+            indices = new Uint32Array(indexAttr.array);
+          } else {
+            indices = new Uint32Array(vertexCount);
+            for (let i = 0; i < vertexCount; i++) indices[i] = i;
+          }
+
+          const nameBytes = textEncoder.encode(child.name || 'unnamed');
+          meshes.push({
+            nameBytes,
+            vertexCount,
+            positions,
+            normals,
+            indexCount: indices.length,
+            indices
+          });
+        }
+      });
+
+      statusEl.textContent = `Đã chuẩn bị ${meshes.length} mesh. Đang đóng gói binary buffer...`;
+
+      // 3. Đóng gói thành binary stream duy nhất với căn chỉnh 4-byte (4-byte alignment)
+      let totalBytes = 4; // uint32 num_meshes
+      for (const m of meshes) {
+        const paddedNameLen = (m.nameBytes.length + 3) & ~3;
+        totalBytes += 4; // uint32 name_len
+        totalBytes += paddedNameLen;
+        totalBytes += 4; // uint32 vertexCount
+        totalBytes += m.vertexCount * 3 * 4; // positions (float32)
+        totalBytes += m.vertexCount * 3 * 4; // normals (float32)
+        totalBytes += 4; // uint32 indexCount
+        totalBytes += m.indexCount * 4; // indices (uint32)
+      }
+
+      const buffer = new ArrayBuffer(totalBytes);
+      const view = new DataView(buffer);
+      const uint8View = new Uint8Array(buffer);
+      let offset = 0;
+
+      view.setUint32(offset, meshes.length, true); offset += 4;
+
+      for (const m of meshes) {
+        const nameLen = m.nameBytes.length;
+        const paddedNameLen = (nameLen + 3) & ~3;
+        view.setUint32(offset, nameLen, true); offset += 4;
+        uint8View.set(m.nameBytes, offset); offset += paddedNameLen;
+
+        view.setUint32(offset, m.vertexCount, true); offset += 4;
+        new Float32Array(buffer, offset, m.vertexCount * 3).set(m.positions);
+        offset += m.vertexCount * 3 * 4;
+
+        new Float32Array(buffer, offset, m.vertexCount * 3).set(m.normals);
+        offset += m.vertexCount * 3 * 4;
+
+        view.setUint32(offset, m.indexCount, true); offset += 4;
+        new Uint32Array(buffer, offset, m.indexCount).set(m.indices);
+        offset += m.indexCount * 4;
+      }
+
+      statusEl.textContent = `Đóng gói hoàn tất: ${(totalBytes / 1024 / 1024).toFixed(2)} MB. Đang gửi sang Python...`;
+
+      // 4. POST nhị phân trực tiếp
+      fetch('http://127.0.0.1:8996/api/save_binary', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/octet-stream' },
+        body: buffer
+      })
+      .then(r => r.text())
+      .then(res => {
+        statusEl.textContent = `✅ HOÀN TẤT: ${res}`;
+        console.log('Complete:', res);
+      })
+      .catch(err => {
+        statusEl.textContent = `❌ Lỗi gửi: ${err.message}`;
+        console.error(err);
+      });
+    }, (xhr) => {
+      if (xhr.lengthComputable) {
+        const pct = Math.round(xhr.loaded / xhr.total * 100);
+        statusEl.textContent = `Đang nạp FBX: ${pct}%...`;
+      }
+    }, (err) => {
+      statusEl.textContent = `❌ Lỗi nạp FBX: ${err.message}`;
+      console.error(err);
+    });
+  </script>
+</body>
+</html>
+

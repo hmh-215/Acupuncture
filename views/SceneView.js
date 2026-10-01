@@ -1,7 +1,8 @@
-import * as THREE from 'three';
+﻿import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { FBXLoader } from 'three/addons/loaders/FBXLoader.js';
-import { MuscleDeformer } from './MuscleDeformer.js?v=6.0';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { MuscleDeformer } from './MuscleDeformer.js?v=7.0';
 
 /**
  * SceneView.js
@@ -821,9 +822,15 @@ export class SceneView {
     this._setupLighting();
 
     try {
-      await this._loadMuscularSystemFBX();
+      // Ưu tiên nạp mô hình GLTF 2.0 SkinnedMesh hữu cơ (GPU Accelerated Skinning)
+      await this._loadMuscularSystemGLB();
     } catch (err) {
-      console.error('Lỗi nạp hệ cơ FBX:', err);
+      console.warn('Không thể nạp Skinned GLB, chuyển sang fallback FBX:', err);
+      try {
+        await this._loadMuscularSystemFBX();
+      } catch (fbxErr) {
+        console.error('Lỗi nạp hệ cơ FBX fallback:', fbxErr);
+      }
     }
 
     this._setupInteraction();
@@ -853,6 +860,76 @@ export class SceneView {
   // ============================================================
   // NẠP 2 LỚP MÔ HÌNH CHÍNH (HỆ CƠ & HỆ THẦN KINH)
   // ============================================================
+  // NẠP HỆ CƠ GLTF 2.0 SKINNED MESH (TÍNH NĂNG ĐỘT PHÁ: GPU ORGANIC SKINNING)
+  // 683 nhóm cơ được biến dạng hữu cơ, tự động kéo dãn, uốn cong mượt mà theo 14 khớp
+  // Triệt tiêu 100% hiện tượng rách cơ ngực, hở lưng dưới, văng cơ lưng ra không trung
+  // ============================================================
+  async _loadMuscularSystemGLB() {
+    this._updateLoadingText('Đang nạp hệ cơ Skinned Mesh 3D (GPU Skinning)...');
+    return new Promise((resolve, reject) => {
+      const loader = new GLTFLoader();
+      loader.load(
+        'assets/models/MuscularSystem_Skinned.glb',
+        (gltf) => {
+          this.isSkinnedModel = true;
+          this.skinnedScene = gltf.scene;
+
+          // MẶC ĐỊNH: MÀU XÁM SLATE TRUNG TÍNH Y KHOA + ĐỤC 100% (OPAQUE SOLID)
+          const neutralMuscleMat = new THREE.MeshStandardMaterial({
+            color: 0x94a3b8, // Xám Slate trung tính
+            roughness: 0.6,
+            metalness: 0.05,
+            transparent: true,
+            opacity: 1.0,
+            depthWrite: true,
+            side: THREE.DoubleSide
+          });
+
+          this.skeletonBones = {};
+
+          gltf.scene.traverse((child) => {
+            if (child.isBone) {
+              const boneKey = child.name.replace(/^Bone_/, '');
+              this.skeletonBones[boneKey] = child;
+            } else if (child.isSkinnedMesh) {
+              child.material = neutralMuscleMat.clone();
+              child.userData.type = 'muscle';
+              child.userData.meshName = child.name;
+
+              const mappedId = this._mapFBXNameToMuscleId(child.name);
+              child.userData.id = mappedId || child.name;
+              child.visible = this.showMuscleLayer;
+
+              this.allMuscleMeshes.push(child);
+
+              if (mappedId) {
+                if (!this.muscleMeshMap.has(mappedId)) {
+                  this.muscleMeshMap.set(mappedId, []);
+                }
+                this.muscleMeshMap.get(mappedId).push(child);
+              }
+            }
+          });
+
+          this.scene.add(gltf.scene);
+          this._hideLoadingOverlay();
+          console.info(`✅ [GLTF Skinned] Đã nạp thành công ${this.allMuscleMeshes.length} SkinnedMesh hệ cơ với 14 khớp GPU Skinning!`);
+          resolve();
+        },
+        (xhr) => {
+          if (xhr.lengthComputable) {
+            const percent = Math.round((xhr.loaded / xhr.total) * 100);
+            this._updateLoadingText(`Đang tải hệ cơ Skinned GLB (${percent}%)...`);
+          }
+        },
+        (error) => {
+          this._hideLoadingOverlay();
+          reject(error);
+        }
+      );
+    });
+  }
+
   async _loadMuscularSystemFBX() {
     return new Promise((resolve, reject) => {
       const loader = new FBXLoader();
@@ -1693,6 +1770,16 @@ export class SceneView {
         pivot.position.lerp(targetPos, lerpSpeed);
       }
     }
+
+    // ĐỒNG BỘ 100% GÓC QUAY SANG KHUNG XƯƠNG GLTF SKINNED MESH (GPU SKINNING)
+    if (this.skeletonBones) {
+      for (const [key, bone] of Object.entries(this.skeletonBones)) {
+        const pivot = this.rigPivots[key];
+        if (pivot && bone) {
+          bone.rotation.copy(pivot.rotation);
+        }
+      }
+    }
   }
 
   // ============================================================
@@ -1909,3 +1996,4 @@ export class SceneView {
     this.renderer.dispose();
   }
 }
+

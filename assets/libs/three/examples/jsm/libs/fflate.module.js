@@ -1,4 +1,4 @@
-/*!
+﻿/*!
 fflate - fast JavaScript compression/decompression
 <https://101arrowz.github.io/fflate>
 Licensed under MIT. https://github.com/101arrowz/fflate/blob/master/LICENSE
@@ -2670,3 +2670,4 @@ export function unzipSync(data, opts) {
     }
     return files;
 }
+

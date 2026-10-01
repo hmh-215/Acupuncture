@@ -1,4 +1,4 @@
-import {
+﻿import {
 	Vector3,
 	Vector4
 } from 'three';
@@ -540,3 +540,4 @@ export {
 	calcSurfacePoint,
 	calcVolumePoint,
 };
+

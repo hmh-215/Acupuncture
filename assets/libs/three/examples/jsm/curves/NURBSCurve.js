@@ -1,4 +1,4 @@
-import {
+﻿import {
 	Curve,
 	Vector3,
 	Vector4

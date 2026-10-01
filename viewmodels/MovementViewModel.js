@@ -1,4 +1,4 @@
-import { Observable } from './Observable.js?v=6.0';
+﻿import { Observable } from './Observable.js?v=7.0';
 
 /**
  * MovementViewModel
@@ -208,3 +208,4 @@ export class MovementViewModel extends Observable {
     }
   }
 }
+
