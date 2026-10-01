@@ -1,7 +1,7 @@
-import { Observable } from './Observable.js?v=5.7';
-import { SceneViewModel } from './SceneViewModel.js?v=5.7';
-import { MovementViewModel } from './MovementViewModel.js?v=5.7';
-import { AcupunctureViewModel } from './AcupunctureViewModel.js?v=5.7';
+import { Observable } from './Observable.js?v=5.8';
+import { SceneViewModel } from './SceneViewModel.js?v=5.8';
+import { MovementViewModel } from './MovementViewModel.js?v=5.8';
+import { AcupunctureViewModel } from './AcupunctureViewModel.js?v=5.8';
 
 /**
  * AppViewModel
@@ -36,12 +36,13 @@ export class AppViewModel extends Observable {
     this.state.error = null;
     
     try {
-      const [muscles, movements, acupoints, bones, chains] = await Promise.all([
+      const [muscles, movements, acupoints, bones, chains, registry] = await Promise.all([
         fetch('./data/muscles.json').then(r => r.json()),
         fetch('./data/movements.json').then(r => r.json()),
         fetch('./data/acupoints.json').then(r => r.json()),
         fetch('./data/bone-mapping.json').then(r => r.json()),
-        fetch('./data/acupuncture-chains.json').then(r => r.json())
+        fetch('./data/acupuncture-chains.json').then(r => r.json()),
+        fetch('./data/mesh-joint-registry.json?v=5.8').then(r => r.json()).catch(() => ({}))
       ]);
       
       this.muscleData = muscles;
@@ -49,6 +50,7 @@ export class AppViewModel extends Observable {
       this.acupointData = acupoints;
       this.boneMapping = bones;
       this.chainsData = chains;
+      this.meshJointRegistry = registry || {};
       
       this.batch(() => {
         this.state.isLoading = false;
