@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { FBXLoader } from 'three/addons/loaders/FBXLoader.js';
-import { MuscleDeformer } from './MuscleDeformer.js?v=5.9';
+import { MuscleDeformer } from './MuscleDeformer.js?v=6.0';
 
 /**
  * SceneView.js
@@ -18,7 +18,8 @@ export class SceneView {
     this.container = container;
     this.sceneVM = sceneVM;
     this.appVM = appVM;
-    this.muscleDeformer = new MuscleDeformer();
+    // Vô hiệu hóa module biến dạng thủ công (tránh làm vỡ/nhiễu/phình to mesh FBX)
+    this.muscleDeformer = null;
 
     this.scene = new THREE.Scene();
     this.currentTheme = 'light';
@@ -1551,20 +1552,19 @@ export class SceneView {
         this.targetRotations.torso.set(0, 0.05, 0);
         break;
 
-      // 4. CÚI NGƯỜI GẬP LƯNG (Forward Trunk Bending) - CƠ SINH HỌC CHUẨN XÁC
+      // 4. CÚI NGƯỜI GẬP LƯNG (Forward Trunk Bending) - NHỊP THẮT LƯNG - CHẬU CHUẨN SINH LÝ
       case 'forward_bending':
-        this.targetRotations.pelvis.set(0.68, 0, 0);
-        this.targetRotations.rightThigh.set(-0.68, 0, 0);
-        this.targetRotations.leftThigh.set(-0.68, 0, 0);
-        this.targetRotations.torso.set(0.35, 0, 0);
-        this.targetRotations.chest.set(0.30, 0, 0);
+        this.targetRotations.pelvis.set(0.32, 0, 0);
+        this.targetRotations.rightThigh.set(-0.32, 0, 0);
+        this.targetRotations.leftThigh.set(-0.32, 0, 0);
+        this.targetRotations.torso.set(0.30, 0, 0);
+        this.targetRotations.chest.set(0.28, 0, 0);
         this.targetRotations.neck.set(0.12, 0, 0);
-        this.targetRotations.rightUpperArm.set(-1.10, 0, 0);
-        this.targetRotations.leftUpperArm.set(-1.10, 0, 0);
+        // Cánh tay buông thõng tự nhiên hướng thẳng xuống mặt đất
+        this.targetRotations.rightUpperArm.set(-0.90, 0, 0);
+        this.targetRotations.leftUpperArm.set(-0.90, 0, 0);
         this.targetRotations.rightForearm.set(0, 0, 0);
         this.targetRotations.leftForearm.set(0, 0, 0);
-        this.targetPositions.pelvis.z = this.basePositions.pelvis.z - 0.35;
-        this.targetPositions.pelvis.y = this.basePositions.pelvis.y - 0.10;
         break;
 
       // 5. GIƯƠNG CUNG BẮN TÊN (Archer Draw)

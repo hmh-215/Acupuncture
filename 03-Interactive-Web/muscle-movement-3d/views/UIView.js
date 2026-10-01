@@ -664,7 +664,7 @@ export class UIView {
    */
   async _initLectures() {
     try {
-      const res = await fetch('./data/lectures.json?v=5.9');
+      const res = await fetch('./data/lectures.json?v=6.0');
       this.lectures = await res.json();
       this.selectedLectureId = this.lectures.length > 0 ? this.lectures[0].id : null;
       this._renderPlaylist(this.lectures);
