@@ -1,4 +1,4 @@
-﻿import { Observable } from './Observable.js?v=7.0';
+﻿import { Observable } from './Observable.js?v=7.1';
 
 /**
  * AcupunctureViewModel
@@ -97,4 +97,5 @@ export class AcupunctureViewModel extends Observable {
     this.selectChain(null);
   }
 }
+
 
