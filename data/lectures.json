@@ -3,29 +3,67 @@
     "id": "chuong-01",
     "chapter": "Chương 01",
     "title": "Chuỗi Động Học & Tương Tác Cơ Chủ Vận — Đối Vận",
-    "duration": "12:45",
-    "status": "ready_script",
-    "badge": "Đã hoàn thành Storyboard & Assets",
-    "video_src": "",
-    "summary": "Phân tích chuyển động đại thể của khớp vai và chuỗi động học chi trên. Cơ chế đối kháng nhịp nhàng giữa nhóm cơ chủ vận (Agonist) và đối vận (Antagonist) theo định luật ức chế tương hỗ Sherrington. Mối liên hệ mật thiết giữa tư thế tĩnh và động học giải phẫu ứng dụng.",
-    "micro_shots": [
+    "duration": "04:30",
+    "status": "ready_video",
+    "badge": "Đã có 3 Video Shots Infographic (4K/HD)",
+    "video_src": "assets/videos/chuong-01/Chap01_shot01.mp4",
+    "summary": "Phân tích toàn diện chuỗi động học của khớp vai và khuỷu tay trên 3 chiều không gian. Khảo sát 2 pha cơ sinh học nền tảng của Hệ Đạo Dẫn: Pha 1 Co Hướng Tâm (Concentric) với cơ chế bám trượt Actin-Myosin nén ép mao mạch hình thành Điểm Cân Kết; và Pha 2 Căng Giằng Giữ (Co Lệch Tâm - Eccentric) đóng vai trò phanh hãm và neo khóa trục ổ chảo khớp vai. Ứng dụng châm cứu giải phóng áp lực tại các huyệt vị then chốt: Kiên Tỉnh (GB-21), Khúc Trạch (PC-3) và Xích Trạch (LU-5).",
+    "shots": [
       {
-        "time": "00:00 - 04:15",
-        "shot": "Shot 01a: Đại thể & Chuỗi động học",
-        "desc": "Cử động đại thể giạng vai 0° – 180°, tương tác nhịp bả vai - cánh tay (Scapulohumeral Rhythm tỉ lệ 2:1) giữa cơ Delta và cơ chóp xoay."
+        "id": "shot01",
+        "shot_num": "Shot 01",
+        "title": "Shot 01: Đại Thể — Chuỗi Động Học & Cân Bằng 3 Chiều Không Gian",
+        "subtitle": "Chuỗi Cơ Cân • Đối Trọng Ngực - Lưng • Nút Giải Áp Kiên Tỉnh (GB-21)",
+        "duration": "01:10",
+        "time": "00:00 - 01:10",
+        "video_src": "assets/videos/chuong-01/Chap01_shot01.mp4",
+        "desc": "Mô hình 3D bán thân trong không gian Dark Slate (#0f172a), 3 mặt phẳng tọa độ phát quang neon. Cơ ngực lớn co ngắn phát lực (#ef4444) kéo đai vai gù ra trước; chuỗi cơ trám và cơ dựng sống mặt sau siết đối trọng (#f59e0b). Cơ thang đóng vai trò dây giằng cột buồm gánh tải bù trừ, giải tỏa căng thẳng tại huyệt Kiên Tỉnh (GB-21) và cầu nối truyền lực sang cơ nhị đầu cẳng tay.",
+        "transcript": "Trong cơ thể người, cơ bắp không bao giờ vận động đơn độc. Mọi cử động đều vận hành theo các chuỗi cân mạc liên hoàn, duy trì sự thăng bằng tinh tế trên ba chiều không gian. Khi chúng ta vận động hoặc cúi gập, nhóm cơ mặt trước ngực co rút phát động lực kéo gù đai vai và đưa đầu ra phía trước. Lập tức, chuỗi cơ mặt sau lưng gồm cơ trám và cơ dựng sống bắt buộc phải kích hoạt lực căng đối trọng để giằng giữ cột sống. Đặc biệt, cơ thang đóng vai trò như hệ thống dây giằng cột buồm, liên tục gánh chịu lực kéo căng để giữ vững đai vai và hộp sọ. Đau mỏi cổ vai gáy thực chất chỉ là nạn nhân gánh tải bù trừ. Huyệt Kiên Tỉnh tại bờ trên cơ thang chính là nút giải tỏa căng thẳng cho toàn bộ vùng vai. Để truyền phát lực vận động, đai vai trở thành bệ đỡ vững chắc dẫn truyền lực từ cơ ngực và mỏm quạ, chạy dọc theo cánh tay để kích hoạt cơ nhị đầu. Khớp khuỷu và cơ nhị đầu cánh tay đã sẵn sàng. Hãy cùng quan sát pha phát động lực đầu tiên trong chuỗi vận động: Pha một, co hướng tâm."
       },
       {
-        "time": "04:15 - 08:30",
-        "shot": "Shot 01b: Vi thể Actin - Myosin & Áp lực khoang",
-        "desc": "Kính lúp hiển vi phóng đại cấu trúc Sarcomere, chu kỳ cầu trượt Actin-Myosin, hiện tượng ép dẹt lòng mao mạch nuôi dưỡng và áp lực khoang cân mạc đạt 0.016 bar."
+        "id": "shot02",
+        "shot_num": "Shot 02",
+        "title": "Shot 02: Vi Thể — Pha 1 Co Hướng Tâm & Cơ Chế Điểm Cân Kết",
+        "subtitle": "Cử Động Gập Khuỷu • Cầu Trượt Actin-Myosin • Nén Mao Mạch • Khúc Trạch & Xích Trạch",
+        "duration": "01:30",
+        "time": "01:10 - 02:40",
+        "video_src": "assets/videos/chuong-01/Chap01_shot02.mp4",
+        "desc": "Nguyên lý co hướng tâm rút ngắn sợi cơ gom lực. Cử động gập khuỷu tay: Cơ nhị đầu co ngắn phình dày (#ef4444), cơ tam đầu nhả dài theo ức chế tương hỗ Sherrington (#06b6d4). Vi thể cầu trượt Actin - Myosin kéo ngắn sarcomere; cơ phình dày nén ép mao mạch gây thiếu máu nuôi dưỡng, hình thành Điểm Cân Kết (Taut Band) gây đau mạn tính, giải áp tại huyệt Khúc Trạch (PC-3) & Xích Trạch (LU-5).",
+        "transcript": "Pha một: Co hướng tâm. Đây là trạng thái sợi cơ chủ động rút ngắn chiều dài, kéo hai đầu bám lại gần nhau để gom lực và tạo chuyển động. Áp dụng vào khớp khuỷu: Cơ nhị đầu co ngắn phình dày để gập cẳng tay, đồng thời cơ tam đầu nhả dài theo cơ chế ức chế tương hỗ. Ở cấp độ vi thể, các đầu cầu myosin trượt kéo sợi actin làm sarcomere co ngắn, tạo nên lực co rút mạnh mẽ cho toàn bộ khối cơ. Khi cơ co rút quá mức, các sợi cơ phình to chèn ép đè bẹp mao mạch, khiến dòng máu nuôi dưỡng cục bộ bị tắc nghẽn và thiếu oxy. Lực co bị giam hãm tích tụ thành Điểm Cân Kết, tạo nên dải xơ cứng cục bộ và gây đau buốt mạn tính trong cơ nhị đầu. Để giải phóng bế tắc, hai huyệt Khúc Trạch và Xích Trạch ở hai bên gân cơ nhị đầu là cửa ngõ khai thông áp lực và phục hồi vi tuần hoàn. Khi huyệt vị khai thông áp lực, cơ nhị đầu buông xả co thắt, khôi phục tính đàn hồi sinh lý để khớp khuỷu mở góc sẵn sàng chuyển động. Khi khớp khuỷu mở duỗi chịu tải, nhóm cơ tam đầu mặt sau lập tức kích hoạt sức căng đối kháng, mở màn cho Pha hai: Căng giằng giữ. Co hướng tâm là chân ga tạo chuyển động, còn căng giằng giữ là chân phanh bảo vệ diện khớp. Thiếu lực giằng giữ, quán tính vận động sẽ làm tổn thương toàn bộ cấu trúc xương khớp."
       },
       {
-        "time": "08:30 - 12:45",
-        "shot": "Shot 01c: Hệ quả lâm sàng & Định vị huyệt vị",
-        "desc": "Sự hình thành Điểm Cân Kết (Myofascial Trigger Point) tại cơ Thang trên, dòng lực co rút và kỹ thuật châm định vị huyệt Kiên Tỉnh (GB-21) chuẩn xác theo góc châm an toàn."
+        "id": "shot03",
+        "shot_num": "Shot 03",
+        "title": "Shot 03: Lâm Sàng — Pha 2 Căng Giằng Giữ & Cơ Chế Phanh Co Lệch Tâm",
+        "subtitle": "Phanh Hãm Cơ Tam Đầu • Dây Cáp Neo Khóa Trục • Nẹp Ép Ổ Chảo Khớp Vai",
+        "duration": "01:50",
+        "time": "02:40 - 04:30",
+        "video_src": "assets/videos/chuong-01/Chap01_shot03.mp4",
+        "desc": "Bản chất co lệch tâm (Eccentric) vừa bị kéo dài vừa siết căng để hãm tải trọng, vai trò căng giằng giữ như hệ thống dây cáp neo khóa trục. Cẳng tay duỗi chịu tải: Cơ tam đầu mặt sau phát quang vàng hổ phách (#f59e0b) kích hoạt phanh co lệch tâm; khối cơ chóp xoay nẹp ép chỏm xương cánh tay vào ổ chảo (concavity-compression) triệt tiêu lực xô lệch, bảo vệ toàn vẹn xương khớp trước quán tính tải trọng.",
+        "transcript": "Pha hai: Căng giằng giữ và co cơ lệch tâm. Đây là trạng thái sợi cơ vừa bị kéo dài, vừa siết căng liên tục để phanh hãm tải trọng. Căng giằng giữ hoạt động như hệ thống dây cáp neo khóa trục, duy trì sức căng đối kháng liên tục để bảo vệ ổ khớp không bị xô lệch dưới quán tính. Áp dụng vào khớp khuỷu: Khi cẳng tay mở duỗi dưới tải, cơ tam đầu mặt sau lập tức kích hoạt sức căng lệch tâm, đóng vai trò như chiếc phanh hãm sinh lý. Tại khớp vai, khối cơ chóp xoay siết chặt kéo chỏm xương cánh tay tỳ sát vào ổ chảo, tạo lực nén vững chắc triệt tiêu hoàn toàn nguy cơ trượt lệch khớp. Co cơ lệch tâm chính là tấm lá chắn bảo vệ hệ xương khớp trước mọi gia tốc và quán tính ngoại lực."
       }
     ],
-    "transcript": "Chào mừng các bạn đến với Chương 1 của Hệ Thống Bài Giảng Yếu Lược Châm Cứu Hệ Đạo Dẫn. Trong phân cảnh này, chúng ta quan sát chuỗi động học của khớp vai và khớp khuỷu. Khi cơ Delta phần giữa co ngắn để nâng cánh tay, cơ Ngực lớn và cơ Lưng rộng phải chủ động giãn dài để duy trì sự mượt mà của quỹ đạo. Ở mức độ vi thể, hàng triệu cầu nối Myosin liên tục bám trượt trên sợi Actin, tiêu tốn năng lượng ATP và sinh nhiệt cục bộ. Nếu trương lực cơ mất cân bằng kéo dài, các điểm co thắt cục bộ sẽ hình thành Điểm Cân Kết gây đau lan tỏa dọc theo chuỗi kinh cân."
+    "micro_shots": [
+      {
+        "shot_index": 0,
+        "time": "00:00 - 01:10",
+        "shot": "Shot 01: Đại thể & Chuỗi động học cân bằng 3 chiều",
+        "desc": "Ba mặt phẳng không gian, cơ ngực lớn co ngắn phát lực (#ef4444), chuỗi cơ trám và dựng sống giằng giữ (#f59e0b), cơ thang gánh tải bù trừ và huyệt Kiên Tỉnh (GB-21)."
+      },
+      {
+        "shot_index": 1,
+        "time": "01:10 - 02:40",
+        "shot": "Shot 02: Vi thể Actin - Myosin, Co hướng tâm & Điểm Cân Kết",
+        "desc": "Cơ chế co hướng tâm, tương tác nhị đầu - tam đầu, vi thể cầu trượt Actin-Myosin kéo ngắn sarcomere, ứ trệ mao mạch, hình thành Điểm Cân Kết và giải áp tại huyệt Khúc Trạch (PC-3) & Xích Trạch (LU-5)."
+      },
+      {
+        "shot_index": 2,
+        "time": "02:40 - 04:30",
+        "shot": "Shot 03: Căng giằng giữ, Phanh lệch tâm & Nẹp ổ chảo vai",
+        "desc": "Khái niệm co lệch tâm vừa giãn vừa siết, cơ tam đầu phanh hãm cẳng tay, khối cơ chóp xoay nẹp ép chỏm xương cánh tay vào ổ chảo (concavity-compression) bảo vệ xương khớp."
+      }
+    ],
+    "transcript": "Chào mừng các bạn đến với Chương 1 của Hệ Thống Bài Giảng Yếu Lược Châm Cứu Hệ Đạo Dẫn: Chuỗi Động Học & Tương Tác Cơ Chủ Vận — Đối Vận. Bài giảng gồm 3 phân đoạn video infographic giải phẫu y khoa 3D chuyên sâu: Shot 01 trình bày Chuỗi động học & Cân bằng 3 chiều không gian; Shot 02 phân tích Pha 1 Co hướng tâm và Cơ chế hình thành Điểm Cân Kết tại cơ bắp; Shot 03 khảo sát Pha 2 Căng giằng giữ, cơ chế phanh co lệch tâm và nẹp khóa trục ổ chảo bảo vệ diện khớp."
   },
   {
     "id": "chuong-02",
