@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hệ Cơ & Thần Kinh 3D — Châm Cứu & Động Học</title>
-  <link rel="stylesheet" href="assets/css/theme.css?v=7.2">
+  <link rel="stylesheet" href="assets/css/theme.css?v=7.3">
   <link rel="icon" href="data:,">
 
   <!-- Three.js via ES Module importmap (Local Bundle 100% Offline & Tốc độ cao) -->
@@ -38,8 +38,8 @@
     <button class="nav-tab-btn" id="nav-btn-video" data-section="section-video-lectures">
       <span class="nav-tab-icon">🎬</span>
       <div class="nav-tab-text">
-        <span class="nav-tab-title">MỤC 2: VIDEO THUYẾT MINH BÀI GIẢNG</span>
-        <span class="nav-tab-subtitle">Bài giảng cơ sinh học & Thị phạm lâm sàng theo chương</span>
+        <span class="nav-tab-title">MỤC 2: VIDEO THUYẾT MINH BÀI GIẢNG <span class="nav-new-badge">Mới: 3 Shots</span></span>
+        <span class="nav-tab-subtitle">Bài giảng cơ sinh học & Video Infographic theo chương</span>
       </div>
     </button>
   </nav>
@@ -116,6 +116,15 @@
 
       <!-- ==================== CHẾ ĐỘ 1: ĐỘNG HỌC CỬ ĐỘNG ==================== -->
       <div id="mode-1-container">
+        <!-- Quick Infographic Video Shortcut -->
+        <div class="quick-infographic-card" id="btn-quick-infographic" title="Nhấn để mở ngay Video Infographic phân tích cơ sinh học Chương 1">
+          <div class="quick-infographic-content">
+            <div class="quick-infographic-title">🎬 Video Infographic Cơ Sinh Học (Chương 1) <span class="nav-new-badge">3 Shots</span></div>
+            <div class="quick-infographic-desc">Đại thể 3 chiều • Vi thể Actin-Myosin co hướng tâm • Căng giằng giữ & chóp xoay vai</div>
+          </div>
+          <button class="quick-infographic-btn" type="button">▶ Xem Video</button>
+        </div>
+
         <!-- Movement Selector Card -->
         <div class="card" id="movement-card">
           <h2 class="card-title">🏃 Chọn Cử Động & Tư Thế</h2>
@@ -295,21 +304,32 @@
       <div class="video-player-card">
         <!-- Active Chapter Title Header -->
         <div class="video-header-bar">
-          <div class="video-chapter-badge" id="video-active-badge">CHƯƠNG 01 • BÀI GIẢNG CƠ SINH HỌC</div>
+          <div class="video-chapter-badge" id="video-active-badge">CHƯƠNG 01 • BÀI GIẢNG CƠ SINH HỌC & ĐẠO DẪN</div>
           <h2 class="video-active-title" id="video-active-title">Chuỗi Động Học & Tương Tác Cơ Chủ Vận — Đối Vận</h2>
           <div class="video-active-meta">
-            <span>⏱️ Thời lượng: <strong id="video-active-duration">12:45</strong></span>
+            <span>⏱️ Tổng thời lượng: <strong id="video-active-duration">04:30</strong></span>
             <span>🎓 Giảng viên: <strong>Hệ Thống Yếu Lược Châm Cứu Hệ Đạo Dẫn</strong></span>
-            <span>📍 Tình trạng: <span class="badge-status-tag" id="video-active-status">Đã có Storyboard & 3D Assets</span></span>
+            <span>📍 Tình trạng: <span class="badge-status-tag" id="video-active-status">Đã có 3 Video Shots Infographic</span></span>
+          </div>
+        </div>
+
+        <!-- Video Shots Selection Bar (Xuất hiện khi bài giảng có nhiều shots) -->
+        <div class="video-shots-bar" id="video-shots-bar" style="display: none;">
+          <div class="video-shots-bar-header">
+            <span class="video-shots-bar-tag">🎬 PHÂN ĐOẠN VIDEO INFOGRAPHIC (4K/HD)</span>
+            <span class="video-shot-active-label" id="video-shot-active-label">Đang phát: Shot 01 (01:10)</span>
+          </div>
+          <div class="video-shots-buttons-row" id="video-shots-buttons-row">
+            <!-- Dynamic shot buttons injected by UIView.js -->
           </div>
         </div>
 
         <!-- 16:9 Video Canvas / Player Area -->
         <div class="video-screen-container" id="video-screen-container">
-          <!-- Video Element (Hidden until video file provided) -->
-          <video id="html5-video-player" class="native-video-player" controls style="display: none; width: 100%; height: 100%; border-radius: var(--radius);"></video>
+          <!-- Video Element (Trình phát HTML5 chính thức) -->
+          <video id="html5-video-player" class="native-video-player" playsinline controls preload="metadata" style="display: none; width: 100%; height: 100%; border-radius: var(--radius); background: #000;"></video>
 
-          <!-- Interactive Video Placeholder Graphic -->
+          <!-- Interactive Video Placeholder Graphic (Hiển thị khi bài giảng chưa có video) -->
           <div class="video-placeholder-screen" id="video-placeholder-screen">
             <div class="video-medical-grid-overlay"></div>
             <div class="video-placeholder-content">
@@ -343,6 +363,21 @@
               <button class="ctrl-btn" title="Âm lượng">🔊</button>
               <button class="ctrl-btn" title="Toàn màn hình">⛶</button>
             </div>
+          </div>
+        </div>
+
+        <!-- Video Player Sub-toolbar (Shot navigation & Auto-next) -->
+        <div class="video-player-toolbar" id="video-player-toolbar" style="display: none;">
+          <div class="vtoolbar-left">
+            <button class="vtool-btn" id="btn-prev-shot" title="Chuyển về Shot trước">⏮ Shot Trước</button>
+            <button class="vtool-btn" id="btn-next-shot" title="Chuyển sang Shot kế tiếp">Shot Sau ⏭</button>
+            <label class="vtool-checkbox-label">
+              <input type="checkbox" id="chk-auto-next" checked>
+              <span>Tự động phát Shot kế tiếp</span>
+            </label>
+          </div>
+          <div class="vtoolbar-right">
+            <span class="vtoolbar-shot-info" id="vtoolbar-shot-info">Shot 1 / 3</span>
           </div>
         </div>
 
@@ -419,8 +454,8 @@
     <p>Dữ liệu giải phẫu & châm cứu: Giáo trình ĐHYHN, Netter Anatomy, Terminologia Anatomica (TA2), Yếu Lược Châm Cứu Hệ Đạo Dẫn & WHO Acupuncture Standards</p>
   </footer>
 
-  <!-- App Entry Point (v5.8 cache bust) -->
-  <script type="module" src="app.js?v=7.2"></script>
+  <!-- App Entry Point (v7.3 cache bust) -->
+  <script type="module" src="app.js?v=7.3"></script>
 </body>
 </html>
 

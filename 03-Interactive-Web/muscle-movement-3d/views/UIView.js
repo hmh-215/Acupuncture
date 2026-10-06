@@ -11,6 +11,10 @@ export class UIView {
     this.sceneVM = sceneVM;
     this.appVM = appVM;
 
+    this.currentShotIndex = 0;
+    this.currentLecture = null;
+    this.autoNextShot = true;
+
     this._cacheElements();
     this._bindToViewModels();
     this._setupEventListeners();
@@ -100,7 +104,19 @@ export class UIView {
       vtabShotsList: document.getElementById('vtab-shots-list'),
       vtabTranscriptText: document.getElementById('vtab-transcript-text'),
       playlistItemsList: document.getElementById('playlist-items-list'),
-      playlistSearchInput: document.getElementById('playlist-search-input')
+      playlistSearchInput: document.getElementById('playlist-search-input'),
+
+      // HTML5 Video Player & Shots Bar
+      html5VideoPlayer: document.getElementById('html5-video-player'),
+      videoShotsBar: document.getElementById('video-shots-bar'),
+      videoShotActiveLabel: document.getElementById('video-shot-active-label'),
+      videoShotsButtonsRow: document.getElementById('video-shots-buttons-row'),
+      videoPlayerToolbar: document.getElementById('video-player-toolbar'),
+      btnPrevShot: document.getElementById('btn-prev-shot'),
+      btnNextShot: document.getElementById('btn-next-shot'),
+      chkAutoNext: document.getElementById('chk-auto-next'),
+      vtoolbarShotInfo: document.getElementById('vtoolbar-shot-info'),
+      btnQuickInfographic: document.getElementById('btn-quick-infographic')
     };
   }
 
@@ -302,7 +318,44 @@ export class UIView {
       });
     }
 
-    // Nút Play / Pause mô phỏng khung video
+    // Nút mở nhanh Video Infographic từ Mục 1 (3D Model)
+    if (this.els.btnQuickInfographic) {
+      this.els.btnQuickInfographic.addEventListener('click', () => {
+        this.switchTopSection('section-video-lectures');
+        this.selectLecture('chuong-01');
+        if (this.els.html5VideoPlayer) {
+          this.els.html5VideoPlayer.play().catch(() => {});
+        }
+      });
+    }
+
+    // Điều hướng Shot trước / Shot sau & Tự động chuyển shot kế tiếp
+    if (this.els.btnPrevShot) {
+      this.els.btnPrevShot.addEventListener('click', () => {
+        this.switchShot(this.currentShotIndex - 1, true);
+      });
+    }
+    if (this.els.btnNextShot) {
+      this.els.btnNextShot.addEventListener('click', () => {
+        this.switchShot(this.currentShotIndex + 1, true);
+      });
+    }
+    if (this.els.chkAutoNext) {
+      this.els.chkAutoNext.addEventListener('change', (e) => {
+        this.autoNextShot = e.target.checked;
+      });
+    }
+    if (this.els.html5VideoPlayer) {
+      this.els.html5VideoPlayer.addEventListener('ended', () => {
+        if (this.autoNextShot && this.currentLecture && this.currentLecture.shots) {
+          if (this.currentShotIndex < this.currentLecture.shots.length - 1) {
+            this.switchShot(this.currentShotIndex + 1, true);
+          }
+        }
+      });
+    }
+
+    // Nút Play / Pause mô phỏng khung video (khi xem bài giảng chưa có video thật)
     let isPlaying = false;
     let playInterval = null;
     let simulatedProgress = 32;
@@ -671,7 +724,7 @@ export class UIView {
    */
   async _initLectures() {
     try {
-      const res = await fetch('./data/lectures.json?v=7.2');
+      const res = await fetch('./data/lectures.json?v=7.3');
       this.lectures = await res.json();
       this.selectedLectureId = this.lectures.length > 0 ? this.lectures[0].id : null;
       this._renderPlaylist(this.lectures);
@@ -699,13 +752,17 @@ export class UIView {
       const card = document.createElement('div');
       card.className = `playlist-item-card ${lecture.id === this.selectedLectureId ? 'active' : ''}`;
       card.setAttribute('data-lecture-id', lecture.id);
+      
+      const hasShots = lecture.shots && lecture.shots.length > 0;
+      const badgeStyle = hasShots ? 'color: var(--cyan); font-weight: 700;' : '';
+
       card.innerHTML = `
         <div class="playlist-item-top">
           <span class="playlist-item-chapter">${lecture.chapter}</span>
           <span class="playlist-item-duration">⏱️ ${lecture.duration}</span>
         </div>
         <h4 class="playlist-item-title">${lecture.title}</h4>
-        <span class="playlist-item-badge">🏷️ ${lecture.badge}</span>
+        <span class="playlist-item-badge" style="${badgeStyle}">🏷️ ${lecture.badge}</span>
       `;
       card.addEventListener('click', () => {
         this.selectLecture(lecture.id);
@@ -722,6 +779,8 @@ export class UIView {
     const lecture = this.lectures.find(l => l.id === id);
     if (!lecture) return;
     this.selectedLectureId = id;
+    this.currentLecture = lecture;
+    this.currentShotIndex = 0;
 
     // Cập nhật trạng thái active trong danh sách playlist
     document.querySelectorAll('.playlist-item-card').forEach(card => {
@@ -741,32 +800,205 @@ export class UIView {
     if (this.els.placeholderSub) this.els.placeholderSub.textContent = `Mô hình 3D Z-Anatomy & Google Flow • Thời lượng ${lecture.duration} • Thuyết minh 100% Tiếng Việt`;
     if (this.els.ctrlTimeDisplay) this.els.ctrlTimeDisplay.textContent = `00:00 / ${lecture.duration}`;
 
+    // Kiểm tra cấu hình video / shots của bài giảng
+    if (lecture.shots && lecture.shots.length > 0) {
+      // Có danh sách shots thực tế (như Chương 1 có 3 shots)
+      if (this.els.html5VideoPlayer) {
+        this.els.html5VideoPlayer.style.display = 'block';
+      }
+      if (this.els.videoPlaceholderScreen) {
+        this.els.videoPlaceholderScreen.style.display = 'none';
+      }
+      if (this.els.videoShotsBar) {
+        this.els.videoShotsBar.style.display = 'flex';
+      }
+      if (this.els.videoPlayerToolbar) {
+        this.els.videoPlayerToolbar.style.display = 'flex';
+      }
+
+      this._renderShotButtons(lecture.shots);
+      this.switchShot(0, false);
+    } else if (lecture.video_src) {
+      // Có file video đơn lẻ
+      if (this.els.html5VideoPlayer) {
+        this.els.html5VideoPlayer.style.display = 'block';
+        this.els.html5VideoPlayer.src = lecture.video_src;
+        this.els.html5VideoPlayer.load();
+      }
+      if (this.els.videoPlaceholderScreen) {
+        this.els.videoPlaceholderScreen.style.display = 'none';
+      }
+      if (this.els.videoShotsBar) {
+        this.els.videoShotsBar.style.display = 'none';
+      }
+      if (this.els.videoPlayerToolbar) {
+        this.els.videoPlayerToolbar.style.display = 'none';
+      }
+    } else {
+      // Chưa có video -> Hiển thị Placeholder Graphic
+      if (this.els.html5VideoPlayer) {
+        this.els.html5VideoPlayer.pause();
+        this.els.html5VideoPlayer.removeAttribute('src');
+        this.els.html5VideoPlayer.load();
+        this.els.html5VideoPlayer.style.display = 'none';
+      }
+      if (this.els.videoPlaceholderScreen) {
+        this.els.videoPlaceholderScreen.style.display = 'flex';
+      }
+      if (this.els.videoShotsBar) {
+        this.els.videoShotsBar.style.display = 'none';
+      }
+      if (this.els.videoPlayerToolbar) {
+        this.els.videoPlayerToolbar.style.display = 'none';
+      }
+    }
+
     // Cập nhật Tab 1: Tóm tắt bài giảng
     if (this.els.vtabSummaryText) this.els.vtabSummaryText.textContent = lecture.summary;
 
     // Cập nhật Tab 2: Phân đoạn Micro-Shots
-    if (this.els.vtabShotsList) {
-      this.els.vtabShotsList.innerHTML = '';
-      if (lecture.micro_shots && lecture.micro_shots.length > 0) {
-        lecture.micro_shots.forEach(s => {
-          const item = document.createElement('div');
-          item.className = 'vshot-item';
-          item.innerHTML = `
-            <span class="vshot-time-badge">${s.time}</span>
-            <div class="vshot-details">
-              <span class="vshot-name">${s.shot}</span>
-              <p class="vshot-desc">${s.desc}</p>
-            </div>
-          `;
-          this.els.vtabShotsList.appendChild(item);
-        });
-      }
-    }
+    this._renderMicroShots(lecture);
 
     // Cập nhật Tab 3: Transcript thuyết minh
     if (this.els.vtabTranscriptText) {
       this.els.vtabTranscriptText.textContent = `"${lecture.transcript}"`;
     }
+  }
+
+  /**
+   * Tạo các nút chọn Shot trên thanh điều khiển
+   */
+  _renderShotButtons(shots) {
+    if (!this.els.videoShotsButtonsRow) return;
+    this.els.videoShotsButtonsRow.innerHTML = '';
+
+    shots.forEach((shot, idx) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = `video-shot-btn ${idx === this.currentShotIndex ? 'active' : ''}`;
+      btn.setAttribute('data-shot-index', idx);
+      btn.innerHTML = `
+        <span>▶ ${shot.shot_num || `Shot ${idx + 1}`}</span>
+        <span class="vshot-btn-time">${shot.duration || ''}</span>
+      `;
+      btn.addEventListener('click', () => {
+        this.switchShot(idx, true);
+      });
+      this.els.videoShotsButtonsRow.appendChild(btn);
+    });
+  }
+
+  /**
+   * Chuyển đổi và phát một Shot video cụ thể
+   */
+  switchShot(index, autoPlay = false) {
+    if (!this.currentLecture || !this.currentLecture.shots) return;
+    if (index < 0 || index >= this.currentLecture.shots.length) return;
+
+    this.currentShotIndex = index;
+    const shot = this.currentLecture.shots[index];
+
+    // Cập nhật video player
+    if (this.els.html5VideoPlayer && shot.video_src) {
+      const currentSrc = this.els.html5VideoPlayer.getAttribute('src');
+      if (currentSrc !== shot.video_src) {
+        this.els.html5VideoPlayer.src = shot.video_src;
+        this.els.html5VideoPlayer.load();
+      }
+      if (autoPlay) {
+        this.els.html5VideoPlayer.play().catch(e => console.log('Autoplay deferred:', e));
+      }
+    }
+
+    // Cập nhật trạng thái active của Shot buttons
+    if (this.els.videoShotsButtonsRow) {
+      this.els.videoShotsButtonsRow.querySelectorAll('.video-shot-btn').forEach((btn, idx) => {
+        if (idx === index) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
+
+    // Cập nhật nhãn shot đang phát
+    if (this.els.videoShotActiveLabel) {
+      this.els.videoShotActiveLabel.textContent = `Đang phát: ${shot.title} (${shot.duration})`;
+    }
+
+    // Cập nhật toolbar
+    if (this.els.vtoolbarShotInfo) {
+      this.els.vtoolbarShotInfo.textContent = `Shot ${index + 1} / ${this.currentLecture.shots.length}`;
+    }
+    if (this.els.btnPrevShot) {
+      this.els.btnPrevShot.disabled = (index <= 0);
+    }
+    if (this.els.btnNextShot) {
+      this.els.btnNextShot.disabled = (index >= this.currentLecture.shots.length - 1);
+    }
+
+    // Cập nhật Transcript Tab với lời bình của Shot hiện tại
+    if (this.els.vtabTranscriptText && shot.transcript) {
+      this.els.vtabTranscriptText.textContent = `"${shot.transcript}"`;
+    }
+
+    // Highlight micro-shot tương ứng trong Tab 2
+    if (this.els.vtabShotsList) {
+      this.els.vtabShotsList.querySelectorAll('.vshot-item').forEach((item, idx) => {
+        if (idx === index) {
+          item.classList.add('active-playing-shot');
+        } else {
+          item.classList.remove('active-playing-shot');
+        }
+      });
+    }
+  }
+
+  /**
+   * Hiển thị danh sách Micro-Shots kèm nút tương tác xem trực tiếp
+   */
+  _renderMicroShots(lecture) {
+    if (!this.els.vtabShotsList) return;
+    this.els.vtabShotsList.innerHTML = '';
+    if (!lecture.micro_shots || lecture.micro_shots.length === 0) return;
+
+    lecture.micro_shots.forEach((s, idx) => {
+      const item = document.createElement('div');
+      item.className = `vshot-item ${idx === this.currentShotIndex && lecture.shots ? 'active-playing-shot' : ''}`;
+      
+      const hasActionBtn = lecture.shots && lecture.shots[idx];
+      const actionHtml = hasActionBtn
+        ? `<div class="vshot-action">
+             <button type="button" class="vshot-play-btn" data-shot-idx="${idx}">
+               ▶ Xem video phân đoạn này (${lecture.shots[idx].duration})
+             </button>
+           </div>`
+        : '';
+
+      item.innerHTML = `
+        <span class="vshot-time-badge">${s.time}</span>
+        <div class="vshot-details">
+          <span class="vshot-name">${s.shot}</span>
+          <p class="vshot-desc">${s.desc}</p>
+          ${actionHtml}
+        </div>
+      `;
+
+      if (hasActionBtn) {
+        const playBtn = item.querySelector('.vshot-play-btn');
+        if (playBtn) {
+          playBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.switchShot(idx, true);
+            if (this.els.videoScreenContainer) {
+              this.els.videoScreenContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+          });
+        }
+      }
+
+      this.els.vtabShotsList.appendChild(item);
+    });
   }
 
   /**

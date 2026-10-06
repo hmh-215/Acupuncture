@@ -41,6 +41,8 @@ chunk.wav
 temp_audio.wav
 test_*.png
 screenshot*.png
+03-Interactive-Web/infographic_shots/
+!03-Interactive-Web/muscle-movement-3d/assets/videos/**
 
 # Python & System
 __pycache__/

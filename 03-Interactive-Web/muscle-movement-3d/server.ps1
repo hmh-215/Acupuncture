@@ -44,6 +44,11 @@ $mimeTypes = @{
     ".gltf" = "model/gltf+json"
     ".obj"  = "text/plain"
     ".fbx"  = "application/octet-stream"
+    ".mp4"  = "video/mp4"
+    ".webm" = "video/webm"
+    ".ogg"  = "video/ogg"
+    ".mp3"  = "audio/mpeg"
+    ".wav"  = "audio/wav"
 }
 
 while ($listener.IsListening) {
@@ -71,18 +76,55 @@ while ($listener.IsListening) {
             if ($null -eq $mime) { $mime = "application/octet-stream" }
             $response.ContentType = $mime
 
-            # Header CORS & Caching cho tài nguyên 3D lớn
+            # Header CORS & Caching cho tài nguyên 3D & Media lớn
             $response.AddHeader("Access-Control-Allow-Origin", "*")
-            if ($ext -in @(".fbx", ".glb", ".png", ".jpg", ".jpeg", ".svg", ".ico")) {
+            $response.AddHeader("Accept-Ranges", "bytes")
+            if ($ext -in @(".fbx", ".glb", ".png", ".jpg", ".jpeg", ".svg", ".ico", ".mp4", ".webm", ".mp3")) {
                 $response.AddHeader("Cache-Control", "public, max-age=604800")
             } else {
                 $response.AddHeader("Cache-Control", "no-cache")
             }
 
-            $bytes = [System.IO.File]::ReadAllBytes($filePath)
-            $response.ContentLength64 = $bytes.Length
-            $response.OutputStream.Write($bytes, 0, $bytes.Length)
-            $response.StatusCode = 200
+            $fileInfo = New-Object System.IO.FileInfo($filePath)
+            $totalLength = $fileInfo.Length
+            $rangeHeader = $request.Headers["Range"]
+
+            if (-not [string]::IsNullOrEmpty($rangeHeader) -and $rangeHeader.StartsWith("bytes=")) {
+                $range = $rangeHeader.Substring(6).Split("-")
+                $start = [long]::Parse($range[0])
+                $end = if (-not [string]::IsNullOrEmpty($range[1])) { [long]::Parse($range[1]) } else { $totalLength - 1 }
+                if ($end -ge $totalLength) { $end = $totalLength - 1 }
+                $chunkSize = $end - $start + 1
+
+                $response.StatusCode = 206
+                $response.AddHeader("Content-Range", "bytes $start-$end/$totalLength")
+                $response.ContentLength64 = $chunkSize
+
+                $fs = [System.IO.File]::OpenRead($filePath)
+                try {
+                    [void]$fs.Seek($start, [System.IO.SeekOrigin]::Begin)
+                    $buffer = New-Object byte[] 65536
+                    $bytesRemaining = $chunkSize
+                    while ($bytesRemaining -gt 0) {
+                        $toRead = [int][Math]::Min($buffer.Length, $bytesRemaining)
+                        $read = $fs.Read($buffer, 0, $toRead)
+                        if ($read -le 0) { break }
+                        $response.OutputStream.Write($buffer, 0, $read)
+                        $bytesRemaining -= $read
+                    }
+                } finally {
+                    $fs.Close()
+                }
+            } else {
+                $response.StatusCode = 200
+                $response.ContentLength64 = $totalLength
+                $fs = [System.IO.File]::OpenRead($filePath)
+                try {
+                    $fs.CopyTo($response.OutputStream)
+                } finally {
+                    $fs.Close()
+                }
+            }
         } else {
             $response.StatusCode = 404
             $msg = [System.Text.Encoding]::UTF8.GetBytes("404 Not Found: $urlPath")
