@@ -19,6 +19,7 @@ export class UIView {
     this._bindToViewModels();
     this._setupEventListeners();
     this._initLectures();
+    this._switchMode('kinematics');
   }
 
   _cacheElements() {
@@ -29,11 +30,19 @@ export class UIView {
       section3DModel: document.getElementById('section-3d-model'),
       sectionVideoLectures: document.getElementById('section-video-lectures'),
 
-      // Chuyển Tab 2 Chế độ (trong Mục 1: Mô hình 3D)
-      tabModeMovement: document.getElementById('tab-mode-movement'),
-      tabModeAcupuncture: document.getElementById('tab-mode-acupuncture'),
+      // Chuyển Tab 3 Chế độ (trong Mục 1: Mô hình 3D)
+      tabModeKinematics: document.getElementById('tab-mode-kinematics'),
+      tabModeAcupoints: document.getElementById('tab-mode-acupoints'),
+      tabModeTherapy: document.getElementById('tab-mode-therapy'),
+      tabModeMovement: document.getElementById('tab-mode-kinematics'), // fallback
+      tabModeAcupuncture: document.getElementById('tab-mode-therapy'), // fallback
       mode1Container: document.getElementById('mode-1-container'),
       mode2Container: document.getElementById('mode-2-container'),
+      mode3Container: document.getElementById('mode-3-container'),
+
+      // Floating Viewport Legend Card (Chế độ 1)
+      viewportLegendCard: document.getElementById('viewport-legend-card'),
+      viewportLegendItems: document.querySelectorAll('.viewport-legend-item'),
 
       // Chế độ 1: Cử động mẫu
       movementSelect: document.getElementById('movement-select'),
@@ -46,7 +55,24 @@ export class UIView {
       filterButtons: document.querySelectorAll('.filter-btn'),
       muscleList: document.getElementById('muscle-list'),
 
-      // Chế độ 2: Bệnh lý cơ đau & Chuỗi kinh cân
+      // Chế độ 2: Bản đồ 80 Huyệt Đạo Toàn Thân
+      searchAcupointInput: document.getElementById('search-acupoint-input'),
+      regionPills: document.querySelectorAll('.region-pill'),
+      lblActiveAcupointCount: document.getElementById('lbl-active-acupoint-count'),
+      acupointMapList: document.getElementById('acupoint-map-list'),
+      mapAcupointDetailCard: document.getElementById('map-acupoint-detail-card'),
+      mapDetailCode: document.getElementById('map-detail-code'),
+      mapDetailName: document.getElementById('map-detail-name'),
+      mapDetailHan: document.getElementById('map-detail-han'),
+      mapDetailMeridian: document.getElementById('map-detail-meridian'),
+      mapDetailLocation: document.getElementById('map-detail-location'),
+      mapDetailDepth: document.getElementById('map-detail-depth'),
+      mapDetailDeqi: document.getElementById('map-detail-deqi'),
+      mapDetailIndications: document.getElementById('map-detail-indications'),
+      mapDetailSafety: document.getElementById('map-detail-safety'),
+      btnCloseMapDetail: document.getElementById('btn-close-map-detail'),
+
+      // Chế độ 3: Bệnh lý cơ đau & Chuỗi kinh cân trị liệu
       chainSelect: document.getElementById('chain-select'),
       chainInfo: document.getElementById('chain-info'),
       chainMyofascial: document.getElementById('chain-myofascial'),
@@ -75,10 +101,12 @@ export class UIView {
       btnCloseDetail: document.getElementById('btn-close-detail'),
 
       // Toggle & Sliders 2 hệ cốt lõi
+      cardControlMuscle: document.getElementById('card-control-muscle'),
       toggleMuscles: document.getElementById('toggle-muscles'),
       sliderMuscleOpacity: document.getElementById('slider-muscle-opacity'),
       valMuscleOpacity: document.getElementById('val-muscle-opacity'),
 
+      cardControlNervous: document.getElementById('card-control-nervous'),
       toggleNervous: document.getElementById('toggle-nervous'),
       sliderNervousOpacity: document.getElementById('slider-nervous-opacity'),
       valNervousOpacity: document.getElementById('val-nervous-opacity'),
@@ -129,7 +157,14 @@ export class UIView {
       this.movementVM.on('filterRole', role => this._updateFilterButtons(role));
     }
 
-    // Chế độ 2: Châm cứu & Chuỗi cơ cân
+    // Chế độ 2: Bản đồ 80 Huyệt Đạo Toàn Thân
+    if (this.appVM && this.appVM.acupointMapVM) {
+      this.appVM.acupointMapVM.on('activeAcupoints', points => this._renderAcupointMapList(points));
+      this.appVM.acupointMapVM.on('selectedAcupoint', pt => this._renderMapAcupointDetail(pt));
+      this.appVM.acupointMapVM.on('selectedRegion', region => this._updateRegionPills(region));
+    }
+
+    // Chế độ 3: Châm cứu & Chuỗi cơ cân trị liệu
     if (this.appVM && this.appVM.acupunctureVM) {
       this.appVM.acupunctureVM.on('selectedChain', chain => this._renderChainInfo(chain));
       this.appVM.acupunctureVM.on('selectedAcupoint', pt => this._renderAcupointDetail(pt));
@@ -142,11 +177,17 @@ export class UIView {
       this.appVM.on('dataLoaded', () => {
         this._populateMovementDropdown();
         this._populateChainDropdown();
+        if (this.appVM.acupointMapVM) {
+          this._renderAcupointMapList(this.appVM.acupointMapVM.state.activeAcupoints);
+        }
       });
 
       if (this.appVM.state.dataLoaded) {
         this._populateMovementDropdown();
         this._populateChainDropdown();
+        if (this.appVM.acupointMapVM) {
+          this._renderAcupointMapList(this.appVM.acupointMapVM.state.activeAcupoints);
+        }
       }
     }
   }
@@ -160,10 +201,31 @@ export class UIView {
       this.els.navBtnVideo.addEventListener('click', () => this.switchTopSection('section-video-lectures'));
     }
 
-    // Chuyển Tab 2 Chế độ (trong Mục 1)
-    if (this.els.tabModeMovement && this.els.tabModeAcupuncture) {
-      this.els.tabModeMovement.addEventListener('click', () => this._switchMode('movement'));
-      this.els.tabModeAcupuncture.addEventListener('click', () => this._switchMode('acupuncture'));
+    // Chuyển Tab 3 Chế độ (trong Mục 1: Mô hình 3D)
+    if (this.els.tabModeKinematics) {
+      this.els.tabModeKinematics.addEventListener('click', () => this._switchMode('kinematics'));
+    }
+    if (this.els.tabModeAcupoints) {
+      this.els.tabModeAcupoints.addEventListener('click', () => this._switchMode('acupoints'));
+    }
+    if (this.els.tabModeTherapy) {
+      this.els.tabModeTherapy.addEventListener('click', () => this._switchMode('therapy'));
+    }
+    if (this.els.tabModeMovement && this.els.tabModeMovement !== this.els.tabModeKinematics) {
+      this.els.tabModeMovement.addEventListener('click', () => this._switchMode('kinematics'));
+    }
+    if (this.els.tabModeAcupuncture && this.els.tabModeAcupuncture !== this.els.tabModeTherapy) {
+      this.els.tabModeAcupuncture.addEventListener('click', () => this._switchMode('therapy'));
+    }
+
+    // Floating Viewport Legend Card (Chế độ 1: Bấm để lọc vai trò, bấm lại để chọn tất cả)
+    if (this.els.viewportLegendItems) {
+      this.els.viewportLegendItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const role = item.dataset.role;
+          if (this.movementVM) this.movementVM.toggleFilterRole(role);
+        });
+      });
     }
 
     // Dropdown chọn cử động (Chế độ 1)
@@ -173,7 +235,7 @@ export class UIView {
       });
     }
 
-    // Ô tìm kiếm cơ hoặc cử động
+    // Ô tìm kiếm cơ hoặc cử động (Chế độ 1)
     if (this.els.searchInput) {
       this.els.searchInput.addEventListener('input', (e) => {
         const query = e.target.value;
@@ -195,7 +257,7 @@ export class UIView {
       });
     }
 
-    // Lọc vai trò cơ
+    // Lọc vai trò cơ (Chế độ 1 - Thanh nút lọc ngang)
     if (this.els.filterButtons) {
       this.els.filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -205,7 +267,36 @@ export class UIView {
       });
     }
 
-    // Dropdown chọn Hội chứng đau cơ (Chế độ 2)
+    // Chế độ 2: Tìm kiếm huyệt vị
+    if (this.els.searchAcupointInput) {
+      this.els.searchAcupointInput.addEventListener('input', (e) => {
+        if (this.appVM?.acupointMapVM) {
+          this.appVM.acupointMapVM.search(e.target.value);
+        }
+      });
+    }
+
+    // Chế độ 2: Lọc phân vùng huyệt vị (Region Pills)
+    if (this.els.regionPills) {
+      this.els.regionPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          const region = pill.dataset.region;
+          if (this.appVM?.acupointMapVM) {
+            this.appVM.acupointMapVM.filterByRegion(region);
+          }
+        });
+      });
+    }
+
+    // Chế độ 2: Đóng bảng chi tiết huyệt
+    if (this.els.btnCloseMapDetail) {
+      this.els.btnCloseMapDetail.addEventListener('click', () => {
+        if (this.els.mapAcupointDetailCard) this.els.mapAcupointDetailCard.style.display = 'none';
+        if (this.sceneVM) this.sceneVM.focusAcupoint(null);
+      });
+    }
+
+    // Dropdown chọn Hội chứng đau cơ (Chế độ 3)
     if (this.els.chainSelect) {
       this.els.chainSelect.addEventListener('change', (e) => {
         if (this.appVM.acupunctureVM) {
@@ -254,8 +345,10 @@ export class UIView {
       this.els.btnResetView.addEventListener('click', () => {
         if (this.sceneVM) this.sceneVM.resetView();
         if (this.movementVM) this.movementVM.resetFilters();
+        if (this.appVM.acupointMapVM) this.appVM.acupointMapVM.reset();
         if (this.appVM.acupunctureVM) this.appVM.acupunctureVM.reset();
         if (this.els.searchInput) this.els.searchInput.value = '';
+        if (this.els.searchAcupointInput) this.els.searchAcupointInput.value = '';
 
         if (this.els.sliderMuscleOpacity) {
           this.els.sliderMuscleOpacity.value = 100;
@@ -269,13 +362,22 @@ export class UIView {
         }
 
         if (this.els.toggleMuscles) this.els.toggleMuscles.checked = true;
-        if (this.els.toggleNervous) this.els.toggleNervous.checked = false;
+        
+        const activeMode = this.appVM?.state.activeMode || 'kinematics';
+        if (activeMode === 'acupoints') {
+          if (this.els.toggleNervous) this.els.toggleNervous.checked = true;
+          if (this.sceneVM) this.sceneVM.setShowNervousLayer(true);
+        } else {
+          if (this.els.toggleNervous) this.els.toggleNervous.checked = false;
+          if (this.sceneVM) this.sceneVM.setShowNervousLayer(false);
+        }
 
         this._populateMovementDropdown();
         if (this.els.chainSelect) this.els.chainSelect.value = '';
         if (this.els.chainInfo) this.els.chainInfo.style.display = 'none';
         if (this.els.chainAcupointSection) this.els.chainAcupointSection.style.display = 'none';
         if (this.els.acupointDetailCard) this.els.acupointDetailCard.style.display = 'none';
+        if (this.els.mapAcupointDetailCard) this.els.mapAcupointDetailCard.style.display = 'none';
       });
     }
 
@@ -379,26 +481,74 @@ export class UIView {
     if (this.els.ctrlPlayPause) this.els.ctrlPlayPause.addEventListener('click', handleTogglePlay);
   }
 
-  _switchMode(mode) {
+  _switchMode(rawMode) {
     if (!this.appVM) return;
+    let mode = rawMode;
+    if (mode === 'movement') mode = 'kinematics';
+    if (mode === 'acupuncture') mode = 'therapy';
+
     this.appVM.setMode(mode);
 
-    if (mode === 'movement') {
-      this.els.tabModeMovement.classList.add('active');
-      this.els.tabModeAcupuncture.classList.remove('active');
-      this.els.mode1Container.style.display = 'block';
-      this.els.mode2Container.style.display = 'none';
-      if (this.els.acupointDetailCard) this.els.acupointDetailCard.style.display = 'none';
-      if (this.els.chainSelect) this.els.chainSelect.value = '';
-    } else {
-      this.els.tabModeAcupuncture.classList.add('active');
-      this.els.tabModeMovement.classList.remove('active');
-      this.els.mode2Container.style.display = 'block';
-      this.els.mode1Container.style.display = 'none';
-      if (this.els.movementSelect) this.els.movementSelect.value = '';
-      if (this.els.movementInfo) this.els.movementInfo.style.display = 'none';
+    // Bỏ active tất cả các tab
+    if (this.els.tabModeKinematics) this.els.tabModeKinematics.classList.remove('active');
+    if (this.els.tabModeAcupoints) this.els.tabModeAcupoints.classList.remove('active');
+    if (this.els.tabModeTherapy) this.els.tabModeTherapy.classList.remove('active');
 
-      // Tự động chọn chuỗi đầu tiên để hiển thị trực quan ngay lập tức
+    // Ẩn tất cả các container
+    if (this.els.mode1Container) this.els.mode1Container.style.display = 'none';
+    if (this.els.mode2Container) this.els.mode2Container.style.display = 'none';
+    if (this.els.mode3Container) this.els.mode3Container.style.display = 'none';
+
+    // Ẩn các bảng chi tiết
+    if (this.els.muscleDetailCard) this.els.muscleDetailCard.style.display = 'none';
+    if (this.els.acupointDetailCard) this.els.acupointDetailCard.style.display = 'none';
+    if (this.els.mapAcupointDetailCard) this.els.mapAcupointDetailCard.style.display = 'none';
+
+    if (mode === 'kinematics') {
+      if (this.els.tabModeKinematics) this.els.tabModeKinematics.classList.add('active');
+      if (this.els.mode1Container) this.els.mode1Container.style.display = 'block';
+
+      // Hiện floating legend card trên 3D canvas
+      if (this.els.viewportLegendCard) this.els.viewportLegendCard.style.display = 'block';
+
+      // Ẩn điều khiển Hệ Thần Kinh ở Chế độ 1 theo yêu cầu người dùng
+      if (this.els.cardControlNervous) this.els.cardControlNervous.style.display = 'none';
+      if (this.els.toggleNervous) this.els.toggleNervous.checked = false;
+      if (this.sceneVM) this.sceneVM.setShowNervousLayer(false);
+
+    } else if (mode === 'acupoints') {
+      if (this.els.tabModeAcupoints) this.els.tabModeAcupoints.classList.add('active');
+      if (this.els.mode2Container) this.els.mode2Container.style.display = 'block';
+
+      // Ẩn floating legend card
+      if (this.els.viewportLegendCard) this.els.viewportLegendCard.style.display = 'none';
+
+      // Hiện điều khiển Hệ Thần Kinh và kích hoạt hiển thị Hệ Thần Kinh + Hệ Cơ
+      if (this.els.cardControlNervous) this.els.cardControlNervous.style.display = 'flex';
+      if (this.els.toggleNervous) this.els.toggleNervous.checked = true;
+      if (this.sceneVM) {
+        this.sceneVM.setShowNervousLayer(true);
+        this.sceneVM.setShowMuscleLayer(true);
+      }
+
+      // Render danh sách 80 huyệt
+      if (this.appVM.acupointMapVM) {
+        this._renderAcupointMapList(this.appVM.acupointMapVM.state.activeAcupoints);
+      }
+
+    } else if (mode === 'therapy') {
+      if (this.els.tabModeTherapy) this.els.tabModeTherapy.classList.add('active');
+      if (this.els.mode3Container) this.els.mode3Container.style.display = 'block';
+
+      // Ẩn floating legend card
+      if (this.els.viewportLegendCard) this.els.viewportLegendCard.style.display = 'none';
+
+      // Hiện điều khiển Hệ Thần Kinh nhưng mặc định tắt
+      if (this.els.cardControlNervous) this.els.cardControlNervous.style.display = 'flex';
+      if (this.els.toggleNervous) this.els.toggleNervous.checked = false;
+      if (this.sceneVM) this.sceneVM.setShowNervousLayer(false);
+
+      // Tự động chọn chuỗi đầu tiên nếu chưa chọn
       if (this.appVM.acupunctureVM && !this.appVM.acupunctureVM.state.selectedChainId) {
         const chains = this.appVM.getChains();
         if (chains && chains.length > 0) {
@@ -529,22 +679,48 @@ export class UIView {
 
     this.els.muscleList.innerHTML = '';
 
-    const roleLabels = {
-      agonist: 'Chủ vận',
-      antagonist: 'Đối vận',
-      synergist: 'Hiệp đồng',
-      stabilizer: 'Ổn định'
+    const roleMeta = {
+      agonist: {
+        title: '🔴 Cơ chủ vận (Agonist)',
+        color: '#ef4444',
+        label: 'Chủ vận',
+        badgeClass: 'role-agonist'
+      },
+      antagonist: {
+        title: '🔵 Cơ đối vận (Antagonist)',
+        color: '#0ea5e9',
+        label: 'Đối vận',
+        badgeClass: 'role-antagonist'
+      },
+      synergist: {
+        title: '🟠 Cơ hiệp đồng / Liên đới (Synergist)',
+        color: '#f59e0b',
+        label: 'Hiệp đồng',
+        badgeClass: 'role-synergist'
+      },
+      stabilizer: {
+        title: '🟢 Cơ ổn định (Stabilizer)',
+        color: '#10b981',
+        label: 'Ổn định',
+        badgeClass: 'role-stabilizer'
+      }
     };
 
-    muscles.forEach(muscle => {
+    const currentFilter = this.movementVM ? this.movementVM.state.filterRole : 'all';
+
+    const createMuscleItem = (muscle) => {
       const li = document.createElement('li');
       li.className = `muscle-item role-${muscle.role}`;
+      const meta = roleMeta[muscle.role] || { label: muscle.role, badgeClass: '' };
+
       li.innerHTML = `
-        <div class="muscle-header">
-          <span class="muscle-name">${muscle.name_vi || muscle.id}</span>
-          <span class="role-badge role-${muscle.role}">${roleLabels[muscle.role] || muscle.role}</span>
+        <div class="muscle-item-row-top">
+          <span class="muscle-item-name">${muscle.name_vi || muscle.id}</span>
+          <span class="role-badge ${meta.badgeClass}">${meta.label}</span>
         </div>
-        <div class="muscle-latin">${muscle.name_latin || ''}</div>
+        <div class="muscle-item-row-bottom">
+          <span class="muscle-item-latin">${muscle.name_latin || ''}</span>
+        </div>
       `;
 
       li.addEventListener('click', () => {
@@ -552,19 +728,197 @@ export class UIView {
         if (this.sceneVM) this.sceneVM.isolateMuscle(muscle.id);
       });
 
-      this.els.muscleList.appendChild(li);
-    });
+      return li;
+    };
+
+    if (!currentFilter || currentFilter === 'all') {
+      // Khi chọn "Tất cả": sắp xếp theo category headers (Chủ vận -> Đối vận -> Hiệp đồng -> Ổn định)
+      const roles = ['agonist', 'antagonist', 'synergist', 'stabilizer'];
+      roles.forEach(roleKey => {
+        const groupMuscles = muscles.filter(m => m.role === roleKey);
+        if (groupMuscles.length === 0) return;
+
+        const catBlock = document.createElement('div');
+        catBlock.className = 'muscle-category-block';
+
+        const catHeader = document.createElement('div');
+        catHeader.className = 'muscle-category-header';
+        catHeader.style.setProperty('--category-color', roleMeta[roleKey].color);
+        catHeader.innerHTML = `
+          <span class="muscle-category-title">${roleMeta[roleKey].title}</span>
+          <span class="muscle-category-count">${groupMuscles.length}</span>
+        `;
+        catBlock.appendChild(catHeader);
+
+        const groupList = document.createElement('ul');
+        groupList.className = 'muscle-group-sublist';
+        groupMuscles.forEach(muscle => {
+          groupList.appendChild(createMuscleItem(muscle));
+        });
+        catBlock.appendChild(groupList);
+
+        this.els.muscleList.appendChild(catBlock);
+      });
+    } else {
+      // Khi áp dụng filter: chỉ hiển thị các nhóm cơ có liên quan đến filter được chọn
+      const filteredGroup = muscles.filter(m => m.role === currentFilter);
+      if (filteredGroup.length === 0) {
+        this.els.muscleList.innerHTML = `<li class="muscle-placeholder">Không có nhóm cơ nào thuộc vai trò này trong cử động hiện tại</li>`;
+        return;
+      }
+
+      const catBlock = document.createElement('div');
+      catBlock.className = 'muscle-category-block';
+
+      const catHeader = document.createElement('div');
+      catHeader.className = 'muscle-category-header';
+      catHeader.style.setProperty('--category-color', roleMeta[currentFilter]?.color || 'var(--cyan)');
+      catHeader.innerHTML = `
+        <span class="muscle-category-title">${roleMeta[currentFilter]?.title || currentFilter}</span>
+        <span class="muscle-category-count">${filteredGroup.length}</span>
+      `;
+      catBlock.appendChild(catHeader);
+
+      const groupList = document.createElement('ul');
+      groupList.className = 'muscle-group-sublist';
+      filteredGroup.forEach(muscle => {
+        groupList.appendChild(createMuscleItem(muscle));
+      });
+      catBlock.appendChild(groupList);
+
+      this.els.muscleList.appendChild(catBlock);
+    }
   }
 
   _updateFilterButtons(currentRole) {
-    if (!this.els.filterButtons) return;
-    this.els.filterButtons.forEach(btn => {
-      if (btn.dataset.role === currentRole) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
+    const role = currentRole || 'all';
+
+    // Cập nhật các nút filter thanh ngang trong info panel
+    if (this.els.filterButtons) {
+      this.els.filterButtons.forEach(btn => {
+        if (btn.dataset.role === role) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
+
+    // Cập nhật các mục trong Floating Legend Card góc trên-phải 3D Viewport
+    if (this.els.viewportLegendItems) {
+      this.els.viewportLegendItems.forEach(item => {
+        if (role !== 'all' && item.dataset.role === role) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+    }
+
+    // Re-render muscle list với active filter
+    if (this.movementVM) {
+      this._renderMuscleList(this.movementVM.state.activeMuscles);
+    }
+  }
+
+  // ============================================================
+  // RENDER THÔNG TIN CHẾ ĐỘ 2: BẢN ĐỒ 80 HUYỆT ĐẠO TOÀN THÂN
+  // ============================================================
+  _renderAcupointMapList(points) {
+    if (!this.els.acupointMapList) return;
+
+    const count = points ? points.length : 0;
+    if (this.els.lblActiveAcupointCount) {
+      this.els.lblActiveAcupointCount.textContent = count;
+    }
+
+    if (!points || points.length === 0) {
+      this.els.acupointMapList.innerHTML = '<div class="acupoint-placeholder" style="padding: 16px; text-align: center; color: var(--muted); font-size: 0.8rem;">Không tìm thấy huyệt vị phù hợp với từ khóa hoặc phân vùng</div>';
+      return;
+    }
+
+    this.els.acupointMapList.innerHTML = '';
+    const selectedCode = this.appVM?.acupointMapVM?.state.selectedAcupoint?.code;
+
+    points.forEach(pt => {
+      const item = document.createElement('div');
+      item.className = 'map-acupoint-item' + (pt.code === selectedCode ? ' active' : '');
+      item.dataset.code = pt.code;
+      item.innerHTML = `
+        <div class="map-acupoint-left">
+          <span class="map-acupoint-code">${pt.code}</span>
+          <div>
+            <div class="map-acupoint-name">${pt.name_vi} <span class="map-acupoint-han">(${pt.name_han_viet || ''})</span></div>
+            <div class="map-acupoint-meridian">${pt.meridian_vi || ''}</div>
+          </div>
+        </div>
+        <div class="map-acupoint-right">
+          <span class="map-acupoint-region-tag">${pt.region_vi || pt.region || ''}</span>
+        </div>
+      `;
+
+      item.addEventListener('click', () => {
+        if (this.appVM?.acupointMapVM) {
+          this.appVM.acupointMapVM.selectAcupoint(pt.code);
+        }
+      });
+
+      this.els.acupointMapList.appendChild(item);
     });
+  }
+
+  _renderMapAcupointDetail(pt) {
+    if (!this.els.mapAcupointDetailCard) return;
+
+    if (!pt) {
+      this.els.mapAcupointDetailCard.style.display = 'none';
+      return;
+    }
+
+    this.els.mapAcupointDetailCard.style.display = 'block';
+
+    if (this.els.mapDetailCode) this.els.mapDetailCode.textContent = pt.code;
+    if (this.els.mapDetailName) this.els.mapDetailName.textContent = pt.name_vi;
+    if (this.els.mapDetailHan) this.els.mapDetailHan.textContent = pt.name_han_viet || '';
+    if (this.els.mapDetailMeridian) this.els.mapDetailMeridian.textContent = `⚡ ${pt.meridian_vi || ''}`;
+    if (this.els.mapDetailLocation) this.els.mapDetailLocation.textContent = pt.location_vi || '';
+    if (this.els.mapDetailDepth) {
+      this.els.mapDetailDepth.textContent = `${pt.depth_mm || ''} • Hướng kim: ${pt.direction_vi || 'Thẳng'}`;
+    }
+    if (this.els.mapDetailDeqi) {
+      this.els.mapDetailDeqi.textContent = pt.deqi_vi || 'Tê, tức, nặng, căng lan theo kinh lạc (Đắc khí).';
+    }
+    if (this.els.mapDetailIndications) {
+      this.els.mapDetailIndications.textContent = pt.indications_vi || '';
+    }
+    if (this.els.mapDetailSafety) {
+      this.els.mapDetailSafety.textContent = `⚠️ An toàn: ${pt.safety_vi || 'Tuân thủ đúng góc châm và độ sâu an toàn giải phẫu.'}`;
+    }
+
+    // Cập nhật trạng thái active trong danh sách huyệt
+    if (this.els.acupointMapList) {
+      this.els.acupointMapList.querySelectorAll('.map-acupoint-item').forEach(el => {
+        if (el.dataset.code === pt.code) {
+          el.classList.add('active');
+          el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        } else {
+          el.classList.remove('active');
+        }
+      });
+    }
+  }
+
+  _updateRegionPills(currentRegion) {
+    const region = currentRegion || 'all';
+    if (this.els.regionPills) {
+      this.els.regionPills.forEach(pill => {
+        if (pill.dataset.region === region) {
+          pill.classList.add('active');
+        } else {
+          pill.classList.remove('active');
+        }
+      });
+    }
   }
 
   // ============================================================
@@ -724,7 +1078,7 @@ export class UIView {
    */
   async _initLectures() {
     try {
-      const res = await fetch('./data/lectures.json?v=7.3');
+      const res = await fetch('./data/lectures.json?v=7.4');
       this.lectures = await res.json();
       this.selectedLectureId = this.lectures.length > 0 ? this.lectures[0].id : null;
       this._renderPlaylist(this.lectures);

@@ -1,7 +1,7 @@
 import * as THREE from 'three';
-import { AppViewModel } from './viewmodels/AppViewModel.js?v=7.2';
-import { SceneView } from './views/SceneView.js?v=7.2';
-import { UIView } from './views/UIView.js?v=7.2';
+import { AppViewModel } from './viewmodels/AppViewModel.js?v=8.0';
+import { SceneView } from './views/SceneView.js?v=8.0';
+import { UIView } from './views/UIView.js?v=8.0';
 
 window.THREE = THREE;
 
@@ -44,10 +44,12 @@ async function main() {
     if (lectureParam) {
       uiView.selectLecture(lectureParam);
     }
-  } else if (modeParam === 'acupuncture' || chainParam) {
-    appVM.setMode('acupuncture');
-    const tabAcu = document.getElementById('tab-mode-acupuncture');
-    if (tabAcu) tabAcu.click();
+  } else if (modeParam === 'acupoints') {
+    const tabPts = document.getElementById('tab-mode-acupoints');
+    if (tabPts) tabPts.click();
+  } else if (modeParam === 'therapy' || modeParam === 'acupuncture' || chainParam) {
+    const tabTherapy = document.getElementById('tab-mode-therapy');
+    if (tabTherapy) tabTherapy.click();
 
     if (chainParam && appVM.acupunctureVM) {
       appVM.acupunctureVM.selectChain(chainParam);
@@ -55,6 +57,8 @@ async function main() {
       if (selChain) selChain.value = chainParam;
     }
   } else if (movementParam && appVM.movementVM) {
+    const tabKin = document.getElementById('tab-mode-kinematics');
+    if (tabKin) tabKin.click();
     appVM.movementVM.selectMovement(movementParam);
     const sel = document.getElementById('movement-select');
     if (sel) sel.value = movementParam;

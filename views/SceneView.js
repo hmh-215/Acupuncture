@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { FBXLoader } from 'three/addons/loaders/FBXLoader.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { MuscleDeformer } from './MuscleDeformer.js?v=7.2';
+import { MuscleDeformer } from './MuscleDeformer.js?v=8.0';
 
 /**
  * SceneView.js
@@ -1134,13 +1134,23 @@ export class SceneView {
     const onClick = () => {
       if (!this.hoveredObject) return;
 
-      if (this.hoveredObject.userData.type === 'acupoint') {
-        const code = this.hoveredObject.userData.code;
-        if (this.appVM.acupunctureVM) {
-          this.appVM.acupunctureVM.selectAcupoint(code);
+      const obj = this.hoveredObject;
+      const isAcupoint = obj.userData?.type === 'acupoint' || obj.parent?.userData?.type === 'acupoint';
+      if (isAcupoint) {
+        const acupointObj = obj.userData?.type === 'acupoint' ? obj : obj.parent;
+        const code = acupointObj.userData.code;
+        const activeMode = this.appVM?.state?.activeMode;
+        if (activeMode === 'acupoints') {
+          if (this.appVM.acupointMapVM) {
+            this.appVM.acupointMapVM.selectAcupoint(code);
+          }
+        } else {
+          if (this.appVM.acupunctureVM) {
+            this.appVM.acupunctureVM.selectAcupoint(code);
+          }
         }
-      } else if (this.hoveredObject.userData.type === 'muscle') {
-        const muscleId = this.hoveredObject.userData.id;
+      } else if (obj.userData?.type === 'muscle') {
+        const muscleId = obj.userData.id;
         if (this.appVM.movementVM) {
           this.appVM.movementVM.selectMuscleForDetail(muscleId);
         }
@@ -1522,8 +1532,12 @@ export class SceneView {
   }
 
   _getLocalizedName(object) {
-    if (!object || !object.userData) return '';
-    const ud = object.userData;
+    if (!object) return '';
+    let ud = object.userData;
+    if ((!ud || !ud.type) && object.parent && object.parent.userData && object.parent.userData.type === 'acupoint') {
+      ud = object.parent.userData;
+    }
+    if (!ud) return '';
 
     if (ud.type === 'acupoint') {
       return `🔴 Huyệt ${ud.name_vi} (${ud.code})`;

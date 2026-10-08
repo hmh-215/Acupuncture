@@ -1757,4 +1757,457 @@ body.dark-theme .playlist-item-card.active {
   transform: scale(1.05);
 }
 
+/* ================================================================
+   NEW ENHANCEMENTS: MEDICAL DISCLAIMER, FLOATING LEGEND,
+   CATEGORIZED MUSCLE LIST & CHẾ ĐỘ 2 (BẢN ĐỒ HUYỆT ĐẠO 3D)
+   ================================================================ */
+
+/* === MEDICAL DISCLAIMER BANNER === */
+.medical-disclaimer-banner {
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.12), rgba(217, 119, 6, 0.08));
+  border-bottom: 1px solid rgba(245, 158, 11, 0.35);
+  padding: 10px var(--gap);
+  color: var(--text);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+body.dark-theme .medical-disclaimer-banner {
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.15), rgba(15, 23, 42, 0.95));
+  border-bottom-color: rgba(245, 158, 11, 0.3);
+}
+.disclaimer-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.disclaimer-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+.disclaimer-text {
+  flex: 1;
+}
+.disclaimer-title {
+  color: var(--amber);
+  font-weight: 700;
+  margin-right: 6px;
+}
+@media (max-width: 768px) {
+  .disclaimer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+
+/* === FLOATING VIEWPORT LEGEND CARD (CHẾ ĐỘ 1: ĐỘNG HỌC CỬ ĐỘNG) === */
+.viewport-legend-card {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 10;
+  pointer-events: auto;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 220px;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+body.dark-theme .viewport-legend-card {
+  background: rgba(30, 41, 59, 0.92);
+  border-color: rgba(51, 65, 85, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+.viewport-legend-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+}
+.viewport-legend-title {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  text-transform: uppercase;
+}
+.viewport-legend-hint {
+  font-size: 0.7rem;
+  color: var(--cyan);
+  font-weight: 500;
+}
+.viewport-legend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.viewport-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: 1px solid transparent;
+}
+.viewport-legend-item:hover {
+  background: rgba(2, 132, 199, 0.08);
+  border-color: rgba(2, 132, 199, 0.2);
+}
+body.dark-theme .viewport-legend-item:hover {
+  background: rgba(56, 189, 248, 0.12);
+  border-color: rgba(56, 189, 248, 0.25);
+}
+.viewport-legend-item.active {
+  background: rgba(2, 132, 199, 0.15);
+  border-color: var(--cyan);
+  font-weight: 700;
+}
+body.dark-theme .viewport-legend-item.active {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: var(--cyan);
+  font-weight: 700;
+}
+.viewport-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: transform 0.15s;
+}
+.viewport-legend-item:hover .viewport-legend-dot {
+  transform: scale(1.25);
+}
+.dot-agonist {
+  background: #ef4444;
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.7);
+}
+.dot-antagonist {
+  background: #38bdf8;
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.7);
+}
+.dot-synergist {
+  background: #f59e0b;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.7);
+}
+.dot-stabilizer {
+  background: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.7);
+}
+.viewport-legend-name {
+  flex: 1;
+  white-space: nowrap;
+}
+.viewport-legend-name em {
+  font-size: 0.72rem;
+  color: var(--muted);
+  font-style: normal;
+  margin-left: 2px;
+}
+
+/* === CATEGORIZED MUSCLE LIST HEADERS === */
+.muscle-category-block {
+  margin-bottom: 12px;
+}
+.muscle-category-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  margin-bottom: 4px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 3px solid var(--category-color, var(--cyan));
+}
+body:not(.dark-theme) .muscle-category-header {
+  background: rgba(0, 0, 0, 0.03);
+}
+.muscle-category-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+}
+.muscle-category-count {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--muted);
+  background: rgba(0, 0, 0, 0.1);
+  padding: 1px 6px;
+  border-radius: 10px;
+}
+body.dark-theme .muscle-category-count {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Clean Muscle Item Row Matching Mockup */
+.muscle-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 8px 10px;
+  margin-bottom: 4px;
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.muscle-item:hover {
+  background: var(--card-hover);
+  border-color: var(--cyan);
+  transform: translateX(2px);
+}
+.muscle-item-row-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.muscle-item-row-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.74rem;
+  color: var(--muted);
+}
+.muscle-item-name {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.muscle-item-latin {
+  font-style: italic;
+  color: var(--muted);
+}
+.role-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.role-badge.role-agonist {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+.role-badge.role-antagonist {
+  color: #0ea5e9;
+  background: rgba(14, 165, 233, 0.12);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+}
+.role-badge.role-synergist {
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+.role-badge.role-stabilizer {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* === CHẾ ĐỘ 2: BẢN ĐỒ HUYỆT ĐẠO 3D === */
+.card-header-with-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.card-header-with-badge .card-title {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.badge-mini {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--red);
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+.card-desc-sub {
+  font-size: 0.76rem;
+  color: var(--muted);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* Region Filter Bar */
+.region-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.region-pill {
+  padding: 4px 10px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.region-pill:hover {
+  color: var(--text);
+  border-color: var(--cyan);
+}
+.region-pill.active {
+  background: var(--cyan);
+  border-color: var(--cyan);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.3);
+}
+
+.acupoints-count-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+  padding: 0 4px;
+}
+
+/* Acupoint Scroll List */
+.acupoints-scroll-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 380px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+  padding-right: 4px;
+}
+
+.map-acupoint-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.map-acupoint-item:hover {
+  border-color: var(--cyan);
+  background: var(--card-hover);
+  transform: translateX(2px);
+}
+.map-acupoint-item.active {
+  border-color: var(--red);
+  background: rgba(239, 68, 68, 0.08);
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.2);
+}
+.map-acupoint-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.map-acupoint-code {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--red);
+  background: rgba(239, 68, 68, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  min-width: 48px;
+  text-align: center;
+}
+.map-acupoint-name {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.map-acupoint-han {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-left: 4px;
+}
+.map-acupoint-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.map-acupoint-meridian {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+.map-acupoint-region-tag {
+  font-size: 0.68rem;
+  padding: 1px 6px;
+  border-radius: 8px;
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--cyan);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+/* Detail Card (Mode 2) */
+.detail-badge-code {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--red);
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+.inline-title {
+  display: inline;
+}
+.detail-han {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-left: 6px;
+  font-weight: normal;
+}
+.detail-meridian {
+  font-size: 0.78rem;
+  color: var(--cyan);
+  font-weight: 600;
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+.safety-alert {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  background: rgba(239, 68, 68, 0.1);
+  border-left: 3px solid var(--red);
+  color: var(--red);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
 
