@@ -1,4 +1,4 @@
-﻿import { Observable } from './Observable.js?v=7.2';
+import { Observable } from './Observable.js?v=8.0';
 
 const ROLE_COLORS = {
   agonist: '#ef4444',     // Đỏ - Cơ chủ vận

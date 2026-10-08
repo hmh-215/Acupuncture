@@ -1,458 +1,1823 @@
 {
-  "LI-15": {
-    "code": "LI-15",
-    "name_vi": "Kiên Ngung",
-    "name_han_viet": "肩髃",
-    "meridian_vi": "Kinh Thủ Dương Minh Đại Trường",
-    "location_vi": "Ở hõm trước - ngoài mỏm cùng vai khi cánh tay giạng 90°",
-    "depth_mm": "15 - 30 mm",
-    "related_muscles": [
-      "deltoid_anterior",
-      "deltoid_middle",
-      "supraspinatus"
-    ],
-    "indications_vi": "Đau liệt khớp vai, viêm chu vai, teo cơ delta, bán trật khớp vai"
-  },
-  "TE-14": {
-    "code": "TE-14",
-    "name_vi": "Kiên Liêu",
-    "name_han_viet": "肩髎",
-    "meridian_vi": "Kinh Thủ Thiếu Dương Tam Tiêu",
-    "location_vi": "Ở chỗ lõm phía sau - ngoài mỏm cùng vai khi giạng cánh tay (sau huyệt Kiên Ngung khoảng 1 thốn)",
-    "depth_mm": "15 - 30 mm",
-    "related_muscles": [
-      "deltoid_middle",
-      "deltoid_posterior",
-      "infraspinatus"
-    ],
-    "indications_vi": "Đau khớp vai, hội chứng chạm dưới mỏm cùng vai, hạn chế tầm vận động vai"
-  },
-  "SI-9": {
-    "code": "SI-9",
-    "name_vi": "Kiên Trinh",
-    "name_han_viet": "肩貞",
-    "meridian_vi": "Kinh Thủ Thái Dương Tiểu Trường",
-    "location_vi": "Khi khép cánh tay, huyệt nằm thẳng phía trên nếp gấp nách sau 1 thốn",
-    "depth_mm": "20 - 30 mm",
-    "related_muscles": [
-      "deltoid_posterior",
-      "teres_major",
-      "triceps_brachii"
-    ],
-    "indications_vi": "Đau mặt sau khớp vai, viêm cơ tròn lớn, liệt dây thần kinh nách"
-  },
-  "SI-10": {
-    "code": "SI-10",
-    "name_vi": "Nhu Du",
-    "name_han_viet": "臑兪",
-    "meridian_vi": "Kinh Thủ Thái Dương Tiểu Trường",
-    "location_vi": "Khi khép tay, huyệt nằm thẳng phía trên huyệt Kiên Trinh, ngay bờ dưới gai xương bả vai",
-    "depth_mm": "15 - 25 mm",
-    "related_muscles": [
-      "deltoid_posterior",
-      "infraspinatus",
-      "teres_minor"
-    ],
-    "indications_vi": "Đau bả vai, viêm gân chóp xoay sau, yếu cơ xoay ngoài"
-  },
-  "SI-11": {
-    "code": "SI-11",
-    "name_vi": "Thiên Tông",
-    "name_han_viet": "天宗",
-    "meridian_vi": "Kinh Thủ Thái Dương Tiểu Trường",
-    "location_vi": "Nằm ở điểm chính giữa hố dưới gai xương bả vai (tạo thành tam giác đều với góc trên trong và góc dưới xương bả vai)",
-    "depth_mm": "15 - 25 mm",
-    "related_muscles": [
-      "infraspinatus",
-      "trapezius_middle"
-    ],
-    "indications_vi": "Đau mỏi vùng xương bả vai, hội chứng đau cơ cân (Trigger Point) cơ dưới gai, đau lan mặt ngoài cánh tay"
-  },
-  "SI-12": {
-    "code": "SI-12",
-    "name_vi": "Bỉnh Phong",
-    "name_han_viet": "秉風",
-    "meridian_vi": "Kinh Thủ Thái Dương Tiểu Trường",
-    "location_vi": "Nằm ở chính giữa hố trên gai xương bả vai, thẳng trên huyệt Thiên Tông",
-    "depth_mm": "15 - 20 mm",
-    "related_muscles": [
-      "supraspinatus",
-      "trapezius_upper"
-    ],
-    "indications_vi": "Viêm rách gân cơ trên gai, đau khớp vai khi khởi động giạng tay"
-  },
-  "GB-21": {
-    "code": "GB-21",
-    "name_vi": "Kiên Tỉnh",
-    "name_han_viet": "肩井",
+  "GB-14": {
+    "code": "GB-14",
+    "name_vi": "Dương Bạch",
+    "name_han_viet": "陽白",
     "meridian_vi": "Kinh Túc Thiếu Dương Đởm",
-    "location_vi": "Điểm giữa của đường nối mỏm gai đốt sống C7 (Đại Chùy) đến mỏm cùng vai",
-    "depth_mm": "10 - 20 mm (Thận trọng châm xiên ra ngoài, tránh chọc vào đỉnh màng phổi gây tràn khí)",
+    "region": "head_neck",
+    "region_vi": "Đầu - Mặt - Cổ",
+    "location_vi": "Ở vùng trán, thẳng trên con ngươi mắt, từ điểm giữa cung lông mày đo thẳng lên 1 thốn (trên cơ trán).",
+    "depth_mm": "5 - 10 mm",
+    "direction_vi": "Châm luồn kim dưới da, hướng mũi kim xuống dưới hoặc sang hai bên.",
+    "deqi_vi": "Cảm giác tê tức cục bộ vùng trán, lan nhẹ về phía hốc mắt.",
+    "safety_vi": "Tránh châm vào màng xương gây đau tức kéo dài.",
+    "indications_vi": "Nhức đầu vùng trán, liệt dây thần kinh VII ngoại biên, viêm màng tiếp hợp, viêm tuyến lệ, lẹo mắt.",
+    "position_3d": {
+      "x": -0.42,
+      "y": 16.25,
+      "z": 0.9
+    },
     "related_muscles": [
-      "trapezius_upper",
-      "levator_scapulae",
-      "supraspinatus"
-    ],
-    "indications_vi": "Đau cứng cổ gáy, co cứng cơ thang, đau đầu vùng chẩm, hạn chế xoay cổ. (Chống chỉ định phụ nữ có thai)"
+      "frontalis"
+    ]
+  },
+  "EX-HN3": {
+    "code": "EX-HN3",
+    "name_vi": "Ấn Đường",
+    "name_han_viet": "印堂",
+    "meridian_vi": "Huyệt Ngoài Kinh (Kỳ huyệt)",
+    "region": "head_neck",
+    "region_vi": "Đầu - Mặt - Cổ",
+    "location_vi": "Điểm chính giữa đường nối hai đầu trong cung lông mày, trên đường dọc giữa mặt.",
+    "depth_mm": "5 - 8 mm",
+    "direction_vi": "Véo da châm luồn kim nằm ngang xuống dưới hướng về sống mũi.",
+    "deqi_vi": "Cảm giác căng tức nặng tại chỗ, lan tỏa xuống sống mũi.",
+    "safety_vi": "Không châm thẳng vào xương mũi gây đau nhức.",
+    "indications_vi": "Sốt cao, nhức đầu trước trán, chảy máu cam, viêm xoang trán, mất ngủ, an thần trẻ em co giật.",
+    "position_3d": {
+      "x": 0.0,
+      "y": 15.95,
+      "z": 0.98
+    },
+    "related_muscles": [
+      "procerus"
+    ]
+  },
+  "BL-1": {
+    "code": "BL-1",
+    "name_vi": "Tình Minh",
+    "name_han_viet": "睛明",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "region": "head_neck",
+    "region_vi": "Đầu - Mặt - Cổ",
+    "location_vi": "Ở chỗ lõm phía trên góc trong khóe mắt 0.1 thốn (cách góc trong mắt khoảng 2mm).",
+    "depth_mm": "5 - 10 mm",
+    "direction_vi": "Bảo bệnh nhân nhắm mắt, dùng ngón tay đẩy nhãn cầu sang bên ngoài, châm kim từ từ sát bờ trong ổ mắt. CẤM vê kim mạnh.",
+    "deqi_vi": "Căng tức sâu trong hốc mắt, chảy nước mắt.",
+    "safety_vi": "⚠️ CẢNH BÁO AN TOÀN: Huyệt sát nhãn cầu và mạch máu ổ mắt. Tuyệt đối không vê kim hoặc châm quá sâu tránh xuất huyết hậu nhãn cầu.",
+    "indications_vi": "Chắp, lẹo, viêm tuyến lệ, viêm màng tiếp hợp, liệt dây VII ngoại biên, teo thần kinh thị giác.",
+    "position_3d": {
+      "x": -0.18,
+      "y": 15.78,
+      "z": 0.94
+    },
+    "related_muscles": [
+      "orbicularis_oculi"
+    ]
+  },
+  "BL-2": {
+    "code": "BL-2",
+    "name_vi": "Toản Trúc",
+    "name_han_viet": "攢竹",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "region": "head_neck",
+    "region_vi": "Đầu - Mặt - Cổ",
+    "location_vi": "Ở chỗ lõm đầu trong cung lông mày, ngay trên góc trong khóe mắt.",
+    "depth_mm": "5 - 10 mm",
+    "direction_vi": "Châm xiên hoặc luồn kim nằm ngang hướng ra ngoài dọc theo cung lông mày.",
+    "deqi_vi": "Căng tức tại chỗ hoặc tê lan dọc theo cung mày.",
+    "safety_vi": "Thao tác nhẹ nhàng tránh tụ máu dưới da vùng mi mắt.",
+    "indications_vi": "Bệnh về mắt, nhức đầu vùng trán, liệt dây thần kinh số VII ngoại biên, hoa mắt chóng mặt.",
+    "position_3d": {
+      "x": -0.28,
+      "y": 15.92,
+      "z": 0.95
+    },
+    "related_muscles": [
+      "corrugator_supercilii",
+      "orbicularis_oculi"
+    ]
+  },
+  "TE-23": {
+    "code": "TE-23",
+    "name_vi": "Ty Trúc Không",
+    "name_han_viet": "絲竹空",
+    "meridian_vi": "Kinh Thủ Thiếu Dương Tam Tiêu",
+    "region": "head_neck",
+    "region_vi": "Đầu - Mặt - Cổ",
+    "location_vi": "Ở chỗ lõm đầu ngoài cung lông mày.",
+    "depth_mm": "5 - 10 mm",
+    "direction_vi": "Châm luồn kim nằm ngang ra sau hoặc luồn kim vào giữa cung mày.",
+    "deqi_vi": "Tê tức cục bộ vùng đuôi mắt.",
+    "safety_vi": "Không châm quá sâu vào màng xương thái dương.",
+    "indications_vi": "Bệnh về mắt, nhức nửa đầu, liệt dây VII ngoại biên, co giật mi mắt.",
+    "position_3d": {
+      "x": -0.72,
+      "y": 15.82,
+      "z": 0.82
+    },
+    "related_muscles": [
+      "orbicularis_oculi"
+    ]
+  },
+  "EX-HN4": {
+    "code": "EX-HN4",
+    "name_vi": "Ngư Yêu",
+    "name_han_viet": "魚腰",
+    "meridian_vi": "Huyệt Ngoài Kinh (Kỳ huyệt)",
+    "region": "head_neck",
+    "region_vi": "Đầu - Mặt - Cổ",
+    "location_vi": "Điểm chính giữa cung lông mày, thẳng trên con ngươi khi mắt nhìn thẳng.",
+    "depth_mm": "5 - 8 mm",
+    "direction_vi": "Châm luồn kim nằm ngang sang hai bên hoặc xuống dưới.",
+    "deqi_vi": "Cảm giác tê tức tại chỗ.",
+    "safety_vi": "Tránh đâm vào mạch máu trên hốc mắt gây tụ máu.",
+    "indications_vi": "Liệt mặt dây VII, giật mi mắt, cận thị, viêm màng tiếp hợp, đau đầu vùng trán.",
+    "position_3d": {
+      "x": -0.42,
+      "y": 15.9,
+      "z": 0.94
+    },
+    "related_muscles": [
+      "orbicularis_oculi"
+    ]
+  },
+  "EX-HN5": {
+    "code": "EX-HN5",
+    "name_vi": "Thái Dương",
+    "name_han_viet": "太陽",
+    "meridian_vi": "Huyệt Ngoài Kinh (Kỳ huyệt)",
+    "region": "head_neck",
+    "region_vi": "Đầu - Mặt - Cổ",
+    "location_vi": "Từ điểm giữa đuôi mắt và đầu ngoài cung lông mày đo ra sau 1 thốn, tại chỗ lõm trên cơ thái dương.",
+    "depth_mm": "8 - 15 mm",
+    "direction_vi": "Châm thẳng hoặc xiên nhẹ ra sau, có thể chích nặn máu khi đau đầu cấp tính do can hỏa.",
+    "deqi_vi": "Căng tức nặng vùng thái dương, lan ra tai.",
+    "safety_vi": "Dưới đáy huyệt có nhánh động mạch thái dương nông; tránh làm rách mạch máu.",
+    "indications_vi": "Nhức đầu, đau nửa đầu (Migraine), đau răng hàm trên, viêm màng tiếp hợp, cảm mạo.",
+    "position_3d": {
+      "x": -0.85,
+      "y": 15.8,
+      "z": 0.65
+    },
+    "related_muscles": [
+      "temporalis"
+    ]
+  },
+  "LI-20": {
+    "code": "LI-20",
+    "name_vi": "Nghinh Hương",
+    "name_han_viet": "迎香",
+    "meridian_vi": "Kinh Thủ Dương Minh Đại Trường",
+    "region": "head_neck",
+    "region_vi": "Đầu - Mặt - Cổ",
+    "location_vi": "Điểm gặp nhau của đường ngang qua chân cánh mũi và rãnh mũi - má (cách chân cánh mũi khoảng 4mm).",
+    "depth_mm": "5 - 10 mm",
+    "direction_vi": "Châm xiên hướng mũi kim lên trên về phía gốc mũi hoặc luồn kim vào rãnh mũi má.",
+    "deqi_vi": "Tê tức tại chỗ, cay mũi hoặc chảy nước mắt.",
+    "safety_vi": "Vùng mặt có nhiều mao mạch, ấn chặt sau khi rút kim tránh bầm tím.",
+    "indications_vi": "Viêm mũi dị ứng, ngạt mũi, mất khứu giác, chảy máu cam, liệt dây VII ngoại biên.",
+    "position_3d": {
+      "x": -0.32,
+      "y": 15.35,
+      "z": 0.98
+    },
+    "related_muscles": [
+      "levator_labii_superioris_alaeque_nasi"
+    ]
+  },
+  "GV-26": {
+    "code": "GV-26",
+    "name_vi": "Nhân Trung (Thủy Câu)",
+    "name_han_viet": "人中",
+    "meridian_vi": "Mạch Đốc",
+    "region": "head_neck",
+    "region_vi": "Đầu - Mặt - Cổ",
+    "location_vi": "Ở điểm giao giữa 1/3 trên và 2/3 dưới của rãnh nhân trung.",
+    "depth_mm": "5 - 10 mm",
+    "direction_vi": "Châm xiên chếch mũi kim lên trên một góc 45°.",
+    "deqi_vi": "Đau tức mạnh, chảy nước mắt (kích thích hồi tỉnh cực mạnh).",
+    "safety_vi": "Huyệt cấp cứu hồi tỉnh; kích thích mạnh bằng móng tay khi không có sẵn kim.",
+    "indications_vi": "Cấp cứu ngất, hôn mê, sốc, sốt cao co giật trẻ em, liệt mặt méo miệng, say nắng.",
+    "position_3d": {
+      "x": 0.0,
+      "y": 15.2,
+      "z": 0.98
+    },
+    "related_muscles": [
+      "orbicularis_oris"
+    ]
+  },
+  "ST-4": {
+    "code": "ST-4",
+    "name_vi": "Địa Thương",
+    "name_han_viet": "地倉",
+    "meridian_vi": "Kinh Túc Dương Minh Vị",
+    "region": "head_neck",
+    "region_vi": "Đầu - Mặt - Cổ",
+    "location_vi": "Cách khóe miệng 0.4 thốn ra ngoài, trên đường ngang qua khóe miệng và rãnh mũi má.",
+    "depth_mm": "8 - 15 mm",
+    "direction_vi": "Châm luồn kim nằm ngang hướng về huyệt Giáp Xa trong điều trị liệt mặt.",
+    "deqi_vi": "Tê tức vùng má và khóe miệng.",
+    "safety_vi": "Tránh đâm thủng vào niêm mạc khoang miệng.",
+    "indications_vi": "Liệt dây VII ngoại biên (méo mồm, chảy dãi), đau dây thần kinh V, đau răng.",
+    "position_3d": {
+      "x": -0.42,
+      "y": 15.02,
+      "z": 0.93
+    },
+    "related_muscles": [
+      "orbicularis_oris",
+      "buccinator",
+      "zygomaticus_major"
+    ]
+  },
+  "ST-7": {
+    "code": "ST-7",
+    "name_vi": "Hạ Quan",
+    "name_han_viet": "下關",
+    "meridian_vi": "Kinh Túc Dương Minh Vị",
+    "region": "head_neck",
+    "region_vi": "Đầu - Mặt - Cổ",
+    "location_vi": "Ở chỗ lõm phía dưới bờ dưới cung gò má, phía trước mỏm lồi cầu xương hàm dưới (ngang nắp tai, khi ngậm miệng có chỗ lõm, khi há miệng chỗ lõm lồi lên).",
+    "depth_mm": "10 - 20 mm",
+    "direction_vi": "Bảo bệnh nhân ngậm miệng, châm thẳng góc 90°.",
+    "deqi_vi": "Căng tức sâu khớp thái dương hàm, lan sang tai và góc hàm.",
+    "safety_vi": "Không châm khi bệnh nhân đang há miệng lớn.",
+    "indications_vi": "Viêm khớp thái dương hàm, ù tai, điếc tai, liệt dây VII, đau dây V nhánh hàm dưới.",
+    "position_3d": {
+      "x": -0.78,
+      "y": 15.25,
+      "z": 0.58
+    },
+    "related_muscles": [
+      "masseter"
+    ]
+  },
+  "ST-6": {
+    "code": "ST-6",
+    "name_vi": "Giáp Xa",
+    "name_han_viet": "頰車",
+    "meridian_vi": "Kinh Túc Dương Minh Vị",
+    "region": "head_neck",
+    "region_vi": "Đầu - Mặt - Cổ",
+    "location_vi": "Từ góc xương hàm dưới đo vào 1 thốn về phía trước-trên; hoặc bảo bệnh nhân cắn chặt răng, huyệt ở chỗ lồi cao nhất của cơ cắn.",
+    "depth_mm": "10 - 15 mm",
+    "direction_vi": "Châm thẳng hoặc châm luồn kim xiên hướng về huyệt Địa Thương.",
+    "deqi_vi": "Tê tức nặng vùng cơ cắn và góc hàm dưới.",
+    "safety_vi": "Không châm quá sâu vào tuyến nước bọt mang tai.",
+    "indications_vi": "Đau răng hàm dưới, liệt dây thần kinh số VII, cấm khẩu, đau dây thần kinh V, quai bị.",
+    "position_3d": {
+      "x": -0.75,
+      "y": 14.85,
+      "z": 0.55
+    },
+    "related_muscles": [
+      "masseter"
+    ]
+  },
+  "ST-1": {
+    "code": "ST-1",
+    "name_vi": "Thừa Khấp",
+    "name_han_viet": "承泣",
+    "meridian_vi": "Kinh Túc Dương Minh Vị",
+    "region": "head_neck",
+    "region_vi": "Đầu - Mặt - Cổ",
+    "location_vi": "Ở chỗ lõm giữa nhãn cầu và bờ dưới ổ mắt, thẳng dưới con ngươi khi nhìn thẳng.",
+    "depth_mm": "8 - 15 mm",
+    "direction_vi": "Bảo bệnh nhân nhìn lên trên, dùng ngón tay đẩy nhẹ nhãn cầu lên trên, châm từ từ dọc theo bờ dưới ổ mắt. CẤM vê kim mạnh.",
+    "deqi_vi": "Căng tức sâu trong ổ mắt, chảy nước mắt.",
+    "safety_vi": "⚠️ CẢNH BÁO AN TOÀN: Huyệt sát nhãn cầu; tuyệt đối cấm châm xiên sâu hoặc lắc kim mạnh tránh tụ máu hốc mắt.",
+    "indications_vi": "Viêm màng tiếp hợp, quáng gà, chắp, lẹo, liệt dây VII, giật mi mắt dưới.",
+    "position_3d": {
+      "x": -0.35,
+      "y": 15.65,
+      "z": 0.93
+    },
+    "related_muscles": [
+      "orbicularis_oculi"
+    ]
+  },
+  "CV-23": {
+    "code": "CV-23",
+    "name_vi": "Liêm Tuyền",
+    "name_han_viet": "廉泉",
+    "meridian_vi": "Mạch Nhâm",
+    "region": "head_neck",
+    "region_vi": "Đầu - Mặt - Cổ",
+    "location_vi": "Ở chỗ lõm bờ trên sụn giáp trạng, ngay trên xương móng.",
+    "depth_mm": "10 - 20 mm",
+    "direction_vi": "Châm xiên hướng mũi kim lên trên về phía cuống lưỡi.",
+    "deqi_vi": "Cảm giác căng cứng, tê tức cuống họng và gốc lưỡi.",
+    "safety_vi": "Không châm thẳng xuống dưới vào thanh quản gây sặc hoặc khó thở.",
+    "indications_vi": "Nói khó, nói ngọng sau tai biến mạch máu não, câm, mất tiếng, nuốt khó, viêm họng.",
+    "position_3d": {
+      "x": 0.0,
+      "y": 14.5,
+      "z": 0.65
+    },
+    "related_muscles": [
+      "mylohyoid",
+      "thyrohyoid"
+    ]
+  },
+  "TE-17": {
+    "code": "TE-17",
+    "name_vi": "Ế Phong",
+    "name_han_viet": "翳風",
+    "meridian_vi": "Kinh Thủ Thiếu Dương Tam Tiêu",
+    "region": "head_neck",
+    "region_vi": "Đầu - Mặt - Cổ",
+    "location_vi": "Ở chỗ lõm giữa góc xương hàm dưới và mỏm chũm xương thái dương (ấn dái tai sát vào mặt, đầu dưới dái tai chỉ vào đâu là huyệt ở đó).",
+    "depth_mm": "12 - 25 mm",
+    "direction_vi": "Châm thẳng hoặc hơi chếch mũi kim ra trước vào trong.",
+    "deqi_vi": "Tê tức sâu vùng tai lan vào trong họng và hàm dưới.",
+    "safety_vi": "⚠️ CẢNH BÁO: Châm sâu quá mức có thể chạm vào dây thần kinh mặt hoặc động mạch cảnh trong.",
+    "indications_vi": "Liệt dây thần kinh số VII, ù tai, điếc tai, viêm tuyến mang tai (quai bị), chóng mặt tiền đình.",
+    "position_3d": {
+      "x": -0.82,
+      "y": 15.1,
+      "z": 0.28
+    },
+    "related_muscles": [
+      "sternocleidomastoid"
+    ]
+  },
+  "GV-20": {
+    "code": "GV-20",
+    "name_vi": "Bách Hội",
+    "name_han_viet": "百會",
+    "meridian_vi": "Mạch Đốc",
+    "region": "head_neck",
+    "region_vi": "Đầu - Mặt - Cổ",
+    "location_vi": "Ở điểm chính giữa đỉnh đầu, là giao điểm của đường dọc giữa đầu và đường nối đỉnh hai loa tai.",
+    "depth_mm": "8 - 15 mm",
+    "direction_vi": "Châm luồn kim nằm ngang dưới da hướng ra trước hoặc ra sau.",
+    "deqi_vi": "Cảm giác tê tức, nặng đầu lan tỏa xung quanh đỉnh đầu.",
+    "safety_vi": "Trẻ nhỏ thóp chưa liền cấm châm kim.",
+    "indications_vi": "Sa trực tràng, sa tử cung, nhức đầu đỉnh đầu, trúng phong hôn mê, cảm cúm, mất ngủ, hay quên.",
+    "position_3d": {
+      "x": 0.0,
+      "y": 17.05,
+      "z": 0.05
+    },
+    "related_muscles": [
+      "epicranial_aponeurosis"
+    ]
+  },
+  "EX-HN1": {
+    "code": "EX-HN1",
+    "name_vi": "Tứ Thần Thông",
+    "name_han_viet": "四神聰",
+    "meridian_vi": "Huyệt Ngoài Kinh (Kỳ huyệt)",
+    "region": "head_neck",
+    "region_vi": "Đầu - Mặt - Cổ",
+    "location_vi": "Gồm 4 huyệt nằm cách huyệt Bách Hội 1 thốn theo 4 hướng: trước, sau, trái, phải.",
+    "depth_mm": "8 - 12 mm",
+    "direction_vi": "Châm luồn kim nằm ngang dưới da hướng mũi kim về phía huyệt Bách Hội.",
+    "deqi_vi": "Căng tức nhẹ toàn bộ vùng đỉnh đầu.",
+    "safety_vi": "Châm nông dưới da, tránh cào xước màng xương.",
+    "indications_vi": "Đau đầu vùng đỉnh, suy nhược thần kinh, mất ngủ, chóng mặt, sa các tạng.",
+    "position_3d": {
+      "x": 0.0,
+      "y": 17.02,
+      "z": 0.35
+    },
+    "related_muscles": [
+      "epicranial_aponeurosis"
+    ]
+  },
+  "ST-8": {
+    "code": "ST-8",
+    "name_vi": "Đầu Duy",
+    "name_han_viet": "頭維",
+    "meridian_vi": "Kinh Túc Dương Minh Vị",
+    "region": "head_neck",
+    "region_vi": "Đầu - Mặt - Cổ",
+    "location_vi": "Ở góc trán trên, tại góc chân tóc trán đo vào 0.5 thốn (cách huyệt Thần Đình 4.5 thốn).",
+    "depth_mm": "8 - 15 mm",
+    "direction_vi": "Châm luồn kim nằm ngang ra sau hoặc sang bên.",
+    "deqi_vi": "Tê tức vùng góc trán và cơ thái dương.",
+    "safety_vi": "Tránh đâm vào mạch máu da đầu.",
+    "indications_vi": "Đau nửa đầu, đau dây thần kinh V, hoa mắt, chóng mặt, giật mi mắt, chảy nước mắt.",
+    "position_3d": {
+      "x": -0.78,
+      "y": 16.45,
+      "z": 0.6
+    },
+    "related_muscles": [
+      "temporalis",
+      "frontalis"
+    ]
+  },
+  "SI-18": {
+    "code": "SI-18",
+    "name_vi": "Quyền Liêu",
+    "name_han_viet": "顴髎",
+    "meridian_vi": "Kinh Thủ Thái Dương Tiểu Trường",
+    "region": "head_neck",
+    "region_vi": "Đầu - Mặt - Cổ",
+    "location_vi": "Thẳng dưới khóe mắt ngoài, ở chỗ lõm bờ dưới xương gò má.",
+    "depth_mm": "8 - 15 mm",
+    "direction_vi": "Châm thẳng hoặc xiên góc 45°.",
+    "deqi_vi": "Tê tức vùng gò má và răng hàm trên.",
+    "safety_vi": "Tránh đâm vào động mạch mặt.",
+    "indications_vi": "Liệt dây VII ngoại biên, đau dây thần kinh V nhánh II, đau răng hàm trên, vàng mắt.",
+    "position_3d": {
+      "x": -0.65,
+      "y": 15.35,
+      "z": 0.82
+    },
+    "related_muscles": [
+      "zygomaticus_major",
+      "masseter"
+    ]
   },
   "GB-20": {
     "code": "GB-20",
     "name_vi": "Phong Trì",
     "name_han_viet": "風池",
     "meridian_vi": "Kinh Túc Thiếu Dương Đởm",
-    "location_vi": "Ở chỗ lõm giữa bờ ngoài cơ thang và bờ trong cơ ức đòn chũm, dưới đáy xương chẩm",
-    "depth_mm": "15 - 25 mm (Hướng mũi kim về phía hốc mắt đối diện)",
-    "related_muscles": [
-      "trapezius_upper"
-    ],
-    "indications_vi": "Đau đầu, đau cứng cổ gáy, tăng huyết áp, chóng mặt, co cứng cơ gáy"
-  },
-  "BL-11": {
-    "code": "BL-11",
-    "name_vi": "Đại Trữ",
-    "name_han_viet": "大杼",
-    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang (Hội của Cốt)",
-    "location_vi": "Dưới mỏm gai đốt sống ngực T1 đo ngang ra 1.5 thốn",
-    "depth_mm": "15 - 20 mm (Châm xiên về phía cột sống)",
-    "related_muscles": [
-      "trapezius_middle",
-      "rhomboid_minor"
-    ],
-    "indications_vi": "Đau co cứng vùng lưng trên, thoái hóa khớp, đau khớp cột sống ngực"
-  },
-  "BL-13": {
-    "code": "BL-13",
-    "name_vi": "Phế Du",
-    "name_han_viet": "肺兪",
-    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
-    "location_vi": "Dưới mỏm gai đốt sống ngực T3 đo ngang ra 1.5 thốn",
-    "depth_mm": "15 - 20 mm (Châm xiên về phía cột sống, tránh châm thẳng vào phổi)",
-    "related_muscles": [
-      "trapezius_lower",
-      "rhomboid_major"
-    ],
-    "indications_vi": "Ho suyễn, đau lưng trên, hội chứng đau cơ trám và cơ thang dưới"
-  },
-  "BL-43": {
-    "code": "BL-43",
-    "name_vi": "Cao Hoang",
-    "name_han_viet": "膏肓",
-    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
-    "location_vi": "Dưới mỏm gai đốt sống ngực T4 đo ngang ra 3 thốn (ngang bờ trong xương bả vai)",
-    "depth_mm": "10 - 15 mm (Châm xiên chếch theo xương sườn)",
-    "related_muscles": [
-      "trapezius_lower",
-      "rhomboid_major"
-    ],
-    "indications_vi": "Đau mạn tính vùng giữa hai xương bả vai, mệt mỏi suy nhược, bệnh lý phổi mạn"
-  },
-  "LU-1": {
-    "code": "LU-1",
-    "name_vi": "Trung Phủ",
-    "name_han_viet": "中府",
-    "meridian_vi": "Kinh Thủ Thái Âm Phế (Mộ huyệt của Phế)",
-    "location_vi": "Dưới xương đòn 1 thốn, ngoài đường giữa ngực 6 thốn, ngay rãnh delta ngực",
-    "depth_mm": "15 - 20 mm (Châm xiên ra ngoài, tuyệt đối không châm thẳng sâu tránh thủng phổi)",
-    "related_muscles": [
-      "pectoralis_major",
-      "subscapularis"
-    ],
-    "indications_vi": "Ho, khó thở, đau tức ngực, đau mặt trước khớp vai"
-  },
-  "LU-5": {
-    "code": "LU-5",
-    "name_vi": "Xích Trạch",
-    "name_han_viet": "尺澤",
-    "meridian_vi": "Kinh Thủ Thái Âm Phế (Hợp huyệt hành Thủy)",
-    "location_vi": "Trên nếp gấp khuỷu tay, ở bờ ngoài gân cơ nhị đầu cánh tay",
+    "region": "head_neck",
+    "region_vi": "Đầu - Mặt - Cổ",
+    "location_vi": "Ở chỗ lõm phía dưới xương chẩm, bờ ngoài cơ thang, bờ sau cơ ức đòn chũm.",
     "depth_mm": "15 - 25 mm",
+    "direction_vi": "Châm xiên hướng mũi kim về phía hốc mắt hoặc chóp mũi đối diện. TUYỆT ĐỐI KHÔNG châm hướng lên trên sâu vào não.",
+    "deqi_vi": "Tê tức sâu lan tỏa lên nửa đầu, ra sau hốc mắt và xuống cổ gáy.",
+    "safety_vi": "⚠️ CẢNH BÁO AN TOÀN TUYỆT ĐỐI: Châm quá sâu hướng lên trên có thể đâm xuyên màng chẩm đội tổn thương HÀNH TỦY gây ngừng thở tử vong.",
+    "indications_vi": "Đau vai gáy, cảm mạo phong hàn, tăng huyết áp, nhức đầu sau gáy, chóng mặt tiền đình, bệnh về mắt.",
+    "position_3d": {
+      "x": -0.65,
+      "y": 15.15,
+      "z": -0.58
+    },
     "related_muscles": [
-      "biceps_brachii",
-      "brachialis"
-    ],
-    "indications_vi": "Viêm gân cơ nhị đầu, đau co rút khớp khuỷu, sốt cao, ho ra máu"
-  },
-  "TE-10": {
-    "code": "TE-10",
-    "name_vi": "Thiên Tỉnh",
-    "name_han_viet": "天井",
-    "meridian_vi": "Kinh Thủ Thiếu Dương Tam Tiêu (Hợp huyệt hành Thổ)",
-    "location_vi": "Trên đầu mỏm khuỷu xương trụ 1 thốn, trong chỗ lõm của gân cơ tam đầu khi gập khuỷu",
-    "depth_mm": "15 - 25 mm",
-    "related_muscles": [
-      "triceps_brachii"
-    ],
-    "indications_vi": "Đau mặt sau khớp khuỷu, viêm túi thanh mạc mỏm khuỷu, đau vai lan xuống tay"
-  },
-  "LI-11": {
-    "code": "LI-11",
-    "name_vi": "Khúc Trì",
-    "name_han_viet": "曲池",
-    "meridian_vi": "Kinh Thủ Dương Minh Đại Trường (Hợp huyệt hành Thổ)",
-    "location_vi": "Khi gập khuỷu tay 90°, huyệt nằm ở chỗ lõm tận cùng phía ngoài nếp gấp khuỷu tay, bờ ngoài cơ cánh tay quay.",
-    "depth_mm": "20 - 30 mm",
-    "related_muscles": [
-      "brachioradialis",
-      "extensor_carpi_radialis_longus",
-      "pronator_teres"
-    ],
-    "indications_vi": "Viêm lồi cầu ngoài xương cánh tay (Tennis elbow), đau khớp khuỷu, liệt chi trên, hạ sốt, dị ứng."
-  },
-  "LI-10": {
-    "code": "LI-10",
-    "name_vi": "Thủ Tam Lý",
-    "name_han_viet": "手三里",
-    "meridian_vi": "Kinh Thủ Dương Minh Đại Trường",
-    "location_vi": "Dưới huyệt Khúc Trì 2 thốn, trên đường nối Khúc Trì và Dương Khê, trong khối cơ duỗi cẳng tay.",
-    "depth_mm": "20 - 25 mm",
-    "related_muscles": [
-      "extensor_carpi_radialis_brevis",
-      "extensor_carpi_radialis_longus",
-      "brachioradialis"
-    ],
-    "indications_vi": "Đau cẳng tay, viêm gân cơ duỗi cổ tay, hội chứng quá tải cẳng tay, liệt dây thần kinh quay."
-  },
-  "TE-5": {
-    "code": "TE-5",
-    "name_vi": "Ngoại Quan",
-    "name_han_viet": "外關",
-    "meridian_vi": "Kinh Thủ Thiếu Dương Tam Tiêu (Lạc huyệt, Giao hội Bát mạch mở Mạch Dương Duy)",
-    "location_vi": "Mặt sau cẳng tay, trên lằn chỉ cổ tay 2 thốn, giữa xương quay và xương trụ.",
-    "depth_mm": "15 - 20 mm",
-    "related_muscles": [
-      "extensor_digitorum",
-      "extensor_pollicis_longus"
-    ],
-    "indications_vi": "Đau cẳng tay, đau cổ tay, đau khớp ngón tay, cảm mạo, đau đầu, ù tai."
-  },
-  "LI-4": {
-    "code": "LI-4",
-    "name_vi": "Hợp Cốc",
-    "name_han_viet": "合谷",
-    "meridian_vi": "Kinh Thủ Dương Minh Đại Trường (Nguyên huyệt, Tổng huyệt vùng Đầu Mặt)",
-    "location_vi": "Ở bờ ngoài giữa xương bàn ngón 2, trên cơ gian cốt mu tay thứ nhất, khi khép ngón cái và ngón trỏ vào thì huyệt nằm ở đỉnh cơ nổi cao nhất.",
-    "depth_mm": "12 - 20 mm",
-    "related_muscles": [
-      "first_dorsal_interosseous",
-      "adductor_pollicis"
-    ],
-    "indications_vi": "Huyệt chủ trị vùng đầu mặt mắt mũi, giảm đau toàn thân, hội chứng đau bàn tay. (Chống chỉ định tuyệt đối phụ nữ mang thai)."
-  },
-  "HT-3": {
-    "code": "HT-3",
-    "name_vi": "Thiếu Hải",
-    "name_han_viet": "少海",
-    "meridian_vi": "Kinh Thủ Thiếu Âm Tâm (Hợp huyệt hành Thủy)",
-    "location_vi": "Khi gập khuỷu tay vuông góc, huyệt nằm ở đầu trong nếp gấp khuỷu, giữa mỏm trên lồi cầu trong xương cánh tay và gân cơ nhị đầu.",
-    "depth_mm": "15 - 25 mm",
-    "related_muscles": [
-      "pronator_teres",
-      "brachialis",
-      "flexor_carpi_radialis"
-    ],
-    "indications_vi": "Viêm lồi cầu trong xương cánh tay (Golfer elbow), đau mặt trong cánh tay, co rút ngón tay, hồi hộp lo âu."
-  },
-  "PC-3": {
-    "code": "PC-3",
-    "name_vi": "Khúc Trạch",
-    "name_han_viet": "曲澤",
-    "meridian_vi": "Kinh Thủ Quyết Âm Tâm Bào (Hợp huyệt hành Thủy)",
-    "location_vi": "Trên nếp gấp khớp khuỷu tay, ở bờ trong gân cơ nhị đầu cánh tay.",
-    "depth_mm": "15 - 25 mm",
-    "related_muscles": [
-      "biceps_brachii",
-      "brachialis"
-    ],
-    "indications_vi": "Đau co rút khớp khuỷu, đau thắt ngực, sốt cao, nôn mửa, say nắng."
-  },
-  "PC-6": {
-    "code": "PC-6",
-    "name_vi": "Nội Quan",
-    "name_han_viet": "內關",
-    "meridian_vi": "Kinh Thủ Quyết Âm Tâm Bào (Lạc huyệt, Giao hội Bát mạch mở Mạch Âm Duy)",
-    "location_vi": "Trên nếp gấp cổ tay 2 thốn, nằm giữa gân cơ gan tay lớn (palmaris longus) và gân cơ gấp cổ tay quay.",
-    "depth_mm": "15 - 25 mm",
-    "related_muscles": [
-      "palmaris_longus",
-      "flexor_carpi_radialis",
-      "flexor_digitorum_superficialis"
-    ],
-    "indications_vi": "Hội chứng ống cổ tay, chèn ép dây thần kinh giữa, buồn nôn, hồi hộp, mất ngủ, tức ngực."
-  },
-  "SI-8": {
-    "code": "SI-8",
-    "name_vi": "Tiểu Hải",
-    "name_han_viet": "小海",
-    "meridian_vi": "Kinh Thủ Thái Dương Tiểu Trường (Hợp huyệt hành Thổ)",
-    "location_vi": "Ở rãnh giữa mỏm khuỷu xương trụ và mỏm trên lồi cầu trong xương cánh tay (rãnh thần kinh trụ).",
-    "depth_mm": "10 - 15 mm",
-    "related_muscles": [
-      "flexor_carpi_ulnaris",
-      "triceps_brachii"
-    ],
-    "indications_vi": "Hội chứng ống thần kinh trụ tại khuỷu tay (Cubital tunnel syndrome), tê bì ngón 4 và 5, đau mặt trong cẳng tay."
+      "trapezius_upper",
+      "sternocleidomastoid",
+      "splenius_capitis"
+    ]
   },
   "GB-30": {
     "code": "GB-30",
     "name_vi": "Hoàn Khiêu",
     "name_han_viet": "環跳",
-    "meridian_vi": "Kinh Túc Thiếu Dương Đởm (Giao hội với Kinh Túc Thái Dương Bàng Quang)",
-    "location_vi": "Nằm ở 1/3 ngoài và 2/3 trong đường nối mấu chuyển lớn xương đùi với mỏm gai đốt sống cùng 4 (hoặc lỗ cùng 4).",
-    "depth_mm": "40 - 75 mm (Châm sâu qua cơ mông lớn chạm vùng thoát của dây thần kinh tọa)",
+    "meridian_vi": "Kinh Túc Thiếu Dương Đởm",
+    "region": "lower_limb",
+    "region_vi": "Chi Dưới",
+    "location_vi": "Nằm nghiêng co chân trên, ở chỗ lõm giữa 1/3 ngoài và 2/3 trong của đường nối mấu chuyển lớn xương đùi với mỏm gai đốt xương cùng IV.",
+    "depth_mm": "40 - 75 mm",
+    "direction_vi": "Châm thẳng góc 90° vào sâu trong khối cơ mông.",
+    "deqi_vi": "Cảm giác tê tức buốt như điện giật lan dọc theo dây thần kinh tọa xuống tận ngón chân.",
+    "safety_vi": "Huyệt nằm rất sâu, kim ngắn không đạt hiệu quả đắc khí. Tránh làm tổn thương nhánh thần kinh tọa nếu co giật quá mạnh.",
+    "indications_vi": "Đau thần kinh tọa, đau khớp háng, liệt chi dưới do di chứng tai biến, hội chứng cơ hình lê.",
+    "position_3d": {
+      "x": -1.45,
+      "y": 8.65,
+      "z": -0.35
+    },
     "related_muscles": [
       "gluteus_maximus",
-      "piriformis",
-      "quadratus_femoris"
-    ],
-    "indications_vi": "Huyệt đệ nhất chủ trị đau thần kinh tọa, hội chứng cơ hình lê, đau khớp háng, liệt chi dưới."
+      "piriformis"
+    ]
   },
-  "GB-31": {
-    "code": "GB-31",
-    "name_vi": "Phong Thị",
-    "name_han_viet": "風市",
-    "meridian_vi": "Kinh Túc Thiếu Dương Đởm",
-    "location_vi": "Mặt ngoài đùi, trên nếp khoeo 7 thốn, giữa cơ rộng ngoài và dải chậu chày. Khi đứng thẳng tay ép sát đùi, đầu ngón tay giữa chạm vào đâu thì đó là huyệt.",
+  "BL-54": {
+    "code": "BL-54",
+    "name_vi": "Trật Biên",
+    "name_han_viet": "秩邊",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "region": "lower_limb",
+    "region_vi": "Chi Dưới",
+    "location_vi": "Từ lỗ cùng thứ 4 (huyệt Hạ Liêu) đo ngang ra 3 thốn.",
+    "depth_mm": "35 - 60 mm",
+    "direction_vi": "Châm thẳng 90°.",
+    "deqi_vi": "Tê tức sâu vùng mông, lan tỏa xuống mặt sau đùi.",
+    "safety_vi": "Tránh châm lệch vào sâu phía khung chậu.",
+    "indications_vi": "Đau dây thần kinh tọa, đau khớp háng, liệt chi dưới, bí tiểu, trĩ, viêm tinh hoàn.",
+    "position_3d": {
+      "x": -0.85,
+      "y": 8.35,
+      "z": -0.65
+    },
+    "related_muscles": [
+      "gluteus_maximus",
+      "piriformis"
+    ]
+  },
+  "ST-31": {
+    "code": "ST-31",
+    "name_vi": "Bễ Quan",
+    "name_han_viet": "髀關",
+    "meridian_vi": "Kinh Túc Dương Minh Vị",
+    "region": "lower_limb",
+    "region_vi": "Chi Dưới",
+    "location_vi": "Ở chỗ giao nhau giữa đường ngang qua bờ dưới khớp mu và đường dọc đi qua gai chậu trước trên.",
     "depth_mm": "25 - 40 mm",
+    "direction_vi": "Châm thẳng 90°.",
+    "deqi_vi": "Tê tức mặt trước khớp háng, lan xuống đùi.",
+    "safety_vi": "Tránh đâm vào bó mạch thần kinh đùi nằm ở phía trong.",
+    "indications_vi": "Đau khớp háng, liệt vận động chi dưới, teo cơ đùi trước, đau thần kinh đùi.",
+    "position_3d": {
+      "x": -0.95,
+      "y": 8.4,
+      "z": 0.45
+    },
     "related_muscles": [
-      "iliotibial_tract",
-      "vastus_lateralis",
-      "biceps_femoris"
-    ],
-    "indications_vi": "Hội chứng dải chậu chày (ITBS), đau mỏi mặt ngoài đùi, liệt nửa người, ngứa toàn thân."
+      "rectus_femoris",
+      "tensor_fasciae_latae",
+      "sartorius"
+    ]
   },
-  "GB-34": {
-    "code": "GB-34",
-    "name_vi": "Dương Lăng Tuyền",
-    "name_han_viet": "陽陵泉",
-    "meridian_vi": "Kinh Túc Thiếu Dương Đởm (Hợp huyệt hành Thổ, Hội của Cân)",
-    "location_vi": "Ở chỗ lõm phía trước và dưới chỏm xương mác.",
-    "depth_mm": "25 - 40 mm",
+  "BL-36": {
+    "code": "BL-36",
+    "name_vi": "Thừa Phù",
+    "name_han_viet": "承扶",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "region": "lower_limb",
+    "region_vi": "Chi Dưới",
+    "location_vi": "Ở chính giữa nếp gấp lằn mông phía sau đùi.",
+    "depth_mm": "25 - 50 mm",
+    "direction_vi": "Châm thẳng 90°.",
+    "deqi_vi": "Tê tức chạy dọc mặt sau đùi xuống khoeo chân.",
+    "safety_vi": "Đáy huyệt là thân dây thần kinh tọa, châm đắc khí vừa phải.",
+    "indications_vi": "Đau thần kinh tọa, đau lưng dưới, liệt chi dưới, trĩ, đại tiện khó.",
+    "position_3d": {
+      "x": -0.72,
+      "y": 8.0,
+      "z": -0.62
+    },
     "related_muscles": [
-      "peroneus_longus",
-      "tibialis_anterior",
-      "extensor_digitorum_longus"
-    ],
-    "indications_vi": "Huyệt hội của toàn bộ gân cơ (Cân hội), giải tỏa co cứng gân cơ toàn thân, đau khớp gối, đau thần kinh tọa, đau mạn sườn."
-  },
-  "GB-39": {
-    "code": "GB-39",
-    "name_vi": "Huyền Chung (Tuyệt Cốt)",
-    "name_han_viet": "懸鐘",
-    "meridian_vi": "Kinh Túc Thiếu Dương Đởm (Hội của Tủy)",
-    "location_vi": "Trên đỉnh mắt cá ngoài 3 thốn, ở bờ sau xương mác.",
-    "depth_mm": "20 - 30 mm",
-    "related_muscles": [
-      "peroneus_brevis",
-      "peroneus_longus",
-      "extensor_digitorum_longus"
-    ],
-    "indications_vi": "Đau cứng cổ gáy, đau khớp cổ chân, tai biến mạch máu não, thoái hóa khớp xương (Tủy hội)."
-  },
-  "SP-9": {
-    "code": "SP-9",
-    "name_vi": "Âm Lăng Tuyền",
-    "name_han_viet": "陰陵泉",
-    "meridian_vi": "Kinh Túc Thái Âm Tỳ (Hợp huyệt hành Thủy)",
-    "location_vi": "Ở chỗ lõm dưới lồi cầu trong xương chày, ngay bờ sau trong xương chày.",
-    "depth_mm": "20 - 35 mm",
-    "related_muscles": [
-      "tibialis_posterior",
-      "gastrocnemius",
-      "gracilis"
-    ],
-    "indications_vi": "Trừ thấp trục thủy, phù nề khớp gối, viêm gân chân vịt, đau mặt trong khớp gối, tiểu tiện khó."
+      "biceps_femoris",
+      "semitendinosus",
+      "gluteus_maximus"
+    ]
   },
   "SP-10": {
     "code": "SP-10",
     "name_vi": "Huyết Hải",
     "name_han_viet": "血海",
     "meridian_vi": "Kinh Túc Thái Âm Tỳ",
-    "location_vi": "Mặt trước trong đùi, từ góc trên trong xương bánh chè đo lên 2 thốn, trong khối cơ rộng trong nổi cao.",
-    "depth_mm": "20 - 30 mm",
+    "region": "lower_limb",
+    "region_vi": "Chi Dưới",
+    "location_vi": "Từ bờ trong phía trên xương bánh chè đo lên 2 thốn, trên cơ rộng trong.",
+    "depth_mm": "20 - 35 mm",
+    "direction_vi": "Châm thẳng hoặc hơi xiên lên trên vào khối cơ rộng trong.",
+    "deqi_vi": "Tê tức căng cơ mặt trong đùi.",
+    "safety_vi": "An toàn khi châm vào cơ.",
+    "indications_vi": "Đau khớp gối, rối loạn kinh nguyệt, bế kinh, rong kinh, dị ứng mẩn ngứa, mề đay, ban chẩn.",
+    "position_3d": {
+      "x": -0.62,
+      "y": 5.6,
+      "z": 0.35
+    },
     "related_muscles": [
-      "vastus_medialis",
+      "vastus_medialis"
+    ]
+  },
+  "ST-34": {
+    "code": "ST-34",
+    "name_vi": "Lương Khâu",
+    "name_han_viet": "梁丘",
+    "meridian_vi": "Kinh Túc Dương Minh Vị",
+    "region": "lower_limb",
+    "region_vi": "Chi Dưới",
+    "location_vi": "Từ điểm giữa bờ trên xương bánh chè đo lên 2 thốn, đo ra ngoài 1 thốn, giữa cơ thẳng đùi và cơ rộng ngoài.",
+    "depth_mm": "20 - 30 mm",
+    "direction_vi": "Châm thẳng 90°.",
+    "deqi_vi": "Tê tức lan xung quanh khớp gối.",
+    "safety_vi": "Huyệt Khích của kinh Vị, đặc trị cơn đau cấp.",
+    "indications_vi": "Cơn đau dạ dày cấp tính, đau khớp gối, viêm tuyến vú, liệt chi dưới.",
+    "position_3d": {
+      "x": -0.95,
+      "y": 5.6,
+      "z": 0.35
+    },
+    "related_muscles": [
+      "vastus_lateralis",
       "rectus_femoris"
-    ],
-    "indications_vi": "Điều hòa huyết dịch, đau khớp gối thoái hóa, ngứa da dị ứng, rối loạn kinh nguyệt."
+    ]
   },
-  "LR-8": {
-    "code": "LR-8",
-    "name_vi": "Khúc Tuyền",
-    "name_han_viet": "曲泉",
-    "meridian_vi": "Kinh Túc Quyết Âm Can (Hợp huyệt hành Thủy)",
-    "location_vi": "Khi gập gối, huyệt nằm ở đầu trong nếp gấp khoeo chân, trong chỗ lõm trên bờ trên gân cơ bán mạc và bán gân.",
-    "depth_mm": "20 - 30 mm",
+  "ST-35": {
+    "code": "ST-35",
+    "name_vi": "Độc Tỵ",
+    "name_han_viet": "犢鼻",
+    "meridian_vi": "Kinh Túc Dương Minh Vị",
+    "region": "lower_limb",
+    "region_vi": "Chi Dưới",
+    "location_vi": "Ở chỗ lõm phía dưới - ngoài xương bánh chè khi gấp đầu gối.",
+    "depth_mm": "15 - 25 mm",
+    "direction_vi": "Bảo bệnh nhân hơi gấp gối, châm xiên mũi kim hướng vào giữa ổ khớp gối.",
+    "deqi_vi": "Tê tức sâu bên trong bao khớp gối.",
+    "safety_vi": "Cần vô trùng tuyệt đối tránh viêm nhiễm ổ dịch khớp gối.",
+    "indications_vi": "Thoái hóa khớp gối, viêm sưng đau khớp gối, tràn dịch khớp gối.",
+    "position_3d": {
+      "x": -0.88,
+      "y": 4.95,
+      "z": 0.4
+    },
     "related_muscles": [
-      "semimembranosus",
-      "semitendinosus",
-      "gracilis"
-    ],
-    "indications_vi": "Đau mặt trong khớp gối, co rút gân cơ chi dưới, viêm gân chân vịt, sa sinh dục."
+      "patellar_tendon"
+    ]
   },
-  "ST-36": {
-    "code": "ST-36",
-    "name_vi": "Túc Tam Lý",
-    "name_han_viet": "足三里",
-    "meridian_vi": "Kinh Túc Dương Minh Vị (Hợp huyệt hành Thổ, Huyệt trường thọ đại bổ)",
-    "location_vi": "Dưới lõm mắt ngoài xương bánh chè (Độc Tỵ) 3 thốn, cách mào trước xương chày 1 khoát ngón tay (ngay bờ ngoài cơ cẳng chân trước).",
-    "depth_mm": "25 - 40 mm",
+  "EX-LE4": {
+    "code": "EX-LE4",
+    "name_vi": "Tất Nhãn",
+    "name_han_viet": "膝眼",
+    "meridian_vi": "Huyệt Ngoài Kinh (Kỳ huyệt)",
+    "region": "lower_limb",
+    "region_vi": "Chi Dưới",
+    "location_vi": "Ở chỗ lõm phía dưới - trong xương bánh chè khi gấp đầu gối (đối xứng với Độc Tỵ qua gân bánh chè).",
+    "depth_mm": "15 - 25 mm",
+    "direction_vi": "Châm xiên hướng vào giữa khớp gối.",
+    "deqi_vi": "Căng tức sâu trong khớp gối.",
+    "safety_vi": "Vô trùng nghiêm ngặt.",
+    "indications_vi": "Viêm đau khớp gối, yếu mỏi chân, tràn dịch khớp gối.",
+    "position_3d": {
+      "x": -0.62,
+      "y": 4.95,
+      "z": 0.4
+    },
     "related_muscles": [
-      "tibialis_anterior",
-      "extensor_digitorum_longus"
-    ],
-    "indications_vi": "Bổ khí huyết toàn thân, tăng cường miễn dịch, đau liệt chi dưới, viêm khớp gối, đau dạ dày tiêu hóa."
+      "patellar_tendon"
+    ]
   },
   "BL-40": {
     "code": "BL-40",
     "name_vi": "Ủy Trung",
     "name_han_viet": "委中",
-    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang (Hợp huyệt hành Thổ, Tổng huyệt vùng Lưng)",
-    "location_vi": "Chính giữa nếp gấp khoeo chân, giữa gân cơ nhị đầu đùi và gân cơ bán mạc.",
-    "depth_mm": "20 - 35 mm (Thận trọng tránh chọc thẳng vào động - tĩnh mạch khoeo sâu)",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "region": "lower_limb",
+    "region_vi": "Chi Dưới",
+    "location_vi": "Ở điểm chính giữa nếp gấp lằn trám khoeo chân sau.",
+    "depth_mm": "15 - 25 mm",
+    "direction_vi": "Châm thẳng hoặc chích nặn máu các tĩnh mạch nhỏ nổi ở trám khoeo để tả nhiệt giải độc.",
+    "deqi_vi": "Tê tức chạy dọc bắp chân.",
+    "safety_vi": "⚠️ CẢNH BÁO: Đáy huyệt có động - tĩnh mạch khoeo và thần kinh chày. Không châm quá sâu hoặc lắc kim thô bạo.",
+    "indications_vi": "Đau thắt lưng cấp và mạn (Đặc trị vùng lưng: 'Yêu bối Ủy trung cầu'), đau thần kinh tọa, sốt cao co giật.",
+    "position_3d": {
+      "x": -0.72,
+      "y": 4.9,
+      "z": -0.42
+    },
     "related_muscles": [
-      "gastrocnemius",
       "popliteus",
-      "biceps_femoris"
-    ],
-    "indications_vi": "Huyệt đệ nhất chủ trị đau thắt lưng, thoái hóa cột sống lưng, đau dây thần kinh tọa, co rút cơ bắp chân."
+      "biceps_femoris",
+      "gastrocnemius"
+    ]
+  },
+  "ST-36": {
+    "code": "ST-36",
+    "name_vi": "Túc Tam Lý",
+    "name_han_viet": "足三里",
+    "meridian_vi": "Kinh Túc Dương Minh Vị",
+    "region": "lower_limb",
+    "region_vi": "Chi Dưới",
+    "location_vi": "Từ Độc Tỵ đo thẳng xuống 3 thốn, cách bờ trước mào xương chày một khoát ngón tay trỏ (trên cơ cẳng chân trước).",
+    "depth_mm": "25 - 40 mm",
+    "direction_vi": "Châm thẳng góc 90°.",
+    "deqi_vi": "Căng tức nặng vùng cẳng chân, lan xuống mu bàn chân.",
+    "safety_vi": "Huyệt đại bổ cường tráng thân thể; có thể cứu ngải thường xuyên.",
+    "indications_vi": "Đau dạ dày, viêm đại tràng, khó tiêu, đau khớp gối, đau thần kinh tọa, suy nhược cơ thể, tăng cường miễn dịch.",
+    "position_3d": {
+      "x": -0.92,
+      "y": 4.1,
+      "z": 0.38
+    },
+    "related_muscles": [
+      "tibialis_anterior"
+    ]
+  },
+  "GB-34": {
+    "code": "GB-34",
+    "name_vi": "Dương Lăng Tuyền",
+    "name_han_viet": "陽陵泉",
+    "meridian_vi": "Kinh Túc Thiếu Dương Đởm",
+    "region": "lower_limb",
+    "region_vi": "Chi Dưới",
+    "location_vi": "Ở chỗ lõm phía trước - dưới chỏm xương mác.",
+    "depth_mm": "20 - 35 mm",
+    "direction_vi": "Châm thẳng 90°.",
+    "deqi_vi": "Tê tức lan xuống mặt ngoài cẳng chân.",
+    "safety_vi": "Hội huyệt của Cân (gân cơ toàn thân).",
+    "indications_vi": "Đau thần kinh tọa, đau khớp gối, liệt nửa người, đau mạn sườn, co rút cơ bắp, viêm túi mật.",
+    "position_3d": {
+      "x": -1.05,
+      "y": 4.6,
+      "z": 0.12
+    },
+    "related_muscles": [
+      "peroneus_longus",
+      "extensor_digitorum_longus"
+    ]
+  },
+  "SP-6": {
+    "code": "SP-6",
+    "name_vi": "Tam Âm Giao",
+    "name_han_viet": "三陰交",
+    "meridian_vi": "Kinh Túc Thái Âm Tỳ",
+    "region": "lower_limb",
+    "region_vi": "Chi Dưới",
+    "location_vi": "Từ đỉnh lồi cao mắt cá trong xương chày đo thẳng lên 3 thốn, huyệt ở sát bờ sau trong xương chày.",
+    "depth_mm": "15 - 30 mm",
+    "direction_vi": "Châm thẳng góc 90° hoặc xiên nhẹ lên trên.",
+    "deqi_vi": "Tê tức mạnh mặt trong cẳng chân lan lên đùi.",
+    "safety_vi": "⚠️ CẢNH BÁO TUYỆT ĐỐI: CHỐNG CHỈ ĐỊNH PHỤ NỮ CÓ THAI vì có tác dụng co bóp tử cung mạnh gây sảy thai.",
+    "indications_vi": "Rong kinh, bế kinh, thống kinh, dọa sảy, di tinh, mất ngủ, bí tiểu, tiểu dầm, rối loạn tiêu hóa.",
+    "position_3d": {
+      "x": -0.48,
+      "y": 1.85,
+      "z": 0.05
+    },
+    "related_muscles": [
+      "flexor_digitorum_longus",
+      "tibialis_posterior",
+      "soleus"
+    ]
+  },
+  "GB-39": {
+    "code": "GB-39",
+    "name_vi": "Huyền Chung (Tuyệt Cốt)",
+    "name_han_viet": "懸鐘",
+    "meridian_vi": "Kinh Túc Thiếu Dương Đởm",
+    "region": "lower_limb",
+    "region_vi": "Chi Dưới",
+    "location_vi": "Từ đỉnh lồi cao mắt cá ngoài xương chày đo thẳng lên 3 thốn, ở chỗ lõm giữa bờ sau xương mác và gân cơ mác.",
+    "depth_mm": "15 - 25 mm",
+    "direction_vi": "Châm thẳng 90°.",
+    "deqi_vi": "Tê tức mặt ngoài cẳng chân lan xuống mắt cá ngoài.",
+    "safety_vi": "Hội huyệt của Tủy xương.",
+    "indications_vi": "Đau thần kinh tọa, liệt chi dưới, vẹo cổ cấp tính, đau khớp cổ chân, thiếu máu não.",
+    "position_3d": {
+      "x": -0.92,
+      "y": 1.85,
+      "z": 0.08
+    },
+    "related_muscles": [
+      "peroneus_brevis",
+      "extensor_digitorum_longus"
+    ]
   },
   "BL-57": {
     "code": "BL-57",
     "name_vi": "Thừa Sơn",
     "name_han_viet": "承山",
     "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
-    "location_vi": "Ở mặt sau cẳng chân, tại góc nhọn nơi hai bụng cơ sinh đôi (cơ bụng chân) tách ra, thẳng dưới huyệt Ủy Trung.",
-    "depth_mm": "25 - 40 mm",
+    "region": "lower_limb",
+    "region_vi": "Chi Dưới",
+    "location_vi": "Ở chính giữa mặt sau bắp chân, nơi hợp lại của hai bụng cơ sinh đôi (cơ bụng chân) tạo thành góc nhọn hình chữ V khi kiễng gót chân.",
+    "depth_mm": "20 - 35 mm",
+    "direction_vi": "Châm thẳng 90°.",
+    "deqi_vi": "Căng tức mạnh bắp chân lan xuống gót chân.",
+    "safety_vi": "Dễ bị chuột rút bắp chân nếu thao tác thô bạo.",
+    "indications_vi": "Chuột rút bắp chân, đau dây thần kinh tọa, bệnh trĩ, táo bón, đau gót chân.",
+    "position_3d": {
+      "x": -0.7,
+      "y": 3.1,
+      "z": -0.38
+    },
     "related_muscles": [
       "gastrocnemius",
       "soleus"
-    ],
-    "indications_vi": "Chuột rút bắp chân (vọp bẻ), viêm gân gót Achilles, đau thắt lưng, trĩ nội trĩ ngoại."
-  },
-  "BL-60": {
-    "code": "BL-60",
-    "name_vi": "Côn Lôn",
-    "name_han_viet": "崑崙",
-    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang (Kinh huyệt hành Hỏa)",
-    "location_vi": "Ở chỗ lõm giữa điểm cao nhất của mắt cá ngoài và bờ ngoài gân gót Achilles.",
-    "depth_mm": "15 - 20 mm",
-    "related_muscles": [
-      "achilles_tendon",
-      "peroneus_brevis"
-    ],
-    "indications_vi": "Đau gân gót Achilles, đau cổ chân, đau thắt lưng lan chân, đau đầu vùng chẩm. (Thận trọng phụ nữ có thai)."
+    ]
   },
   "KI-3": {
     "code": "KI-3",
     "name_vi": "Thái Khê",
     "name_han_viet": "太谿",
-    "meridian_vi": "Kinh Túc Thiếu Âm Thận (Nguyên huyệt, Du Thổ huyệt)",
-    "location_vi": "Ở chỗ lõm giữa điểm cao nhất của mắt cá trong và bờ trong gân gót Achilles.",
-    "depth_mm": "15 - 20 mm",
+    "meridian_vi": "Kinh Túc Thiếu Âm Thận",
+    "region": "lower_limb",
+    "region_vi": "Chi Dưới",
+    "location_vi": "Ở chỗ lõm giữa bờ sau mắt cá trong xương chày và gân gót (gân Achilles).",
+    "depth_mm": "10 - 20 mm",
+    "direction_vi": "Châm thẳng hoặc xiên hướng về huyệt Côn Lôn đối diện.",
+    "deqi_vi": "Tê tức cổ chân và lòng bàn chân.",
+    "safety_vi": "Tránh đâm trúng động mạch chày sau.",
+    "indications_vi": "Hội chứng thận hư, ù tai, điếc tai, hen phế quản, đau khớp cổ chân, mất ngủ, liệt dương.",
+    "position_3d": {
+      "x": -0.45,
+      "y": 0.85,
+      "z": -0.05
+    },
     "related_muscles": [
-      "achilles_tendon",
-      "flexor_hallucis_longus"
-    ],
-    "indications_vi": "Tư bổ Thận âm Thận dương, đau gân gót, đau gót chân, ù tai, mất ngủ, đau lưng mỏi gối."
+      "achilles_tendon"
+    ]
+  },
+  "BL-60": {
+    "code": "BL-60",
+    "name_vi": "Côn Lôn",
+    "name_han_viet": "崑崙",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "region": "lower_limb",
+    "region_vi": "Chi Dưới",
+    "location_vi": "Ở chỗ lõm giữa bờ sau mắt cá ngoài xương chày và gân gót chân (gân Achilles).",
+    "depth_mm": "10 - 20 mm",
+    "direction_vi": "Châm thẳng hoặc châm xuyên sang huyệt Thái Khê.",
+    "deqi_vi": "Tê tức gót chân và cổ chân ngoài.",
+    "safety_vi": "⚠️ Chống chỉ định phụ nữ có thai vì kích thích chuyển dạ.",
+    "indications_vi": "Đau lưng, đau thần kinh tọa, đau khớp cổ chân, nhức đầu sau gáy, cảm mạo phong hàn.",
+    "position_3d": {
+      "x": -0.95,
+      "y": 0.85,
+      "z": -0.05
+    },
+    "related_muscles": [
+      "achilles_tendon"
+    ]
+  },
+  "LR-3": {
+    "code": "LR-3",
+    "name_vi": "Thái Xung",
+    "name_han_viet": "太衝",
+    "meridian_vi": "Kinh Túc Quyết Âm Can",
+    "region": "lower_limb",
+    "region_vi": "Chi Dưới",
+    "location_vi": "Ở kẽ ngón chân 1 và 2 đo thẳng lên 1.5 - 2 thốn trên mu bàn chân, tại chỗ lõm trước góc tạo bởi hai xương bàn chân I và II.",
+    "depth_mm": "10 - 18 mm",
+    "direction_vi": "Châm thẳng góc 90° hoặc xiên nhẹ lên trên.",
+    "deqi_vi": "Tê tức buốt lan tỏa khắp mu bàn chân.",
+    "safety_vi": "Tránh châm vào động mạch mu chân.",
+    "indications_vi": "Tăng huyết áp, đau đầu hoa mắt do can hỏa vượng, thống kinh, co giật, mất ngủ, viêm mắt.",
+    "position_3d": {
+      "x": -0.65,
+      "y": 0.35,
+      "z": 0.55
+    },
+    "related_muscles": [
+      "dorsal_interossei",
+      "extensor_hallucis_longus"
+    ]
+  },
+  "ST-41": {
+    "code": "ST-41",
+    "name_vi": "Giải Khê",
+    "name_han_viet": "解谿",
+    "meridian_vi": "Kinh Túc Dương Minh Vị",
+    "region": "lower_limb",
+    "region_vi": "Chi Dưới",
+    "location_vi": "Ở chính giữa nếp gấp cổ chân, tại chỗ lõm giữa gân cơ duỗi dài ngón cái và gân cơ duỗi chung các ngón chân.",
+    "depth_mm": "10 - 18 mm",
+    "direction_vi": "Châm thẳng 90°.",
+    "deqi_vi": "Tê tức khớp cổ chân lan ra mu bàn chân.",
+    "safety_vi": "Tránh đâm trúng động mạch chày trước.",
+    "indications_vi": "Đau khớp cổ chân, liệt chi dưới rũ bàn chân, đau thần kinh tọa, đầy bụng, táo bón.",
+    "position_3d": {
+      "x": -0.72,
+      "y": 0.95,
+      "z": 0.32
+    },
+    "related_muscles": [
+      "tibialis_anterior",
+      "extensor_hallucis_longus",
+      "extensor_digitorum_longus"
+    ]
+  },
+  "ST-44": {
+    "code": "ST-44",
+    "name_vi": "Nội Đình",
+    "name_han_viet": "內庭",
+    "meridian_vi": "Kinh Túc Dương Minh Vị",
+    "region": "lower_limb",
+    "region_vi": "Chi Dưới",
+    "location_vi": "Từ kẽ ngón chân 2 và 3 đo lên 0.5 thốn về phía mu chân, tại chỗ nối da mu chân và da gan chân.",
+    "depth_mm": "8 - 15 mm",
+    "direction_vi": "Châm thẳng hoặc xiên lên trên.",
+    "deqi_vi": "Tê buốt tại chỗ kẽ ngón chân.",
+    "safety_vi": "Châm nông, tránh gãy kim.",
+    "indications_vi": "Đau răng hàm dưới, sốt cao, chảy máu cam, viêm họng, liệt mặt, đầy bụng khó tiêu do vị nhiệt.",
+    "position_3d": {
+      "x": -0.68,
+      "y": 0.2,
+      "z": 0.72
+    },
+    "related_muscles": [
+      "dorsal_interossei"
+    ]
+  },
+  "EX-LE10": {
+    "code": "EX-LE10",
+    "name_vi": "Bát Phong",
+    "name_han_viet": "八風",
+    "meridian_vi": "Huyệt Ngoài Kinh (Kỳ huyệt)",
+    "region": "lower_limb",
+    "region_vi": "Chi Dưới",
+    "location_vi": "Gồm 8 huyệt nằm ngay kẽ các ngón chân của 2 bàn chân (4 huyệt mỗi bên bàn chân), ở chỗ nối da mu chân và gan chân.",
+    "depth_mm": "5 - 10 mm",
+    "direction_vi": "Châm xiên chếch mũi kim lên trên mu chân.",
+    "deqi_vi": "Tê buốt tại các ngón chân.",
+    "safety_vi": "Có thể chích nặn máu tả nhiệt trong trường hợp sưng viêm cấp.",
+    "indications_vi": "Cước chân sưng tấy lạnh đau, viêm khớp các ngón chân, tê bì đầu ngón chân, sốt cao.",
+    "position_3d": {
+      "x": -0.7,
+      "y": 0.15,
+      "z": 0.8
+    },
+    "related_muscles": [
+      "dorsal_interossei"
+    ]
+  },
+  "LI-15": {
+    "code": "LI-15",
+    "name_vi": "Kiên Ngung",
+    "name_han_viet": "肩髃",
+    "meridian_vi": "Kinh Thủ Dương Minh Đại Trường",
+    "region": "upper_limb",
+    "region_vi": "Chi Trên",
+    "location_vi": "Ở chỗ lõm phía trước - ngoài mỏm cùng vai khi cánh tay giạng 90° (ngay nơi bám của cơ Delta).",
+    "depth_mm": "20 - 35 mm",
+    "direction_vi": "Châm thẳng hoặc xiên hướng xuống cánh tay khi giạng tay 90°.",
+    "deqi_vi": "Tê tức nặng sâu trong khớp vai lan xuống cánh tay.",
+    "safety_vi": "Tránh đâm vào bao hoạt dịch khớp vai khi có viêm nhiễm mủ.",
+    "indications_vi": "Viêm quanh khớp vai, đau liệt chi trên, teo cơ Delta, bán trật khớp vai.",
+    "position_3d": {
+      "x": -2.05,
+      "y": 13.95,
+      "z": 0.05
+    },
+    "related_muscles": [
+      "deltoid_anterior",
+      "deltoid_middle",
+      "supraspinatus"
+    ]
+  },
+  "LI-11": {
+    "code": "LI-11",
+    "name_vi": "Khúc Trì",
+    "name_han_viet": "曲池",
+    "meridian_vi": "Kinh Thủ Dương Minh Đại Trường",
+    "region": "upper_limb",
+    "region_vi": "Chi Trên",
+    "location_vi": "Gập khuỷu tay 90°, huyệt ở chỗ tận cùng phía ngoài của nếp gấp khuỷu tay.",
+    "depth_mm": "20 - 35 mm",
+    "direction_vi": "Châm thẳng góc 90° hoặc châm xuyên sang huyệt Thiếu Hải.",
+    "deqi_vi": "Tê tức buốt lan tỏa xuống cẳng tay.",
+    "safety_vi": "Huyệt thanh nhiệt, hạ sốt, hạ huyết áp cực tốt.",
+    "indications_vi": "Đau khớp khuỷu tay, liệt chi trên, sốt cao, viêm họng, tăng huyết áp, dị ứng mẩn ngứa.",
+    "position_3d": {
+      "x": -2.35,
+      "y": 10.95,
+      "z": 0.15
+    },
+    "related_muscles": [
+      "brachioradialis",
+      "extensor_carpi_radialis_longus"
+    ]
+  },
+  "LU-5": {
+    "code": "LU-5",
+    "name_vi": "Xích Trạch",
+    "name_han_viet": "尺澤",
+    "meridian_vi": "Kinh Thủ Thái Âm Phế",
+    "region": "upper_limb",
+    "region_vi": "Chi Trên",
+    "location_vi": "Ở trên rãnh nhị đầu ngoài, bờ ngoài gân cơ nhị đầu cánh tay trên nếp gấp khuỷu tay.",
+    "depth_mm": "15 - 25 mm",
+    "direction_vi": "Châm thẳng 90° hoặc chích nặn máu thanh phế nhiệt.",
+    "deqi_vi": "Tê tức tại khuỷu tay, lan xuống cẳng tay trước.",
+    "safety_vi": "Tránh đâm vào tĩnh mạch đầu.",
+    "indications_vi": "Ho, ho ra máu, cơn hen phế quản, sốt cao co giật trẻ em, đau khớp khuỷu tay.",
+    "position_3d": {
+      "x": -2.15,
+      "y": 10.9,
+      "z": 0.22
+    },
+    "related_muscles": [
+      "biceps_brachii",
+      "brachialis"
+    ]
+  },
+  "PC-3": {
+    "code": "PC-3",
+    "name_vi": "Khúc Trạch",
+    "name_han_viet": "曲澤",
+    "meridian_vi": "Kinh Thủ Quyết Âm Tâm Bào",
+    "region": "upper_limb",
+    "region_vi": "Chi Trên",
+    "location_vi": "Ở trên rãnh nhị đầu trong, bờ trong gân cơ nhị đầu cánh tay trên nếp gấp khuỷu tay.",
+    "depth_mm": "15 - 25 mm",
+    "direction_vi": "Châm thẳng hoặc chích nặn máu.",
+    "deqi_vi": "Tê tức sâu hố khuỷu lan ra trước cẳng tay.",
+    "safety_vi": "Tránh đâm vào động mạch cánh tay nằm ngay phía trong.",
+    "indications_vi": "Sốt cao hôn mê, say nắng, đau thắt ngực, nôn mửa, say sóng, đau khớp khuỷu.",
+    "position_3d": {
+      "x": -2.05,
+      "y": 10.9,
+      "z": 0.18
+    },
+    "related_muscles": [
+      "biceps_brachii",
+      "brachialis"
+    ]
+  },
+  "PC-6": {
+    "code": "PC-6",
+    "name_vi": "Nội Quan",
+    "name_han_viet": "內關",
+    "meridian_vi": "Kinh Thủ Quyết Âm Tâm Bào",
+    "region": "upper_limb",
+    "region_vi": "Chi Trên",
+    "location_vi": "Từ nếp gấp cổ tay đo thẳng lên 2 thốn, giữa hai gân cơ gan tay lớn và gan tay bé.",
+    "depth_mm": "12 - 20 mm",
+    "direction_vi": "Châm thẳng 90° hoặc châm xuyên sang huyệt Ngoại Quan ở mặt sau.",
+    "deqi_vi": "Cảm giác tê tức buốt như điện chạy xuống ngón tay giữa.",
+    "safety_vi": "Đáy huyệt là thân dây thần kinh giữa; châm nhẹ nhàng tránh kích thích điện giật quá mạnh.",
+    "indications_vi": "Đau thắt ngực, rối loạn thần kinh tim, buồn nôn, say xe, mất ngủ, đau dạ dày.",
+    "position_3d": {
+      "x": -2.1,
+      "y": 8.85,
+      "z": 0.18
+    },
+    "related_muscles": [
+      "palmaris_longus",
+      "flexor_carpi_radialis"
+    ]
+  },
+  "LU-9": {
+    "code": "LU-9",
+    "name_vi": "Thái Uyên",
+    "name_han_viet": "太淵",
+    "meridian_vi": "Kinh Thủ Thái Âm Phế",
+    "region": "upper_limb",
+    "region_vi": "Chi Trên",
+    "location_vi": "Ở chỗ lõm trên nếp gấp cổ tay, bờ ngoài gân cơ gan tay lớn, sát phía ngoài động mạch quay.",
+    "depth_mm": "5 - 10 mm",
+    "direction_vi": "Dùng ngón tay đẩy động mạch quay vào trong rồi châm thẳng.",
+    "deqi_vi": "Căng tức tại chỗ khớp cổ tay.",
+    "safety_vi": "⚠️ CẢNH BÁO: Tránh đâm xuyên thủng động mạch quay.",
+    "indications_vi": "Hội chứng mạch vô mạch, ho, hen suyễn, viêm phế quản, đau khớp cổ tay.",
+    "position_3d": {
+      "x": -2.25,
+      "y": 8.15,
+      "z": 0.18
+    },
+    "related_muscles": [
+      "flexor_carpi_radialis",
+      "abductor_pollicis_longus"
+    ]
+  },
+  "HT-5": {
+    "code": "HT-5",
+    "name_vi": "Thông Lý",
+    "name_han_viet": "通裏",
+    "meridian_vi": "Kinh Thủ Thiếu Âm Tâm",
+    "region": "upper_limb",
+    "region_vi": "Chi Trên",
+    "location_vi": "Từ nếp gấp cổ tay đo lên 1 thốn, sát bờ ngoài gân cơ gấp cổ tay trụ.",
+    "depth_mm": "8 - 15 mm",
+    "direction_vi": "Châm thẳng 90°.",
+    "deqi_vi": "Tê tức chạy dọc theo bờ trụ cẳng tay.",
+    "safety_vi": "Tránh đâm vào động mạch trụ.",
+    "indications_vi": "Rối loạn nhịp tim, hồi hộp, tăng huyết áp, nói khó, mất tiếng đột ngột, đau cổ tay.",
+    "position_3d": {
+      "x": -1.95,
+      "y": 8.45,
+      "z": 0.12
+    },
+    "related_muscles": [
+      "flexor_carpi_ulnaris"
+    ]
+  },
+  "HT-7": {
+    "code": "HT-7",
+    "name_vi": "Thần Môn",
+    "name_han_viet": "神門",
+    "meridian_vi": "Kinh Thủ Thiếu Âm Tâm",
+    "region": "upper_limb",
+    "region_vi": "Chi Trên",
+    "location_vi": "Ở chỗ lõm trên nếp gấp cổ tay, bờ ngoài gân cơ gấp cổ tay trụ (sát bờ ngoài xương đậu).",
+    "depth_mm": "8 - 15 mm",
+    "direction_vi": "Châm thẳng 90°.",
+    "deqi_vi": "Tê tức khớp cổ tay, lan tỏa sang ngón út.",
+    "safety_vi": "Huyệt Nguyên của kinh Tâm, trấn an tinh thần cực mạnh.",
+    "indications_vi": "Mất ngủ, hay mê hoảng sợ, hồi hộp đánh trống ngực, hay quên, động kinh, đau cổ tay.",
+    "position_3d": {
+      "x": -1.92,
+      "y": 8.15,
+      "z": 0.12
+    },
+    "related_muscles": [
+      "flexor_carpi_ulnaris"
+    ]
+  },
+  "TE-5": {
+    "code": "TE-5",
+    "name_vi": "Ngoại Quan",
+    "name_han_viet": "外關",
+    "meridian_vi": "Kinh Thủ Thiếu Dương Tam Tiêu",
+    "region": "upper_limb",
+    "region_vi": "Chi Trên",
+    "location_vi": "Từ nếp gấp cổ tay sau đo lên 2 thốn, giữa xương quay và xương trụ (đối diện với huyệt Nội Quan ở mặt trước).",
+    "depth_mm": "15 - 25 mm",
+    "direction_vi": "Châm thẳng hoặc xuyên sang huyệt Nội Quan.",
+    "deqi_vi": "Tê tức sâu cẳng tay lan tỏa ra mu bàn tay.",
+    "safety_vi": "Huyệt thông với Dương Duy mạch, giải biểu nhiệt.",
+    "indications_vi": "Cảm mạo sốt cao, đau vai gáy, đau khớp khuỷu và cổ tay, ù tai, điếc tai, đau nửa đầu.",
+    "position_3d": {
+      "x": -2.12,
+      "y": 8.85,
+      "z": -0.15
+    },
+    "related_muscles": [
+      "extensor_digitorum",
+      "extensor_pollicis_longus"
+    ]
+  },
+  "TE-4": {
+    "code": "TE-4",
+    "name_vi": "Dương Trì",
+    "name_han_viet": "陽池",
+    "meridian_vi": "Kinh Thủ Thiếu Dương Tam Tiêu",
+    "region": "upper_limb",
+    "region_vi": "Chi Trên",
+    "location_vi": "Ở chính giữa nếp gấp cổ tay sau, chỗ lõm bờ ngoài gân cơ duỗi chung các ngón tay.",
+    "depth_mm": "8 - 15 mm",
+    "direction_vi": "Châm thẳng 90°.",
+    "deqi_vi": "Tê tức lan khắp khớp cổ tay.",
+    "safety_vi": "Huyệt Nguyên của Tam Tiêu kinh.",
+    "indications_vi": "Đau khớp cổ tay, ù tai, cảm mạo, đau họng, sốt rét.",
+    "position_3d": {
+      "x": -2.12,
+      "y": 8.15,
+      "z": -0.12
+    },
+    "related_muscles": [
+      "extensor_digitorum"
+    ]
+  },
+  "LI-4": {
+    "code": "LI-4",
+    "name_vi": "Hợp Cốc",
+    "name_han_viet": "合谷",
+    "meridian_vi": "Kinh Thủ Dương Minh Đại Trường",
+    "region": "upper_limb",
+    "region_vi": "Chi Trên",
+    "location_vi": "Đặt nếp gấp đốt 2 ngón tay cái bên kia lên mép hổ khẩu bàn tay bên này, đầu ngón tay cái chấm vào đâu trên mu bàn tay là huyệt ở đó (sát bờ ngoài xương bàn II).",
+    "depth_mm": "15 - 25 mm",
+    "direction_vi": "Châm thẳng góc 90° hoặc nghiêng mũi kim về phía xương bàn II.",
+    "deqi_vi": "Tê tức buốt mạnh khắp bàn tay lan dọc cẳng tay lên mặt.",
+    "safety_vi": "⚠️ CẢNH BÁO AN TOÀN TUYỆT ĐỐI: CHỐNG CHỈ ĐỊNH PHỤ NỮ CÓ THAI vì có tác dụng giáng khí cực mạnh gây co thắt tử cung sảy thai.",
+    "indications_vi": "Đau đầu, đau răng, liệt mặt dây VII ('Diện khẩu Hợp Cốc thu'), cảm cúm sốt cao, nghẹt mũi, bế kinh.",
+    "position_3d": {
+      "x": -2.35,
+      "y": 7.55,
+      "z": 0.05
+    },
+    "related_muscles": [
+      "first_dorsal_interosseous",
+      "adductor_pollicis"
+    ]
+  },
+  "EX-UE9": {
+    "code": "EX-UE9",
+    "name_vi": "Bát Tà",
+    "name_han_viet": "八邪",
+    "meridian_vi": "Huyệt Ngoài Kinh (Kỳ huyệt)",
+    "region": "upper_limb",
+    "region_vi": "Chi Trên",
+    "location_vi": "Gồm 8 huyệt nằm ngay kẽ các ngón tay ở cả hai bàn tay (4 huyệt mỗi bàn tay), tại chỗ tiếp giáp da mu tay và gan tay khi nắm nhẹ tay.",
+    "depth_mm": "8 - 15 mm",
+    "direction_vi": "Châm xiên hướng mũi kim về phía cổ tay.",
+    "deqi_vi": "Tê tức các kẽ ngón tay.",
+    "safety_vi": "Có thể chích nặn máu tả nhiệt.",
+    "indications_vi": "Viêm đau khớp bàn ngón tay, sưng phù bàn tay, tê đầu ngón tay, sốt cao co giật.",
+    "position_3d": {
+      "x": -2.25,
+      "y": 6.95,
+      "z": 0.02
+    },
+    "related_muscles": [
+      "dorsal_interossei"
+    ]
+  },
+  "EX-UE11": {
+    "code": "EX-UE11",
+    "name_vi": "Thập Tuyên",
+    "name_han_viet": "十宣",
+    "meridian_vi": "Huyệt Ngoài Kinh (Kỳ huyệt)",
+    "region": "upper_limb",
+    "region_vi": "Chi Trên",
+    "location_vi": "Ở đỉnh cao nhất của 10 đầu ngón tay, cách bờ tự do móng tay khoảng 2mm về phía gan bàn tay.",
+    "depth_mm": "2 - 3 mm",
+    "direction_vi": "Dùng kim tam lăng chích nặn máu 1 - 2 giọt mỗi đầu ngón tay.",
+    "deqi_vi": "Đau nhói, kích thích hồi tỉnh mạnh.",
+    "safety_vi": "Sát trùng kỹ đầu ngón tay trước và sau khi chích nặn máu.",
+    "indications_vi": "Cấp cứu ngất, hôn mê, say nắng, đột quỵ não giai đoạn cấp, sốt cao co giật trẻ em.",
+    "position_3d": {
+      "x": -2.2,
+      "y": 6.65,
+      "z": 0.02
+    },
+    "related_muscles": [
+      "finger_pad"
+    ]
+  },
+  "CV-17": {
+    "code": "CV-17",
+    "name_vi": "Đản Trung (Chiên Trung)",
+    "name_han_viet": "膻中",
+    "meridian_vi": "Mạch Nhâm",
+    "region": "chest_abdomen",
+    "region_vi": "Ngực - Bụng",
+    "location_vi": "Ở chính giữa xương ức, ngang khớp liên sườn 4 (điểm giữa đường nối hai đầu núm vú ở nam giới).",
+    "depth_mm": "5 - 10 mm",
+    "direction_vi": "Châm luồn kim nằm ngang dưới da hướng xuống dưới hoặc lên trên.",
+    "deqi_vi": "Căng tức nặng vùng xương ức, lồng ngực thông thoáng.",
+    "safety_vi": "⚠️ CẤM châm thẳng góc 90° vào xương ức có thể xuyên qua xương vào trung thất hoặc tim.",
+    "indications_vi": "Cơn đau thắt ngực, khó thở hen suyễn, nấc cụt, ho, viêm tuyến vú, tắc tia sữa.",
+    "position_3d": {
+      "x": 0.0,
+      "y": 12.65,
+      "z": 0.88
+    },
+    "related_muscles": [
+      "pectoralis_major"
+    ]
+  },
+  "LU-1": {
+    "code": "LU-1",
+    "name_vi": "Trung Phủ",
+    "name_han_viet": "中府",
+    "meridian_vi": "Kinh Thủ Thái Âm Phế",
+    "region": "chest_abdomen",
+    "region_vi": "Ngực - Bụng",
+    "location_vi": "Ở khoang liên sườn 1, dưới bờ dưới xương đòn 1 thốn, cách đường giữa ngực 6 thốn (trên rãnh Delta ngực).",
+    "depth_mm": "10 - 18 mm",
+    "direction_vi": "Châm xiên hướng mũi kim ra ngoài về phía nách. CẤM châm sâu hướng vào trong ngực.",
+    "deqi_vi": "Tê tức vùng ngực lan ra vai.",
+    "safety_vi": "⚠️ CẢNH BÁO AN TOÀN: Châm thẳng sâu vào trong nguy cơ xuyên màng phổi gây TRÀN KHÍ MÀNG PHỔI.",
+    "indications_vi": "Ho hen, khó thở, tức ngực, viêm phế quản, đau khớp vai và ngực.",
+    "position_3d": {
+      "x": -1.35,
+      "y": 13.35,
+      "z": 0.78
+    },
+    "related_muscles": [
+      "pectoralis_major",
+      "pectoralis_minor"
+    ]
+  },
+  "LI-16": {
+    "code": "LI-16",
+    "name_vi": "Cự Cốt",
+    "name_han_viet": "巨骨",
+    "meridian_vi": "Kinh Thủ Dương Minh Đại Trường",
+    "region": "back_lumbar",
+    "region_vi": "Lưng - Thắt Lưng & Cùng",
+    "location_vi": "Ở chỗ lõm giữa đầu ngoài xương đòn và gai xương bả vai.",
+    "depth_mm": "15 - 25 mm",
+    "direction_vi": "Châm thẳng hoặc xiên góc 45°.",
+    "deqi_vi": "Tê tức khớp vai lan xuống cánh tay.",
+    "safety_vi": "Tránh châm sâu hướng vào đỉnh phổi.",
+    "indications_vi": "Đau khớp vai, hạn chế vận động cánh tay, đau cổ gáy.",
+    "position_3d": {
+      "x": -1.45,
+      "y": 14.15,
+      "z": 0.08
+    },
+    "related_muscles": [
+      "trapezius_upper",
+      "supraspinatus"
+    ]
+  },
+  "GV-14": {
+    "code": "GV-14",
+    "name_vi": "Đại Chùy",
+    "name_han_viet": "大椎",
+    "meridian_vi": "Mạch Đốc",
+    "region": "back_lumbar",
+    "region_vi": "Lưng - Thắt Lưng & Cùng",
+    "location_vi": "Ở chỗ lõm dưới mỏm gai đốt sống cổ VII (C7), ngay trên mỏm gai đốt ngực I (T1).",
+    "depth_mm": "15 - 25 mm",
+    "direction_vi": "Bảo bệnh nhân hơi cúi đầu, châm thẳng hoặc hơi xiên lên trên.",
+    "deqi_vi": "Tê tức lan tỏa sang hai vai và chạy dọc cột sống.",
+    "safety_vi": "Hội huyệt của các kinh Dương; cấm châm quá sâu vào ống tủy sống.",
+    "indications_vi": "Sốt cao, cảm mạo phong hàn phong nhiệt, sốt rét, cứng đau cổ gáy, hen suyễn, động kinh.",
+    "position_3d": {
+      "x": 0.0,
+      "y": 14.4,
+      "z": -0.58
+    },
+    "related_muscles": [
+      "trapezius_upper",
+      "splenius_cervicis"
+    ]
+  },
+  "GB-21": {
+    "code": "GB-21",
+    "name_vi": "Kiên Tỉnh",
+    "name_han_viet": "肩井",
+    "meridian_vi": "Kinh Túc Thiếu Dương Đởm",
+    "region": "back_lumbar",
+    "region_vi": "Lưng - Thắt Lưng & Cùng",
+    "location_vi": "Điểm giữa đường nối mỏm gai đốt sống C7 (Đại Chùy) và mỏm cùng vai, ngay trên gờ cao nhất cơ Thang.",
+    "depth_mm": "10 - 20 mm",
+    "direction_vi": "Châm thẳng hoặc nghiêng ra sau. CẤM châm sâu hướng vào trong ngực.",
+    "deqi_vi": "Tê tức nặng vùng vai lan xuống cánh tay.",
+    "safety_vi": "⚠️ CẢNH BÁO AN TOÀN: Dưới đáy huyệt là đỉnh màng phổi. Châm sâu > 25mm nguy cơ TRÀN KHÍ MÀNG PHỔI. Chống chỉ định thai phụ.",
+    "indications_vi": "Đau cứng cổ gáy, co cứng cơ thang, nhức đầu vùng chẩm, viêm tuyến vú, tắc sữa.",
+    "position_3d": {
+      "x": -1.35,
+      "y": 14.1,
+      "z": -0.15
+    },
+    "related_muscles": [
+      "trapezius_upper",
+      "levator_scapulae",
+      "supraspinatus"
+    ]
+  },
+  "SI-11": {
+    "code": "SI-11",
+    "name_vi": "Thiên Tông",
+    "name_han_viet": "天宗",
+    "meridian_vi": "Kinh Thủ Thái Dương Tiểu Trường",
+    "region": "back_lumbar",
+    "region_vi": "Lưng - Thắt Lưng & Cùng",
+    "location_vi": "Ở chính giữa hố dưới gai xương bả vai (tạo tam giác đều với góc trên trong và góc dưới xương bả vai).",
+    "depth_mm": "15 - 25 mm",
+    "direction_vi": "Châm thẳng hoặc xiên góc 45°.",
+    "deqi_vi": "Tê tức khắp vùng xương bả vai lan ra cánh tay.",
+    "safety_vi": "Châm vào cơ dưới gai trên bản xương bả vai; bản xương bả vai bảo vệ màng phổi.",
+    "indications_vi": "Đau mỏi xương bả vai, hội chứng chóp xoay, đau lan mặt ngoài cánh tay.",
+    "position_3d": {
+      "x": -1.15,
+      "y": 13.15,
+      "z": -0.68
+    },
+    "related_muscles": [
+      "infraspinatus",
+      "trapezius_middle"
+    ]
+  },
+  "BL-11": {
+    "code": "BL-11",
+    "name_vi": "Đại Trữ",
+    "name_han_viet": "大杼",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "region": "back_lumbar",
+    "region_vi": "Lưng - Thắt Lưng & Cùng",
+    "location_vi": "Từ chỗ lõm dưới mỏm gai đốt sống ngực 1 (T1) đo ngang ra 1.5 thốn.",
+    "depth_mm": "12 - 20 mm",
+    "direction_vi": "Châm xiên hướng mũi kim về phía cột sống một góc 45°. CẤM châm thẳng sâu vào ngực.",
+    "deqi_vi": "Tê tức cơ cạnh sống lan ra bả vai.",
+    "safety_vi": "⚠️ CẢNH BÁO: Châm thẳng sâu vào khoang liên sườn có thể gây tràn khí màng phổi.",
+    "indications_vi": "Hội huyệt của Cốt (xương), đau vai gáy, cảm mạo phong hàn, ho, viêm phế quản.",
+    "position_3d": {
+      "x": -0.55,
+      "y": 14.05,
+      "z": -0.62
+    },
+    "related_muscles": [
+      "trapezius_middle",
+      "rhomboid_minor",
+      "erector_spinae"
+    ]
+  },
+  "BL-12": {
+    "code": "BL-12",
+    "name_vi": "Phong Môn",
+    "name_han_viet": "風門",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "region": "back_lumbar",
+    "region_vi": "Lưng - Thắt Lưng & Cùng",
+    "location_vi": "Từ chỗ lõm dưới mỏm gai đốt sống ngực 2 (T2) đo ngang ra 1.5 thốn.",
+    "depth_mm": "12 - 20 mm",
+    "direction_vi": "Châm xiên chếch 45° về phía cột sống.",
+    "deqi_vi": "Tê tức vùng lưng trên và vai.",
+    "safety_vi": "⚠️ Tránh châm thẳng góc vào màng phổi.",
+    "indications_vi": "Phòng và trị cảm mạo, cúm, sốt, ho suyễn, đau lưng trên, đau cứng gáy.",
+    "position_3d": {
+      "x": -0.55,
+      "y": 13.75,
+      "z": -0.64
+    },
+    "related_muscles": [
+      "trapezius_middle",
+      "rhomboid_minor",
+      "erector_spinae"
+    ]
+  },
+  "BL-13": {
+    "code": "BL-13",
+    "name_vi": "Phế Du",
+    "name_han_viet": "肺兪",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "region": "back_lumbar",
+    "region_vi": "Lưng - Thắt Lưng & Cùng",
+    "location_vi": "Từ chỗ lõm dưới mỏm gai đốt sống ngực 3 (T3) đo ngang ra 1.5 thốn.",
+    "depth_mm": "12 - 20 mm",
+    "direction_vi": "Châm xiên chếch mũi kim về phía cột sống. CẤM châm thẳng 90°.",
+    "deqi_vi": "Tê tức cơ lưng lan sang mạn sườn.",
+    "safety_vi": "⚠️ CẢNH BÁO AN TOÀN TUYỆT ĐỐI: Nguy cơ TRÀN KHÍ MÀNG PHỔI nếu châm thẳng quá sâu > 25mm.",
+    "indications_vi": "Ho, hen suyễn, viêm phế quản, lao phổi, đổ mồ hôi trộm, viêm tuyến vú, chắp lẹo.",
+    "position_3d": {
+      "x": -0.55,
+      "y": 13.45,
+      "z": -0.65
+    },
+    "related_muscles": [
+      "trapezius_middle",
+      "rhomboid_major",
+      "erector_spinae"
+    ]
+  },
+  "BL-15": {
+    "code": "BL-15",
+    "name_vi": "Tâm Du",
+    "name_han_viet": "心兪",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "region": "back_lumbar",
+    "region_vi": "Lưng - Thắt Lưng & Cùng",
+    "location_vi": "Từ chỗ lõm dưới mỏm gai đốt sống ngực 5 (T5) đo ngang ra 1.5 thốn.",
+    "depth_mm": "12 - 20 mm",
+    "direction_vi": "Châm xiên chếch về phía cột sống.",
+    "deqi_vi": "Tê tức lan tỏa sâu vùng lưng giữa.",
+    "safety_vi": "⚠️ CẢNH BÁO: Tránh đâm thẳng góc vào màng phổi.",
+    "indications_vi": "Rối loạn nhịp tim, hồi hộp, mất ngủ, hay mê hoảng loạn, ho, động kinh.",
+    "position_3d": {
+      "x": -0.55,
+      "y": 13.1,
+      "z": -0.65
+    },
+    "related_muscles": [
+      "rhomboid_major",
+      "erector_spinae"
+    ]
+  },
+  "BL-16": {
+    "code": "BL-16",
+    "name_vi": "Đốc Du",
+    "name_han_viet": "督兪",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "region": "back_lumbar",
+    "region_vi": "Lưng - Thắt Lưng & Cùng",
+    "location_vi": "Từ chỗ lõm dưới mỏm gai đốt sống ngực 6 (T6) đo ngang ra 1.5 thốn.",
+    "depth_mm": "12 - 20 mm",
+    "direction_vi": "Châm xiên chếch về phía cột sống.",
+    "deqi_vi": "Tê tức cơ cạnh sống lan ra sườn.",
+    "safety_vi": "Tránh châm thẳng sâu vào màng phổi.",
+    "indications_vi": "Đau dây thần kinh liên sườn 6 và 7, đau thắt ngực, rối loạn thần kinh tim, đau lưng.",
+    "position_3d": {
+      "x": -0.55,
+      "y": 12.8,
+      "z": -0.64
+    },
+    "related_muscles": [
+      "rhomboid_major",
+      "latissimus_dorsi",
+      "erector_spinae"
+    ]
+  },
+  "BL-17": {
+    "code": "BL-17",
+    "name_vi": "Cách Du",
+    "name_han_viet": "膈兪",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "region": "back_lumbar",
+    "region_vi": "Lưng - Thắt Lưng & Cùng",
+    "location_vi": "Từ chỗ lõm dưới mỏm gai đốt sống ngực 7 (T7) đo ngang ra 1.5 thốn (ngang bờ dưới xương bả vai).",
+    "depth_mm": "12 - 20 mm",
+    "direction_vi": "Châm xiên chếch về phía cột sống.",
+    "deqi_vi": "Tê tức sâu vùng cơ hoành và lưng.",
+    "safety_vi": "Hội huyệt của Huyết (máu).",
+    "indications_vi": "Nấc cụt, nôn mửa, thiếu máu, cơn đau thắt ngực, ho ra máu, đổ mồ hôi trộm.",
+    "position_3d": {
+      "x": -0.55,
+      "y": 12.5,
+      "z": -0.63
+    },
+    "related_muscles": [
+      "latissimus_dorsi",
+      "erector_spinae"
+    ]
+  },
+  "CV-12": {
+    "code": "CV-12",
+    "name_vi": "Trung Quản",
+    "name_han_viet": "中脘",
+    "meridian_vi": "Mạch Nhâm",
+    "region": "chest_abdomen",
+    "region_vi": "Ngực - Bụng",
+    "location_vi": "Trên đường dọc giữa bụng, từ rốn đo thẳng lên 4 thốn (điểm giữa đường nối rốn và mũi ức).",
+    "depth_mm": "20 - 35 mm",
+    "direction_vi": "Châm thẳng góc 90°.",
+    "deqi_vi": "Căng tức nặng vùng thượng vị lan tỏa sang hai bên.",
+    "safety_vi": "⚠️ Không châm quá sâu ở người gầy hoặc bệnh nhân ăn quá no, gan lách to.",
+    "indications_vi": "Đau dạ dày, viêm loét dạ dày - tá tràng, nôn mửa, trào ngược thực quản, đầy bụng chậm tiêu.",
+    "position_3d": {
+      "x": 0.0,
+      "y": 11.2,
+      "z": 0.82
+    },
+    "related_muscles": [
+      "rectus_abdominis"
+    ]
+  },
+  "ST-25": {
+    "code": "ST-25",
+    "name_vi": "Thiên Khu",
+    "name_han_viet": "天樞",
+    "meridian_vi": "Kinh Túc Dương Minh Vị",
+    "region": "chest_abdomen",
+    "region_vi": "Ngực - Bụng",
+    "location_vi": "Từ rốn đo ngang ra 2 thốn trên cơ thẳng bụng.",
+    "depth_mm": "20 - 35 mm",
+    "direction_vi": "Châm thẳng 90°.",
+    "deqi_vi": "Tê tức lan tỏa vùng quanh rốn.",
+    "safety_vi": "Phụ nữ mang thai giai đoạn muộn không châm sâu.",
+    "indications_vi": "Viêm đại tràng co thắt, đau bụng quanh rốn, ỉa chảy, táo bón, rối loạn tiêu hóa, sa dạ dày.",
+    "position_3d": {
+      "x": -0.62,
+      "y": 10.05,
+      "z": 0.75
+    },
+    "related_muscles": [
+      "rectus_abdominis"
+    ]
+  },
+  "BL-18": {
+    "code": "BL-18",
+    "name_vi": "Can Du",
+    "name_han_viet": "肝兪",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "region": "back_lumbar",
+    "region_vi": "Lưng - Thắt Lưng & Cùng",
+    "location_vi": "Từ chỗ lõm dưới mỏm gai đốt sống ngực 9 (T9) đo ngang ra 1.5 thốn.",
+    "depth_mm": "12 - 20 mm",
+    "direction_vi": "Châm xiên về phía cột sống.",
+    "deqi_vi": "Tê tức vùng mạn sườn sau.",
+    "safety_vi": "Tránh châm sâu góc 90° vào tạng gan.",
+    "indications_vi": "Viêm gan, vàng da, đau dạ dày, hoa mắt chóng mặt do can hỏa, viêm kết mạc mắt.",
+    "position_3d": {
+      "x": -0.55,
+      "y": 11.95,
+      "z": -0.6
+    },
+    "related_muscles": [
+      "latissimus_dorsi",
+      "erector_spinae"
+    ]
+  },
+  "BL-19": {
+    "code": "BL-19",
+    "name_vi": "Đởm Du",
+    "name_han_viet": "膽兪",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "region": "back_lumbar",
+    "region_vi": "Lưng - Thắt Lưng & Cùng",
+    "location_vi": "Từ chỗ lõm dưới mỏm gai đốt sống ngực 10 (T10) đo ngang ra 1.5 thốn.",
+    "depth_mm": "12 - 20 mm",
+    "direction_vi": "Châm xiên về phía cột sống.",
+    "deqi_vi": "Tê tức cơ dựng sống.",
+    "safety_vi": "Tránh châm thẳng sâu.",
+    "indications_vi": "Viêm túi mật, giun chui ống mật, đầy bụng đắng miệng, tăng huyết áp, nhức đầu.",
+    "position_3d": {
+      "x": -0.55,
+      "y": 11.65,
+      "z": -0.58
+    },
+    "related_muscles": [
+      "latissimus_dorsi",
+      "erector_spinae"
+    ]
+  },
+  "BL-20": {
+    "code": "BL-20",
+    "name_vi": "Tỳ Du",
+    "name_han_viet": "脾兪",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "region": "back_lumbar",
+    "region_vi": "Lưng - Thắt Lưng & Cùng",
+    "location_vi": "Từ chỗ lõm dưới mỏm gai đốt sống ngực 11 (T11) đo ngang ra 1.5 thốn.",
+    "depth_mm": "15 - 25 mm",
+    "direction_vi": "Châm xiên về phía cột sống.",
+    "deqi_vi": "Tê tức vùng thắt lưng trên.",
+    "safety_vi": "Tránh châm sâu góc 90° vào tạng lách.",
+    "indications_vi": "Đau dạ dày, ăn kém chậm tiêu, tiêu chảy mạn tính, phù thũng, suy dinh dưỡng.",
+    "position_3d": {
+      "x": -0.55,
+      "y": 11.35,
+      "z": -0.56
+    },
+    "related_muscles": [
+      "latissimus_dorsi",
+      "erector_spinae"
+    ]
+  },
+  "BL-21": {
+    "code": "BL-21",
+    "name_vi": "Vị Du",
+    "name_han_viet": "胃兪",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "region": "back_lumbar",
+    "region_vi": "Lưng - Thắt Lưng & Cùng",
+    "location_vi": "Từ chỗ lõm dưới mỏm gai đốt sống ngực 12 (T12) đo ngang ra 1.5 thốn.",
+    "depth_mm": "15 - 25 mm",
+    "direction_vi": "Châm xiên về phía cột sống.",
+    "deqi_vi": "Tê tức sâu vùng thắt lưng trên.",
+    "safety_vi": "An toàn khi châm xiên.",
+    "indications_vi": "Đau dạ dày, ợ chua, nôn mửa, sa dạ dày, đầy bụng trướng hơi.",
+    "position_3d": {
+      "x": -0.55,
+      "y": 11.05,
+      "z": -0.55
+    },
+    "related_muscles": [
+      "latissimus_dorsi",
+      "erector_spinae"
+    ]
+  },
+  "CV-4": {
+    "code": "CV-4",
+    "name_vi": "Quan Nguyên",
+    "name_han_viet": "關元",
+    "meridian_vi": "Mạch Nhâm",
+    "region": "chest_abdomen",
+    "region_vi": "Ngực - Bụng",
+    "location_vi": "Trên đường dọc giữa bụng dưới, từ rốn đo thẳng xuống 3 thốn (trên bờ trên khớp mu 2 thốn).",
+    "depth_mm": "20 - 35 mm",
+    "direction_vi": "Bảo bệnh nhân đi tiểu sạch trước khi châm, châm thẳng góc 90°.",
+    "deqi_vi": "Căng tức nặng vùng hạ vị lan xuống bộ phận sinh dục ngoài.",
+    "safety_vi": "⚠️ CẢNH BÁO: Phải làm rỗng bàng quang trước khi châm sâu tránh đâm thủng bàng quang. Chống chỉ định thai phụ.",
+    "indications_vi": "Huyệt đại bổ nguyên khí, di tinh, liệt dương, tiểu dầm, bí tiểu, rối loạn kinh nguyệt, suy kiệt.",
+    "position_3d": {
+      "x": 0.0,
+      "y": 9.35,
+      "z": 0.72
+    },
+    "related_muscles": [
+      "rectus_abdominis"
+    ]
+  },
+  "CV-6": {
+    "code": "CV-6",
+    "name_vi": "Khí Hải",
+    "name_han_viet": "氣海",
+    "meridian_vi": "Mạch Nhâm",
+    "region": "chest_abdomen",
+    "region_vi": "Ngực - Bụng",
+    "location_vi": "Trên đường dọc giữa bụng dưới, từ rốn đo thẳng xuống 1.5 thốn.",
+    "depth_mm": "20 - 30 mm",
+    "direction_vi": "Châm thẳng 90°.",
+    "deqi_vi": "Tê tức ấm nóng vùng bụng dưới.",
+    "safety_vi": "Tránh châm sâu khi bàng quang căng đầy.",
+    "indications_vi": "Bí tiểu, đái dầm, di tinh, suy nhược cơ thể, sa trực tràng, sa tử cung, hạ huyết áp.",
+    "position_3d": {
+      "x": 0.0,
+      "y": 9.75,
+      "z": 0.75
+    },
+    "related_muscles": [
+      "rectus_abdominis"
+    ]
+  },
+  "CV-3": {
+    "code": "CV-3",
+    "name_vi": "Trung Cực",
+    "name_han_viet": "中極",
+    "meridian_vi": "Mạch Nhâm",
+    "region": "chest_abdomen",
+    "region_vi": "Ngực - Bụng",
+    "location_vi": "Trên đường dọc giữa bụng dưới, từ rốn đo xuống 4 thốn (trên bờ trên khớp mu 1 thốn).",
+    "depth_mm": "20 - 30 mm",
+    "direction_vi": "Đi tiểu trước khi châm, châm thẳng 90°.",
+    "deqi_vi": "Tê tức buốt vùng khớp mu và bàng quang.",
+    "safety_vi": "Bắt buộc đi tiểu trước khi châm.",
+    "indications_vi": "Viêm bàng quang, bí tiểu, tiểu dắt tiểu buốt, di tinh, khí hư bạch đới, đau bụng kinh.",
+    "position_3d": {
+      "x": 0.0,
+      "y": 9.05,
+      "z": 0.68
+    },
+    "related_muscles": [
+      "rectus_abdominis",
+      "pyramidalis"
+    ]
+  },
+  "CV-2": {
+    "code": "CV-2",
+    "name_vi": "Khúc Cốt",
+    "name_han_viet": "曲骨",
+    "meridian_vi": "Mạch Nhâm",
+    "region": "chest_abdomen",
+    "region_vi": "Ngực - Bụng",
+    "location_vi": "Ở chính giữa bờ trên khớp mu, dưới rốn 5 thốn.",
+    "depth_mm": "15 - 25 mm",
+    "direction_vi": "Bảo bệnh nhân đi tiểu, châm thẳng 90°.",
+    "deqi_vi": "Tê tức mạnh cơ quan sinh dục ngoài.",
+    "safety_vi": "Tránh đâm vào bàng quang khi căng tiểu.",
+    "indications_vi": "Bí tiểu, viêm bàng quang, viêm tinh hoàn, sa tử cung, rối loạn kinh nguyệt.",
+    "position_3d": {
+      "x": 0.0,
+      "y": 8.75,
+      "z": 0.65
+    },
+    "related_muscles": [
+      "rectus_abdominis",
+      "pyramidalis"
+    ]
+  },
+  "BL-23": {
+    "code": "BL-23",
+    "name_vi": "Thận Du",
+    "name_han_viet": "腎兪",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "region": "back_lumbar",
+    "region_vi": "Lưng - Thắt Lưng & Cùng",
+    "location_vi": "Từ chỗ lõm dưới mỏm gai đốt sống thắt lưng 2 (L2) đo ngang ra 1.5 thốn.",
+    "depth_mm": "25 - 40 mm",
+    "direction_vi": "Châm thẳng hoặc hơi xiên về phía cột sống.",
+    "deqi_vi": "Tê tức sâu vùng thắt lưng lan tỏa ra phía trước bụng.",
+    "safety_vi": "⚠️ CẢNH BÁO AN TOÀN: Dưới sâu phía ngoài là tạng THẬN. CẤM châm xiên góc ra ngoài quá sâu tránh đâm vào nhu mô thận.",
+    "indications_vi": "Đau thắt lưng, đau thần kinh tọa, ù tai điếc tai, di tinh liệt dương, đái dầm, hen phế quản thể thận hư.",
+    "position_3d": {
+      "x": -0.55,
+      "y": 10.45,
+      "z": -0.52
+    },
+    "related_muscles": [
+      "erector_spinae",
+      "quadratus_lumborum"
+    ]
+  },
+  "GV-4": {
+    "code": "GV-4",
+    "name_vi": "Mệnh Môn",
+    "name_han_viet": "命門",
+    "meridian_vi": "Mạch Đốc",
+    "region": "back_lumbar",
+    "region_vi": "Lưng - Thắt Lưng & Cùng",
+    "location_vi": "Ở chỗ lõm dưới mỏm gai đốt sống thắt lưng 2 (L2), đối xứng với rốn ở mặt trước.",
+    "depth_mm": "15 - 25 mm",
+    "direction_vi": "Châm thẳng hoặc hơi xiên lên trên.",
+    "deqi_vi": "Tê tức ấm nóng lan tỏa khắp vùng thắt lưng.",
+    "safety_vi": "Không châm quá sâu vào ống tủy.",
+    "indications_vi": "Đau thắt lưng mạn tính, liệt dương, di tinh, ỉa chảy lúc sáng sớm (ngũ canh tả), chân tay lạnh.",
+    "position_3d": {
+      "x": 0.0,
+      "y": 10.45,
+      "z": -0.52
+    },
+    "related_muscles": [
+      "interspinales",
+      "erector_spinae"
+    ]
+  },
+  "BL-25": {
+    "code": "BL-25",
+    "name_vi": "Đại Trường Du",
+    "name_han_viet": "大腸兪",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "region": "back_lumbar",
+    "region_vi": "Lưng - Thắt Lưng & Cùng",
+    "location_vi": "Từ chỗ lõm dưới mỏm gai đốt sống thắt lưng 4 (L4) đo ngang ra 1.5 thốn (ngang mào chậu).",
+    "depth_mm": "25 - 40 mm",
+    "direction_vi": "Châm thẳng 90°.",
+    "deqi_vi": "Tê tức vùng thắt lưng dưới lan ra hông.",
+    "safety_vi": "An toàn khi châm vào khối cơ dựng sống.",
+    "indications_vi": "Đau thần kinh tọa, đau thắt lưng, trĩ, sa trực tràng, tiêu chảy, táo bón.",
+    "position_3d": {
+      "x": -0.55,
+      "y": 9.75,
+      "z": -0.5
+    },
+    "related_muscles": [
+      "erector_spinae",
+      "iliocostalis"
+    ]
+  },
+  "BL-32": {
+    "code": "BL-32",
+    "name_vi": "Bát Liêu (Thứ Liêu)",
+    "name_han_viet": "八髎",
+    "meridian_vi": "Kinh Túc Thái Dương Bàng Quang",
+    "region": "back_lumbar",
+    "region_vi": "Lưng - Thắt Lưng & Cùng",
+    "location_vi": "Tại lỗ cùng thứ hai (ở chỗ lõm giữa gai xương cùng và gai chậu sau trên). Đại diện cho cụm 8 lỗ cùng Bát Liêu.",
+    "depth_mm": "25 - 40 mm",
+    "direction_vi": "Châm thẳng hướng mũi kim chếch vào lỗ cùng xương cùng.",
+    "deqi_vi": "Tê tức buốt sâu vùng xương cùng lan ra đáy chậu.",
+    "safety_vi": "⚠️ Chống chỉ định thai phụ.",
+    "indications_vi": "Đau lưng cùng cụt, đau thần kinh tọa, rong kinh, thống kinh, dọa sảy, di tinh, liệt dương, tiểu dầm.",
+    "position_3d": {
+      "x": -0.45,
+      "y": 8.95,
+      "z": -0.55
+    },
+    "related_muscles": [
+      "gluteus_maximus",
+      "multifidus"
+    ]
+  },
+  "GV-1": {
+    "code": "GV-1",
+    "name_vi": "Trường Cường",
+    "name_han_viet": "長強",
+    "meridian_vi": "Mạch Đốc",
+    "region": "back_lumbar",
+    "region_vi": "Lưng - Thắt Lưng & Cùng",
+    "location_vi": "Ở chỗ lõm giữa đầu chót xương cụt và hậu môn.",
+    "depth_mm": "15 - 25 mm",
+    "direction_vi": "Châm thẳng hoặc chếch mũi kim lên trên dọc theo mặt trước xương cụt.",
+    "deqi_vi": "Tê tức buốt vùng hậu môn và đáy chậu.",
+    "safety_vi": "Sát trùng kỹ, tránh đâm thủng vào trực tràng.",
+    "indications_vi": "Trĩ, sa trực tràng, ỉa chảy mạn, đại tiện ra máu, đau xương cụt, phạm phòng.",
+    "position_3d": {
+      "x": 0.0,
+      "y": 8.05,
+      "z": -0.45
+    },
+    "related_muscles": [
+      "sphincter_ani_externus",
+      "levator_ani"
+    ]
   }
 }

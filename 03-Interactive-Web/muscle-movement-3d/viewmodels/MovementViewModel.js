@@ -1,4 +1,4 @@
-﻿import { Observable } from './Observable.js?v=7.2';
+import { Observable } from './Observable.js?v=8.0';
 
 /**
  * MovementViewModel
@@ -98,6 +98,18 @@ export class MovementViewModel extends Observable {
       
     this.state.activeMuscles = filteredMuscles;
     this.appVM.sceneVM.highlightMusclesForMovement(filteredMuscles);
+  }
+
+  /**
+   * Toggles role filter: if already filtered by role, reset to 'all'; otherwise filter by role.
+   * @param {string} role 'agonist' | 'antagonist' | 'synergist' | 'stabilizer'
+   */
+  toggleFilterRole(role) {
+    if (this.state.filterRole === role) {
+      this.filterByRole('all');
+    } else {
+      this.filterByRole(role);
+    }
   }
 
   /**

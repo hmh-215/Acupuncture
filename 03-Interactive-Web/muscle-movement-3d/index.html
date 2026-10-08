@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hệ Cơ & Thần Kinh 3D — Châm Cứu & Động Học</title>
-  <link rel="stylesheet" href="assets/css/theme.css?v=7.3">
+  <link rel="stylesheet" href="assets/css/theme.css?v=8.0">
   <link rel="icon" href="data:,">
 
   <!-- Three.js via ES Module importmap (Local Bundle 100% Offline & Tốc độ cao) -->
@@ -19,6 +19,17 @@
   </script>
 </head>
 <body>
+  <!-- ===================== MEDICAL DISCLAIMER BANNER ===================== -->
+  <aside class="medical-disclaimer-banner" role="alert" aria-label="Cảnh báo y khoa">
+    <div class="disclaimer-inner">
+      <span class="disclaimer-icon">⚠️</span>
+      <div class="disclaimer-text">
+        <strong class="disclaimer-title">LƯU Ý MIỄN TRỪ TRÁCH NHIỆM Y KHOA:</strong>
+        Ứng dụng 3D đang trong giai đoạn nghiên cứu & thử nghiệm mô phỏng (Beta). Dữ liệu về giải phẫu, chuỗi động học cử động, vị trí các huyệt đạo và phác đồ châm cứu phục vụ mục đích <em>giáo dục, đào tạo & tham khảo trực quan</em>, không thay thế cho chẩn đoán y khoa chính thức. Cần có sự kiểm chứng, thẩm định và chỉ định của <strong>bác sĩ chuyên khoa, chuyên gia y tế</strong> trước khi áp dụng trên lâm sàng.
+      </div>
+    </div>
+  </aside>
+
   <!-- ===================== HEADER ===================== -->
   <header class="app-header">
     <div class="badge">CHUYÊN ĐỀ Y KHOA TƯƠNG TÁC • HỆ CƠ & HUYỆT VỊ CHÂM CỨU 3D</div>
@@ -59,6 +70,32 @@
           </div>
           <!-- Hover tooltip -->
           <div id="hover-tooltip" class="hover-tooltip" style="display:none;"></div>
+
+          <!-- Floating Viewport Legend Card (Chế độ 1: Động Học Cử Động) -->
+          <div id="viewport-legend-card" class="viewport-legend-card">
+            <div class="viewport-legend-header">
+              <span class="viewport-legend-title">📌 PHÂN VAI CƠ HỌC</span>
+              <span class="viewport-legend-hint">Bấm để lọc</span>
+            </div>
+            <div class="viewport-legend-list">
+              <div class="viewport-legend-item" data-role="agonist" title="Nhấp để lọc cơ chủ vận (nhấp lại để chọn tất cả)">
+                <span class="viewport-legend-dot dot-agonist"></span>
+                <span class="viewport-legend-name">Cơ chủ vận <em>(Agonist)</em></span>
+              </div>
+              <div class="viewport-legend-item" data-role="antagonist" title="Nhấp để lọc cơ đối vận (nhấp lại để chọn tất cả)">
+                <span class="viewport-legend-dot dot-antagonist"></span>
+                <span class="viewport-legend-name">Cơ đối vận <em>(Antagonist)</em></span>
+              </div>
+              <div class="viewport-legend-item" data-role="synergist" title="Nhấp để lọc cơ hiệp đồng (nhấp lại để chọn tất cả)">
+                <span class="viewport-legend-dot dot-synergist"></span>
+                <span class="viewport-legend-name">Cơ hiệp đồng / Liên đới</span>
+              </div>
+              <div class="viewport-legend-item" data-role="stabilizer" title="Nhấp để lọc cơ ổn định (nhấp lại để chọn tất cả)">
+                <span class="viewport-legend-dot dot-stabilizer"></span>
+                <span class="viewport-legend-name">Cơ ổn định <em>(Stabilizer)</em></span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -104,13 +141,16 @@
     <!-- RIGHT: Info Panels -->
     <aside class="info-column">
 
-      <!-- MODE TABS -->
+      <!-- MODE TABS (3 CHẾ ĐỘ) -->
       <div class="mode-tabs">
-        <button id="tab-mode-movement" class="mode-tab active" data-mode="movement" title="Khảo sát cử động đại thể và phân vai cơ học">
+        <button id="tab-mode-kinematics" class="mode-tab active" data-mode="kinematics" title="Khảo sát cử động đại thể và phân vai cơ học (Ẩn hệ thần kinh)">
           <span class="tab-icon">🏃</span> Chế Độ 1: Động Học Cử Động
         </button>
-        <button id="tab-mode-acupuncture" class="mode-tab" data-mode="acupuncture" title="Phân tích hội chứng đau cơ, chuỗi cơ cân & điểm huyệt 3D">
-          <span class="tab-icon">⚡</span> Chế Độ 2: Trị Liệu & Chuỗi Kinh Cân
+        <button id="tab-mode-acupoints" class="mode-tab" data-mode="acupoints" title="Bản đồ 80 huyệt đạo toàn thân WHO kết hợp Hệ Cơ & Hệ Thần Kinh">
+          <span class="tab-icon">📍</span> Chế Độ 2: Bản Đồ Huyệt Đạo 3D
+        </button>
+        <button id="tab-mode-therapy" class="mode-tab" data-mode="therapy" title="Phân tích hội chứng đau cơ, chuỗi cơ cân & châm cứu trị liệu">
+          <span class="tab-icon">⚡</span> Chế Độ 3: Châm Cứu Trị Liệu
         </button>
       </div>
 
@@ -162,8 +202,77 @@
         </div>
       </div>
 
-      <!-- ==================== CHẾ ĐỘ 2: TRỊ LIỆU & CHÂU KINH CÂN ==================== -->
+      <!-- ==================== CHẾ ĐỘ 2: BẢN ĐỒ HUYỆT ĐẠO 3D ==================== -->
       <div id="mode-2-container" style="display:none;">
+        <div class="card" id="acupoint-map-card">
+          <div class="card-header-with-badge">
+            <h2 class="card-title">📍 Bản Đồ 80 Huyệt Đạo Toàn Thân</h2>
+            <span class="badge-mini" id="acupoint-total-badge">80 Huyệt</span>
+          </div>
+          <p class="card-desc-sub">Mô hình tích hợp Hệ Cơ + Hệ Thần Kinh + Vị trí các huyệt theo YHCT & chuẩn WHO</p>
+
+          <!-- Search Input -->
+          <div class="search-box">
+            <input type="text" id="search-acupoint-input" placeholder="🔍 Tìm huyệt (Hợp Cốc, Túc Tam Lý, LI-4, đau đầu...)" class="search-input">
+          </div>
+
+          <!-- Region Filter Bar -->
+          <div class="region-filter-bar" id="acupoint-region-filters">
+            <button class="region-pill active" data-region="all">Tất cả (80)</button>
+            <button class="region-pill" data-region="head_neck">Đầu - Mặt - Cổ (20)</button>
+            <button class="region-pill" data-region="lower_limb">Chi Dưới (20)</button>
+            <button class="region-pill" data-region="upper_limb">Chi Trên (13)</button>
+            <button class="region-pill" data-region="chest_abdomen">Ngực - Bụng (6)</button>
+            <button class="region-pill" data-region="back_lumbar">Lưng - Cùng (21)</button>
+          </div>
+
+          <!-- Status / Active Count -->
+          <div class="acupoints-count-status">
+            <span>Hiển thị trên 3D: <strong id="lbl-active-acupoint-count">80</strong> huyệt vị</span>
+          </div>
+
+          <!-- Interactive Acupoint List -->
+          <div class="acupoints-scroll-list" id="acupoint-map-list">
+            <!-- Populated dynamically by UIView.js -->
+          </div>
+        </div>
+
+        <!-- Selected Acupoint Detail Card (Chế độ 2) -->
+        <div class="card" id="map-acupoint-detail-card" style="display:none;">
+          <div class="card-header">
+            <div>
+              <span class="detail-badge-code" id="map-detail-code">GB-21</span>
+              <h2 class="card-title inline-title" id="map-detail-name">Kiên Tỉnh</h2>
+              <span class="detail-han" id="map-detail-han">肩井</span>
+            </div>
+            <button id="btn-close-map-detail" class="btn-icon" title="Đóng">✕</button>
+          </div>
+          <p class="detail-meridian" id="map-detail-meridian">Kinh Túc Thiếu Dương Đởm</p>
+
+          <div class="detail-grid">
+            <div class="detail-row">
+              <strong>📍 Định vị giải phẫu:</strong>
+              <span id="map-detail-location"></span>
+            </div>
+            <div class="detail-row">
+              <strong>📐 Độ sâu & Hướng kim:</strong>
+              <span id="map-detail-depth"></span>
+            </div>
+            <div class="detail-row">
+              <strong>⚡ Cảm giác Đắc Khí:</strong>
+              <span id="map-detail-deqi"></span>
+            </div>
+            <div class="detail-row">
+              <strong>🩺 Tác dụng & Chỉ định:</strong>
+              <span id="map-detail-indications"></span>
+            </div>
+          </div>
+          <div id="map-detail-safety" class="safety-alert"></div>
+        </div>
+      </div>
+
+      <!-- ==================== CHẾ ĐỘ 3: CHÂM CỨU TRỊ LIỆU & CHUỖI KINH CÂN ==================== -->
+      <div id="mode-3-container" style="display:none;">
         <div class="card" id="acupuncture-card">
           <h2 class="card-title">⚡ Chọn Vùng Đau & Hội Chứng Cân Cơ</h2>
           <select id="chain-select" class="select-input">
@@ -194,7 +303,7 @@
           </div>
         </div>
 
-        <!-- Acupoint Detail Card -->
+        <!-- Acupoint Detail Card (Chế độ 3) -->
         <div class="card" id="acupoint-detail-card" style="display:none;">
           <div class="card-header">
             <h2 class="card-title" id="acupoint-detail-title">—</h2>
@@ -454,8 +563,8 @@
     <p>Dữ liệu giải phẫu & châm cứu: Giáo trình ĐHYHN, Netter Anatomy, Terminologia Anatomica (TA2), Yếu Lược Châm Cứu Hệ Đạo Dẫn & WHO Acupuncture Standards</p>
   </footer>
 
-  <!-- App Entry Point (v7.3 cache bust) -->
-  <script type="module" src="app.js?v=7.3"></script>
+  <!-- App Entry Point (v8.0 cache bust) -->
+  <script type="module" src="app.js?v=8.0"></script>
 </body>
 </html>
 
