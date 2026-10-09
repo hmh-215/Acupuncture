@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hệ Cơ & Thần Kinh 3D — Châm Cứu & Động Học</title>
-  <link rel="stylesheet" href="assets/css/theme.css?v=8.0">
+  <link rel="stylesheet" href="assets/css/theme.css?v=12.0">
   <link rel="icon" href="data:,">
 
   <!-- Three.js via ES Module importmap (Local Bundle 100% Offline & Tốc độ cao) -->
@@ -93,6 +93,44 @@
               <div class="viewport-legend-item" data-role="stabilizer" title="Nhấp để lọc cơ ổn định (nhấp lại để chọn tất cả)">
                 <span class="viewport-legend-dot dot-stabilizer"></span>
                 <span class="viewport-legend-name">Cơ ổn định <em>(Stabilizer)</em></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Viewport Legend Card (Chế độ 3: Châm Cứu Trị Liệu & Chuỗi Kinh Cân) -->
+          <div id="viewport-legend-therapy" class="viewport-legend-card viewport-legend-therapy" style="display:none;">
+            <div class="viewport-legend-header">
+              <span class="viewport-legend-title">⚡ TIÊU CHÍ TÔ MÀU TRỊ LIỆU</span>
+              <span class="viewport-legend-hint">Chuỗi Kinh Cân</span>
+            </div>
+            <div class="viewport-legend-list">
+              <div class="viewport-legend-item legend-item-therapy" data-therapy-role="pain" title="Cơ đau chính: Vùng phát sinh co cứng & đau nguyên phát, chứa điểm kích hoạt (Trigger Point)">
+                <span class="viewport-legend-dot dot-pain"></span>
+                <div class="legend-text-col">
+                  <span class="viewport-legend-name">Cơ đau chính <em>(Trigger Point)</em></span>
+                  <span class="legend-criterion">Khởi phát co cứng & điểm cân kết</span>
+                </div>
+              </div>
+              <div class="viewport-legend-item legend-item-therapy" data-therapy-role="chain" title="Chuỗi cơ liên đới: Các cơ cùng chuỗi cân mạc (Kinh Cân YHCT) chịu tải trọng bù trừ">
+                <span class="viewport-legend-dot dot-chain"></span>
+                <div class="legend-text-col">
+                  <span class="viewport-legend-name">Chuỗi cơ liên đới <em>(Myofascial Chain)</em></span>
+                  <span class="legend-criterion">Mắt xích cùng chuỗi cân chịu lực kéo</span>
+                </div>
+              </div>
+              <div class="viewport-legend-item legend-item-therapy" data-therapy-role="antagonist_tight" title="Cơ co rút đối ứng: Cơ đối kháng co ngắn mạn tính làm mất cân bằng tư thế">
+                <span class="viewport-legend-dot dot-antagonist-tight"></span>
+                <div class="legend-text-col">
+                  <span class="viewport-legend-name">Cơ co rút đối ứng <em>(Antagonist Tight)</em></span>
+                  <span class="legend-criterion">Đối kháng co ngắn, lệch trục tư thế</span>
+                </div>
+              </div>
+              <div class="viewport-legend-item legend-item-therapy" data-therapy-role="acupoint" title="Huyệt vị đặc trị 3D: Điểm châm cứu giải phóng co thắt nút giao cơ - thần kinh theo WHO">
+                <span class="viewport-legend-dot dot-acupoint-marker"></span>
+                <div class="legend-text-col">
+                  <span class="viewport-legend-name">Huyệt vị đặc trị <em>(Acupoints 3D)</em></span>
+                  <span class="legend-criterion">Huyệt giải tỏa nút thắt theo chuẩn WHO</span>
+                </div>
               </div>
             </div>
           </div>
@@ -206,8 +244,8 @@
       <div id="mode-2-container" style="display:none;">
         <div class="card" id="acupoint-map-card">
           <div class="card-header-with-badge">
-            <h2 class="card-title">📍 Bản Đồ 80 Huyệt Đạo Toàn Thân</h2>
-            <span class="badge-mini" id="acupoint-total-badge">80 Huyệt</span>
+            <h2 class="card-title">📍 Bản Đồ 90 Huyệt Đạo Toàn Thân</h2>
+            <span class="badge-mini" id="acupoint-total-badge">90 Huyệt</span>
           </div>
           <p class="card-desc-sub">Mô hình tích hợp Hệ Cơ + Hệ Thần Kinh + Vị trí các huyệt theo YHCT & chuẩn WHO</p>
 
@@ -218,17 +256,17 @@
 
           <!-- Region Filter Bar -->
           <div class="region-filter-bar" id="acupoint-region-filters">
-            <button class="region-pill active" data-region="all">Tất cả (80)</button>
+            <button class="region-pill active" data-region="all">Tất cả (90)</button>
             <button class="region-pill" data-region="head_neck">Đầu - Mặt - Cổ (20)</button>
-            <button class="region-pill" data-region="lower_limb">Chi Dưới (20)</button>
-            <button class="region-pill" data-region="upper_limb">Chi Trên (13)</button>
-            <button class="region-pill" data-region="chest_abdomen">Ngực - Bụng (6)</button>
-            <button class="region-pill" data-region="back_lumbar">Lưng - Cùng (21)</button>
+            <button class="region-pill" data-region="lower_limb">Chi Dưới (25)</button>
+            <button class="region-pill" data-region="upper_limb">Chi Trên (18)</button>
+            <button class="region-pill" data-region="chest_abdomen">Ngực - Bụng (8)</button>
+            <button class="region-pill" data-region="back_lumbar">Lưng - Cùng (19)</button>
           </div>
 
           <!-- Status / Active Count -->
           <div class="acupoints-count-status">
-            <span>Hiển thị trên 3D: <strong id="lbl-active-acupoint-count">80</strong> huyệt vị</span>
+            <span>Hiển thị trên 3D: <strong id="lbl-active-acupoint-count">90</strong> huyệt vị</span>
           </div>
 
           <!-- Interactive Acupoint List -->
@@ -245,7 +283,7 @@
               <h2 class="card-title inline-title" id="map-detail-name">Kiên Tỉnh</h2>
               <span class="detail-han" id="map-detail-han">肩井</span>
             </div>
-            <button id="btn-close-map-detail" class="btn-icon" title="Đóng">✕</button>
+            <button id="btn-close-map-detail" class="btn-icon" title="Đóng và hiện lại tất cả huyệt vị">✕</button>
           </div>
           <p class="detail-meridian" id="map-detail-meridian">Kinh Túc Thiếu Dương Đởm</p>
 
@@ -268,6 +306,11 @@
             </div>
           </div>
           <div id="map-detail-safety" class="safety-alert"></div>
+          <div style="margin-top: 10px; display: flex; justify-content: flex-end;">
+            <button id="btn-show-all-acupoints-m2" class="btn btn-secondary btn-sm" style="font-size: 0.8rem; padding: 4px 10px; border-radius: 6px; cursor: pointer;">
+              👁️ Hiện lại tất cả huyệt vị
+            </button>
+          </div>
         </div>
       </div>
 
@@ -307,6 +350,7 @@
         <div class="card" id="acupoint-detail-card" style="display:none;">
           <div class="card-header">
             <h2 class="card-title" id="acupoint-detail-title">—</h2>
+            <button id="btn-close-chain-acupoint" class="btn-icon" title="Đóng và hiện lại tất cả huyệt vị">✕</button>
           </div>
           <div class="detail-grid">
             <div class="detail-row">
@@ -323,6 +367,11 @@
             </div>
           </div>
           <div id="acupoint-detail-safety" class="safety-alert"></div>
+          <div style="margin-top: 10px; display: flex; justify-content: flex-end;">
+            <button id="btn-show-all-acupoints-m3" class="btn btn-secondary btn-sm" style="font-size: 0.8rem; padding: 4px 10px; border-radius: 6px; cursor: pointer;">
+              👁️ Hiện lại tất cả huyệt vị
+            </button>
+          </div>
         </div>
       </div>
 
@@ -530,28 +579,79 @@
       </div>
     </section>
 
-    <!-- RIGHT: Chapter Playlist Sidebar Column -->
+    <!-- RIGHT: Chapter Playlist & Realtime Transcript Sidebar Column -->
     <aside class="video-playlist-column">
       <div class="playlist-card">
-        <div class="playlist-header">
-          <div class="playlist-title-row">
-            <span class="playlist-icon">📚</span>
-            <h3>DANH MỤC BÀI GIẢNG THEO CHƯƠNG</h3>
+        <!-- Sidebar Navigation Tabs -->
+        <div class="sidebar-tab-switcher">
+          <button type="button" class="s-tab-btn active" id="btn-stab-realtime" title="Xem lời thuyết minh đồng bộ theo thời gian thực">
+            <span class="stab-icon">🎙️</span> Thuyết Minh Real-time
+          </button>
+          <button type="button" class="s-tab-btn" id="btn-stab-playlist" title="Xem danh sách bài giảng theo chương">
+            <span class="stab-icon">📚</span> Danh Mục Bài Giảng
+          </button>
+        </div>
+
+        <!-- PANEL 1: Realtime Transcript (Đồng bộ từng giây lời giảng) -->
+        <div id="panel-realtime-transcript" class="stab-content active">
+          <div class="rt-header">
+            <div class="rt-header-top">
+              <div class="rt-title-row">
+                <span class="rt-pulse-dot" title="Đang đồng bộ trực tiếp"></span>
+                <span class="rt-heading-label">LỜI GIẢNG THẦY HƯỞNG</span>
+              </div>
+              <span class="rt-sync-badge" id="rt-sync-badge">🟢 Real-time Synced</span>
+            </div>
+            
+            <h4 class="rt-current-shot-title" id="rt-current-shot-title">Shot 01: Chuỗi Động Học & Cân Bằng</h4>
+
+            <div class="rt-controls-row">
+              <label class="rt-checkbox-label" title="Tự động cuộn khung nhìn tới câu thoại đang phát">
+                <input type="checkbox" id="chk-rt-autoscroll" checked>
+                <span>Tự động cuộn</span>
+              </label>
+              <span class="rt-current-time-badge" id="rt-current-time-badge">⏱️ 00:00 / 01:10</span>
+            </div>
+
+            <div class="rt-search-box">
+              <input type="text" id="rt-search-input" placeholder="🔍 Lọc câu thoại hoặc từ khóa giải phẫu..." class="playlist-search-input">
+            </div>
           </div>
-          <p class="playlist-desc">Chọn bài giảng để mở video thuyết minh và kịch bản phân đoạn tương ứng</p>
-          <div class="playlist-search-box">
-            <input type="text" id="playlist-search-input" placeholder="🔍 Tìm kiếm chương hoặc chủ đề..." class="playlist-search-input">
+
+          <!-- Danh sách câu thoại đồng bộ -->
+          <div class="rt-cues-list" id="rt-cues-list">
+            <!-- Dynamically populated from timed_cues -->
+          </div>
+
+          <!-- Chú dẫn tương tác -->
+          <div class="rt-footer-tip">
+            <span class="tip-icon">💡</span>
+            <span>Nhấn vào bất kỳ câu thoại nào để tua nhanh video tới đúng thời điểm thuyết minh đó.</span>
           </div>
         </div>
 
-        <div class="playlist-items-list" id="playlist-items-list">
-          <!-- Dynamically populated from lectures.json -->
-        </div>
+        <!-- PANEL 2: Chapter Playlist (Danh mục các chương) -->
+        <div id="panel-chapter-playlist" class="stab-content" style="display: none;">
+          <div class="playlist-header">
+            <div class="playlist-title-row">
+              <span class="playlist-icon">📚</span>
+              <h3>DANH MỤC BÀI GIẢNG THEO CHƯƠNG</h3>
+            </div>
+            <p class="playlist-desc">Chọn bài giảng để mở video thuyết minh và kịch bản phân đoạn tương ứng</p>
+            <div class="playlist-search-box">
+              <input type="text" id="playlist-search-input" placeholder="🔍 Tìm kiếm chương hoặc chủ đề..." class="playlist-search-input">
+            </div>
+          </div>
 
-        <!-- Video Integration Helper Notice -->
-        <div class="playlist-footer-notice">
-          <span class="notice-icon">💡</span>
-          <p>Hệ thống hỗ trợ nạp video MP4, WebM trực tiếp hoặc liên kết bài giảng chất lượng cao. Các file video tương ứng theo chương có thể đặt trực tiếp tại thư mục <code>assets/videos/</code>.</p>
+          <div class="playlist-items-list" id="playlist-items-list">
+            <!-- Dynamically populated from lectures.json -->
+          </div>
+
+          <!-- Video Integration Helper Notice -->
+          <div class="playlist-footer-notice">
+            <span class="notice-icon">💡</span>
+            <p>Hệ thống hỗ trợ nạp video MP4, WebM trực tiếp hoặc liên kết bài giảng chất lượng cao. Các file video tương ứng theo chương có thể đặt trực tiếp tại thư mục <code>assets/videos/</code>.</p>
+          </div>
         </div>
       </div>
     </aside>
@@ -563,8 +663,8 @@
     <p>Dữ liệu giải phẫu & châm cứu: Giáo trình ĐHYHN, Netter Anatomy, Terminologia Anatomica (TA2), Yếu Lược Châm Cứu Hệ Đạo Dẫn & WHO Acupuncture Standards</p>
   </footer>
 
-  <!-- App Entry Point (v8.0 cache bust) -->
-  <script type="module" src="app.js?v=8.0"></script>
+  <!-- App Entry Point (v13.0 cache bust) -->
+  <script type="module" src="app.js?v=13.0"></script>
 </body>
 </html>
 

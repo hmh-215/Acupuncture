@@ -18,8 +18,8 @@ try {
     Write-Host " Nhấn Ctrl + C để dừng máy chủ" -ForegroundColor Gray
     Write-Host "==========================================================" -ForegroundColor Cyan
 } catch {
-    Write-Host "[!] Không thể mở cổng $port: $_" -ForegroundColor Red
-    Write-Host "[!] Đang thử cổng thay thế 8081..." -ForegroundColor Yellow
+    Write-Host "[!] Khong the mo cong ${port}: $_" -ForegroundColor Red
+    Write-Host "[!] Dang thu cong thay the 8081..." -ForegroundColor Yellow
     $port = 8081
     $prefix = "http://localhost:$port/"
     $listener = New-Object System.Net.HttpListener

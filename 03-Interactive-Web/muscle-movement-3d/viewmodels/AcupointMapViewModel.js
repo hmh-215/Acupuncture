@@ -1,8 +1,8 @@
-import { Observable } from './Observable.js?v=8.0';
+import { Observable } from './Observable.js?v=12.0';
 
 /**
  * AcupointMapViewModel
- * Quản lý trạng thái logic của Chế độ 2: Bản Đồ Các Huyệt Đạo Trên Cơ Thể Người (80 Huyệt Chuẩn YHCT)
+ * Quản lý trạng thái logic của Chế độ 2: Bản Đồ Các Huyệt Đạo Trên Cơ Thể Người (90 Huyệt Chuẩn YHCT)
  */
 export class AcupointMapViewModel extends Observable {
   /**
@@ -72,23 +72,37 @@ export class AcupointMapViewModel extends Observable {
 
     this.batch(() => {
       this.state.activeAcupoints = points;
-      // Nếu có huyệt đang chọn mà không còn trong danh sách thì giữ nguyên hoặc chọn phần tử đầu
-      if (!this.state.selectedAcupoint && points.length > 0) {
-        this.state.selectedAcupoint = points[0];
+      // Nếu huyệt đang chọn không còn nằm trong danh sách sau khi lọc, bỏ chọn
+      if (this.state.selectedAcupoint && !points.some(p => p.code === this.state.selectedAcupoint.code)) {
+        this.state.selectedAcupoint = null;
+        this.state.focusedAcupointCode = null;
       }
     });
 
     // Cập nhật lên 3D Scene nếu đang ở Chế độ 2
     if (this.appVM.sceneVM && this.appVM.state.activeMode === 'acupoints') {
       this.appVM.sceneVM.displayAcupoints(points);
+      this.appVM.sceneVM.focusAcupoint(this.state.focusedAcupointCode);
     }
   }
 
   /**
    * Chọn một huyệt cụ thể để xem chi tiết và phóng to/tiêu điểm trên 3D
-   * @param {string} code 
+   * Hỗ trợ toggle: click lại chính huyệt đang chọn hoặc truyền null để hủy chọn (hiển thị lại tất cả)
+   * @param {string|null} code 
    */
   selectAcupoint(code) {
+    if (!code || this.state.focusedAcupointCode === code) {
+      this.batch(() => {
+        this.state.selectedAcupoint = null;
+        this.state.focusedAcupointCode = null;
+      });
+      if (this.appVM.sceneVM) {
+        this.appVM.sceneVM.focusAcupoint(null);
+      }
+      return;
+    }
+
     if (!this.appVM.acupointData) return;
     const pt = this.appVM.acupointData[code];
     if (pt) {

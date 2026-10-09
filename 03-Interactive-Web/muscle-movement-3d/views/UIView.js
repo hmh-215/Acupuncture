@@ -44,6 +44,10 @@ export class UIView {
       viewportLegendCard: document.getElementById('viewport-legend-card'),
       viewportLegendItems: document.querySelectorAll('.viewport-legend-item'),
 
+      // Floating Viewport Legend Card (Chế độ 3: Trị liệu chuỗi kinh cân)
+      viewportLegendTherapy: document.getElementById('viewport-legend-therapy'),
+      viewportLegendTherapyItems: document.querySelectorAll('.legend-item-therapy'),
+
       // Chế độ 1: Cử động mẫu
       movementSelect: document.getElementById('movement-select'),
       searchInput: document.getElementById('search-input'),
@@ -71,6 +75,7 @@ export class UIView {
       mapDetailIndications: document.getElementById('map-detail-indications'),
       mapDetailSafety: document.getElementById('map-detail-safety'),
       btnCloseMapDetail: document.getElementById('btn-close-map-detail'),
+      btnShowAllAcupointsM2: document.getElementById('btn-show-all-acupoints-m2'),
 
       // Chế độ 3: Bệnh lý cơ đau & Chuỗi kinh cân trị liệu
       chainSelect: document.getElementById('chain-select'),
@@ -82,6 +87,8 @@ export class UIView {
       chainAcupointSection: document.getElementById('chain-acupoint-section'),
       chainAcupointsList: document.getElementById('chain-acupoints-list'),
       acupointDetailCard: document.getElementById('acupoint-detail-card'),
+      btnCloseChainAcupoint: document.getElementById('btn-close-chain-acupoint'),
+      btnShowAllAcupointsM3: document.getElementById('btn-show-all-acupoints-m3'),
       acupointDetailTitle: document.getElementById('acupoint-detail-title'),
       acupointDetailLoc: document.getElementById('acupoint-detail-loc'),
       acupointDetailDepth: document.getElementById('acupoint-detail-depth'),
@@ -144,7 +151,19 @@ export class UIView {
       btnNextShot: document.getElementById('btn-next-shot'),
       chkAutoNext: document.getElementById('chk-auto-next'),
       vtoolbarShotInfo: document.getElementById('vtoolbar-shot-info'),
-      btnQuickInfographic: document.getElementById('btn-quick-infographic')
+      btnQuickInfographic: document.getElementById('btn-quick-infographic'),
+
+      // Sidebar Tabs & Realtime Transcript Elements
+      btnStabRealtime: document.getElementById('btn-stab-realtime'),
+      btnStabPlaylist: document.getElementById('btn-stab-playlist'),
+      panelRealtimeTranscript: document.getElementById('panel-realtime-transcript'),
+      panelChapterPlaylist: document.getElementById('panel-chapter-playlist'),
+      rtCurrentShotTitle: document.getElementById('rt-current-shot-title'),
+      rtSyncBadge: document.getElementById('rt-sync-badge'),
+      chkRtAutoScroll: document.getElementById('chk-rt-autoscroll'),
+      rtCurrentTimeBadge: document.getElementById('rt-current-time-badge'),
+      rtSearchInput: document.getElementById('rt-search-input'),
+      rtCuesList: document.getElementById('rt-cues-list')
     };
   }
 
@@ -168,6 +187,17 @@ export class UIView {
     if (this.appVM && this.appVM.acupunctureVM) {
       this.appVM.acupunctureVM.on('selectedChain', chain => this._renderChainInfo(chain));
       this.appVM.acupunctureVM.on('selectedAcupoint', pt => this._renderAcupointDetail(pt));
+      this.appVM.acupunctureVM.on('selectedRoleFilter', role => {
+        if (this.els.viewportLegendTherapyItems) {
+          this.els.viewportLegendTherapyItems.forEach(item => {
+            if (role !== 'all' && item.dataset.therapyRole === role) {
+              item.classList.add('active');
+            } else {
+              item.classList.remove('active');
+            }
+          });
+        }
+      });
     }
 
     // Ứng dụng chung
@@ -224,6 +254,18 @@ export class UIView {
         item.addEventListener('click', () => {
           const role = item.dataset.role;
           if (this.movementVM) this.movementVM.toggleFilterRole(role);
+        });
+      });
+    }
+
+    // Floating Viewport Legend Card (Chế độ 3: Bấm để lọc vai trò trị liệu)
+    if (this.els.viewportLegendTherapyItems) {
+      this.els.viewportLegendTherapyItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const role = item.dataset.therapyRole;
+          if (this.appVM && this.appVM.acupunctureVM) {
+            this.appVM.acupunctureVM.toggleFilterRole(role);
+          }
         });
       });
     }
@@ -288,12 +330,32 @@ export class UIView {
       });
     }
 
-    // Chế độ 2: Đóng bảng chi tiết huyệt
+    // Chế độ 2: Đóng bảng chi tiết huyệt & Hiện lại tất cả huyệt
+    const closeMapDetail = () => {
+      if (this.els.mapAcupointDetailCard) this.els.mapAcupointDetailCard.style.display = 'none';
+      if (this.appVM?.acupointMapVM) this.appVM.acupointMapVM.selectAcupoint(null);
+      if (this.sceneVM) this.sceneVM.focusAcupoint(null);
+    };
+
     if (this.els.btnCloseMapDetail) {
-      this.els.btnCloseMapDetail.addEventListener('click', () => {
-        if (this.els.mapAcupointDetailCard) this.els.mapAcupointDetailCard.style.display = 'none';
-        if (this.sceneVM) this.sceneVM.focusAcupoint(null);
-      });
+      this.els.btnCloseMapDetail.addEventListener('click', closeMapDetail);
+    }
+    if (this.els.btnShowAllAcupointsM2) {
+      this.els.btnShowAllAcupointsM2.addEventListener('click', closeMapDetail);
+    }
+
+    // Chế độ 3: Đóng bảng chi tiết huyệt chuỗi & Hiện lại tất cả huyệt
+    const closeChainAcupoint = () => {
+      if (this.els.acupointDetailCard) this.els.acupointDetailCard.style.display = 'none';
+      if (this.appVM?.acupunctureVM) this.appVM.acupunctureVM.selectAcupoint(null);
+      if (this.sceneVM) this.sceneVM.focusAcupoint(null);
+    };
+
+    if (this.els.btnCloseChainAcupoint) {
+      this.els.btnCloseChainAcupoint.addEventListener('click', closeChainAcupoint);
+    }
+    if (this.els.btnShowAllAcupointsM3) {
+      this.els.btnShowAllAcupointsM3.addEventListener('click', closeChainAcupoint);
     }
 
     // Dropdown chọn Hội chứng đau cơ (Chế độ 3)
@@ -350,26 +412,41 @@ export class UIView {
         if (this.els.searchInput) this.els.searchInput.value = '';
         if (this.els.searchAcupointInput) this.els.searchAcupointInput.value = '';
 
-        if (this.els.sliderMuscleOpacity) {
-          this.els.sliderMuscleOpacity.value = 100;
-          if (this.els.valMuscleOpacity) this.els.valMuscleOpacity.textContent = '100%';
-          if (this.sceneVM) this.sceneVM.setMuscleOpacity(1.0);
-        }
-        if (this.els.sliderNervousOpacity) {
-          this.els.sliderNervousOpacity.value = 90;
-          if (this.els.valNervousOpacity) this.els.valNervousOpacity.textContent = '90%';
-          if (this.sceneVM) this.sceneVM.setNervousOpacity(0.90);
-        }
-
-        if (this.els.toggleMuscles) this.els.toggleMuscles.checked = true;
-        
         const activeMode = this.appVM?.state.activeMode || 'kinematics';
         if (activeMode === 'acupoints') {
+          if (this.els.sliderMuscleOpacity) {
+            this.els.sliderMuscleOpacity.value = 10;
+            if (this.els.valMuscleOpacity) this.els.valMuscleOpacity.textContent = '10%';
+            if (this.sceneVM) this.sceneVM.setMuscleOpacity(0.10);
+          }
+          if (this.els.sliderNervousOpacity) {
+            this.els.sliderNervousOpacity.value = 90;
+            if (this.els.valNervousOpacity) this.els.valNervousOpacity.textContent = '90%';
+            if (this.sceneVM) this.sceneVM.setNervousOpacity(0.90);
+          }
+          if (this.els.toggleMuscles) this.els.toggleMuscles.checked = true;
           if (this.els.toggleNervous) this.els.toggleNervous.checked = true;
-          if (this.sceneVM) this.sceneVM.setShowNervousLayer(true);
+          if (this.sceneVM) {
+            this.sceneVM.setShowMuscleLayer(true);
+            this.sceneVM.setShowNervousLayer(true);
+          }
         } else {
+          if (this.els.sliderMuscleOpacity) {
+            this.els.sliderMuscleOpacity.value = 100;
+            if (this.els.valMuscleOpacity) this.els.valMuscleOpacity.textContent = '100%';
+            if (this.sceneVM) this.sceneVM.setMuscleOpacity(1.0);
+          }
+          if (this.els.sliderNervousOpacity) {
+            this.els.sliderNervousOpacity.value = 90;
+            if (this.els.valNervousOpacity) this.els.valNervousOpacity.textContent = '90%';
+            if (this.sceneVM) this.sceneVM.setNervousOpacity(0.90);
+          }
+          if (this.els.toggleMuscles) this.els.toggleMuscles.checked = true;
           if (this.els.toggleNervous) this.els.toggleNervous.checked = false;
-          if (this.sceneVM) this.sceneVM.setShowNervousLayer(false);
+          if (this.sceneVM) {
+            this.sceneVM.setShowMuscleLayer(true);
+            this.sceneVM.setShowNervousLayer(false);
+          }
         }
 
         this._populateMovementDropdown();
@@ -455,6 +532,40 @@ export class UIView {
           }
         }
       });
+
+      // Lắng nghe tiến trình phát để đồng bộ Realtime Transcript từng giây
+      this.els.html5VideoPlayer.addEventListener('timeupdate', () => {
+        this._syncRealtimeTranscript();
+      });
+    }
+
+    // Chuyển đổi giữa 2 tab bên cột Sidebar (Thuyết Minh Real-time vs Danh Mục Chương)
+    if (this.els.btnStabRealtime && this.els.btnStabPlaylist) {
+      this.els.btnStabRealtime.addEventListener('click', () => {
+        this.els.btnStabRealtime.classList.add('active');
+        this.els.btnStabPlaylist.classList.remove('active');
+        if (this.els.panelRealtimeTranscript) this.els.panelRealtimeTranscript.style.display = 'flex';
+        if (this.els.panelChapterPlaylist) this.els.panelChapterPlaylist.style.display = 'none';
+      });
+
+      this.els.btnStabPlaylist.addEventListener('click', () => {
+        this.els.btnStabPlaylist.classList.add('active');
+        this.els.btnStabRealtime.classList.remove('active');
+        if (this.els.panelChapterPlaylist) this.els.panelChapterPlaylist.style.display = 'flex';
+        if (this.els.panelRealtimeTranscript) this.els.panelRealtimeTranscript.style.display = 'none';
+      });
+    }
+
+    // Tìm kiếm / lọc nhanh trong Realtime Transcript
+    if (this.els.rtSearchInput) {
+      this.els.rtSearchInput.addEventListener('input', (e) => {
+        const q = (e.target.value || '').toLowerCase().trim();
+        const items = document.querySelectorAll('.rt-cue-item');
+        items.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          item.style.display = (!q || text.includes(q)) ? 'block' : 'none';
+        });
+      });
     }
 
     // Nút Play / Pause mô phỏng khung video (khi xem bài giảng chưa có video thật)
@@ -508,13 +619,24 @@ export class UIView {
       if (this.els.tabModeKinematics) this.els.tabModeKinematics.classList.add('active');
       if (this.els.mode1Container) this.els.mode1Container.style.display = 'block';
 
-      // Hiện floating legend card trên 3D canvas
+      // Hiện floating legend card Chế độ 1, ẩn Chế độ 3
       if (this.els.viewportLegendCard) this.els.viewportLegendCard.style.display = 'block';
+      if (this.els.viewportLegendTherapy) this.els.viewportLegendTherapy.style.display = 'none';
 
       // Ẩn điều khiển Hệ Thần Kinh ở Chế độ 1 theo yêu cầu người dùng
       if (this.els.cardControlNervous) this.els.cardControlNervous.style.display = 'none';
       if (this.els.toggleNervous) this.els.toggleNervous.checked = false;
-      if (this.sceneVM) this.sceneVM.setShowNervousLayer(false);
+      if (this.els.toggleMuscles) this.els.toggleMuscles.checked = true;
+
+      // Phục hồi hệ cơ 100%
+      if (this.els.sliderMuscleOpacity) this.els.sliderMuscleOpacity.value = 100;
+      if (this.els.valMuscleOpacity) this.els.valMuscleOpacity.textContent = '100%';
+
+      if (this.sceneVM) {
+        this.sceneVM.setShowNervousLayer(false);
+        this.sceneVM.setShowMuscleLayer(true);
+        this.sceneVM.setMuscleOpacity(1.0);
+      }
 
     } else if (mode === 'acupoints') {
       if (this.els.tabModeAcupoints) this.els.tabModeAcupoints.classList.add('active');
@@ -522,13 +644,24 @@ export class UIView {
 
       // Ẩn floating legend card
       if (this.els.viewportLegendCard) this.els.viewportLegendCard.style.display = 'none';
+      if (this.els.viewportLegendTherapy) this.els.viewportLegendTherapy.style.display = 'none';
 
       // Hiện điều khiển Hệ Thần Kinh và kích hoạt hiển thị Hệ Thần Kinh + Hệ Cơ
       if (this.els.cardControlNervous) this.els.cardControlNervous.style.display = 'flex';
       if (this.els.toggleNervous) this.els.toggleNervous.checked = true;
+      if (this.els.toggleMuscles) this.els.toggleMuscles.checked = true;
+
+      // Mặc định Hệ Cơ chỉ có opaque = 10% khởi điểm, Hệ Thần Kinh 90%
+      if (this.els.sliderMuscleOpacity) this.els.sliderMuscleOpacity.value = 10;
+      if (this.els.valMuscleOpacity) this.els.valMuscleOpacity.textContent = '10%';
+      if (this.els.sliderNervousOpacity) this.els.sliderNervousOpacity.value = 90;
+      if (this.els.valNervousOpacity) this.els.valNervousOpacity.textContent = '90%';
+
       if (this.sceneVM) {
-        this.sceneVM.setShowNervousLayer(true);
         this.sceneVM.setShowMuscleLayer(true);
+        this.sceneVM.setShowNervousLayer(true);
+        this.sceneVM.setMuscleOpacity(0.10);
+        this.sceneVM.setNervousOpacity(0.90);
       }
 
       // Render danh sách 80 huyệt
@@ -540,13 +673,24 @@ export class UIView {
       if (this.els.tabModeTherapy) this.els.tabModeTherapy.classList.add('active');
       if (this.els.mode3Container) this.els.mode3Container.style.display = 'block';
 
-      // Ẩn floating legend card
+      // Ẩn legend Chế độ 1, HIỆN floating legend card cho Chế độ 3
       if (this.els.viewportLegendCard) this.els.viewportLegendCard.style.display = 'none';
+      if (this.els.viewportLegendTherapy) this.els.viewportLegendTherapy.style.display = 'block';
 
       // Hiện điều khiển Hệ Thần Kinh nhưng mặc định tắt
       if (this.els.cardControlNervous) this.els.cardControlNervous.style.display = 'flex';
       if (this.els.toggleNervous) this.els.toggleNervous.checked = false;
-      if (this.sceneVM) this.sceneVM.setShowNervousLayer(false);
+      if (this.els.toggleMuscles) this.els.toggleMuscles.checked = true;
+
+      // Phục hồi hệ cơ 100%
+      if (this.els.sliderMuscleOpacity) this.els.sliderMuscleOpacity.value = 100;
+      if (this.els.valMuscleOpacity) this.els.valMuscleOpacity.textContent = '100%';
+
+      if (this.sceneVM) {
+        this.sceneVM.setShowNervousLayer(false);
+        this.sceneVM.setShowMuscleLayer(true);
+        this.sceneVM.setMuscleOpacity(1.0);
+      }
 
       // Tự động chọn chuỗi đầu tiên nếu chưa chọn
       if (this.appVM.acupunctureVM && !this.appVM.acupunctureVM.state.selectedChainId) {
@@ -859,7 +1003,8 @@ export class UIView {
 
       item.addEventListener('click', () => {
         if (this.appVM?.acupointMapVM) {
-          this.appVM.acupointMapVM.selectAcupoint(pt.code);
+          const currentCode = this.appVM.acupointMapVM.state.focusedAcupointCode;
+          this.appVM.acupointMapVM.selectAcupoint(currentCode === pt.code ? null : pt.code);
         }
       });
 
@@ -872,6 +1017,9 @@ export class UIView {
 
     if (!pt) {
       this.els.mapAcupointDetailCard.style.display = 'none';
+      if (this.els.acupointMapList) {
+        this.els.acupointMapList.querySelectorAll('.map-acupoint-item').forEach(el => el.classList.remove('active'));
+      }
       return;
     }
 
@@ -963,10 +1111,10 @@ export class UIView {
         }
 
         btn.addEventListener('click', () => {
-          if (this.appVM.acupunctureVM) this.appVM.acupunctureVM.selectAcupoint(pt.code);
-          // Highlight nút đang chọn
-          this.els.chainAcupointsList.querySelectorAll('.acupoint-card-btn').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
+          if (this.appVM.acupunctureVM) {
+            const currentCode = this.appVM.acupunctureVM.state.selectedAcupoint?.code;
+            this.appVM.acupunctureVM.selectAcupoint(currentCode === pt.code ? null : pt.code);
+          }
         });
 
         this.els.chainAcupointsList.appendChild(btn);
@@ -979,6 +1127,9 @@ export class UIView {
 
     if (!pt) {
       this.els.acupointDetailCard.style.display = 'none';
+      if (this.els.chainAcupointsList) {
+        this.els.chainAcupointsList.querySelectorAll('.acupoint-card-btn').forEach(b => b.classList.remove('active'));
+      }
       return;
     }
 
@@ -1078,7 +1229,7 @@ export class UIView {
    */
   async _initLectures() {
     try {
-      const res = await fetch('./data/lectures.json?v=7.4');
+      const res = await fetch('./data/lectures.json?v=8.0');
       this.lectures = await res.json();
       this.selectedLectureId = this.lectures.length > 0 ? this.lectures[0].id : null;
       this._renderPlaylist(this.lectures);
@@ -1217,6 +1368,11 @@ export class UIView {
     if (this.els.vtabTranscriptText) {
       this.els.vtabTranscriptText.textContent = `"${lecture.transcript}"`;
     }
+
+    // Nếu bài giảng không có danh sách shots chia nhỏ, cập nhật transcript tổng của bài giảng lên Realtime Panel
+    if (!lecture.shots || lecture.shots.length === 0) {
+      this._renderRealtimeTranscript(lecture);
+    }
   }
 
   /**
@@ -1306,6 +1462,9 @@ export class UIView {
         }
       });
     }
+
+    // Cập nhật Realtime Transcript Panel bên cạnh video
+    this._renderRealtimeTranscript(shot);
   }
 
   /**
@@ -1371,6 +1530,137 @@ export class UIView {
       l.summary.toLowerCase().includes(q)
     );
     this._renderPlaylist(filtered);
+  }
+
+  /**
+   * Định dạng số giây thành chuỗi MM:SS (ví dụ 75s -> 01:15)
+   */
+  _formatSecondsToMMSS(sec) {
+    if (isNaN(sec) || sec < 0) return '00:00';
+    const m = Math.floor(sec / 60);
+    const s = Math.floor(sec % 60);
+    return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+  }
+
+  /**
+   * Render danh sách các câu thoại đồng bộ thời gian thực cho Shot hiện tại
+   */
+  _renderRealtimeTranscript(shot) {
+    if (!this.els.rtCuesList) return;
+    this.els.rtCuesList.innerHTML = '';
+
+    if (!shot) return;
+
+    // Cập nhật tiêu đề Shot tại header Realtime Transcript
+    if (this.els.rtCurrentShotTitle) {
+      this.els.rtCurrentShotTitle.textContent = shot.title || shot.shot || 'Bài Giảng Cơ Sinh Học';
+    }
+
+    const cues = shot.timed_cues || [];
+
+    if (cues.length === 0) {
+      // Nếu chưa có timed_cues chi tiết, hiển thị toàn bộ transcript thành 1 khối cue
+      const singleText = shot.transcript || shot.desc || 'Đang cập nhật lời thuyết minh...';
+      const emptyItem = document.createElement('div');
+      emptyItem.className = 'rt-cue-item active-cue';
+      emptyItem.setAttribute('data-start', '0');
+      emptyItem.setAttribute('data-end', '9999');
+      emptyItem.innerHTML = `
+        <div class="rt-cue-header">
+          <span class="rt-cue-time">00:00 - ${shot.duration || ''}</span>
+          <div class="rt-cue-tags">
+            <span class="rt-cue-shotcode">${shot.shot_num || 'Toàn bài'}</span>
+            <span class="rt-cue-speaker-icon">🔊</span>
+          </div>
+        </div>
+        <h5 class="rt-cue-title">${shot.title || 'Thuyết Minh Sư Phạm'}</h5>
+        <p class="rt-cue-text">${singleText}</p>
+      `;
+      this.els.rtCuesList.appendChild(emptyItem);
+      return;
+    }
+
+    // Render từng cue theo từng micro-shot
+    cues.forEach((cue, idx) => {
+      const item = document.createElement('div');
+      item.className = `rt-cue-item ${idx === 0 ? 'active-cue' : ''}`;
+      item.setAttribute('data-start', cue.start);
+      item.setAttribute('data-end', cue.end);
+      item.setAttribute('data-cue-idx', idx);
+
+      const startTimeFormatted = this._formatSecondsToMMSS(cue.start);
+      const endTimeFormatted = this._formatSecondsToMMSS(cue.end);
+
+      item.innerHTML = `
+        <div class="rt-cue-header">
+          <span class="rt-cue-time">${startTimeFormatted} - ${endTimeFormatted}</span>
+          <div class="rt-cue-tags">
+            <span class="rt-cue-shotcode">${cue.shot_code || `Phân đoạn ${idx + 1}`}</span>
+            <span class="rt-cue-speaker-icon">🔊</span>
+          </div>
+        </div>
+        <h5 class="rt-cue-title">${cue.title || `Luận Điểm ${idx + 1}`}</h5>
+        <p class="rt-cue-text">${cue.text}</p>
+      `;
+
+      // Nhấn vào câu thoại để tua video tới mốc thời gian đó
+      item.addEventListener('click', () => {
+        if (this.els.html5VideoPlayer) {
+          this.els.html5VideoPlayer.currentTime = cue.start;
+          this.els.html5VideoPlayer.play().catch(e => console.log('Play on click cue:', e));
+        }
+      });
+
+      this.els.rtCuesList.appendChild(item);
+    });
+
+    // Reset badge thời gian hiện tại
+    if (this.els.rtCurrentTimeBadge) {
+      this.els.rtCurrentTimeBadge.textContent = `⏱️ 00:00 / ${shot.duration || '01:10'}`;
+    }
+  }
+
+  /**
+   * Đồng bộ highlight câu thoại và thời gian thực khi video đang phát
+   */
+  _syncRealtimeTranscript() {
+    if (!this.els.html5VideoPlayer) return;
+    const currentTime = this.els.html5VideoPlayer.currentTime;
+    const duration = this.els.html5VideoPlayer.duration || 0;
+
+    // Cập nhật badge thời gian
+    if (this.els.rtCurrentTimeBadge) {
+      const curStr = this._formatSecondsToMMSS(currentTime);
+      const durStr = duration > 0 ? this._formatSecondsToMMSS(duration) : (this.currentLecture?.shots?.[this.currentShotIndex]?.duration || '01:10');
+      this.els.rtCurrentTimeBadge.textContent = `⏱️ ${curStr} / ${durStr}`;
+    }
+
+    const cueItems = document.querySelectorAll('.rt-cue-item');
+    if (!cueItems || cueItems.length === 0) return;
+
+    let activeFound = false;
+
+    cueItems.forEach((item, idx) => {
+      const start = parseFloat(item.getAttribute('data-start'));
+      const end = parseFloat(item.getAttribute('data-end'));
+
+      // Kiểm tra mốc thời gian (nếu là cue cuối cùng, mở rộng end tới vô cùng để không bị mất highlight khi video sắp hết)
+      const isLast = (idx === cueItems.length - 1);
+      const inRange = (currentTime >= start && (currentTime < end || (isLast && currentTime >= start)));
+
+      if (inRange && !activeFound) {
+        activeFound = true;
+        if (!item.classList.contains('active-cue')) {
+          item.classList.add('active-cue');
+          // Tự động cuộn theo giọng đọc nếu được bật
+          if (this.els.chkRtAutoScroll && this.els.chkRtAutoScroll.checked) {
+            item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        }
+      } else {
+        item.classList.remove('active-cue');
+      }
+    });
   }
 }
 

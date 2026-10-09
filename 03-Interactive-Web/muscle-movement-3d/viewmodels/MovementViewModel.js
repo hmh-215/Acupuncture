@@ -1,4 +1,4 @@
-import { Observable } from './Observable.js?v=8.0';
+import { Observable } from './Observable.js?v=12.0';
 
 /**
  * MovementViewModel
