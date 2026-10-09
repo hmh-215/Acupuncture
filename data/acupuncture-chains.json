@@ -43,9 +43,9 @@
         "name_vi": "Kiên Tỉnh",
         "name_han": "肩井",
         "position_3d": {
-          "x": -1.35,
-          "y": 14.1,
-          "z": -0.15
+          "x": -1.1,
+          "y": 14.75,
+          "z": -0.32
         },
         "location_vi": "Điểm giữa đường nối mỏm gai đốt sống C7 (Đại Chùy) và mỏm cùng vai, ngay trên gờ cao nhất của Cơ Thang.",
         "depth_mm": "10 - 20 mm",
@@ -58,9 +58,9 @@
         "name_vi": "Phong Trì",
         "name_han": "風池",
         "position_3d": {
-          "x": -0.65,
-          "y": 14.9,
-          "z": -0.65
+          "x": -0.34,
+          "y": 16.0,
+          "z": -0.7
         },
         "location_vi": "Hõm dưới xương chẩm, bờ ngoài Cơ Thang, bờ trong Cơ Ức đòn chũm.",
         "depth_mm": "15 - 25 mm",
@@ -88,9 +88,9 @@
         "name_vi": "Đại Trữ",
         "name_han": "大杼",
         "position_3d": {
-          "x": -0.45,
-          "y": 13.5,
-          "z": -0.7
+          "x": -0.38,
+          "y": 14.45,
+          "z": -1.12
         },
         "location_vi": "Dưới mỏm gai đốt sống D1 (ngực 1) đo ngang ra 1.5 thốn.",
         "depth_mm": "10 - 15 mm",
@@ -141,9 +141,9 @@
         "name_vi": "Kiên Ngung",
         "name_han": "肩髃",
         "position_3d": {
-          "x": -1.95,
-          "y": 13.9,
-          "z": 0.1
+          "x": -1.82,
+          "y": 14.3,
+          "z": 0.06
         },
         "location_vi": "Tại hõm trước - ngoài mỏm cùng vai khi cánh tay giạng 90°.",
         "depth_mm": "15 - 25 mm",
@@ -284,9 +284,9 @@
         "name_vi": "Côn Lôn",
         "name_han": "崑崙",
         "position_3d": {
-          "x": -1.05,
-          "y": 0.8,
-          "z": -0.15
+          "x": -1.11,
+          "y": 1.13,
+          "z": -0.54
         },
         "location_vi": "Hõm giữa đỉnh mắt cá ngoài và bờ ngoài gân gót (Achilles).",
         "depth_mm": "10 - 15 mm",
@@ -411,9 +411,9 @@
         "name_vi": "Đại Lăng",
         "name_han": "大陵",
         "position_3d": {
-          "x": -2.35,
-          "y": 8.1,
-          "z": 0.05
+          "x": -2.72,
+          "y": 8.83,
+          "z": 0.41
         },
         "location_vi": "Chính giữa nếp gấp xa nhất cổ tay, giữa gân cơ gan tay lớn và gân cơ gấp chung nông các ngón.",
         "depth_mm": "8 - 12 mm",
@@ -426,9 +426,9 @@
         "name_vi": "Nội Quan",
         "name_han": "內關",
         "position_3d": {
-          "x": -2.32,
-          "y": 8.7,
-          "z": 0.06
+          "x": -2.54,
+          "y": 9.36,
+          "z": 0.29
         },
         "location_vi": "Từ nếp gấp cổ tay đo lên 2 thốn, giữa hai gân cơ gan tay dài và gấp cổ tay quay.",
         "depth_mm": "10 - 15 mm",
@@ -441,9 +441,9 @@
         "name_vi": "Hợp Cốc",
         "name_han": "合谷",
         "position_3d": {
-          "x": -2.45,
-          "y": 7.4,
-          "z": 0.12
+          "x": -2.87,
+          "y": 8.48,
+          "z": 0.1
         },
         "location_vi": "Trên mu bàn tay, giữa xương bàn ngón 1 và 2, tại điểm lồi cao nhất của cơ gian cốt mu tay 1 khi khép ngón cái sát ngón trỏ.",
         "depth_mm": "12 - 20 mm",
@@ -698,8 +698,8 @@
         "name_vi": "Hợp Cốc",
         "name_han": "合谷",
         "position_3d": {
-          "x": -2.6,
-          "y": 8.5,
+          "x": -2.87,
+          "y": 8.48,
           "z": 0.1
         },
         "location_vi": "Tại điểm giữa bờ ngoài xương bàn ngón tay thứ 2 (ngón trỏ), trong cơ gian cốt mu tay thứ nhất.",
@@ -811,9 +811,9 @@
         "name_vi": "Ngoại Quan",
         "name_han": "外關",
         "position_3d": {
-          "x": -2.75,
-          "y": 8.7,
-          "z": -0.15
+          "x": -2.59,
+          "y": 9.56,
+          "z": -0.26
         },
         "location_vi": "Mặt sau cẳng tay, trên lằn chỉ cổ tay 2 thốn, giữa xương quay và xương trụ.",
         "depth_mm": "15 - 20 mm",
@@ -826,9 +826,9 @@
         "name_vi": "Hợp Cốc",
         "name_han": "合谷",
         "position_3d": {
-          "x": -2.88,
-          "y": 8.4,
-          "z": 0.12
+          "x": -2.87,
+          "y": 8.48,
+          "z": 0.1
         },
         "location_vi": "Chính giữa bờ ngoài xương bàn ngón 2, trên cơ gian cốt mu tay 1.",
         "depth_mm": "12 - 20 mm",
@@ -908,9 +908,9 @@
         "name_vi": "Nội Quan",
         "name_han": "內關",
         "position_3d": {
-          "x": -2.6,
-          "y": 8.7,
-          "z": 0.15
+          "x": -2.54,
+          "y": 9.36,
+          "z": 0.29
         },
         "location_vi": "Mặt trước cẳng tay, trên nếp gấp cổ tay 2 thốn, giữa hai gân cơ gan tay lớn và gập cổ tay quay.",
         "depth_mm": "15 - 20 mm",
@@ -1021,8 +1021,8 @@
         "name_han": "懸鐘",
         "position_3d": {
           "x": -1.05,
-          "y": 2.2,
-          "z": -0.05
+          "y": 1.85,
+          "z": -0.15
         },
         "location_vi": "Trên đỉnh mắt cá ngoài 3 thốn, ngay bờ sau xương mác.",
         "depth_mm": "20 - 30 mm",
@@ -1198,9 +1198,9 @@
         "name_vi": "Côn Lôn",
         "name_han": "崑崙",
         "position_3d": {
-          "x": -0.95,
-          "y": 1.1,
-          "z": -0.35
+          "x": -1.11,
+          "y": 1.13,
+          "z": -0.54
         },
         "location_vi": "Chỗ lõm giữa đỉnh mắt cá ngoài và bờ ngoài gân gót Achilles.",
         "depth_mm": "15 - 20 mm",
@@ -1213,9 +1213,9 @@
         "name_vi": "Thái Khê",
         "name_han": "太谿",
         "position_3d": {
-          "x": -0.7,
-          "y": 1.1,
-          "z": -0.35
+          "x": -0.45,
+          "y": 1.15,
+          "z": -0.55
         },
         "location_vi": "Chỗ lõm giữa đỉnh mắt cá trong và bờ trong gân gót Achilles.",
         "depth_mm": "15 - 20 mm",

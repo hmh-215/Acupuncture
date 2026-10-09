@@ -1,15 +1,15 @@
-import { Observable } from './Observable.js?v=8.0';
-import { SceneViewModel } from './SceneViewModel.js?v=8.0';
-import { MovementViewModel } from './MovementViewModel.js?v=8.0';
-import { AcupointMapViewModel } from './AcupointMapViewModel.js?v=8.0';
-import { AcupunctureViewModel } from './AcupunctureViewModel.js?v=8.0';
+import { Observable } from './Observable.js?v=12.0';
+import { SceneViewModel } from './SceneViewModel.js?v=12.0';
+import { MovementViewModel } from './MovementViewModel.js?v=12.0';
+import { AcupointMapViewModel } from './AcupointMapViewModel.js?v=12.0';
+import { AcupunctureViewModel } from './AcupunctureViewModel.js?v=12.0';
 
 /**
  * AppViewModel
  * ViewModel gốc quản lý trạng thái toàn ứng dụng, nạp dữ liệu JSON,
  * điều phối 3 chế độ chuyên biệt:
  * - Chế độ 1 ('kinematics'): Động học cử động & phân vai cơ (không hiển thị hệ thần kinh).
- * - Chế độ 2 ('acupoints'): Bản đồ các huyệt đạo trên cơ thể người (Hệ Cơ + Hệ Thần Kinh + 80 Điểm Huyệt 3D).
+ * - Chế độ 2 ('acupoints'): Bản đồ các huyệt đạo trên cơ thể người (Hệ Cơ 10% + Hệ Thần Kinh + 90 Điểm Huyệt 3D).
  * - Chế độ 3 ('therapy'): Các vị trí châm cứu trị liệu (Hội chứng đau cơ, Chuỗi kinh cân lâm sàng).
  */
 export class AppViewModel extends Observable {
@@ -42,12 +42,12 @@ export class AppViewModel extends Observable {
     
     try {
       const [muscles, movements, acupoints, bones, chains, registry] = await Promise.all([
-        fetch('./data/muscles.json?v=8.0').then(r => r.json()),
-        fetch('./data/movements.json?v=8.0').then(r => r.json()),
-        fetch('./data/acupoints.json?v=8.0').then(r => r.json()),
-        fetch('./data/bone-mapping.json?v=8.0').then(r => r.json()),
-        fetch('./data/acupuncture-chains.json?v=8.0').then(r => r.json()),
-        fetch('./data/mesh-joint-registry.json?v=8.0').then(r => r.json()).catch(() => ({}))
+        fetch('./data/muscles.json?v=12.0').then(r => r.json()),
+        fetch('./data/movements.json?v=12.0').then(r => r.json()),
+        fetch('./data/acupoints.json?v=12.0').then(r => r.json()),
+        fetch('./data/bone-mapping.json?v=12.0').then(r => r.json()),
+        fetch('./data/acupuncture-chains.json?v=12.0').then(r => r.json()),
+        fetch('./data/mesh-joint-registry.json?v=12.0').then(r => r.json()).catch(() => ({}))
       ]);
       
       this.muscleData = muscles;
@@ -86,10 +86,11 @@ export class AppViewModel extends Observable {
 
     if (mode === 'kinematics') {
       // Chế độ 1: Động học cử động
-      // Ẩn hệ thần kinh, xóa điểm huyệt
+      // Ẩn hệ thần kinh, xóa điểm huyệt, phục hồi cơ đục 100%
       if (this.sceneVM) {
         this.sceneVM.setShowNervousLayer(false);
         this.sceneVM.setShowMuscleLayer(true);
+        this.sceneVM.setMuscleOpacity(1.0);
         this.sceneVM.displayAcupoints([]);
       }
       this.acupunctureVM.reset();
@@ -104,13 +105,15 @@ export class AppViewModel extends Observable {
 
     } else if (mode === 'acupoints') {
       // Chế độ 2: Bản đồ các huyệt đạo trên cơ thể người
-      // Trả về tư thế đứng thẳng, hiển thị Hệ Cơ + Hệ Thần Kinh + Huyệt Vị 3D
+      // Trả về tư thế đứng thẳng, hiển thị Hệ Cơ (mặc định mờ 10% khởi điểm) + Hệ Thần Kinh (bật) + Huyệt Vị 3D
       this.movementVM.selectMovement(null);
       this.acupunctureVM.reset();
       if (this.sceneVM) {
         this.sceneVM.resetView();
         this.sceneVM.setShowMuscleLayer(true);
         this.sceneVM.setShowNervousLayer(true);
+        this.sceneVM.setMuscleOpacity(0.10);
+        this.sceneVM.setNervousOpacity(0.90);
       }
       this.acupointMapVM.initPoints();
 
@@ -122,6 +125,7 @@ export class AppViewModel extends Observable {
         this.sceneVM.resetView();
         this.sceneVM.setShowMuscleLayer(true);
         this.sceneVM.setShowNervousLayer(false);
+        this.sceneVM.setMuscleOpacity(1.0);
       }
       const currentChainId = this.acupunctureVM.state.selectedChainId;
       if (currentChainId) {

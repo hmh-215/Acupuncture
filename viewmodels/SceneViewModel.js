@@ -1,4 +1,4 @@
-import { Observable } from './Observable.js?v=8.0';
+import { Observable } from './Observable.js?v=12.0';
 
 const ROLE_COLORS = {
   agonist: '#ef4444',     // Đỏ - Cơ chủ vận
@@ -117,10 +117,12 @@ export class SceneViewModel extends Observable {
   }
   
   resetView() {
+    const isAcupointsMode = this.appVM?.state?.activeMode === 'acupoints';
     this.batch(() => {
       this.state.highlightedMuscles = [];
       this.state.showMuscleLayer = true;
-      this.state.muscleOpacity = 1.0;
+      this.state.showNervousLayer = isAcupointsMode;
+      this.state.muscleOpacity = isAcupointsMode ? 0.10 : 1.0;
       this.state.hoveredObjectId = null;
       this.state.isolatedMuscleId = null;
       this.state.displayedAcupoints = [];

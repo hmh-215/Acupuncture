@@ -1,8 +1,8 @@
-import { Observable } from './Observable.js?v=8.0';
+import { Observable } from './Observable.js?v=12.0';
 
 /**
  * AcupunctureViewModel
- * Quản lý trạng thái logic của Chế độ 2: Trị Liệu & Châm Cứu Theo Chuỗi Cơ Cân
+ * Quản lý trạng thái logic của Chế độ 3: Trị Liệu & Châm Cứu Theo Chuỗi Cơ Cân
  */
 export class AcupunctureViewModel extends Observable {
   /**
@@ -15,7 +15,8 @@ export class AcupunctureViewModel extends Observable {
       activePainMuscles: [],        // Danh sách cơ đau chính (màu đỏ cảnh báo)
       activeChainMuscles: [],       // Danh sách cơ liên đới trong chuỗi (màu vàng hổ phách)
       activeAcupoints: [],          // Danh sách các huyệt vị kèm tọa độ 3D
-      selectedAcupoint: null        // Huyệt vị cụ thể đang được xem chi tiết
+      selectedAcupoint: null,       // Huyệt vị cụ thể đang được xem chi tiết
+      selectedRoleFilter: 'all'     // 'all' | 'pain' | 'chain' | 'antagonist_tight' | 'acupoint'
     });
     this.appVM = appVM;
   }
@@ -36,6 +37,7 @@ export class AcupunctureViewModel extends Observable {
         this.state.activeChainMuscles = [];
         this.state.activeAcupoints = [];
         this.state.selectedAcupoint = null;
+        this.state.selectedRoleFilter = 'all';
       });
       if (this.appVM.sceneVM) {
         this.appVM.sceneVM.highlightAcupunctureChain([], []);
@@ -65,21 +67,66 @@ export class AcupunctureViewModel extends Observable {
       this.state.activePainMuscles = painMuscles;
       this.state.activeChainMuscles = chainMuscles;
       this.state.activeAcupoints = acupoints;
-      this.state.selectedAcupoint = acupoints[0] || null;
+      this.state.selectedAcupoint = null; // Khởi đầu: chưa chọn huyệt đơn lẻ nào để hiển thị TOÀN BỘ các huyệt đặc trị của chuỗi
+      this.state.selectedRoleFilter = 'all';
     });
 
     // Cập nhật lên 3D Scene
     if (this.appVM.sceneVM) {
       this.appVM.sceneVM.highlightAcupunctureChain(painMuscles, chainMuscles);
       this.appVM.sceneVM.displayAcupoints(acupoints);
+      this.appVM.sceneVM.focusAcupoint(null);
+    }
+  }
+
+  /**
+   * Bật/tắt lọc hiển thị theo tiêu chí nhóm cơ trị liệu từ legend
+   * @param {'pain' | 'chain' | 'antagonist_tight' | 'acupoint'} role 
+   */
+  toggleFilterRole(role) {
+    const current = this.state.selectedRoleFilter || 'all';
+    const nextRole = current === role ? 'all' : role;
+    this.state.selectedRoleFilter = nextRole;
+
+    if (!this.state.selectedChain) return;
+
+    let pMuscles = this.state.activePainMuscles;
+    let cMuscles = this.state.activeChainMuscles;
+
+    if (nextRole === 'pain') {
+      cMuscles = [];
+    } else if (nextRole === 'chain') {
+      pMuscles = [];
+      cMuscles = cMuscles.filter(m => m.role === 'chain');
+    } else if (nextRole === 'antagonist_tight') {
+      pMuscles = [];
+      cMuscles = cMuscles.filter(m => m.role === 'antagonist_tight');
+    } else if (nextRole === 'acupoint') {
+      if (this.state.activeAcupoints.length > 0) {
+        this.selectAcupoint(this.state.activeAcupoints[0].code);
+      }
+      return;
+    }
+
+    if (this.appVM.sceneVM) {
+      this.appVM.sceneVM.highlightAcupunctureChain(pMuscles, cMuscles);
     }
   }
 
   /**
    * Chọn một huyệt cụ thể để xem chi tiết
-   * @param {string} code Mã huyệt WHO (ví dụ GB-21)
+   * Hỗ trợ toggle: click lại chính huyệt đang chọn hoặc truyền null để hủy chọn (hiển thị lại tất cả huyệt của chuỗi)
+   * @param {string|null} code Mã huyệt WHO (ví dụ GB-21)
    */
   selectAcupoint(code) {
+    if (!code || this.state.selectedAcupoint?.code === code) {
+      this.state.selectedAcupoint = null;
+      if (this.appVM.sceneVM) {
+        this.appVM.sceneVM.focusAcupoint(null);
+      }
+      return;
+    }
+
     if (!this.state.activeAcupoints) return;
     const pt = this.state.activeAcupoints.find(p => p.code === code);
     if (pt) {
@@ -91,7 +138,7 @@ export class AcupunctureViewModel extends Observable {
   }
 
   /**
-   * Đặt lại trạng thái Chế độ 2
+   * Đặt lại trạng thái Chế độ 3
    */
   reset() {
     this.selectChain(null);

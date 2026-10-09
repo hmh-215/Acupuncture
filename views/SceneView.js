@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { FBXLoader } from 'three/addons/loaders/FBXLoader.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { MuscleDeformer } from './MuscleDeformer.js?v=8.0';
+import { MuscleDeformer } from './MuscleDeformer.js?v=12.0';
 
 /**
  * SceneView.js
@@ -982,6 +982,8 @@ export class SceneView {
             emissiveIntensity: 0.55,
             transparent: true,
             opacity: this.nervousOpacity,
+            depthTest: true,
+            depthWrite: false,
             shininess: 50
           });
 
@@ -1009,6 +1011,7 @@ export class SceneView {
                 return;
               }
               child.material = nervousMat.clone();
+              child.renderOrder = 1; // Render trước cơ để nhìn thấy rõ hệ thần kinh qua lớp cơ bán trong suốt 10%
             }
           });
 
@@ -1106,7 +1109,11 @@ export class SceneView {
       this.raycaster.setFromCamera(this.mouse, this.camera);
       
       const objectsToTest = [];
-      if (this.activeAcupointMeshes.length > 0) objectsToTest.push(...this.activeAcupointMeshes);
+      // CHỈ raycast các huyệt đang hiển thị (không test huyệt đã bị ẩn)
+      if (this.activeAcupointMeshes.length > 0) {
+        const visiblePoints = this.activeAcupointMeshes.filter(m => m.visible);
+        objectsToTest.push(...visiblePoints);
+      }
       if (this.showMuscleLayer) objectsToTest.push(...this.allMuscleMeshes);
       if (this.showNervousLayer) objectsToTest.push(...this.allNervousMeshes);
 
@@ -1132,7 +1139,20 @@ export class SceneView {
     };
 
     const onClick = () => {
-      if (!this.hoveredObject) return;
+      // Khi click vào khoảng trống 3D canvas (không trúng vật thể nào)
+      if (!this.hoveredObject) {
+        const activeMode = this.appVM?.state?.activeMode;
+        if (activeMode === 'acupoints') {
+          if (this.appVM?.acupointMapVM?.state?.focusedAcupointCode) {
+            this.appVM.acupointMapVM.selectAcupoint(null);
+          }
+        } else if (activeMode === 'therapy') {
+          if (this.appVM?.acupunctureVM?.state?.selectedAcupoint) {
+            this.appVM.acupunctureVM.selectAcupoint(null);
+          }
+        }
+        return;
+      }
 
       const obj = this.hoveredObject;
       const isAcupoint = obj.userData?.type === 'acupoint' || obj.parent?.userData?.type === 'acupoint';
@@ -1142,11 +1162,13 @@ export class SceneView {
         const activeMode = this.appVM?.state?.activeMode;
         if (activeMode === 'acupoints') {
           if (this.appVM.acupointMapVM) {
-            this.appVM.acupointMapVM.selectAcupoint(code);
+            const currentCode = this.appVM.acupointMapVM.state.focusedAcupointCode;
+            this.appVM.acupointMapVM.selectAcupoint(currentCode === code ? null : code);
           }
         } else {
           if (this.appVM.acupunctureVM) {
-            this.appVM.acupunctureVM.selectAcupoint(code);
+            const currentCode = this.appVM.acupunctureVM.state.selectedAcupoint?.code;
+            this.appVM.acupunctureVM.selectAcupoint(currentCode === code ? null : code);
           }
         }
       } else if (obj.userData?.type === 'muscle') {
@@ -1872,15 +1894,16 @@ export class SceneView {
         mesh.material.emissiveIntensity = 0;
         mesh.material.opacity = this.muscleOpacity;
         mesh.material.transparent = !isSolid;
-        mesh.material.depthWrite = isSolid;
+        mesh.material.depthWrite = true; // Luôn bật depthWrite để mô hình hình nhân che khuất các huyệt ở mặt sau
         mesh.material.needsUpdate = true;
-        mesh.renderOrder = 0;
+        mesh.renderOrder = 2; // Render sau hệ thần kinh (renderOrder 1) để thần kinh hiển thị qua lớp cơ bán trong suốt 10%
       });
       return;
     }
 
-    // Khi có chuyển động: Cơ nền chuyển sang hiệu ứng X-Ray bán trong suốt (Ghost Silhouette)
-    // Giúp các nhóm cơ sâu bên trong (Supraspinatus, Subscapularis, Psoas...) không bị che khuất
+    // Khi có chuyển động / trị liệu: Cơ nền chuyển sang hiệu ứng X-Ray bán trong suốt (Ghost Silhouette)
+    // Nếu có huyệt vị đang hiển thị (Chế độ 3), bật depthWrite để che khuất huyệt ở mặt đối diện
+    const hasAcupoints = this.activeAcupointMeshes && this.activeAcupointMeshes.length > 0;
     const ghostOpacity = 0.28 * this.muscleOpacity;
     this.allMuscleMeshes.forEach((mesh) => {
       mesh.material.color.setHex(neutralColor);
@@ -1888,9 +1911,9 @@ export class SceneView {
       mesh.material.emissiveIntensity = 0;
       mesh.material.opacity = ghostOpacity;
       mesh.material.transparent = true;
-      mesh.material.depthWrite = false; // Ngăn che khuất cơ sâu bên trong
+      mesh.material.depthWrite = hasAcupoints ? true : false;
       mesh.material.needsUpdate = true;
-      mesh.renderOrder = 0;
+      mesh.renderOrder = 2;
     });
 
     const roleColorMap = {
@@ -1940,32 +1963,41 @@ export class SceneView {
     acupoints.forEach(pt => {
       if (!pt.position_3d) return;
 
-      // 1. Hình cầu huyệt vị phát sáng (Glowing Core Sphere)
-      const sphereGeo = new THREE.SphereGeometry(0.18, 16, 16);
+      // 1. Hình cầu huyệt vị phát sáng (Glowing Core Sphere) - Tinh chỉnh bán kính chuẩn vi thể
+      const sphereGeo = new THREE.SphereGeometry(0.11, 16, 16);
       const sphereMat = new THREE.MeshBasicMaterial({
         color: 0xef4444, // Đỏ rực châm cứu
-        depthTest: false,
+        depthTest: true, // Cho phép bị che khuất bởi mô hình 3D hình nhân khi nhìn từ phía đối diện
+        depthWrite: false, // Không ghi đè depth
+        polygonOffset: true, // Dịch nhẹ depth về phía camera để không bị z-fighting với mặt ngoài của cơ
+        polygonOffsetFactor: -1,
+        polygonOffsetUnits: -4,
         transparent: true,
         opacity: 0.95
       });
       const sphereMesh = new THREE.Mesh(sphereGeo, sphereMat);
       sphereMesh.position.set(pt.position_3d.x, pt.position_3d.y, pt.position_3d.z);
-      sphereMesh.renderOrder = 999;
+      sphereMesh.renderOrder = 15; // Render sau hệ cơ và hệ thần kinh
       sphereMesh.userData = {
         type: 'acupoint',
         code: pt.code,
         name_vi: pt.name_vi,
-        data: pt
+        data: pt,
+        isFocused: false
       };
 
-      // 2. Vòng hào quang xung quanh (Pulsing Halo Ring)
-      const ringGeo = new THREE.RingGeometry(0.24, 0.32, 24);
+      // 2. Vòng hào quang xung quanh (Pulsing Halo Ring) - Tinh chỉnh gọn gàng
+      const ringGeo = new THREE.RingGeometry(0.15, 0.21, 24);
       const ringMat = new THREE.MeshBasicMaterial({
         color: 0xfacc15, // Vàng neon
         side: THREE.DoubleSide,
         transparent: true,
         opacity: 0.85,
-        depthTest: false
+        depthTest: true, // Cho phép bị che khuất bởi mô hình 3D hình nhân
+        depthWrite: false,
+        polygonOffset: true,
+        polygonOffsetFactor: -1,
+        polygonOffsetUnits: -4
       });
       const ringMesh = new THREE.Mesh(ringGeo, ringMat);
       ringMesh.lookAt(this.camera.position);
@@ -1974,23 +2006,50 @@ export class SceneView {
       this.acupointGroup.add(sphereMesh);
       this.activeAcupointMeshes.push(sphereMesh);
     });
+
+    // Đồng bộ lại trạng thái hiển thị / ẩn nếu đang có huyệt được chọn
+    this.focusAcupoint(this.focusedAcupointCode || null);
   }
 
   focusAcupoint(code) {
+    this.focusedAcupointCode = code;
+
     this.activeAcupointMeshes.forEach(mesh => {
-      if (mesh.userData.code === code) {
-        mesh.scale.set(1.4, 1.4, 1.4);
-        if (mesh.children[0]) mesh.children[0].material.color.setHex(0xffffff);
+      if (!code) {
+        // KHÔNG CHỌN HUYỆT NÀO: Hiển thị lại TOÀN BỘ các huyệt trong danh sách
+        mesh.visible = true;
+        mesh.userData.isFocused = false;
+        if (mesh.children[0]) {
+          mesh.children[0].material.color.setHex(0xfacc15); // Vàng neon mặc định
+        }
+      } else if (mesh.userData.code === code) {
+        // HUYỆT ĐƯỢC CHỌN: Duy trì hiển thị và tiêu điểm nổi bật
+        mesh.visible = true;
+        mesh.userData.isFocused = true;
+        if (mesh.children[0]) {
+          mesh.children[0].material.color.setHex(0xffffff); // Hào quang trắng rực
+        }
 
         // Hướng camera tập trung vào huyệt vị đang chọn
         if (mesh.position) {
           const targetY = mesh.position.y;
           this.controls.target.set(0, targetY, 0);
+
+          // Tự động xoay camera về phía có huyệt (trước hoặc sau) nếu camera đang ở phía đối diện bị che khuất
+          const isPointAtBack = mesh.position.z < -0.15;
+          const isCameraAtFront = this.camera.position.z > 0;
+          if (isPointAtBack && isCameraAtFront) {
+            this.camera.position.z = -Math.abs(this.camera.position.z);
+          } else if (!isPointAtBack && !isCameraAtFront) {
+            this.camera.position.z = Math.abs(this.camera.position.z);
+          }
+
           this.controls.update();
         }
       } else {
-        mesh.scale.set(1.0, 1.0, 1.0);
-        if (mesh.children[0]) mesh.children[0].material.color.setHex(0xfacc15);
+        // TẤT CẢ CÁC HUYỆT KHÁC: ẨN ĐI HOÀN TOÀN để tránh rối mắt và tập trung tuyệt đối vào huyệt đang xét
+        mesh.visible = false;
+        mesh.userData.isFocused = false;
       }
     });
   }
@@ -2010,9 +2069,10 @@ export class SceneView {
       if (mesh.material) {
         mesh.material.opacity = this.nervousOpacity;
         mesh.material.transparent = this.nervousOpacity < 0.99;
-        mesh.material.depthWrite = this.nervousOpacity >= 0.99;
+        mesh.material.depthWrite = false;
         mesh.material.needsUpdate = true;
       }
+      mesh.renderOrder = 1;
     });
   }
 
@@ -2037,11 +2097,24 @@ export class SceneView {
       this.muscleDeformer.update();
     }
 
-    // Hiệu ứng Pulsing nhịp tim cho các Điểm Huyệt 3D
+    // Hiệu ứng Pulsing nhịp tim và Bù trừ khoảng cách (Screen-Space Distance Compensation) cho các Điểm Huyệt 3D
     if (this.activeAcupointMeshes.length > 0) {
       const time = Date.now() * 0.005;
       const pulse = 1.0 + Math.sin(time) * 0.18;
+
       this.activeAcupointMeshes.forEach(mesh => {
+        if (!mesh.visible) return;
+
+        // Tính khoảng cách từ Camera tới huyệt vị để bù trừ perspective scaling
+        // Tránh tình trạng zoom in cận cảnh mặt / cổ thì huyệt bị phình to che khuất mốc giải phẫu
+        const dist = this.camera.position.distanceTo(mesh.position);
+        // distRef = 22.0: Toàn thân (dist ~ 27) -> scale ~ 1.0 - 1.2
+        // Khi zoom in gần (dist ~ 2 - 4) -> scale co nhỏ ~ 0.10 - 0.20, giữ pixel size trên màn hình luôn vi thể (~12-14px)
+        const distScale = Math.min(1.2, Math.max(0.10, dist / 22.0));
+        const focusMult = mesh.userData.isFocused ? 1.4 : 1.0;
+        const finalScale = distScale * focusMult;
+        mesh.scale.set(finalScale, finalScale, finalScale);
+
         if (mesh.children[0]) {
           mesh.children[0].scale.set(pulse, pulse, 1.0);
           mesh.children[0].lookAt(this.camera.position);
