@@ -1235,7 +1235,7 @@ export class UIView {
    */
   async _initLectures() {
     try {
-      const res = await fetch('./data/lectures.json?v=9.0');
+      const res = await fetch('./data/lectures.json?v=10.0');
       this.lectures = await res.json();
       this.selectedLectureId = this.lectures.length > 0 ? this.lectures[0].id : null;
       this._renderPlaylist(this.lectures);
@@ -1549,16 +1549,7 @@ export class UIView {
   }
 
   /**
-   * Bọc từng từ thành thẻ span để hỗ trợ hiệu ứng Subtitle Karaoke khớp từng từ
-   */
-  _renderWordsSpans(text) {
-    if (!text) return '';
-    const words = text.trim().split(/\s+/);
-    return words.map((w, idx) => `<span class="rt-word word-pending" data-word-idx="${idx}">${w}</span>`).join(' ');
-  }
-
-  /**
-   * Render danh sách các câu thoại đồng bộ thời gian thực cho Shot hiện tại
+   * Render danh sách các câu thoại đồng bộ thời gian thực cho Shot hiện tại (Word-for-Word)
    */
   _renderRealtimeTranscript(shot) {
     if (!this.els.rtCuesList) return;
@@ -1592,20 +1583,20 @@ export class UIView {
           </div>
         </div>
         <h5 class="rt-cue-title">${shot.title || 'Thuyết Minh Sư Phạm'}</h5>
-        <p class="rt-cue-text">${this._renderWordsSpans(singleText)}</p>
+        <p class="rt-cue-text">${singleText}</p>
       `;
       this.els.rtCuesList.appendChild(emptyItem);
 
       // Cập nhật hộp Subtitle
       if (this.els.rtSubtitleCueCode) this.els.rtSubtitleCueCode.textContent = shot.shot_num || 'Toàn bài';
-      if (this.els.rtSubtitleDisplayText) this.els.rtSubtitleDisplayText.innerHTML = this._renderWordsSpans(singleText);
+      if (this.els.rtSubtitleDisplayText) this.els.rtSubtitleDisplayText.textContent = `"${singleText}"`;
       if (this.els.rtSubtitleProgressFill) this.els.rtSubtitleProgressFill.style.width = '0%';
       return;
     }
 
-    // Cập nhật khởi tạo Live Subtitle Box với câu đầu tiên
+    // Cập nhật khởi tạo Live Subtitle Box với câu đầu tiên (chính xác word-for-word)
     if (this.els.rtSubtitleCueCode) this.els.rtSubtitleCueCode.textContent = cues[0].shot_code || 'Shot 1a';
-    if (this.els.rtSubtitleDisplayText) this.els.rtSubtitleDisplayText.innerHTML = this._renderWordsSpans(cues[0].text);
+    if (this.els.rtSubtitleDisplayText) this.els.rtSubtitleDisplayText.textContent = `"${cues[0].text}"`;
     if (this.els.rtSubtitleProgressFill) this.els.rtSubtitleProgressFill.style.width = '0%';
 
     // Render từng cue theo từng micro-shot
@@ -1628,7 +1619,7 @@ export class UIView {
           </div>
         </div>
         <h5 class="rt-cue-title">${cue.title || `Luận Điểm ${idx + 1}`}</h5>
-        <p class="rt-cue-text">${this._renderWordsSpans(cue.text)}</p>
+        <p class="rt-cue-text">${cue.text}</p>
       `;
 
       // Nhấn vào câu thoại để tua video tới mốc thời gian đó
@@ -1649,7 +1640,7 @@ export class UIView {
   }
 
   /**
-   * Đồng bộ highlight câu thoại, phụ đề Subtitle và khớp từng từ (Karaoke Word-by-Word)
+   * Đồng bộ highlight câu thoại và phụ đề Subtitle (Word-for-Word, tĩnh, không hiệu ứng nhảy chữ)
    */
   _syncRealtimeTranscript() {
     if (!this.els.html5VideoPlayer) return;
@@ -1702,64 +1693,23 @@ export class UIView {
         }
       });
 
-      // Cập nhật nội dung câu thoại cho Live Subtitle Box
+      // Cập nhật nội dung câu thoại cho Live Subtitle Box (đúng y nguyên văn word-for-word)
       if (this.els.rtSubtitleCueCode) {
         this.els.rtSubtitleCueCode.textContent = activeCue.shot_code || `Shot ${activeIdx + 1}`;
       }
       if (this.els.rtSubtitleDisplayText) {
-        this.els.rtSubtitleDisplayText.innerHTML = this._renderWordsSpans(activeCue.text);
+        this.els.rtSubtitleDisplayText.textContent = `"${activeCue.text}"`;
       }
     }
 
-    // TÍNH TOÁN TIẾN ĐỘ THỜI GIAN THỰC KHỚP TỪNG TỪ (WORD-LEVEL KARAOKE ALIGNMENT)
+    // Cập nhật tiến độ chạy thanh progress bar mỏng êm dịu
     const shotDuration = Math.max(1, activeCue.end - activeCue.start);
     const elapsed = currentTime - activeCue.start;
+    const progress = Math.min(1, Math.max(0, elapsed / shotDuration));
 
-    // Giọng đọc Nam y khoa có 0.35s mở đầu và khoảng 1.8s đệm kết thúc trong mỗi shot 10s
-    const startOffset = 0.35;
-    const speechDuration = Math.max(1.0, shotDuration - 1.85);
-
-    let progress = 0;
-    if (elapsed <= startOffset) {
-      progress = 0;
-    } else if (elapsed >= startOffset + speechDuration) {
-      progress = 1;
-    } else {
-      progress = (elapsed - startOffset) / speechDuration;
-    }
-
-    // Cập nhật thanh tiến độ Subtitle
     if (this.els.rtSubtitleProgressFill) {
       this.els.rtSubtitleProgressFill.style.width = `${Math.min(100, Math.round(progress * 100))}%`;
     }
-
-    // Xác định từ đang được nói dựa theo tiến độ
-    const words = activeCue.text.trim().split(/\s+/);
-    const totalWords = words.length;
-    const currentWordIdx = progress >= 1 ? totalWords : Math.min(totalWords - 1, Math.floor(progress * totalWords));
-
-    // Hàm tô màu highlight từng từ
-    const applyWordHighlights = (container) => {
-      if (!container) return;
-      const spans = container.querySelectorAll('.rt-word');
-      spans.forEach((span, wIdx) => {
-        span.classList.remove('word-spoken', 'word-active', 'word-pending');
-        if (progress >= 1 || wIdx < currentWordIdx) {
-          span.classList.add('word-spoken');
-        } else if (wIdx === currentWordIdx) {
-          span.classList.add('word-active');
-        } else {
-          span.classList.add('word-pending');
-        }
-      });
-    };
-
-    // Highlight từng từ trong Hộp Phụ Đề Trực Tiếp
-    applyWordHighlights(this.els.rtSubtitleDisplayText);
-
-    // Highlight từng từ trong Thẻ Cue đang active bên dưới danh sách
-    const activeCueItem = document.querySelector(`.rt-cue-item[data-cue-idx="${activeIdx}"] .rt-cue-text`);
-    applyWordHighlights(activeCueItem);
   }
 }
 

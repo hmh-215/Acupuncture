@@ -18,56 +18,56 @@
         "time": "00:00 - 01:10",
         "video_src": "assets/videos/chuong-01/Chap01_shot01.mp4",
         "desc": "Mô hình 3D bán thân trong không gian Dark Slate (#0f172a), 3 mặt phẳng tọa độ phát quang neon. Cơ ngực lớn co ngắn phát lực (#ef4444) kéo đai vai gù ra trước; chuỗi cơ trám và cơ dựng sống mặt sau siết đối trọng (#f59e0b). Cơ thang đóng vai trò dây giằng cột buồm gánh tải bù trừ, giải tỏa căng thẳng tại huyệt Kiên Tỉnh (GB-21) và cầu nối truyền lực sang cơ nhị đầu cẳng tay.",
-        "transcript": "Các bạn hãy hình dung: Cơ thể người như một chiếc lều bạt ba chiều. Mọi bắp cơ đều liên kết thành mạng lưới dây chằng liên hoàn, giữ cho thân thể luôn thăng bằng. Khi chúng ta cúi làm việc, cơ ngực lớn và ngực bé co rút lại, lập tức kéo đai vai đổ gập ra trước và kéo đầu chúi xuống. Lập tức, chuỗi cơ lưng gồm cơ trám và cơ dựng sống phải gồng siết đối kháng như sợi dây néo căng, giữ cho cột sống không bị đổ ngã. Đặc biệt, cơ thang đóng vai trò như dây giằng néo cột buồm, liên tục gồng mình giữ đai vai và đầu cổ trước lực kéo của cơ ngực. Đau vai gáy thực chất chỉ là nạn nhân gánh tải bù trừ! Huyệt Kiên Tỉnh là nút giải tỏa áp lực, khi châm cần véo cơ tránh đỉnh phổi. Từ bệ đỡ đai vai, lực truyền từ cơ ngực bé qua mỏm quạ, chạy dọc xuống bắp tay trước để kích hoạt cơ nhị đầu phát động cử động. Khớp khuỷu đã sẵn sàng! Bây giờ, chúng ta cùng quan sát cỗ máy phát động lực đầu tiên trong chuỗi vận động: Pha một, co hướng tâm.",
+        "transcript": "Trong cơ thể người, cơ bắp không bao giờ vận động đơn độc. Mọi cử động đều vận hành theo các chuỗi cân mạc liên hoàn, duy trì sự thăng bằng tinh tế trên ba mặt phẳng tọa độ không gian: đứng dọc, đứng ngang và mặt phẳng ngang. Khi nhóm cơ mặt trước, đặc biệt là cơ ngực lớn và ngực bé co ngắn phát lực, đai vai và đầu lập tức bị kéo đổ dồn về phía trước theo mặt phẳng đứng dọc. Để chống lại lực kéo đổ này, chuỗi cơ mặt sau gồm cơ dựng sống, cơ trám và cơ thang lập tức phải gồng siết đối kháng, tạo nên lực giằng giữ vững chắc bảo vệ trục cột sống. Trong chuỗi đối trọng này, cơ thang và cơ nâng vai đóng vai trò như những sợi dây cáp neo giữ, liên tục ghì chặt đai vai và giữ thẳng đầu cổ trước lực kéo đổ của cơ ngực. Việc phải gồng siết bù trừ kéo dài khiến cơ thang trên rơi vào trạng thái thiếu máu cục bộ, hình thành điểm đau cân kết quá tải ngay tại vị trí huyệt Kiên Tỉnh. Để truyền phát lực vận động, đai vai trở thành bệ đỡ vững chắc dẫn truyền lực từ cơ ngực và mỏm quạ, chạy dọc theo cánh tay để kích hoạt cơ nhị đầu. Khớp khuỷu và cơ nhị đầu cánh tay đã sẵn sàng. Hãy cùng quan sát pha phát động lực đầu tiên trong chuỗi vận động: Pha một, co hướng tâm.",
         "timed_cues": [
           {
             "start": 0,
             "end": 10,
-            "shot_code": "Shot 1a",
-            "title": "Mạng Lưới Dây Chằng 3D",
-            "text": "Các bạn hãy hình dung: Cơ thể người như một chiếc lều bạt ba chiều. Mọi bắp cơ đều liên kết thành mạng lưới dây chằng liên hoàn, giữ cho thân thể luôn thăng bằng."
+            "shot_code": "Shot01a",
+            "title": "3 Chiều Không Gian",
+            "text": "Trong cơ thể người, cơ bắp không bao giờ vận động đơn độc. Mọi cử động đều vận hành theo các chuỗi cân mạc liên hoàn, duy trì sự thăng bằng tinh tế trên ba mặt phẳng tọa độ không gian: đứng dọc, đứng ngang và mặt phẳng ngang."
           },
           {
             "start": 10,
             "end": 20,
-            "shot_code": "Shot 1b",
-            "title": "Cơ Ngực Kéo Gù Vai",
-            "text": "Khi chúng ta cúi làm việc, cơ ngực lớn và ngực bé co rút lại, lập tức kéo đai vai đổ gập ra trước và kéo đầu chúi xuống."
+            "shot_code": "Shot01b",
+            "title": "Cơ Ngực Co Rút",
+            "text": "Khi nhóm cơ mặt trước, đặc biệt là cơ ngực lớn và ngực bé co ngắn phát lực, đai vai và đầu lập tức bị kéo đổ dồn về phía trước theo mặt phẳng đứng dọc."
           },
           {
             "start": 20,
             "end": 30,
-            "shot_code": "Shot 1c",
+            "shot_code": "Shot01c",
             "title": "Cơ Lưng Giằng Giữ",
-            "text": "Lập tức, chuỗi cơ lưng gồm cơ trám và cơ dựng sống phải gồng siết đối kháng như sợi dây néo căng, giữ cho cột sống không bị đổ ngã."
+            "text": "Để chống lại lực kéo đổ này, chuỗi cơ mặt sau gồm cơ dựng sống, cơ trám và cơ thang lập tức phải gồng siết đối kháng, tạo nên lực giằng giữ vững chắc bảo vệ trục cột sống."
           },
           {
             "start": 30,
             "end": 40,
-            "shot_code": "Shot 1d",
-            "title": "Dây Giằng Cột Buồm",
-            "text": "Đặc biệt, cơ thang đóng vai trò như dây giằng néo cột buồm, liên tục gồng mình giữ đai vai và đầu cổ trước lực kéo của cơ ngực."
+            "shot_code": "Shot01d",
+            "title": "Dây Giằng Cơ Thang",
+            "text": "Trong chuỗi đối trọng này, cơ thang và cơ nâng vai đóng vai trò như những sợi dây cáp neo giữ, liên tục ghì chặt đai vai và giữ thẳng đầu cổ trước lực kéo đổ của cơ ngực."
           },
           {
             "start": 40,
             "end": 50,
-            "shot_code": "Shot 1e",
-            "title": "Kiên Tỉnh & Nạn Nhân Bù Trừ",
-            "text": "Đau vai gáy thực chất chỉ là nạn nhân gánh tải bù trừ! Huyệt Kiên Tỉnh là nút giải tỏa áp lực, khi châm cần véo cơ tránh đỉnh phổi."
+            "shot_code": "Shot01e",
+            "title": "Huyệt Kiên Tỉnh",
+            "text": "Việc phải gồng siết bù trừ kéo dài khiến cơ thang trên rơi vào trạng thái thiếu máu cục bộ, hình thành điểm đau cân kết quá tải ngay tại vị trí huyệt Kiên Tỉnh."
           },
           {
             "start": 50,
             "end": 60,
-            "shot_code": "Shot 1f",
-            "title": "Cầu Nối Đai Vai Xuống Tay",
-            "text": "Từ bệ đỡ đai vai, lực truyền từ cơ ngực bé qua mỏm quạ, chạy dọc xuống bắp tay trước để kích hoạt cơ nhị đầu phát động cử động."
+            "shot_code": "Shot01f",
+            "title": "Nối Xuống Cánh Tay",
+            "text": "Để truyền phát lực vận động, đai vai trở thành bệ đỡ vững chắc dẫn truyền lực từ cơ ngực và mỏm quạ, chạy dọc theo cánh tay để kích hoạt cơ nhị đầu."
           },
           {
             "start": 60,
             "end": 70,
-            "shot_code": "Shot 1g",
+            "shot_code": "Shot01g",
             "title": "Chuẩn Bị Vào Pha 1",
-            "text": "Khớp khuỷu đã sẵn sàng! Bây giờ, chúng ta cùng quan sát cỗ máy phát động lực đầu tiên trong chuỗi vận động: Pha một, co hướng tâm."
+            "text": "Khớp khuỷu và cơ nhị đầu cánh tay đã sẵn sàng. Hãy cùng quan sát pha phát động lực đầu tiên trong chuỗi vận động: Pha một, co hướng tâm."
           }
         ]
       },
@@ -80,70 +80,70 @@
         "time": "01:10 - 02:40",
         "video_src": "assets/videos/chuong-01/Chap01_shot02.mp4",
         "desc": "Nguyên lý co hướng tâm rút ngắn sợi cơ gom lực. Cử động gập khuỷu tay: Cơ nhị đầu co ngắn phình dày (#ef4444), cơ tam đầu nhả dài theo ức chế tương hỗ Sherrington (#06b6d4). Vi thể cầu trượt Actin - Myosin kéo ngắn sarcomere; cơ phình dày nén ép mao mạch gây thiếu máu nuôi dưỡng, hình thành Điểm Cân Kết (Taut Band) gây đau mạn tính, giải áp tại huyệt Khúc Trạch (PC-3) & Xích Trạch (LU-5).",
-        "transcript": "Pha một: Co hướng tâm giống như đạp chân ga. Sợi cơ chủ động rút ngắn lại, kéo hai đầu xương lại gần nhau để phát động chuyển động. Khi gập tay: Bắp tay trước co ngắn phình to kéo cẳng tay lên, thì bắp thịt phía sau bắt buộc phải thả lỏng theo phản xạ tự nhiên. Ở cấp vi thể, hàng triệu đầu cầu phân tử như những bàn tay tí hon cùng bám kéo sợi cơ trượt vào nhau, làm bắp thịt cuồn cuộn gom lực. Khi cơ co cứng quá lâu, bắp thịt phình to chèn bẹp các vi mạch máu như bánh xe đè lên ống nước, khiến mô cơ bị đói oxy trầm trọng. Thiếu máu và ứ trệ lực co sinh ra Điểm Cân Kết — chính là những hòn sỏi xơ cứng gây đau buốt mạn tính mà bạn sờ thấy trong bắp thịt! Để cứu bắp tay, hai huyệt Khúc Trạch và Xích Trạch ở hai bên gân nếp khuỷu chính là cửa ngõ khai thông áp lực, đón máu tươi trở lại. Khi huyệt vị xả áp, bắp tay trước lập tức buông xả co cứng, trả lại tính đàn hồi để khớp khuỷu mở góc nhẹ nhõm, không còn đau kẹt. Khi cánh tay vươn duỗi chịu tải, toàn bộ chuỗi cơ đối kháng mặt sau lập tức kích hoạt sức căng giằng giữ, mở màn cho Pha hai: Phanh hãm sinh lý. Co hướng tâm là chân ga tạo lực, còn căng giằng giữ là chân phanh bảo vệ khớp. Có ga mà không có phanh, cỗ máy cơ thể sẽ sớm tự phá hủy!",
+        "transcript": "Pha một: Co hướng tâm. Đây là trạng thái sợi cơ chủ động rút ngắn chiều dài, kéo hai đầu bám lại gần nhau để gom lực và tạo chuyển động. Áp dụng vào khớp khuỷu: Cơ nhị đầu co ngắn phình dày để gập cẳng tay, đồng thời cơ tam đầu nhả dài theo cơ chế ức chế tương hỗ. Ở cấp độ vi thể, các đầu cầu myosin trượt kéo sợi actin làm sarcomere co ngắn, tạo nên lực co rút mạnh mẽ cho toàn bộ khối cơ. Khi cơ co rút quá mức, các sợi cơ phình to chèn ép đè bẹp mao mạch, khiến dòng máu nuôi dưỡng cục bộ bị tắc nghẽn và thiếu oxy. Lực co bị giam hãm tích tụ thành Điểm Cân Kết, tạo nên dải xơ cứng cục bộ và gây đau buốt mạn tính trong cơ nhị đầu. Để giải phóng bế tắc, hai huyệt Khúc Trạch và Xích Trạch ở hai bên gân cơ nhị đầu là cửa ngõ khai thông áp lực và phục hồi vi tuần hoàn. Khi huyệt vị khai thông áp lực, cơ nhị đầu buông xả co thắt, khôi phục tính đàn hồi sinh lý để khớp khuỷu mở góc sẵn sàng chuyển động. Khi khớp khuỷu mở duỗi chịu tải, nhóm cơ tam đầu mặt sau lập tức kích hoạt sức căng đối kháng, mở màn cho Pha hai: Căng giằng giữ. Co hướng tâm là chân ga tạo chuyển động, còn căng giằng giữ là chân phanh bảo vệ diện khớp. Thiếu lực giằng giữ, quán tính vận động sẽ làm tổn thương toàn bộ cấu trúc xương khớp.",
         "timed_cues": [
           {
             "start": 0,
             "end": 10,
-            "shot_code": "Shot 2_intro",
-            "title": "Bàn Đạp Chân Ga Phát Lực",
-            "text": "Pha một: Co hướng tâm giống như đạp chân ga. Sợi cơ chủ động rút ngắn lại, kéo hai đầu xương lại gần nhau để phát động chuyển động."
+            "shot_code": "Shot02_intro",
+            "title": "Định Nghĩa Co Hướng Tâm",
+            "text": "Pha một: Co hướng tâm. Đây là trạng thái sợi cơ chủ động rút ngắn chiều dài, kéo hai đầu bám lại gần nhau để gom lực và tạo chuyển động."
           },
           {
             "start": 10,
             "end": 20,
-            "shot_code": "Shot 2a",
-            "title": "Gập Khuỷu & Ức Chế Tương Hỗ",
-            "text": "Khi gập tay: Bắp tay trước co ngắn phình to kéo cẳng tay lên, thì bắp thịt phía sau bắt buộc phải thả lỏng theo phản xạ tự nhiên."
+            "shot_code": "Shot02a",
+            "title": "Gập Khuỷu & Đối Vận",
+            "text": "Áp dụng vào khớp khuỷu: Cơ nhị đầu co ngắn phình dày để gập cẳng tay, đồng thời cơ tam đầu nhả dài theo cơ chế ức chế tương hỗ."
           },
           {
             "start": 20,
             "end": 30,
-            "shot_code": "Shot 2b",
-            "title": "Bàn Tay Tí Hon Actin-Myosin",
-            "text": "Ở cấp vi thể, hàng triệu đầu cầu phân tử như những bàn tay tí hon cùng bám kéo sợi cơ trượt vào nhau, làm bắp thịt cuồn cuộn gom lực."
+            "shot_code": "Shot02b",
+            "title": "Vi Thể Actin-Myosin",
+            "text": "Ở cấp độ vi thể, các đầu cầu myosin trượt kéo sợi actin làm sarcomere co ngắn, tạo nên lực co rút mạnh mẽ cho toàn bộ khối cơ."
           },
           {
             "start": 30,
             "end": 40,
-            "shot_code": "Shot 2c",
-            "title": "Bánh Xe Đè Lên Ống Nước Máu",
-            "text": "Khi cơ co cứng quá lâu, bắp thịt phình to chèn bẹp các vi mạch máu như bánh xe đè lên ống nước, khiến mô cơ bị đói oxy trầm trọng."
+            "shot_code": "Shot02c",
+            "title": "Nén Ép Mao Mạch",
+            "text": "Khi cơ co rút quá mức, các sợi cơ phình to chèn ép đè bẹp mao mạch, khiến dòng máu nuôi dưỡng cục bộ bị tắc nghẽn và thiếu oxy."
           },
           {
             "start": 40,
             "end": 50,
-            "shot_code": "Shot 2d",
-            "title": "Hòn Sỏi Điểm Cân Kết Đau Buốt",
-            "text": "Thiếu máu và ứ trệ lực co sinh ra Điểm Cân Kết — chính là những hòn sỏi xơ cứng gây đau buốt mạn tính mà bạn sờ thấy trong bắp thịt!"
+            "shot_code": "Shot02d",
+            "title": "Điểm Cân Kết (Taut band)",
+            "text": "Lực co bị giam hãm tích tụ thành Điểm Cân Kết, tạo nên dải xơ cứng cục bộ và gây đau buốt mạn tính trong cơ nhị đầu."
           },
           {
             "start": 50,
             "end": 60,
-            "shot_code": "Shot 2e",
-            "title": "Cửa Ngõ Khúc Trạch & Xích Trạch",
-            "text": "Để cứu bắp tay, hai huyệt Khúc Trạch và Xích Trạch ở hai bên gân nếp khuỷu chính là cửa ngõ khai thông áp lực, đón máu tươi trở lại."
+            "shot_code": "Shot02e",
+            "title": "Khúc Trạch & Xích Trạch",
+            "text": "Để giải phóng bế tắc, hai huyệt Khúc Trạch và Xích Trạch ở hai bên gân cơ nhị đầu là cửa ngõ khai thông áp lực và phục hồi vi tuần hoàn."
           },
           {
             "start": 60,
             "end": 70,
-            "shot_code": "Shot 2f",
-            "title": "Cởi Trói Đàn Hồi Khớp Khuỷu",
-            "text": "Khi huyệt vị xả áp, bắp tay trước lập tức buông xả co cứng, trả lại tính đàn hồi để khớp khuỷu mở góc nhẹ nhõm, không còn đau kẹt."
+            "shot_code": "Shot02f",
+            "title": "Mở Góc Khớp Khuỷu",
+            "text": "Khi huyệt vị khai thông áp lực, cơ nhị đầu buông xả co thắt, khôi phục tính đàn hồi sinh lý để khớp khuỷu mở góc sẵn sàng chuyển động."
           },
           {
             "start": 70,
             "end": 80,
-            "shot_code": "Shot 2g",
-            "title": "Kích Hoạt Phanh Hãm Mặt Sau",
-            "text": "Khi cánh tay vươn duỗi chịu tải, toàn bộ chuỗi cơ đối kháng mặt sau lập tức kích hoạt sức căng giằng giữ, mở màn cho Pha hai: Phanh hãm sinh lý."
+            "shot_code": "Shot02g",
+            "title": "Nối Sang Pha 2",
+            "text": "Khi khớp khuỷu mở duỗi chịu tải, nhóm cơ tam đầu mặt sau lập tức kích hoạt sức căng đối kháng, mở màn cho Pha hai: Căng giằng giữ."
           },
           {
             "start": 80,
             "end": 90,
-            "shot_code": "Shot 2h",
-            "title": "Mối Tương Quan Ga ↔ Phanh",
-            "text": "Co hướng tâm là chân ga tạo lực, còn căng giằng giữ là chân phanh bảo vệ khớp. Có ga mà không có phanh, cỗ máy cơ thể sẽ sớm tự phá hủy!"
+            "shot_code": "Shot02h",
+            "title": "Chân Ga ↔ Chân Phanh",
+            "text": "Co hướng tâm là chân ga tạo chuyển động, còn căng giằng giữ là chân phanh bảo vệ diện khớp. Thiếu lực giằng giữ, quán tính vận động sẽ làm tổn thương toàn bộ cấu trúc xương khớp."
           }
         ]
       },
@@ -156,84 +156,84 @@
         "time": "02:40 - 04:30",
         "video_src": "assets/videos/chuong-01/Chap01_shot03.mp4",
         "desc": "Bản chất co lệch tâm (Eccentric) vừa bị kéo dài vừa siết căng để hãm tải trọng, vai trò căng giằng giữ như hệ thống dây cáp neo khóa trục. Cẳng tay duỗi chịu tải: Cơ tam đầu mặt sau phát quang vàng hổ phách (#f59e0b) kích hoạt phanh co lệch tâm; khối cơ chóp xoay nẹp ép chỏm xương cánh tay vào ổ chảo (concavity-compression) triệt tiêu lực xô lệch, bảo vệ toàn vẹn xương khớp trước quán tính tải trọng.",
-        "transcript": "Pha hai: Co lệch tâm giống như đạp phanh khi xuống dốc. Sợi cơ tuy bị kéo dài ra nhưng vẫn phải gồng siết để hãm quán tính tải trọng. Căng giằng giữ hoạt động như các sợi cáp neo giữ, tạo lực căng đối kháng liên tục để giữ cho các ổ khớp không bị văng trật dưới quán tính. Khi hạ cánh tay mang vật nặng: Các thớ cơ lập tức siết căng lệch tâm để ghìm giữ tải trọng rơi, đóng vai trò như chiếc phanh hãm sinh lý tự động. Tại khớp vai, khối cơ chóp xoay hoạt động như cốc giác hút cao su, ép chặt chỏm xương vào lòng ổ chảo, triệt tiêu hoàn toàn nguy cơ trật khớp. Để điều khiển chiếc phanh này, mạng lưới cảm biến thần kinh trong cơ và gân liên tục đo độ dài và lực căng để báo động khẩn cấp về tủy sống. Bên trong bắp thịt, thoi cơ nhận biết sợi cơ bị kéo dãn quá nhanh, lập tức phát tín hiệu về tủy sống để kích hoạt phản xạ phanh lại. Ở đầu gân, thụ thể Golgi giám sát sức căng tối đa. Khi thấy gân sắp đứt rách, nó ra lệnh cho cơ nhả ngay để cứu lấy sợi gân. Khi phải ghìm giữ quá sức, hệ thống phanh bị cháy, sợi cơ co cứng phòng vệ tạo nên dải xơ dính đau nhức kéo dài ở mặt sau cánh tay. Huyệt Thiên Tỉnh tại hố mỏm khuỷu chính là van xả áp kinh cân Tam Tiêu, lập tức dập tắt cơn đau căng kéo và giải cứu bắp thịt mặt sau. Khi lực giằng giữ được điều hòa, gân cơ phục hồi độ dẻo dai nguyên bản, bảo vệ ổ khớp vững chãi để sẵn sàng vươn mở biên độ tối đa. Từ điểm tựa kiên cố của hệ thống giằng giữ, cơ thể tự tin vươn mở tới giới hạn tận cùng, mở màn cho Pha ba: Mở mà không tán.",
+        "transcript": "Pha hai: Căng giằng giữ và co cơ lệch tâm. Đây là trạng thái sợi cơ vừa bị kéo dài, vừa siết căng liên tục để phanh hãm tải trọng. Căng giằng giữ hoạt động như hệ thống dây cáp neo khóa trục, duy trì sức căng đối kháng liên tục để bảo vệ ổ khớp không bị xô lệch dưới quán tính. Áp dụng vào khớp khuỷu: Khi cẳng tay mở duỗi dưới tải, cơ tam đầu mặt sau lập tức kích hoạt sức căng lệch tâm, đóng vai trò như chiếc phanh hãm sinh lý. Tại khớp vai, khối cơ chóp xoay siết chặt kéo chỏm xương cánh tay tỳ sát vào ổ chảo, tạo lực nén vững chắc triệt tiêu hoàn toàn nguy cơ trượt lệch khớp. Để điều khiển chiếc phanh tự động này, mạng lưới thụ thể cảm giác bản thể phân bố trong cơ và gân liên tục giám sát chiều dài và sức căng để truyền tin về tủy sống. Bên trong bụng cơ, thoi cơ cảm nhận tốc độ kéo dài của sợi cơ, lập tức phóng xung thần kinh cảnh báo về tủy sống để kích hoạt phản xạ hãm. Tại chỗ nối gân cơ, thụ thể gân Golgi liên tục giám sát sức căng cực đại, phát xung phản xạ ức chế để bảo vệ gân cơ không bị đứt rách. Khi phải giằng giữ quá tải kéo dài, sợi cơ bị suy kiệt sẽ co cứng bảo vệ, hình thành các dải xơ dính gây đau nhức căng kéo dọc mặt sau cánh tay. Huyệt Thiên Tỉnh tại hố mỏm khuỷu là cửa ngõ khai thông kinh cân Tam Tiêu, lập tức giải tỏa áp lực gân cơ và dập tắt cơn đau căng kéo mặt sau. Khi sức căng giằng giữ được giải tỏa điều hòa, cơ bắp phục hồi tính đàn hồi sinh lý, giữ vững ổ khớp để tự tin bước vào pha vận động tiếp theo. Từ điểm tựa vững chãi của hệ thống giằng giữ, các khớp tự tin vươn mở tới giới hạn vận động tối đa, mở màn cho Pha ba: Mở mà không tán.",
         "timed_cues": [
           {
             "start": 0,
             "end": 10,
-            "shot_code": "Shot 3_intro1",
-            "title": "Co Lệch Tâm - Chân Phanh ABS",
-            "text": "Pha hai: Co lệch tâm giống như đạp phanh khi xuống dốc. Sợi cơ tuy bị kéo dài ra nhưng vẫn phải gồng siết để hãm quán tính tải trọng."
+            "shot_code": "Shot03_intro1",
+            "title": "Định Nghĩa Co Lệch Tâm",
+            "text": "Pha hai: Căng giằng giữ và co cơ lệch tâm. Đây là trạng thái sợi cơ vừa bị kéo dài, vừa siết căng liên tục để phanh hãm tải trọng."
           },
           {
             "start": 10,
             "end": 20,
-            "shot_code": "Shot 3_intro2",
-            "title": "Dây Cáp Neo Khóa Trục",
-            "text": "Căng giằng giữ hoạt động như các sợi cáp neo giữ, tạo lực căng đối kháng liên tục để giữ cho các ổ khớp không bị văng trật dưới quán tính."
+            "shot_code": "Shot03_intro2",
+            "title": "Định Nghĩa Giằng Giữ",
+            "text": "Căng giằng giữ hoạt động như hệ thống dây cáp neo khóa trục, duy trì sức căng đối kháng liên tục để bảo vệ ổ khớp không bị xô lệch dưới quán tính."
           },
           {
             "start": 20,
             "end": 30,
-            "shot_code": "Shot 3a",
-            "title": "Phanh Hãm Tải Trọng Rơi",
-            "text": "Khi hạ cánh tay mang vật nặng: Các thớ cơ lập tức siết căng lệch tâm để ghìm giữ tải trọng rơi, đóng vai trò như chiếc phanh hãm sinh lý tự động."
+            "shot_code": "Shot03a",
+            "title": "Cánh Tay Duỗi Chịu Tải",
+            "text": "Áp dụng vào khớp khuỷu: Khi cẳng tay mở duỗi dưới tải, cơ tam đầu mặt sau lập tức kích hoạt sức căng lệch tâm, đóng vai trò như chiếc phanh hãm sinh lý."
           },
           {
             "start": 30,
             "end": 40,
-            "shot_code": "Shot 3b",
-            "title": "Cốc Giác Hút Nẹp Ổ Chảo",
-            "text": "Tại khớp vai, khối cơ chóp xoay hoạt động như cốc giác hút cao su, ép chặt chỏm xương vào lòng ổ chảo, triệt tiêu hoàn toàn nguy cơ trật khớp."
+            "shot_code": "Shot03b",
+            "title": "Nẹp Khóa Ổ Chảo Vai",
+            "text": "Tại khớp vai, khối cơ chóp xoay siết chặt kéo chỏm xương cánh tay tỳ sát vào ổ chảo, tạo lực nén vững chắc triệt tiêu hoàn toàn nguy cơ trượt lệch khớp."
           },
           {
             "start": 40,
             "end": 50,
-            "shot_code": "Shot 3_bridge",
-            "title": "Những Người Gác Đền Thần Kinh",
-            "text": "Để điều khiển chiếc phanh này, mạng lưới cảm biến thần kinh trong cơ và gân liên tục đo độ dài và lực căng để báo động khẩn cấp về tủy sống."
+            "shot_code": "Shot03_bridge",
+            "title": "Thụ Cảm Bản Thể",
+            "text": "Để điều khiển chiếc phanh tự động này, mạng lưới thụ thể cảm giác bản thể phân bố trong cơ và gân liên tục giám sát chiều dài và sức căng để truyền tin về tủy sống."
           },
           {
             "start": 50,
             "end": 60,
-            "shot_code": "Shot 3c",
-            "title": "Thoi Cơ Cảm Ứng Tốc Độ",
-            "text": "Bên trong bắp thịt, thoi cơ nhận biết sợi cơ bị kéo dãn quá nhanh, lập tức phát tín hiệu về tủy sống để kích hoạt phản xạ phanh lại."
+            "shot_code": "Shot03c",
+            "title": "Thoi Cơ (Spindle)",
+            "text": "Bên trong bụng cơ, thoi cơ cảm nhận tốc độ kéo dài của sợi cơ, lập tức phóng xung thần kinh cảnh báo về tủy sống để kích hoạt phản xạ hãm."
           },
           {
             "start": 60,
             "end": 70,
-            "shot_code": "Shot 3d",
-            "title": "Thụ Thể Golgi Chống Đứt Gân",
-            "text": "Ở đầu gân, thụ thể Golgi giám sát sức căng tối đa. Khi thấy gân sắp đứt rách, nó ra lệnh cho cơ nhả ngay để cứu lấy sợi gân."
+            "shot_code": "Shot03d",
+            "title": "Thụ Thể Golgi (GTO)",
+            "text": "Tại chỗ nối gân cơ, thụ thể gân Golgi liên tục giám sát sức căng cực đại, phát xung phản xạ ức chế để bảo vệ gân cơ không bị đứt rách."
           },
           {
             "start": 70,
             "end": 80,
-            "shot_code": "Shot 3e",
-            "title": "Cháy Phanh & Co Cứng Mỏm Khuỷu",
-            "text": "Khi phải ghìm giữ quá sức, hệ thống phanh bị cháy, sợi cơ co cứng phòng vệ tạo nên dải xơ dính đau nhức kéo dài ở mặt sau cánh tay."
+            "shot_code": "Shot03e",
+            "title": "Quá Tải Giằng Giữ",
+            "text": "Khi phải giằng giữ quá tải kéo dài, sợi cơ bị suy kiệt sẽ co cứng bảo vệ, hình thành các dải xơ dính gây đau nhức căng kéo dọc mặt sau cánh tay."
           },
           {
             "start": 80,
             "end": 90,
-            "shot_code": "Shot 3f",
-            "title": "Xả Áp Huyệt Thiên Tỉnh (TE-10)",
-            "text": "Huyệt Thiên Tỉnh tại hố mỏm khuỷu chính là van xả áp kinh cân Tam Tiêu, lập tức dập tắt cơn đau căng kéo và giải cứu bắp thịt mặt sau."
+            "shot_code": "Shot03f",
+            "title": "Huyệt Thiên Tỉnh TE-10",
+            "text": "Huyệt Thiên Tỉnh tại hố mỏm khuỷu là cửa ngõ khai thông kinh cân Tam Tiêu, lập tức giải tỏa áp lực gân cơ và dập tắt cơn đau căng kéo mặt sau."
           },
           {
             "start": 90,
             "end": 100,
-            "shot_code": "Shot 3g",
-            "title": "Phục Hồi Dẻo Dai Khớp Khuỷu",
-            "text": "Khi lực giằng giữ được điều hòa, gân cơ phục hồi độ dẻo dai nguyên bản, bảo vệ ổ khớp vững chãi để sẵn sàng vươn mở biên độ tối đa."
+            "shot_code": "Shot03g",
+            "title": "Thăng Bằng Trục Khuỷu",
+            "text": "Khi sức căng giằng giữ được giải tỏa điều hòa, cơ bắp phục hồi tính đàn hồi sinh lý, giữ vững ổ khớp để tự tin bước vào pha vận động tiếp theo."
           },
           {
             "start": 100,
             "end": 110,
-            "shot_code": "Shot 3h",
-            "title": "Sẵn Sàng Giương Cung",
-            "text": "Từ điểm tựa kiên cố của hệ thống giằng giữ, cơ thể tự tin vươn mở tới giới hạn tận cùng, mở màn cho Pha ba: Mở mà không tán."
+            "shot_code": "Shot03h",
+            "title": "Nối Sang Pha 3",
+            "text": "Từ điểm tựa vững chãi của hệ thống giằng giữ, các khớp tự tin vươn mở tới giới hạn vận động tối đa, mở màn cho Pha ba: Mở mà không tán."
           }
         ]
       },
@@ -246,132 +246,132 @@
         "time": "04:30 - 07:30",
         "video_src": "assets/videos/chuong-01/Chap01_shot04.mp4",
         "desc": "Pha 3: Mở mà không tán trọn vẹn 18 micro-shots qua động tác giương cung uy lực. Hai tay vươn mở cực đại nhưng trục cột sống ở giữa khóa thẳng vững như bàn thạch. Phối hợp nhịp nhàng giữa cơ trám, cơ thang khép bả vai, cơ ngực dãn lệch tâm, cơ lõi khóa trục chống xoay vặn, cơ chế nẹp khóa ổ chảo vai, đối chiếu mở không tán vs mở bị tán và kỹ thuật Tọa châm huyệt Đại Chùy (GV-14) tái lập bệ đỡ trung tâm.",
-        "transcript": "Pha ba: Mở mà không tán. Lấy động tác giương cung làm ví dụ: hai tay giương cung mở rộng hết tầm, nhưng cột sống ở giữa phải khóa thẳng vững chãi, tuyệt đối không cong vẹo lỏng lẻo. Để giương cung đầy nội lực, cơ thể phối hợp ba thành phần then chốt: trục cột sống làm điểm tựa, các ổ khớp làm bản lề, và chuỗi cơ lưng kéo căng đối kháng. Khởi đầu thế bắn từ điểm tựa vững chãi, cơ trám và cơ thang siết chặt khép hai bả vai vào cột sống làm động cơ kéo chủ lực, cơ ngực dãn nở lệch tâm mở rộng lồng ngực làm đối trọng, khối cơ lõi siết chặt như chiếc đai nẹp khóa cứng thân mình. Cột sống đóng vai trò như cột buồm trung tâm chịu lực kéo giằng hai phía, được nẹp cứng bởi hệ cơ lõi sâu. Cùng với cột sống, các ổ khớp đai vai và khớp khuỷu đóng vai trò như những bản lề chịu tải trọng cực đại ở tầm vận động tận cùng. Khối cơ chóp xoay sâu ôm siết chỏm xương cánh tay tỳ chặt vào lòng ổ chảo, tạo lực nén khóa khớp triệt tiêu hoàn toàn nguy cơ xô lệch diện khớp. Mạng lưới collagen và elastin căng dãn như cánh cung sinh học nạp đầy thế năng đàn hồi. Mở mà không tán là khi trục khóa vững, khớp an toàn; ngược lại, mở mà bị tán là khi trục lỏng lẻo khiến toàn bộ lực căng đè nặng phá hủy khớp gây bật lệch diện khớp và rách sụn viền. Hệ Đạo Dẫn đề ra nguyên tắc: Trị giá đỡ trước — Trị điểm đau sau, ứng dụng Tọa châm tại huyệt Đại Chùy để tái lập bệ đỡ vững chãi cho thân thể.",
+        "transcript": "Pha ba: Mở mà không tán. Nghĩa là hai tay giương cung mở rộng hết tầm, nhưng cột sống ở giữa phải khóa thẳng vững chãi, tuyệt đối không cong vẹo lỏng lẻo. Để giương cung đầy nội lực, cơ thể phối hợp ba thành phần then chốt: trục cột sống làm điểm tựa, các ổ khớp làm bản lề, và chuỗi cơ lưng kéo căng đối kháng. Khởi đầu thế bắn từ điểm tựa vững chãi, tay trước giữ thẳng cán cung, cơ lưng và đai vai thư giãn sinh lý chuẩn bị tích lũy thế năng. Cơ trám và cơ thang siết chặt khép hai bả vai vào cột sống, kết hợp cơ lưng rộng ghì đai vai vững chãi làm động cơ kéo chủ lực. Phía trước, cơ ngực dãn nở lệch tâm mở rộng lồng ngực làm đối trọng; cơ delta và tam đầu duỗi khóa cánh tay đẩy tì chắc vào cán cung. Cùng lúc đó, khối cơ lõi gồm cơ ngang và chéo bụng siết chặt như chiếc đai nẹp, khóa cứng thân mình chống xoay vặn và ưỡn gãy cột sống. Khi kéo căng cực đại, khuỷu tay nâng cao ngang vai, toàn bộ cơ lưng siết nẹp khép chặt bả vai, dồn nén nội lực mà thân thể vẫn vững như bàn thạch. Trong chuyển động này, cột sống đóng vai trò như cột buồm trung tâm chịu lực kéo giằng hai phía. Thiếu giá đỡ vững chắc, toàn bộ lực mở sẽ sụp đổ. Lúc này, hệ cơ lõi sâu bám sát từng đốt sống lập tức siết nẹp, biến trục cột sống thành một khối trụ thép kiên cố, neo giữ vững vàng cấu trúc thân thể. Cùng với cột sống, các ổ khớp đai vai và khớp khuỷu đóng vai trò như những bản lề chịu tải trọng cực đại ở tầm vận động tận cùng. Khối cơ chóp xoay sâu ôm siết chỏm xương cánh tay tỳ chặt vào lòng ổ chảo, tạo lực nén khóa khớp triệt tiêu hoàn toàn nguy cơ xô lệch diện khớp. Mạng lưới collagen và elastin căng dãn như cánh cung và dây cung sinh học, nạp đầy thế năng đàn hồi chuẩn bị cho chuyển động kế tiếp. Mở mà không tán là khi trục khóa vững, khớp an toàn. Ngược lại, mở mà bị tán là khi trục lỏng lẻo, khiến toàn bộ lực căng đè nặng phá hủy khớp. Khi trục mất vững, chỏm xương bị bẩy bật khỏi ổ chảo, gây rách sụn viền, giãn bao khớp và khơi mào cơn đau co thắt kéo dài. Vì vậy, Hệ Đạo Dẫn đề ra nguyên tắc: Muốn chữa lành ổ khớp ngoại vi, bắt buộc phải gia cố điểm tựa và nẹp vững trục cột sống trung tâm trước. Kỹ thuật Tọa châm tại huyệt Đại Chùy và chuỗi Hoa Đà Giáp Tích lập tức đánh thức phản xạ siết nẹp cột sống, tái lập bệ đỡ vững chãi. Khi cột sống vững như bàn thạch, hai cánh tay mở rộng tự nhiên mà không tốn sức, tải trọng phân bổ đều giúp toàn thân thư thái và bền bỉ. Từ thế giương cung đỉnh điểm, cơ thể bắt đầu buông nhẹ sức căng, mở màn cho Pha bốn: Giãn, Lỏng, Nghỉ và phục hồi vi tuần hoàn.",
         "timed_cues": [
           {
             "start": 0,
             "end": 10,
-            "shot_code": "Shot 04a",
-            "title": "Định Nghĩa Mở Mà Không Tán",
-            "text": "Pha ba: Mở mà không tán. Hai tay giương cung mở rộng hết tầm, nhưng cột sống ở giữa phải khóa thẳng vững như thép, tuyệt đối không vặn vẹo sụp đổ."
+            "shot_code": "Shot04a",
+            "title": "Định Nghĩa Mở Không Tán",
+            "text": "Pha ba: Mở mà không tán. Nghĩa là hai tay giương cung mở rộng hết tầm, nhưng cột sống ở giữa phải khóa thẳng vững chãi, tuyệt đối không cong vẹo lỏng lẻo."
           },
           {
             "start": 10,
             "end": 20,
-            "shot_code": "Shot 04b",
+            "shot_code": "Shot04b",
             "title": "3 Thành Phần Cung",
             "text": "Để giương cung đầy nội lực, cơ thể phối hợp ba thành phần then chốt: trục cột sống làm điểm tựa, các ổ khớp làm bản lề, và chuỗi cơ lưng kéo căng đối kháng."
           },
           {
             "start": 20,
             "end": 30,
-            "shot_code": "Shot 04c",
+            "shot_code": "Shot04c",
             "title": "Khởi Đầu Thế Bắn",
             "text": "Khởi đầu thế bắn từ điểm tựa vững chãi, tay trước giữ thẳng cán cung, cơ lưng và đai vai thư giãn sinh lý chuẩn bị tích lũy thế năng."
           },
           {
             "start": 30,
             "end": 40,
-            "shot_code": "Shot 04c1",
+            "shot_code": "Shot04c1",
             "title": "Cơ Lưng Khép Bả Vai",
             "text": "Cơ trám và cơ thang siết chặt khép hai bả vai vào cột sống, kết hợp cơ lưng rộng ghì đai vai vững chãi làm động cơ kéo chủ lực."
           },
           {
             "start": 40,
             "end": 50,
-            "shot_code": "Shot 04c2",
+            "shot_code": "Shot04c2",
             "title": "Cơ Ngực Dãn Lệch Tâm",
             "text": "Phía trước, cơ ngực dãn nở lệch tâm mở rộng lồng ngực làm đối trọng; cơ delta và tam đầu duỗi khóa cánh tay đẩy tì chắc vào cán cung."
           },
           {
             "start": 50,
             "end": 60,
-            "shot_code": "Shot 04c3",
-            "title": "Cơ Lõi Khóa Trục Chống Xoay",
+            "shot_code": "Shot04c3",
+            "title": "Cơ Lõi Khóa Trục",
             "text": "Cùng lúc đó, khối cơ lõi gồm cơ ngang và chéo bụng siết chặt như chiếc đai nẹp, khóa cứng thân mình chống xoay vặn và ưỡn gãy cột sống."
           },
           {
             "start": 60,
             "end": 70,
-            "shot_code": "Shot 04d",
-            "title": "Kéo Căng Cực Đại End-Range",
+            "shot_code": "Shot04d",
+            "title": "Kéo Căng Cực Đại",
             "text": "Khi kéo căng cực đại, khuỷu tay nâng cao ngang vai, toàn bộ cơ lưng siết nẹp khép chặt bả vai, dồn nén nội lực mà thân thể vẫn vững như bàn thạch."
           },
           {
             "start": 70,
             "end": 80,
-            "shot_code": "Shot 04e",
+            "shot_code": "Shot04e",
             "title": "Cột Sống Làm Giá Đỡ",
             "text": "Trong chuyển động này, cột sống đóng vai trò như cột buồm trung tâm chịu lực kéo giằng hai phía. Thiếu giá đỡ vững chắc, toàn bộ lực mở sẽ sụp đổ."
           },
           {
             "start": 80,
             "end": 90,
-            "shot_code": "Shot 04f",
+            "shot_code": "Shot04f",
             "title": "Cơ Lõi Sâu Bám Sống",
             "text": "Lúc này, hệ cơ lõi sâu bám sát từng đốt sống lập tức siết nẹp, biến trục cột sống thành một khối trụ thép kiên cố, neo giữ vững vàng cấu trúc thân thể."
           },
           {
             "start": 90,
             "end": 100,
-            "shot_code": "Shot 04g",
+            "shot_code": "Shot04g",
             "title": "Ổ Khớp Làm Bản Lề",
             "text": "Cùng với cột sống, các ổ khớp đai vai và khớp khuỷu đóng vai trò như những bản lề chịu tải trọng cực đại ở tầm vận động tận cùng."
           },
           {
             "start": 100,
             "end": 110,
-            "shot_code": "Shot 04h",
-            "title": "Nén Khóa Concavity-Compression",
+            "shot_code": "Shot04h",
+            "title": "Nẹp Khóa Chóp Xoay",
             "text": "Khối cơ chóp xoay sâu ôm siết chỏm xương cánh tay tỳ chặt vào lòng ổ chảo, tạo lực nén khóa khớp triệt tiêu hoàn toàn nguy cơ xô lệch diện khớp."
           },
           {
             "start": 110,
             "end": 120,
-            "shot_code": "Shot 04i",
-            "title": "Thế Năng Đàn Hồi Collagen",
+            "shot_code": "Shot04i",
+            "title": "Vi Thể Nạp Thế Năng",
             "text": "Mạng lưới collagen và elastin căng dãn như cánh cung và dây cung sinh học, nạp đầy thế năng đàn hồi chuẩn bị cho chuyển động kế tiếp."
           },
           {
             "start": 120,
             "end": 130,
-            "shot_code": "Shot 04j",
+            "shot_code": "Shot04j",
             "title": "So Sánh Mở vs Bị Tán",
-            "text": "Mở không tán là trục vững thì khớp an toàn. Ngược lại, mở bị tán là khi trục lỏng lẻo, toàn bộ lực giương cung sẽ bẩy bật làm rách sụn khớp vai!"
+            "text": "Mở mà không tán là khi trục khóa vững, khớp an toàn. Ngược lại, mở mà bị tán là khi trục lỏng lẻo, khiến toàn bộ lực căng đè nặng phá hủy khớp."
           },
           {
             "start": 130,
             "end": 140,
-            "shot_code": "Shot 04k",
-            "title": "Bệnh Sinh Bật Lệch Khớp",
+            "shot_code": "Shot04k",
+            "title": "Hậu Quả Bật Lệch Khớp",
             "text": "Khi trục mất vững, chỏm xương bị bẩy bật khỏi ổ chảo, gây rách sụn viền, giãn bao khớp và khơi mào cơn đau co thắt kéo dài."
           },
           {
             "start": 140,
             "end": 150,
-            "shot_code": "Shot 04l",
+            "shot_code": "Shot04l",
             "title": "Trị Giá Đỡ Trước",
-            "text": "Muốn sửa cánh cửa sổ xệ, phải nẹp thẳng khung cửa trước! Hệ Đạo Dẫn dạy: Muốn chữa khớp vai, bắt buộc phải nẹp vững trục cột sống trung tâm trước."
+            "text": "Vì vậy, Hệ Đạo Dẫn đề ra nguyên tắc: Muốn chữa lành ổ khớp ngoại vi, bắt buộc phải gia cố điểm tựa và nẹp vững trục cột sống trung tâm trước."
           },
           {
             "start": 150,
             "end": 160,
-            "shot_code": "Shot 04m",
-            "title": "Tọa Châm Đại Chùy GV-14",
+            "shot_code": "Shot04m",
+            "title": "Tọa Châm Đại Chùy",
             "text": "Kỹ thuật Tọa châm tại huyệt Đại Chùy và chuỗi Hoa Đà Giáp Tích lập tức đánh thức phản xạ siết nẹp cột sống, tái lập bệ đỡ vững chãi."
           },
           {
             "start": 160,
             "end": 170,
-            "shot_code": "Shot 04n",
-            "title": "Thân Thể Vững Chãi Bền Bỉ",
+            "shot_code": "Shot04n",
+            "title": "Thân Thể Vững Chãi",
             "text": "Khi cột sống vững như bàn thạch, hai cánh tay mở rộng tự nhiên mà không tốn sức, tải trọng phân bổ đều giúp toàn thân thư thái và bền bỉ."
           },
           {
             "start": 170,
             "end": 180,
-            "shot_code": "Shot 04o",
-            "title": "Nối Sang Pha 4 Buông Lỏng",
+            "shot_code": "Shot04o",
+            "title": "Nối Sang Pha 4",
             "text": "Từ thế giương cung đỉnh điểm, cơ thể bắt đầu buông nhẹ sức căng, mở màn cho Pha bốn: Giãn, Lỏng, Nghỉ và phục hồi vi tuần hoàn."
           }
         ]
@@ -385,62 +385,62 @@
         "time": "07:30 - 08:50",
         "video_src": "assets/videos/chuong-01/Chap01_shot05.mp4",
         "desc": "Pha 4: Trạng thái Giãn - Lỏng - Nghỉ. Giải thích nghịch lý bệnh nhân tức ngực khó thở do co thắt cơ hoành và mạc liên sườn. Cơ học bao mạc kín không co giãn; khi cơ co cứng phình dày làm áp lực vượt ngưỡng 0.016 bar (12 mmHg), đè bẹp mao mạch gây đói oxy tế bào, buộc cơ hô hấp kỵ khí sinh Acid Lactic gây đau buốt mạn tính. Chỉ khi buông lỏng hoàn toàn đưa áp lực < 0.016 bar, mao mạch mới bung nở cuốn trôi acid về gan.",
-        "transcript": "Pha bốn: Buông lỏng phục hồi. Cơ bắp bắt buộc phải chủ động buông xả hoàn toàn trương lực thừa, đưa thân thể trở về trạng thái Giãn, Lỏng, Nghỉ sinh lý. Trong lâm sàng, nhiều người thường xuyên tức ngực, khó thở, hụt hơi nhưng chụp chiếu tim phổi hoàn toàn bình thường, do cơ hoành và mạc liên sườn bị co cứng khóa chặt. Các bó cơ nằm trong những bao mạc kín không co giãn. Khi cơ bắp co cứng phình dày, áp lực thủy tĩnh bên trong khoang tăng vọt, đè nén lên toàn bộ cấu trúc nội khoang. Thầy giảng giải: Khi bắp cơ co cứng vượt ngưỡng không phẩy không mười sáu bar, ống mao mạch bị đè bẹp, máu không vào được làm cơ toan hóa đau nhức. Khi áp lực khoang vượt ngưỡng, thành mao mạch mỏng manh bị đè bẹp dúm, dòng hồng cầu bị chặn đứng hoàn toàn, đẩy tế bào cơ vào tình trạng thiếu máu và đói oxy trầm trọng. Đói oxy buộc tế bào cơ chuyển sang hô hấp kỵ khí, sinh ra acid lactic làm toan hóa mô cơ, kích thích dữ dội đầu mút thần kinh và gây nên cơn đau mỏi buốt nhức mạn tính. Chỉ khi buông lỏng dưới ngưỡng, ống máu mới bung nở! Dòng máu tươi ào ạt tưới đẫm, cuốn trôi toàn bộ acid mỏi mệt về gan, giúp cơ bắp hồi sinh. Không buông lỏng khiến cơ xơ cứng và mất ngủ. Mũi kim Hệ Đạo Dẫn như van giải áp, giúp phục hồi vận động.",
+        "transcript": "Pha bốn: Buông lỏng phục hồi. Cơ bắp bắt buộc phải chủ động buông xả hoàn toàn trương lực thừa, đưa thân thể trở về trạng thái Giãn, Lỏng, Nghỉ sinh lý. Trong lâm sàng, nhiều người thường xuyên tức ngực, khó thở, hụt hơi nhưng chụp chiếu tim phổi hoàn toàn bình thường, do cơ hoành và mạc liên sườn bị co cứng khóa chặt. Các bó cơ nằm trong những bao mạc kín không co giãn. Khi cơ bắp co cứng phình dày, áp lực thủy tĩnh bên trong khoang tăng vọt, đè nén lên toàn bộ cấu trúc nội khoang. Thầy giảng giải: Áp lực cân mạc tăng cao cục bộ; khi xơ dính co rút vượt ngưỡng mao mạch không phẩy không mười sáu bar, vi tuần hoàn bị nghẽn lại, dẫn tới ứ trệ chuyển hóa và đau nhức mạn tính. Khi áp lực khoang vượt ngưỡng, thành mao mạch mỏng manh bị đè bẹp dúm, dòng hồng cầu bị chặn đứng hoàn toàn, đẩy tế bào cơ vào tình trạng thiếu máu và đói oxy trầm trọng. Đói oxy buộc tế bào cơ chuyển sang hô hấp kỵ khí, sinh ra acid lactic làm toan hóa mô cơ, kích thích dữ dội đầu mút thần kinh và gây nên cơn đau mỏi buốt nhức mạn tính. Chỉ khi buông lỏng, áp lực hạ dưới không phẩy không mười sáu bar, mao mạch bung nở rộng đón dòng máu tưới đẫm, cuốn trôi acid lactic về gan chuyển hóa, giúp cơ bắp hồi sinh. Không buông lỏng khiến cơ xơ cứng và mất ngủ. Mũi kim Hệ Đạo Dẫn như van giải áp, giúp phục hồi vận động.",
         "timed_cues": [
           {
             "start": 0,
             "end": 10,
-            "shot_code": "Shot 05a",
-            "title": "Trạng Thái Giãn - Lỏng - Nghỉ",
+            "shot_code": "Shot05a",
+            "title": "Trạng Thái Giãn-Lỏng-Nghỉ",
             "text": "Pha bốn: Buông lỏng phục hồi. Cơ bắp bắt buộc phải chủ động buông xả hoàn toàn trương lực thừa, đưa thân thể trở về trạng thái Giãn, Lỏng, Nghỉ sinh lý."
           },
           {
             "start": 10,
             "end": 20,
-            "shot_code": "Shot 05b",
-            "title": "Nghịch Lý Tức Ngực Khó Thở",
+            "shot_code": "Shot05b",
+            "title": "Tức Ngực Khó Thở",
             "text": "Trong lâm sàng, nhiều người thường xuyên tức ngực, khó thở, hụt hơi nhưng chụp chiếu tim phổi hoàn toàn bình thường, do cơ hoành và mạc liên sườn bị co cứng khóa chặt."
           },
           {
             "start": 20,
             "end": 30,
-            "shot_code": "Shot 05c",
-            "title": "Áp Lực Khoang Cân Mạc Kín",
+            "shot_code": "Shot05c",
+            "title": "Áp Lực Khoang Kín",
             "text": "Các bó cơ nằm trong những bao mạc kín không co giãn. Khi cơ bắp co cứng phình dày, áp lực thủy tĩnh bên trong khoang tăng vọt, đè nén lên toàn bộ cấu trúc nội khoang."
           },
           {
             "start": 30,
             "end": 40,
-            "shot_code": "Shot 05d",
-            "title": "Lời Thầy & Ngưỡng 0.016 Bar",
-            "text": "Thầy giảng giải: Khi bắp cơ co cứng vượt ngưỡng không phẩy không mười sáu bar, ống mao mạch bị đè bẹp, máu không vào được làm cơ toan hóa đau nhức."
+            "shot_code": "Shot05d",
+            "title": "Lời Thầy & 0.016 Bar",
+            "text": "Thầy giảng giải: Áp lực cân mạc tăng cao cục bộ; khi xơ dính co rút vượt ngưỡng mao mạch không phẩy không mười sáu bar, vi tuần hoàn bị nghẽn lại, dẫn tới ứ trệ chuyển hóa và đau nhức mạn tính."
           },
           {
             "start": 40,
             "end": 50,
-            "shot_code": "Shot 05e",
-            "title": "Mao Mạch Bị Ép Xẹp Đói Oxy",
+            "shot_code": "Shot05e",
+            "title": "Mao Mạch Bị Ép Xẹp",
             "text": "Khi áp lực khoang vượt ngưỡng, thành mao mạch mỏng manh bị đè bẹp dúm, dòng hồng cầu bị chặn đứng hoàn toàn, đẩy tế bào cơ vào tình trạng thiếu máu và đói oxy trầm trọng."
           },
           {
             "start": 50,
             "end": 60,
-            "shot_code": "Shot 05f",
+            "shot_code": "Shot05f",
             "title": "Hô Hấp Kỵ Khí Acid Lactic",
             "text": "Đói oxy buộc tế bào cơ chuyển sang hô hấp kỵ khí, sinh ra acid lactic làm toan hóa mô cơ, kích thích dữ dội đầu mút thần kinh và gây nên cơn đau mỏi buốt nhức mạn tính."
           },
           {
             "start": 60,
             "end": 70,
-            "shot_code": "Shot 05g",
-            "title": "Buông Lỏng Rửa Trôi Acid Về Gan",
-            "text": "Chỉ khi buông lỏng dưới ngưỡng, ống máu mới bung nở! Dòng máu tươi ào ạt tưới đẫm, cuốn trôi toàn bộ acid mỏi mệt về gan, giúp cơ bắp hồi sinh."
+            "shot_code": "Shot05g",
+            "title": "Buông Lỏng Rửa Trôi Acid",
+            "text": "Chỉ khi buông lỏng, áp lực hạ dưới không phẩy không mười sáu bar, mao mạch bung nở rộng đón dòng máu tưới đẫm, cuốn trôi acid lactic về gan chuyển hóa, giúp cơ bắp hồi sinh."
           },
           {
             "start": 70,
             "end": 80,
-            "shot_code": "Shot 05h",
-            "title": "Chưa Hết Pha Vận Động & Van Kim",
+            "shot_code": "Shot05h",
+            "title": "Nối Sang Châm Cứu",
             "text": "Không buông lỏng khiến cơ xơ cứng và mất ngủ. Mũi kim Hệ Đạo Dẫn như van giải áp, giúp phục hồi vận động."
           }
         ]
@@ -454,69 +454,69 @@
         "time": "08:50 - 10:20",
         "video_src": "assets/videos/chuong-01/Chap01_shot06.mp4",
         "desc": "Tổng kết ứng dụng lâm sàng Hệ Đạo Dẫn. Mũi kim châm cứu đóng vai trò vi van xả áp cơ học. Bộ ba kỹ thuật: Tọa châm (khóa trục tại Đại Chùy), Động châm (vừa châm vừa vận động bẻ gãy xơ dính collagen mở góc kẹt), Lưu châm (xuyên sâu lớp cơ lõi hạ áp <0.016 bar). Tiêu chuẩn Đắc Khí chân chính là Khoái Châm (tức nặng êm dịu, kích hoạt thụ thể Golgi xóa phản xạ gồng siết). Shot nối chuyển tiếp sang Chương 2.",
-        "transcript": "Hệ Đạo Dẫn đúc kết khẩu quyết: Trị giá đỡ trước, trị điểm đau sau; nẹp vững cột sống sẽ tự hóa giải điểm đau ngoại vi. Mũi kim châm cứu chính là chiếc van mở nắp nồi áp suất: châm chuẩn xác qua màng cân mạc sẽ lập tức giải phóng áp lực bị giam hãm ra ngoài. Hệ Đạo Dẫn phối hợp ba kỹ thuật: Tọa châm khóa trục, Động châm mở góc kẹt, và Lưu châm hạ áp tầng sâu. Kỹ thuật Động châm vừa châm vừa vận động, tạo lực trượt cơ học bẻ gãy xơ dính collagen và mở rộng tầm vận động. Tọa châm tại các huyệt then chốt tạo điểm neo kiên cố, nẹp giữ trục cột sống và bảo vệ khớp không xô lệch. Lưu châm xuyên sâu vào lớp cơ lõi giúp điều hòa điện thế màng, hạ áp lực sâu và khôi phục tưới máu mao mạch. Đắc khí Đạo Dẫn là Khoái châm: cảm giác tức nặng, ấm áp êm ru như cơn mưa rào tưới đất hạn, xóa sạch mọi phản xạ gồng siết phòng vệ! Khoái châm kích hoạt thụ thể gân Golgi, phát tín hiệu ức chế tự thân lên tủy sống để xóa bỏ phản xạ gồng siết. Giải phóng cân mạc mở đường cho Chương hai: khám phá Cấu trúc vận động hoàn chỉnh qua Trục thế Đạo và Hướng lực Dẫn.",
+        "transcript": "Hệ Đạo Dẫn đúc kết khẩu quyết: Trị giá đỡ trước, trị điểm đau sau; nẹp vững cột sống sẽ tự hóa giải điểm đau ngoại vi. Mũi kim châm chuẩn xác qua màng mạc hoạt động như van xả vi mô, giải phóng lập tức áp lực khoang cơ co thắt. Hệ Đạo Dẫn phối hợp ba kỹ thuật: Tọa châm khóa trục, Động châm mở góc kẹt, và Lưu châm hạ áp tầng sâu. Kỹ thuật Động châm vừa châm vừa vận động, tạo lực trượt cơ học bẻ gãy xơ dính collagen và mở rộng tầm vận động. Tọa châm tại các huyệt then chốt tạo điểm neo kiên cố, nẹp giữ trục cột sống và bảo vệ khớp không xô lệch. Lưu châm xuyên sâu vào lớp cơ lõi giúp điều hòa điện thế màng, hạ áp lực sâu và khôi phục tưới máu mao mạch. Đắc khí Đạo Dẫn là Khoái châm: cảm giác tức nặng êm dịu thư thái, thay thế hoàn toàn cơn đau buốt phòng vệ. Khoái châm kích hoạt thụ thể gân Golgi, phát tín hiệu ức chế tự thân lên tủy sống để xóa bỏ phản xạ gồng siết. Giải phóng cân mạc mở đường cho Chương hai: khám phá Cấu trúc vận động hoàn chỉnh qua Trục thế Đạo và Hướng lực Dẫn.",
         "timed_cues": [
           {
             "start": 0,
             "end": 10,
-            "shot_code": "Shot 06a",
-            "title": "Khẩu Quyết Trị Giá Đỡ Trước",
+            "shot_code": "Shot06a",
+            "title": "Khẩu Quyết Giá Đỡ",
             "text": "Hệ Đạo Dẫn đúc kết khẩu quyết: Trị giá đỡ trước, trị điểm đau sau; nẹp vững cột sống sẽ tự hóa giải điểm đau ngoại vi."
           },
           {
             "start": 10,
             "end": 20,
-            "shot_code": "Shot 06b",
-            "title": "Mũi Kim Mở Van Xả Nồi Áp Suất",
-            "text": "Mũi kim châm cứu chính là chiếc van mở nắp nồi áp suất: châm chuẩn xác qua màng cân mạc sẽ lập tức giải phóng áp lực bị giam hãm ra ngoài."
+            "shot_code": "Shot06b",
+            "title": "Mũi Kim Mở Van",
+            "text": "Mũi kim châm chuẩn xác qua màng mạc hoạt động như van xả vi mô, giải phóng lập tức áp lực khoang cơ co thắt."
           },
           {
             "start": 20,
             "end": 30,
-            "shot_code": "Shot 06c1",
-            "title": "Bộ Ba Tọa - Động - Lưu Châm",
+            "shot_code": "Shot06c1",
+            "title": "Bộ Ba Kỹ Thuật Đạo Dẫn",
             "text": "Hệ Đạo Dẫn phối hợp ba kỹ thuật: Tọa châm khóa trục, Động châm mở góc kẹt, và Lưu châm hạ áp tầng sâu."
           },
           {
             "start": 30,
             "end": 40,
-            "shot_code": "Shot 06c2",
-            "title": "Động Châm Bẻ Gãy Xơ Dính",
+            "shot_code": "Shot06c2",
+            "title": "Chi Tiết Động Châm",
             "text": "Kỹ thuật Động châm vừa châm vừa vận động, tạo lực trượt cơ học bẻ gãy xơ dính collagen và mở rộng tầm vận động."
           },
           {
             "start": 40,
             "end": 50,
-            "shot_code": "Shot 06d",
-            "title": "Tọa Châm Neo Khóa Trục",
+            "shot_code": "Shot06d",
+            "title": "Chi Tiết Tọa Châm",
             "text": "Tọa châm tại các huyệt then chốt tạo điểm neo kiên cố, nẹp giữ trục cột sống và bảo vệ khớp không xô lệch."
           },
           {
             "start": 50,
             "end": 60,
-            "shot_code": "Shot 06e",
-            "title": "Lưu Châm Hạ Áp Tầng Sâu",
+            "shot_code": "Shot06e",
+            "title": "Chi Tiết Lưu Châm",
             "text": "Lưu châm xuyên sâu vào lớp cơ lõi giúp điều hòa điện thế màng, hạ áp lực sâu và khôi phục tưới máu mao mạch."
           },
           {
             "start": 60,
             "end": 70,
-            "shot_code": "Shot 06f1",
-            "title": "Tiêu Chuẩn Đắc Khí Khoái Châm",
-            "text": "Đắc khí Đạo Dẫn là Khoái châm: cảm giác tức nặng, ấm áp êm ru như cơn mưa rào tưới đất hạn, xóa sạch mọi phản xạ gồng siết phòng vệ!"
+            "shot_code": "Shot06f1",
+            "title": "Đắc Khí Khoái Châm",
+            "text": "Đắc khí Đạo Dẫn là Khoái châm: cảm giác tức nặng êm dịu thư thái, thay thế hoàn toàn cơn đau buốt phòng vệ."
           },
           {
             "start": 70,
             "end": 80,
-            "shot_code": "Shot 06f2",
+            "shot_code": "Shot06f2",
             "title": "Golgi Tẩy Xóa Gồng Siết",
             "text": "Khoái châm kích hoạt thụ thể gân Golgi, phát tín hiệu ức chế tự thân lên tủy sống để xóa bỏ phản xạ gồng siết."
           },
           {
             "start": 80,
             "end": 90,
-            "shot_code": "Shot 06g",
-            "title": "Nối Sang Trục ĐẠO & Hướng DẪN",
+            "shot_code": "Shot06g",
+            "title": "Nối Trục ĐẠO & Lực DẪN",
             "text": "Giải phóng cân mạc mở đường cho Chương hai: khám phá Cấu trúc vận động hoàn chỉnh qua Trục thế Đạo và Hướng lực Dẫn."
           }
         ]
