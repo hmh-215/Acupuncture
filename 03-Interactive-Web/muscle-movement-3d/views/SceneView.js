@@ -22,6 +22,13 @@ export class SceneView {
     // Vô hiệu hóa module biến dạng thủ công (tránh làm vỡ/nhiễu/phình to mesh FBX)
     this.muscleDeformer = null;
 
+    // Tối ưu hóa hiệu năng: Khống chế ~18 - 20 FPS cho mô hình giải phẫu (tiết kiệm ~70% GPU/CPU)
+    this.targetFPS = 20;
+    this.frameInterval = 1000 / this.targetFPS; // 50ms
+    this.lastFrameTime = performance.now();
+    this.isPaused = false;
+    this.animationId = null;
+
     this.scene = new THREE.Scene();
     this.currentTheme = 'light';
     this.scene.background = new THREE.Color(0xf1f5f9); // Mặc định Light Mode y khoa chuẩn
@@ -1604,6 +1611,24 @@ export class SceneView {
     this.sceneVM.on('displayedAcupoints', acupoints => this.displayAcupoints(acupoints));
     this.sceneVM.on('focusedAcupointCode', code => this.focusAcupoint(code));
 
+    // Lắng nghe lệnh bật/tắt render 3D khi chuyển tab Video / 3D Model
+    this.sceneVM.on('isRendering', isRendering => {
+      if (isRendering) {
+        this.resumeRender();
+      } else {
+        this.pauseRender();
+      }
+    });
+
+    // Lắng nghe sự kiện ẩn/hiện tab của trình duyệt (tiết kiệm pin & tài nguyên máy khi minimize)
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        this.pauseRender();
+      } else if (this.sceneVM.state.isRendering) {
+        this.resumeRender();
+      }
+    });
+
     if (this.appVM.movementVM) {
       this.appVM.movementVM.on('selectedMovementId', movementId => {
         this._applyStatuePose(movementId);
@@ -2083,8 +2108,44 @@ export class SceneView {
     this._applyStatuePose(null);
   }
 
+  /**
+   * Tạm dừng hoàn toàn render loop Three.js để giải phóng 100% GPU/CPU khi ở Tab Video
+   */
+  pauseRender() {
+    if (this.isPaused) return;
+    this.isPaused = true;
+    if (this.animationId) {
+      cancelAnimationFrame(this.animationId);
+      this.animationId = null;
+    }
+  }
+
+  /**
+   * Khôi phục lại render loop Three.js khi người dùng quay lại Tab 3D
+   */
+  resumeRender() {
+    if (!this.isPaused) return;
+    this.isPaused = false;
+    this.lastFrameTime = performance.now();
+    this._onResize();
+    if (!this.animationId) {
+      this._animate();
+    }
+  }
+
   _animate() {
+    if (this.isPaused) return;
     this.animationId = requestAnimationFrame(() => this._animate());
+
+    const now = performance.now();
+    const elapsed = now - this.lastFrameTime;
+
+    // Giới hạn FPS ở mức ~20 FPS cho mô hình giải phẫu (tiết kiệm ~70% GPU/CPU)
+    if (elapsed < this.frameInterval) {
+      return;
+    }
+    this.lastFrameTime = now - (elapsed % this.frameInterval);
+
     this._updatePoseInterpolation();
 
     // Đồng bộ ma trận thế giới toàn bộ rig trước khi tính toán biến dạng LBS
@@ -2137,8 +2198,8 @@ export class SceneView {
   }
 
   dispose() {
+    this.pauseRender();
     window.removeEventListener('resize', this._onResize.bind(this));
-    cancelAnimationFrame(this.animationId);
     this.renderer.dispose();
   }
 }

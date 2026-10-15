@@ -24,9 +24,9 @@
   --role-synergist: var(--amber);
   --role-stabilizer: var(--green);
 
-  /* Typography */
-  --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  --font-mono: 'Cascadia Code', 'Fira Code', monospace;
+  /* Typography: Ưu tiên Be Vietnam Pro chuyên biệt cho Tiếng Việt có dấu, fallback hệ thống */
+  --font-main: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace;
 
   /* Spacing */
   --gap: 16px;
@@ -60,6 +60,9 @@ body.dark-theme {
 html {
   font-size: 15px;
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -68,6 +71,8 @@ body {
   color: var(--text);
   min-height: 100vh;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {

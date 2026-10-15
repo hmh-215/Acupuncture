@@ -1218,7 +1218,17 @@ export class UIView {
       if (this.els.section3DModel) this.els.section3DModel.style.display = 'grid';
       if (this.els.sectionVideoLectures) this.els.sectionVideoLectures.style.display = 'none';
 
-      // Kích hoạt tính toán lại viewport Three.js sau khi hiện lại canvas
+      // 1. Tự động tạm dừng phát video để tiết kiệm băng thông và CPU khi người dùng quay lại mô hình 3D
+      if (this.els.html5VideoPlayer && !this.els.html5VideoPlayer.paused) {
+        this.els.html5VideoPlayer.pause();
+      }
+
+      // 2. Kích hoạt lại Three.js Render Loop
+      if (this.sceneVM) {
+        this.sceneVM.setRendering(true);
+      }
+
+      // 3. Kích hoạt tính toán lại viewport Three.js sau khi hiện lại canvas
       if (window.dispatchEvent) {
         window.dispatchEvent(new Event('resize'));
       }
@@ -1227,6 +1237,11 @@ export class UIView {
       if (this.els.navBtnVideo) this.els.navBtnVideo.classList.add('active');
       if (this.els.section3DModel) this.els.section3DModel.style.display = 'none';
       if (this.els.sectionVideoLectures) this.els.sectionVideoLectures.style.display = 'grid';
+
+      // 1. TẠM DỪNG HOÀN TOÀN Three.js Render Loop: giải phóng 100% GPU/CPU cho việc giải mã video
+      if (this.sceneVM) {
+        this.sceneVM.setRendering(false);
+      }
     }
   }
 

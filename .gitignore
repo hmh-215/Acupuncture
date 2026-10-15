@@ -43,6 +43,7 @@ test_*.png
 screenshot*.png
 03-Interactive-Web/infographic_shots/
 !03-Interactive-Web/muscle-movement-3d/assets/videos/**
+03-Interactive-Web/muscle-movement-3d/assets/videos/**/backup_*/
 
 # Python & System
 __pycache__/

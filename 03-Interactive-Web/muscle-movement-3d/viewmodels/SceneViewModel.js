@@ -31,7 +31,8 @@ export class SceneViewModel extends Observable {
       hoveredObjectId: null,
       isolatedMuscleId: null,
       displayedAcupoints: [],    // Danh sách điểm huyệt 3D đang hiển thị
-      focusedAcupointCode: null  // Mã huyệt đang được tiêu điểm
+      focusedAcupointCode: null, // Mã huyệt đang được tiêu điểm
+      isRendering: true          // Trạng thái bật/tắt render loop 3D (tiết kiệm GPU/CPU khi ở Tab Video)
     });
     this.appVM = appVM;
   }
@@ -128,6 +129,16 @@ export class SceneViewModel extends Observable {
       this.state.displayedAcupoints = [];
       this.state.focusedAcupointCode = null;
     });
+  }
+
+  /**
+   * Bật hoặc tạm dừng render loop của Three.js
+   * @param {boolean} active 
+   */
+  setRendering(active) {
+    const val = Boolean(active);
+    if (this.state.isRendering === val) return;
+    this.setState({ isRendering: val });
   }
 }
 
