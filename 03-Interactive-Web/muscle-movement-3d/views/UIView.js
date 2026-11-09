@@ -1,8 +1,8 @@
 /**
  * UIView.js
  * Quản lý toàn bộ giao diện DOM, bảng điều khiển 2 Chế độ và tương tác người dùng:
- * - Chế độ 1: 🏃 Động Học Cử Động (Chủ vận, Đối vận, Hiệp đồng, Ổn định)
- * - Chế độ 2: ⚡ Trị Liệu & Chuỗi Kinh Cân (Bệnh lý cơ đau, Chuỗi cơ cân, Huyệt vị 3D)
+ * - Chế độ 1: Động Học Cử Động (Chủ vận, Đối vận, Hiệp đồng, Ổn định)
+ * - Chế độ 2: Trị Liệu & Chuỗi Kinh Cân (Bệnh lý cơ đau, Chuỗi cơ cân, Huyệt vị 3D)
  * - Điều khiển 2 hệ giải phẫu cốt lõi: Hệ Cơ & Hệ Thần Kinh
  */
 export class UIView {
@@ -25,12 +25,17 @@ export class UIView {
   _cacheElements() {
     this.els = {
       // Menu Điều Hướng Cấp Cao (Mục 1: 3D & Mục 2: Video)
+      brandLogo: document.getElementById('brand-logo'),
       navBtn3D: document.getElementById('nav-btn-3d'),
       navBtnVideo: document.getElementById('nav-btn-video'),
       section3DModel: document.getElementById('section-3d-model'),
       sectionVideoLectures: document.getElementById('section-video-lectures'),
 
-      // Chuyển Tab 3 Chế độ (trong Mục 1: Mô hình 3D)
+      // Mode Dropdown Selector & Chuyển Tab 3 Chế độ (trong Mục 1: Mô hình 3D)
+      modeDropdownWrapper: document.getElementById('mode-dropdown-wrapper'),
+      modeDropdownTrigger: document.getElementById('mode-dropdown-trigger'),
+      modeDropdownLabel: document.getElementById('mode-dropdown-label'),
+      modeDropdownMenu: document.getElementById('mode-dropdown-menu'),
       tabModeKinematics: document.getElementById('tab-mode-kinematics'),
       tabModeAcupoints: document.getElementById('tab-mode-acupoints'),
       tabModeTherapy: document.getElementById('tab-mode-therapy'),
@@ -42,7 +47,10 @@ export class UIView {
 
       // Floating Viewport Legend Card (Chế độ 1)
       viewportLegendCard: document.getElementById('viewport-legend-card'),
-      viewportLegendItems: document.querySelectorAll('.viewport-legend-item'),
+      viewportLegendItems: document.querySelectorAll('#viewport-legend-card .viewport-legend-item'),
+
+      // Floating Viewport Legend Card (Chế độ 2: Bản đồ huyệt đạo)
+      viewportLegendAcupoints: document.getElementById('viewport-legend-acupoints'),
 
       // Floating Viewport Legend Card (Chế độ 3: Trị liệu chuỗi kinh cân)
       viewportLegendTherapy: document.getElementById('viewport-legend-therapy'),
@@ -56,7 +64,12 @@ export class UIView {
       movementPlane: document.getElementById('movement-plane'),
       movementRom: document.getElementById('movement-rom'),
       movementPhases: document.getElementById('movement-phases'),
-      filterButtons: document.querySelectorAll('.filter-btn'),
+      currentFilterBadge: document.getElementById('current-filter-badge'),
+      movementSearchBox: document.getElementById('movement-search-box'),
+      btnClearSearch: document.getElementById('btn-clear-search'),
+      searchResultsDropdown: document.getElementById('search-results-dropdown'),
+      searchResultsCount: document.getElementById('search-results-count'),
+      searchResultsList: document.getElementById('search-results-list'),
       muscleList: document.getElementById('muscle-list'),
 
       // Chế độ 2: Bản đồ 80 Huyệt Đạo Toàn Thân
@@ -118,9 +131,13 @@ export class UIView {
       sliderNervousOpacity: document.getElementById('slider-nervous-opacity'),
       valNervousOpacity: document.getElementById('val-nervous-opacity'),
 
-      btnResetView: document.getElementById('btn-reset-view'),
-      btnToggleTheme: document.getElementById('btn-toggle-theme'),
       loadingOverlay: document.getElementById('loading-overlay'),
+
+      // Mục 3: Trợ giúp & Cẩm nang điều hướng
+      navBtnHelp: document.getElementById('nav-btn-help'),
+      sectionHelp: document.getElementById('section-help'),
+      btnHelpGo3D: document.getElementById('btn-help-go-3d'),
+      btnHelpGoVideo: document.getElementById('btn-help-go-video'),
 
       // Mục 2: Video Player & Danh Sách Bài Giảng Theo Chương
       videoActiveBadge: document.getElementById('video-active-badge'),
@@ -151,7 +168,6 @@ export class UIView {
       btnNextShot: document.getElementById('btn-next-shot'),
       chkAutoNext: document.getElementById('chk-auto-next'),
       vtoolbarShotInfo: document.getElementById('vtoolbar-shot-info'),
-      btnQuickInfographic: document.getElementById('btn-quick-infographic'),
 
       // Sidebar Tabs & Realtime Transcript Elements
       btnStabRealtime: document.getElementById('btn-stab-realtime'),
@@ -230,28 +246,85 @@ export class UIView {
 
   _setupEventListeners() {
     // Menu Điều Hướng Cấp Cao (Mục 1: Mô Hình 3D vs Mục 2: Video Thuyết Minh Bài Giảng)
+    if (this.els.brandLogo) {
+      this.els.brandLogo.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.switchTopSection('section-3d-model');
+      });
+    }
     if (this.els.navBtn3D) {
       this.els.navBtn3D.addEventListener('click', () => this.switchTopSection('section-3d-model'));
     }
     if (this.els.navBtnVideo) {
       this.els.navBtnVideo.addEventListener('click', () => this.switchTopSection('section-video-lectures'));
     }
+    if (this.els.navBtnHelp) {
+      this.els.navBtnHelp.addEventListener('click', () => this.switchTopSection('section-help'));
+    }
+    if (this.els.btnHelpGo3D) {
+      this.els.btnHelpGo3D.addEventListener('click', () => this.switchTopSection('section-3d-model'));
+    }
+    if (this.els.btnHelpGoVideo) {
+      this.els.btnHelpGoVideo.addEventListener('click', () => this.switchTopSection('section-video-lectures'));
+    }
+
+    // Thanh Dropdown chọn 3 chế độ (trên cùng cột thông tin bên phải)
+    if (this.els.modeDropdownTrigger && this.els.modeDropdownWrapper) {
+      this.els.modeDropdownTrigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = this.els.modeDropdownWrapper.classList.toggle('drop-open');
+        this.els.modeDropdownTrigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (this.els.modeDropdownWrapper && !this.els.modeDropdownWrapper.contains(e.target)) {
+          this.els.modeDropdownWrapper.classList.remove('drop-open');
+          if (this.els.modeDropdownTrigger) {
+            this.els.modeDropdownTrigger.setAttribute('aria-expanded', 'false');
+          }
+        }
+      });
+    }
+
+    const closeModeDropdown = () => {
+      if (this.els.modeDropdownWrapper) {
+        this.els.modeDropdownWrapper.classList.remove('drop-open');
+      }
+      if (this.els.modeDropdownTrigger) {
+        this.els.modeDropdownTrigger.setAttribute('aria-expanded', 'false');
+      }
+    };
 
     // Chuyển Tab 3 Chế độ (trong Mục 1: Mô hình 3D)
     if (this.els.tabModeKinematics) {
-      this.els.tabModeKinematics.addEventListener('click', () => this._switchMode('kinematics'));
+      this.els.tabModeKinematics.addEventListener('click', () => {
+        this._switchMode('kinematics');
+        closeModeDropdown();
+      });
     }
     if (this.els.tabModeAcupoints) {
-      this.els.tabModeAcupoints.addEventListener('click', () => this._switchMode('acupoints'));
+      this.els.tabModeAcupoints.addEventListener('click', () => {
+        this._switchMode('acupoints');
+        closeModeDropdown();
+      });
     }
     if (this.els.tabModeTherapy) {
-      this.els.tabModeTherapy.addEventListener('click', () => this._switchMode('therapy'));
+      this.els.tabModeTherapy.addEventListener('click', () => {
+        this._switchMode('therapy');
+        closeModeDropdown();
+      });
     }
     if (this.els.tabModeMovement && this.els.tabModeMovement !== this.els.tabModeKinematics) {
-      this.els.tabModeMovement.addEventListener('click', () => this._switchMode('kinematics'));
+      this.els.tabModeMovement.addEventListener('click', () => {
+        this._switchMode('kinematics');
+        closeModeDropdown();
+      });
     }
     if (this.els.tabModeAcupuncture && this.els.tabModeAcupuncture !== this.els.tabModeTherapy) {
-      this.els.tabModeAcupuncture.addEventListener('click', () => this._switchMode('therapy'));
+      this.els.tabModeAcupuncture.addEventListener('click', () => {
+        this._switchMode('therapy');
+        closeModeDropdown();
+      });
     }
 
     // Floating Viewport Legend Card (Chế độ 1: Bấm để lọc vai trò, bấm lại để chọn tất cả)
@@ -283,35 +356,15 @@ export class UIView {
       });
     }
 
-    // Ô tìm kiếm cơ hoặc cử động (Chế độ 1)
-    if (this.els.searchInput) {
-      this.els.searchInput.addEventListener('input', (e) => {
-        const query = e.target.value;
-        this._populateMovementDropdown(query);
-        if (this.movementVM) this.movementVM.search(query);
-      });
+    // Thanh tìm kiếm mở rộng (Expandable Search) & Lọc Realtime cử động
+    this._setupRealtimeMovementSearch();
 
-      this.els.searchInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-          e.preventDefault();
-          if (this.els.movementSelect && this.els.movementSelect.options.length > 1) {
-            const firstValidOption = Array.from(this.els.movementSelect.options).find(opt => opt.value);
-            if (firstValidOption) {
-              this.els.movementSelect.value = firstValidOption.value;
-              if (this.movementVM) this.movementVM.selectMovement(firstValidOption.value);
-            }
-          }
+    // Bấm vào Tag hiển thị vai trò để đặt lại bộ lọc về "Tất cả"
+    if (this.els.currentFilterBadge) {
+      this.els.currentFilterBadge.addEventListener('click', () => {
+        if (this.movementVM) {
+          this.movementVM.filterByRole('all');
         }
-      });
-    }
-
-    // Lọc vai trò cơ (Chế độ 1 - Thanh nút lọc ngang)
-    if (this.els.filterButtons) {
-      this.els.filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const role = btn.dataset.role;
-          if (this.movementVM) this.movementVM.filterByRole(role);
-        });
       });
     }
 
@@ -408,72 +461,9 @@ export class UIView {
       this.els.sliderNervousOpacity.addEventListener('change', handleNervousOpacity);
     }
 
-    // Đặt lại góc nhìn và thông số
-    if (this.els.btnResetView) {
-      this.els.btnResetView.addEventListener('click', () => {
-        if (this.sceneVM) this.sceneVM.resetView();
-        if (this.movementVM) this.movementVM.resetFilters();
-        if (this.appVM.acupointMapVM) this.appVM.acupointMapVM.reset();
-        if (this.appVM.acupunctureVM) this.appVM.acupunctureVM.reset();
-        if (this.els.searchInput) this.els.searchInput.value = '';
-        if (this.els.searchAcupointInput) this.els.searchAcupointInput.value = '';
+    // Đặt lại góc nhìn đã được tinh giản theo yêu cầu
 
-        const activeMode = this.appVM?.state.activeMode || 'kinematics';
-        if (activeMode === 'acupoints') {
-          if (this.els.sliderMuscleOpacity) {
-            this.els.sliderMuscleOpacity.value = 10;
-            if (this.els.valMuscleOpacity) this.els.valMuscleOpacity.textContent = '10%';
-            if (this.sceneVM) this.sceneVM.setMuscleOpacity(0.10);
-          }
-          if (this.els.sliderNervousOpacity) {
-            this.els.sliderNervousOpacity.value = 90;
-            if (this.els.valNervousOpacity) this.els.valNervousOpacity.textContent = '90%';
-            if (this.sceneVM) this.sceneVM.setNervousOpacity(0.90);
-          }
-          if (this.els.toggleMuscles) this.els.toggleMuscles.checked = true;
-          if (this.els.toggleNervous) this.els.toggleNervous.checked = true;
-          if (this.sceneVM) {
-            this.sceneVM.setShowMuscleLayer(true);
-            this.sceneVM.setShowNervousLayer(true);
-          }
-        } else {
-          if (this.els.sliderMuscleOpacity) {
-            this.els.sliderMuscleOpacity.value = 100;
-            if (this.els.valMuscleOpacity) this.els.valMuscleOpacity.textContent = '100%';
-            if (this.sceneVM) this.sceneVM.setMuscleOpacity(1.0);
-          }
-          if (this.els.sliderNervousOpacity) {
-            this.els.sliderNervousOpacity.value = 90;
-            if (this.els.valNervousOpacity) this.els.valNervousOpacity.textContent = '90%';
-            if (this.sceneVM) this.sceneVM.setNervousOpacity(0.90);
-          }
-          if (this.els.toggleMuscles) this.els.toggleMuscles.checked = true;
-          if (this.els.toggleNervous) this.els.toggleNervous.checked = false;
-          if (this.sceneVM) {
-            this.sceneVM.setShowMuscleLayer(true);
-            this.sceneVM.setShowNervousLayer(false);
-          }
-        }
-
-        this._populateMovementDropdown();
-        if (this.els.chainSelect) this.els.chainSelect.value = '';
-        if (this.els.chainInfo) this.els.chainInfo.style.display = 'none';
-        if (this.els.chainAcupointSection) this.els.chainAcupointSection.style.display = 'none';
-        if (this.els.acupointDetailCard) this.els.acupointDetailCard.style.display = 'none';
-        if (this.els.mapAcupointDetailCard) this.els.mapAcupointDetailCard.style.display = 'none';
-      });
-    }
-
-    // Chuyển đổi giao diện Sáng / Tối
-    if (this.els.btnToggleTheme) {
-      this.els.btnToggleTheme.addEventListener('click', () => {
-        const isDark = document.body.classList.toggle('dark-theme');
-        this.els.btnToggleTheme.textContent = isDark ? '☀️ Giao diện Sáng' : '🌙 Giao diện Tối';
-        if (this.sceneVM && this.sceneVM.setTheme) {
-          this.sceneVM.setTheme(isDark ? 'dark' : 'light');
-        }
-      });
-    }
+    // Chế độ sáng chuẩn duy nhất (Dark theme đã được lược bỏ theo yêu cầu)
 
     // Đóng bảng chi tiết cơ
     if (this.els.btnCloseDetail) {
@@ -503,16 +493,7 @@ export class UIView {
       });
     }
 
-    // Nút mở nhanh Video Infographic từ Mục 1 (3D Model)
-    if (this.els.btnQuickInfographic) {
-      this.els.btnQuickInfographic.addEventListener('click', () => {
-        this.switchTopSection('section-video-lectures');
-        this.selectLecture('chuong-01');
-        if (this.els.html5VideoPlayer) {
-          this.els.html5VideoPlayer.play().catch(() => {});
-        }
-      });
-    }
+    // Shortcut Video Infographic đã được chuyển hoàn toàn về Tab Video Bài Giảng
 
     // Điều hướng Shot trước / Shot sau & Tự động chuyển shot kế tiếp
     if (this.els.btnPrevShot) {
@@ -623,10 +604,12 @@ export class UIView {
 
     if (mode === 'kinematics') {
       if (this.els.tabModeKinematics) this.els.tabModeKinematics.classList.add('active');
-      if (this.els.mode1Container) this.els.mode1Container.style.display = 'block';
+      if (this.els.modeDropdownLabel) this.els.modeDropdownLabel.textContent = 'Động học cử động';
+      if (this.els.mode1Container) this.els.mode1Container.style.display = 'flex';
 
-      // Hiện floating legend card Chế độ 1, ẩn Chế độ 3
-      if (this.els.viewportLegendCard) this.els.viewportLegendCard.style.display = 'block';
+      // Hiện floating legend card Chế độ 1, ẩn Chế độ 2 & 3
+      if (this.els.viewportLegendCard) this.els.viewportLegendCard.style.display = 'flex';
+      if (this.els.viewportLegendAcupoints) this.els.viewportLegendAcupoints.style.display = 'none';
       if (this.els.viewportLegendTherapy) this.els.viewportLegendTherapy.style.display = 'none';
 
       // Ẩn điều khiển Hệ Thần Kinh ở Chế độ 1 theo yêu cầu người dùng
@@ -646,10 +629,12 @@ export class UIView {
 
     } else if (mode === 'acupoints') {
       if (this.els.tabModeAcupoints) this.els.tabModeAcupoints.classList.add('active');
-      if (this.els.mode2Container) this.els.mode2Container.style.display = 'block';
+      if (this.els.modeDropdownLabel) this.els.modeDropdownLabel.textContent = 'Bản đồ huyệt đạo 3D';
+      if (this.els.mode2Container) this.els.mode2Container.style.display = 'flex';
 
-      // Ẩn floating legend card
+      // Hiện floating legend card Chế độ 2, ẩn Chế độ 1 & 3
       if (this.els.viewportLegendCard) this.els.viewportLegendCard.style.display = 'none';
+      if (this.els.viewportLegendAcupoints) this.els.viewportLegendAcupoints.style.display = 'flex';
       if (this.els.viewportLegendTherapy) this.els.viewportLegendTherapy.style.display = 'none';
 
       // Hiện điều khiển Hệ Thần Kinh và kích hoạt hiển thị Hệ Thần Kinh + Hệ Cơ
@@ -677,11 +662,13 @@ export class UIView {
 
     } else if (mode === 'therapy') {
       if (this.els.tabModeTherapy) this.els.tabModeTherapy.classList.add('active');
-      if (this.els.mode3Container) this.els.mode3Container.style.display = 'block';
+      if (this.els.modeDropdownLabel) this.els.modeDropdownLabel.textContent = 'Châm cứu trị liệu';
+      if (this.els.mode3Container) this.els.mode3Container.style.display = 'flex';
 
-      // Ẩn legend Chế độ 1, HIỆN floating legend card cho Chế độ 3
+      // Ẩn legend Chế độ 1 & 2, HIỆN floating legend card cho Chế độ 3
       if (this.els.viewportLegendCard) this.els.viewportLegendCard.style.display = 'none';
-      if (this.els.viewportLegendTherapy) this.els.viewportLegendTherapy.style.display = 'block';
+      if (this.els.viewportLegendAcupoints) this.els.viewportLegendAcupoints.style.display = 'none';
+      if (this.els.viewportLegendTherapy) this.els.viewportLegendTherapy.style.display = 'flex';
 
       // Hiện điều khiển Hệ Thần Kinh nhưng mặc định tắt
       if (this.els.cardControlNervous) this.els.cardControlNervous.style.display = 'flex';
@@ -729,16 +716,16 @@ export class UIView {
     this.els.movementSelect.innerHTML = '<option value="">— Chọn chuyển động mẫu —</option>';
 
     const groupPresets = document.createElement('optgroup');
-    groupPresets.label = '🌟 CHUỖI VẬN ĐỘNG TOÀN THÂN & ĐẠO DẪN (PRESETS)';
+    groupPresets.label = 'CHUỖI VẬN ĐỘNG TOÀN THÂN & ĐẠO DẪN (PRESETS)';
 
     const groupLeg = document.createElement('optgroup');
-    groupLeg.label = '🦵 CỬ ĐỘNG CHI DƯỚI & KHUNG CHẬU (SQUAT, LUNGES, DEADLIFT, HIP THRUST)';
+    groupLeg.label = 'CỬ ĐỘNG CHI DƯỚI & KHUNG CHẬU (SQUAT, LUNGES, DEADLIFT, HIP THRUST)';
 
     const groupShoulder = document.createElement('optgroup');
-    groupShoulder.label = '🏃 CỬ ĐỘNG KHỚP VAI & ĐAI VAI';
+    groupShoulder.label = 'CỬ ĐỘNG KHỚP VAI & ĐAI VAI';
 
     const groupElbow = document.createElement('optgroup');
-    groupElbow.label = '💪 CỬ ĐỘNG KHUỶU & CẲNG TAY';
+    groupElbow.label = 'CỬ ĐỘNG KHUỶU & CẲNG TAY';
 
     const presetIds = ['overhead_reach', 'trunk_rotation', 'walking_gait', 'forward_bending', 'archer_pull', 'daodan_archer_pull', 'daodan_hand_behind_back'];
     const legIds = ['squat', 'lunges', 'deadlift', 'hip_thrust'];
@@ -776,7 +763,7 @@ export class UIView {
     chains.forEach(chain => {
       const opt = document.createElement('option');
       opt.value = chain.id;
-      opt.textContent = `⚡ ${chain.name_vi}`;
+      opt.textContent = `${chain.name_vi}`;
       this.els.chainSelect.appendChild(opt);
     });
   }
@@ -789,7 +776,12 @@ export class UIView {
 
     if (!movement) {
       this.els.movementInfo.style.display = 'none';
+      if (this.els.movementSelect) this.els.movementSelect.value = '';
       return;
+    }
+
+    if (this.els.movementSelect && movement.id) {
+      this.els.movementSelect.value = movement.id;
     }
 
     this.els.movementInfo.style.display = 'block';
@@ -799,11 +791,11 @@ export class UIView {
     }
 
     if (this.els.movementPlane) {
-      this.els.movementPlane.textContent = `📐 ${movement.plane_vi || 'Mặt phẳng giải phẫu'}`;
+      this.els.movementPlane.textContent = `${movement.plane_vi || 'Mặt phẳng giải phẫu'}`;
     }
 
     if (this.els.movementRom) {
-      this.els.movementRom.textContent = `🔄 Biên độ: ${movement.range_of_motion || 'Sinh lý'}`;
+      this.els.movementRom.textContent = `Biên độ: ${movement.range_of_motion || 'Sinh lý'}`;
     }
 
     if (this.els.movementPhases) {
@@ -831,25 +823,25 @@ export class UIView {
 
     const roleMeta = {
       agonist: {
-        title: '🔴 Cơ chủ vận (Agonist)',
+        title: 'Cơ chủ vận (Agonist)',
         color: '#ef4444',
         label: 'Chủ vận',
         badgeClass: 'role-agonist'
       },
       antagonist: {
-        title: '🔵 Cơ đối vận (Antagonist)',
+        title: 'Cơ đối vận (Antagonist)',
         color: '#0ea5e9',
         label: 'Đối vận',
         badgeClass: 'role-antagonist'
       },
       synergist: {
-        title: '🟠 Cơ hiệp đồng / Liên đới (Synergist)',
+        title: 'Cơ hiệp đồng / Liên đới (Synergist)',
         color: '#f59e0b',
         label: 'Hiệp đồng',
         badgeClass: 'role-synergist'
       },
       stabilizer: {
-        title: '🟢 Cơ ổn định (Stabilizer)',
+        title: 'Cơ ổn định (Stabilizer)',
         color: '#10b981',
         label: 'Ổn định',
         badgeClass: 'role-stabilizer'
@@ -942,16 +934,26 @@ export class UIView {
 
   _updateFilterButtons(currentRole) {
     const role = currentRole || 'all';
+    const roleMap = {
+      all: { name: 'Tất cả', color: '#C92A2A', bg: 'var(--bg-pure-white)', border: '#C92A2A' },
+      agonist: { name: 'Chủ vận', color: '#ef4444', bg: 'rgba(239, 68, 68, 0.06)', border: '#ef4444' },
+      antagonist: { name: 'Đối vận', color: '#0284c7', bg: 'rgba(2, 132, 199, 0.06)', border: '#0284c7' },
+      synergist: { name: 'Hiệp đồng', color: '#d97706', bg: 'rgba(245, 158, 11, 0.06)', border: '#d97706' },
+      stabilizer: { name: 'Ổn định', color: '#10b981', bg: 'rgba(16, 185, 129, 0.06)', border: '#10b981' }
+    };
+    const info = roleMap[role] || roleMap.all;
 
-    // Cập nhật các nút filter thanh ngang trong info panel
-    if (this.els.filterButtons) {
-      this.els.filterButtons.forEach(btn => {
-        if (btn.dataset.role === role) {
-          btn.classList.add('active');
-        } else {
-          btn.classList.remove('active');
-        }
-      });
+    // Cập nhật tag hiển thị vai trò trong card Các nhóm cơ tham gia (khớp thiết kế tinh giản)
+    const badge = this.els.currentFilterBadge || document.getElementById('current-filter-badge');
+    if (badge) {
+      badge.textContent = info.name;
+      badge.setAttribute('data-role', role);
+      badge.style.color = info.color;
+      badge.style.borderColor = info.border;
+      badge.style.backgroundColor = info.bg;
+      badge.title = role === 'all' 
+        ? 'Bấm vào Chú giải phân vai cơ trên mô hình 3D để lọc vai trò' 
+        : `Đang lọc: ${info.name}. Bấm vào đây hoặc chọn lại trong Chú giải để xem Tất cả`;
     }
 
     // Cập nhật các mục trong Floating Legend Card góc trên-phải 3D Viewport
@@ -969,6 +971,227 @@ export class UIView {
     if (this.movementVM) {
       this._renderMuscleList(this.movementVM.state.activeMuscles);
     }
+  }
+
+  // ============================================================
+  // HỆ THỐNG THANH TÌM KIẾM MỞ RỘNG (EXPANDABLE SEARCH) & REALTIME FILTER
+  // ============================================================
+  _setupRealtimeMovementSearch() {
+    const input = this.els.searchInput;
+    const box = this.els.movementSearchBox;
+    const clearBtn = this.els.btnClearSearch;
+    const dropdown = this.els.searchResultsDropdown;
+    const countEl = this.els.searchResultsCount;
+    const listEl = this.els.searchResultsList;
+
+    if (!input || !box || !dropdown || !listEl) return;
+
+    let focusedIndex = -1;
+
+    // Helper: chuẩn hóa chuỗi bỏ dấu tiếng Việt để tìm kiếm siêu nhạy
+    const normalize = (str) => {
+      return (str || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/đ/g, 'd')
+        .replace(/Đ/g, 'D')
+        .toLowerCase()
+        .trim();
+    };
+
+    // Helper: bôi đậm từ khóa khớp trong text
+    const highlightMatch = (text, query) => {
+      if (!query || !text) return text || '';
+      const normText = normalize(text);
+      const normQ = normalize(query);
+      const idx = normText.indexOf(normQ);
+      if (idx === -1) return text;
+      const before = text.slice(0, idx);
+      const match = text.slice(idx, idx + query.length);
+      const after = text.slice(idx + query.length);
+      return `${before}<mark class="search-match">${match}</mark>${after}`;
+    };
+
+    const renderResults = (query) => {
+      const q = (query || '').trim();
+      if (!q) {
+        box.classList.remove('is-expanded');
+        dropdown.style.display = 'none';
+        if (clearBtn) clearBtn.style.display = 'none';
+        this._populateMovementDropdown('');
+        return;
+      }
+
+      if (clearBtn) clearBtn.style.display = 'inline-flex';
+      box.classList.add('is-expanded');
+
+      const normQ = normalize(q);
+      const movements = this.appVM ? this.appVM.getMovements() : [];
+
+      // Tìm kiếm đa chiều: tên tiếng Việt, tên tiếng Anh, mô tả, và danh sách cơ
+      const matches = [];
+      movements.forEach(m => {
+        const normVi = normalize(m.name_vi);
+        const normEn = normalize(m.name_en);
+        const normDesc = normalize(m.description_vi);
+
+        let score = 0;
+        let matchedMuscleName = '';
+
+        if (normVi.startsWith(normQ)) score = 100;
+        else if (normVi.includes(normQ)) score = 80;
+        else if (normEn.includes(normQ)) score = 60;
+        else {
+          const muscles = m.muscles || [];
+          for (const mRole of muscles) {
+            const mId = mRole.muscleId || mRole.id;
+            const detail = this.appVM?.muscleData?.[mId] || {};
+            const normMVi = normalize(detail.name_vi || mId);
+            const normMLatin = normalize(detail.name_latin || '');
+            if (normMVi.includes(normQ) || normMLatin.includes(normQ)) {
+              score = 40;
+              matchedMuscleName = detail.name_vi || mId;
+              break;
+            }
+          }
+          if (score === 0 && normDesc.includes(normQ)) {
+            score = 20;
+          }
+        }
+
+        if (score > 0) {
+          matches.push({ movement: m, score, matchedMuscleName });
+        }
+      });
+
+      // Sắp xếp theo mức độ khớp
+      matches.sort((a, b) => b.score - a.score);
+
+      // Cập nhật cả native select để đồng bộ dữ liệu
+      this._populateMovementDropdown(q);
+
+      dropdown.style.display = 'block';
+      focusedIndex = -1;
+
+      if (matches.length === 0) {
+        if (countEl) countEl.textContent = '0 kết quả';
+        listEl.innerHTML = `<li class="search-no-results">Không tìm thấy cử động hoặc nhóm cơ phù hợp với <em>"${q}"</em></li>`;
+        return;
+      }
+
+      if (countEl) countEl.textContent = `${matches.length} cử động phù hợp`;
+      listEl.innerHTML = '';
+
+      const presetIds = ['overhead_reach', 'trunk_rotation', 'walking_gait', 'forward_bending', 'archer_pull', 'daodan_archer_pull', 'daodan_hand_behind_back'];
+
+      matches.forEach(({ movement: m, matchedMuscleName }, index) => {
+        const li = document.createElement('li');
+        li.className = 'search-result-item';
+        li.dataset.index = index;
+        li.dataset.id = m.id;
+
+        const isPreset = presetIds.includes(m.id);
+        const badgeLabel = isPreset ? 'Chuỗi Đạo Dẫn' : (m.plane_vi || 'Cử Động 3D');
+        const badgeClass = isPreset ? 'result-badge badge-preset' : 'result-badge';
+
+        const highlightedTitle = highlightMatch(m.name_vi, q);
+
+        li.innerHTML = `
+          <div class="result-title">${highlightedTitle}</div>
+          <div class="result-meta">
+            <span class="${badgeClass}">${badgeLabel}</span>
+            <span>${m.name_en || ''}</span>
+            ${matchedMuscleName ? `<span class="result-matched-muscle">• Cơ: ${highlightMatch(matchedMuscleName, q)}</span>` : ''}
+          </div>
+        `;
+
+        li.addEventListener('click', () => {
+          this._selectSearchResult(m);
+        });
+
+        listEl.appendChild(li);
+      });
+    };
+
+    input.addEventListener('input', (e) => {
+      renderResults(e.target.value);
+    });
+
+    input.addEventListener('focus', () => {
+      if (input.value.trim()) {
+        renderResults(input.value);
+      }
+    });
+
+    input.addEventListener('keydown', (e) => {
+      const items = listEl.querySelectorAll('.search-result-item');
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (items.length > 0) {
+          focusedIndex = (focusedIndex + 1) % items.length;
+          this._highlightDropdownItem(items, focusedIndex);
+        }
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (items.length > 0) {
+          focusedIndex = (focusedIndex - 1 + items.length) % items.length;
+          this._highlightDropdownItem(items, focusedIndex);
+        }
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        if (items.length > 0) {
+          const targetIndex = focusedIndex >= 0 ? focusedIndex : 0;
+          const targetId = items[targetIndex]?.dataset.id;
+          if (targetId && this.appVM) {
+            const m = this.appVM.getMovements().find(x => x.id === targetId);
+            if (m) this._selectSearchResult(m);
+          }
+        }
+      } else if (e.key === 'Escape') {
+        dropdown.style.display = 'none';
+        box.classList.remove('is-expanded');
+      }
+    });
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        input.value = '';
+        clearBtn.style.display = 'none';
+        dropdown.style.display = 'none';
+        box.classList.remove('is-expanded');
+        this._populateMovementDropdown('');
+        input.focus();
+      });
+    }
+
+    // Đóng dropdown khi click ra ngoài ô tìm kiếm
+    document.addEventListener('click', (e) => {
+      if (!box.contains(e.target)) {
+        dropdown.style.display = 'none';
+        box.classList.remove('is-expanded');
+      }
+    });
+  }
+
+  _highlightDropdownItem(items, index) {
+    items.forEach((it, idx) => {
+      if (idx === index) {
+        it.classList.add('is-focused');
+        it.scrollIntoView({ block: 'nearest' });
+      } else {
+        it.classList.remove('is-focused');
+      }
+    });
+  }
+
+  _selectSearchResult(movement) {
+    if (!movement) return;
+    if (this.movementVM) this.movementVM.selectMovement(movement.id);
+    if (this.els.movementSelect) this.els.movementSelect.value = movement.id;
+    if (this.els.searchInput) this.els.searchInput.value = movement.name_vi;
+    if (this.els.btnClearSearch) this.els.btnClearSearch.style.display = 'inline-flex';
+    if (this.els.searchResultsDropdown) this.els.searchResultsDropdown.style.display = 'none';
+    if (this.els.movementSearchBox) this.els.movementSearchBox.classList.remove('is-expanded');
   }
 
   // ============================================================
@@ -1034,7 +1257,7 @@ export class UIView {
     if (this.els.mapDetailCode) this.els.mapDetailCode.textContent = pt.code;
     if (this.els.mapDetailName) this.els.mapDetailName.textContent = pt.name_vi;
     if (this.els.mapDetailHan) this.els.mapDetailHan.textContent = pt.name_han_viet || '';
-    if (this.els.mapDetailMeridian) this.els.mapDetailMeridian.textContent = `⚡ ${pt.meridian_vi || ''}`;
+    if (this.els.mapDetailMeridian) this.els.mapDetailMeridian.textContent = `${pt.meridian_vi || ''}`;
     if (this.els.mapDetailLocation) this.els.mapDetailLocation.textContent = pt.location_vi || '';
     if (this.els.mapDetailDepth) {
       this.els.mapDetailDepth.textContent = `${pt.depth_mm || ''} • Hướng kim: ${pt.direction_vi || 'Thẳng'}`;
@@ -1046,7 +1269,7 @@ export class UIView {
       this.els.mapDetailIndications.textContent = pt.indications_vi || '';
     }
     if (this.els.mapDetailSafety) {
-      this.els.mapDetailSafety.textContent = `⚠️ An toàn: ${pt.safety_vi || 'Tuân thủ đúng góc châm và độ sâu an toàn giải phẫu.'}`;
+      this.els.mapDetailSafety.textContent = `An toàn: ${pt.safety_vi || 'Tuân thủ đúng góc châm và độ sâu an toàn giải phẫu.'}`;
     }
 
     // Cập nhật trạng thái active trong danh sách huyệt
@@ -1092,7 +1315,7 @@ export class UIView {
     this.els.chainAcupointSection.style.display = 'block';
 
     if (this.els.chainMyofascial) this.els.chainMyofascial.textContent = chain.myofascial_chain_vi || '';
-    if (this.els.chainMeridian) this.els.chainMeridian.textContent = `⚡ Kinh Lạc: ${chain.meridian_chain_vi || ''}`;
+    if (this.els.chainMeridian) this.els.chainMeridian.textContent = `Kinh Lạc: ${chain.meridian_chain_vi || ''}`;
     if (this.els.chainBiomechanics) this.els.chainBiomechanics.textContent = chain.biomechanics_vi || '';
     if (this.els.chainProtocol) this.els.chainProtocol.textContent = chain.treatment_protocol_vi || '';
 
@@ -1109,7 +1332,7 @@ export class UIView {
             <span style="font-weight: 600; color: var(--text);">${pt.name_vi} (${pt.name_han || ''})</span>
             <span class="acupoint-meta-inline">${pt.depth_mm}</span>
           </div>
-          <div class="acupoint-meta-inline">📍 ${pt.location_vi}</div>
+          <div class="acupoint-meta-inline">${pt.location_vi}</div>
         `;
 
         if (this.appVM.acupunctureVM?.state.selectedAcupoint?.code === pt.code) {
@@ -1141,7 +1364,7 @@ export class UIView {
 
     this.els.acupointDetailCard.style.display = 'block';
     if (this.els.acupointDetailTitle) {
-      this.els.acupointDetailTitle.textContent = `🔴 Huyệt ${pt.name_vi} (${pt.code} — ${pt.name_han || ''})`;
+      this.els.acupointDetailTitle.textContent = `Huyệt ${pt.name_vi} (${pt.code} — ${pt.name_han || ''})`;
     }
     if (this.els.acupointDetailLoc) this.els.acupointDetailLoc.textContent = pt.location_vi || '';
     if (this.els.acupointDetailDepth) this.els.acupointDetailDepth.textContent = `${pt.depth_mm} • ${pt.direction_vi || ''}`;
@@ -1213,10 +1436,12 @@ export class UIView {
    */
   switchTopSection(targetSectionId) {
     if (targetSectionId === 'section-3d-model') {
-      if (this.els.navBtn3D) this.els.navBtn3D.classList.add('active');
-      if (this.els.navBtnVideo) this.els.navBtnVideo.classList.remove('active');
+      if (this.els.navBtn3D) this.els.navBtn3D.classList.add('active', 'is-active');
+      if (this.els.navBtnVideo) this.els.navBtnVideo.classList.remove('active', 'is-active');
+      if (this.els.navBtnHelp) this.els.navBtnHelp.classList.remove('active', 'is-active');
       if (this.els.section3DModel) this.els.section3DModel.style.display = 'grid';
       if (this.els.sectionVideoLectures) this.els.sectionVideoLectures.style.display = 'none';
+      if (this.els.sectionHelp) this.els.sectionHelp.style.display = 'none';
 
       // 1. Tự động tạm dừng phát video để tiết kiệm băng thông và CPU khi người dùng quay lại mô hình 3D
       if (this.els.html5VideoPlayer && !this.els.html5VideoPlayer.paused) {
@@ -1233,15 +1458,36 @@ export class UIView {
         window.dispatchEvent(new Event('resize'));
       }
     } else if (targetSectionId === 'section-video-lectures') {
-      if (this.els.navBtn3D) this.els.navBtn3D.classList.remove('active');
-      if (this.els.navBtnVideo) this.els.navBtnVideo.classList.add('active');
+      if (this.els.navBtn3D) this.els.navBtn3D.classList.remove('active', 'is-active');
+      if (this.els.navBtnVideo) this.els.navBtnVideo.classList.add('active', 'is-active');
+      if (this.els.navBtnHelp) this.els.navBtnHelp.classList.remove('active', 'is-active');
       if (this.els.section3DModel) this.els.section3DModel.style.display = 'none';
       if (this.els.sectionVideoLectures) this.els.sectionVideoLectures.style.display = 'grid';
+      if (this.els.sectionHelp) this.els.sectionHelp.style.display = 'none';
 
       // 1. TẠM DỪNG HOÀN TOÀN Three.js Render Loop: giải phóng 100% GPU/CPU cho việc giải mã video
       if (this.sceneVM) {
         this.sceneVM.setRendering(false);
       }
+    } else if (targetSectionId === 'section-help') {
+      if (this.els.navBtn3D) this.els.navBtn3D.classList.remove('active', 'is-active');
+      if (this.els.navBtnVideo) this.els.navBtnVideo.classList.remove('active', 'is-active');
+      if (this.els.navBtnHelp) this.els.navBtnHelp.classList.add('active', 'is-active');
+      if (this.els.section3DModel) this.els.section3DModel.style.display = 'none';
+      if (this.els.sectionVideoLectures) this.els.sectionVideoLectures.style.display = 'none';
+      if (this.els.sectionHelp) this.els.sectionHelp.style.display = 'block';
+
+      // 1. Tự động tạm dừng phát video
+      if (this.els.html5VideoPlayer && !this.els.html5VideoPlayer.paused) {
+        this.els.html5VideoPlayer.pause();
+      }
+
+      // 2. Tạm dừng Three.js Render Loop khi đang ở trang Trợ giúp để tiết kiệm tài nguyên
+      if (this.sceneVM) {
+        this.sceneVM.setRendering(false);
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
 
@@ -1285,10 +1531,10 @@ export class UIView {
       card.innerHTML = `
         <div class="playlist-item-top">
           <span class="playlist-item-chapter">${lecture.chapter}</span>
-          <span class="playlist-item-duration">⏱️ ${lecture.duration}</span>
+          <span class="playlist-item-duration">${lecture.duration}</span>
         </div>
         <h4 class="playlist-item-title">${lecture.title}</h4>
-        <span class="playlist-item-badge" style="${badgeStyle}">🏷️ ${lecture.badge}</span>
+        <span class="playlist-item-badge" style="${badgeStyle}">${lecture.badge}</span>
       `;
       card.addEventListener('click', () => {
         this.selectLecture(lecture.id);
@@ -1409,7 +1655,7 @@ export class UIView {
       btn.className = `video-shot-btn ${idx === this.currentShotIndex ? 'active' : ''}`;
       btn.setAttribute('data-shot-index', idx);
       btn.innerHTML = `
-        <span>▶ ${shot.shot_num || `Shot ${idx + 1}`}</span>
+        <span>${shot.shot_num || `Shot ${idx + 1}`}</span>
         <span class="vshot-btn-time">${shot.duration || ''}</span>
       `;
       btn.addEventListener('click', () => {
@@ -1504,7 +1750,7 @@ export class UIView {
       const actionHtml = hasActionBtn
         ? `<div class="vshot-action">
              <button type="button" class="vshot-play-btn" data-shot-idx="${idx}">
-               ▶ Xem video phân đoạn này (${lecture.shots[idx].duration})
+               Xem video phân đoạn này (${lecture.shots[idx].duration})
              </button>
            </div>`
         : '';
@@ -1594,7 +1840,7 @@ export class UIView {
           <span class="rt-cue-time">00:00 - ${shot.duration || ''}</span>
           <div class="rt-cue-tags">
             <span class="rt-cue-shotcode">${shot.shot_num || 'Toàn bài'}</span>
-            <span class="rt-cue-speaker-icon">🔊</span>
+            
           </div>
         </div>
         <h5 class="rt-cue-title">${shot.title || 'Thuyết Minh Sư Phạm'}</h5>
@@ -1630,7 +1876,7 @@ export class UIView {
           <span class="rt-cue-time">${startTimeFormatted} - ${endTimeFormatted}</span>
           <div class="rt-cue-tags">
             <span class="rt-cue-shotcode">${cue.shot_code || `Phân đoạn ${idx + 1}`}</span>
-            <span class="rt-cue-speaker-icon">🔊</span>
+            
           </div>
         </div>
         <h5 class="rt-cue-title">${cue.title || `Luận Điểm ${idx + 1}`}</h5>
@@ -1650,7 +1896,7 @@ export class UIView {
 
     // Reset badge thời gian hiện tại
     if (this.els.rtCurrentTimeBadge) {
-      this.els.rtCurrentTimeBadge.textContent = `⏱️ 00:00 / ${shot.duration || '01:10'}`;
+      this.els.rtCurrentTimeBadge.textContent = `00:00 / ${shot.duration || '01:10'}`;
     }
   }
 
@@ -1666,7 +1912,7 @@ export class UIView {
     if (this.els.rtCurrentTimeBadge) {
       const curStr = this._formatSecondsToMMSS(currentTime);
       const durStr = duration > 0 ? this._formatSecondsToMMSS(duration) : (this.currentLecture?.shots?.[this.currentShotIndex]?.duration || '01:10');
-      this.els.rtCurrentTimeBadge.textContent = `⏱️ ${curStr} / ${durStr}`;
+      this.els.rtCurrentTimeBadge.textContent = `${curStr} / ${durStr}`;
     }
 
     const cues = this._currentCues || [];

@@ -54,7 +54,7 @@
     "depth_mm": "5 - 10 mm",
     "direction_vi": "Bảo bệnh nhân nhắm mắt, dùng ngón tay đẩy nhãn cầu sang bên ngoài, châm kim từ từ sát bờ trong ổ mắt. CẤM vê kim mạnh.",
     "deqi_vi": "Căng tức sâu trong hốc mắt, chảy nước mắt.",
-    "safety_vi": "⚠️ CẢNH BÁO AN TOÀN: Huyệt sát nhãn cầu và mạch máu ổ mắt. Tuyệt đối không vê kim hoặc châm quá sâu tránh xuất huyết hậu nhãn cầu.",
+    "safety_vi": "CẢNH BÁO AN TOÀN: Huyệt sát nhãn cầu và mạch máu ổ mắt. Tuyệt đối không vê kim hoặc châm quá sâu tránh xuất huyết hậu nhãn cầu.",
     "indications_vi": "Chắp, lẹo, viêm tuyến lệ, viêm màng tiếp hợp, liệt dây VII ngoại biên, teo thần kinh thị giác.",
     "position_3d": {
       "x": -0.14,
@@ -277,7 +277,7 @@
     "depth_mm": "8 - 15 mm",
     "direction_vi": "Bảo bệnh nhân nhìn lên trên, dùng ngón tay đẩy nhẹ nhãn cầu lên trên, châm từ từ dọc theo bờ dưới ổ mắt. CẤM vê kim mạnh.",
     "deqi_vi": "Căng tức sâu trong ổ mắt, chảy nước mắt.",
-    "safety_vi": "⚠️ CẢNH BÁO AN TOÀN: Huyệt sát nhãn cầu; tuyệt đối cấm châm xiên sâu hoặc lắc kim mạnh tránh tụ máu hốc mắt.",
+    "safety_vi": "CẢNH BÁO AN TOÀN: Huyệt sát nhãn cầu; tuyệt đối cấm châm xiên sâu hoặc lắc kim mạnh tránh tụ máu hốc mắt.",
     "indications_vi": "Viêm màng tiếp hợp, quáng gà, chắp, lẹo, liệt dây VII, giật mi mắt dưới.",
     "position_3d": {
       "x": -0.28,
@@ -322,7 +322,7 @@
     "depth_mm": "12 - 25 mm",
     "direction_vi": "Châm thẳng hoặc hơi chếch mũi kim ra trước vào trong.",
     "deqi_vi": "Tê tức sâu vùng tai lan vào trong họng và hàm dưới.",
-    "safety_vi": "⚠️ CẢNH BÁO: Châm sâu quá mức có thể chạm vào dây thần kinh mặt hoặc động mạch cảnh trong.",
+    "safety_vi": "CẢNH BÁO: Châm sâu quá mức có thể chạm vào dây thần kinh mặt hoặc động mạch cảnh trong.",
     "indications_vi": "Liệt dây thần kinh số VII, ù tai, điếc tai, viêm tuyến mang tai (quai bị), chóng mặt tiền đình.",
     "position_3d": {
       "x": -0.58,
@@ -434,7 +434,7 @@
     "depth_mm": "15 - 25 mm",
     "direction_vi": "Châm xiên hướng mũi kim về phía hốc mắt hoặc chóp mũi đối diện. TUYỆT ĐỐI KHÔNG châm hướng lên trên sâu vào não.",
     "deqi_vi": "Tê tức sâu lan tỏa lên nửa đầu, ra sau hốc mắt và xuống cổ gáy.",
-    "safety_vi": "⚠️ CẢNH BÁO AN TOÀN TUYỆT ĐỐI: Châm quá sâu hướng lên trên có thể đâm xuyên màng chẩm đội tổn thương HÀNH TỦY gây ngừng thở tử vong.",
+    "safety_vi": "CẢNH BÁO AN TOÀN TUYỆT ĐỐI: Châm quá sâu hướng lên trên có thể đâm xuyên màng chẩm đội tổn thương HÀNH TỦY gây ngừng thở tử vong.",
     "indications_vi": "Đau vai gáy, cảm mạo phong hàn, tăng huyết áp, nhức đầu sau gáy, chóng mặt tiền đình, bệnh về mắt.",
     "position_3d": {
       "x": -0.34,
@@ -641,7 +641,7 @@
     "depth_mm": "15 - 25 mm",
     "direction_vi": "Châm thẳng hoặc chích nặn máu các tĩnh mạch nhỏ nổi ở trám khoeo để tả nhiệt giải độc.",
     "deqi_vi": "Tê tức chạy dọc bắp chân.",
-    "safety_vi": "⚠️ CẢNH BÁO: Đáy huyệt có động - tĩnh mạch khoeo và thần kinh chày. Không châm quá sâu hoặc lắc kim thô bạo.",
+    "safety_vi": "CẢNH BÁO: Đáy huyệt có động - tĩnh mạch khoeo và thần kinh chày. Không châm quá sâu hoặc lắc kim thô bạo.",
     "indications_vi": "Đau thắt lưng cấp và mạn (Đặc trị vùng lưng: 'Yêu bối Ủy trung cầu'), đau thần kinh tọa, sốt cao co giật.",
     "position_3d": {
       "x": -0.72,
@@ -710,7 +710,7 @@
     "depth_mm": "15 - 30 mm",
     "direction_vi": "Châm thẳng góc 90° hoặc xiên nhẹ lên trên.",
     "deqi_vi": "Tê tức mạnh mặt trong cẳng chân lan lên đùi.",
-    "safety_vi": "⚠️ CẢNH BÁO TUYỆT ĐỐI: CHỐNG CHỈ ĐỊNH PHỤ NỮ CÓ THAI vì có tác dụng co bóp tử cung mạnh gây sảy thai.",
+    "safety_vi": "CẢNH BÁO TUYỆT ĐỐI: CHỐNG CHỈ ĐỊNH PHỤ NỮ CÓ THAI vì có tác dụng co bóp tử cung mạnh gây sảy thai.",
     "indications_vi": "Rong kinh, bế kinh, thống kinh, dọa sảy, di tinh, mất ngủ, bí tiểu, tiểu dầm, rối loạn tiêu hóa.",
     "position_3d": {
       "x": -0.46,
@@ -802,7 +802,7 @@
     "depth_mm": "10 - 20 mm",
     "direction_vi": "Châm thẳng hoặc châm xuyên sang huyệt Thái Khê.",
     "deqi_vi": "Tê tức gót chân và cổ chân ngoài.",
-    "safety_vi": "⚠️ Chống chỉ định phụ nữ có thai vì kích thích chuyển dạ.",
+    "safety_vi": "Chống chỉ định phụ nữ có thai vì kích thích chuyển dạ.",
     "indications_vi": "Đau lưng, đau thần kinh tọa, đau khớp cổ chân, nhức đầu sau gáy, cảm mạo phong hàn.",
     "position_3d": {
       "x": -1.11,
@@ -1031,7 +1031,7 @@
     "depth_mm": "5 - 10 mm",
     "direction_vi": "Dùng ngón tay đẩy động mạch quay vào trong rồi châm thẳng.",
     "deqi_vi": "Căng tức tại chỗ khớp cổ tay.",
-    "safety_vi": "⚠️ CẢNH BÁO: Tránh đâm xuyên thủng động mạch quay.",
+    "safety_vi": "CẢNH BÁO: Tránh đâm xuyên thủng động mạch quay.",
     "indications_vi": "Hội chứng mạch vô mạch, ho, hen suyễn, viêm phế quản, đau khớp cổ tay.",
     "position_3d": {
       "x": -2.9,
@@ -1143,7 +1143,7 @@
     "depth_mm": "15 - 25 mm",
     "direction_vi": "Châm thẳng góc 90° hoặc nghiêng mũi kim về phía xương bàn II.",
     "deqi_vi": "Tê tức buốt mạnh khắp bàn tay lan dọc cẳng tay lên mặt.",
-    "safety_vi": "⚠️ CẢNH BÁO AN TOÀN TUYỆT ĐỐI: CHỐNG CHỈ ĐỊNH PHỤ NỮ CÓ THAI vì có tác dụng giáng khí cực mạnh gây co thắt tử cung sảy thai.",
+    "safety_vi": "CẢNH BÁO AN TOÀN TUYỆT ĐỐI: CHỐNG CHỈ ĐỊNH PHỤ NỮ CÓ THAI vì có tác dụng giáng khí cực mạnh gây co thắt tử cung sảy thai.",
     "indications_vi": "Đau đầu, đau răng, liệt mặt dây VII ('Diện khẩu Hợp Cốc thu'), cảm cúm sốt cao, nghẹt mũi, bế kinh.",
     "position_3d": {
       "x": -2.87,
@@ -1210,7 +1210,7 @@
     "depth_mm": "5 - 10 mm",
     "direction_vi": "Châm luồn kim nằm ngang dưới da hướng xuống dưới hoặc lên trên.",
     "deqi_vi": "Căng tức nặng vùng xương ức, lồng ngực thông thoáng.",
-    "safety_vi": "⚠️ CẤM châm thẳng góc 90° vào xương ức có thể xuyên qua xương vào trung thất hoặc tim.",
+    "safety_vi": "CẤM châm thẳng góc 90° vào xương ức có thể xuyên qua xương vào trung thất hoặc tim.",
     "indications_vi": "Cơn đau thắt ngực, khó thở hen suyễn, nấc cụt, ho, viêm tuyến vú, tắc tia sữa.",
     "position_3d": {
       "x": 0.0,
@@ -1232,7 +1232,7 @@
     "depth_mm": "10 - 18 mm",
     "direction_vi": "Châm xiên hướng mũi kim ra ngoài về phía nách. CẤM châm sâu hướng vào trong ngực.",
     "deqi_vi": "Tê tức vùng ngực lan ra vai.",
-    "safety_vi": "⚠️ CẢNH BÁO AN TOÀN: Châm thẳng sâu vào trong nguy cơ xuyên màng phổi gây TRÀN KHÍ MÀNG PHỔI.",
+    "safety_vi": "CẢNH BÁO AN TOÀN: Châm thẳng sâu vào trong nguy cơ xuyên màng phổi gây TRÀN KHÍ MÀNG PHỔI.",
     "indications_vi": "Ho hen, khó thở, tức ngực, viêm phế quản, đau khớp vai và ngực.",
     "position_3d": {
       "x": -1.35,
@@ -1301,7 +1301,7 @@
     "depth_mm": "10 - 20 mm",
     "direction_vi": "Châm thẳng hoặc nghiêng ra sau. CẤM châm sâu hướng vào trong ngực.",
     "deqi_vi": "Tê tức nặng vùng vai lan xuống cánh tay.",
-    "safety_vi": "⚠️ CẢNH BÁO AN TOÀN: Dưới đáy huyệt là đỉnh màng phổi. Châm sâu > 25mm nguy cơ TRÀN KHÍ MÀNG PHỔI. Chống chỉ định thai phụ.",
+    "safety_vi": "CẢNH BÁO AN TOÀN: Dưới đáy huyệt là đỉnh màng phổi. Châm sâu > 25mm nguy cơ TRÀN KHÍ MÀNG PHỔI. Chống chỉ định thai phụ.",
     "indications_vi": "Đau cứng cổ gáy, co cứng cơ thang, nhức đầu vùng chẩm, viêm tuyến vú, tắc sữa.",
     "position_3d": {
       "x": -1.1,
@@ -1348,7 +1348,7 @@
     "depth_mm": "12 - 20 mm",
     "direction_vi": "Châm xiên hướng mũi kim về phía cột sống một góc 45°. CẤM châm thẳng sâu vào ngực.",
     "deqi_vi": "Tê tức cơ cạnh sống lan ra bả vai.",
-    "safety_vi": "⚠️ CẢNH BÁO: Châm thẳng sâu vào khoang liên sườn có thể gây tràn khí màng phổi.",
+    "safety_vi": "CẢNH BÁO: Châm thẳng sâu vào khoang liên sườn có thể gây tràn khí màng phổi.",
     "indications_vi": "Hội huyệt của Cốt (xương), đau vai gáy, cảm mạo phong hàn, ho, viêm phế quản.",
     "position_3d": {
       "x": -0.38,
@@ -1372,7 +1372,7 @@
     "depth_mm": "12 - 20 mm",
     "direction_vi": "Châm xiên chếch 45° về phía cột sống.",
     "deqi_vi": "Tê tức vùng lưng trên và vai.",
-    "safety_vi": "⚠️ Tránh châm thẳng góc vào màng phổi.",
+    "safety_vi": "Tránh châm thẳng góc vào màng phổi.",
     "indications_vi": "Phòng và trị cảm mạo, cúm, sốt, ho suyễn, đau lưng trên, đau cứng gáy.",
     "position_3d": {
       "x": -0.4,
@@ -1396,7 +1396,7 @@
     "depth_mm": "12 - 20 mm",
     "direction_vi": "Châm xiên chếch mũi kim về phía cột sống. CẤM châm thẳng 90°.",
     "deqi_vi": "Tê tức cơ lưng lan sang mạn sườn.",
-    "safety_vi": "⚠️ CẢNH BÁO AN TOÀN TUYỆT ĐỐI: Nguy cơ TRÀN KHÍ MÀNG PHỔI nếu châm thẳng quá sâu > 25mm.",
+    "safety_vi": "CẢNH BÁO AN TOÀN TUYỆT ĐỐI: Nguy cơ TRÀN KHÍ MÀNG PHỔI nếu châm thẳng quá sâu > 25mm.",
     "indications_vi": "Ho, hen suyễn, viêm phế quản, lao phổi, đổ mồ hôi trộm, viêm tuyến vú, chắp lẹo.",
     "position_3d": {
       "x": -0.55,
@@ -1420,7 +1420,7 @@
     "depth_mm": "12 - 20 mm",
     "direction_vi": "Châm xiên chếch về phía cột sống.",
     "deqi_vi": "Tê tức lan tỏa sâu vùng lưng giữa.",
-    "safety_vi": "⚠️ CẢNH BÁO: Tránh đâm thẳng góc vào màng phổi.",
+    "safety_vi": "CẢNH BÁO: Tránh đâm thẳng góc vào màng phổi.",
     "indications_vi": "Rối loạn nhịp tim, hồi hộp, mất ngủ, hay mê hoảng loạn, ho, động kinh.",
     "position_3d": {
       "x": -0.55,
@@ -1490,7 +1490,7 @@
     "depth_mm": "20 - 35 mm",
     "direction_vi": "Châm thẳng góc 90°.",
     "deqi_vi": "Căng tức nặng vùng thượng vị lan tỏa sang hai bên.",
-    "safety_vi": "⚠️ Không châm quá sâu ở người gầy hoặc bệnh nhân ăn quá no, gan lách to.",
+    "safety_vi": "Không châm quá sâu ở người gầy hoặc bệnh nhân ăn quá no, gan lách to.",
     "indications_vi": "Đau dạ dày, viêm loét dạ dày - tá tràng, nôn mửa, trào ngược thực quản, đầy bụng chậm tiêu.",
     "position_3d": {
       "x": 0.0,
@@ -1626,7 +1626,7 @@
     "depth_mm": "20 - 35 mm",
     "direction_vi": "Bảo bệnh nhân đi tiểu sạch trước khi châm, châm thẳng góc 90°.",
     "deqi_vi": "Căng tức nặng vùng hạ vị lan xuống bộ phận sinh dục ngoài.",
-    "safety_vi": "⚠️ CẢNH BÁO: Phải làm rỗng bàng quang trước khi châm sâu tránh đâm thủng bàng quang. Chống chỉ định thai phụ.",
+    "safety_vi": "CẢNH BÁO: Phải làm rỗng bàng quang trước khi châm sâu tránh đâm thủng bàng quang. Chống chỉ định thai phụ.",
     "indications_vi": "Huyệt đại bổ nguyên khí, di tinh, liệt dương, tiểu dầm, bí tiểu, rối loạn kinh nguyệt, suy kiệt.",
     "position_3d": {
       "x": 0.0,
@@ -1716,7 +1716,7 @@
     "depth_mm": "25 - 40 mm",
     "direction_vi": "Châm thẳng hoặc hơi xiên về phía cột sống.",
     "deqi_vi": "Tê tức sâu vùng thắt lưng lan tỏa ra phía trước bụng.",
-    "safety_vi": "⚠️ CẢNH BÁO AN TOÀN: Dưới sâu phía ngoài là tạng THẬN. CẤM châm xiên góc ra ngoài quá sâu tránh đâm vào nhu mô thận.",
+    "safety_vi": "CẢNH BÁO AN TOÀN: Dưới sâu phía ngoài là tạng THẬN. CẤM châm xiên góc ra ngoài quá sâu tránh đâm vào nhu mô thận.",
     "indications_vi": "Đau thắt lưng, đau thần kinh tọa, ù tai điếc tai, di tinh liệt dương, đái dầm, hen phế quản thể thận hư.",
     "position_3d": {
       "x": -0.55,
@@ -1785,7 +1785,7 @@
     "depth_mm": "25 - 40 mm",
     "direction_vi": "Châm thẳng hướng mũi kim chếch vào lỗ cùng xương cùng.",
     "deqi_vi": "Tê tức buốt sâu vùng xương cùng lan ra đáy chậu.",
-    "safety_vi": "⚠️ Chống chỉ định thai phụ.",
+    "safety_vi": "Chống chỉ định thai phụ.",
     "indications_vi": "Đau lưng cùng cụt, đau thần kinh tọa, rong kinh, thống kinh, dọa sảy, di tinh, liệt dương, tiểu dầm.",
     "position_3d": {
       "x": -0.45,
@@ -1878,7 +1878,7 @@
     "depth_mm": "5 - 10 mm",
     "direction_vi": "Châm thẳng hoặc luồn kim chếch hướng vào ống cổ tay.",
     "deqi_vi": "Cảm giác tê tức như điện giật lan xuống các ngón tay 1, 2, 3 (kích thích thần kinh giữa).",
-    "safety_vi": "⚠️ CẢNH BÁO AN TOÀN: Huyệt nằm ngay trên dây thần kinh giữa. Tuyệt đối không vê kim mạnh hoặc châm lệch gây tổn thương bao dây thần kinh.",
+    "safety_vi": "CẢNH BÁO AN TOÀN: Huyệt nằm ngay trên dây thần kinh giữa. Tuyệt đối không vê kim mạnh hoặc châm lệch gây tổn thương bao dây thần kinh.",
     "indications_vi": "Hội chứng ống cổ tay, viêm bao hoạt dịch cổ tay, hồi hộp đánh trống ngực, động kinh, mất ngủ, nôn mửa, đau dạ dày.",
     "position_3d": {
       "x": -2.72,
@@ -1947,7 +1947,7 @@
     "depth_mm": "10 - 15 mm",
     "direction_vi": "Châm thẳng vuông góc với mặt gan chân.",
     "deqi_vi": "Cảm giác tê tức buốt mạnh tại chỗ, lan tỏa khắp cả lòng bàn chân và dọc mặt trong cẳng chân.",
-    "safety_vi": "⚠️ Huyệt hồi sinh cấp cứu tối quan trọng (Tỉnh huyệt). Vùng gan chân da dày, cần sát trùng kỹ lưỡng và châm dứt khoát tránh đau co rút.",
+    "safety_vi": "Huyệt hồi sinh cấp cứu tối quan trọng (Tỉnh huyệt). Vùng gan chân da dày, cần sát trùng kỹ lưỡng và châm dứt khoát tránh đau co rút.",
     "indications_vi": "Cấp cứu đột quỵ ngất xỉu, hôn mê, sốt cao co giật trẻ em, đau đầu đỉnh đầu, hoa mắt chóng mặt, mất ngủ kinh niên, tăng huyết áp kịch phát, đau lòng bàn chân.",
     "position_3d": {
       "x": -0.98,

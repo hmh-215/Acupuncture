@@ -1,7 +1,7 @@
 import * as THREE from 'three';
-import { AppViewModel } from './viewmodels/AppViewModel.js?v=12.0';
-import { SceneView } from './views/SceneView.js?v=12.0';
-import { UIView } from './views/UIView.js?v=12.0';
+import { AppViewModel } from './viewmodels/AppViewModel.js?v=22.0';
+import { SceneView } from './views/SceneView.js?v=22.0';
+import { UIView } from './views/UIView.js?v=22.0';
 
 window.THREE = THREE;
 
@@ -44,6 +44,8 @@ async function main() {
     if (lectureParam) {
       uiView.selectLecture(lectureParam);
     }
+  } else if (sectionParam === 'help' || sectionParam === 'tro-giup') {
+    uiView.switchTopSection('section-help');
   } else if (modeParam === 'acupoints') {
     const tabPts = document.getElementById('tab-mode-acupoints');
     if (tabPts) tabPts.click();
@@ -69,7 +71,7 @@ async function main() {
   window.sceneView = sceneView;
   window.uiView = uiView;
 
-  console.log('✅ Ứng dụng 3D Hệ Cơ & Châm Cứu đã sẵn sàng!');
+  console.log('Ứng dụng 3D Hệ Cơ & Châm Cứu đã sẵn sàng!');
 }
 
 function startApp() {

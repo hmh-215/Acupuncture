@@ -63,3 +63,10 @@ desktop.ini
 .agents/
 AGENTS.md
 
+
+# Cong cu Watermark Studio & Video Processing
+watermark_studio/
+tools/watermark_studio/
+
+# Template tham khao Lumen Eighty
+templatemo_628_lumen_eighty/
