@@ -22,9 +22,16 @@ export class SceneView {
     // Vô hiệu hóa module biến dạng thủ công (tránh làm vỡ/nhiễu/phình to mesh FBX)
     this.muscleDeformer = null;
 
+    // Tối ưu hóa hiệu năng: Khống chế ~18 - 20 FPS cho mô hình giải phẫu (tiết kiệm ~70% GPU/CPU)
+    this.targetFPS = 20;
+    this.frameInterval = 1000 / this.targetFPS; // 50ms
+    this.lastFrameTime = performance.now();
+    this.isPaused = false;
+    this.animationId = null;
+
     this.scene = new THREE.Scene();
     this.currentTheme = 'light';
-    this.scene.background = new THREE.Color(0xf1f5f9); // Mặc định Light Mode y khoa chuẩn
+    this.scene.background = new THREE.Color(0xffffff); // Mặc định Light Mode y khoa chuẩn
 
     const aspect = container.clientWidth > 0 && container.clientHeight > 0 
       ? container.clientWidth / container.clientHeight 
@@ -107,7 +114,7 @@ export class SceneView {
       if (this.dirLight1) this.dirLight1.intensity = 0.95;
       if (this.dirLight2) this.dirLight2.color.setHex(0x38bdf8);
     } else {
-      this.scene.background.setHex(0xf1f5f9);
+      this.scene.background.setHex(0xffffff);
       if (this.ambientLight) this.ambientLight.intensity = 0.95;
       if (this.dirLight1) this.dirLight1.intensity = 1.05;
       if (this.dirLight2) this.dirLight2.color.setHex(0x0284c7);
@@ -910,7 +917,7 @@ export class SceneView {
 
           this.scene.add(gltf.scene);
           this._hideLoadingOverlay();
-          console.info(`✅ [GLTF Skinned] Đã nạp thành công ${this.allMuscleMeshes.length} SkinnedMesh hệ cơ với 14 khớp GPU Skinning!`);
+          console.info(`[GLTF Skinned] Đã nạp thành công ${this.allMuscleMeshes.length} SkinnedMesh hệ cơ với 14 khớp GPU Skinning!`);
           resolve();
         },
         (xhr) => {
@@ -950,7 +957,7 @@ export class SceneView {
 
           this._attachFBXToRig(fbx, 'muscle');
           this._hideLoadingOverlay();
-          console.info(`✅ Đã nạp & Rigging ${this.allMuscleMeshes.length} thớ cơ thật từ Z-Anatomy!`);
+          console.info(`Đã nạp & Rigging ${this.allMuscleMeshes.length} thớ cơ thật từ Z-Anatomy!`);
           resolve();
         },
         (xhr) => {
@@ -1018,7 +1025,7 @@ export class SceneView {
           this._attachFBXToRig(fbx, 'nervous');
           this.isNervousLoaded = true;
           this._hideLoadingOverlay();
-          console.info(`✅ Đã nạp & liên kết hệ thần kinh vào Rig!`);
+          console.info(`Đã nạp & liên kết hệ thần kinh vào Rig!`);
           resolve();
         },
         undefined,
@@ -1562,19 +1569,19 @@ export class SceneView {
     if (!ud) return '';
 
     if (ud.type === 'acupoint') {
-      return `🔴 Huyệt ${ud.name_vi} (${ud.code})`;
+      return `Huyệt ${ud.name_vi} (${ud.code})`;
     } else if (ud.type === 'muscle') {
       if (this.appVM && this.appVM.muscleData && Array.isArray(this.appVM.muscleData)) {
         const m = this.appVM.muscleData.find(item => item.id === ud.id);
         if (m && m.name_vi) {
           const side = (ud.meshName && (ud.meshName.endsWith('.r') || ud.meshName.endsWith('r') || ud.meshName.includes('.r.'))) ? ' (phải)' :
                        (ud.meshName && (ud.meshName.endsWith('.l') || ud.meshName.endsWith('l') || ud.meshName.includes('.l.'))) ? ' (trái)' : '';
-          return `💪 ${m.name_vi}${side}`;
+          return `${m.name_vi}${side}`;
         }
       }
-      return `💪 ${this._translateAnatomyNameToVi(ud.meshName || object.name, 'muscle')}`;
+      return `${this._translateAnatomyNameToVi(ud.meshName || object.name, 'muscle')}`;
     } else if (ud.type === 'nervous') {
-      return `🧠 ${this._translateAnatomyNameToVi(ud.meshName || object.name, 'nervous')}`;
+      return `${this._translateAnatomyNameToVi(ud.meshName || object.name, 'nervous')}`;
     }
 
     return this._translateAnatomyNameToVi(object.name, 'anatomy');
@@ -1603,6 +1610,24 @@ export class SceneView {
     this.sceneVM.on('nervousOpacity', opacity => this.setNervousOpacity(opacity));
     this.sceneVM.on('displayedAcupoints', acupoints => this.displayAcupoints(acupoints));
     this.sceneVM.on('focusedAcupointCode', code => this.focusAcupoint(code));
+
+    // Lắng nghe lệnh bật/tắt render 3D khi chuyển tab Video / 3D Model
+    this.sceneVM.on('isRendering', isRendering => {
+      if (isRendering) {
+        this.resumeRender();
+      } else {
+        this.pauseRender();
+      }
+    });
+
+    // Lắng nghe sự kiện ẩn/hiện tab của trình duyệt (tiết kiệm pin & tài nguyên máy khi minimize)
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        this.pauseRender();
+      } else if (this.sceneVM.state.isRendering) {
+        this.resumeRender();
+      }
+    });
 
     if (this.appVM.movementVM) {
       this.appVM.movementVM.on('selectedMovementId', movementId => {
@@ -2083,8 +2108,44 @@ export class SceneView {
     this._applyStatuePose(null);
   }
 
+  /**
+   * Tạm dừng hoàn toàn render loop Three.js để giải phóng 100% GPU/CPU khi ở Tab Video
+   */
+  pauseRender() {
+    if (this.isPaused) return;
+    this.isPaused = true;
+    if (this.animationId) {
+      cancelAnimationFrame(this.animationId);
+      this.animationId = null;
+    }
+  }
+
+  /**
+   * Khôi phục lại render loop Three.js khi người dùng quay lại Tab 3D
+   */
+  resumeRender() {
+    if (!this.isPaused) return;
+    this.isPaused = false;
+    this.lastFrameTime = performance.now();
+    this._onResize();
+    if (!this.animationId) {
+      this._animate();
+    }
+  }
+
   _animate() {
+    if (this.isPaused) return;
     this.animationId = requestAnimationFrame(() => this._animate());
+
+    const now = performance.now();
+    const elapsed = now - this.lastFrameTime;
+
+    // Giới hạn FPS ở mức ~20 FPS cho mô hình giải phẫu (tiết kiệm ~70% GPU/CPU)
+    if (elapsed < this.frameInterval) {
+      return;
+    }
+    this.lastFrameTime = now - (elapsed % this.frameInterval);
+
     this._updatePoseInterpolation();
 
     // Đồng bộ ma trận thế giới toàn bộ rig trước khi tính toán biến dạng LBS
@@ -2137,8 +2198,8 @@ export class SceneView {
   }
 
   dispose() {
+    this.pauseRender();
     window.removeEventListener('resize', this._onResize.bind(this));
-    cancelAnimationFrame(this.animationId);
     this.renderer.dispose();
   }
 }
