@@ -1,5 +1,5 @@
 import { Observable } from './Observable.js?v=12.0';
-import { SceneViewModel } from './SceneViewModel.js?v=12.0';
+import { SceneViewModel } from './SceneViewModel.js?v=27.0';
 import { MovementViewModel } from './MovementViewModel.js?v=12.0';
 import { AcupointMapViewModel } from './AcupointMapViewModel.js?v=12.0';
 import { AcupunctureViewModel } from './AcupunctureViewModel.js?v=12.0';

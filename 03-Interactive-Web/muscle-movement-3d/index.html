@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yếu lược châm cứu hệ đạo dẫn — Mô hình 3D & Video Bài Giảng</title>
   
-  <!-- Google Fonts: Plus Jakarta Sans, Cormorant Garamond (từ Lumen Eighty), Be Vietnam Pro & JetBrains Mono -->
+  <!-- Google Fonts: Be Vietnam Pro (UI), Newsreader (Latin giải phẫu), JetBrains Mono (Mã số/Chỉ số) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,wght@1,400;1,500;1,600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/css/theme.css?v=22.0">
+  <link rel="stylesheet" href="assets/css/theme.css?v=27.0">
+  <link rel="stylesheet" href="assets/css/layout-portrait.css?v=27.0">
   <link rel="icon" href="data:,">
 
   <!-- Three.js via ES Module importmap (Local Bundle 100% Offline & Tốc độ cao) -->
@@ -25,28 +26,30 @@
   </script>
 </head>
 <body>
+  <div id="app-container">
 
-  <!-- ===================== TOP HEADER & NAVIGATION BAR (LUMEN EIGHTY STYLE) ===================== -->
-  <header class="site-header" id="top-nav-bar">
+  <!-- ===================== TOP HEADER & NAVIGATION BAR (UNIFIED ANATOMY THEME) ===================== -->
+  <header class="site-header app-header" id="top-nav-bar">
     <div class="header-inner">
       <a href="#section-3d-model" class="brand" id="brand-logo">
-        Yếu lược châm cứu hệ đạo dẫn
+        <span class="brand-title">YẾU LƯỢC CHÂM CỨU HỆ ĐẠO DẪN</span>
+        <span class="brand-sub">Giải Phẫu Cơ Sinh Học &amp; Huyệt Đạo 3D</span>
       </a>
 
       <nav class="main-nav" aria-label="Điều hướng chính">
         <ul class="nav-list">
           <li class="nav-item">
-            <button type="button" class="nav-link nav-tab-btn active is-active" id="nav-btn-3d" data-section="section-3d-model">
+            <button type="button" class="nav-link nav-tab nav-tab-btn active is-active" id="nav-btn-3d" data-section="section-3d-model">
               <span class="nav-tab-title">Mô hình 3D</span>
             </button>
           </li>
           <li class="nav-item">
-            <button type="button" class="nav-link nav-tab-btn" id="nav-btn-video" data-section="section-video-lectures">
+            <button type="button" class="nav-link nav-tab nav-tab-btn" id="nav-btn-video" data-section="section-video-lectures">
               <span class="nav-tab-title">Video bài giảng</span>
             </button>
           </li>
           <li class="nav-item">
-            <button type="button" class="nav-link nav-tab-btn" id="nav-btn-help" data-section="section-help">
+            <button type="button" class="nav-link nav-tab nav-tab-btn" id="nav-btn-help" data-section="section-help">
               <span class="nav-tab-title">Trợ giúp</span>
             </button>
           </li>
@@ -457,6 +460,31 @@
 
       </div>
     </aside>
+
+    <!-- MOBILE PORTRAIT PANEL TOGGLE BUTTON (Double Chevron Circle - Chỉ hiển thị ở Portrait Mobile) -->
+    <button type="button" id="portrait-panel-toggle" class="portrait-panel-toggle" aria-label="Mở bảng điều khiển" aria-expanded="false">
+      <svg class="portrait-toggle-icon icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="17 16 12 11 7 16"></polyline>
+        <polyline points="17 10 12 5 7 10"></polyline>
+      </svg>
+      <svg class="portrait-toggle-icon icon-collapse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="7 8 12 13 17 8"></polyline>
+        <polyline points="7 14 12 19 17 14"></polyline>
+      </svg>
+    </button>
+
+    <!-- MOBILE PORTRAIT FOCUSED 1/3 BOTTOM POPUP (Chi tiết cơ hoặc huyệt khi chạm trực tiếp trên 3D ở Portrait) -->
+    <aside id="portrait-detail-popup" class="portrait-detail-popup organ-drawer panel" aria-hidden="true">
+      <div class="drawer-header">
+        <div>
+          <span id="portrait-popup-badge" class="detail-badge-code" style="display:none;"></span>
+          <h2 id="portrait-popup-title" class="organ-title">Chi tiết giải phẫu</h2>
+          <div id="portrait-popup-sub" class="drawer-latin latin"></div>
+        </div>
+        <button type="button" id="portrait-popup-close" class="drawer-close-btn" title="Đóng">✕</button>
+      </div>
+      <div id="portrait-popup-content" class="drawer-scroll-body"></div>
+    </aside>
   </main>
 
   <!-- ===================== SECTION 2: VIDEO THUYẾT MINH BÀI GIẢNG ===================== -->
@@ -679,152 +707,66 @@
     </aside>
   </main>
 
-  <!-- ===================== SECTION 3: HƯỚNG DẪN & TRỢ GIÚP ĐIỀU HƯỚNG ===================== -->
+  <!-- ===================== SECTION 3: TRỢ GIÚP (HƯỚNG DẪN THAO TÁC) ===================== -->
   <main class="help-section-layout" id="section-help" style="display: none;">
     <div class="help-container">
       
       <!-- Header Banner -->
       <header class="help-header">
-        <span class="help-badge">HƯỚNG DẪN SỬ DỤNG &amp; ĐIỀU HƯỚNG ỨNG DỤNG</span>
-        <h1 class="help-title">Cẩm Nang Thao Tác Web App Y Khoa 3D</h1>
+        <span class="help-badge tag">HƯỚNG DẪN THAO TÁC</span>
+        <h1 class="help-title">Cách Điều Khiển Mô Hình 3D</h1>
         <p class="help-subtitle">
-          Tổng hợp chi tiết các thao tác điều khiển chuột, cảm ứng, chuyển đổi 3 chế độ khảo sát, tra cứu cử động &amp; khai thác bài giảng video.
+          Các thao tác cơ bản bằng chuột hoặc cảm ứng để xoay, phóng to và tra cứu giải phẫu – huyệt đạo 3D.
         </p>
       </header>
 
-      <!-- Grid of Help Guides -->
+      <!-- Grid of Help Guides (Rút gọn 2 cột đồng bộ anatomy-theme) -->
       <div class="help-grid">
 
-        <!-- Card 1: Thao tác điều khiển Mô hình 3D -->
-        <article class="help-card">
+        <!-- Card 1: Điều khiển góc nhìn 3D -->
+        <article class="help-card layer-card">
           <div class="help-card-header">
             <span class="help-step-number">01</span>
-            <h2 class="help-card-title">Thao Tác Điều Khiển Mô Hình 3D</h2>
+            <h2 class="help-card-title">Điều Khiển Góc Nhìn 3D</h2>
           </div>
-          <p class="help-card-desc">Khung nhìn 3D trực quan hỗ trợ đầy đủ các thao tác chuột và cảm ứng đa điểm:</p>
           <ul class="help-feature-list">
             <li>
-              <div class="help-key-badge">Chuột Trái (Giữ &amp; Rê)</div>
-              <div class="help-feature-text"><strong>Xoay mô hình (Orbit 360°):</strong> Xoay không gian 3 chiều quanh trục cơ thể để khảo sát giải phẫu ở mọi góc độ.</div>
+              <div class="help-key-badge">Xoay 360°</div>
+              <div class="help-feature-text">Giữ và kéo <strong>chuột trái</strong>, hoặc <strong>vuốt 1 ngón tay</strong> trên màn hình.</div>
             </li>
             <li>
-              <div class="help-key-badge">Lăn Chuột Giữa (Cuộn)</div>
-              <div class="help-feature-text"><strong>Thu phóng (Zoom In / Out):</strong> Phóng to để quan sát chi tiết bám tận/nguyên ủy hoặc thu nhỏ để xem toàn thân.</div>
+              <div class="help-key-badge">Thu / Phóng</div>
+              <div class="help-feature-text">Cuộn <strong>con lăn chuột</strong>, hoặc <strong>chụm / mở 2 ngón tay</strong>.</div>
             </li>
             <li>
-              <div class="help-key-badge">Chuột Phải (Giữ &amp; Rê)</div>
-              <div class="help-feature-text"><strong>Tịnh tiến góc nhìn (Pan):</strong> Di chuyển tâm nhìn lên, xuống, sang trái hoặc sang phải (hoặc giữ phím <code>Shift</code> + Chuột Trái).</div>
+              <div class="help-key-badge">Di Chuyển Tâm Nhìn</div>
+              <div class="help-feature-text">Giữ và kéo <strong>chuột phải</strong> (hoặc <code>Shift</code> + chuột trái), hoặc <strong>kéo 2 ngón tay</strong>.</div>
             </li>
             <li>
-              <div class="help-key-badge">Rê Chuột &amp; Nhấp Chọn Cơ</div>
-              <div class="help-feature-text"><strong>Khảo sát giải phẫu:</strong> Rê chuột lên cơ/huyệt để xem tên nhanh; nhấp chọn để mở bảng hồ sơ giải phẫu chi tiết.</div>
+              <div class="help-key-badge">Xem Chi Tiết</div>
+              <div class="help-feature-text">Rê chuột hoặc <strong>chạm trực tiếp</strong> vào bắp cơ hoặc điểm huyệt trên 3D để xem hồ sơ giải phẫu và độ sâu châm kim.</div>
             </li>
           </ul>
         </article>
 
-        <!-- Card 2: Chuyển đổi 3 Chế độ Khảo sát -->
-        <article class="help-card">
+        <!-- Card 2: Chế độ, Bảng điều khiển & Điện thoại -->
+        <article class="help-card layer-card">
           <div class="help-card-header">
             <span class="help-step-number">02</span>
-            <h2 class="help-card-title">Chuyển Đổi 3 Chế Độ Khảo Sát</h2>
+            <h2 class="help-card-title">Chế Độ, Bộ Lọc &amp; Điện Thoại</h2>
           </div>
-          <p class="help-card-desc">Thanh menu màu đỏ ở đầu cột phải cho phép chuyển đổi linh hoạt giữa 3 chuyên đề:</p>
           <ul class="help-feature-list">
             <li>
-              <div class="help-key-badge badge-mode">Động học cử động</div>
-              <div class="help-feature-text">Khảo sát cơ sinh học đại thể, phân vai cơ học (Chủ vận, Đối vận, Hiệp đồng, Ổn định) trong các cử động mẫu và chuỗi Đạo Dẫn.</div>
+              <div class="help-key-badge badge-mode">Chuyển 3 Chế Độ</div>
+              <div class="help-feature-text">Bấm thanh menu đỏ để chuyển giữa <strong>Động học cử động</strong>, <strong>Bản đồ huyệt đạo 3D</strong> và <strong>Châm cứu trị liệu</strong>.</div>
             </li>
             <li>
-              <div class="help-key-badge badge-mode">Bản đồ huyệt đạo 3D</div>
-              <div class="help-feature-text">Hệ thống 90 huyệt đạo toàn thân chuẩn WHO kết hợp Hệ Thần Kinh ngoại biên và Hệ Cơ bán trong suốt (10%).</div>
+              <div class="help-key-badge">Lọc &amp; Thẻ Huyệt</div>
+              <div class="help-feature-text">Bấm trực tiếp các mục trong bảng <strong>Chú giải</strong> trên 3D để lọc nhóm cơ; bấm từng huyệt để mở rộng thông tin xuống dưới.</div>
             </li>
             <li>
-              <div class="help-key-badge badge-mode">Châm cứu trị liệu</div>
-              <div class="help-feature-text">Phân tích hội chứng đau cân cơ (Myofascial Pain), cơ co rút đối ứng, đường truyền chuỗi Kinh Cân YHCT và các huyệt vị đặc trị.</div>
-            </li>
-          </ul>
-        </article>
-
-        <!-- Card 3: Thanh tìm kiếm mở rộng & Lọc Real-time -->
-        <article class="help-card">
-          <div class="help-card-header">
-            <span class="help-step-number">03</span>
-            <h2 class="help-card-title">Tìm Kiếm Cử Động Mở Rộng (Expandable Search)</h2>
-          </div>
-          <p class="help-card-desc">Thanh tìm kiếm thông minh tự động mở rộng và lọc dữ liệu đa chiều trong thời gian thực:</p>
-          <ul class="help-feature-list">
-            <li>
-              <div class="help-key-badge">Gõ từ khóa</div>
-              <div class="help-feature-text">Tìm kiếm đa năng: Hỗ trợ tiếng Việt có dấu/không dấu (ví dụ: <em>nang tay, buoc, cui, khop vai</em>), tiếng Anh, hoặc <strong>tên bất kỳ nhóm cơ nào</strong> (ví dụ: <em>cơ delta, cơ thang, cơ ngực</em>).</div>
-            </li>
-            <li>
-              <div class="help-key-badge">Phím Mũi Tên &amp; Enter</div>
-              <div class="help-feature-text">Dùng phím <code>↑</code> / <code>↓</code> để duyệt danh sách kết quả thả xuống và nhấn <code>Enter</code> để chọn ngay cử động.</div>
-            </li>
-            <li>
-              <div class="help-key-badge">Nút Xóa Nhanh ✕</div>
-              <div class="help-feature-text">Nhấp vào nút <code>✕</code> ở cạnh phải ô tìm kiếm để xóa trắng nội dung và hiển thị lại toàn bộ danh mục cử động.</div>
-            </li>
-          </ul>
-        </article>
-
-        <!-- Card 4: Lọc Phân Vai Cơ & Chú Giải Trực Quan -->
-        <article class="help-card">
-          <div class="help-card-header">
-            <span class="help-step-number">04</span>
-            <h2 class="help-card-title">Lọc Phân Vai Cơ &amp; Bảng Chú Giải (Legend)</h2>
-          </div>
-          <p class="help-card-desc">Khả năng tương tác hai chiều đồng bộ giữa mô hình 3D và danh sách thông tin:</p>
-          <ul class="help-feature-list">
-            <li>
-              <div class="help-key-badge">Bảng Chú Giải Trên 3D</div>
-              <div class="help-feature-text">Nhấp vào từng mục trong bảng <strong>Chú giải phân vai cơ</strong> (Cơ chủ vận, Cơ đối vận, Cơ hiệp đồng, Cơ ổn định) để lọc riêng nhóm cơ đó trên mô hình.</div>
-            </li>
-            <li>
-              <div class="help-key-badge">Tag Trạng Thái Bộ Lọc</div>
-              <div class="help-feature-text">Tag <code>[ Tất cả ]</code> ở đầu mục "Các nhóm cơ tham gia" sẽ cập nhật theo vai trò đang chọn. Nhấp vào Tag này bất kỳ lúc nào để quay lại trạng thái Tất cả.</div>
-            </li>
-            <li>
-              <div class="help-key-badge">Điều Chỉnh Lớp Giải Phẫu</div>
-              <div class="help-feature-text">Bật/tắt hoặc kéo thanh trượt điều chỉnh độ mờ của <strong>Hệ Cơ</strong> và <strong>Hệ Thần Kinh</strong> ở góc dưới bên trái khung nhìn 3D.</div>
-            </li>
-          </ul>
-        </article>
-
-        <!-- Card 5: Học Tập Video Bài Giảng Lâm Sàng -->
-        <article class="help-card">
-          <div class="help-card-header">
-            <span class="help-step-number">05</span>
-            <h2 class="help-card-title">Video Bài Giảng Thuyết Minh &amp; Transcript</h2>
-          </div>
-          <p class="help-card-desc">Trải nghiệm bài giảng đa phương tiện chuyên sâu:</p>
-          <ul class="help-feature-list">
-            <li>
-              <div class="help-key-badge">Chuyển Tab Video</div>
-              <div class="help-feature-text">Nhấp chọn tab <strong>Video bài giảng</strong> trên thanh điều hướng trên cùng. Ba tab con bên dưới gồm: <em>Tóm tắt sư phạm, Phân cảnh Micro-Shots, và Transcript phụ đề thời gian thực</em>.</div>
-            </li>
-            <li>
-              <div class="help-key-badge">Tối Ưu Hiệu Năng</div>
-              <div class="help-feature-text">Hệ thống tự động tạm dừng mô hình 3D khi bạn xem video bài giảng để dành toàn bộ năng lực xử lý phần cứng cho trải nghiệm phát mượt mà.</div>
-            </li>
-          </ul>
-        </article>
-
-        <!-- Card 6: Hỗ Trợ Đa Thiết Bị & Mẹo Sử Dụng -->
-        <article class="help-card">
-          <div class="help-card-header">
-            <span class="help-step-number">06</span>
-            <h2 class="help-card-title">Mẹo Sử Dụng &amp; Thiết Bị Khuyên Dùng</h2>
-          </div>
-          <p class="help-card-desc">Tối ưu hóa hiển thị cho học tập và giảng dạy lâm sàng:</p>
-          <ul class="help-feature-list">
-            <li>
-              <div class="help-key-badge">Trình Duyệt Khuyên Dùng</div>
-              <div class="help-feature-text">Tối ưu nhất trên Chrome, Edge, Safari hoặc Firefox phiên bản mới nhất hỗ trợ WebGL 2.0.</div>
-            </li>
-            <li>
-              <div class="help-key-badge">Màn Hình &amp; Độ Phân Giải</div>
-              <div class="help-feature-text">Ứng dụng tự động co giãn thích ứng (Responsive). Hiển thị trực quan nhất trên màn hình máy tính (Desktop/Laptop) hoặc máy tính bảng xoay ngang.</div>
+              <div class="help-key-badge">Trên Điện Thoại</div>
+              <div class="help-feature-text">Ở màn hình dọc, bấm <strong>nút mũi tên tròn đỏ–trắng</strong> ở góc dưới phải để mở bảng điều khiển toàn màn hình, hoặc chạm trực tiếp trên 3D để xem nhanh; xoay ngang máy để xem song song 2 cột.</div>
             </li>
           </ul>
         </article>
@@ -841,7 +783,7 @@
   </main>
 
   <!-- ===================== BOTTOM MEDICAL DISCLAIMER & FOOTER BAR ===================== -->
-  <footer class="medical-disclaimer-banner" role="contentinfo" aria-label="Cảnh báo miễn trừ trách nhiệm y khoa">
+  <footer class="medical-disclaimer-banner disclaimer" role="contentinfo" aria-label="Cảnh báo miễn trừ trách nhiệm y khoa">
     <div class="disclaimer-inner">
       <div class="disclaimer-text">
         <strong class="disclaimer-title">LƯU Ý MIỄN TRỪ TRÁCH NHIỆM Y KHOA (DISCLAIMER):</strong>
@@ -850,7 +792,9 @@
     </div>
   </footer>
 
-  <!-- App Entry Point (v19.0 cache bust) -->
-  <script type="module" src="app.js?v=22.0"></script>
+  </div><!-- /#app-container -->
+
+  <!-- App Entry Point (v27.0 cache bust) -->
+  <script type="module" src="app.js?v=27.0"></script>
 </body>
 </html>

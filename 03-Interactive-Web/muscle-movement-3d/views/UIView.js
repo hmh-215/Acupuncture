@@ -20,6 +20,7 @@ export class UIView {
     this._setupEventListeners();
     this._initLectures();
     this._switchMode('kinematics');
+    this._initPortraitLayout();
   }
 
   _cacheElements() {
@@ -132,6 +133,16 @@ export class UIView {
       valNervousOpacity: document.getElementById('val-nervous-opacity'),
 
       loadingOverlay: document.getElementById('loading-overlay'),
+      threeContainer: document.getElementById('three-container'),
+
+      // Mobile Portrait Toggle & 1/3 Bottom Popup
+      portraitPanelToggleBtn: document.getElementById('portrait-panel-toggle'),
+      portraitPopup: document.getElementById('portrait-detail-popup'),
+      portraitPopupBadge: document.getElementById('portrait-popup-badge'),
+      portraitPopupTitle: document.getElementById('portrait-popup-title'),
+      portraitPopupSub: document.getElementById('portrait-popup-sub'),
+      portraitPopupContent: document.getElementById('portrait-popup-content'),
+      portraitPopupClose: document.getElementById('portrait-popup-close'),
 
       // Mục 3: Trợ giúp & Cẩm nang điều hướng
       navBtnHelp: document.getElementById('nav-btn-help'),
@@ -437,8 +448,10 @@ export class UIView {
       const handleMuscleOpacity = (e) => {
         const val = parseFloat(e.target.value);
         if (this.els.valMuscleOpacity) this.els.valMuscleOpacity.textContent = `${Math.round(val)}%`;
+        this.els.sliderMuscleOpacity.style.setProperty('--progress', `${val}%`);
         if (this.sceneVM) this.sceneVM.setMuscleOpacity(val / 100);
       };
+      this.els.sliderMuscleOpacity.style.setProperty('--progress', `${this.els.sliderMuscleOpacity.value}%`);
       this.els.sliderMuscleOpacity.addEventListener('input', handleMuscleOpacity);
       this.els.sliderMuscleOpacity.addEventListener('change', handleMuscleOpacity);
     }
@@ -455,8 +468,10 @@ export class UIView {
       const handleNervousOpacity = (e) => {
         const val = parseFloat(e.target.value);
         if (this.els.valNervousOpacity) this.els.valNervousOpacity.textContent = `${Math.round(val)}%`;
+        this.els.sliderNervousOpacity.style.setProperty('--progress', `${val}%`);
         if (this.sceneVM) this.sceneVM.setNervousOpacity(val / 100);
       };
+      this.els.sliderNervousOpacity.style.setProperty('--progress', `${this.els.sliderNervousOpacity.value}%`);
       this.els.sliderNervousOpacity.addEventListener('input', handleNervousOpacity);
       this.els.sliderNervousOpacity.addEventListener('change', handleNervousOpacity);
     }
@@ -586,6 +601,8 @@ export class UIView {
     if (mode === 'acupuncture') mode = 'therapy';
 
     this.appVM.setMode(mode);
+    document.body.dataset.activeMode = mode;
+    if (this._hidePortraitPopup) this._hidePortraitPopup();
 
     // Bỏ active tất cả các tab
     if (this.els.tabModeKinematics) this.els.tabModeKinematics.classList.remove('active');
@@ -618,7 +635,10 @@ export class UIView {
       if (this.els.toggleMuscles) this.els.toggleMuscles.checked = true;
 
       // Phục hồi hệ cơ 100%
-      if (this.els.sliderMuscleOpacity) this.els.sliderMuscleOpacity.value = 100;
+      if (this.els.sliderMuscleOpacity) {
+        this.els.sliderMuscleOpacity.value = 100;
+        this.els.sliderMuscleOpacity.style.setProperty('--progress', '100%');
+      }
       if (this.els.valMuscleOpacity) this.els.valMuscleOpacity.textContent = '100%';
 
       if (this.sceneVM) {
@@ -643,9 +663,15 @@ export class UIView {
       if (this.els.toggleMuscles) this.els.toggleMuscles.checked = true;
 
       // Mặc định Hệ Cơ chỉ có opaque = 10% khởi điểm, Hệ Thần Kinh 90%
-      if (this.els.sliderMuscleOpacity) this.els.sliderMuscleOpacity.value = 10;
+      if (this.els.sliderMuscleOpacity) {
+        this.els.sliderMuscleOpacity.value = 10;
+        this.els.sliderMuscleOpacity.style.setProperty('--progress', '10%');
+      }
       if (this.els.valMuscleOpacity) this.els.valMuscleOpacity.textContent = '10%';
-      if (this.els.sliderNervousOpacity) this.els.sliderNervousOpacity.value = 90;
+      if (this.els.sliderNervousOpacity) {
+        this.els.sliderNervousOpacity.value = 90;
+        this.els.sliderNervousOpacity.style.setProperty('--progress', '90%');
+      }
       if (this.els.valNervousOpacity) this.els.valNervousOpacity.textContent = '90%';
 
       if (this.sceneVM) {
@@ -676,7 +702,10 @@ export class UIView {
       if (this.els.toggleMuscles) this.els.toggleMuscles.checked = true;
 
       // Phục hồi hệ cơ 100%
-      if (this.els.sliderMuscleOpacity) this.els.sliderMuscleOpacity.value = 100;
+      if (this.els.sliderMuscleOpacity) {
+        this.els.sliderMuscleOpacity.value = 100;
+        this.els.sliderMuscleOpacity.style.setProperty('--progress', '100%');
+      }
       if (this.els.valMuscleOpacity) this.els.valMuscleOpacity.textContent = '100%';
 
       if (this.sceneVM) {
@@ -1195,7 +1224,7 @@ export class UIView {
   }
 
   // ============================================================
-  // RENDER THÔNG TIN CHẾ ĐỘ 2: BẢN ĐỒ 80 HUYỆT ĐẠO TOÀN THÂN
+  // RENDER THÔNG TIN CHẾ ĐỘ 2: BẢN ĐỒ 90 HUYỆT ĐẠO TOÀN THÂN
   // ============================================================
   _renderAcupointMapList(points) {
     if (!this.els.acupointMapList) return;
@@ -1214,75 +1243,153 @@ export class UIView {
     const selectedCode = this.appVM?.acupointMapVM?.state.selectedAcupoint?.code;
 
     points.forEach(pt => {
+      const isExpanded = (pt.code === selectedCode);
       const item = document.createElement('div');
-      item.className = 'map-acupoint-item' + (pt.code === selectedCode ? ' active' : '');
+      item.className = 'acupoint-map-item' + (isExpanded ? ' is-expanded active' : '');
       item.dataset.code = pt.code;
       item.innerHTML = `
-        <div class="map-acupoint-left">
-          <span class="map-acupoint-code">${pt.code}</span>
-          <div>
-            <div class="map-acupoint-name">${pt.name_vi} <span class="map-acupoint-han">(${pt.name_han_viet || ''})</span></div>
-            <div class="map-acupoint-meridian">${pt.meridian_vi || ''}</div>
+        <div class="acupoint-item-header" role="button" tabindex="0" aria-expanded="${isExpanded}">
+          <div class="acupoint-item-main">
+            <span class="acupoint-item-code">${pt.code}</span>
+            <div class="acupoint-item-titles">
+              <div class="acupoint-item-title-row">
+                <span class="acupoint-item-name">${pt.name_vi}</span>
+                ${pt.name_han_viet ? `<span class="acupoint-item-han">(${pt.name_han_viet})</span>` : ''}
+              </div>
+              <div class="acupoint-item-meridian">${pt.meridian_vi || ''}</div>
+            </div>
+          </div>
+          <div class="acupoint-item-meta">
+            <span class="acupoint-region-tag">${pt.region_vi || pt.region || ''}</span>
+            <span class="acupoint-chevron">${isExpanded ? '▲' : '▼'}</span>
           </div>
         </div>
-        <div class="map-acupoint-right">
-          <span class="map-acupoint-region-tag">${pt.region_vi || pt.region || ''}</span>
+        <div class="acupoint-item-body">
+          <div class="acupoint-detail-grid">
+            <div class="acupoint-detail-field">
+              <span class="field-label">Định vị giải phẫu:</span>
+              <span class="field-value">${pt.location_vi || 'Đang cập nhật'}</span>
+            </div>
+            <div class="acupoint-detail-field">
+              <span class="field-label">Độ sâu & Hướng kim:</span>
+              <span class="field-value">${pt.depth_mm || ''}${pt.direction_vi ? ` • Hướng kim: ${pt.direction_vi}` : ''}</span>
+            </div>
+            <div class="acupoint-detail-field">
+              <span class="field-label">Cảm giác Đắc Khí:</span>
+              <span class="field-value">${pt.deqi_vi || 'Tê, tức, nặng, căng lan theo kinh lạc (Đắc khí).'}</span>
+            </div>
+            <div class="acupoint-detail-field">
+              <span class="field-label">Tác dụng & Chỉ định:</span>
+              <span class="field-value">${pt.indications_vi || 'Điều hòa khí huyết, thư cân hoạt lạc.'}</span>
+            </div>
+          </div>
+          ${pt.safety_vi ? `
+            <div class="acupoint-safety-box">
+              <div class="safety-label">Cảnh báo an toàn y khoa:</div>
+              <div class="safety-text">${pt.safety_vi}</div>
+            </div>
+          ` : ''}
+          <div class="acupoint-card-actions">
+            <button type="button" class="btn-focus-3d" data-code="${pt.code}">
+              Tiêu điểm 3D
+            </button>
+            <button type="button" class="btn-collapse-item" data-code="${pt.code}">
+              Thu gọn ▲
+            </button>
+          </div>
         </div>
       `;
 
-      item.addEventListener('click', () => {
-        if (this.appVM?.acupointMapVM) {
-          const currentCode = this.appVM.acupointMapVM.state.focusedAcupointCode;
-          this.appVM.acupointMapVM.selectAcupoint(currentCode === pt.code ? null : pt.code);
-        }
-      });
+      const header = item.querySelector('.acupoint-item-header');
+      if (header) {
+        header.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (this.appVM?.acupointMapVM) {
+            this.appVM.acupointMapVM.selectAcupoint(pt.code);
+          }
+        });
+        header.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            header.click();
+          }
+        });
+      }
+
+      const btnFocus = item.querySelector('.btn-focus-3d');
+      if (btnFocus) {
+        btnFocus.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (this.sceneVM) this.sceneVM.focusAcupoint(pt.code);
+          if (document.body.classList.contains('layout-portrait')) {
+            this._setPortraitView('canvas');
+            this._showPortraitAcupointPopup(pt);
+          }
+        });
+      }
+
+      const btnCollapse = item.querySelector('.btn-collapse-item');
+      if (btnCollapse) {
+        btnCollapse.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (this.appVM?.acupointMapVM) {
+            this.appVM.acupointMapVM.selectAcupoint(null);
+          }
+        });
+      }
 
       this.els.acupointMapList.appendChild(item);
     });
   }
 
   _renderMapAcupointDetail(pt) {
-    if (!this.els.mapAcupointDetailCard) return;
-
-    if (!pt) {
+    if (this.els.mapAcupointDetailCard) {
       this.els.mapAcupointDetailCard.style.display = 'none';
-      if (this.els.acupointMapList) {
-        this.els.acupointMapList.querySelectorAll('.map-acupoint-item').forEach(el => el.classList.remove('active'));
+    }
+
+    if (document.body.classList.contains('layout-portrait') && document.body.dataset.portraitView === 'canvas') {
+      if (pt) {
+        this._showPortraitAcupointPopup(pt);
+      } else {
+        this._hidePortraitPopup();
       }
+    }
+
+    if (!this.els.acupointMapList) return;
+
+    const items = this.els.acupointMapList.querySelectorAll('.acupoint-map-item');
+    if (!pt) {
+      items.forEach(el => {
+        el.classList.remove('is-expanded', 'active');
+        const header = el.querySelector('.acupoint-item-header');
+        if (header) header.setAttribute('aria-expanded', 'false');
+        const chevron = el.querySelector('.acupoint-chevron');
+        if (chevron) chevron.textContent = '▼';
+        const body = el.querySelector('.acupoint-item-body');
+        if (body) body.style.display = 'none';
+      });
       return;
     }
 
-    this.els.mapAcupointDetailCard.style.display = 'block';
+    items.forEach(el => {
+      const isMatch = (el.dataset.code === pt.code);
+      const header = el.querySelector('.acupoint-item-header');
+      const chevron = el.querySelector('.acupoint-chevron');
+      const body = el.querySelector('.acupoint-item-body');
 
-    if (this.els.mapDetailCode) this.els.mapDetailCode.textContent = pt.code;
-    if (this.els.mapDetailName) this.els.mapDetailName.textContent = pt.name_vi;
-    if (this.els.mapDetailHan) this.els.mapDetailHan.textContent = pt.name_han_viet || '';
-    if (this.els.mapDetailMeridian) this.els.mapDetailMeridian.textContent = `${pt.meridian_vi || ''}`;
-    if (this.els.mapDetailLocation) this.els.mapDetailLocation.textContent = pt.location_vi || '';
-    if (this.els.mapDetailDepth) {
-      this.els.mapDetailDepth.textContent = `${pt.depth_mm || ''} • Hướng kim: ${pt.direction_vi || 'Thẳng'}`;
-    }
-    if (this.els.mapDetailDeqi) {
-      this.els.mapDetailDeqi.textContent = pt.deqi_vi || 'Tê, tức, nặng, căng lan theo kinh lạc (Đắc khí).';
-    }
-    if (this.els.mapDetailIndications) {
-      this.els.mapDetailIndications.textContent = pt.indications_vi || '';
-    }
-    if (this.els.mapDetailSafety) {
-      this.els.mapDetailSafety.textContent = `An toàn: ${pt.safety_vi || 'Tuân thủ đúng góc châm và độ sâu an toàn giải phẫu.'}`;
-    }
-
-    // Cập nhật trạng thái active trong danh sách huyệt
-    if (this.els.acupointMapList) {
-      this.els.acupointMapList.querySelectorAll('.map-acupoint-item').forEach(el => {
-        if (el.dataset.code === pt.code) {
-          el.classList.add('active');
-          el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-        } else {
-          el.classList.remove('active');
-        }
-      });
-    }
+      if (isMatch) {
+        el.classList.add('is-expanded', 'active');
+        if (header) header.setAttribute('aria-expanded', 'true');
+        if (chevron) chevron.textContent = '▲';
+        if (body) body.style.display = 'block';
+        el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      } else {
+        el.classList.remove('is-expanded', 'active');
+        if (header) header.setAttribute('aria-expanded', 'false');
+        if (chevron) chevron.textContent = '▼';
+        if (body) body.style.display = 'none';
+      }
+    });
   }
 
   _updateRegionPills(currentRegion) {
@@ -1299,7 +1406,7 @@ export class UIView {
   }
 
   // ============================================================
-  // RENDER THÔNG TIN CHẾ ĐỘ 2: TRỊ LIỆU & CHÂU KINH CÂN
+  // RENDER THÔNG TIN CHẾ ĐỘ 3: TRỊ LIỆU & CHUỖI KINH CÂN
   // ============================================================
   _renderChainInfo(chain) {
     if (!this.els.chainInfo || !this.els.chainAcupointSection) return;
@@ -1319,65 +1426,171 @@ export class UIView {
     if (this.els.chainBiomechanics) this.els.chainBiomechanics.textContent = chain.biomechanics_vi || '';
     if (this.els.chainProtocol) this.els.chainProtocol.textContent = chain.treatment_protocol_vi || '';
 
-    // Render danh sách huyệt vị tương tác
+    // Render danh sách huyệt vị tương tác dạng accordion mở rộng xuống dưới
     if (this.els.chainAcupointsList) {
       this.els.chainAcupointsList.innerHTML = '';
       const pts = chain.acupoints || [];
+      const selectedPt = this.appVM.acupunctureVM?.state.selectedAcupoint;
+
       pts.forEach(pt => {
-        const btn = document.createElement('button');
-        btn.className = 'acupoint-card-btn';
-        btn.innerHTML = `
-          <div class="acupoint-card-header">
-            <span class="acupoint-badge">${pt.code}</span>
-            <span style="font-weight: 600; color: var(--text);">${pt.name_vi} (${pt.name_han || ''})</span>
-            <span class="acupoint-meta-inline">${pt.depth_mm}</span>
+        const isExpanded = (selectedPt && selectedPt.code === pt.code);
+        const item = document.createElement('div');
+        item.className = 'acupoint-chain-item' + (isExpanded ? ' is-expanded active' : '');
+        item.dataset.code = pt.code;
+        item.innerHTML = `
+          <div class="acupoint-item-header" role="button" tabindex="0" aria-expanded="${isExpanded}">
+            <div class="acupoint-item-main">
+              <span class="acupoint-item-code">${pt.code}</span>
+              <div class="acupoint-item-titles">
+                <div class="acupoint-item-title-row">
+                  <span class="acupoint-item-name">${pt.name_vi}</span>
+                  ${pt.name_han ? `<span class="acupoint-item-han">(${pt.name_han})</span>` : ''}
+                </div>
+                <div class="acupoint-item-meridian">${pt.depth_mm || ''}</div>
+              </div>
+            </div>
+            <div class="acupoint-item-meta">
+              <span class="acupoint-chevron">${isExpanded ? '▲' : '▼'}</span>
+            </div>
           </div>
-          <div class="acupoint-meta-inline">${pt.location_vi}</div>
+          <div class="acupoint-item-body">
+            <div class="acupoint-detail-grid">
+              <div class="acupoint-detail-field">
+                <span class="field-label">Định vị giải phẫu:</span>
+                <span class="field-value">${pt.location_vi || 'Đang cập nhật'}</span>
+              </div>
+              <div class="acupoint-detail-field">
+                <span class="field-label">Độ sâu & Hướng kim:</span>
+                <span class="field-value">${pt.depth_mm || ''}${pt.direction_vi ? ` • Hướng kim: ${pt.direction_vi}` : ''}</span>
+              </div>
+              <div class="acupoint-detail-field">
+                <span class="field-label">Cảm giác Đắc Khí:</span>
+                <span class="field-value">${pt.deqi_vi || 'Tê, tức, nặng, căng lan theo kinh lạc (Đắc khí).'}</span>
+              </div>
+            </div>
+            ${pt.safety_vi ? `
+              <div class="acupoint-safety-box">
+                <div class="safety-label">Cảnh báo an toàn y khoa:</div>
+                <div class="safety-text">${pt.safety_vi}</div>
+              </div>
+            ` : ''}
+            <div class="acupoint-card-actions">
+              <button type="button" class="btn-focus-3d" data-code="${pt.code}">
+                Tiêu điểm 3D
+              </button>
+              <button type="button" class="btn-collapse-item" data-code="${pt.code}">
+                Thu gọn ▲
+              </button>
+            </div>
+          </div>
         `;
 
-        if (this.appVM.acupunctureVM?.state.selectedAcupoint?.code === pt.code) {
-          btn.classList.add('active');
+        const header = item.querySelector('.acupoint-item-header');
+        if (header) {
+          header.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (this.appVM?.acupunctureVM) {
+              const currentCode = this.appVM.acupunctureVM.state.selectedAcupoint?.code;
+              this.appVM.acupunctureVM.selectAcupoint(currentCode === pt.code ? null : pt.code);
+            }
+          });
+          header.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              header.click();
+            }
+          });
         }
 
-        btn.addEventListener('click', () => {
-          if (this.appVM.acupunctureVM) {
-            const currentCode = this.appVM.acupunctureVM.state.selectedAcupoint?.code;
-            this.appVM.acupunctureVM.selectAcupoint(currentCode === pt.code ? null : pt.code);
-          }
-        });
+        const btnFocus = item.querySelector('.btn-focus-3d');
+        if (btnFocus) {
+          btnFocus.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (this.sceneVM) this.sceneVM.focusAcupoint(pt.code);
+            if (document.body.classList.contains('layout-portrait')) {
+              this._setPortraitView('canvas');
+              this._showPortraitAcupointPopup(pt);
+            }
+          });
+        }
 
-        this.els.chainAcupointsList.appendChild(btn);
+        const btnCollapse = item.querySelector('.btn-collapse-item');
+        if (btnCollapse) {
+          btnCollapse.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (this.appVM?.acupunctureVM) {
+              this.appVM.acupunctureVM.selectAcupoint(null);
+            }
+          });
+        }
+
+        this.els.chainAcupointsList.appendChild(item);
       });
     }
   }
 
   _renderAcupointDetail(pt) {
-    if (!this.els.acupointDetailCard) return;
-
-    if (!pt) {
+    if (this.els.acupointDetailCard) {
       this.els.acupointDetailCard.style.display = 'none';
-      if (this.els.chainAcupointsList) {
-        this.els.chainAcupointsList.querySelectorAll('.acupoint-card-btn').forEach(b => b.classList.remove('active'));
+    }
+
+    if (document.body.classList.contains('layout-portrait') && document.body.dataset.portraitView === 'canvas') {
+      if (pt) {
+        this._showPortraitAcupointPopup(pt);
+      } else {
+        this._hidePortraitPopup();
       }
+    }
+
+    if (!this.els.chainAcupointsList) return;
+
+    const items = this.els.chainAcupointsList.querySelectorAll('.acupoint-chain-item');
+    if (!pt) {
+      items.forEach(el => {
+        el.classList.remove('is-expanded', 'active');
+        const header = el.querySelector('.acupoint-item-header');
+        if (header) header.setAttribute('aria-expanded', 'false');
+        const chevron = el.querySelector('.acupoint-chevron');
+        if (chevron) chevron.textContent = '▼';
+        const body = el.querySelector('.acupoint-item-body');
+        if (body) body.style.display = 'none';
+      });
       return;
     }
 
-    this.els.acupointDetailCard.style.display = 'block';
-    if (this.els.acupointDetailTitle) {
-      this.els.acupointDetailTitle.textContent = `Huyệt ${pt.name_vi} (${pt.code} — ${pt.name_han || ''})`;
-    }
-    if (this.els.acupointDetailLoc) this.els.acupointDetailLoc.textContent = pt.location_vi || '';
-    if (this.els.acupointDetailDepth) this.els.acupointDetailDepth.textContent = `${pt.depth_mm} • ${pt.direction_vi || ''}`;
-    if (this.els.acupointDetailDeqi) this.els.acupointDetailDeqi.textContent = pt.deqi_vi || '';
-    if (this.els.acupointDetailSafety) {
-      this.els.acupointDetailSafety.textContent = pt.safety_vi || 'Kỹ thuật châm đạt chuẩn an toàn y khoa.';
-    }
+    items.forEach(el => {
+      const isMatch = (el.dataset.code === pt.code);
+      const header = el.querySelector('.acupoint-item-header');
+      const chevron = el.querySelector('.acupoint-chevron');
+      const body = el.querySelector('.acupoint-item-body');
+
+      if (isMatch) {
+        el.classList.add('is-expanded', 'active');
+        if (header) header.setAttribute('aria-expanded', 'true');
+        if (chevron) chevron.textContent = '▲';
+        if (body) body.style.display = 'block';
+        el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      } else {
+        el.classList.remove('is-expanded', 'active');
+        if (header) header.setAttribute('aria-expanded', 'false');
+        if (chevron) chevron.textContent = '▼';
+        if (body) body.style.display = 'none';
+      }
+    });
   }
 
   // ============================================================
   // CHI TIẾT CƠ (BẢNG CLICK CƠ)
   // ============================================================
   _renderMuscleDetail(muscle) {
+    if (document.body.classList.contains('layout-portrait') && document.body.dataset.portraitView === 'canvas') {
+      if (muscle) {
+        this._showPortraitMusclePopup(muscle);
+      } else {
+        this._hidePortraitPopup();
+      }
+    }
+
     if (!this.els.muscleDetailCard) return;
 
     if (!muscle) {
@@ -1971,6 +2184,157 @@ export class UIView {
     if (this.els.rtSubtitleProgressFill) {
       this.els.rtSubtitleProgressFill.style.width = `${Math.min(100, Math.round(progress * 100))}%`;
     }
+  }
+
+  // ============================================================
+  // MOBILE PORTRAIT & COMPACT LANDSCAPE UX CONTROLLER
+  // ============================================================
+  _initPortraitLayout() {
+    const mq = window.matchMedia('(max-width: 820px) and (orientation: portrait)');
+    const applyOrientationClass = () => {
+      const isPortrait = mq.matches;
+      document.body.classList.toggle('layout-portrait', isPortrait);
+      document.body.classList.toggle('layout-landscape', !isPortrait);
+      document.body.dataset.activeMode = this.appVM?.state?.activeMode || 'kinematics';
+      if (!isPortrait) {
+        this._setPortraitPopupOpen(false);
+      }
+    };
+
+    applyOrientationClass();
+    if (mq.addEventListener) {
+      mq.addEventListener('change', applyOrientationClass);
+    } else if (mq.addListener) {
+      mq.addListener(applyOrientationClass);
+    }
+    window.addEventListener('resize', applyOrientationClass);
+
+    this._setPortraitView('canvas');
+    this._setPortraitPopupOpen(false);
+
+    // Toggle ẩn/hiện toàn màn hình bảng điều khiển (nút tròn mũi tên kép đỏ-trắng)
+    if (this.els.portraitPanelToggleBtn) {
+      this.els.portraitPanelToggleBtn.addEventListener('click', () => {
+        const isExpanded = (document.body.dataset.portraitView === 'panel');
+        this._setPortraitView(isExpanded ? 'canvas' : 'panel');
+      });
+    }
+
+    // Nút đóng popup 1/3 dưới ở Portrait
+    if (this.els.portraitPopupClose) {
+      this.els.portraitPopupClose.addEventListener('click', () => {
+        this._hidePortraitPopup();
+        const activeMode = this.appVM?.state?.activeMode;
+        if (activeMode === 'acupoints' && this.appVM?.acupointMapVM) {
+          this.appVM.acupointMapVM.selectAcupoint(null);
+        } else if (activeMode === 'therapy' && this.appVM?.acupunctureVM) {
+          this.appVM.acupunctureVM.selectAcupoint(null);
+        } else if (this.appVM?.movementVM) {
+          this.appVM.movementVM.selectMuscleForDetail(null);
+        }
+      });
+    }
+
+    // Thu gọn / mở rộng bảng Chú giải khi bấm vào tiêu đề trên màn hình nhỏ
+    document.querySelectorAll('.viewport-legend-card .viewport-legend-header').forEach(header => {
+      header.addEventListener('click', () => {
+        if (window.innerWidth <= 960) {
+          const card = header.closest('.viewport-legend-card');
+          if (card) card.classList.toggle('is-legend-collapsed');
+        }
+      });
+    });
+
+    // Chạm ra vùng trống trên 3D sẽ đóng popup ở Portrait
+    if (this.els.threeContainer) {
+      this.els.threeContainer.addEventListener('canvas:empty-tap', () => {
+        if (document.body.classList.contains('layout-portrait')) {
+          this._hidePortraitPopup();
+        }
+      });
+    }
+  }
+
+  _setPortraitView(viewName) {
+    const isPanel = (viewName === 'panel');
+    document.body.dataset.portraitView = isPanel ? 'panel' : 'canvas';
+    if (this.els.portraitPanelToggleBtn) {
+      this.els.portraitPanelToggleBtn.setAttribute('aria-expanded', isPanel ? 'true' : 'false');
+      this.els.portraitPanelToggleBtn.setAttribute('aria-label', isPanel ? 'Thu gọn bảng điều khiển' : 'Mở bảng điều khiển');
+    }
+    if (isPanel) {
+      this._setPortraitPopupOpen(false);
+    }
+  }
+
+  _setPortraitPopupOpen(isOpen) {
+    document.body.dataset.portraitPopup = isOpen ? 'open' : 'closed';
+    if (this.els.portraitPopup) {
+      this.els.portraitPopup.classList.toggle('open', isOpen);
+      this.els.portraitPopup.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    }
+  }
+
+  _hidePortraitPopup() {
+    this._setPortraitPopupOpen(false);
+  }
+
+  _showPortraitAcupointPopup(pt) {
+    if (!pt || !this.els.portraitPopup) return;
+    if (this.els.portraitPopupBadge) {
+      this.els.portraitPopupBadge.textContent = pt.code || '';
+      this.els.portraitPopupBadge.style.display = pt.code ? 'inline-block' : 'none';
+    }
+    if (this.els.portraitPopupTitle) {
+      const han = pt.name_han_viet || pt.name_han || '';
+      this.els.portraitPopupTitle.textContent = `${pt.name_vi || ''}${han ? ` (${han})` : ''}`;
+    }
+    if (this.els.portraitPopupSub) {
+      this.els.portraitPopupSub.textContent = pt.meridian_vi || pt.region_vi || '';
+    }
+    if (this.els.portraitPopupContent) {
+      this.els.portraitPopupContent.innerHTML = `
+        <div class="acupoint-detail-field"><span class="field-label">Định vị giải phẫu:</span> <span class="field-value">${pt.location_vi || 'Đang cập nhật'}</span></div>
+        <div class="acupoint-detail-field"><span class="field-label">Độ sâu &amp; Hướng kim:</span> <span class="field-value">${pt.depth_mm || ''}${pt.direction_vi ? ` • ${pt.direction_vi}` : ''}</span></div>
+        <div class="acupoint-detail-field"><span class="field-label">Cảm giác Đắc Khí:</span> <span class="field-value">${pt.deqi_vi || 'Tê, tức, nặng, căng lan theo kinh lạc.'}</span></div>
+        ${pt.indications_vi ? `<div class="acupoint-detail-field"><span class="field-label">Chỉ định:</span> <span class="field-value">${pt.indications_vi}</span></div>` : ''}
+        ${pt.safety_vi ? `
+          <div class="acupoint-safety-box">
+            <div class="safety-label">Cảnh báo an toàn y khoa:</div>
+            <div class="safety-text">${pt.safety_vi}</div>
+          </div>
+        ` : ''}
+      `;
+    }
+    this._setPortraitPopupOpen(true);
+  }
+
+  _showPortraitMusclePopup(muscle) {
+    if (!muscle || !this.els.portraitPopup) return;
+    if (this.els.portraitPopupBadge) {
+      this.els.portraitPopupBadge.style.display = 'none';
+    }
+    if (this.els.portraitPopupTitle) {
+      this.els.portraitPopupTitle.textContent = muscle.name_vi || muscle.id || 'Cơ giải phẫu';
+    }
+    if (this.els.portraitPopupSub) {
+      this.els.portraitPopupSub.textContent = muscle.name_latin || '';
+    }
+    if (this.els.portraitPopupContent) {
+      const acupointTags = (muscle.acupoints || []).map(code => {
+        const pt = this.appVM?.getAcupoint(code);
+        return `<span class="acupoint-item-code" style="margin-right:4px;">${code}${pt ? ` ${pt.name_vi}` : ''}</span>`;
+      }).join('');
+
+      this.els.portraitPopupContent.innerHTML = `
+        <div class="acupoint-detail-field"><span class="field-label">Nguyên ủy:</span> <span class="field-value">${muscle.origin_vi || 'Chưa cập nhật'}</span></div>
+        <div class="acupoint-detail-field"><span class="field-label">Bám tận:</span> <span class="field-value">${muscle.insertion_vi || 'Chưa cập nhật'}</span></div>
+        <div class="acupoint-detail-field"><span class="field-label">Động tác:</span> <span class="field-value">${muscle.action_vi || 'Chưa cập nhật'}</span></div>
+        <div class="acupoint-detail-field"><span class="field-label">Thần kinh chi phối:</span> <span class="field-value">${muscle.innervation_vi || 'Chưa cập nhật'}</span></div>
+        ${acupointTags ? `<div class="acupoint-detail-field" style="margin-top:4px;"><span class="field-label">Huyệt liên quan:</span> ${acupointTags}</div>` : ''}
+      `;
+    }
+    this._setPortraitPopupOpen(true);
   }
 }
 

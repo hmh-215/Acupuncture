@@ -138,7 +138,7 @@ export class SceneViewModel extends Observable {
   setRendering(active) {
     const val = Boolean(active);
     if (this.state.isRendering === val) return;
-    this.setState({ isRendering: val });
+    this.state.isRendering = val;
   }
 }
 

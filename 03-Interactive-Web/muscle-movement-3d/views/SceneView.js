@@ -836,7 +836,12 @@ export class SceneView {
     this._setupInteraction();
     this._bindToViewModel();
 
-    window.addEventListener('resize', this._onResize.bind(this));
+    this._boundOnResize = this._onResize.bind(this);
+    window.addEventListener('resize', this._boundOnResize);
+    if (typeof ResizeObserver !== 'undefined' && this.container) {
+      this._resizeObserver = new ResizeObserver(() => this._onResize());
+      this._resizeObserver.observe(this.container);
+    }
     this._animate();
   }
 
@@ -1107,27 +1112,41 @@ export class SceneView {
   // ============================================================
   // TƯƠNG TÁC RAYCASTING & TOOLTIP
   // ============================================================
+  _raycastAtClientPos(clientX, clientY) {
+    const rect = this.renderer.domElement.getBoundingClientRect();
+    if (!rect.width || !rect.height) return null;
+    this.mouse.x = ((clientX - rect.left) / rect.width) * 2 - 1;
+    this.mouse.y = -((clientY - rect.top) / rect.height) * 2 + 1;
+
+    this.raycaster.setFromCamera(this.mouse, this.camera);
+
+    const objectsToTest = [];
+    // CHỈ raycast các huyệt đang hiển thị (không test huyệt đã bị ẩn)
+    if (this.activeAcupointMeshes.length > 0) {
+      const visiblePoints = this.activeAcupointMeshes.filter(m => m.visible);
+      objectsToTest.push(...visiblePoints);
+    }
+    if (this.showMuscleLayer) objectsToTest.push(...this.allMuscleMeshes);
+    if (this.showNervousLayer) objectsToTest.push(...this.allNervousMeshes);
+
+    const intersects = this.raycaster.intersectObjects(objectsToTest, false);
+    return intersects.length > 0 ? intersects[0].object : null;
+  }
+
   _setupInteraction() {
+    let downX = 0;
+    let downY = 0;
+
+    const onPointerDown = (event) => {
+      downX = event.clientX;
+      downY = event.clientY;
+    };
+
     const onMouseMove = (event) => {
-      const rect = this.renderer.domElement.getBoundingClientRect();
-      this.mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
-      this.mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+      if (event.pointerType === 'touch') return;
+      const object = this._raycastAtClientPos(event.clientX, event.clientY);
 
-      this.raycaster.setFromCamera(this.mouse, this.camera);
-      
-      const objectsToTest = [];
-      // CHỈ raycast các huyệt đang hiển thị (không test huyệt đã bị ẩn)
-      if (this.activeAcupointMeshes.length > 0) {
-        const visiblePoints = this.activeAcupointMeshes.filter(m => m.visible);
-        objectsToTest.push(...visiblePoints);
-      }
-      if (this.showMuscleLayer) objectsToTest.push(...this.allMuscleMeshes);
-      if (this.showNervousLayer) objectsToTest.push(...this.allNervousMeshes);
-
-      const intersects = this.raycaster.intersectObjects(objectsToTest, false);
-
-      if (intersects.length > 0) {
-        const object = intersects[0].object;
+      if (object) {
         if (this.hoveredObject !== object) {
           this.hoveredObject = object;
           this.tooltip.style.display = 'block';
@@ -1145,9 +1164,15 @@ export class SceneView {
       }
     };
 
-    const onClick = () => {
-      // Khi click vào khoảng trống 3D canvas (không trúng vật thể nào)
-      if (!this.hoveredObject) {
+    const onClick = (event) => {
+      const moveDist = Math.hypot(event.clientX - downX, event.clientY - downY);
+      if (moveDist > 8) return; // Bỏ qua nếu người dùng đang kéo xoay mô hình
+
+      // Raycast tươi tại vị trí click/chạm (hoạt động đồng nhất cho cả chuột và màn hình cảm ứng)
+      const obj = this._raycastAtClientPos(event.clientX, event.clientY) || this.hoveredObject;
+
+      // Khi click/chạm vào khoảng trống 3D canvas (không trúng vật thể nào)
+      if (!obj) {
         const activeMode = this.appVM?.state?.activeMode;
         if (activeMode === 'acupoints') {
           if (this.appVM?.acupointMapVM?.state?.focusedAcupointCode) {
@@ -1157,11 +1182,15 @@ export class SceneView {
           if (this.appVM?.acupunctureVM?.state?.selectedAcupoint) {
             this.appVM.acupunctureVM.selectAcupoint(null);
           }
+        } else if (this.appVM?.movementVM?.state?.selectedMuscleDetail) {
+          this.appVM.movementVM.selectMuscleForDetail(null);
+        }
+        if (this.container) {
+          this.container.dispatchEvent(new CustomEvent('canvas:empty-tap'));
         }
         return;
       }
 
-      const obj = this.hoveredObject;
       const isAcupoint = obj.userData?.type === 'acupoint' || obj.parent?.userData?.type === 'acupoint';
       if (isAcupoint) {
         const acupointObj = obj.userData?.type === 'acupoint' ? obj : obj.parent;
@@ -1186,7 +1215,8 @@ export class SceneView {
       }
     };
 
-    this.renderer.domElement.addEventListener('mousemove', onMouseMove);
+    this.renderer.domElement.addEventListener('pointerdown', onPointerDown);
+    this.renderer.domElement.addEventListener('pointermove', onMouseMove);
     this.renderer.domElement.addEventListener('click', onClick);
   }
 
