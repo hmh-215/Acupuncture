@@ -1,7 +1,7 @@
 import * as THREE from 'three';
-import { AppViewModel } from './viewmodels/AppViewModel.js?v=22.0';
-import { SceneView } from './views/SceneView.js?v=22.0';
-import { UIView } from './views/UIView.js?v=22.0';
+import { AppViewModel } from './viewmodels/AppViewModel.js?v=27.0';
+import { SceneView } from './views/SceneView.js?v=27.0';
+import { UIView } from './views/UIView.js?v=27.0';
 
 window.THREE = THREE;
 
